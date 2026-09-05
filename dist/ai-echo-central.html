@@ -30812,7 +30812,7 @@ window.AIECHO_REGISTRY = {
     if (f.training_data && f.training_data.disclosed) out.push('<span class="chip on">Training n disclosed</span>');
     if (f.pathways.some((p) => /PCCP/.test(p))) out.push('<span class="chip flag">PCCP</span>');
     if (f.pathways.includes('De Novo')) out.push('<span class="chip flag">De Novo</span>');
-    for (const t of (f.tags || []).slice(0, 4)) out.push(`<span class="chip">${esc(t)}</span>`);
+    for (const t of (f.tags || []).slice(0, 4)) if (t && t.trim()) out.push(`<span class="chip">${esc(t.trim())}</span>`);
     return out.join('');
   }
   function renderCards(list) {
@@ -30861,6 +30861,14 @@ window.AIECHO_REGISTRY = {
     return `<dt>${esc(label)}</dt><dd>${n || (d.disclosed === false ? 'Not disclosed' : '—')}${extra || ''}${d.description ? `<br><span class="notice">${esc(d.description)}</span>` : ''}${d.source ? `<br><span class="notice">Source: ${linkify(d.source)}</span>` : ''} ${vl(d.verification)}</dd>`;
   }
   const linkify = (s) => (/^https?:\/\//.test(s) ? `<a href="${esc(s)}" rel="noopener">${esc(s.replace(/^https?:\/\//, '').slice(0, 60))}</a>` : esc(s));
+  function panelChips(f) {
+    const seen = new Set(); const out = [];
+    const add = (v, cls) => { const k = String(v || '').trim().toLowerCase(); if (!k || seen.has(k)) return; seen.add(k); out.push(`<span class="chip ${cls}">${esc(String(v).trim())}</span>`); };
+    for (const m of f.modality_scope || []) add(m, '');
+    for (const d of f.deployment || []) add(d, '');
+    for (const t of (f.tags || []).slice(0, 10)) add(t, 'on');
+    return out.join('');
+  }
   function panelHTML(f) {
     const latest = f.clearances[f.clearances.length - 1];
     const reg = R.evaluations[f.id];
@@ -30870,7 +30878,7 @@ window.AIECHO_REGISTRY = {
       `<a href="${esc(latest.fda_summary_url)}" rel="noopener">FDA summary (${esc(latest.k_number)})</a>`,
       `<a href="${esc(latest.fda_database_url)}" rel="noopener">FDA database</a>`,
     ].filter(Boolean).join('');
-    const feats = (f.embedded_ai_features || []);
+    const feats = (f.embedded_ai_features || []).filter((e) => e && e.name && e.name.trim());
     const primaryReg = reg && reg.evaluable ? reg.endpoints.find((e) => e.id === reg.primary_endpoint_id) : null;
     return `
       <div class="panel-head">
@@ -30878,7 +30886,7 @@ window.AIECHO_REGISTRY = {
         <h2 id="panel-title">${esc(f.product_name)}</h2>
         <p class="co">${esc(f.company)}</p>
         <div class="panel-links">${links}</div>
-        <div class="chips">${(f.modality_scope || []).map((m) => `<span class="chip">${esc(m)}</span>`).join('')}${(f.deployment || []).map((m) => `<span class="chip">${esc(m)}</span>`).join('')}${(f.tags || []).map((t) => `<span class="chip on">${esc(t)}</span>`).join('')}</div>
+        <div class="chips">${panelChips(f)}</div>
         ${f.summary ? `<p>${esc(f.summary)}</p>` : ''}
         ${f.research_pending ? '<p class="notice">Research for this product has not been merged yet. Only openFDA fields are shown.</p>' : ''}
       </div>

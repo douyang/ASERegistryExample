@@ -1,0 +1,1763 @@
+{
+ "batch_id": "ultromics",
+ "families": [
+  {
+   "id": "echogo-core",
+   "product_name": "EchoGo Core",
+   "company": "Ultromics Limited",
+   "company_website": "https://www.ultromics.com/",
+   "product_url": "https://www.ultromics.com/echogo",
+   "category": "lv-function-quantification",
+   "tags": [
+    "LVEF",
+    "GLS",
+    "LV volumes",
+    "segmental longitudinal strain",
+    "stroke volume",
+    "view classification",
+    "service model"
+   ],
+   "modality_scope": [
+    "TTE"
+   ],
+   "deployment": [
+    "cloud",
+    "vendor-neutral",
+    "Ultromics-operated analysis service (trained operators approve contours)"
+   ],
+   "summary": "EchoGo Core is standalone software that auto-contours the left ventricle on apical views of transthoracic echocardiograms and reports ejection fraction, Simpson's biplane LV volumes and global longitudinal strain; version 2.0 (K213275) added automatic view classification, A3C support, per-view and segmental strain, stroke volume, LV length and indexed volumes. Anonymized studies are transferred to Ultromics where accredited echocardiographers confirm views and approve contours; the software does not allow manual contour editing.",
+   "intended_use_quote": "Quantification of cardiovascular function from an echocardiogram",
+   "indications_for_use_quote": "EchoGo Core is intended to be used for quantification and reporting of results of cardiovascular function to support physician diagnosis. EchoGo Core is indicated for use in adult populations.",
+   "embedded_ai_features": [
+    "Machine learning-based LV auto-contouring (A2C/A4C; A3C added in 2.0)",
+    "Automatic view classification and labeling (2.0)",
+    "Automated heart-cycle identification and ED/ES frame selection",
+    "EF via Simpson's biplane method",
+    "GLS averaged over A2C/A4C (2.0: A2C/A3C/A4C) and segmental longitudinal strain (2.0)",
+    "Bullseye/horseshoe, mechanical dispersion and CAMM plots (2.0)",
+    "DICOM secondary-capture and structured-report output (2.0)"
+   ],
+   "clearances": [
+    {
+     "k_number": "K191171",
+     "decision_date": "2019-11-13",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K150122",
+      "K173780"
+     ],
+     "changes_summary": "Initial clearance. Predicate TomTec Arena TTA2 (K150122); reference device Bay Labs EchoMD Automated EF Software (K173780). Differences vs predicate: machine-learning algorithms; no manual contour editing (operator accepts or rejects contour).",
+     "notable_flags": [
+      "cloud/service model (studies transferred to Ultromics)",
+      "no manual contour editing",
+      "operator review of contours"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf19/K191171.pdf"
+    },
+    {
+     "k_number": "K213275",
+     "decision_date": "2021-12-20",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K191171",
+      "K150122"
+     ],
+     "changes_summary": "EchoGo Core 2.0 vs 1.0: added automatic view classification, A3C view support, average GLS over A2C/A3C/A4C, per-view GLS/EF/volumes, segmental longitudinal strain, bullseye/horseshoe/mechanical dispersion/CAMM plots, contour overlays, non-Simpson's volume methods, indexed ED/ES volumes, stroke volume, LV length, service webhooks, DICOM structured report output; software standards updated (IEC 62304:2015, ISO 14971:2019, IEC 62366-1:2020).",
+     "notable_flags": [
+      "version update",
+      "operator confirmation of views and contours",
+      "no manual editing"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K213275.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K191171",
+     "endpoint": "LVEF agreement vs TomTec Arena TTA2",
+     "metric": "RMSE",
+     "value": "5.02%",
+     "comparator": "TomTec Arena TTA2 (K150122) measurements by a range of echocardiographers and cardiologists",
+     "n_studies": 378,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "378 previously acquired retrospective studies; balanced gender; clinically typical age/weight/height; multiple ultrasound system manufacturers; test set segregated from training",
+     "subgroup_notes": null,
+     "quote": "A formal retrospective, non- interventional validation study was conducted using 378 previously acquired studies. [...] The primary endpoint was met (results: 5.02%, 2.89%, 8.0 ml and 11.1 ml RMSE, for ejection fraction, global longitudinal strain, end-diastolic and end-systolic volumes, respectively).",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K191171",
+     "endpoint": "GLS agreement vs TomTec Arena TTA2",
+     "metric": "RMSE",
+     "value": "2.89%",
+     "comparator": "TomTec Arena TTA2 (K150122)",
+     "n_studies": 378,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Same 378-study validation set",
+     "subgroup_notes": null,
+     "quote": "The primary endpoint was met (results: 5.02%, 2.89%, 8.0 ml and 11.1 ml RMSE, for ejection fraction, global longitudinal strain, end-diastolic and end-systolic volumes, respectively).",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K191171",
+     "endpoint": "LV end-diastolic volume agreement vs TomTec",
+     "metric": "RMSE",
+     "value": "8.0 ml",
+     "comparator": "TomTec Arena TTA2 (K150122)",
+     "n_studies": 378,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Same 378-study validation set",
+     "subgroup_notes": null,
+     "quote": "The primary endpoint was met (results: 5.02%, 2.89%, 8.0 ml and 11.1 ml RMSE, for ejection fraction, global longitudinal strain, end-diastolic and end-systolic volumes, respectively).",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K191171",
+     "endpoint": "LV end-systolic volume agreement vs TomTec",
+     "metric": "RMSE",
+     "value": "11.1 ml",
+     "comparator": "TomTec Arena TTA2 (K150122)",
+     "n_studies": 378,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Same 378-study validation set",
+     "subgroup_notes": null,
+     "quote": "The primary endpoint was met (results: 5.02%, 2.89%, 8.0 ml and 11.1 ml RMSE, for ejection fraction, global longitudinal strain, end-diastolic and end-systolic volumes, respectively).",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K191171",
+     "endpoint": "Inter- and intra-operator variability (EchoGo Core)",
+     "metric": "bias / RMSE",
+     "value": "0% bias and RMSE (no variation observed)",
+     "comparator": "Same images processed by different/same operators",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": "Predicate TomTec showed 5.3-12.0% (EF) and 2.5-4.7% (GLS) RMSE inter/intra-operator variability",
+     "quote": "The results of the performance testing indicated that by not allowing for manual editing in the EchoGo Core device inter and intra -operator variability (0% bias and RMSE) was eliminated, while inter and intra -operator variability remained for the predicate, TomTec Arena TTA2 (5.3-12.0% and 2.5-4.7% RMSE for EF and GLS, respectively).",
+     "page": 6,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K191171",
+     "endpoint": "Contour rejection rate (5 operators)",
+     "metric": "% of cases rejected for poor contour tracking",
+     "value": "up to 29%",
+     "comparator": "Predicate required manual contour editing in up to 100% of cases",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "Results using 5 Operators showed that manual contour editing was required in uo to 100% of cases processed through the predicate, while contour rejection was required in up to 29% of cases processed through EchoGo Core.",
+     "page": 6,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K213275",
+     "endpoint": "LV length agreement vs TomTec Arena TTA2",
+     "metric": "% RMSE",
+     "value": "3.06 - 4.59",
+     "comparator": "TomTec Arena TTA2 (K150122)",
+     "n_studies": 214,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "214 previously unseen retrospective TTE studies; gender-balanced; multiple ultrasound manufacturers; test set segregated from training; three operators",
+     "subgroup_notes": null,
+     "quote": "A formal ret rospective, non -interventional validation study was conducted using 214 previously unseen studies. [...] Left Ventricular Metric % Root Mean Square Error Length 3.06 – 4.59 Volume at End Diastole and End Systole 8.57 – 16.59 Ejection Fraction 6.69 – 8.50 Stroke Volume 10.57 – 13.68 Global Longitudinal Strain 3.36 – 4.79 Systolic Segmental Longitudinal Strain 5.51 – 9.98",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K213275",
+     "endpoint": "LV ED/ES volume agreement vs TomTec",
+     "metric": "% RMSE",
+     "value": "8.57 - 16.59",
+     "comparator": "TomTec Arena TTA2 (K150122)",
+     "n_studies": 214,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Same 214-study set",
+     "subgroup_notes": null,
+     "quote": "Volume at End Diastole and End Systole 8.57 – 16.59",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K213275",
+     "endpoint": "LVEF agreement vs TomTec",
+     "metric": "% RMSE",
+     "value": "6.69 - 8.50",
+     "comparator": "TomTec Arena TTA2 (K150122)",
+     "n_studies": 214,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Same 214-study set",
+     "subgroup_notes": null,
+     "quote": "Ejection Fraction 6.69 – 8.50",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K213275",
+     "endpoint": "Stroke volume agreement vs TomTec",
+     "metric": "% RMSE",
+     "value": "10.57 - 13.68",
+     "comparator": "TomTec Arena TTA2 (K150122)",
+     "n_studies": 214,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Same 214-study set",
+     "subgroup_notes": null,
+     "quote": "Stroke Volume 10.57 – 13.68",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K213275",
+     "endpoint": "GLS agreement vs TomTec",
+     "metric": "% RMSE",
+     "value": "3.36 - 4.79",
+     "comparator": "TomTec Arena TTA2 (K150122)",
+     "n_studies": 214,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Same 214-study set",
+     "subgroup_notes": null,
+     "quote": "Global Longitudinal Strain 3.36 – 4.79",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K213275",
+     "endpoint": "Systolic segmental longitudinal strain agreement vs TomTec",
+     "metric": "% RMSE",
+     "value": "5.51 - 9.98",
+     "comparator": "TomTec Arena TTA2 (K150122)",
+     "n_studies": 214,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Same 214-study set",
+     "subgroup_notes": null,
+     "quote": "Systolic Segmental Longitudinal Strain 5.51 – 9.98",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K213275",
+     "endpoint": "Inter- and intra-operator variability (3 operators)",
+     "metric": "Deming RMSE",
+     "value": "0 for all report metrics",
+     "comparator": "Repeat processing by 3 operators",
+     "n_studies": 214,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "214 TTE studies",
+     "subgroup_notes": null,
+     "quote": "Three operators processed a total of 214 TTE studies, respectively . Inter-operator variability demonstrated acceptable performance with a Deming RMSE of 0 for all report metrics. Similarly, intra -operator variability demonstrated acceptable performance with a De ming RMSE of 0 for all report metrics.",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K213275",
+     "endpoint": "Peer-reviewed: AI-LVEF/AI-GLS (EchoGo Core 1.0) for CAD detection on stress echo",
+     "metric": "AUC",
+     "value": "Peak-stress AUC: WMSI 0.92, AI-LVEF 0.86, AI-GLS 0.82; adding AI-LVEF or AI-GLS to WMS raised C-statistic from 0.78 (0.69-0.87) to 0.83 (0.74-0.91) / 0.84 (0.75-0.92)",
+     "comparator": "Invasive angiography (significant CAD)",
+     "n_studies": 512,
+     "n_patients": 512,
+     "n_sites": 7,
+     "dataset_description": "512 clinically indicated stress echoes (with or without contrast) from 7 UK/US hospitals",
+     "subgroup_notes": null,
+     "quote": "The areas under the receiver operating characteristics for WMS index, AI-LVEF, and AI-GLS at peak stress were 0.92, 0.86, and 0.82, respectively [...] addition of peak AI-LVEF or peak AI-GLS to WMS significantly improved model discrimination of CAD [C-statistic (bootstrapping 2.5th, 97.5th percentile)] from 0.78 (0.69-0.87) to 0.83 (0.74-0.91) or 0.84 (0.75-0.92), respectively.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K213275",
+     "endpoint": "Peer-reviewed: EchoGo Core 2.0 vs manual LVEF/GLS in cardiac amyloidosis",
+     "metric": "correlation r",
+     "value": "LVEF r=0.78 (pre-CA) / 0.74 (at CA); GLS r=0.83 / 0.80; no significant mean differences",
+     "comparator": "Manual measurements",
+     "n_studies": 51,
+     "n_patients": 51,
+     "n_sites": null,
+     "dataset_description": "51 patients with confirmed cardiac amyloidosis, echoes before and/or at diagnosis",
+     "subgroup_notes": null,
+     "quote": "The two methods showed strong correlation on both the pre-CA (r = .78 and r = .83) and CA echoes (r = .74 and r = .80) for LVEF and GLS, respectively.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K191171",
+     "endpoint": "Peer-reviewed: EchoGo vs standard measurements in hospitalized COVID-19 patients",
+     "metric": "Pearson r",
+     "value": "LVEDV 0.810, LVESV 0.873, LVEF 0.528, GLS 0.690",
+     "comparator": "Standard clinical echocardiography measurements",
+     "n_studies": 50,
+     "n_patients": 50,
+     "n_sites": 1,
+     "dataset_description": "50 consecutive COVID-19 inpatients, single center",
+     "subgroup_notes": null,
+     "quote": "Pearson correlation coefficients (p-value) with standard measurements were 0.810 (<0.001), 0.873 (<0.001), 0.528 (<0.001), and 0.690 (<0.001).",
+     "page": null,
+     "verification": "peer_reviewed"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "FDA summaries state only that test datasets were strictly segregated from algorithm training datasets and that independent training, test and validation datasets were used; no sizes given. Company press release (Nov 2019) says algorithms were 'built using thousands of images from a carefully curated dataset, from one of the largest echo studies of its kind' without numbers.",
+    "source": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K191171.txt (p7); /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K213275.txt (p5, p9); https://www.ultromics.com/press-releases/ultromics-receives-fda-clearance",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": 214,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "K191171: 378 previously acquired studies, balanced gender, clinically typical age/weight/height, wide array of ultrasound manufacturers. K213275: 214 previously unseen studies, gender-balanced, multiple ultrasound manufacturers; 3 operators. Number of sites and patient count not stated in either summary.",
+    "independent_of_training": true,
+    "source": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K191171.txt (p7); /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K213275.txt (p9)",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Company press release (Nov 14, 2019) announcing FDA clearance of EchoGo Core for EF, LV volumes and automated strain; describes a vendor-neutral platform integrated into routine workflow.",
+     "source_url": "https://www.ultromics.com/press-releases/ultromics-receives-fda-clearance",
+     "verification": "company"
+    },
+    {
+     "description": "WASE-COVID multicenter analysis (13 hospitals, 870 patients) comparing AI-derived vs manual LVEF/LV longitudinal strain as mortality predictors; Ultromics-affiliated authors (software vendor not named in abstract).",
+     "source_url": "https://doi.org/10.1016/j.echo.2022.07.004",
+     "verification": "peer_reviewed"
+    },
+    {
+     "description": "Multisite US feasibility study of automated AI analysis on 558 limited echocardiograms in COVID-19 (feasibility 87.5%; LVEF RMSE 11.3%, ICC 0.72; LS RMSE 3.9%, ICC 0.74 vs clinical values); Ultromics-affiliated authors.",
+     "source_url": "https://doi.org/10.3389/fcvm.2022.937068",
+     "verification": "peer_reviewed"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Left ventricular assessment with artificial intelligence increases the diagnostic accuracy of stress echocardiography",
+     "first_author": "O'Driscoll JM",
+     "journal": "European Heart Journal Open",
+     "year": 2022,
+     "doi": "10.1093/ehjopen/oeac059",
+     "pmid": "36284642",
+     "url": "https://doi.org/10.1093/ehjopen/oeac059",
+     "relation": "external-validation",
+     "n_subjects": 512,
+     "key_result": "EchoGo Core 1.0 AI-LVEF/AI-GLS on rest/stress images from 7 UK/US hospitals; peak-stress AUCs 0.86 (LVEF) and 0.82 (GLS); adding to wall-motion score improved C-statistic 0.78 to 0.83-0.84.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial intelligence calculated global longitudinal strain and left ventricular ejection fraction predicts cardiac events and all-cause mortality in patients with chest pain",
+     "first_author": "O'Driscoll JM",
+     "journal": "Echocardiography",
+     "year": 2023,
+     "doi": "10.1111/echo.15714",
+     "pmid": "37964624",
+     "url": "https://doi.org/10.1111/echo.15714",
+     "relation": "real-world",
+     "n_subjects": 296,
+     "key_result": "EchoGo Core 2.0 resting LVEF and GLS independently associated with MACE and all-cause mortality over median 7.8 years (LVEF<50%: 3.7x MACE hazard).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial intelligence based left ventricular ejection fraction and global longitudinal strain in cardiac amyloidosis",
+     "first_author": "Cotella JI",
+     "journal": "Echocardiography",
+     "year": 2023,
+     "doi": "10.1111/echo.15516",
+     "pmid": "36621915",
+     "url": "https://doi.org/10.1111/echo.15516",
+     "relation": "external-validation",
+     "n_subjects": 51,
+     "key_result": "EchoGo Core 2.0 LVEF/GLS comparable to manual (r 0.74-0.83; no significant mean differences) in 51 cardiac amyloidosis patients pre- and at diagnosis.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Utility of an Automated Artificial Intelligence Echocardiography Software in Risk Stratification of Hospitalized COVID-19 Patients",
+     "first_author": "Wang TKM",
+     "journal": "Life",
+     "year": 2022,
+     "doi": "10.3390/life12091413",
+     "pmid": "36143448",
+     "url": "https://doi.org/10.3390/life12091413",
+     "relation": "real-world",
+     "n_subjects": 50,
+     "key_result": "EchoGo outputs correlated with standard measures (r 0.53-0.87); EchoGo LVEF and GLS associated with adverse outcomes after APACHE-4 adjustment.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Human versus Artificial Intelligence-Based Echocardiographic Analysis as a Predictor of Outcomes: An Analysis from the World Alliance Societies of Echocardiography COVID Study",
+     "first_author": "Asch FM",
+     "journal": "Journal of the American Society of Echocardiography",
+     "year": 2022,
+     "doi": "10.1016/j.echo.2022.07.004",
+     "pmid": "35863542",
+     "url": "https://doi.org/10.1016/j.echo.2022.07.004",
+     "relation": "real-world",
+     "n_subjects": 870,
+     "key_result": "AI-derived LVEF and LV longitudinal strain (lower variability than manual) predicted mortality in 870 COVID-19 patients from 13 hospitals; manual measurements did not. Software vendor not named in abstract; Ultromics-affiliated authors.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Automated analysis of limited echocardiograms: Feasibility and relationship to outcomes in COVID-19",
+     "first_author": "Pellikka PA",
+     "journal": "Frontiers in Cardiovascular Medicine",
+     "year": 2022,
+     "doi": "10.3389/fcvm.2022.937068",
+     "pmid": "35935624",
+     "url": "https://doi.org/10.3389/fcvm.2022.937068",
+     "relation": "real-world",
+     "n_subjects": 558,
+     "key_result": "Automated analysis feasible in 87.5% of 558 limited echoes; vs clinical values LVEF RMSE 11.3% (ICC 0.72), LS RMSE 3.9% (ICC 0.74), EDV RMSE 24.4 ml (ICC 0.87), ESV RMSE 12.8 ml (ICC 0.91). Vendor not named in abstract; Ultromics-affiliated authors.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Beyond Simpson's Rule: Accounting for Orientation and Ellipticity Assumptions",
+     "first_author": "Kim WC",
+     "journal": "Ultrasound in Medicine & Biology",
+     "year": 2022,
+     "doi": "10.1016/j.ultrasmedbio.2022.07.013",
+     "pmid": "36137846",
+     "url": "https://doi.org/10.1016/j.ultrasmedbio.2022.07.013",
+     "relation": "algorithm-development",
+     "n_subjects": null,
+     "key_result": "Ultromics-affiliated methodological work on LV volume estimation assumptions (abstract not retrieved).",
+     "verification": "pmid_resolved"
+    },
+    {
+     "title": "Automated Detection of Apical Foreshortening in Echocardiography Using Statistical Shape Modelling",
+     "first_author": "Kim WC",
+     "journal": "Ultrasound in Medicine & Biology",
+     "year": 2023,
+     "doi": "10.1016/j.ultrasmedbio.2023.05.003",
+     "pmid": "37328385",
+     "url": "https://doi.org/10.1016/j.ultrasmedbio.2023.05.003",
+     "relation": "algorithm-development",
+     "n_subjects": null,
+     "key_result": "Ultromics-affiliated methodological work on foreshortening detection (abstract not retrieved).",
+     "verification": "pmid_resolved"
+    }
+   ],
+   "clinical_trials": [
+    {
+     "nct_id": "NCT04877899",
+     "title": "Mazankowski - Echo Go Discovery Protocol Retrospective LVEF/GLS Comparison",
+     "status": "UNKNOWN",
+     "url": "https://clinicaltrials.gov/study/NCT04877899"
+    }
+   ],
+   "open_questions": [
+    "Training set size for EchoGo Core 1.0/2.0 is not disclosed in either FDA summary or the company press release.",
+    "Number of sites, patients and ultrasound vendors in the 378-study (K191171) and 214-study (K213275) validation sets are not stated.",
+    "K191171 summary does not report the pre-specified RMSE acceptance thresholds, only that they were met.",
+    "The Ultromics website no longer has dedicated EchoGo Core or EchoGo Pro product pages (both URLs redirect to a page listing only EchoGo Heart Failure and EchoGo Amyloidosis); current commercial status of EchoGo Core in the US is unclear.",
+    "Whether the WASE-COVID (Asch 2022) and Pellikka 2022 analyses used EchoGo Core specifically is inferred from Ultromics author affiliation; the abstracts do not name the product."
+   ],
+   "sources": [
+    {
+     "fact": "K191171 indications, predicates, 378-study RMSE results, operator variability",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K191171.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K213275 feature changes, 214-study RMSE table, operator variability",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K213275.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Decision dates, product code, applicant",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "EchoGo Core clearance press release (Nov 14, 2019)",
+     "url_or_file": "https://www.ultromics.com/press-releases/ultromics-receives-fda-clearance",
+     "verification": "company"
+    },
+    {
+     "fact": "Papers resolved via PubMed E-utilities and Crossref in this session",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ ; https://api.crossref.org/works/",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "NCT04877899 details",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies/NCT04877899",
+     "verification": "fda_database"
+    }
+   ]
+  },
+  {
+   "id": "echogo-pro",
+   "product_name": "EchoGo Pro",
+   "company": "Ultromics Limited",
+   "company_website": "https://www.ultromics.com/",
+   "product_url": "https://www.ultromics.com/echogo",
+   "category": "disease-detection",
+   "tags": [
+    "stress echo",
+    "coronary artery disease",
+    "CADx",
+    "reader study",
+    "RCT (PROTEUS)"
+   ],
+   "modality_scope": [
+    "TTE",
+    "stress"
+   ],
+   "deployment": [
+    "cloud",
+    "vendor-neutral",
+    "Ultromics-operated analysis service (trained operators approve contours)"
+   ],
+   "summary": "EchoGo Pro v1.0.2 is standalone machine-learning software that auto-contours the LV on A2C, A4C and mid-ventricular SAX views at rest and peak stress from DICOM stress-echo studies, derives geometric/kinematic features and outputs a two-level categorical assessment of higher vs lower possibility of significant CAD (>=70% stenosis on invasive angiography). Cleared under product code POK using Koios DS for Breast as predicate; a UK 20-hospital RCT (PROTEUS, n approximately 2,200-2,300) did not meet its primary endpoint per ESC 2024 presentation.",
+   "intended_use_quote": "to act as a diagnostic aid using machine learning to assist trained interpreting physicians in analyzing ultrasound images and characterize ultrasound image features for given regions of interest (ROIs) to generate a categorical output",
+   "indications_for_use_quote": "EchoGo Pro v1.0.2 is a machine learning-based decision support system, indicated as an adjunct to diagnostic stress echocardiography for patients undergoing assessment for coronary artery disease (CAD). When utilized by an interpreting physician, this device provides information that may be useful in rendering an accurate diagnosis. Patient management decisions should not be made solely on the results of the EchoGo Pro v1.0.2 analysis. EchoGo Pro v1.0.2 is to be used with stress echo exam protocols that contain A2C, A4C and mid-ventricular short-axis views at rest and at peak stress. EchoGo Pro vl.0.2 is not intended for the assessment of mild or moderate myocardial ischemia, or localization of coronary artery disease, or for the assessment of myocardial perfusion, myocardial viability or valve disease. Limitations: EchoGo Pro v1.0.2 has not been validated on patients who underwent previous coronary artery bypass graft (CABG) surgery.",
+   "embedded_ai_features": [
+    "Automatic image registration and LV endocardial auto-contouring across ES-ED frames for AP2, AP4 and mid-SAX at rest and peak stress",
+    "Operator review/approval of contours",
+    "Fixed pre-trained classification model on geometric parameters producing two-level CAD likelihood output"
+   ],
+   "clearances": [
+    {
+     "k_number": "K201555",
+     "decision_date": "2020-12-18",
+     "pathway": "510(k)",
+     "product_code": "POK",
+     "predicates": [
+      "K190442"
+     ],
+     "changes_summary": "Initial clearance (regulation 21 CFR 892.2060, CADx). Predicate Koios DS for Breast (K190442). Differences: ROIs selected automatically rather than by user; two-level CAD output vs four-level BI-RADS-aligned output.",
+     "notable_flags": [
+      "CADx (892.2060) pathway with non-cardiac predicate",
+      "reader study primary endpoint",
+      "operator contour approval",
+      "not validated post-CABG"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K201555.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K201555",
+     "endpoint": "Reader AUROC improvement with EchoGo Pro (MRMC)",
+     "metric": "delta AUROC",
+     "value": "0.054 (95% CI 0.032, 0.077), p=0.02 (predicate Koios reported 0.034)",
+     "comparator": "Readers unaided vs aided; ground truth invasive angiography (>=70% stenosis)",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Reader study; number of readers and cases not stated in summary",
+     "subgroup_notes": null,
+     "quote": "Based on the standard error measurements, the error was propagated to esti mate the mean performance interface and 95% confidence interval. This was found to be 0.054 (95%CI 0.032, 0.077) at p = 0.02, satisfying the acceptance criteria for the primary endpoint. The increase in reader performance with EchoGo Pro v1.0.2 exceeded the mean reader improvement in the AUROC reported for Koios DS in K190442, which was 0.034.",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K201555",
+     "endpoint": "Standalone AUROC for significant CAD",
+     "metric": "AUC",
+     "value": "0.927",
+     "comparator": "Invasive coronary angiography within 6 months (>=70% stenosis prox/mid LAD, prox LCx, prox/mid RCA)",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "The system achieved a native system performance of 0.927 AUROC, with specificity of 0.927 (95% CI 0.878, 0.976) and a sensitivity of 0.844 (95% CI 0.739, 0.950), greater than the native system performance reported for the predicate device (K190442) of 0.882.",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K201555",
+     "endpoint": "Standalone specificity",
+     "metric": "specificity",
+     "value": "0.927 (95% CI 0.878, 0.976)",
+     "comparator": "Invasive angiography",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "The system achieved a native system performance of 0.927 AUROC, with specificity of 0.927 (95% CI 0.878, 0.976) and a sensitivity of 0.844 (95% CI 0.739, 0.950)",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K201555",
+     "endpoint": "Standalone sensitivity",
+     "metric": "sensitivity",
+     "value": "0.844 (95% CI 0.739, 0.950)",
+     "comparator": "Invasive angiography",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "The system achieved a native system performance of 0.927 AUROC, with specificity of 0.927 (95% CI 0.878, 0.976) and a sensitivity of 0.844 (95% CI 0.739, 0.950)",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K201555",
+     "endpoint": "Inter-reader agreement with vs without EchoGo Pro",
+     "metric": "Kendall Tau-B",
+     "value": "0.58 (0.48, 0.69) unaided vs 0.82 (0.72, 0.93) aided, p<0.001 (predicate improvement 0.1393)",
+     "comparator": "Pairwise reader agreement",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "The average Kendall Tau-B of USE Alone was 0.58 (0.48, 0.69) an d the average Kendall Tau-B of USE + EGP was 0.82 (0.72, 0.93) with 95% CI demons trating a significant incr ease in the metric ( p<0.001).",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K201555",
+     "endpoint": "Peer-reviewed pivotal: cross-fold validation on training set (severe CAD)",
+     "metric": "sensitivity / specificity",
+     "value": "specificity 92.7%, sensitivity 84.4%; maintained in independent US test set; aided reader AUC 0.93",
+     "comparator": "Invasive coronary angiography",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "UK prospective multicenter multivendor stress-echo cohort for training; independent US validation set; randomized crossover reader study",
+     "subgroup_notes": null,
+     "quote": "Acceptable classification accuracy for identification of patients with severe coronary artery disease in the training data set was achieved on cross-fold validation based on 31 unique geometric and kinematic features, with a specificity of 92.7% and a sensitivity of 84.4%. This accuracy was maintained in the independent validation data set. The use of the AI classification tool by clinicians increased inter-reader agreement and confidence as well as sensitivity for detection of disease by 10% to achieve an area under the receiver-operating characteristic curve of 0.93.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K201555",
+     "endpoint": "PROTEUS RCT primary endpoint (appropriateness of angiography referral)",
+     "metric": "counts",
+     "value": "Control 27/36 appropriate referrals vs AI arm 34/49; non-inferiority not demonstrated",
+     "comparator": "Standard care (no AI report)",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": 20,
+     "dataset_description": "UK NHS multicentre RCT, just over 2,300 patients enrolled per ESC press release (2,213 analysed per economic evaluation)",
+     "subgroup_notes": null,
+     "quote": "While standard clinical decision-making correctly sent 27 out of 36 patients for invasive coronary angiograms, the AI-augmented arm correctly triaged 34 out of 49 referrals.",
+     "page": null,
+     "verification": "news"
+    },
+    {
+     "k_number": "K201555",
+     "endpoint": "PROTEUS: EchoGo Pro-cardiologist concordance and scan rejection",
+     "metric": "% agreement / % rejected",
+     "value": "Agreement 60% (512/854); scans rejected for image quality 26.1% (222/854)",
+     "comparator": "Cardiologist CAD diagnosis",
+     "n_studies": 854,
+     "n_patients": 854,
+     "n_sites": null,
+     "dataset_description": "854 PROTEUS participants with suspected CAD",
+     "subgroup_notes": "Agreement lower with hypertension (OR 0.58), diabetes (OR 0.56), pre-existing CAD (OR 0.48); rejection more common in males and family history of CAD",
+     "quote": "EGP and cardiologists agreed in 60% (512/854) of the cases [...] EGP rejected 26.1% (222/854) of the scans due to insufficient image quality",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K201555",
+     "endpoint": "PROTEUS economic evaluation: diagnostic accuracy by arm",
+     "metric": "% accuracy",
+     "value": "97.2% control vs 96.9% intervention; QALYs 0.392 vs 0.390 (p=0.818); ICER GBP 6,939/QALY without AI cost",
+     "comparator": "Standard care arm",
+     "n_studies": 2213,
+     "n_patients": 2213,
+     "n_sites": 20,
+     "dataset_description": "20-hospital NHS RCT, 2,213 patients",
+     "subgroup_notes": null,
+     "quote": "This evaluation was embedded in the PROTEUS trial, a 20-hospital NHS randomized controlled trial enrolling 2213 patients with suspected CAD undergoing SE. [...] Diagnostic accuracy was high in both groups (97.2% control; 96.9% intervention).",
+     "page": null,
+     "verification": "peer_reviewed"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "FDA summary gives no training-set details beyond 'a fixed classification model that has been previously trained on datasets with known outcomes'. The pivotal paper (Upton 2022) states the classifier was trained on features from a 'large, United Kingdom-based prospective, multicenter, multivendor study' using 31 geometric/kinematic features, with an independent US test set; sizes not in the abstract.",
+    "source": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K201555.txt (p6); https://doi.org/10.1016/j.jcmg.2021.10.013",
+    "verification": "peer_reviewed"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "FDA summary reports a reader study (unaided vs aided AUROC and Kendall Tau-B) and standalone AUROC 0.927 but does not state number of cases, readers or sites. Upton 2022 reports an independent US validation set and a randomized crossover reader study (sizes not in abstract).",
+    "independent_of_training": true,
+    "source": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K201555.txt (p9); https://doi.org/10.1016/j.jcmg.2021.10.013",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Company press release (Jan 6, 2021) announcing FDA clearance; states EchoGo Pro was 'trialed and validated in the UK and US', rolled out in the NHS under an NHSx award and assessed at Mayo Clinic.",
+     "source_url": "https://www.ultromics.com/press-releases/ultromics-receives-fda-clearance-for-a-first-of-kind-solution-in-echocardiography-to-help-clinicians-diagnose-disease",
+     "verification": "company"
+    },
+    {
+     "description": "ESC Congress 2024 press release on PROTEUS: just over 2,300 UK patients; primary endpoint non-inferiority not demonstrated (27/36 vs 34/49 appropriate angiography referrals); possible benefit for less-experienced readers in secondary analyses.",
+     "source_url": "https://www.escardio.org/The-ESC/Press-Office/Press-releases/PROTEUS-Trial-suggests-AI-for-heart-scans-may-benefit-decision-making-for-less-experienced-clinicians",
+     "verification": "news"
+    },
+    {
+     "description": "Trade press: 'Ultromics's EchoGo misses primary endpoint in heart disease trial' (Clinical Trials Arena) - page returned 404 at fetch time; headline only.",
+     "source_url": "https://www.clinicaltrialsarena.com/news/ultromicss-echogo-misses-primary-endpoint-in-heart-disease-trial/",
+     "verification": "news"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Automated Echocardiographic Detection of Severe Coronary Artery Disease Using Artificial Intelligence",
+     "first_author": "Upton R",
+     "journal": "JACC: Cardiovascular Imaging",
+     "year": 2022,
+     "doi": "10.1016/j.jcmg.2021.10.013",
+     "pmid": "34922865",
+     "url": "https://doi.org/10.1016/j.jcmg.2021.10.013",
+     "relation": "pivotal-validation",
+     "n_subjects": null,
+     "key_result": "Ensemble classifier on 31 geometric/kinematic features from UK multicenter multivendor stress echoes; cross-fold specificity 92.7%, sensitivity 84.4%; maintained in independent US set; aided readers reached AUC 0.93 with +10% sensitivity and higher agreement.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "PROTEUS Study: A Prospective Randomized Controlled Trial Evaluating the Use of Artificial Intelligence in Stress Echocardiography",
+     "first_author": "Woodward G",
+     "journal": "American Heart Journal",
+     "year": 2023,
+     "doi": "10.1016/j.ahj.2023.05.003",
+     "pmid": "37192698",
+     "url": "https://doi.org/10.1016/j.ahj.2023.05.003",
+     "relation": "clinical-trial",
+     "n_subjects": 2500,
+     "key_result": "Protocol: multicenter UK NHS 1:1 RCT (target 2,500) of EchoGo Pro report vs standard care; primary outcome appropriateness of angiography referral (NCT05028179).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Economic Evaluation of the Use of Artificial Intelligence in Stress Echocardiography: Cost-Consequence and Cost-Effectiveness Analysis",
+     "first_author": "Chauhan AS",
+     "journal": "Value in Health Regional Issues",
+     "year": 2026,
+     "doi": "10.1016/j.vhri.2026.101659",
+     "pmid": "42313016",
+     "url": "https://doi.org/10.1016/j.vhri.2026.101659",
+     "relation": "clinical-trial",
+     "n_subjects": 2213,
+     "key_result": "PROTEUS-embedded: 20 hospitals, 2,213 patients; accuracy 97.2% control vs 96.9% AI; QALYs similar; ICER GBP 6,939/QALY excluding AI cost; cost-effective up to GBP 35.35 per case.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Alignment Between Cardiologists and AI-Driven Diagnostic Systems: Mixed Methods Study",
+     "first_author": "Mahdavi M",
+     "journal": "Journal of Medical Internet Research",
+     "year": 2026,
+     "doi": "10.2196/83541",
+     "pmid": "42160740",
+     "url": "https://doi.org/10.2196/83541",
+     "relation": "clinical-trial",
+     "n_subjects": 854,
+     "key_result": "In 854 PROTEUS participants EchoGo Pro agreed with cardiologists in 60%; 26.1% of scans rejected for image quality; lower agreement with hypertension, diabetes, prior CAD.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Evaluating artificial intelligence-driven stress echocardiography analysis system (EASE study): A mixed method study",
+     "first_author": "Mahdavi M",
+     "journal": "BMJ Open",
+     "year": 2024,
+     "doi": "10.1136/bmjopen-2023-079617",
+     "pmid": "39357985",
+     "url": "https://doi.org/10.1136/bmjopen-2023-079617",
+     "relation": "other",
+     "n_subjects": null,
+     "key_result": "Protocol for independent NHS evaluation of EchoGo Pro accuracy vs three manual raters, acceptability, trust and cost-effectiveness.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Real-world performance and accuracy of stress echocardiography: the EVAREST observational multi-centre study",
+     "first_author": "Woodward W",
+     "journal": "European Heart Journal - Cardiovascular Imaging",
+     "year": 2022,
+     "doi": "10.1093/ehjci/jeab092",
+     "pmid": "34148078",
+     "url": "https://doi.org/10.1093/ehjci/jeab092",
+     "relation": "other",
+     "n_subjects": 5131,
+     "key_result": "UK 31-hospital stress-echo registry (5,131 patients; sensitivity 95.4%, specificity 96.0% for 6-month cardiac outcome). Ultromics-affiliated; widely understood as the UK development cohort but the linkage to EchoGo Pro training is not stated in the abstract.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial intelligence: a new clinical support tool for stress echocardiography",
+     "first_author": "Alsharqi M",
+     "journal": "Expert Review of Medical Devices",
+     "year": 2018,
+     "doi": "10.1080/17434440.2018.1497482",
+     "pmid": "29992841",
+     "url": "https://doi.org/10.1080/17434440.2018.1497482",
+     "relation": "review",
+     "n_subjects": null,
+     "key_result": "Early review from the Oxford/Ultromics group on AI for stress echo.",
+     "verification": "pmid_resolved"
+    }
+   ],
+   "clinical_trials": [
+    {
+     "nct_id": "NCT05028179",
+     "title": "PROTEUS: A PROspective Randomised Controlled Trial Evaluating the Use of Artificial Intelligence in Stress Echocardiology",
+     "status": "UNKNOWN",
+     "url": "https://clinicaltrials.gov/study/NCT05028179"
+    }
+   ],
+   "open_questions": [
+    "FDA summary does not state number of readers, cases, sites or vendors in the reader study, nor the source of the 0.927 standalone AUROC test set.",
+    "Training and independent-validation set sizes for the classifier are not in the FDA summary or the Upton 2022 abstract (full text not retrieved).",
+    "PROTEUS primary-results manuscript was not found on PubMed as of this session; primary endpoint figures come from the ESC 2024 press release (27/36 vs 34/49), enrollment 'just over 2,300' (ESC) vs 2,213 analysed (Chauhan 2026) vs 2,338 (clinicaltrials.gov).",
+    "The company website currently lists only EchoGo Heart Failure and EchoGo Amyloidosis; whether EchoGo Pro is still commercially offered in the US is unclear.",
+    "Press coverage dates the clearance announcement to Jan 6, 2021 while openFDA decision date is 2020-12-18; the openFDA date is used."
+   ],
+   "sources": [
+    {
+     "fact": "K201555 indications, predicate, reader-study and standalone performance",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K201555.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Decision date, product code, applicant",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "EchoGo Pro clearance press release (Jan 6, 2021)",
+     "url_or_file": "https://www.ultromics.com/press-releases/ultromics-receives-fda-clearance-for-a-first-of-kind-solution-in-echocardiography-to-help-clinicians-diagnose-disease",
+     "verification": "company"
+    },
+    {
+     "fact": "PROTEUS results (ESC 2024)",
+     "url_or_file": "https://www.escardio.org/The-ESC/Press-Office/Press-releases/PROTEUS-Trial-suggests-AI-for-heart-scans-may-benefit-decision-making-for-less-experienced-clinicians",
+     "verification": "news"
+    },
+    {
+     "fact": "NCT05028179 enrollment 2,338, start 2021-11-08",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies/NCT05028179",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Papers resolved via PubMed E-utilities and Crossref",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ ; https://api.crossref.org/works/",
+     "verification": "peer_reviewed"
+    }
+   ]
+  },
+  {
+   "id": "echogo-hf",
+   "product_name": "EchoGo Heart Failure",
+   "company": "Ultromics Limited",
+   "company_website": "https://www.ultromics.com/",
+   "product_url": "https://www.ultromics.com/echogo-heart-failure",
+   "category": "hf-status-indicator",
+   "tags": [
+    "HFpEF",
+    "Breakthrough Device",
+    "single A4C clip",
+    "3D CNN",
+    "EchoGo Score",
+    "CPT 0932T",
+    "special controls 870.2200"
+   ],
+   "modality_scope": [
+    "TTE"
+   ],
+   "deployment": [
+    "cloud",
+    "PACS-integrated",
+    "vendor-neutral",
+    "fully automated (no user interface)",
+    "hosted on Ultromics platform or third-party infrastructure"
+   ],
+   "summary": "EchoGo Heart Failure is a fully automated convolutional-neural-network classifier that takes a single non-contrast apical 4-chamber DICOM clip from a patient with LVEF >=50% and outputs 'suggestive' / 'not suggestive' of HFpEF or 'no classification'. Version 1.0 (K222463, Breakthrough designation Q212613) was tested on 1,285 US patients (sensitivity 87.8%, specificity 82.0%); version 2.0 (K240013) added a 0-100% EchoGo Score with histogram display and was tested on 1,578 patients (sensitivity 90.3%, specificity 86.1% excluding no-classification outputs).",
+   "intended_use_quote": "Providing adjunctive information on a patient's cardiovascular condition (diagnostic aid for Heart Failure with Preserved Ejection Fraction (HFpEF)).",
+   "indications_for_use_quote": "EchoGo Heart Failure 1.0 is an automated machine learning-based decision support system, indicated as a diagnostic aid for patients undergoing routine functional cardiovascular assessment using echocardiography. When utilised by an interpreting clinician, this device provides information that may be useful in detecting heart failure with preserved ejection fraction (HFpEF). EchoGo Heart Failure 1.0 is indicated in adult populations over 25 years of age. Patient management decisions should not be made solely on the results of the EchoGo Heart Failure 1.0 analysis. EchoGo Heart Failure 1.0 takes as input an apical 4-chamber view of the heart that has been captured and assessed to have an ejection fraction ≥50%.",
+   "embedded_ai_features": [
+    "Convolutional neural network (3D CNN per Akerman 2023) classifying a single A4C video clip as HFpEF / no HFpEF / no classification",
+    "Uncertainty-based 'No classification' output",
+    "EchoGo Score 0-100% with 50% decision threshold and histogram comparison to reference dataset (2.0)",
+    "Input/output APIs and distributed deployment (2.0)"
+   ],
+   "clearances": [
+    {
+     "k_number": "K222463",
+     "decision_date": "2022-11-23",
+     "pathway": "510(k)",
+     "product_code": "QUO",
+     "predicates": [
+      "K213230"
+     ],
+     "changes_summary": "Initial clearance; predicate Etiometry T3 Platform Software (K213230, PPW) under 21 CFR 870.2200 special controls. Device granted Breakthrough status under Q212613.",
+     "notable_flags": [
+      "Breakthrough Device (Q212613)",
+      "special controls 21 CFR 870.2200",
+      "cloud",
+      "fully automated, no user interface",
+      "first QUO product code"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K222463.pdf"
+    },
+    {
+     "k_number": "K240013",
+     "decision_date": "2024-09-23",
+     "pathway": "510(k)",
+     "product_code": "QUO",
+     "predicates": [
+      "K222463"
+     ],
+     "changes_summary": "Version 2.0: identical indications; adds EchoGo Score (0-100%) with histogram comparison to an independent reference dataset; additional input/output APIs; distributed/replicated deployment options; AI model 'trained on more data and with additional pre-processing steps and data augmentations'; summative human factors testing with 15 board-certified clinicians; test cohort enlarged 22.9% to 1,578 patients.",
+     "notable_flags": [
+      "version update",
+      "retrained model",
+      "cloud",
+      "special controls 21 CFR 870.2200"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240013.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K222463",
+     "endpoint": "HFpEF detection sensitivity (v1.0)",
+     "metric": "sensitivity",
+     "value": "87.8% (95% CI: 85.0, 90.3%)",
+     "comparator": "Case-control ground truth (HFpEF cases vs controls)",
+     "n_studies": 1285,
+     "n_patients": 1285,
+     "n_sites": 8,
+     "dataset_description": "Retrospective case-control, multiple sites spanning five states in the USA; 639 controls, 646 cases; 8 independent clinical sites per technology comparison table (p12)",
+     "subgroup_notes": null,
+     "quote": "The final testing data cohort amounted to 1,285 patients, comprising 639 controls and 646 cases. [...] EchoGo Heart Failure 1.0 correctly identified 535 true positives, and 477 true negatives, alongside 105 false positives and 74 false negatives. This equates to a sensitivity of 87.8% (95% CI: 85.0, 90.3%) and a specificity of 82.0% (95% CI: 78.6, 85.0%). The p value for the one-sided binomial exact tests against a priori acceptance criteria was p<0.001 for both sensitivity and specificity.",
+     "page": 15,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K222463",
+     "endpoint": "HFpEF detection specificity (v1.0)",
+     "metric": "specificity",
+     "value": "82.0% (95% CI: 78.6, 85.0%)",
+     "comparator": "Case-control ground truth",
+     "n_studies": 1285,
+     "n_patients": 1285,
+     "n_sites": 8,
+     "dataset_description": "Same cohort",
+     "subgroup_notes": null,
+     "quote": "This equates to a sensitivity of 87.8% (95% CI: 85.0, 90.3%) and a specificity of 82.0% (95% CI: 78.6, 85.0%).",
+     "page": 15,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K222463",
+     "endpoint": "Repeatability / reproducibility (v1.0)",
+     "metric": "% agreement",
+     "value": "Repeatability 100%; reproducibility positive agreement 86.7%, negative agreement 76.9%, no-classification agreement 45.5%",
+     "comparator": "Same clip analysed twice; different clips from same patient",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "The device demonstrated 100% repeatability in all measures and 86.7% Positive Agreement, 76.9% Negative Agreement, and 45.5% No classification Agreement for reproducibility.",
+     "page": 15,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K222463",
+     "endpoint": "No-classification rate (v1.0)",
+     "metric": "% non-diagnostic outputs",
+     "value": "7.3% (94/1,285)",
+     "comparator": null,
+     "n_studies": 1285,
+     "n_patients": 1285,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "Of the 1,285 studies analysed by the device, 94 (7.3%) were categorized as “No Classification.",
+     "page": 15,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K222463",
+     "endpoint": "SGLT2 inhibitor subgroup (v1.0)",
+     "metric": "sensitivity / specificity",
+     "value": "sensitivity 80.5%, specificity 87.3% (n=105)",
+     "comparator": "Case-control ground truth",
+     "n_studies": 105,
+     "n_patients": 105,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": "Patients prescribed SGLT2 inhibitors",
+     "quote": "Additional sub-group analysis was performed for patients prescribed sodium-glucose cotransporter inhibitors (SGLT2i). Point estimates for the device sensitivity for patients on SGLT2i was 80.5%, and specificity was 87.3% on a total of 105 patients.",
+     "page": 15,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240013",
+     "endpoint": "HFpEF detection sensitivity (v2.0, excluding no-classification)",
+     "metric": "sensitivity",
+     "value": "90.3% (95% CI: 88.5, 92.4%)",
+     "comparator": "Case-control ground truth",
+     "n_studies": 1578,
+     "n_patients": 1578,
+     "n_sites": 8,
+     "dataset_description": "Retrospective case:control, multiple sites spanning five states in the USA; 785 controls, 793 cases; 8 independent clinical sites (p11); one clip per patient",
+     "subgroup_notes": null,
+     "quote": "The final testing data cohort amounted to 1,578 patients, comprising 785 controls and 793 cases. [...] EchoGo Heart Failure 2.0 correctly identified 673 true positives, and 617 true negatives, alongside 100 false positives, 72 false negatives, and 116 no classification outputs (48 cases, 68 controls). This equated to a sensitivity of 90.3% (95% CI: 88.5, 92.4%) and a specificity of 86.1% (95% CI: 83.4, 88.3%) when removing the no classification studies from the calculation",
+     "page": 15,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240013",
+     "endpoint": "HFpEF detection specificity (v2.0, excluding no-classification)",
+     "metric": "specificity",
+     "value": "86.1% (95% CI: 83.4, 88.3%)",
+     "comparator": "Case-control ground truth",
+     "n_studies": 1578,
+     "n_patients": 1578,
+     "n_sites": 8,
+     "dataset_description": "Same cohort",
+     "subgroup_notes": null,
+     "quote": "This equated to a sensitivity of 90.3% (95% CI: 88.5, 92.4%) and a specificity of 86.1% (95% CI: 83.4, 88.3%) when removing the no classification studies from the calculation",
+     "page": 15,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240013",
+     "endpoint": "Sensitivity / specificity including no-classification outputs (v2.0)",
+     "metric": "sensitivity / specificity",
+     "value": "sensitivity 84.9% (95% CI: 83.0, 87.5%); specificity 78.6% (95% CI: 75.3, 81.1%)",
+     "comparator": "Case-control ground truth",
+     "n_studies": 1578,
+     "n_patients": 1578,
+     "n_sites": 8,
+     "dataset_description": "Same cohort, no-classification counted in denominator",
+     "subgroup_notes": null,
+     "quote": "When including the no classification studies in the calculation, sensitivity was 84.9% (95% CI: 83.0, 87.5%) and specificity was 78.6% (95% CI: 75.3, 81.1%).",
+     "page": 16,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240013",
+     "endpoint": "EchoGo Score discrimination (v2.0)",
+     "metric": "AUROC",
+     "value": "0.947 (95% CI: 0.934, 0.958) excluding no-classification; 0.937 (95% CI: 0.924, 0.949) all studies",
+     "comparator": "Case-control ground truth",
+     "n_studies": 1578,
+     "n_patients": 1578,
+     "n_sites": 8,
+     "dataset_description": "Same cohort",
+     "subgroup_notes": "Hosmer-Lemeshow p=0.304; calibration intercept near 0, slope near 1",
+     "quote": "The area under the receiver operator characteristic curve (AUROC) was 0.947 (95% CI: 0.934, 0.958) when removing no classification studies, and 0.937 (95% CI: 0.924, 0.949) when considering all studies and ignoring uncertainty and instability metrics.",
+     "page": 16,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240013",
+     "endpoint": "No-classification rate (v2.0)",
+     "metric": "% non-diagnostic outputs",
+     "value": "7.4% (116/1,578)",
+     "comparator": null,
+     "n_studies": 1578,
+     "n_patients": 1578,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "Of the 1,578 studies analysed by the device, 116 (7.4%) were categorized as “No Classification”.",
+     "page": 16,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240013",
+     "endpoint": "Repeatability / reproducibility (v2.0)",
+     "metric": "% agreement",
+     "value": "Repeatability 100%; reproducibility positive agreement 82.6%, negative agreement 82.4%",
+     "comparator": "Same clip twice; different clips same patient",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "The device demonstrated 100% repeatability in all measures and 82.6% Positive Agreement and 82.4% Negative Agreement for reproducibility.",
+     "page": 16,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K222463",
+     "endpoint": "Peer-reviewed pivotal (Akerman 2023): independent test performance",
+     "metric": "sensitivity / specificity / AUC",
+     "value": "Independent test: sensitivity 87.8% (84.5-90.9%), specificity 81.9% (78.2-85.6%), 7.3% nondiagnostic; training AUC 0.97, validation holdout AUC 0.95",
+     "comparator": "Case-control (HF diagnosis + EF>=50% + elevated filling pressure vs controls)",
+     "n_studies": 1284,
+     "n_patients": 1284,
+     "n_sites": null,
+     "dataset_description": "Independent multisite test set: 646 cases, 638 controls; training/validation 2,971 cases and 3,785 controls (16.8% holdout)",
+     "subgroup_notes": "Mortality HR 1.9 (1.5-2.4) for AI-positive; 73.5%/73.6% of indeterminate HFA-PEFF/H2FPEF correctly reclassified",
+     "quote": "Training and validation included 2,971 cases and 3,785 controls (validation holdout, 16.8% patients), and demonstrated excellent discrimination (area under receiver-operating characteristic curve: 0.97 [95% CI: 0.96-0.97] and 0.95 [95% CI: 0.93-0.96] in training and validation, respectively). In independent testing (646 cases, 638 controls), 94 (7.3%) were nondiagnostic; sensitivity (87.8%; 95% CI: 84.5%-90.9%) and specificity (81.9%; 95% CI: 78.2%-85.6%) were maintained in clinically relevant subgroups",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K240013",
+     "endpoint": "Peer-reviewed external validation (Akerman 2025, v2): outcomes",
+     "metric": "hazard ratio",
+     "value": "Diagnostic-positive AI result associated with two-fold risk of composite mortality/HF hospitalization; discrimination and calibration similar to H2FPEF, classification higher",
+     "comparator": "H2FPEF and HFA-PEFF scores; clinical HFpEF diagnosis",
+     "n_studies": 496,
+     "n_patients": 496,
+     "n_sites": null,
+     "dataset_description": "240 HFpEF cases and 256 age/sex/year-matched controls",
+     "subgroup_notes": null,
+     "quote": "The AI HFpEF model and H2FPEF score demonstrate similar discrimination and calibration, but classification is higher with AI than H2FPEF and HFA-PEFF, attributable to fewer intermediate scores [...] Those with a diagnostic positive result from AI have a two-fold increased risk of the composite outcome.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K240013",
+     "endpoint": "Peer-reviewed invasive haemodynamic validation (Sachar 2026)",
+     "metric": "sensitivity / specificity / PPV / NPV",
+     "value": "Exercise RHC subgroup (n=28): sensitivity 30%, specificity 88%, PPV 86%, NPV 33%; identified 80% of invasively confirmed HFpEF among indeterminate H2FPEF",
+     "comparator": "Invasive PCWP >=15 mmHg rest or >=25 mmHg exercise",
+     "n_studies": 47,
+     "n_patients": 47,
+     "n_sites": 1,
+     "dataset_description": "47 patients with TTE and right heart catheterization for unexplained dyspnoea (28 with exercise haemodynamics)",
+     "subgroup_notes": null,
+     "quote": "Among patients with exercise RHC (n = 28), 71% met haemodynamic HFpEF criteria. The AI tool demonstrated sensitivity of 30%, specificity of 88%, PPV of 86%, and NPV of 33%.",
+     "page": null,
+     "verification": "peer_reviewed"
+    }
+   ],
+   "training_data": {
+    "disclosed": true,
+    "n_studies": null,
+    "n_patients": 6756,
+    "n_sites": null,
+    "description": "FDA summaries state independent training, validation and test datasets were used and that v2.0 was 'trained on more data and with additional pre-processing steps and data augmentations' but give no sizes. Peer-reviewed pivotal paper (Akerman 2023, v1.0 development) reports training and validation of 2,971 cases and 3,785 controls (6,756 patients; 16.8% validation holdout). v2.0 training size not disclosed.",
+    "source": "https://doi.org/10.1016/j.jacadv.2023.100452 ; /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K240013.txt (p4)",
+    "verification": "peer_reviewed"
+   },
+   "validation_data": {
+    "n_studies": 1578,
+    "n_patients": 1578,
+    "n_sites": 8,
+    "description": "K222463: 1,285 patients (639 controls, 646 cases), retrospective case-control from multiple US sites spanning five states (8 independent clinical sites). K240013: 1,578 patients (785 controls, 793 cases), same design, 22.9% larger; one A4C clip per patient. Race/ethnicity and vendor breakdowns not given in the summaries.",
+    "independent_of_training": true,
+    "source": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K222463.txt (p12, p15); /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K240013.txt (p11, p15)",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Company press release (Dec 6, 2022): FDA clearance as a Breakthrough device; developed with Mayo Clinic (which has a financial interest); '87.8 Sensitivity and 83% Specificity in the independent testing dataset'; '68% more HFpEF patients correctly identified vs. clinical algorithms'.",
+     "source_url": "https://www.ultromics.com/press-releases/ultromics-receives-fda-clearance-for-its-breakthrough-device-echogo-heart-failure",
+     "verification": "company"
+    },
+    {
+     "description": "Product page: sensitivity 90.3%, specificity 86.1% (K240013); '10,000+' real-world cases; cloud/PACS integration with results in under 20 minutes; CPT 0932T / APC 5743.",
+     "source_url": "https://www.ultromics.com/echogo-heart-failure",
+     "verification": "company"
+    },
+    {
+     "description": "CMS HCPCS code established for EchoGo Heart Failure (2023 press release).",
+     "source_url": "https://www.prnewswire.com/news-releases/cms-establishes-hcpcs-code-for-ultromics-echogo-heart-failure-accelerating-access-to-precision-hfpef-detection-301869759.html",
+     "verification": "news"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Automated Echocardiographic Detection of Heart Failure With Preserved Ejection Fraction Using Artificial Intelligence",
+     "first_author": "Akerman AP",
+     "journal": "JACC: Advances",
+     "year": 2023,
+     "doi": "10.1016/j.jacadv.2023.100452",
+     "pmid": "38939447",
+     "url": "https://doi.org/10.1016/j.jacadv.2023.100452",
+     "relation": "pivotal-validation",
+     "n_subjects": 8040,
+     "key_result": "3D CNN on single A4C clip; training/validation 2,971 cases + 3,785 controls; independent test 646 cases/638 controls: sensitivity 87.8%, specificity 81.9%, 7.3% nondiagnostic; AI-positive mortality HR 1.9.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Automated Echocardiographic Detection of Heart Failure With Preserved Ejection Fraction Using Artificial Intelligence Is Associated With Cardiac Mortality and Heart Failure Hospitalization",
+     "first_author": "Cassianni C",
+     "journal": "Journal of the American Society of Echocardiography",
+     "year": 2024,
+     "doi": "10.1016/j.echo.2024.06.016",
+     "pmid": "38964666",
+     "url": "https://doi.org/10.1016/j.echo.2024.06.016",
+     "relation": "real-world",
+     "n_subjects": null,
+     "key_result": "Outcome association study of the AI HFpEF classification (abstract not retrievable via E-utilities/Crossref in this session).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "External validation of artificial intelligence for detection of heart failure with preserved ejection fraction",
+     "first_author": "Akerman AP",
+     "journal": "Nature Communications",
+     "year": 2025,
+     "doi": "10.1038/s41467-025-58283-7",
+     "pmid": "40133291",
+     "url": "https://doi.org/10.1038/s41467-025-58283-7",
+     "relation": "external-validation",
+     "n_subjects": 496,
+     "key_result": "EchoGo Heart Failure v2 vs H2FPEF/HFA-PEFF in 240 cases and 256 matched controls: similar discrimination/calibration, higher classification rate; positive result = two-fold composite outcome risk. Author correction published (PMID 40246975).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Application of an Artificial Intelligence Model to Detect Heart Failure With Preserved Ejection Fraction to Handheld Ultrasound Imaging",
+     "first_author": "James JK",
+     "journal": "Journal of the American Society of Echocardiography",
+     "year": 2025,
+     "doi": "10.1016/j.echo.2025.03.016",
+     "pmid": "40204003",
+     "url": "https://doi.org/10.1016/j.echo.2025.03.016",
+     "relation": "external-validation",
+     "n_subjects": null,
+     "key_result": "Application of the HFpEF model to handheld ultrasound clips (abstract not retrievable in this session).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Invasive haemodynamic validation of an artificial intelligence echocardiographic tool for detecting heart failure with preserved ejection fraction",
+     "first_author": "Sachar R",
+     "journal": "ESC Heart Failure",
+     "year": 2026,
+     "doi": "10.1093/eschf/xvag052",
+     "pmid": "41955408",
+     "url": "https://doi.org/10.1093/eschf/xvag052",
+     "relation": "external-validation",
+     "n_subjects": 47,
+     "key_result": "Against invasive PCWP criteria (n=28 exercise RHC): sensitivity 30%, specificity 88%, PPV 86%, NPV 33%; AI-positive patients had higher PCWP, mPAP, PVR.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [
+    {
+     "nct_id": "NCT06593314",
+     "title": "Identifying Undiagnosed HFpEF Among Patients With Type 2 Diabetes Using Ultromics AI HFpEF Algorithm",
+     "status": "RECRUITING",
+     "url": "https://clinicaltrials.gov/study/NCT06593314"
+    }
+   ],
+   "open_questions": [
+    "Training set size for v2.0 (K240013) not disclosed; only that it was 'trained on more data' than v1.0.",
+    "FDA summaries do not report age/sex/race, ultrasound vendor, or image-quality subgroup performance for the HFpEF test cohorts (only the SGLT2i subgroup in K222463).",
+    "Abstracts for Cassianni 2024 (JASE) and James 2025 (JASE) could not be retrieved via E-utilities or Crossref; key results not captured.",
+    "Definition of the HFpEF ground truth in the FDA test set is not spelled out in the summary (peer-reviewed paper: HF diagnosis + EF>=50% + echocardiographic evidence of elevated filling pressure).",
+    "Company press release accuracy figure ('90% accuracy in the validation dataset') is not in the FDA summary."
+   ],
+   "sources": [
+    {
+     "fact": "K222463 indications, Breakthrough Q212613, test cohort 1,285, performance, special controls",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K222463.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K240013 changes, EchoGo Score, test cohort 1,578, performance",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K240013.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Decision dates, product code QUO, applicant",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Clearance press release Dec 6, 2022",
+     "url_or_file": "https://www.ultromics.com/press-releases/ultromics-receives-fda-clearance-for-its-breakthrough-device-echogo-heart-failure",
+     "verification": "company"
+    },
+    {
+     "fact": "Product page performance, deployment, CPT code",
+     "url_or_file": "https://www.ultromics.com/echogo-heart-failure",
+     "verification": "company"
+    },
+    {
+     "fact": "Papers resolved via PubMed E-utilities and Crossref",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ ; https://api.crossref.org/works/",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "NCT06593314 (UT Southwestern, 800 planned, start 2025-08-06)",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies/NCT06593314",
+     "verification": "fda_database"
+    }
+   ]
+  },
+  {
+   "id": "echogo-amyloidosis",
+   "product_name": "EchoGo Amyloidosis",
+   "company": "Ultromics Limited",
+   "company_website": "https://www.ultromics.com/",
+   "product_url": "https://www.ultromics.com/echogo-amyloidosis",
+   "category": "amyloid-indicator",
+   "tags": [
+    "cardiac amyloidosis",
+    "ATTR",
+    "AL",
+    "screening",
+    "Breakthrough Device",
+    "TAP",
+    "single A4C clip",
+    "special controls 870.2200",
+    "subgroup analyses"
+   ],
+   "modality_scope": [
+    "TTE"
+   ],
+   "deployment": [
+    "cloud",
+    "PACS-integrated",
+    "vendor-neutral",
+    "fully automated (no user interface)",
+    "hosted on Ultromics platform or third-party infrastructure"
+   ],
+   "summary": "EchoGo Amyloidosis 1.0 is a fully automated CNN classifier that takes a single non-contrast apical 4-chamber DICOM clip and outputs suggestive / not suggestive of cardiac amyloidosis (or no classification) as a screening alert for patients aged 65+ with heart failure. Cleared under new product code SDJ with EchoGo Heart Failure (K222463) as predicate; tested on 1,164 patients from 12 US and 3 international sites (sensitivity 84.5%, specificity 89.7%, 14.0% no-classification). The FDA summary discloses training-set demographics (approximately 1,262 controls and 1,302 cases by summing the table) and extensive subgroup performance by sex, BMI, race, vendor, LVEF and wall thickness.",
+   "intended_use_quote": "providing adjunctive information on the cardiovascular condition of a patient",
+   "indications_for_use_quote": "EchoGo Amyloidosis 1.0 is an automated machine learning-based decision support system, indicated as a screening tool for adult patients aged 65 years and over with heart failure undergoing cardiovascular assessment using echocardiography. When utilised by an interpreting physician, this device provides information alerting the physician for referral to confirmatory investigations. EchoGo Amyloidosis 1.0 is indicated in adult patients aged 65 years and over with heart failure. Patient management decisions should not be made solely on the results of the EchoGo Amyloidosis 1.0 analysis.",
+   "embedded_ai_features": [
+    "Convolutional neural network pre-trained on cases and controls classifying a single A4C clip for cardiac amyloidosis",
+    "Uncertainty threshold producing 'no classification' output",
+    "Input/output APIs and DICOM network interfaces for PACS/ultrasound integration"
+   ],
+   "clearances": [
+    {
+     "k_number": "K240860",
+     "decision_date": "2024-11-15",
+     "pathway": "510(k)",
+     "product_code": "SDJ",
+     "predicates": [
+      "K222463"
+     ],
+     "changes_summary": "Initial clearance; predicate EchoGo Heart Failure (K222463). Differences: cardiac amyloidosis rather than HFpEF output; population 65+ with heart failure rather than adults >25; no EF>=50% input restriction. Software documentation at Enhanced Documentation level.",
+     "notable_flags": [
+      "Breakthrough Device (per company press release, Apr 26, 2023; not stated in FDA summary)",
+      "FDA TAP program (per company: first TAP-enrolled device to reach marketing authorization)",
+      "special controls 21 CFR 870.2200",
+      "cloud",
+      "fully automated, no user interface",
+      "first SDJ product code",
+      "not evaluated in prior heart transplantation"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240860.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K240860",
+     "endpoint": "Cardiac amyloidosis sensitivity (65+ with HF, excluding no-classification)",
+     "metric": "sensitivity",
+     "value": "84.5% (95% CI: 80.3%, 88.5%)",
+     "comparator": "Case-control ground truth (cardiac amyloidosis cases vs controls)",
+     "n_studies": 1164,
+     "n_patients": 1164,
+     "n_sites": 15,
+     "dataset_description": "Retrospective case:control, multiple sites spanning nine states in the USA; 749 controls, 415 cases; validation cohort of 12 US and 3 international sites (p10)",
+     "subgroup_notes": null,
+     "quote": "The final testing data cohort for patients >65 years of age with evidence of heart failure amounted to 1,164 patients, comprising 749 controls and 415 cases. [...] The EchoGo Amyloidosis 1.0 device correctly identified 310 true positives, and 569 true negatives, alongside 65 false positives and 57 false negatives. This equates to a sensitivity of 84.5% (95% CI: 80.3%, 88.5%), a specificity of 89.7% (95% CI: 87.0%, 92.4%), a PPV of 82.7% (95% CI: 78.8%, 86.5%) and NPV of 90.9% (95% CI: 88.8%, 93.2%).",
+     "page": 17,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240860",
+     "endpoint": "Cardiac amyloidosis specificity",
+     "metric": "specificity",
+     "value": "89.7% (95% CI: 87.0%, 92.4%)",
+     "comparator": "Case-control ground truth",
+     "n_studies": 1164,
+     "n_patients": 1164,
+     "n_sites": 15,
+     "dataset_description": "Same cohort",
+     "subgroup_notes": null,
+     "quote": "This equates to a sensitivity of 84.5% (95% CI: 80.3%, 88.5%), a specificity of 89.7% (95% CI: 87.0%, 92.4%), a PPV of 82.7% (95% CI: 78.8%, 86.5%) and NPV of 90.9% (95% CI: 88.8%, 93.2%).",
+     "page": 17,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240860",
+     "endpoint": "PPV / NPV at native 36.7% prevalence",
+     "metric": "PPV / NPV",
+     "value": "PPV 82.7% (78.8%, 86.5%); NPV 90.9% (88.8%, 93.2%)",
+     "comparator": "Case-control ground truth",
+     "n_studies": 1164,
+     "n_patients": 1164,
+     "n_sites": 15,
+     "dataset_description": "Same cohort",
+     "subgroup_notes": null,
+     "quote": "Positive Predictive Value at 36.7% prevalence** 82.7% (78.8%, 86.5%) [...] Negative Predictive Value at 36.7% prevalence** 90.9% (88.8%, 93.2%) [...] **Estimate based on native disease proportion within the collected testing dataset (36.7% prevalence).",
+     "page": 17,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240860",
+     "endpoint": "PPV / NPV at inferred 2.2% prevalence",
+     "metric": "PPV / NPV",
+     "value": "PPV 15.6% (11.0%, 20.8%); NPV 99.6% (99.5%, 99.7%)",
+     "comparator": "Re-sampled to 2.2% prevalence",
+     "n_studies": 1164,
+     "n_patients": 1164,
+     "n_sites": 15,
+     "dataset_description": "Same cohort, data re-sampling",
+     "subgroup_notes": null,
+     "quote": "Positive Predictive Value at 2.2% prevalence* 15.6% (11.0%, 20.8%) Negative Predictive Value at 2.2% prevalence* 99.6% (99.5%, 99.7%) [...] *Estimate based on inferred disease prevalence of 2.2% using data re-sampling.",
+     "page": 17,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240860",
+     "endpoint": "No-classification rate",
+     "metric": "% non-diagnostic outputs",
+     "value": "14.0%",
+     "comparator": null,
+     "n_studies": 1164,
+     "n_patients": 1164,
+     "n_sites": 15,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "EchoGo Amyloidosis 1.0 demonstrated a “no classification” rate of 14.0% during the pivotal clinical investigation.",
+     "page": 22,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240860",
+     "endpoint": "Sensitivity / specificity with no-classification counted as incorrect (worst case)",
+     "metric": "sensitivity / specificity",
+     "value": "sensitivity 72.8% (67.7%, 77.8%); specificity 76.0% (72.5%, 79.3%)",
+     "comparator": "Case-control ground truth",
+     "n_studies": 1164,
+     "n_patients": 1164,
+     "n_sites": 15,
+     "dataset_description": "Uncertain outputs included in denominator",
+     "subgroup_notes": null,
+     "quote": "All data 14.0% 72.8% (67.7%, 77.8%) 76.0% (72.5%, 79.3%)",
+     "page": 23,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240860",
+     "endpoint": "Repeatability / reproducibility",
+     "metric": "% agreement",
+     "value": "Repeatability 100% positive and negative agreement; reproducibility positive agreement 85.5% (82.4%, 88.2%), negative agreement 79.9% (76.5%, 83.2%)",
+     "comparator": "Same clip multiple times; different clips from same patient",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "Repeatability demonstrated 100% positive and negative agreement statistics. Reproducibility demonstrated an average percent of positive agreement of 85.5% (82.4%, 88.2%), the average percent of negative agreement was 79.9% (76.5%, 83.2%).",
+     "page": 26,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240860",
+     "endpoint": "Subgroup: sex",
+     "metric": "sensitivity / specificity",
+     "value": "Female sensitivity 73.9% (61.8%, 85.5%), specificity 90.5% (86.7%, 93.8%); Male sensitivity 87.5% (83.2%, 91.2%), specificity 88.9% (84.9%, 92.8%)",
+     "comparator": "Case-control ground truth",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": "Test cases were 80.8% male vs controls 47.4% male (p16)",
+     "quote": "Female 73.9% (61.8%, 85.5%) 90.5% (86.7%, 93.8%) 14.9% (10.6%, 21.7%) Male 87.5% (83.2%, 91.2%) 88.9% (84.9%, 92.8%) 15.1% (11.5%, 21.7%)",
+     "page": 19,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240860",
+     "endpoint": "Subgroup: BMI",
+     "metric": "sensitivity / specificity",
+     "value": "BMI >35: sensitivity 68.8% (38.5%, 92.3%), specificity 93.3%; BMI 30-35: 69.4% (52.0%, 84.6%) / 92.7%; 25-30: 84.7% / 91.9%; 18.5-25: 88.7% / 83.3%",
+     "comparator": "Case-control ground truth",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": "Lower sensitivity at BMI >30",
+     "quote": ">35 68.8% (38.5%, 92.3%) 93.3% (87.9%, 97.9%) 18.8% (9.5%, 42.1%) 30-35 69.4% (52.0%, 84.6%) 92.7% (87.2%, 97.3%) 17.6% (10.2%, 36.3%) 25-30 84.7% (76.9%, 92.3%) 91.9% (87.5%, 95.8%) 19.0% (13.1%, 30.2%) 18.5-25 88.7% (81.3%, 95.0%) 83.3% (76.1%, 89.6%) 10.7% (7.7%, 16.4%)",
+     "page": 19,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240860",
+     "endpoint": "Subgroup: race",
+     "metric": "sensitivity / specificity",
+     "value": "White 84.8% / 91.4%; Black 85.9% (77.8%, 93.6%) / 82.8% (75.5%, 90.1%); Asian 84.1% / 100.0%; Other 78.9% / 93.3%",
+     "comparator": "Case-control ground truth",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": "Test set 58.4-66.0% White, 24.6-26.8% Black, 1.9-11.8% Asian (p15)",
+     "quote": "White 84.8% (79.1%, 90.4%) 91.4% (87.9%, 94.5%) 18.1% (13.7%, 25.8%) Black 85.9% (77.8%, 93.6%) 82.8% (75.5%, 90.1%) 10.1% (7.2%, 16.3%) Asian 84.1% (70.6%, 94.4%) 100.0% (100.0%, 100.0%) 100.0% (100.0%, 100.0%) Other 78.9% (56.2%, 100.0%) 93.3% (80.8%, 100.0%) 21.0% (8.1%, 100.0%)",
+     "page": 19,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240860",
+     "endpoint": "Subgroup: ultrasound manufacturer",
+     "metric": "sensitivity / specificity",
+     "value": "Philips 81.9% (76.2%, 87.5%) / 86.5% (81.3%, 91.0%); GE 88.8% (82.0%, 95.5%) / 90.4% (85.6%, 95.2%); Siemens 83.3% / N/A; ACUSON 100.0% / N/A",
+     "comparator": "Case-control ground truth",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": "Specificity not available for Siemens/ACUSON (no controls)",
+     "quote": "Philips 81.9% (76.2%, 87.5%) 86.5% (81.3%, 91.0%) 12.0% (9.0%, 16.9%) GE 88.8% (82.0%, 95.5%) 90.4% (85.6%, 95.2%) 17.2% (12.1%, 29.6%) Siemens 83.3% (0.0%, 94.7%) N/A 18.1% (12.2%, 29.2%) ACUSON 100.0% (100.0%, 100.0%) N/A 15.4% (11.5%, 21.5%)",
+     "page": 20,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240860",
+     "endpoint": "Subgroup: data origin",
+     "metric": "sensitivity / specificity",
+     "value": "USA sensitivity 83.3% (78.3%, 87.8%), specificity 89.7% (87.0%, 92.4%); Non-USA sensitivity 90.3% (83.0%, 97.7%), specificity N/A",
+     "comparator": "Case-control ground truth",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": "Non-US sites contributed cases only (no specificity)",
+     "quote": "USA 83.3% (78.3%, 87.8%) 89.7% (87.0%, 92.4%) 15.4% (12.4%, 19.7%) Non-USA 90.3% (83.0%, 97.7%) N/A N/A",
+     "page": 18,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240860",
+     "endpoint": "Subgroup: LV posterior wall thickness",
+     "metric": "sensitivity / specificity",
+     "value": ">16 mm 94.2% (89.0%, 98.0%) / 84.2%; 14-16 mm 88.5% / 86.4%; 12-14 mm 79.5% / 86.8%; 10-12 mm 80.0% / 96.7%; 8-10 mm 50.0% (27.8%, 73.7%) / 94.2%",
+     "comparator": "Case-control ground truth",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": "Sensitivity falls with thinner walls",
+     "quote": ">16 94.2% (89.0%, 98.0%) 84.2% (75.0%, 92.9%) 11.8% (7.7%, 22.6%) 14-16 88.5% (80.8%, 95.1%) 86.4% (79.3%, 93.4%) 12.7% (8.7%, 23.0%)  12-14 79.5% (68.5%, 89.5%) 86.8% (80.5%, 92.8%) 11.9% (8.2%, 19.9%)  10-12 80.0% (66.7%, 92.1%) 96.7% (93.2%, 99.3%) 35.2% (20.9%, 71.7%)  8-10 50.0% (27.8%, 73.7%) 94.2% (86.0%, 100.0%) 16.3% (6.1%, 100.0%)",
+     "page": 21,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240860",
+     "endpoint": "Subgroup: LVEF category",
+     "metric": "sensitivity / specificity",
+     "value": ">65%: 82.5% / 91.6%; 50-65%: 86.1% (79.6%, 91.5%) / 89.3% (85.3%, 92.9%); 40-50%: 86.2% / 90.0%; <40%: 82.0% / 89.7%",
+     "comparator": "Case-control ground truth",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": ">65 82.5% (70.5%, 93.0%) 91.6% (86.8%, 95.5%) 18.1% (12.2%, 29.2%) [...] 50-65 86.1% (79.6%, 91.5%) 89.3% (85.3%, 92.9%) 15.4% (11.5%, 21.5%) 40-50 86.2% (76.0%, 94.5%) 90.0% (78.6%, 100.0%) 16.2% (8.1%, 100.0%) <40 82.0% (69.4%, 91.8%) 89.7% (76.0%, 100.0%) 15.1% (6.9%, 100.0%)",
+     "page": 20,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240860",
+     "endpoint": "Subgroup: HFpEF status and atrial fibrillation",
+     "metric": "sensitivity / specificity",
+     "value": "HFpEF yes 85.4% / 92.2%, no 82.0% / 89.7%; AFib 83.2% / 91.8%, sinus rhythm 83.5% / 90.8%",
+     "comparator": "Case-control ground truth",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "AFib 83.2% (75.3%, 90.5%) 91.8% (87.4%, 95.6%) 18.6% (12.8%, 30.3%) SR 83.5% (74.7%, 91.8%) 90.8% (87.1%, 94.2%) 17.0% (12.4%, 24.8%) [...] HFpEF Y 85.4% (80.8%, 90.1%) 92.2% (89.1%, 95.0%) 19.7% (14.8%, 27.3%) N 82.0% (69.4%, 91.8%) 89.7% (76.0%, 100.0%) 15.1% (6.9%, 100.0%)",
+     "page": 19,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240860",
+     "endpoint": "Peer-reviewed external validation (Slivnick 2025, EHJ)",
+     "metric": "AUC / sensitivity / specificity",
+     "value": "AUROC 0.93, sensitivity 85%, specificity 93% after removing 13% uncertain predictions; AL 84%, ATTRwt 85%, ATTRv 86%; PYP-referral subgroup AUROC 0.86 (sens 77%, spec 86%); matched subgroup AUROC 0.92",
+     "comparator": "Confirmed cardiac amyloidosis vs phenotypic controls; compared with TCA score (AUROC 0.73) and IWT score (0.80)",
+     "n_studies": 2719,
+     "n_patients": 2719,
+     "n_sites": 18,
+     "dataset_description": "External validation across 18 global sites: 597 CA cases and 2,122 controls; training set n=2,612 (52% CA), multisite multiethnic",
+     "subgroup_notes": null,
+     "quote": "External validation was conducted globally across 18 sites including 597 CA cases and 2122 controls. [...] After the removal of uncertain AI predictions (13%), model discrimination and classification were excellent for the entire external validation dataset [area under the receiver operating characteristic curve (AUROC) 0.93, sensitivity 85%, specificity 93%]",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K240860",
+     "endpoint": "Peer-reviewed independent comparison (Hourmozdi 2025, JACC Advances)",
+     "metric": "AUC",
+     "value": "EchoGo Amyloidosis AUC 0.92 vs EchoNet-LVH 0.88 vs Mayo ATTR-CM score 0.79 (DeLong p<0.001); fairness criteria met for Black patients",
+     "comparator": "ATTR-CM confirmed cases vs matched HF controls at ~5% prevalence",
+     "n_studies": 3368,
+     "n_patients": 3368,
+     "n_sites": 1,
+     "dataset_description": "Integrated health system 2010-2022: 176 ATTR-CM cases, 3,192 HF controls; 79.2% White, 9.0% Black",
+     "subgroup_notes": null,
+     "quote": "Both deep learning echo models had a higher AUC when compared to the Mayo ATTR-CM Score (EchoNet-LVH 0.88; EchoGo Amyloidosis 0.92; Mayo ATTR-CM Score 0.79; DeLong P < 0.001 for both).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K240860",
+     "endpoint": "Peer-reviewed comparison in scintigraphy referrals (Garmany 2026, JASE)",
+     "metric": "AUC / sensitivity / specificity",
+     "value": "AI-Echo AUC 0.93 (0.91-0.95), sensitivity 86%, specificity 85% vs AI-ECG 0.79 and ATTR-CM score 0.87",
+     "comparator": "ATTR-CA by guideline criteria in patients referred for cardiac scintigraphy",
+     "n_studies": 598,
+     "n_patients": 598,
+     "n_sites": 1,
+     "dataset_description": "598 patients referred for scintigraphy at a tertiary center; 181 (30%) ATTR-CA; AL excluded",
+     "subgroup_notes": "Abstract names 'AI-Echo' without naming EchoGo; Ultromics-affiliated authorship",
+     "quote": "AI-Echo identified ATTR-CA with 86% sensitivity and 85% specificity, compared with 80% and 64% for AI-ECG and 86% and 69% for the ATTR-CM score. The area under the receiver operating characteristic curve was 0.93 (95% CI, 0.91-0.95) for AI-Echo",
+     "page": null,
+     "verification": "peer_reviewed"
+    }
+   ],
+   "training_data": {
+    "disclosed": true,
+    "n_studies": null,
+    "n_patients": 2564,
+    "n_sites": null,
+    "description": "FDA summary: 'Algorithm training data was collected from collaborating academic centres'; training table lists 1,262 controls and 1,302 cases (totals derived by summing the age-band and sex rows on p16; the summary does not print a total), 73% male, 79.7-80.6% White, 13.3% Black, 2.3-3.0% Asian, most aged 61-80; median LVEF 63% controls / 55% cases. 'Independent training, tune and test datasets were used.' Peer-reviewed development paper (Slivnick 2025) reports a multisite multiethnic training set of n=2,612 (52% CA); company press release cites 1,349 biopsy-confirmed cases and 1,263 controls.",
+    "source": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K240860.txt (p6, p15-17); https://doi.org/10.1093/eurheartj/ehaf387",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": 1164,
+    "n_patients": 1164,
+    "n_sites": 15,
+    "description": "1,164 patients aged 65+ with heart failure (749 controls, 415 cases), retrospective case:control from multiple sites spanning nine US states; validation cohort comprised 12 US and 3 international sites. Test set 58.4-66.0% White, 24.6-26.8% Black; cases 80.8% male vs controls 47.4%; most aged 71-80; vendors Philips, GE, Siemens, ACUSON. Not evaluated in prior heart transplantation.",
+    "independent_of_training": true,
+    "source": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K240860.txt (p10, p15-17)",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Company press release (Apr 26, 2023): FDA Breakthrough Device Designation for EchoGo Amyloidosis; development supported by Janssen Biotech.",
+     "source_url": "https://www.ultromics.com/press-releases/ultromics-granted-fda-breakthrough-device-designation-for-ai-enhanced-cardiac-amyloidosis-detection",
+     "verification": "company"
+    },
+    {
+     "description": "Company press release (Nov 20, 2024): FDA clearance; first TAP-enrolled device to achieve marketing authorization; sensitivity 84.5%, specificity 89.7% in 65+ with HF; AL 84.4%, ATTRwt 85.8%, ATTRv 86.3% sensitivity; 9 centers; cloud SaaS; partners Janssen and Pfizer.",
+     "source_url": "https://www.ultromics.com/press-releases/ultromics-obtains-breakthrough-device-fda-clearance-for-its-cardiac-amyloidosis-screening-device-through-the-total-product-lifecycle-advisory-program",
+     "verification": "company"
+    },
+    {
+     "description": "Company press release (Jul 9, 2025) on EHJ paper: 18 centers external validation, AUC 0.93, sensitivity 85%, specificity 93%; claims '36.4% more true positive cases' vs clinical scores.",
+     "source_url": "https://www.ultromics.com/press-releases/landmark-study-shows-ultromics-echogo-amyloidosis-significantly-improves-detection-of-cardiac-amyloidosis-with-echocardiography",
+     "verification": "company"
+    },
+    {
+     "description": "Product page: '12,500+' real-world cases; '18+ global sites'; results in under 20 minutes; cloud/DICOM/PACS integration.",
+     "source_url": "https://www.ultromics.com/echogo-amyloidosis",
+     "verification": "company"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Cardiac amyloidosis detection from a single echocardiographic video clip: a novel artificial intelligence-based screening tool",
+     "first_author": "Slivnick JA",
+     "journal": "European Heart Journal",
+     "year": 2025,
+     "doi": "10.1093/eurheartj/ehaf387",
+     "pmid": "40631729",
+     "url": "https://doi.org/10.1093/eurheartj/ehaf387",
+     "relation": "pivotal-validation",
+     "n_subjects": 5331,
+     "key_result": "CNN trained on 2,612 patients (52% CA); external validation at 18 sites (597 CA, 2,122 controls): AUROC 0.93, sensitivity 85%, specificity 93% after excluding 13% uncertain; outperformed TCA (0.73) and IWT (0.80) scores.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Evaluating the Performance and Potential Bias of Predictive Models for Detection of Transthyretin Cardiac Amyloidosis",
+     "first_author": "Hourmozdi J",
+     "journal": "JACC: Advances",
+     "year": 2025,
+     "doi": "10.1016/j.jacadv.2025.101901",
+     "pmid": "40616933",
+     "url": "https://doi.org/10.1016/j.jacadv.2025.101901",
+     "relation": "external-validation",
+     "n_subjects": 3368,
+     "key_result": "Independent health-system comparison: EchoGo Amyloidosis AUC 0.92 vs EchoNet-LVH 0.88 vs Mayo ATTR-CM score 0.79; fairness criteria met for Black patients.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Diagnostic Performance Evaluation of Clinical and Artificial Intelligence Risk Models in Patients Referred for Cardiac Amyloidosis Testing",
+     "first_author": "Garmany A",
+     "journal": "Journal of the American Society of Echocardiography",
+     "year": 2026,
+     "doi": "10.1016/j.echo.2026.05.007",
+     "pmid": "42134538",
+     "url": "https://doi.org/10.1016/j.echo.2026.05.007",
+     "relation": "external-validation",
+     "n_subjects": 598,
+     "key_result": "In 598 scintigraphy referrals, AI-Echo AUC 0.93 (sens 86%, spec 85%) vs AI-ECG 0.79 and ATTR-CM score 0.87; could avoid 45 unnecessary scintigraphies per 100. Product not named in abstract.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [],
+   "open_questions": [
+    "Breakthrough Device designation and TAP participation are asserted only in company press releases; the FDA summary for K240860 does not mention either.",
+    "Training-set totals (1,262 controls / 1,302 cases) are derived by summing table rows; the FDA summary does not print totals and the peer-reviewed training n (2,612) and press-release n (1,349 cases / 1,263 controls) differ slightly from the FDA table.",
+    "Number of sites contributing training data and the reference standard used to define cardiac amyloidosis in the FDA test set are not stated in the summary.",
+    "The FDA summary gives 'nine states in the USA' for the test cohort while the comparison table says 12 US and 3 international sites; n_sites=15 uses the latter.",
+    "Garmany 2026 abstract refers to 'AI-Echo' without naming EchoGo Amyloidosis; attribution based on Ultromics author affiliation."
+   ],
+   "sources": [
+    {
+     "fact": "K240860 indications, predicate, training/test demographics, performance and subgroup tables",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K240860.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Decision date, product code SDJ, applicant",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Breakthrough designation press release (Apr 26, 2023)",
+     "url_or_file": "https://www.ultromics.com/press-releases/ultromics-granted-fda-breakthrough-device-designation-for-ai-enhanced-cardiac-amyloidosis-detection",
+     "verification": "company"
+    },
+    {
+     "fact": "Clearance / TAP press release (Nov 20, 2024)",
+     "url_or_file": "https://www.ultromics.com/press-releases/ultromics-obtains-breakthrough-device-fda-clearance-for-its-cardiac-amyloidosis-screening-device-through-the-total-product-lifecycle-advisory-program",
+     "verification": "company"
+    },
+    {
+     "fact": "Product page",
+     "url_or_file": "https://www.ultromics.com/echogo-amyloidosis",
+     "verification": "company"
+    },
+    {
+     "fact": "Papers resolved via PubMed E-utilities and Crossref",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ ; https://api.crossref.org/works/",
+     "verification": "peer_reviewed"
+    }
+   ]
+  }
+ ],
+ "notes": "All six FDA summaries read in full from the extracted text files; page numbers refer to the '===== PAGE n =====' markers in those files. Decision dates and product codes taken from openfda_records.json. Company/product pages fetched Sep 2026: the Ultromics site now markets only EchoGo Heart Failure and EchoGo Amyloidosis (Core/Pro URLs redirect to the generic EchoGo page). Papers listed only where PubMed esummary and/or Crossref confirmed them in this session; PROTEUS primary results exist only as an ESC 2024 presentation/press release, not an indexed paper. EchoGo Amyloidosis Breakthrough/TAP status comes from company press releases, not the FDA summary. Training-set totals for EchoGo Amyloidosis are sums of the FDA summary's training table rows."
+}

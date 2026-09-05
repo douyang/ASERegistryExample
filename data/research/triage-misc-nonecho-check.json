@@ -1,0 +1,51 @@
+{
+  "group_id": "misc-nonecho-check",
+  "records": [
+    {
+      "k_number": "K223905",
+      "device_name": "Vivio® LVEDP System",
+      "decision_date": "2023-10-06",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "Vivio proprietary LVEDP algorithm (fixed parameter model)",
+          "function": "Estimates whether left ventricular end-diastolic pressure is above or below 18 mmHg from brachial cuff pulse waveform plus single-lead ECG data; adjunct aid to heart-failure diagnosis. Summary explicitly states it is a fixed-parameter model, not ML, in contrast to the predicate EchoGo Heart Failure.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "EchoGo uses a machine learning process to determine whether the echocardiographic images acquired are suggestive of heart failure. Vivio uses a fixed parameter model to determine whether LVEDP is greater than 18 mmHg.",
+          "page": 5
+        }
+      ],
+      "performance_summary": "Prospective multicenter study: 195 cath-lab subjects (9 sites) vs invasive Millar LVEDP, plus 101 non-aged and 40 aged healthy subjects; primary efficacy met with sensitivity 80% (64-91) and specificity 80% (73-86) (page 7). Not an ultrasound/echo AI feature; performance is for the cuff/ECG LVEDP estimator.",
+      "exclusion_reason": "Not an ultrasound device: input is blood-pressure-cuff pulse waveform plus single-lead ECG patch (regulation 870.2200, product code QUO). No cardiac ultrasound or echocardiography is acquired or analyzed. The summary further states the Vivio algorithm is a fixed parameter model rather than AI/ML; the only ML/CNN referenced belongs to the predicate EchoGo Heart Failure (K222463)."
+    },
+    {
+      "k_number": "K211611",
+      "device_name": "QIR Suite",
+      "decision_date": "2022-09-30",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "QIR-MR automated deep learning detection/segmentation algorithms (AG, AG+, Fast)",
+          "function": "Automated deep-learning detection/segmentation of regions of interest on cardiovascular MR images supporting cardiac function analysis (four-chamber EF, myocardial mass, thickness/thickening, diastolic function) and 2D flow.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "QIR-MR is composed of a viewer and analysis modules, and uses user inputs, standard algorithms, and/or automated deep learning detection algorithms.",
+          "page": 6
+        }
+      ],
+      "performance_summary": "Cardiac MR (not ultrasound). Deep-learning segmentation evaluated by Dice vs ground truth: mean 0.893 (AG), 0.888 (AG+), 0.908 (Fast) (page 9). Quantitative outputs vs predicates: R2 >0.97 for all comparisons, average >0.99; cardiac function absolute mean difference vs CVI42 <5%; 2D flow <10% (page 9). No clinical study.",
+      "exclusion_reason": "Cardiac MR image analysis software, not ultrasound/echocardiography. Indications are limited to cardiovascular Magnetic Resonance (MR) DICOM images (regulation 892.2050, product code QIH). Deep-learning algorithms operate on CMR, not echo."
+    },
+    {
+      "k_number": "K232661",
+      "device_name": "Myocardial Strain Software Application",
+      "decision_date": "2023-12-07",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [],
+      "performance_summary": null,
+      "exclusion_reason": "Cardiac MR feature-tracking strain software (cine SSFP CMR, regulation 892.2050, product code LLZ), not ultrasound/echocardiography. The summary explicitly states the device does not involve any AI or ML: 'the feature tracking and deformation quantity computation is purely mathematical; the Strain Module does not involve any artificial intelligence (AI) or machine learning (ML)' (page 6). Validation used phantoms, real MRI data, analytical solutions and comparison to manual tracking by three expert readers (page 12)."
+    }
+  ],
+  "notes": "All three K numbers in this group were checked as flagged 'non-echo' and none qualifies as cardiac ultrasound AI. K223905 (Avicena Vivio) is a cuff pulse-waveform + ECG LVEDP estimator using a fixed-parameter model; the ML/CNN language in the summary describes the predicate EchoGo Heart Failure (K222463), not the subject device (pages 5-6). K211611 (CASIS QIR Suite) is cardiac MR analysis with deep-learning segmentation (Dice 0.888-0.908) but no ultrasound scope. K232661 (Circle Strain Module) is CMR feature-tracking strain and its summary expressly disclaims AI/ML (page 6). No web searches were needed; all determinations are grounded in the FDA summary text. Decision dates and device names taken from openfda_records.json."
+}

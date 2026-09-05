@@ -58,7 +58,7 @@ window.AIECHO_REGISTRY = {
   "heartfocus": {
    "family_id": "heartfocus",
    "product_name": "HeartFocus",
-   "company": "Deski",
+   "company": "DESKi",
    "evaluation_type": "acquisition",
    "evaluable": true,
    "cohort": {
@@ -626,7 +626,7 @@ window.AIECHO_REGISTRY = {
   "clarius-ef-ai": {
    "family_id": "clarius-ef-ai",
    "product_name": "Clarius Ejection Fraction AI",
-   "company": "Clarius Mobile Health",
+   "company": "Clarius Mobile Health Corp.",
    "evaluation_type": "lvef",
    "evaluable": true,
    "cohort": {
@@ -936,7 +936,7 @@ window.AIECHO_REGISTRY = {
   "ligence-heart": {
    "family_id": "ligence-heart",
    "product_name": "Ligence Heart",
-   "company": "Ligence",
+   "company": "Ligence, UAB",
    "evaluation_type": "comprehensive",
    "evaluable": true,
    "cohort": {
@@ -1649,7 +1649,7 @@ window.AIECHO_REGISTRY = {
   "ultrasight-pvad-iq": {
    "family_id": "ultrasight-pvad-iq",
    "product_name": "PVAD IQ Software",
-   "company": "UltraSight",
+   "company": "UltraSight Ltd.",
    "evaluation_type": "not-evaluable-procedural",
    "evaluable": false,
    "reason": "Procedural / TEE guidance is not captured by the registry’s TTE data elements."
@@ -1657,7 +1657,7 @@ window.AIECHO_REGISTRY = {
   "ultrasight-guidance": {
    "family_id": "ultrasight-guidance",
    "product_name": "UltraSight AI Guidance / UltraSight Guidance",
-   "company": "UltraSight",
+   "company": "UltraSight Ltd.",
    "evaluation_type": "acquisition",
    "evaluable": true,
    "cohort": {
@@ -1949,7 +1949,7 @@ window.AIECHO_REGISTRY = {
    "family_id": "icardio-cardiovision",
    "product_name": "CardioVision",
    "company": "iCardio.ai",
-   "evaluation_type": "comprehensive",
+   "evaluation_type": "detection",
    "evaluable": true,
    "cohort": {
     "n_studies": 5700,
@@ -1985,322 +1985,250 @@ window.AIECHO_REGISTRY = {
      "reference": "All eligible registry TTEs"
     },
     {
-     "id": "lvef_mae",
-     "label": "LVEF mean absolute error",
-     "unit": "% EF",
-     "value": 4.1,
+     "id": "auc",
+     "label": "AUC",
+     "unit": "",
+     "value": 0.837,
      "ci": {
-      "low": 4.05,
-      "high": 4.15
+      "low": 0.832,
+      "high": 0.842
      },
-     "direction": "lower",
-     "reference": "Registry-reported LVEF (finalized clinical report)",
+     "direction": "higher",
+     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)",
      "primary": true
     },
     {
-     "id": "lvef_bias",
-     "label": "LVEF bias (AI minus reported)",
-     "unit": "% EF",
-     "value": -1.4,
-     "ci": {
-      "low": -1.46,
-      "high": -1.34
-     },
-     "direction": "zero",
-     "reference": "Registry-reported LVEF"
-    },
-    {
-     "id": "lvef_loa",
-     "label": "95% limits of agreement (half-width)",
-     "unit": "% EF",
-     "value": 8.5,
-     "ci": {
-      "low": 8.4,
-      "high": 8.6
-     },
-     "direction": "lower",
-     "reference": "Bland-Altman vs reported LVEF"
-    },
-    {
-     "id": "lvef_icc",
-     "label": "ICC, AI vs reported LVEF",
-     "unit": "",
-     "value": 0.861,
-     "ci": {
-      "low": 0.857,
-      "high": 0.865
-     },
-     "direction": "higher",
-     "reference": "Two-way mixed, absolute agreement"
-    },
-    {
-     "id": "ef40_sens",
-     "label": "LVEF ≤ 40%: sensitivity",
+     "id": "sens",
+     "label": "Sensitivity",
      "unit": "%",
-     "value": 84.2,
+     "value": 81.3,
      "ci": {
-      "low": 83.8,
-      "high": 84.6
+      "low": 80.8,
+      "high": 81.8
      },
      "direction": "higher",
-     "reference": "Reported LVEF ≤ 40%"
+     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
     },
     {
-     "id": "ef40_spec",
-     "label": "LVEF ≤ 40%: specificity",
+     "id": "spec",
+     "label": "Specificity",
      "unit": "%",
-     "value": 95.9,
+     "value": 80,
      "ci": {
-      "low": 95.6,
-      "high": 96.2
+      "low": 79.7,
+      "high": 80.3
      },
      "direction": "higher",
-     "reference": "Reported LVEF > 40%"
+     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
     },
     {
-     "id": "edv_mae",
-     "label": "LV end-diastolic volume MAE",
-     "unit": "mL",
-     "value": 20.9,
-     "ci": {
-      "low": 20.6,
-      "high": 21.2
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEDV"
-    },
-    {
-     "id": "gls_bias",
-     "label": "GLS bias (AI minus reported)",
+     "id": "ppv",
+     "label": "PPV at registry prevalence (3.1%)",
      "unit": "%",
-     "value": -0.69,
+     "value": 11.5,
      "ci": {
-      "low": -0.73,
-      "high": -0.65
-     },
-     "direction": "zero",
-     "reference": "Registry-reported GLS where present"
-    },
-    {
-     "id": "ee_icc",
-     "label": "E/e′ ICC",
-     "unit": "",
-     "value": 0.825,
-     "ci": {
-      "low": 0.82,
-      "high": 0.83
+      "low": 10.9,
+      "high": 12.1
      },
      "direction": "higher",
-     "reference": "Registry-reported E/e′"
-    },
-    {
-     "id": "avmg_icc",
-     "label": "AV mean gradient ICC",
-     "unit": "",
-     "value": 0.879,
-     "ci": {
-      "low": 0.874,
-      "high": 0.884
-     },
-     "direction": "higher",
-     "reference": "Registry metric: mean and peak gradients for valvular disease"
+     "reference": "Derived from sensitivity, specificity and cohort prevalence"
     }
    ],
-   "primary_endpoint_id": "lvef_mae",
+   "primary_endpoint_id": "auc",
    "subgroups": [
     {
      "dimension": "Sex",
      "level": "Female",
-     "value": 4.1,
-     "n": 3830
+     "value": 0.851,
+     "n": 890
     },
     {
      "dimension": "Sex",
      "level": "Male",
-     "value": 3.8,
-     "n": 2740
+     "value": 0.779,
+     "n": 3330
     },
     {
      "dimension": "Age",
      "level": "< 50",
-     "value": 3.8,
-     "n": 800
+     "value": 0.885,
+     "n": 2430
     },
     {
      "dimension": "Age",
      "level": "50–69",
-     "value": 4.1,
-     "n": 700
+     "value": 0.842,
+     "n": 2170
     },
     {
      "dimension": "Age",
      "level": "≥ 70",
-     "value": 3.6,
-     "n": 1120
+     "value": 0.919,
+     "n": 780
     },
     {
      "dimension": "BMI",
      "level": "< 30",
-     "value": 4,
-     "n": 2320
+     "value": 0.864,
+     "n": 1140
     },
     {
      "dimension": "BMI",
      "level": "≥ 30",
-     "value": 5,
-     "n": 3780
+     "value": 0.726,
+     "n": 2190
     },
     {
      "dimension": "Image quality",
      "level": "Good",
-     "value": 4.4,
-     "n": 2000
+     "value": 0.763,
+     "n": 250
     },
     {
      "dimension": "Image quality",
      "level": "Adequate",
-     "value": 3.6,
-     "n": 2680
+     "value": 0.783,
+     "n": 1930
     },
     {
      "dimension": "Image quality",
      "level": "Poor",
-     "value": 5.6,
-     "n": 3080
+     "value": 0.726,
+     "n": 4040
     },
     {
      "dimension": "Vendor",
      "level": "GE HealthCare",
-     "value": 3.7,
-     "n": 1050
+     "value": 0.916,
+     "n": 3340
     },
     {
      "dimension": "Vendor",
      "level": "Philips",
-     "value": 4.3,
-     "n": 1170
+     "value": 0.827,
+     "n": 340
     },
     {
      "dimension": "Vendor",
      "level": "Siemens Healthineers",
-     "value": 3.8,
-     "n": 2140
+     "value": 0.862,
+     "n": 3700
     },
     {
      "dimension": "Vendor",
      "level": "Canon Medical",
-     "value": 3.7,
-     "n": 1860
+     "value": 0.881,
+     "n": 410
     }
    ],
    "monthly": [
     {
      "month": "2025-01",
-     "n": 343,
-     "primary": 4.3,
-     "feasibility": 79.1
+     "n": 318,
+     "primary": 0.809,
+     "feasibility": 78.9
     },
     {
      "month": "2025-02",
-     "n": 256,
-     "primary": 4.3,
-     "feasibility": 78.8
+     "n": 327,
+     "primary": 0.827,
+     "feasibility": 77.4
     },
     {
      "month": "2025-03",
-     "n": 287,
-     "primary": 4.1,
-     "feasibility": 79.1
+     "n": 337,
+     "primary": 0.864,
+     "feasibility": 78.9
     },
     {
      "month": "2025-04",
-     "n": 410,
-     "primary": 4.4,
-     "feasibility": 74.9
+     "n": 403,
+     "primary": 0.831,
+     "feasibility": 79.1
     },
     {
      "month": "2025-05",
-     "n": 239,
-     "primary": 4.2,
-     "feasibility": 75.2
+     "n": 389,
+     "primary": 0.848,
+     "feasibility": 76.2
     },
     {
      "month": "2025-06",
-     "n": 277,
-     "primary": 4.2,
-     "feasibility": 77.6
+     "n": 403,
+     "primary": 0.903,
+     "feasibility": 79.1
     },
     {
      "month": "2025-07",
-     "n": 394,
-     "primary": 4.3,
-     "feasibility": 78.2
+     "n": 231,
+     "primary": 0.826,
+     "feasibility": 76.6
     },
     {
      "month": "2025-08",
-     "n": 269,
-     "primary": 4,
-     "feasibility": 77.8
+     "n": 244,
+     "primary": 0.839,
+     "feasibility": 77.2
     },
     {
      "month": "2025-09",
-     "n": 277,
-     "primary": 4.2,
-     "feasibility": 75.9
+     "n": 340,
+     "primary": 0.884,
+     "feasibility": 77.7
     },
     {
      "month": "2025-10",
-     "n": 309,
-     "primary": 4.2,
-     "feasibility": 75.7
+     "n": 368,
+     "primary": 0.822,
+     "feasibility": 74.8
     },
     {
      "month": "2025-11",
-     "n": 332,
-     "primary": 4.1,
-     "feasibility": 76
+     "n": 351,
+     "primary": 0.817,
+     "feasibility": 77.4
     },
     {
      "month": "2025-12",
-     "n": 383,
-     "primary": 4.1,
+     "n": 272,
+     "primary": 0.824,
      "feasibility": 77.7
     },
     {
      "month": "2026-01",
-     "n": 391,
-     "primary": 4,
-     "feasibility": 78.7
+     "n": 263,
+     "primary": 0.827,
+     "feasibility": 77.5
     },
     {
      "month": "2026-02",
-     "n": 349,
-     "primary": 3.9,
-     "feasibility": 75.1
+     "n": 274,
+     "primary": 0.845,
+     "feasibility": 77
     },
     {
      "month": "2026-03",
-     "n": 319,
-     "primary": 4.2,
-     "feasibility": 77.4
+     "n": 344,
+     "primary": 0.845,
+     "feasibility": 76.6
     },
     {
      "month": "2026-04",
-     "n": 286,
-     "primary": 4,
-     "feasibility": 77.3
+     "n": 386,
+     "primary": 0.826,
+     "feasibility": 75.6
     },
     {
      "month": "2026-05",
-     "n": 255,
-     "primary": 3.9,
-     "feasibility": 78.3
+     "n": 240,
+     "primary": 0.815,
+     "feasibility": 79.2
     },
     {
      "month": "2026-06",
-     "n": 362,
-     "primary": 4,
-     "feasibility": 77.1
+     "n": 333,
+     "primary": 0.806,
+     "feasibility": 77.3
     }
    ]
   },
@@ -2311,19 +2239,22 @@ window.AIECHO_REGISTRY = {
    "evaluation_type": "comprehensive",
    "evaluable": true,
    "cohort": {
-    "n_studies": 10830,
-    "n_sites": 6,
+    "n_studies": 6610,
+    "n_sites": 7,
     "sites": [
-     "Site H",
-     "Site D",
-     "Site B",
-     "Site A",
      "Site E",
-     "Site F"
+     "Site F",
+     "Site D",
+     "Site G",
+     "Site A",
+     "Site C",
+     "Site H"
     ],
     "vendors": [
      "Siemens Healthineers",
-     "Philips"
+     "Philips",
+     "GE HealthCare",
+     "Canon Medical"
     ],
     "period": "2025-01 to 2026-06",
     "module": "Adult TTE (phase 1)"
@@ -2333,10 +2264,10 @@ window.AIECHO_REGISTRY = {
      "id": "feasibility",
      "label": "Feasibility (studies with an AI output)",
      "unit": "%",
-     "value": 88.8,
+     "value": 73.2,
      "ci": {
-      "low": 88.6,
-      "high": 89
+      "low": 73,
+      "high": 73.4
      },
      "direction": "higher",
      "reference": "All eligible registry TTEs"
@@ -2345,10 +2276,10 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_mae",
      "label": "LVEF mean absolute error",
      "unit": "% EF",
-     "value": 6.6,
+     "value": 5.7,
      "ci": {
-      "low": 6.56,
-      "high": 6.64
+      "low": 5.65,
+      "high": 5.75
      },
      "direction": "lower",
      "reference": "Registry-reported LVEF (finalized clinical report)",
@@ -2358,10 +2289,10 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_bias",
      "label": "LVEF bias (AI minus reported)",
      "unit": "% EF",
-     "value": -1.4,
+     "value": -2.3,
      "ci": {
-      "low": -1.45,
-      "high": -1.35
+      "low": -2.36,
+      "high": -2.24
      },
      "direction": "zero",
      "reference": "Registry-reported LVEF"
@@ -2370,10 +2301,10 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_loa",
      "label": "95% limits of agreement (half-width)",
      "unit": "% EF",
-     "value": 12.9,
+     "value": 14.2,
      "ci": {
-      "low": 12.8,
-      "high": 13
+      "low": 14.1,
+      "high": 14.3
      },
      "direction": "lower",
      "reference": "Bland-Altman vs reported LVEF"
@@ -2382,10 +2313,10 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_icc",
      "label": "ICC, AI vs reported LVEF",
      "unit": "",
-     "value": 0.879,
+     "value": 0.794,
      "ci": {
-      "low": 0.876,
-      "high": 0.882
+      "low": 0.79,
+      "high": 0.798
      },
      "direction": "higher",
      "reference": "Two-way mixed, absolute agreement"
@@ -2394,10 +2325,10 @@ window.AIECHO_REGISTRY = {
      "id": "ef40_sens",
      "label": "LVEF ≤ 40%: sensitivity",
      "unit": "%",
-     "value": 84.5,
+     "value": 95.7,
      "ci": {
-      "low": 84.2,
-      "high": 84.8
+      "low": 95.3,
+      "high": 96.1
      },
      "direction": "higher",
      "reference": "Reported LVEF ≤ 40%"
@@ -2406,10 +2337,10 @@ window.AIECHO_REGISTRY = {
      "id": "ef40_spec",
      "label": "LVEF ≤ 40%: specificity",
      "unit": "%",
-     "value": 91,
+     "value": 87.3,
      "ci": {
-      "low": 90.8,
-      "high": 91.2
+      "low": 87,
+      "high": 87.6
      },
      "direction": "higher",
      "reference": "Reported LVEF > 40%"
@@ -2418,10 +2349,10 @@ window.AIECHO_REGISTRY = {
      "id": "edv_mae",
      "label": "LV end-diastolic volume MAE",
      "unit": "mL",
-     "value": 25.9,
+     "value": 23.2,
      "ci": {
-      "low": 25.7,
-      "high": 26.1
+      "low": 22.9,
+      "high": 23.5
      },
      "direction": "lower",
      "reference": "Registry-reported LVEDV"
@@ -2430,10 +2361,10 @@ window.AIECHO_REGISTRY = {
      "id": "gls_bias",
      "label": "GLS bias (AI minus reported)",
      "unit": "%",
-     "value": 1.55,
+     "value": 0.89,
      "ci": {
-      "low": 1.52,
-      "high": 1.58
+      "low": 0.85,
+      "high": 0.93
      },
      "direction": "zero",
      "reference": "Registry-reported GLS where present"
@@ -2442,10 +2373,10 @@ window.AIECHO_REGISTRY = {
      "id": "ee_icc",
      "label": "E/e′ ICC",
      "unit": "",
-     "value": 0.862,
+     "value": 0.756,
      "ci": {
-      "low": 0.858,
-      "high": 0.866
+      "low": 0.751,
+      "high": 0.761
      },
      "direction": "higher",
      "reference": "Registry-reported E/e′"
@@ -2454,10 +2385,10 @@ window.AIECHO_REGISTRY = {
      "id": "avmg_icc",
      "label": "AV mean gradient ICC",
      "unit": "",
-     "value": 0.929,
+     "value": 0.882,
      "ci": {
-      "low": 0.925,
-      "high": 0.933
+      "low": 0.877,
+      "high": 0.887
      },
      "direction": "higher",
      "reference": "Registry metric: mean and peak gradients for valvular disease"
@@ -2469,215 +2400,574 @@ window.AIECHO_REGISTRY = {
      "dimension": "Sex",
      "level": "Female",
      "value": 6.3,
-     "n": 3610
+     "n": 3260
     },
     {
      "dimension": "Sex",
      "level": "Male",
-     "value": 6.9,
-     "n": 490
+     "value": 5.3,
+     "n": 2630
     },
     {
      "dimension": "Age",
      "level": "< 50",
-     "value": 6.4,
-     "n": 3300
+     "value": 5.1,
+     "n": 3370
     },
     {
      "dimension": "Age",
      "level": "50–69",
-     "value": 6.8,
-     "n": 360
+     "value": 5.8,
+     "n": 1470
     },
     {
      "dimension": "Age",
      "level": "≥ 70",
-     "value": 5.9,
-     "n": 2460
+     "value": 6.2,
+     "n": 2910
     },
     {
      "dimension": "BMI",
      "level": "< 30",
-     "value": 7,
-     "n": 2780
+     "value": 5.1,
+     "n": 1700
     },
     {
      "dimension": "BMI",
      "level": "≥ 30",
-     "value": 7,
-     "n": 2460
+     "value": 6.6,
+     "n": 2650
     },
     {
      "dimension": "Image quality",
      "level": "Good",
-     "value": 7.1,
-     "n": 480
+     "value": 5.1,
+     "n": 500
     },
     {
      "dimension": "Image quality",
      "level": "Adequate",
-     "value": 6.7,
-     "n": 810
+     "value": 5.8,
+     "n": 3320
     },
     {
      "dimension": "Image quality",
      "level": "Poor",
-     "value": 8.1,
-     "n": 400
+     "value": 7.5,
+     "n": 1530
     },
     {
      "dimension": "Vendor",
      "level": "GE HealthCare",
-     "value": 5.9,
-     "n": 3400
+     "value": 5.8,
+     "n": 3540
     },
     {
      "dimension": "Vendor",
      "level": "Philips",
-     "value": 6.5,
-     "n": 2290
+     "value": 5.1,
+     "n": 2410
     },
     {
      "dimension": "Vendor",
      "level": "Siemens Healthineers",
-     "value": 7.2,
-     "n": 1560
+     "value": 5.2,
+     "n": 1310
     },
     {
      "dimension": "Vendor",
      "level": "Canon Medical",
-     "value": 7.1,
-     "n": 620
+     "value": 5.1,
+     "n": 470
     }
    ],
    "monthly": [
     {
      "month": "2025-01",
-     "n": 624,
-     "primary": 6.3,
-     "feasibility": 91
+     "n": 394,
+     "primary": 5.5,
+     "feasibility": 73.2
     },
     {
      "month": "2025-02",
-     "n": 566,
-     "primary": 6.4,
-     "feasibility": 87.1
+     "n": 449,
+     "primary": 6,
+     "feasibility": 74.5
     },
     {
      "month": "2025-03",
-     "n": 635,
-     "primary": 6.7,
-     "feasibility": 87.8
+     "n": 476,
+     "primary": 5.8,
+     "feasibility": 71.3
     },
     {
      "month": "2025-04",
-     "n": 451,
-     "primary": 6.9,
-     "feasibility": 88.6
+     "n": 458,
+     "primary": 5.8,
+     "feasibility": 71.2
     },
     {
      "month": "2025-05",
-     "n": 733,
-     "primary": 7,
-     "feasibility": 88.1
+     "n": 296,
+     "primary": 5.9,
+     "feasibility": 73
     },
     {
      "month": "2025-06",
-     "n": 693,
-     "primary": 6.6,
-     "feasibility": 88.3
+     "n": 327,
+     "primary": 5.6,
+     "feasibility": 73.9
     },
     {
      "month": "2025-07",
-     "n": 435,
-     "primary": 6.5,
-     "feasibility": 89.3
+     "n": 358,
+     "primary": 6.1,
+     "feasibility": 74.5
     },
     {
      "month": "2025-08",
-     "n": 459,
-     "primary": 6.8,
-     "feasibility": 91.4
+     "n": 338,
+     "primary": 6,
+     "feasibility": 72
     },
     {
      "month": "2025-09",
-     "n": 570,
-     "primary": 6.9,
-     "feasibility": 87.9
+     "n": 346,
+     "primary": 5.5,
+     "feasibility": 71
     },
     {
      "month": "2025-10",
-     "n": 601,
-     "primary": 6.7,
-     "feasibility": 87
+     "n": 387,
+     "primary": 5.5,
+     "feasibility": 73.4
     },
     {
      "month": "2025-11",
-     "n": 684,
-     "primary": 6.3,
-     "feasibility": 88.6
+     "n": 477,
+     "primary": 5.6,
+     "feasibility": 74.3
     },
     {
      "month": "2025-12",
-     "n": 628,
-     "primary": 6.7,
-     "feasibility": 88.1
+     "n": 329,
+     "primary": 5.6,
+     "feasibility": 73.4
     },
     {
      "month": "2026-01",
-     "n": 571,
-     "primary": 6.7,
-     "feasibility": 90.5
+     "n": 295,
+     "primary": 5.7,
+     "feasibility": 71.1
     },
     {
      "month": "2026-02",
-     "n": 504,
-     "primary": 6.2,
-     "feasibility": 90.6
+     "n": 361,
+     "primary": 5.6,
+     "feasibility": 74.6
     },
     {
      "month": "2026-03",
-     "n": 561,
-     "primary": 6.4,
-     "feasibility": 86.6
+     "n": 338,
+     "primary": 5.5,
+     "feasibility": 75
     },
     {
      "month": "2026-04",
-     "n": 534,
-     "primary": 6.3,
-     "feasibility": 91
+     "n": 435,
+     "primary": 5.4,
+     "feasibility": 71.7
     },
     {
      "month": "2026-05",
-     "n": 697,
-     "primary": 6.2,
-     "feasibility": 89.4
+     "n": 442,
+     "primary": 5.5,
+     "feasibility": 72.9
     },
     {
      "month": "2026-06",
-     "n": 439,
-     "primary": 6.7,
-     "feasibility": 89.3
+     "n": 276,
+     "primary": 5.5,
+     "feasibility": 72.6
     }
    ]
   },
   "echoconfidence": {
    "family_id": "echoconfidence",
    "product_name": "EchoConfidence (USA)",
-   "company": "Mycardium AI",
+   "company": "Mycardium AI Limited",
    "evaluation_type": "comprehensive",
    "evaluable": true,
    "cohort": {
-    "n_studies": 10840,
-    "n_sites": 3,
+    "n_studies": 19570,
+    "n_sites": 5,
     "sites": [
+     "Site F",
      "Site D",
-     "Site H",
-     "Site G"
+     "Site B",
+     "Site A",
+     "Site H"
     ],
     "vendors": [
-     "Canon Medical",
+     "Siemens Healthineers",
      "GE HealthCare",
+     "Canon Medical"
+    ],
+    "period": "2025-01 to 2026-06",
+    "module": "Adult TTE (phase 1)"
+   },
+   "endpoints": [
+    {
+     "id": "feasibility",
+     "label": "Feasibility (studies with an AI output)",
+     "unit": "%",
+     "value": 77.8,
+     "ci": {
+      "low": 77.7,
+      "high": 77.9
+     },
+     "direction": "higher",
+     "reference": "All eligible registry TTEs"
+    },
+    {
+     "id": "lvef_mae",
+     "label": "LVEF mean absolute error",
+     "unit": "% EF",
+     "value": 5.7,
+     "ci": {
+      "low": 5.67,
+      "high": 5.73
+     },
+     "direction": "lower",
+     "reference": "Registry-reported LVEF (finalized clinical report)",
+     "primary": true
+    },
+    {
+     "id": "lvef_bias",
+     "label": "LVEF bias (AI minus reported)",
+     "unit": "% EF",
+     "value": 1.4,
+     "ci": {
+      "low": 1.37,
+      "high": 1.43
+     },
+     "direction": "zero",
+     "reference": "Registry-reported LVEF"
+    },
+    {
+     "id": "lvef_loa",
+     "label": "95% limits of agreement (half-width)",
+     "unit": "% EF",
+     "value": 10.6,
+     "ci": {
+      "low": 10.6,
+      "high": 10.6
+     },
+     "direction": "lower",
+     "reference": "Bland-Altman vs reported LVEF"
+    },
+    {
+     "id": "lvef_icc",
+     "label": "ICC, AI vs reported LVEF",
+     "unit": "",
+     "value": 0.939,
+     "ci": {
+      "low": 0.937,
+      "high": 0.941
+     },
+     "direction": "higher",
+     "reference": "Two-way mixed, absolute agreement"
+    },
+    {
+     "id": "ef40_sens",
+     "label": "LVEF ≤ 40%: sensitivity",
+     "unit": "%",
+     "value": 82.6,
+     "ci": {
+      "low": 82.4,
+      "high": 82.8
+     },
+     "direction": "higher",
+     "reference": "Reported LVEF ≤ 40%"
+    },
+    {
+     "id": "ef40_spec",
+     "label": "LVEF ≤ 40%: specificity",
+     "unit": "%",
+     "value": 90.6,
+     "ci": {
+      "low": 90.4,
+      "high": 90.8
+     },
+     "direction": "higher",
+     "reference": "Reported LVEF > 40%"
+    },
+    {
+     "id": "edv_mae",
+     "label": "LV end-diastolic volume MAE",
+     "unit": "mL",
+     "value": 16.1,
+     "ci": {
+      "low": 15.9,
+      "high": 16.3
+     },
+     "direction": "lower",
+     "reference": "Registry-reported LVEDV"
+    },
+    {
+     "id": "gls_bias",
+     "label": "GLS bias (AI minus reported)",
+     "unit": "%",
+     "value": -0.29,
+     "ci": {
+      "low": -0.31,
+      "high": -0.27
+     },
+     "direction": "zero",
+     "reference": "Registry-reported GLS where present"
+    },
+    {
+     "id": "ee_icc",
+     "label": "E/e′ ICC",
+     "unit": "",
+     "value": 0.87,
+     "ci": {
+      "low": 0.867,
+      "high": 0.873
+     },
+     "direction": "higher",
+     "reference": "Registry-reported E/e′"
+    },
+    {
+     "id": "avmg_icc",
+     "label": "AV mean gradient ICC",
+     "unit": "",
+     "value": 0.912,
+     "ci": {
+      "low": 0.909,
+      "high": 0.915
+     },
+     "direction": "higher",
+     "reference": "Registry metric: mean and peak gradients for valvular disease"
+    }
+   ],
+   "primary_endpoint_id": "lvef_mae",
+   "subgroups": [
+    {
+     "dimension": "Sex",
+     "level": "Female",
+     "value": 5.2,
+     "n": 1010
+    },
+    {
+     "dimension": "Sex",
+     "level": "Male",
+     "value": 5.3,
+     "n": 3130
+    },
+    {
+     "dimension": "Age",
+     "level": "< 50",
+     "value": 6.3,
+     "n": 1880
+    },
+    {
+     "dimension": "Age",
+     "level": "50–69",
+     "value": 5.9,
+     "n": 3160
+    },
+    {
+     "dimension": "Age",
+     "level": "≥ 70",
+     "value": 6.4,
+     "n": 260
+    },
+    {
+     "dimension": "BMI",
+     "level": "< 30",
+     "value": 5.1,
+     "n": 3870
+    },
+    {
+     "dimension": "BMI",
+     "level": "≥ 30",
+     "value": 6,
+     "n": 3360
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Good",
+     "value": 6,
+     "n": 2340
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Adequate",
+     "value": 6,
+     "n": 460
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Poor",
+     "value": 7.5,
+     "n": 2420
+    },
+    {
+     "dimension": "Vendor",
+     "level": "GE HealthCare",
+     "value": 6.1,
+     "n": 220
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Philips",
+     "value": 5.9,
+     "n": 390
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Siemens Healthineers",
+     "value": 5.1,
+     "n": 1520
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Canon Medical",
+     "value": 5.9,
+     "n": 400
+    }
+   ],
+   "monthly": [
+    {
+     "month": "2025-01",
+     "n": 1239,
+     "primary": 5.6,
+     "feasibility": 75.5
+    },
+    {
+     "month": "2025-02",
+     "n": 1389,
+     "primary": 5.8,
+     "feasibility": 76.3
+    },
+    {
+     "month": "2025-03",
+     "n": 819,
+     "primary": 6,
+     "feasibility": 77.1
+    },
+    {
+     "month": "2025-04",
+     "n": 763,
+     "primary": 5.7,
+     "feasibility": 77.5
+    },
+    {
+     "month": "2025-05",
+     "n": 1130,
+     "primary": 5.9,
+     "feasibility": 76
+    },
+    {
+     "month": "2025-06",
+     "n": 770,
+     "primary": 6,
+     "feasibility": 79.6
+    },
+    {
+     "month": "2025-07",
+     "n": 781,
+     "primary": 6.1,
+     "feasibility": 77.8
+    },
+    {
+     "month": "2025-08",
+     "n": 1080,
+     "primary": 5.6,
+     "feasibility": 78.4
+    },
+    {
+     "month": "2025-09",
+     "n": 1080,
+     "primary": 5.8,
+     "feasibility": 78.6
+    },
+    {
+     "month": "2025-10",
+     "n": 1089,
+     "primary": 6,
+     "feasibility": 77.2
+    },
+    {
+     "month": "2025-11",
+     "n": 773,
+     "primary": 5.7,
+     "feasibility": 77.2
+    },
+    {
+     "month": "2025-12",
+     "n": 1200,
+     "primary": 5.4,
+     "feasibility": 78.1
+    },
+    {
+     "month": "2026-01",
+     "n": 770,
+     "primary": 5.4,
+     "feasibility": 79
+    },
+    {
+     "month": "2026-02",
+     "n": 1411,
+     "primary": 5.5,
+     "feasibility": 77.8
+    },
+    {
+     "month": "2026-03",
+     "n": 924,
+     "primary": 5.7,
+     "feasibility": 77.7
+    },
+    {
+     "month": "2026-04",
+     "n": 883,
+     "primary": 5.4,
+     "feasibility": 78
+    },
+    {
+     "month": "2026-05",
+     "n": 1008,
+     "primary": 5.8,
+     "feasibility": 76.1
+    },
+    {
+     "month": "2026-06",
+     "n": 921,
+     "primary": 5.5,
+     "feasibility": 78.7
+    }
+   ]
+  },
+  "us2-ca": {
+   "family_id": "us2-ca",
+   "product_name": "Us2.ca",
+   "company": "Us2.ai (Eko.ai Pte. Ltd. d/b/a Us2.ai)",
+   "evaluation_type": "amyloid",
+   "evaluable": true,
+   "cohort": {
+    "n_studies": 5830,
+    "n_sites": 6,
+    "sites": [
+     "Site A",
+     "Site D",
+     "Site F",
+     "Site G",
+     "Site B",
+     "Site E"
+    ],
+    "vendors": [
+     "Philips",
      "Siemens Healthineers"
     ],
     "period": "2025-01 to 2026-06",
@@ -2688,691 +2978,259 @@ window.AIECHO_REGISTRY = {
      "id": "feasibility",
      "label": "Feasibility (studies with an AI output)",
      "unit": "%",
-     "value": 78.1,
+     "value": 74.4,
      "ci": {
-      "low": 77.9,
-      "high": 78.3
+      "low": 74.1,
+      "high": 74.7
      },
      "direction": "higher",
      "reference": "All eligible registry TTEs"
     },
     {
-     "id": "lvef_mae",
-     "label": "LVEF mean absolute error",
-     "unit": "% EF",
-     "value": 5.2,
+     "id": "auc",
+     "label": "AUC",
+     "unit": "",
+     "value": 0.932,
      "ci": {
-      "low": 5.16,
-      "high": 5.24
+      "low": 0.927,
+      "high": 0.937
      },
-     "direction": "lower",
-     "reference": "Registry-reported LVEF (finalized clinical report)",
+     "direction": "higher",
+     "reference": "Registry-linked confirmed cardiac amyloidosis diagnosis",
      "primary": true
     },
     {
-     "id": "lvef_bias",
-     "label": "LVEF bias (AI minus reported)",
-     "unit": "% EF",
-     "value": 1.6,
-     "ci": {
-      "low": 1.55,
-      "high": 1.65
-     },
-     "direction": "zero",
-     "reference": "Registry-reported LVEF"
-    },
-    {
-     "id": "lvef_loa",
-     "label": "95% limits of agreement (half-width)",
-     "unit": "% EF",
-     "value": 14.5,
-     "ci": {
-      "low": 14.4,
-      "high": 14.6
-     },
-     "direction": "lower",
-     "reference": "Bland-Altman vs reported LVEF"
-    },
-    {
-     "id": "lvef_icc",
-     "label": "ICC, AI vs reported LVEF",
-     "unit": "",
-     "value": 0.897,
-     "ci": {
-      "low": 0.894,
-      "high": 0.9
-     },
-     "direction": "higher",
-     "reference": "Two-way mixed, absolute agreement"
-    },
-    {
-     "id": "ef40_sens",
-     "label": "LVEF ≤ 40%: sensitivity",
+     "id": "sens",
+     "label": "Sensitivity",
      "unit": "%",
-     "value": 87.4,
+     "value": 83.2,
      "ci": {
-      "low": 87.1,
-      "high": 87.7
+      "low": 82.7,
+      "high": 83.7
      },
      "direction": "higher",
-     "reference": "Reported LVEF ≤ 40%"
+     "reference": "Registry-linked confirmed cardiac amyloidosis diagnosis"
     },
     {
-     "id": "ef40_spec",
-     "label": "LVEF ≤ 40%: specificity",
+     "id": "spec",
+     "label": "Specificity",
      "unit": "%",
-     "value": 85,
+     "value": 81.9,
      "ci": {
-      "low": 84.8,
-      "high": 85.2
+      "low": 81.6,
+      "high": 82.2
      },
      "direction": "higher",
-     "reference": "Reported LVEF > 40%"
+     "reference": "Registry-linked confirmed cardiac amyloidosis diagnosis"
     },
     {
-     "id": "edv_mae",
-     "label": "LV end-diastolic volume MAE",
-     "unit": "mL",
-     "value": 27.4,
-     "ci": {
-      "low": 27.2,
-      "high": 27.6
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEDV"
-    },
-    {
-     "id": "gls_bias",
-     "label": "GLS bias (AI minus reported)",
+     "id": "ppv",
+     "label": "PPV at registry prevalence (1.2%)",
      "unit": "%",
-     "value": 0.25,
+     "value": 5.3,
      "ci": {
-      "low": 0.22,
-      "high": 0.28
-     },
-     "direction": "zero",
-     "reference": "Registry-reported GLS where present"
-    },
-    {
-     "id": "ee_icc",
-     "label": "E/e′ ICC",
-     "unit": "",
-     "value": 0.753,
-     "ci": {
-      "low": 0.749,
-      "high": 0.757
+      "low": 4.7,
+      "high": 5.9
      },
      "direction": "higher",
-     "reference": "Registry-reported E/e′"
-    },
-    {
-     "id": "avmg_icc",
-     "label": "AV mean gradient ICC",
-     "unit": "",
-     "value": 0.812,
-     "ci": {
-      "low": 0.808,
-      "high": 0.816
-     },
-     "direction": "higher",
-     "reference": "Registry metric: mean and peak gradients for valvular disease"
+     "reference": "Derived from sensitivity, specificity and cohort prevalence"
     }
    ],
-   "primary_endpoint_id": "lvef_mae",
+   "primary_endpoint_id": "auc",
    "subgroups": [
     {
      "dimension": "Sex",
      "level": "Female",
-     "value": 5.5,
-     "n": 4150
+     "value": 0.927,
+     "n": 3500
     },
     {
      "dimension": "Sex",
      "level": "Male",
-     "value": 4.6,
-     "n": 470
+     "value": 0.904,
+     "n": 360
     },
     {
      "dimension": "Age",
      "level": "< 50",
-     "value": 5.7,
-     "n": 1280
+     "value": 0.884,
+     "n": 3900
     },
     {
      "dimension": "Age",
      "level": "50–69",
-     "value": 5.6,
-     "n": 3150
-    },
-    {
-     "dimension": "Age",
-     "level": "≥ 70",
-     "value": 5.2,
-     "n": 3110
-    },
-    {
-     "dimension": "BMI",
-     "level": "< 30",
-     "value": 4.7,
-     "n": 2850
-    },
-    {
-     "dimension": "BMI",
-     "level": "≥ 30",
-     "value": 5.8,
-     "n": 3300
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Good",
-     "value": 4.6,
-     "n": 2800
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Adequate",
-     "value": 4.6,
-     "n": 380
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Poor",
-     "value": 6.4,
-     "n": 2730
-    },
-    {
-     "dimension": "Vendor",
-     "level": "GE HealthCare",
-     "value": 4.6,
-     "n": 910
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Philips",
-     "value": 5.3,
-     "n": 4110
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Siemens Healthineers",
-     "value": 5,
-     "n": 3010
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Canon Medical",
-     "value": 4.8,
-     "n": 2280
-    }
-   ],
-   "monthly": [
-    {
-     "month": "2025-01",
-     "n": 724,
-     "primary": 5.1,
-     "feasibility": 75.8
-    },
-    {
-     "month": "2025-02",
-     "n": 519,
-     "primary": 5.2,
-     "feasibility": 78.4
-    },
-    {
-     "month": "2025-03",
-     "n": 621,
-     "primary": 5.1,
-     "feasibility": 75.8
-    },
-    {
-     "month": "2025-04",
-     "n": 659,
-     "primary": 5.5,
-     "feasibility": 75.9
-    },
-    {
-     "month": "2025-05",
-     "n": 764,
-     "primary": 5.4,
-     "feasibility": 78
-    },
-    {
-     "month": "2025-06",
-     "n": 460,
-     "primary": 5.4,
-     "feasibility": 78.1
-    },
-    {
-     "month": "2025-07",
-     "n": 593,
-     "primary": 5.4,
-     "feasibility": 78.1
-    },
-    {
-     "month": "2025-08",
-     "n": 751,
-     "primary": 5.3,
-     "feasibility": 75.8
-    },
-    {
-     "month": "2025-09",
-     "n": 610,
-     "primary": 5.2,
-     "feasibility": 78.9
-    },
-    {
-     "month": "2025-10",
-     "n": 480,
-     "primary": 5.3,
-     "feasibility": 75.8
-    },
-    {
-     "month": "2025-11",
-     "n": 453,
-     "primary": 5.3,
-     "feasibility": 80.4
-    },
-    {
-     "month": "2025-12",
-     "n": 590,
-     "primary": 5.1,
-     "feasibility": 76.9
-    },
-    {
-     "month": "2026-01",
-     "n": 691,
-     "primary": 5.1,
-     "feasibility": 76.6
-    },
-    {
-     "month": "2026-02",
-     "n": 530,
-     "primary": 5.1,
-     "feasibility": 77.5
-    },
-    {
-     "month": "2026-03",
-     "n": 761,
-     "primary": 4.9,
-     "feasibility": 76.9
-    },
-    {
-     "month": "2026-04",
-     "n": 584,
-     "primary": 5.1,
-     "feasibility": 76.5
-    },
-    {
-     "month": "2026-05",
-     "n": 496,
-     "primary": 4.9,
-     "feasibility": 79.2
-    },
-    {
-     "month": "2026-06",
-     "n": 764,
-     "primary": 5,
-     "feasibility": 78.7
-    }
-   ]
-  },
-  "us2-ca": {
-   "family_id": "us2-ca",
-   "product_name": "Us2.ca",
-   "company": "Us2.ai",
-   "evaluation_type": "comprehensive",
-   "evaluable": true,
-   "cohort": {
-    "n_studies": 15910,
-    "n_sites": 7,
-    "sites": [
-     "Site E",
-     "Site D",
-     "Site C",
-     "Site F",
-     "Site G",
-     "Site A",
-     "Site B"
-    ],
-    "vendors": [
-     "Canon Medical",
-     "Philips",
-     "Siemens Healthineers",
-     "GE HealthCare"
-    ],
-    "period": "2025-01 to 2026-06",
-    "module": "Adult TTE (phase 1)"
-   },
-   "endpoints": [
-    {
-     "id": "feasibility",
-     "label": "Feasibility (studies with an AI output)",
-     "unit": "%",
-     "value": 78.5,
-     "ci": {
-      "low": 78.3,
-      "high": 78.7
-     },
-     "direction": "higher",
-     "reference": "All eligible registry TTEs"
-    },
-    {
-     "id": "lvef_mae",
-     "label": "LVEF mean absolute error",
-     "unit": "% EF",
-     "value": 4.3,
-     "ci": {
-      "low": 4.27,
-      "high": 4.33
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEF (finalized clinical report)",
-     "primary": true
-    },
-    {
-     "id": "lvef_bias",
-     "label": "LVEF bias (AI minus reported)",
-     "unit": "% EF",
-     "value": -1,
-     "ci": {
-      "low": -1.04,
-      "high": -0.96
-     },
-     "direction": "zero",
-     "reference": "Registry-reported LVEF"
-    },
-    {
-     "id": "lvef_loa",
-     "label": "95% limits of agreement (half-width)",
-     "unit": "% EF",
-     "value": 15.1,
-     "ci": {
-      "low": 15,
-      "high": 15.2
-     },
-     "direction": "lower",
-     "reference": "Bland-Altman vs reported LVEF"
-    },
-    {
-     "id": "lvef_icc",
-     "label": "ICC, AI vs reported LVEF",
-     "unit": "",
-     "value": 0.814,
-     "ci": {
-      "low": 0.811,
-      "high": 0.817
-     },
-     "direction": "higher",
-     "reference": "Two-way mixed, absolute agreement"
-    },
-    {
-     "id": "ef40_sens",
-     "label": "LVEF ≤ 40%: sensitivity",
-     "unit": "%",
-     "value": 93,
-     "ci": {
-      "low": 92.7,
-      "high": 93.3
-     },
-     "direction": "higher",
-     "reference": "Reported LVEF ≤ 40%"
-    },
-    {
-     "id": "ef40_spec",
-     "label": "LVEF ≤ 40%: specificity",
-     "unit": "%",
-     "value": 89.8,
-     "ci": {
-      "low": 89.6,
-      "high": 90
-     },
-     "direction": "higher",
-     "reference": "Reported LVEF > 40%"
-    },
-    {
-     "id": "edv_mae",
-     "label": "LV end-diastolic volume MAE",
-     "unit": "mL",
-     "value": 20.6,
-     "ci": {
-      "low": 20.4,
-      "high": 20.8
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEDV"
-    },
-    {
-     "id": "gls_bias",
-     "label": "GLS bias (AI minus reported)",
-     "unit": "%",
-     "value": -0.81,
-     "ci": {
-      "low": -0.84,
-      "high": -0.78
-     },
-     "direction": "zero",
-     "reference": "Registry-reported GLS where present"
-    },
-    {
-     "id": "ee_icc",
-     "label": "E/e′ ICC",
-     "unit": "",
-     "value": 0.731,
-     "ci": {
-      "low": 0.728,
-      "high": 0.734
-     },
-     "direction": "higher",
-     "reference": "Registry-reported E/e′"
-    },
-    {
-     "id": "avmg_icc",
-     "label": "AV mean gradient ICC",
-     "unit": "",
-     "value": 0.849,
-     "ci": {
-      "low": 0.846,
-      "high": 0.852
-     },
-     "direction": "higher",
-     "reference": "Registry metric: mean and peak gradients for valvular disease"
-    }
-   ],
-   "primary_endpoint_id": "lvef_mae",
-   "subgroups": [
-    {
-     "dimension": "Sex",
-     "level": "Female",
-     "value": 4.7,
-     "n": 2060
-    },
-    {
-     "dimension": "Sex",
-     "level": "Male",
-     "value": 4,
-     "n": 3450
-    },
-    {
-     "dimension": "Age",
-     "level": "< 50",
-     "value": 4.5,
-     "n": 3560
-    },
-    {
-     "dimension": "Age",
-     "level": "50–69",
-     "value": 4.7,
-     "n": 2070
-    },
-    {
-     "dimension": "Age",
-     "level": "≥ 70",
-     "value": 4.6,
-     "n": 370
-    },
-    {
-     "dimension": "BMI",
-     "level": "< 30",
-     "value": 4.5,
-     "n": 1050
-    },
-    {
-     "dimension": "BMI",
-     "level": "≥ 30",
-     "value": 5.1,
-     "n": 850
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Good",
-     "value": 4.5,
-     "n": 790
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Adequate",
-     "value": 4.1,
-     "n": 1530
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Poor",
-     "value": 5.3,
+     "value": 0.899,
      "n": 570
     },
     {
+     "dimension": "Age",
+     "level": "≥ 70",
+     "value": 1.033,
+     "n": 640
+    },
+    {
+     "dimension": "BMI",
+     "level": "< 30",
+     "value": 0.986,
+     "n": 1330
+    },
+    {
+     "dimension": "BMI",
+     "level": "≥ 30",
+     "value": 0.87,
+     "n": 780
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Good",
+     "value": 1.024,
+     "n": 2060
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Adequate",
+     "value": 0.868,
+     "n": 3450
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Poor",
+     "value": 0.854,
+     "n": 3560
+    },
+    {
      "dimension": "Vendor",
      "level": "GE HealthCare",
-     "value": 3.8,
-     "n": 1050
+     "value": 1.015,
+     "n": 2070
     },
     {
      "dimension": "Vendor",
      "level": "Philips",
-     "value": 4.7,
-     "n": 2530
+     "value": 0.995,
+     "n": 370
     },
     {
      "dimension": "Vendor",
      "level": "Siemens Healthineers",
-     "value": 4.5,
-     "n": 3730
+     "value": 0.985,
+     "n": 1050
     },
     {
      "dimension": "Vendor",
      "level": "Canon Medical",
-     "value": 4.8,
-     "n": 1500
+     "value": 1.023,
+     "n": 850
     }
    ],
    "monthly": [
     {
      "month": "2025-01",
-     "n": 1007,
-     "primary": 4.3,
-     "feasibility": 79.2
+     "n": 417,
+     "primary": 0.976,
+     "feasibility": 76.3
     },
     {
      "month": "2025-02",
-     "n": 868,
-     "primary": 4.5,
-     "feasibility": 77.4
+     "n": 279,
+     "primary": 0.912,
+     "feasibility": 73.5
     },
     {
      "month": "2025-03",
-     "n": 716,
-     "primary": 4.4,
-     "feasibility": 79.7
+     "n": 410,
+     "primary": 0.922,
+     "feasibility": 75.7
     },
     {
      "month": "2025-04",
-     "n": 767,
-     "primary": 4.5,
-     "feasibility": 77.7
+     "n": 304,
+     "primary": 0.958,
+     "feasibility": 73.3
     },
     {
      "month": "2025-05",
-     "n": 1091,
-     "primary": 4.6,
-     "feasibility": 78.2
+     "n": 238,
+     "primary": 0.947,
+     "feasibility": 75.4
     },
     {
      "month": "2025-06",
-     "n": 1084,
-     "primary": 4.5,
-     "feasibility": 78.2
+     "n": 338,
+     "primary": 0.975,
+     "feasibility": 74.3
     },
     {
      "month": "2025-07",
-     "n": 705,
-     "primary": 4.3,
-     "feasibility": 76.9
+     "n": 405,
+     "primary": 0.936,
+     "feasibility": 73
     },
     {
      "month": "2025-08",
-     "n": 645,
-     "primary": 4.3,
-     "feasibility": 78.9
+     "n": 349,
+     "primary": 0.977,
+     "feasibility": 73.4
     },
     {
      "month": "2025-09",
-     "n": 801,
-     "primary": 4.3,
-     "feasibility": 80.7
+     "n": 363,
+     "primary": 0.932,
+     "feasibility": 76.1
     },
     {
      "month": "2025-10",
-     "n": 731,
-     "primary": 4.5,
-     "feasibility": 76.7
+     "n": 419,
+     "primary": 0.933,
+     "feasibility": 76.1
     },
     {
      "month": "2025-11",
-     "n": 673,
-     "primary": 4.3,
-     "feasibility": 79
+     "n": 377,
+     "primary": 0.923,
+     "feasibility": 72.9
     },
     {
      "month": "2025-12",
-     "n": 920,
-     "primary": 4.1,
-     "feasibility": 77.6
+     "n": 264,
+     "primary": 0.89,
+     "feasibility": 72.4
     },
     {
      "month": "2026-01",
-     "n": 876,
-     "primary": 4.1,
-     "feasibility": 79.3
+     "n": 281,
+     "primary": 0.921,
+     "feasibility": 73.7
     },
     {
      "month": "2026-02",
-     "n": 696,
-     "primary": 4.2,
-     "feasibility": 80
+     "n": 278,
+     "primary": 0.95,
+     "feasibility": 73.1
     },
     {
      "month": "2026-03",
-     "n": 817,
-     "primary": 4,
-     "feasibility": 77.5
+     "n": 402,
+     "primary": 0.87,
+     "feasibility": 72.6
     },
     {
      "month": "2026-04",
-     "n": 1109,
-     "primary": 4.1,
-     "feasibility": 76.6
+     "n": 338,
+     "primary": 0.914,
+     "feasibility": 74.7
     },
     {
      "month": "2026-05",
-     "n": 1124,
-     "primary": 4,
-     "feasibility": 79.6
+     "n": 264,
+     "primary": 0.888,
+     "feasibility": 74.3
     },
     {
      "month": "2026-06",
-     "n": 771,
-     "primary": 4.2,
-     "feasibility": 76.9
+     "n": 289,
+     "primary": 0.928,
+     "feasibility": 72.8
     }
    ]
   },
@@ -3387,24 +3245,23 @@ window.AIECHO_REGISTRY = {
   "invision-amyloid": {
    "family_id": "invision-amyloid",
    "product_name": "InVision Precision Cardiac Amyloid",
-   "company": "InVision Medical Technology",
+   "company": "InVision Medical Technology Corporation",
    "evaluation_type": "amyloid",
    "evaluable": true,
    "cohort": {
-    "n_studies": 14240,
-    "n_sites": 7,
+    "n_studies": 17830,
+    "n_sites": 4,
     "sites": [
-     "Site B",
-     "Site F",
-     "Site C",
-     "Site E",
      "Site G",
-     "Site H",
-     "Site A"
+     "Site F",
+     "Site D",
+     "Site E"
     ],
     "vendors": [
+     "GE HealthCare",
+     "Philips",
      "Canon Medical",
-     "GE HealthCare"
+     "Siemens Healthineers"
     ],
     "period": "2025-01 to 2026-06",
     "module": "Adult TTE (phase 1)"
@@ -3414,10 +3271,10 @@ window.AIECHO_REGISTRY = {
      "id": "feasibility",
      "label": "Feasibility (studies with an AI output)",
      "unit": "%",
-     "value": 90,
+     "value": 79.9,
      "ci": {
-      "low": 89.8,
-      "high": 90.2
+      "low": 79.8,
+      "high": 80
      },
      "direction": "higher",
      "reference": "All eligible registry TTEs"
@@ -3426,10 +3283,10 @@ window.AIECHO_REGISTRY = {
      "id": "auc",
      "label": "AUC",
      "unit": "",
-     "value": 0.854,
+     "value": 0.893,
      "ci": {
-      "low": 0.851,
-      "high": 0.857
+      "low": 0.89,
+      "high": 0.896
      },
      "direction": "higher",
      "reference": "Registry-linked confirmed cardiac amyloidosis diagnosis",
@@ -3439,10 +3296,10 @@ window.AIECHO_REGISTRY = {
      "id": "sens",
      "label": "Sensitivity",
      "unit": "%",
-     "value": 85.1,
+     "value": 89.2,
      "ci": {
-      "low": 84.8,
-      "high": 85.4
+      "low": 88.9,
+      "high": 89.5
      },
      "direction": "higher",
      "reference": "Registry-linked confirmed cardiac amyloidosis diagnosis"
@@ -3451,10 +3308,10 @@ window.AIECHO_REGISTRY = {
      "id": "spec",
      "label": "Specificity",
      "unit": "%",
-     "value": 88,
+     "value": 85.8,
      "ci": {
-      "low": 87.8,
-      "high": 88.2
+      "low": 85.6,
+      "high": 86
      },
      "direction": "higher",
      "reference": "Registry-linked confirmed cardiac amyloidosis diagnosis"
@@ -3463,10 +3320,10 @@ window.AIECHO_REGISTRY = {
      "id": "ppv",
      "label": "PPV at registry prevalence (1.2%)",
      "unit": "%",
-     "value": 7.9,
+     "value": 7.1,
      "ci": {
-      "low": 7.5,
-      "high": 8.3
+      "low": 6.7,
+      "high": 7.5
      },
      "direction": "higher",
      "reference": "Derived from sensitivity, specificity and cohort prevalence"
@@ -3477,196 +3334,196 @@ window.AIECHO_REGISTRY = {
     {
      "dimension": "Sex",
      "level": "Female",
-     "value": 0.804,
-     "n": 2070
+     "value": 0.975,
+     "n": 3830
     },
     {
      "dimension": "Sex",
      "level": "Male",
-     "value": 0.755,
-     "n": 2110
+     "value": 0.797,
+     "n": 3140
     },
     {
      "dimension": "Age",
      "level": "< 50",
-     "value": 0.86,
-     "n": 2390
+     "value": 0.886,
+     "n": 630
     },
     {
      "dimension": "Age",
      "level": "50–69",
-     "value": 0.877,
-     "n": 680
+     "value": 0.832,
+     "n": 1400
     },
     {
      "dimension": "Age",
      "level": "≥ 70",
-     "value": 0.923,
-     "n": 1550
+     "value": 0.967,
+     "n": 2350
     },
     {
      "dimension": "BMI",
      "level": "< 30",
-     "value": 0.808,
-     "n": 4060
+     "value": 0.896,
+     "n": 2920
     },
     {
      "dimension": "BMI",
      "level": "≥ 30",
-     "value": 0.873,
-     "n": 1600
+     "value": 0.891,
+     "n": 660
     },
     {
      "dimension": "Image quality",
      "level": "Good",
-     "value": 0.916,
-     "n": 2100
+     "value": 0.841,
+     "n": 2070
     },
     {
      "dimension": "Image quality",
      "level": "Adequate",
-     "value": 0.79,
-     "n": 2250
+     "value": 0.789,
+     "n": 2110
     },
     {
      "dimension": "Image quality",
      "level": "Poor",
-     "value": 0.825,
-     "n": 2500
+     "value": 0.774,
+     "n": 2390
     },
     {
      "dimension": "Vendor",
      "level": "GE HealthCare",
-     "value": 0.831,
-     "n": 320
+     "value": 0.917,
+     "n": 680
     },
     {
      "dimension": "Vendor",
      "level": "Philips",
-     "value": 0.816,
-     "n": 3580
+     "value": 0.965,
+     "n": 1550
     },
     {
      "dimension": "Vendor",
      "level": "Siemens Healthineers",
-     "value": 0.863,
-     "n": 1840
+     "value": 0.845,
+     "n": 4060
     },
     {
      "dimension": "Vendor",
      "level": "Canon Medical",
-     "value": 0.817,
-     "n": 2920
+     "value": 0.957,
+     "n": 1600
     }
    ],
    "monthly": [
     {
      "month": "2025-01",
-     "n": 849,
-     "primary": 0.887,
-     "feasibility": 87.5
+     "n": 748,
+     "primary": 0.9,
+     "feasibility": 77.8
     },
     {
      "month": "2025-02",
-     "n": 678,
-     "primary": 0.854,
-     "feasibility": 91.5
+     "n": 811,
+     "primary": 0.935,
+     "feasibility": 79.6
     },
     {
      "month": "2025-03",
-     "n": 919,
-     "primary": 0.829,
-     "feasibility": 88.7
+     "n": 1094,
+     "primary": 0.9,
+     "feasibility": 78.5
     },
     {
      "month": "2025-04",
-     "n": 754,
-     "primary": 0.883,
-     "feasibility": 88.3
+     "n": 731,
+     "primary": 0.937,
+     "feasibility": 78.8
     },
     {
      "month": "2025-05",
-     "n": 636,
-     "primary": 0.854,
-     "feasibility": 92.6
+     "n": 956,
+     "primary": 0.922,
+     "feasibility": 80.5
     },
     {
      "month": "2025-06",
-     "n": 986,
-     "primary": 0.886,
-     "feasibility": 89.6
+     "n": 1219,
+     "primary": 0.879,
+     "feasibility": 78.8
     },
     {
      "month": "2025-07",
-     "n": 893,
-     "primary": 0.838,
-     "feasibility": 89.7
+     "n": 936,
+     "primary": 0.944,
+     "feasibility": 81.2
     },
     {
      "month": "2025-08",
-     "n": 974,
-     "primary": 0.856,
-     "feasibility": 89.2
+     "n": 712,
+     "primary": 0.892,
+     "feasibility": 79.5
     },
     {
      "month": "2025-09",
-     "n": 775,
-     "primary": 0.882,
-     "feasibility": 90
+     "n": 1044,
+     "primary": 0.879,
+     "feasibility": 78.3
     },
     {
      "month": "2025-10",
-     "n": 946,
-     "primary": 0.854,
-     "feasibility": 88.1
+     "n": 818,
+     "primary": 0.942,
+     "feasibility": 81.9
     },
     {
      "month": "2025-11",
-     "n": 944,
-     "primary": 0.831,
-     "feasibility": 89.8
+     "n": 1037,
+     "primary": 0.885,
+     "feasibility": 80.9
     },
     {
      "month": "2025-12",
-     "n": 977,
-     "primary": 0.827,
-     "feasibility": 92.2
+     "n": 715,
+     "primary": 0.877,
+     "feasibility": 81.7
     },
     {
      "month": "2026-01",
-     "n": 582,
-     "primary": 0.854,
-     "feasibility": 92.1
+     "n": 867,
+     "primary": 0.862,
+     "feasibility": 79.7
     },
     {
      "month": "2026-02",
-     "n": 672,
-     "primary": 0.864,
-     "feasibility": 92.2
+     "n": 1089,
+     "primary": 0.87,
+     "feasibility": 81.5
     },
     {
      "month": "2026-03",
-     "n": 578,
-     "primary": 0.849,
-     "feasibility": 89.8
+     "n": 946,
+     "primary": 0.836,
+     "feasibility": 81.4
     },
     {
      "month": "2026-04",
-     "n": 607,
-     "primary": 0.804,
-     "feasibility": 88.9
+     "n": 843,
+     "primary": 0.863,
+     "feasibility": 81.8
     },
     {
      "month": "2026-05",
-     "n": 955,
-     "primary": 0.834,
-     "feasibility": 90.1
+     "n": 874,
+     "primary": 0.905,
+     "feasibility": 77.8
     },
     {
      "month": "2026-06",
-     "n": 877,
-     "primary": 0.853,
-     "feasibility": 87.9
+     "n": 1112,
+     "primary": 0.908,
+     "feasibility": 78.7
     }
    ]
   },
@@ -3677,17 +3534,19 @@ window.AIECHO_REGISTRY = {
    "evaluation_type": "lvef",
    "evaluable": true,
    "cohort": {
-    "n_studies": 3200,
-    "n_sites": 4,
+    "n_studies": 19640,
+    "n_sites": 5,
     "sites": [
-     "Site H",
+     "Site G",
      "Site E",
-     "Site D",
-     "Site G"
+     "Site A",
+     "Site H",
+     "Site C"
     ],
     "vendors": [
-     "Philips",
-     "Canon Medical"
+     "Siemens Healthineers",
+     "GE HealthCare",
+     "Philips"
     ],
     "period": "2025-01 to 2026-06",
     "module": "Adult TTE (phase 1)"
@@ -3697,10 +3556,10 @@ window.AIECHO_REGISTRY = {
      "id": "feasibility",
      "label": "Feasibility (studies with an AI output)",
      "unit": "%",
-     "value": 94.6,
+     "value": 88.4,
      "ci": {
-      "low": 94.3,
-      "high": 94.9
+      "low": 88.3,
+      "high": 88.5
      },
      "direction": "higher",
      "reference": "All eligible registry TTEs"
@@ -3711,8 +3570,2232 @@ window.AIECHO_REGISTRY = {
      "unit": "% EF",
      "value": 3.8,
      "ci": {
-      "low": 3.73,
-      "high": 3.87
+      "low": 3.77,
+      "high": 3.83
+     },
+     "direction": "lower",
+     "reference": "Registry-reported LVEF (finalized clinical report)",
+     "primary": true
+    },
+    {
+     "id": "lvef_bias",
+     "label": "LVEF bias (AI minus reported)",
+     "unit": "% EF",
+     "value": -1.2,
+     "ci": {
+      "low": -1.23,
+      "high": -1.17
+     },
+     "direction": "zero",
+     "reference": "Registry-reported LVEF"
+    },
+    {
+     "id": "lvef_loa",
+     "label": "95% limits of agreement (half-width)",
+     "unit": "% EF",
+     "value": 9.8,
+     "ci": {
+      "low": 9.8,
+      "high": 9.8
+     },
+     "direction": "lower",
+     "reference": "Bland-Altman vs reported LVEF"
+    },
+    {
+     "id": "lvef_icc",
+     "label": "ICC, AI vs reported LVEF",
+     "unit": "",
+     "value": 0.794,
+     "ci": {
+      "low": 0.792,
+      "high": 0.796
+     },
+     "direction": "higher",
+     "reference": "Two-way mixed, absolute agreement"
+    },
+    {
+     "id": "ef40_sens",
+     "label": "LVEF ≤ 40%: sensitivity",
+     "unit": "%",
+     "value": 95.2,
+     "ci": {
+      "low": 95,
+      "high": 95.4
+     },
+     "direction": "higher",
+     "reference": "Reported LVEF ≤ 40%"
+    },
+    {
+     "id": "ef40_spec",
+     "label": "LVEF ≤ 40%: specificity",
+     "unit": "%",
+     "value": 90.2,
+     "ci": {
+      "low": 90,
+      "high": 90.4
+     },
+     "direction": "higher",
+     "reference": "Reported LVEF > 40%"
+    }
+   ],
+   "primary_endpoint_id": "lvef_mae",
+   "subgroups": [
+    {
+     "dimension": "Sex",
+     "level": "Female",
+     "value": 3.5,
+     "n": 380
+    },
+    {
+     "dimension": "Sex",
+     "level": "Male",
+     "value": 3.8,
+     "n": 2890
+    },
+    {
+     "dimension": "Age",
+     "level": "< 50",
+     "value": 3.8,
+     "n": 3020
+    },
+    {
+     "dimension": "Age",
+     "level": "50–69",
+     "value": 4.1,
+     "n": 1910
+    },
+    {
+     "dimension": "Age",
+     "level": "≥ 70",
+     "value": 3.7,
+     "n": 3790
+    },
+    {
+     "dimension": "BMI",
+     "level": "< 30",
+     "value": 4.1,
+     "n": 3750
+    },
+    {
+     "dimension": "BMI",
+     "level": "≥ 30",
+     "value": 4.6,
+     "n": 2990
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Good",
+     "value": 3.7,
+     "n": 4110
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Adequate",
+     "value": 4.2,
+     "n": 4040
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Poor",
+     "value": 4.7,
+     "n": 940
+    },
+    {
+     "dimension": "Vendor",
+     "level": "GE HealthCare",
+     "value": 3.9,
+     "n": 2710
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Philips",
+     "value": 4,
+     "n": 3410
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Siemens Healthineers",
+     "value": 4,
+     "n": 2730
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Canon Medical",
+     "value": 3.6,
+     "n": 3360
+    }
+   ],
+   "monthly": [
+    {
+     "month": "2025-01",
+     "n": 921,
+     "primary": 3.7,
+     "feasibility": 85.9
+    },
+    {
+     "month": "2025-02",
+     "n": 1183,
+     "primary": 3.7,
+     "feasibility": 88.1
+    },
+    {
+     "month": "2025-03",
+     "n": 853,
+     "primary": 4,
+     "feasibility": 86.1
+    },
+    {
+     "month": "2025-04",
+     "n": 1257,
+     "primary": 3.9,
+     "feasibility": 89
+    },
+    {
+     "month": "2025-05",
+     "n": 1368,
+     "primary": 3.9,
+     "feasibility": 90.5
+    },
+    {
+     "month": "2025-06",
+     "n": 1316,
+     "primary": 3.8,
+     "feasibility": 90.4
+    },
+    {
+     "month": "2025-07",
+     "n": 1181,
+     "primary": 3.7,
+     "feasibility": 88.2
+    },
+    {
+     "month": "2025-08",
+     "n": 893,
+     "primary": 4.1,
+     "feasibility": 90.6
+    },
+    {
+     "month": "2025-09",
+     "n": 1128,
+     "primary": 3.9,
+     "feasibility": 86.1
+    },
+    {
+     "month": "2025-10",
+     "n": 1085,
+     "primary": 3.9,
+     "feasibility": 87.9
+    },
+    {
+     "month": "2025-11",
+     "n": 1325,
+     "primary": 4,
+     "feasibility": 86.4
+    },
+    {
+     "month": "2025-12",
+     "n": 790,
+     "primary": 3.9,
+     "feasibility": 87
+    },
+    {
+     "month": "2026-01",
+     "n": 925,
+     "primary": 3.6,
+     "feasibility": 90.6
+    },
+    {
+     "month": "2026-02",
+     "n": 1154,
+     "primary": 3.8,
+     "feasibility": 90.8
+    },
+    {
+     "month": "2026-03",
+     "n": 1308,
+     "primary": 3.8,
+     "feasibility": 89.3
+    },
+    {
+     "month": "2026-04",
+     "n": 854,
+     "primary": 3.7,
+     "feasibility": 87.6
+    },
+    {
+     "month": "2026-05",
+     "n": 987,
+     "primary": 3.8,
+     "feasibility": 89.5
+    },
+    {
+     "month": "2026-06",
+     "n": 1187,
+     "primary": 3.6,
+     "feasibility": 86
+    }
+   ]
+  },
+  "lvivo": {
+   "family_id": "lvivo",
+   "product_name": "LVivo Software Application (LVivo EF / LVivo Toolbox: EF, SG/SWM, Strain, SAX, RV, PLAX, CE-EF, Bladder)",
+   "company": "DiA Imaging Analysis Ltd. (a Philips company since May 2023; earlier trade name DiACardio Ltd.)",
+   "evaluation_type": "lvef",
+   "evaluable": true,
+   "cohort": {
+    "n_studies": 5710,
+    "n_sites": 6,
+    "sites": [
+     "Site C",
+     "Site E",
+     "Site H",
+     "Site B",
+     "Site A",
+     "Site F"
+    ],
+    "vendors": [
+     "Canon Medical",
+     "Siemens Healthineers",
+     "Philips",
+     "GE HealthCare"
+    ],
+    "period": "2025-01 to 2026-06",
+    "module": "Adult TTE (phase 1)"
+   },
+   "endpoints": [
+    {
+     "id": "feasibility",
+     "label": "Feasibility (studies with an AI output)",
+     "unit": "%",
+     "value": 81.5,
+     "ci": {
+      "low": 81.2,
+      "high": 81.8
+     },
+     "direction": "higher",
+     "reference": "All eligible registry TTEs"
+    },
+    {
+     "id": "lvef_mae",
+     "label": "LVEF mean absolute error",
+     "unit": "% EF",
+     "value": 5.2,
+     "ci": {
+      "low": 5.15,
+      "high": 5.25
+     },
+     "direction": "lower",
+     "reference": "Registry-reported LVEF (finalized clinical report)",
+     "primary": true
+    },
+    {
+     "id": "lvef_bias",
+     "label": "LVEF bias (AI minus reported)",
+     "unit": "% EF",
+     "value": 0.9,
+     "ci": {
+      "low": 0.84,
+      "high": 0.96
+     },
+     "direction": "zero",
+     "reference": "Registry-reported LVEF"
+    },
+    {
+     "id": "lvef_loa",
+     "label": "95% limits of agreement (half-width)",
+     "unit": "% EF",
+     "value": 15,
+     "ci": {
+      "low": 14.9,
+      "high": 15.1
+     },
+     "direction": "lower",
+     "reference": "Bland-Altman vs reported LVEF"
+    },
+    {
+     "id": "lvef_icc",
+     "label": "ICC, AI vs reported LVEF",
+     "unit": "",
+     "value": 0.804,
+     "ci": {
+      "low": 0.8,
+      "high": 0.808
+     },
+     "direction": "higher",
+     "reference": "Two-way mixed, absolute agreement"
+    },
+    {
+     "id": "ef40_sens",
+     "label": "LVEF ≤ 40%: sensitivity",
+     "unit": "%",
+     "value": 92.3,
+     "ci": {
+      "low": 91.9,
+      "high": 92.7
+     },
+     "direction": "higher",
+     "reference": "Reported LVEF ≤ 40%"
+    },
+    {
+     "id": "ef40_spec",
+     "label": "LVEF ≤ 40%: specificity",
+     "unit": "%",
+     "value": 89.4,
+     "ci": {
+      "low": 89.1,
+      "high": 89.7
+     },
+     "direction": "higher",
+     "reference": "Reported LVEF > 40%"
+    }
+   ],
+   "primary_endpoint_id": "lvef_mae",
+   "subgroups": [
+    {
+     "dimension": "Sex",
+     "level": "Female",
+     "value": 4.8,
+     "n": 2150
+    },
+    {
+     "dimension": "Sex",
+     "level": "Male",
+     "value": 5,
+     "n": 630
+    },
+    {
+     "dimension": "Age",
+     "level": "< 50",
+     "value": 4.7,
+     "n": 1350
+    },
+    {
+     "dimension": "Age",
+     "level": "50–69",
+     "value": 5.2,
+     "n": 200
+    },
+    {
+     "dimension": "Age",
+     "level": "≥ 70",
+     "value": 5.3,
+     "n": 3350
+    },
+    {
+     "dimension": "BMI",
+     "level": "< 30",
+     "value": 5.2,
+     "n": 3670
+    },
+    {
+     "dimension": "BMI",
+     "level": "≥ 30",
+     "value": 5.6,
+     "n": 3980
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Good",
+     "value": 5.4,
+     "n": 1250
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Adequate",
+     "value": 5.4,
+     "n": 3700
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Poor",
+     "value": 6.9,
+     "n": 1740
+    },
+    {
+     "dimension": "Vendor",
+     "level": "GE HealthCare",
+     "value": 4.9,
+     "n": 2940
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Philips",
+     "value": 5.1,
+     "n": 1130
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Siemens Healthineers",
+     "value": 4.8,
+     "n": 1730
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Canon Medical",
+     "value": 4.8,
+     "n": 570
+    }
+   ],
+   "monthly": [
+    {
+     "month": "2025-01",
+     "n": 405,
+     "primary": 5.4,
+     "feasibility": 80.6
+    },
+    {
+     "month": "2025-02",
+     "n": 292,
+     "primary": 5.2,
+     "feasibility": 81.8
+    },
+    {
+     "month": "2025-03",
+     "n": 389,
+     "primary": 5.4,
+     "feasibility": 80.5
+    },
+    {
+     "month": "2025-04",
+     "n": 238,
+     "primary": 5.5,
+     "feasibility": 82.6
+    },
+    {
+     "month": "2025-05",
+     "n": 231,
+     "primary": 5.6,
+     "feasibility": 82.9
+    },
+    {
+     "month": "2025-06",
+     "n": 378,
+     "primary": 5.4,
+     "feasibility": 79.5
+    },
+    {
+     "month": "2025-07",
+     "n": 311,
+     "primary": 5.3,
+     "feasibility": 83.5
+    },
+    {
+     "month": "2025-08",
+     "n": 242,
+     "primary": 5.1,
+     "feasibility": 81.8
+    },
+    {
+     "month": "2025-09",
+     "n": 403,
+     "primary": 5.3,
+     "feasibility": 83.2
+    },
+    {
+     "month": "2025-10",
+     "n": 355,
+     "primary": 5.1,
+     "feasibility": 83.7
+    },
+    {
+     "month": "2025-11",
+     "n": 282,
+     "primary": 5.2,
+     "feasibility": 83.3
+    },
+    {
+     "month": "2025-12",
+     "n": 255,
+     "primary": 5.1,
+     "feasibility": 81.9
+    },
+    {
+     "month": "2026-01",
+     "n": 389,
+     "primary": 5,
+     "feasibility": 80.9
+    },
+    {
+     "month": "2026-02",
+     "n": 266,
+     "primary": 5.3,
+     "feasibility": 79.2
+    },
+    {
+     "month": "2026-03",
+     "n": 263,
+     "primary": 4.9,
+     "feasibility": 81.3
+    },
+    {
+     "month": "2026-04",
+     "n": 404,
+     "primary": 5,
+     "feasibility": 81
+    },
+    {
+     "month": "2026-05",
+     "n": 285,
+     "primary": 4.8,
+     "feasibility": 79.1
+    },
+    {
+     "month": "2026-06",
+     "n": 382,
+     "primary": 5.1,
+     "feasibility": 82.9
+    }
+   ]
+  },
+  "lvivo-seamless": {
+   "family_id": "lvivo-seamless",
+   "product_name": "LVivo Seamless",
+   "company": "DiA Imaging Analysis Ltd. (a Philips company since May 2023; earlier trade name DiACardio Ltd.)",
+   "evaluation_type": "lvef",
+   "evaluable": true,
+   "cohort": {
+    "n_studies": 22440,
+    "n_sites": 7,
+    "sites": [
+     "Site G",
+     "Site F",
+     "Site A",
+     "Site D",
+     "Site C",
+     "Site B",
+     "Site E"
+    ],
+    "vendors": [
+     "GE HealthCare",
+     "Siemens Healthineers",
+     "Canon Medical"
+    ],
+    "period": "2025-01 to 2026-06",
+    "module": "Adult TTE (phase 1)"
+   },
+   "endpoints": [
+    {
+     "id": "feasibility",
+     "label": "Feasibility (studies with an AI output)",
+     "unit": "%",
+     "value": 88.6,
+     "ci": {
+      "low": 88.5,
+      "high": 88.7
+     },
+     "direction": "higher",
+     "reference": "All eligible registry TTEs"
+    },
+    {
+     "id": "lvef_mae",
+     "label": "LVEF mean absolute error",
+     "unit": "% EF",
+     "value": 3.7,
+     "ci": {
+      "low": 3.67,
+      "high": 3.73
+     },
+     "direction": "lower",
+     "reference": "Registry-reported LVEF (finalized clinical report)",
+     "primary": true
+    },
+    {
+     "id": "lvef_bias",
+     "label": "LVEF bias (AI minus reported)",
+     "unit": "% EF",
+     "value": 1.3,
+     "ci": {
+      "low": 1.27,
+      "high": 1.33
+     },
+     "direction": "zero",
+     "reference": "Registry-reported LVEF"
+    },
+    {
+     "id": "lvef_loa",
+     "label": "95% limits of agreement (half-width)",
+     "unit": "% EF",
+     "value": 11.1,
+     "ci": {
+      "low": 11.1,
+      "high": 11.1
+     },
+     "direction": "lower",
+     "reference": "Bland-Altman vs reported LVEF"
+    },
+    {
+     "id": "lvef_icc",
+     "label": "ICC, AI vs reported LVEF",
+     "unit": "",
+     "value": 0.936,
+     "ci": {
+      "low": 0.934,
+      "high": 0.938
+     },
+     "direction": "higher",
+     "reference": "Two-way mixed, absolute agreement"
+    },
+    {
+     "id": "ef40_sens",
+     "label": "LVEF ≤ 40%: sensitivity",
+     "unit": "%",
+     "value": 84.4,
+     "ci": {
+      "low": 84.2,
+      "high": 84.6
+     },
+     "direction": "higher",
+     "reference": "Reported LVEF ≤ 40%"
+    },
+    {
+     "id": "ef40_spec",
+     "label": "LVEF ≤ 40%: specificity",
+     "unit": "%",
+     "value": 87.7,
+     "ci": {
+      "low": 87.6,
+      "high": 87.8
+     },
+     "direction": "higher",
+     "reference": "Reported LVEF > 40%"
+    }
+   ],
+   "primary_endpoint_id": "lvef_mae",
+   "subgroups": [
+    {
+     "dimension": "Sex",
+     "level": "Female",
+     "value": 3.9,
+     "n": 1400
+    },
+    {
+     "dimension": "Sex",
+     "level": "Male",
+     "value": 4.1,
+     "n": 1530
+    },
+    {
+     "dimension": "Age",
+     "level": "< 50",
+     "value": 3.3,
+     "n": 470
+    },
+    {
+     "dimension": "Age",
+     "level": "50–69",
+     "value": 3.3,
+     "n": 1400
+    },
+    {
+     "dimension": "Age",
+     "level": "≥ 70",
+     "value": 3.7,
+     "n": 1590
+    },
+    {
+     "dimension": "BMI",
+     "level": "< 30",
+     "value": 4.1,
+     "n": 3260
+    },
+    {
+     "dimension": "BMI",
+     "level": "≥ 30",
+     "value": 3.9,
+     "n": 390
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Good",
+     "value": 3.4,
+     "n": 2940
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Adequate",
+     "value": 3.6,
+     "n": 180
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Poor",
+     "value": 4.8,
+     "n": 2200
+    },
+    {
+     "dimension": "Vendor",
+     "level": "GE HealthCare",
+     "value": 3.8,
+     "n": 3800
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Philips",
+     "value": 3.8,
+     "n": 3840
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Siemens Healthineers",
+     "value": 3.5,
+     "n": 240
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Canon Medical",
+     "value": 3.8,
+     "n": 2480
+    }
+   ],
+   "monthly": [
+    {
+     "month": "2025-01",
+     "n": 946,
+     "primary": 3.8,
+     "feasibility": 88.2
+    },
+    {
+     "month": "2025-02",
+     "n": 1208,
+     "primary": 3.6,
+     "feasibility": 89.4
+    },
+    {
+     "month": "2025-03",
+     "n": 1243,
+     "primary": 3.9,
+     "feasibility": 90.2
+    },
+    {
+     "month": "2025-04",
+     "n": 1518,
+     "primary": 3.9,
+     "feasibility": 88.6
+    },
+    {
+     "month": "2025-05",
+     "n": 1368,
+     "primary": 3.7,
+     "feasibility": 88.8
+    },
+    {
+     "month": "2025-06",
+     "n": 1567,
+     "primary": 4,
+     "feasibility": 87.5
+    },
+    {
+     "month": "2025-07",
+     "n": 1288,
+     "primary": 3.6,
+     "feasibility": 89.3
+    },
+    {
+     "month": "2025-08",
+     "n": 927,
+     "primary": 3.6,
+     "feasibility": 88.9
+    },
+    {
+     "month": "2025-09",
+     "n": 1484,
+     "primary": 3.7,
+     "feasibility": 87.6
+    },
+    {
+     "month": "2025-10",
+     "n": 1592,
+     "primary": 3.6,
+     "feasibility": 86.1
+    },
+    {
+     "month": "2025-11",
+     "n": 1088,
+     "primary": 3.5,
+     "feasibility": 88.7
+    },
+    {
+     "month": "2025-12",
+     "n": 947,
+     "primary": 3.6,
+     "feasibility": 90.5
+    },
+    {
+     "month": "2026-01",
+     "n": 1471,
+     "primary": 3.7,
+     "feasibility": 89.4
+    },
+    {
+     "month": "2026-02",
+     "n": 998,
+     "primary": 3.5,
+     "feasibility": 90
+    },
+    {
+     "month": "2026-03",
+     "n": 1176,
+     "primary": 3.5,
+     "feasibility": 87.1
+    },
+    {
+     "month": "2026-04",
+     "n": 1469,
+     "primary": 3.5,
+     "feasibility": 91.1
+    },
+    {
+     "month": "2026-05",
+     "n": 1380,
+     "primary": 3.4,
+     "feasibility": 89.9
+    },
+    {
+     "month": "2026-06",
+     "n": 1448,
+     "primary": 3.7,
+     "feasibility": 89.3
+    }
+   ]
+  },
+  "philips-ultrasound-workspace": {
+   "family_id": "philips-ultrasound-workspace",
+   "product_name": "Ultrasound Workspace (UWS 6.0)",
+   "company": "Philips",
+   "evaluation_type": "comprehensive",
+   "evaluable": true,
+   "cohort": {
+    "n_studies": 22110,
+    "n_sites": 8,
+    "sites": [
+     "Site H",
+     "Site A",
+     "Site G",
+     "Site F",
+     "Site E",
+     "Site C",
+     "Site B",
+     "Site D"
+    ],
+    "vendors": [
+     "Canon Medical",
+     "Philips",
+     "GE HealthCare"
+    ],
+    "period": "2025-01 to 2026-06",
+    "module": "Adult TTE (phase 1)"
+   },
+   "endpoints": [
+    {
+     "id": "feasibility",
+     "label": "Feasibility (studies with an AI output)",
+     "unit": "%",
+     "value": 74.7,
+     "ci": {
+      "low": 74.6,
+      "high": 74.8
+     },
+     "direction": "higher",
+     "reference": "All eligible registry TTEs"
+    },
+    {
+     "id": "lvef_mae",
+     "label": "LVEF mean absolute error",
+     "unit": "% EF",
+     "value": 4.1,
+     "ci": {
+      "low": 4.07,
+      "high": 4.13
+     },
+     "direction": "lower",
+     "reference": "Registry-reported LVEF (finalized clinical report)",
+     "primary": true
+    },
+    {
+     "id": "lvef_bias",
+     "label": "LVEF bias (AI minus reported)",
+     "unit": "% EF",
+     "value": 0.5,
+     "ci": {
+      "low": 0.47,
+      "high": 0.53
+     },
+     "direction": "zero",
+     "reference": "Registry-reported LVEF"
+    },
+    {
+     "id": "lvef_loa",
+     "label": "95% limits of agreement (half-width)",
+     "unit": "% EF",
+     "value": 14.7,
+     "ci": {
+      "low": 14.7,
+      "high": 14.7
+     },
+     "direction": "lower",
+     "reference": "Bland-Altman vs reported LVEF"
+    },
+    {
+     "id": "lvef_icc",
+     "label": "ICC, AI vs reported LVEF",
+     "unit": "",
+     "value": 0.865,
+     "ci": {
+      "low": 0.863,
+      "high": 0.867
+     },
+     "direction": "higher",
+     "reference": "Two-way mixed, absolute agreement"
+    },
+    {
+     "id": "ef40_sens",
+     "label": "LVEF ≤ 40%: sensitivity",
+     "unit": "%",
+     "value": 92.9,
+     "ci": {
+      "low": 92.7,
+      "high": 93.1
+     },
+     "direction": "higher",
+     "reference": "Reported LVEF ≤ 40%"
+    },
+    {
+     "id": "ef40_spec",
+     "label": "LVEF ≤ 40%: specificity",
+     "unit": "%",
+     "value": 92.3,
+     "ci": {
+      "low": 92.1,
+      "high": 92.5
+     },
+     "direction": "higher",
+     "reference": "Reported LVEF > 40%"
+    },
+    {
+     "id": "edv_mae",
+     "label": "LV end-diastolic volume MAE",
+     "unit": "mL",
+     "value": 21.9,
+     "ci": {
+      "low": 21.7,
+      "high": 22.1
+     },
+     "direction": "lower",
+     "reference": "Registry-reported LVEDV"
+    },
+    {
+     "id": "gls_bias",
+     "label": "GLS bias (AI minus reported)",
+     "unit": "%",
+     "value": -0.24,
+     "ci": {
+      "low": -0.26,
+      "high": -0.22
+     },
+     "direction": "zero",
+     "reference": "Registry-reported GLS where present"
+    },
+    {
+     "id": "ee_icc",
+     "label": "E/e′ ICC",
+     "unit": "",
+     "value": 0.755,
+     "ci": {
+      "low": 0.752,
+      "high": 0.758
+     },
+     "direction": "higher",
+     "reference": "Registry-reported E/e′"
+    },
+    {
+     "id": "avmg_icc",
+     "label": "AV mean gradient ICC",
+     "unit": "",
+     "value": 0.884,
+     "ci": {
+      "low": 0.881,
+      "high": 0.887
+     },
+     "direction": "higher",
+     "reference": "Registry metric: mean and peak gradients for valvular disease"
+    }
+   ],
+   "primary_endpoint_id": "lvef_mae",
+   "subgroups": [
+    {
+     "dimension": "Sex",
+     "level": "Female",
+     "value": 4.4,
+     "n": 1730
+    },
+    {
+     "dimension": "Sex",
+     "level": "Male",
+     "value": 4.4,
+     "n": 1690
+    },
+    {
+     "dimension": "Age",
+     "level": "< 50",
+     "value": 4.5,
+     "n": 3970
+    },
+    {
+     "dimension": "Age",
+     "level": "50–69",
+     "value": 3.6,
+     "n": 3070
+    },
+    {
+     "dimension": "Age",
+     "level": "≥ 70",
+     "value": 4.2,
+     "n": 3000
+    },
+    {
+     "dimension": "BMI",
+     "level": "< 30",
+     "value": 4.1,
+     "n": 630
+    },
+    {
+     "dimension": "BMI",
+     "level": "≥ 30",
+     "value": 4.6,
+     "n": 1810
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Good",
+     "value": 3.6,
+     "n": 2130
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Adequate",
+     "value": 4,
+     "n": 3320
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Poor",
+     "value": 4.9,
+     "n": 850
+    },
+    {
+     "dimension": "Vendor",
+     "level": "GE HealthCare",
+     "value": 4,
+     "n": 3960
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Philips",
+     "value": 4.1,
+     "n": 4140
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Siemens Healthineers",
+     "value": 3.9,
+     "n": 3750
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Canon Medical",
+     "value": 4.6,
+     "n": 2600
+    }
+   ],
+   "monthly": [
+    {
+     "month": "2025-01",
+     "n": 988,
+     "primary": 4.2,
+     "feasibility": 76.3
+    },
+    {
+     "month": "2025-02",
+     "n": 956,
+     "primary": 4.2,
+     "feasibility": 73.4
+    },
+    {
+     "month": "2025-03",
+     "n": 1557,
+     "primary": 4.3,
+     "feasibility": 73.1
+    },
+    {
+     "month": "2025-04",
+     "n": 1298,
+     "primary": 4.3,
+     "feasibility": 75.5
+    },
+    {
+     "month": "2025-05",
+     "n": 908,
+     "primary": 4,
+     "feasibility": 75.2
+    },
+    {
+     "month": "2025-06",
+     "n": 1577,
+     "primary": 4.1,
+     "feasibility": 74
+    },
+    {
+     "month": "2025-07",
+     "n": 889,
+     "primary": 4.3,
+     "feasibility": 74.7
+    },
+    {
+     "month": "2025-08",
+     "n": 1575,
+     "primary": 4,
+     "feasibility": 75.6
+    },
+    {
+     "month": "2025-09",
+     "n": 1173,
+     "primary": 4,
+     "feasibility": 74.2
+    },
+    {
+     "month": "2025-10",
+     "n": 1549,
+     "primary": 4,
+     "feasibility": 75.3
+    },
+    {
+     "month": "2025-11",
+     "n": 882,
+     "primary": 3.9,
+     "feasibility": 76.9
+    },
+    {
+     "month": "2025-12",
+     "n": 941,
+     "primary": 4.2,
+     "feasibility": 76.7
+    },
+    {
+     "month": "2026-01",
+     "n": 1548,
+     "primary": 4.1,
+     "feasibility": 76.4
+    },
+    {
+     "month": "2026-02",
+     "n": 1272,
+     "primary": 3.9,
+     "feasibility": 75.1
+    },
+    {
+     "month": "2026-03",
+     "n": 999,
+     "primary": 3.8,
+     "feasibility": 73.6
+    },
+    {
+     "month": "2026-04",
+     "n": 1184,
+     "primary": 3.9,
+     "feasibility": 74.4
+    },
+    {
+     "month": "2026-05",
+     "n": 1363,
+     "primary": 3.9,
+     "feasibility": 74.7
+    },
+    {
+     "month": "2026-06",
+     "n": 1172,
+     "primary": 3.9,
+     "feasibility": 76.3
+    }
+   ]
+  },
+  "caption-guidance": {
+   "family_id": "caption-guidance",
+   "product_name": "Caption Guidance / Cardiac Guidance (marketed as Caption AI)",
+   "company": "GE HealthCare (Caption Health, Inc.; originally Bay Labs, Inc.)",
+   "evaluation_type": "acquisition",
+   "evaluable": true,
+   "cohort": {
+    "n_studies": 11950,
+    "n_sites": 8,
+    "sites": [
+     "Site H",
+     "Site F",
+     "Site C",
+     "Site B",
+     "Site G",
+     "Site D",
+     "Site A",
+     "Site E"
+    ],
+    "vendors": [
+     "GE HealthCare",
+     "Siemens Healthineers",
+     "Philips"
+    ],
+    "period": "2025-01 to 2026-06",
+    "module": "Adult TTE (phase 1)"
+   },
+   "endpoints": [
+    {
+     "id": "feasibility",
+     "label": "Feasibility (studies with an AI output)",
+     "unit": "%",
+     "value": 81.1,
+     "ci": {
+      "low": 80.9,
+      "high": 81.3
+     },
+     "direction": "higher",
+     "reference": "All eligible registry TTEs"
+    },
+    {
+     "id": "diag_quality",
+     "label": "Diagnostic-quality acquisitions",
+     "unit": "%",
+     "value": 75.2,
+     "ci": {
+      "low": 74.9,
+      "high": 75.5
+     },
+     "direction": "higher",
+     "reference": "Reading physician image-quality grade",
+     "primary": true
+    },
+    {
+     "id": "completeness",
+     "label": "Study completeness",
+     "unit": "%",
+     "value": 78.2,
+     "ci": {
+      "low": 78,
+      "high": 78.4
+     },
+     "direction": "higher",
+     "reference": "Registry metric: study completeness"
+    },
+    {
+     "id": "protocol_time",
+     "label": "Median time to complete protocol",
+     "unit": "min",
+     "value": 7.1,
+     "ci": {
+      "low": 7,
+      "high": 7.2
+     },
+     "direction": "lower",
+     "reference": "Acquisition timestamps"
+    },
+    {
+     "id": "tat",
+     "label": "Report turnaround time (median)",
+     "unit": "h",
+     "value": 14.3,
+     "ci": {
+      "low": 14,
+      "high": 14.6
+     },
+     "direction": "lower",
+     "reference": "Registry metric: report turnaround time"
+    }
+   ],
+   "primary_endpoint_id": "diag_quality",
+   "subgroups": [
+    {
+     "dimension": "Sex",
+     "level": "Female",
+     "value": 68.2,
+     "n": 2940
+    },
+    {
+     "dimension": "Sex",
+     "level": "Male",
+     "value": 73.7,
+     "n": 3130
+    },
+    {
+     "dimension": "Age",
+     "level": "< 50",
+     "value": 83.4,
+     "n": 1160
+    },
+    {
+     "dimension": "Age",
+     "level": "50–69",
+     "value": 79,
+     "n": 510
+    },
+    {
+     "dimension": "Age",
+     "level": "≥ 70",
+     "value": 70.3,
+     "n": 2120
+    },
+    {
+     "dimension": "BMI",
+     "level": "< 30",
+     "value": 69.7,
+     "n": 510
+    },
+    {
+     "dimension": "BMI",
+     "level": "≥ 30",
+     "value": 68.1,
+     "n": 530
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Good",
+     "value": 81.1,
+     "n": 1360
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Adequate",
+     "value": 70.5,
+     "n": 3750
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Poor",
+     "value": 61.6,
+     "n": 3290
+    },
+    {
+     "dimension": "Vendor",
+     "level": "GE HealthCare",
+     "value": 77.8,
+     "n": 1160
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Philips",
+     "value": 80.6,
+     "n": 4050
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Siemens Healthineers",
+     "value": 68.1,
+     "n": 1390
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Canon Medical",
+     "value": 80,
+     "n": 370
+    }
+   ],
+   "monthly": [
+    {
+     "month": "2025-01",
+     "n": 538,
+     "primary": 78.1,
+     "feasibility": 80.9
+    },
+    {
+     "month": "2025-02",
+     "n": 615,
+     "primary": 73.4,
+     "feasibility": 79.9
+    },
+    {
+     "month": "2025-03",
+     "n": 515,
+     "primary": 78.8,
+     "feasibility": 82.3
+    },
+    {
+     "month": "2025-04",
+     "n": 679,
+     "primary": 74.2,
+     "feasibility": 81.6
+    },
+    {
+     "month": "2025-05",
+     "n": 762,
+     "primary": 79.6,
+     "feasibility": 79.4
+    },
+    {
+     "month": "2025-06",
+     "n": 857,
+     "primary": 80.1,
+     "feasibility": 82.5
+    },
+    {
+     "month": "2025-07",
+     "n": 645,
+     "primary": 76.8,
+     "feasibility": 80.9
+    },
+    {
+     "month": "2025-08",
+     "n": 838,
+     "primary": 75.4,
+     "feasibility": 83.4
+    },
+    {
+     "month": "2025-09",
+     "n": 630,
+     "primary": 75.7,
+     "feasibility": 83.3
+    },
+    {
+     "month": "2025-10",
+     "n": 658,
+     "primary": 74,
+     "feasibility": 83.1
+    },
+    {
+     "month": "2025-11",
+     "n": 760,
+     "primary": 73.2,
+     "feasibility": 79.8
+    },
+    {
+     "month": "2025-12",
+     "n": 490,
+     "primary": 73,
+     "feasibility": 79.6
+    },
+    {
+     "month": "2026-01",
+     "n": 675,
+     "primary": 76.9,
+     "feasibility": 80.6
+    },
+    {
+     "month": "2026-02",
+     "n": 779,
+     "primary": 70.9,
+     "feasibility": 82
+    },
+    {
+     "month": "2026-03",
+     "n": 701,
+     "primary": 72.9,
+     "feasibility": 81.4
+    },
+    {
+     "month": "2026-04",
+     "n": 600,
+     "primary": 72.6,
+     "feasibility": 82.1
+    },
+    {
+     "month": "2026-05",
+     "n": 489,
+     "primary": 71.6,
+     "feasibility": 82.5
+    },
+    {
+     "month": "2026-06",
+     "n": 615,
+     "primary": 73.3,
+     "feasibility": 83.3
+    }
+   ]
+  },
+  "sonix-health": {
+   "family_id": "sonix-health",
+   "product_name": "Sonix Health",
+   "company": "Ontact Health Co., Ltd.",
+   "evaluation_type": "comprehensive",
+   "evaluable": true,
+   "cohort": {
+    "n_studies": 18120,
+    "n_sites": 8,
+    "sites": [
+     "Site H",
+     "Site D",
+     "Site G",
+     "Site C",
+     "Site E",
+     "Site F",
+     "Site B",
+     "Site A"
+    ],
+    "vendors": [
+     "Philips",
+     "GE HealthCare",
+     "Siemens Healthineers"
+    ],
+    "period": "2025-01 to 2026-06",
+    "module": "Adult TTE (phase 1)"
+   },
+   "endpoints": [
+    {
+     "id": "feasibility",
+     "label": "Feasibility (studies with an AI output)",
+     "unit": "%",
+     "value": 86.4,
+     "ci": {
+      "low": 86.3,
+      "high": 86.5
+     },
+     "direction": "higher",
+     "reference": "All eligible registry TTEs"
+    },
+    {
+     "id": "lvef_mae",
+     "label": "LVEF mean absolute error",
+     "unit": "% EF",
+     "value": 6.1,
+     "ci": {
+      "low": 6.07,
+      "high": 6.13
+     },
+     "direction": "lower",
+     "reference": "Registry-reported LVEF (finalized clinical report)",
+     "primary": true
+    },
+    {
+     "id": "lvef_bias",
+     "label": "LVEF bias (AI minus reported)",
+     "unit": "% EF",
+     "value": 0.6,
+     "ci": {
+      "low": 0.56,
+      "high": 0.64
+     },
+     "direction": "zero",
+     "reference": "Registry-reported LVEF"
+    },
+    {
+     "id": "lvef_loa",
+     "label": "95% limits of agreement (half-width)",
+     "unit": "% EF",
+     "value": 15,
+     "ci": {
+      "low": 15,
+      "high": 15
+     },
+     "direction": "lower",
+     "reference": "Bland-Altman vs reported LVEF"
+    },
+    {
+     "id": "lvef_icc",
+     "label": "ICC, AI vs reported LVEF",
+     "unit": "",
+     "value": 0.865,
+     "ci": {
+      "low": 0.863,
+      "high": 0.867
+     },
+     "direction": "higher",
+     "reference": "Two-way mixed, absolute agreement"
+    },
+    {
+     "id": "ef40_sens",
+     "label": "LVEF ≤ 40%: sensitivity",
+     "unit": "%",
+     "value": 87.5,
+     "ci": {
+      "low": 87.3,
+      "high": 87.7
+     },
+     "direction": "higher",
+     "reference": "Reported LVEF ≤ 40%"
+    },
+    {
+     "id": "ef40_spec",
+     "label": "LVEF ≤ 40%: specificity",
+     "unit": "%",
+     "value": 93.4,
+     "ci": {
+      "low": 93.2,
+      "high": 93.6
+     },
+     "direction": "higher",
+     "reference": "Reported LVEF > 40%"
+    },
+    {
+     "id": "edv_mae",
+     "label": "LV end-diastolic volume MAE",
+     "unit": "mL",
+     "value": 19,
+     "ci": {
+      "low": 18.8,
+      "high": 19.2
+     },
+     "direction": "lower",
+     "reference": "Registry-reported LVEDV"
+    },
+    {
+     "id": "gls_bias",
+     "label": "GLS bias (AI minus reported)",
+     "unit": "%",
+     "value": 1.28,
+     "ci": {
+      "low": 1.26,
+      "high": 1.3
+     },
+     "direction": "zero",
+     "reference": "Registry-reported GLS where present"
+    },
+    {
+     "id": "ee_icc",
+     "label": "E/e′ ICC",
+     "unit": "",
+     "value": 0.772,
+     "ci": {
+      "low": 0.769,
+      "high": 0.775
+     },
+     "direction": "higher",
+     "reference": "Registry-reported E/e′"
+    },
+    {
+     "id": "avmg_icc",
+     "label": "AV mean gradient ICC",
+     "unit": "",
+     "value": 0.898,
+     "ci": {
+      "low": 0.895,
+      "high": 0.901
+     },
+     "direction": "higher",
+     "reference": "Registry metric: mean and peak gradients for valvular disease"
+    }
+   ],
+   "primary_endpoint_id": "lvef_mae",
+   "subgroups": [
+    {
+     "dimension": "Sex",
+     "level": "Female",
+     "value": 6,
+     "n": 2160
+    },
+    {
+     "dimension": "Sex",
+     "level": "Male",
+     "value": 6.6,
+     "n": 630
+    },
+    {
+     "dimension": "Age",
+     "level": "< 50",
+     "value": 6.6,
+     "n": 2730
+    },
+    {
+     "dimension": "Age",
+     "level": "50–69",
+     "value": 6.6,
+     "n": 4180
+    },
+    {
+     "dimension": "Age",
+     "level": "≥ 70",
+     "value": 6.3,
+     "n": 4070
+    },
+    {
+     "dimension": "BMI",
+     "level": "< 30",
+     "value": 6.2,
+     "n": 1510
+    },
+    {
+     "dimension": "BMI",
+     "level": "≥ 30",
+     "value": 6,
+     "n": 3650
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Good",
+     "value": 5.7,
+     "n": 1840
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Adequate",
+     "value": 5.8,
+     "n": 210
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Poor",
+     "value": 8.5,
+     "n": 3570
+    },
+    {
+     "dimension": "Vendor",
+     "level": "GE HealthCare",
+     "value": 5.9,
+     "n": 2070
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Philips",
+     "value": 5.6,
+     "n": 1140
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Siemens Healthineers",
+     "value": 6.4,
+     "n": 830
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Canon Medical",
+     "value": 5.4,
+     "n": 1980
+    }
+   ],
+   "monthly": [
+    {
+     "month": "2025-01",
+     "n": 803,
+     "primary": 6,
+     "feasibility": 86.4
+    },
+    {
+     "month": "2025-02",
+     "n": 1134,
+     "primary": 5.9,
+     "feasibility": 87.5
+    },
+    {
+     "month": "2025-03",
+     "n": 1305,
+     "primary": 5.9,
+     "feasibility": 86.7
+    },
+    {
+     "month": "2025-04",
+     "n": 1232,
+     "primary": 6.4,
+     "feasibility": 84.5
+    },
+    {
+     "month": "2025-05",
+     "n": 1031,
+     "primary": 6.1,
+     "feasibility": 85
+    },
+    {
+     "month": "2025-06",
+     "n": 1070,
+     "primary": 6.1,
+     "feasibility": 84.7
+    },
+    {
+     "month": "2025-07",
+     "n": 774,
+     "primary": 6.4,
+     "feasibility": 85.9
+    },
+    {
+     "month": "2025-08",
+     "n": 761,
+     "primary": 6,
+     "feasibility": 84.7
+    },
+    {
+     "month": "2025-09",
+     "n": 921,
+     "primary": 6.4,
+     "feasibility": 86.9
+    },
+    {
+     "month": "2025-10",
+     "n": 909,
+     "primary": 6.1,
+     "feasibility": 88.3
+    },
+    {
+     "month": "2025-11",
+     "n": 822,
+     "primary": 5.9,
+     "feasibility": 84.2
+    },
+    {
+     "month": "2025-12",
+     "n": 1252,
+     "primary": 6.1,
+     "feasibility": 84.5
+    },
+    {
+     "month": "2026-01",
+     "n": 896,
+     "primary": 5.8,
+     "feasibility": 88.2
+    },
+    {
+     "month": "2026-02",
+     "n": 1149,
+     "primary": 6,
+     "feasibility": 87.5
+    },
+    {
+     "month": "2026-03",
+     "n": 759,
+     "primary": 6,
+     "feasibility": 87.7
+    },
+    {
+     "month": "2026-04",
+     "n": 752,
+     "primary": 6.1,
+     "feasibility": 84
+    },
+    {
+     "month": "2026-05",
+     "n": 1152,
+     "primary": 5.9,
+     "feasibility": 86.1
+    },
+    {
+     "month": "2026-06",
+     "n": 1032,
+     "primary": 6.1,
+     "feasibility": 85.4
+    }
+   ]
+  },
+  "echogo-amyloidosis": {
+   "family_id": "echogo-amyloidosis",
+   "product_name": "EchoGo Amyloidosis",
+   "company": "Ultromics Limited",
+   "evaluation_type": "amyloid",
+   "evaluable": true,
+   "cohort": {
+    "n_studies": 2130,
+    "n_sites": 5,
+    "sites": [
+     "Site D",
+     "Site G",
+     "Site B",
+     "Site H",
+     "Site E"
+    ],
+    "vendors": [
+     "Philips",
+     "Siemens Healthineers",
+     "GE HealthCare",
+     "Canon Medical"
+    ],
+    "period": "2025-01 to 2026-06",
+    "module": "Adult TTE (phase 1)"
+   },
+   "endpoints": [
+    {
+     "id": "feasibility",
+     "label": "Feasibility (studies with an AI output)",
+     "unit": "%",
+     "value": 93,
+     "ci": {
+      "low": 92.6,
+      "high": 93.4
+     },
+     "direction": "higher",
+     "reference": "All eligible registry TTEs"
+    },
+    {
+     "id": "auc",
+     "label": "AUC",
+     "unit": "",
+     "value": 0.901,
+     "ci": {
+      "low": 0.893,
+      "high": 0.909
+     },
+     "direction": "higher",
+     "reference": "Registry-linked confirmed cardiac amyloidosis diagnosis",
+     "primary": true
+    },
+    {
+     "id": "sens",
+     "label": "Sensitivity",
+     "unit": "%",
+     "value": 89.9,
+     "ci": {
+      "low": 89.1,
+      "high": 90.7
+     },
+     "direction": "higher",
+     "reference": "Registry-linked confirmed cardiac amyloidosis diagnosis"
+    },
+    {
+     "id": "spec",
+     "label": "Specificity",
+     "unit": "%",
+     "value": 85.7,
+     "ci": {
+      "low": 85.1,
+      "high": 86.3
+     },
+     "direction": "higher",
+     "reference": "Registry-linked confirmed cardiac amyloidosis diagnosis"
+    },
+    {
+     "id": "ppv",
+     "label": "PPV at registry prevalence (1.2%)",
+     "unit": "%",
+     "value": 7.1,
+     "ci": {
+      "low": 6.1,
+      "high": 8.1
+     },
+     "direction": "higher",
+     "reference": "Derived from sensitivity, specificity and cohort prevalence"
+    }
+   ],
+   "primary_endpoint_id": "auc",
+   "subgroups": [
+    {
+     "dimension": "Sex",
+     "level": "Female",
+     "value": 1,
+     "n": 510
+    },
+    {
+     "dimension": "Sex",
+     "level": "Male",
+     "value": 0.992,
+     "n": 4190
+    },
+    {
+     "dimension": "Age",
+     "level": "< 50",
+     "value": 0.983,
+     "n": 4030
+    },
+    {
+     "dimension": "Age",
+     "level": "50–69",
+     "value": 0.966,
+     "n": 2180
+    },
+    {
+     "dimension": "Age",
+     "level": "≥ 70",
+     "value": 0.812,
+     "n": 3750
+    },
+    {
+     "dimension": "BMI",
+     "level": "< 30",
+     "value": 0.909,
+     "n": 540
+    },
+    {
+     "dimension": "BMI",
+     "level": "≥ 30",
+     "value": 0.858,
+     "n": 520
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Good",
+     "value": 0.962,
+     "n": 230
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Adequate",
+     "value": 0.869,
+     "n": 920
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Poor",
+     "value": 0.689,
+     "n": 3240
+    },
+    {
+     "dimension": "Vendor",
+     "level": "GE HealthCare",
+     "value": 0.922,
+     "n": 1770
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Philips",
+     "value": 0.962,
+     "n": 340
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Siemens Healthineers",
+     "value": 0.978,
+     "n": 3510
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Canon Medical",
+     "value": 0.965,
+     "n": 4190
+    }
+   ],
+   "monthly": [
+    {
+     "month": "2025-01",
+     "n": 141,
+     "primary": 0.892,
+     "feasibility": 94.5
+    },
+    {
+     "month": "2025-02",
+     "n": 126,
+     "primary": 0.878,
+     "feasibility": 93.2
+    },
+    {
+     "month": "2025-03",
+     "n": 132,
+     "primary": 0.913,
+     "feasibility": 91.5
+    },
+    {
+     "month": "2025-04",
+     "n": 91,
+     "primary": 0.881,
+     "feasibility": 95.8
+    },
+    {
+     "month": "2025-05",
+     "n": 98,
+     "primary": 0.928,
+     "feasibility": 92.3
+    },
+    {
+     "month": "2025-06",
+     "n": 101,
+     "primary": 0.965,
+     "feasibility": 91.3
+    },
+    {
+     "month": "2025-07",
+     "n": 106,
+     "primary": 0.927,
+     "feasibility": 90.8
+    },
+    {
+     "month": "2025-08",
+     "n": 106,
+     "primary": 0.964,
+     "feasibility": 90.4
+    },
+    {
+     "month": "2025-09",
+     "n": 104,
+     "primary": 0.936,
+     "feasibility": 93.2
+    },
+    {
+     "month": "2025-10",
+     "n": 128,
+     "primary": 0.924,
+     "feasibility": 93.7
+    },
+    {
+     "month": "2025-11",
+     "n": 125,
+     "primary": 0.863,
+     "feasibility": 94.3
+    },
+    {
+     "month": "2025-12",
+     "n": 108,
+     "primary": 0.847,
+     "feasibility": 95
+    },
+    {
+     "month": "2026-01",
+     "n": 132,
+     "primary": 0.9,
+     "feasibility": 92.7
+    },
+    {
+     "month": "2026-02",
+     "n": 98,
+     "primary": 0.916,
+     "feasibility": 93.9
+    },
+    {
+     "month": "2026-03",
+     "n": 132,
+     "primary": 0.876,
+     "feasibility": 94.7
+    },
+    {
+     "month": "2026-04",
+     "n": 98,
+     "primary": 0.887,
+     "feasibility": 93.9
+    },
+    {
+     "month": "2026-05",
+     "n": 127,
+     "primary": 0.907,
+     "feasibility": 93.3
+    },
+    {
+     "month": "2026-06",
+     "n": 88,
+     "primary": 0.915,
+     "feasibility": 91.8
+    }
+   ]
+  },
+  "icardio-echomeasure": {
+   "family_id": "icardio-echomeasure",
+   "product_name": "EchoMeasure",
+   "company": "iCardio.ai",
+   "evaluation_type": "comprehensive",
+   "evaluable": true,
+   "cohort": {
+    "n_studies": 21890,
+    "n_sites": 5,
+    "sites": [
+     "Site E",
+     "Site D",
+     "Site F",
+     "Site C",
+     "Site B"
+    ],
+    "vendors": [
+     "Philips",
+     "GE HealthCare"
+    ],
+    "period": "2025-01 to 2026-06",
+    "module": "Adult TTE (phase 1)"
+   },
+   "endpoints": [
+    {
+     "id": "feasibility",
+     "label": "Feasibility (studies with an AI output)",
+     "unit": "%",
+     "value": 74.2,
+     "ci": {
+      "low": 74.1,
+      "high": 74.3
+     },
+     "direction": "higher",
+     "reference": "All eligible registry TTEs"
+    },
+    {
+     "id": "lvef_mae",
+     "label": "LVEF mean absolute error",
+     "unit": "% EF",
+     "value": 5.8,
+     "ci": {
+      "low": 5.77,
+      "high": 5.83
      },
      "direction": "lower",
      "reference": "Registry-reported LVEF (finalized clinical report)",
@@ -3724,8 +5807,8 @@ window.AIECHO_REGISTRY = {
      "unit": "% EF",
      "value": 1.2,
      "ci": {
-      "low": 1.12,
-      "high": 1.28
+      "low": 1.17,
+      "high": 1.23
      },
      "direction": "zero",
      "reference": "Registry-reported LVEF"
@@ -3734,10 +5817,10 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_loa",
      "label": "95% limits of agreement (half-width)",
      "unit": "% EF",
-     "value": 11.2,
+     "value": 13.8,
      "ci": {
-      "low": 11.1,
-      "high": 11.3
+      "low": 13.8,
+      "high": 13.8
      },
      "direction": "lower",
      "reference": "Bland-Altman vs reported LVEF"
@@ -3746,10 +5829,10 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_icc",
      "label": "ICC, AI vs reported LVEF",
      "unit": "",
-     "value": 0.877,
+     "value": 0.857,
      "ci": {
-      "low": 0.871,
-      "high": 0.883
+      "low": 0.855,
+      "high": 0.859
      },
      "direction": "higher",
      "reference": "Two-way mixed, absolute agreement"
@@ -3758,10 +5841,10 @@ window.AIECHO_REGISTRY = {
      "id": "ef40_sens",
      "label": "LVEF ≤ 40%: sensitivity",
      "unit": "%",
-     "value": 94.9,
+     "value": 86.7,
      "ci": {
-      "low": 94.3,
-      "high": 95.5
+      "low": 86.5,
+      "high": 86.9
      },
      "direction": "higher",
      "reference": "Reported LVEF ≤ 40%"
@@ -3772,11 +5855,59 @@ window.AIECHO_REGISTRY = {
      "unit": "%",
      "value": 91.1,
      "ci": {
-      "low": 90.7,
-      "high": 91.5
+      "low": 90.9,
+      "high": 91.3
      },
      "direction": "higher",
      "reference": "Reported LVEF > 40%"
+    },
+    {
+     "id": "edv_mae",
+     "label": "LV end-diastolic volume MAE",
+     "unit": "mL",
+     "value": 19.8,
+     "ci": {
+      "low": 19.6,
+      "high": 20
+     },
+     "direction": "lower",
+     "reference": "Registry-reported LVEDV"
+    },
+    {
+     "id": "gls_bias",
+     "label": "GLS bias (AI minus reported)",
+     "unit": "%",
+     "value": -1.14,
+     "ci": {
+      "low": -1.16,
+      "high": -1.12
+     },
+     "direction": "zero",
+     "reference": "Registry-reported GLS where present"
+    },
+    {
+     "id": "ee_icc",
+     "label": "E/e′ ICC",
+     "unit": "",
+     "value": 0.77,
+     "ci": {
+      "low": 0.767,
+      "high": 0.773
+     },
+     "direction": "higher",
+     "reference": "Registry-reported E/e′"
+    },
+    {
+     "id": "avmg_icc",
+     "label": "AV mean gradient ICC",
+     "unit": "",
+     "value": 0.906,
+     "ci": {
+      "low": 0.903,
+      "high": 0.909
+     },
+     "direction": "higher",
+     "reference": "Registry metric: mean and peak gradients for valvular disease"
     }
    ],
    "primary_endpoint_id": "lvef_mae",
@@ -3784,219 +5915,505 @@ window.AIECHO_REGISTRY = {
     {
      "dimension": "Sex",
      "level": "Female",
-     "value": 3.7,
-     "n": 4110
+     "value": 6.4,
+     "n": 1620
     },
     {
      "dimension": "Sex",
      "level": "Male",
-     "value": 4.2,
-     "n": 4040
+     "value": 6.3,
+     "n": 3970
     },
     {
      "dimension": "Age",
      "level": "< 50",
-     "value": 3.6,
-     "n": 940
+     "value": 6.4,
+     "n": 2990
     },
     {
      "dimension": "Age",
      "level": "50–69",
-     "value": 3.9,
-     "n": 2710
+     "value": 5.8,
+     "n": 470
     },
     {
      "dimension": "Age",
      "level": "≥ 70",
-     "value": 4,
-     "n": 3410
+     "value": 6.4,
+     "n": 1100
     },
     {
      "dimension": "BMI",
      "level": "< 30",
-     "value": 4,
-     "n": 2730
+     "value": 5.5,
+     "n": 3840
     },
     {
      "dimension": "BMI",
      "level": "≥ 30",
-     "value": 4,
-     "n": 3360
+     "value": 5.8,
+     "n": 3940
     },
     {
      "dimension": "Image quality",
      "level": "Good",
-     "value": 3.5,
-     "n": 2890
+     "value": 5.3,
+     "n": 350
     },
     {
      "dimension": "Image quality",
      "level": "Adequate",
-     "value": 4.1,
-     "n": 2340
+     "value": 5.7,
+     "n": 1570
     },
     {
      "dimension": "Image quality",
      "level": "Poor",
-     "value": 5.3,
-     "n": 480
+     "value": 7.2,
+     "n": 2550
     },
     {
      "dimension": "Vendor",
      "level": "GE HealthCare",
-     "value": 3.7,
-     "n": 2260
+     "value": 5.3,
+     "n": 840
     },
     {
      "dimension": "Vendor",
      "level": "Philips",
-     "value": 3.5,
-     "n": 500
+     "value": 5.4,
+     "n": 2430
     },
     {
      "dimension": "Vendor",
      "level": "Siemens Healthineers",
-     "value": 3.8,
-     "n": 3040
+     "value": 5.8,
+     "n": 3630
     },
     {
      "dimension": "Vendor",
      "level": "Canon Medical",
-     "value": 4.2,
-     "n": 1770
+     "value": 6.4,
+     "n": 900
     }
    ],
    "monthly": [
     {
      "month": "2025-01",
-     "n": 221,
-     "primary": 3.9,
-     "feasibility": 92.8
+     "n": 1233,
+     "primary": 6,
+     "feasibility": 75.2
     },
     {
      "month": "2025-02",
-     "n": 218,
-     "primary": 3.9,
-     "feasibility": 92.1
+     "n": 1266,
+     "primary": 5.7,
+     "feasibility": 73.4
     },
     {
      "month": "2025-03",
-     "n": 174,
-     "primary": 3.8,
-     "feasibility": 97.4
+     "n": 1196,
+     "primary": 5.7,
+     "feasibility": 74.4
     },
     {
      "month": "2025-04",
-     "n": 223,
-     "primary": 3.9,
-     "feasibility": 95
+     "n": 1430,
+     "primary": 5.8,
+     "feasibility": 74.1
     },
     {
      "month": "2025-05",
-     "n": 132,
-     "primary": 3.9,
-     "feasibility": 96.4
+     "n": 900,
+     "primary": 6.3,
+     "feasibility": 72.4
     },
     {
      "month": "2025-06",
-     "n": 167,
-     "primary": 4,
-     "feasibility": 97.4
+     "n": 1237,
+     "primary": 6,
+     "feasibility": 73.4
     },
     {
      "month": "2025-07",
-     "n": 138,
-     "primary": 3.7,
-     "feasibility": 97.2
+     "n": 1482,
+     "primary": 5.8,
+     "feasibility": 72.6
     },
     {
      "month": "2025-08",
-     "n": 150,
-     "primary": 3.8,
-     "feasibility": 93.3
+     "n": 927,
+     "primary": 5.7,
+     "feasibility": 74
     },
     {
      "month": "2025-09",
-     "n": 221,
-     "primary": 3.9,
-     "feasibility": 96.8
+     "n": 1456,
+     "primary": 6.1,
+     "feasibility": 75
     },
     {
      "month": "2025-10",
-     "n": 226,
-     "primary": 4,
-     "feasibility": 96
+     "n": 1206,
+     "primary": 5.8,
+     "feasibility": 75.4
     },
     {
      "month": "2025-11",
-     "n": 195,
-     "primary": 3.7,
-     "feasibility": 94.1
+     "n": 1485,
+     "primary": 5.7,
+     "feasibility": 72.8
     },
     {
      "month": "2025-12",
-     "n": 162,
-     "primary": 3.7,
-     "feasibility": 95.9
+     "n": 1239,
+     "primary": 5.5,
+     "feasibility": 73.1
     },
     {
      "month": "2026-01",
-     "n": 199,
-     "primary": 3.8,
-     "feasibility": 93.4
+     "n": 1280,
+     "primary": 5.8,
+     "feasibility": 74.1
     },
     {
      "month": "2026-02",
-     "n": 129,
-     "primary": 3.6,
-     "feasibility": 92
+     "n": 923,
+     "primary": 5.7,
+     "feasibility": 76
     },
     {
      "month": "2026-03",
-     "n": 179,
-     "primary": 3.8,
-     "feasibility": 94.7
+     "n": 1389,
+     "primary": 5.8,
+     "feasibility": 72.6
     },
     {
      "month": "2026-04",
-     "n": 200,
-     "primary": 3.8,
-     "feasibility": 94.2
+     "n": 1115,
+     "primary": 5.7,
+     "feasibility": 72.3
     },
     {
      "month": "2026-05",
-     "n": 166,
-     "primary": 3.8,
-     "feasibility": 96.5
+     "n": 1120,
+     "primary": 5.5,
+     "feasibility": 72.8
     },
     {
      "month": "2026-06",
-     "n": 219,
-     "primary": 3.9,
-     "feasibility": 95.7
+     "n": 1386,
+     "primary": 5.8,
+     "feasibility": 75.1
     }
    ]
   },
-  "lvivo": {
-   "family_id": "lvivo",
-   "product_name": "LVivo Software Application (LVivo EF, LVivo Toolbox)",
-   "company": "DiA Imaging Analysis (Philips)",
-   "evaluation_type": "comprehensive",
+  "echosolv-as": {
+   "family_id": "echosolv-as",
+   "product_name": "EchoSolv AS",
+   "company": "Echo IQ",
+   "evaluation_type": "detection",
    "evaluable": true,
    "cohort": {
-    "n_studies": 10880,
-    "n_sites": 6,
+    "n_studies": 12360,
+    "n_sites": 7,
     "sites": [
      "Site F",
-     "Site A",
+     "Site E",
      "Site C",
-     "Site D",
-     "Site G",
-     "Site E"
+     "Site H",
+     "Site B",
+     "Site A",
+     "Site G"
     ],
     "vendors": [
-     "GE HealthCare",
      "Siemens Healthineers",
+     "Philips",
+     "Canon Medical"
+    ],
+    "period": "2025-01 to 2026-06",
+    "module": "Adult TTE (phase 1)"
+   },
+   "endpoints": [
+    {
+     "id": "feasibility",
+     "label": "Feasibility (studies with an AI output)",
+     "unit": "%",
+     "value": 72.1,
+     "ci": {
+      "low": 71.9,
+      "high": 72.3
+     },
+     "direction": "higher",
+     "reference": "All eligible registry TTEs"
+    },
+    {
+     "id": "auc",
+     "label": "AUC",
+     "unit": "",
+     "value": 0.869,
+     "ci": {
+      "low": 0.866,
+      "high": 0.872
+     },
+     "direction": "higher",
+     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)",
+     "primary": true
+    },
+    {
+     "id": "sens",
+     "label": "Sensitivity",
+     "unit": "%",
+     "value": 87.2,
+     "ci": {
+      "low": 86.9,
+      "high": 87.5
+     },
+     "direction": "higher",
+     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+    },
+    {
+     "id": "spec",
+     "label": "Specificity",
+     "unit": "%",
+     "value": 90.2,
+     "ci": {
+      "low": 90,
+      "high": 90.4
+     },
+     "direction": "higher",
+     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+    },
+    {
+     "id": "ppv",
+     "label": "PPV at registry prevalence (3.1%)",
+     "unit": "%",
+     "value": 22.2,
+     "ci": {
+      "low": 21.8,
+      "high": 22.6
+     },
+     "direction": "higher",
+     "reference": "Derived from sensitivity, specificity and cohort prevalence"
+    }
+   ],
+   "primary_endpoint_id": "auc",
+   "subgroups": [
+    {
+     "dimension": "Sex",
+     "level": "Female",
+     "value": 0.923,
+     "n": 1890
+    },
+    {
+     "dimension": "Sex",
+     "level": "Male",
+     "value": 0.905,
+     "n": 960
+    },
+    {
+     "dimension": "Age",
+     "level": "< 50",
+     "value": 0.909,
+     "n": 3020
+    },
+    {
+     "dimension": "Age",
+     "level": "50–69",
+     "value": 0.836,
+     "n": 620
+    },
+    {
+     "dimension": "Age",
+     "level": "≥ 70",
+     "value": 0.969,
+     "n": 3430
+    },
+    {
+     "dimension": "BMI",
+     "level": "< 30",
+     "value": 0.814,
+     "n": 420
+    },
+    {
+     "dimension": "BMI",
+     "level": "≥ 30",
+     "value": 0.867,
+     "n": 760
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Good",
+     "value": 0.917,
+     "n": 1860
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Adequate",
+     "value": 0.865,
+     "n": 3840
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Poor",
+     "value": 0.762,
+     "n": 2390
+    },
+    {
+     "dimension": "Vendor",
+     "level": "GE HealthCare",
+     "value": 0.933,
+     "n": 1520
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Philips",
+     "value": 0.863,
+     "n": 3630
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Siemens Healthineers",
+     "value": 0.812,
+     "n": 2310
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Canon Medical",
+     "value": 0.804,
+     "n": 2360
+    }
+   ],
+   "monthly": [
+    {
+     "month": "2025-01",
+     "n": 623,
+     "primary": 0.884,
+     "feasibility": 72.1
+    },
+    {
+     "month": "2025-02",
+     "n": 626,
+     "primary": 0.865,
+     "feasibility": 73.6
+    },
+    {
+     "month": "2025-03",
+     "n": 760,
+     "primary": 0.843,
+     "feasibility": 71.7
+    },
+    {
+     "month": "2025-04",
+     "n": 602,
+     "primary": 0.878,
+     "feasibility": 71.9
+    },
+    {
+     "month": "2025-05",
+     "n": 858,
+     "primary": 0.911,
+     "feasibility": 70.3
+    },
+    {
+     "month": "2025-06",
+     "n": 484,
+     "primary": 0.918,
+     "feasibility": 72.6
+    },
+    {
+     "month": "2025-07",
+     "n": 486,
+     "primary": 0.889,
+     "feasibility": 71.1
+    },
+    {
+     "month": "2025-08",
+     "n": 820,
+     "primary": 0.903,
+     "feasibility": 73.3
+    },
+    {
+     "month": "2025-09",
+     "n": 675,
+     "primary": 0.923,
+     "feasibility": 73.2
+    },
+    {
+     "month": "2025-10",
+     "n": 693,
+     "primary": 0.87,
+     "feasibility": 72
+    },
+    {
+     "month": "2025-11",
+     "n": 864,
+     "primary": 0.86,
+     "feasibility": 72.8
+    },
+    {
+     "month": "2025-12",
+     "n": 641,
+     "primary": 0.853,
+     "feasibility": 70.2
+    },
+    {
+     "month": "2026-01",
+     "n": 713,
+     "primary": 0.815,
+     "feasibility": 72.1
+    },
+    {
+     "month": "2026-02",
+     "n": 635,
+     "primary": 0.81,
+     "feasibility": 72.4
+    },
+    {
+     "month": "2026-03",
+     "n": 781,
+     "primary": 0.843,
+     "feasibility": 73.4
+    },
+    {
+     "month": "2026-04",
+     "n": 765,
+     "primary": 0.855,
+     "feasibility": 73.6
+    },
+    {
+     "month": "2026-05",
+     "n": 515,
+     "primary": 0.851,
+     "feasibility": 74.1
+    },
+    {
+     "month": "2026-06",
+     "n": 888,
+     "primary": 0.826,
+     "feasibility": 73
+    }
+   ]
+  },
+  "echogo-hf": {
+   "family_id": "echogo-hf",
+   "product_name": "EchoGo Heart Failure",
+   "company": "Ultromics Limited",
+   "evaluation_type": "hfpef",
+   "evaluable": true,
+   "cohort": {
+    "n_studies": 11790,
+    "n_sites": 7,
+    "sites": [
+     "Site G",
+     "Site C",
+     "Site A",
+     "Site E",
+     "Site B",
+     "Site H",
+     "Site F"
+    ],
+    "vendors": [
      "Canon Medical",
      "Philips"
     ],
@@ -4008,353 +6425,578 @@ window.AIECHO_REGISTRY = {
      "id": "feasibility",
      "label": "Feasibility (studies with an AI output)",
      "unit": "%",
-     "value": 86.9,
+     "value": 93.6,
      "ci": {
-      "low": 86.7,
-      "high": 87.1
+      "low": 93.4,
+      "high": 93.8
      },
      "direction": "higher",
      "reference": "All eligible registry TTEs"
     },
     {
-     "id": "lvef_mae",
-     "label": "LVEF mean absolute error",
-     "unit": "% EF",
-     "value": 4.7,
+     "id": "auc",
+     "label": "AUC",
+     "unit": "",
+     "value": 0.847,
      "ci": {
-      "low": 4.66,
-      "high": 4.74
+      "low": 0.843,
+      "high": 0.851
      },
-     "direction": "lower",
-     "reference": "Registry-reported LVEF (finalized clinical report)",
+     "direction": "higher",
+     "reference": "Registry diastolic function grade ≥ 2 with linked HF diagnosis",
      "primary": true
     },
     {
-     "id": "lvef_bias",
-     "label": "LVEF bias (AI minus reported)",
-     "unit": "% EF",
-     "value": -2,
-     "ci": {
-      "low": -2.05,
-      "high": -1.95
-     },
-     "direction": "zero",
-     "reference": "Registry-reported LVEF"
-    },
-    {
-     "id": "lvef_loa",
-     "label": "95% limits of agreement (half-width)",
-     "unit": "% EF",
-     "value": 13.8,
-     "ci": {
-      "low": 13.7,
-      "high": 13.9
-     },
-     "direction": "lower",
-     "reference": "Bland-Altman vs reported LVEF"
-    },
-    {
-     "id": "lvef_icc",
-     "label": "ICC, AI vs reported LVEF",
-     "unit": "",
-     "value": 0.897,
-     "ci": {
-      "low": 0.894,
-      "high": 0.9
-     },
-     "direction": "higher",
-     "reference": "Two-way mixed, absolute agreement"
-    },
-    {
-     "id": "ef40_sens",
-     "label": "LVEF ≤ 40%: sensitivity",
+     "id": "sens",
+     "label": "Sensitivity",
      "unit": "%",
-     "value": 82.6,
+     "value": 85,
      "ci": {
-      "low": 82.3,
-      "high": 82.9
+      "low": 84.6,
+      "high": 85.4
      },
      "direction": "higher",
-     "reference": "Reported LVEF ≤ 40%"
+     "reference": "Registry diastolic function grade ≥ 2 with linked HF diagnosis"
     },
     {
-     "id": "ef40_spec",
-     "label": "LVEF ≤ 40%: specificity",
+     "id": "spec",
+     "label": "Specificity",
      "unit": "%",
-     "value": 95.7,
+     "value": 87.2,
      "ci": {
-      "low": 95.5,
-      "high": 95.9
+      "low": 87,
+      "high": 87.4
      },
      "direction": "higher",
-     "reference": "Reported LVEF > 40%"
+     "reference": "Registry diastolic function grade ≥ 2 with linked HF diagnosis"
     },
     {
-     "id": "edv_mae",
-     "label": "LV end-diastolic volume MAE",
-     "unit": "mL",
-     "value": 24.4,
-     "ci": {
-      "low": 24.2,
-      "high": 24.6
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEDV"
-    },
-    {
-     "id": "gls_bias",
-     "label": "GLS bias (AI minus reported)",
+     "id": "ppv",
+     "label": "PPV at registry prevalence (11.4%)",
      "unit": "%",
-     "value": 1.03,
+     "value": 46.1,
      "ci": {
-      "low": 1,
-      "high": 1.06
-     },
-     "direction": "zero",
-     "reference": "Registry-reported GLS where present"
-    },
-    {
-     "id": "ee_icc",
-     "label": "E/e′ ICC",
-     "unit": "",
-     "value": 0.827,
-     "ci": {
-      "low": 0.823,
-      "high": 0.831
+      "low": 45.7,
+      "high": 46.5
      },
      "direction": "higher",
-     "reference": "Registry-reported E/e′"
-    },
-    {
-     "id": "avmg_icc",
-     "label": "AV mean gradient ICC",
-     "unit": "",
-     "value": 0.811,
-     "ci": {
-      "low": 0.807,
-      "high": 0.815
-     },
-     "direction": "higher",
-     "reference": "Registry metric: mean and peak gradients for valvular disease"
+     "reference": "Derived from sensitivity, specificity and cohort prevalence"
     }
    ],
-   "primary_endpoint_id": "lvef_mae",
+   "primary_endpoint_id": "auc",
    "subgroups": [
     {
      "dimension": "Sex",
      "level": "Female",
-     "value": 4.9,
-     "n": 1740
+     "value": 0.774,
+     "n": 420
     },
     {
      "dimension": "Sex",
      "level": "Male",
-     "value": 4.4,
-     "n": 2940
+     "value": 0.749,
+     "n": 3990
     },
     {
      "dimension": "Age",
      "level": "< 50",
-     "value": 4.6,
-     "n": 1130
+     "value": 0.876,
+     "n": 1550
     },
     {
      "dimension": "Age",
      "level": "50–69",
-     "value": 4.3,
-     "n": 1730
+     "value": 0.866,
+     "n": 3570
     },
     {
      "dimension": "Age",
      "level": "≥ 70",
-     "value": 4.3,
-     "n": 570
+     "value": 0.942,
+     "n": 3560
     },
     {
      "dimension": "BMI",
      "level": "< 30",
-     "value": 5.2,
-     "n": 3470
+     "value": 0.885,
+     "n": 3950
     },
     {
      "dimension": "BMI",
      "level": "≥ 30",
-     "value": 5.7,
-     "n": 2570
+     "value": 0.749,
+     "n": 1980
     },
     {
      "dimension": "Image quality",
      "level": "Good",
-     "value": 4.5,
-     "n": 2270
+     "value": 0.883,
+     "n": 3060
     },
     {
      "dimension": "Image quality",
      "level": "Adequate",
-     "value": 5.2,
-     "n": 280
+     "value": 0.915,
+     "n": 2910
     },
     {
      "dimension": "Image quality",
      "level": "Poor",
-     "value": 6.2,
-     "n": 2080
+     "value": 0.82,
+     "n": 3390
     },
     {
      "dimension": "Vendor",
      "level": "GE HealthCare",
-     "value": 4.7,
-     "n": 2680
+     "value": 0.894,
+     "n": 3230
     },
     {
      "dimension": "Vendor",
      "level": "Philips",
-     "value": 4.6,
-     "n": 2960
+     "value": 0.879,
+     "n": 2240
     },
     {
      "dimension": "Vendor",
      "level": "Siemens Healthineers",
-     "value": 4.2,
-     "n": 3240
+     "value": 0.824,
+     "n": 3050
     },
     {
      "dimension": "Vendor",
      "level": "Canon Medical",
-     "value": 4.6,
-     "n": 4090
+     "value": 0.887,
+     "n": 1580
     }
    ],
    "monthly": [
     {
      "month": "2025-01",
-     "n": 593,
-     "primary": 4.7,
-     "feasibility": 89
+     "n": 689,
+     "primary": 0.862,
+     "feasibility": 94
     },
     {
      "month": "2025-02",
-     "n": 461,
-     "primary": 4.6,
-     "feasibility": 87.2
+     "n": 626,
+     "primary": 0.844,
+     "feasibility": 92.4
     },
     {
      "month": "2025-03",
-     "n": 768,
-     "primary": 4.8,
-     "feasibility": 88.7
+     "n": 738,
+     "primary": 0.877,
+     "feasibility": 93.7
     },
     {
      "month": "2025-04",
-     "n": 677,
-     "primary": 4.7,
-     "feasibility": 89.3
+     "n": 691,
+     "primary": 0.833,
+     "feasibility": 94.9
     },
     {
      "month": "2025-05",
-     "n": 537,
-     "primary": 4.8,
-     "feasibility": 88.9
+     "n": 600,
+     "primary": 0.85,
+     "feasibility": 91.8
     },
     {
      "month": "2025-06",
-     "n": 485,
-     "primary": 4.8,
-     "feasibility": 87.3
+     "n": 538,
+     "primary": 0.895,
+     "feasibility": 93
     },
     {
      "month": "2025-07",
-     "n": 742,
-     "primary": 4.8,
-     "feasibility": 86.2
+     "n": 706,
+     "primary": 0.851,
+     "feasibility": 92.5
     },
     {
      "month": "2025-08",
-     "n": 506,
-     "primary": 5,
-     "feasibility": 84.5
+     "n": 469,
+     "primary": 0.907,
+     "feasibility": 95.5
     },
     {
      "month": "2025-09",
-     "n": 502,
-     "primary": 4.7,
-     "feasibility": 86.7
+     "n": 812,
+     "primary": 0.869,
+     "feasibility": 91.4
     },
     {
      "month": "2025-10",
-     "n": 770,
-     "primary": 4.7,
-     "feasibility": 86.3
+     "n": 639,
+     "primary": 0.852,
+     "feasibility": 92.5
     },
     {
      "month": "2025-11",
-     "n": 542,
-     "primary": 4.5,
-     "feasibility": 84.3
+     "n": 643,
+     "primary": 0.854,
+     "feasibility": 92.6
     },
     {
      "month": "2025-12",
-     "n": 728,
-     "primary": 4.6,
-     "feasibility": 88.4
+     "n": 607,
+     "primary": 0.837,
+     "feasibility": 93.4
     },
     {
      "month": "2026-01",
-     "n": 498,
-     "primary": 4.6,
-     "feasibility": 86
+     "n": 655,
+     "primary": 0.831,
+     "feasibility": 91.8
     },
     {
      "month": "2026-02",
-     "n": 464,
-     "primary": 4.4,
-     "feasibility": 85.8
+     "n": 655,
+     "primary": 0.844,
+     "feasibility": 92.9
     },
     {
      "month": "2026-03",
-     "n": 604,
-     "primary": 4.3,
-     "feasibility": 87.3
+     "n": 677,
+     "primary": 0.838,
+     "feasibility": 95.4
     },
     {
      "month": "2026-04",
-     "n": 709,
-     "primary": 4.6,
-     "feasibility": 88.8
+     "n": 602,
+     "primary": 0.829,
+     "feasibility": 95.2
     },
     {
      "month": "2026-05",
-     "n": 577,
-     "primary": 4.8,
-     "feasibility": 87.9
+     "n": 736,
+     "primary": 0.817,
+     "feasibility": 91.7
     },
     {
      "month": "2026-06",
-     "n": 519,
-     "primary": 4.7,
-     "feasibility": 88.9
+     "n": 539,
+     "primary": 0.833,
+     "feasibility": 92.2
     }
    ]
   },
-  "lvivo-seamless": {
-   "family_id": "lvivo-seamless",
-   "product_name": "LVivo Seamless",
-   "company": "DiA Imaging Analysis (Philips)",
-   "evaluation_type": "comprehensive",
+  "fetoly-heart": {
+   "family_id": "fetoly-heart",
+   "product_name": "FETOLY-HEART",
+   "company": "Diagnoly",
+   "evaluation_type": "not-evaluable-fetal",
+   "evaluable": false,
+   "reason": "Fetal echocardiography is outside the registry’s adult TTE module (phase 1)."
+  },
+  "aisap-cardio": {
+   "family_id": "aisap-cardio",
+   "product_name": "AISAP Cardio",
+   "company": "AISAP",
+   "evaluation_type": "detection",
    "evaluable": true,
    "cohort": {
-    "n_studies": 5530,
-    "n_sites": 4,
+    "n_studies": 4020,
+    "n_sites": 6,
+    "sites": [
+     "Site F",
+     "Site B",
+     "Site E",
+     "Site D",
+     "Site A",
+     "Site C"
+    ],
+    "vendors": [
+     "GE HealthCare",
+     "Canon Medical",
+     "Siemens Healthineers"
+    ],
+    "period": "2025-01 to 2026-06",
+    "module": "Adult TTE (phase 1)"
+   },
+   "endpoints": [
+    {
+     "id": "feasibility",
+     "label": "Feasibility (studies with an AI output)",
+     "unit": "%",
+     "value": 88.9,
+     "ci": {
+      "low": 88.6,
+      "high": 89.2
+     },
+     "direction": "higher",
+     "reference": "All eligible registry TTEs"
+    },
+    {
+     "id": "auc",
+     "label": "AUC",
+     "unit": "",
+     "value": 0.887,
+     "ci": {
+      "low": 0.881,
+      "high": 0.893
+     },
+     "direction": "higher",
+     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)",
+     "primary": true
+    },
+    {
+     "id": "sens",
+     "label": "Sensitivity",
+     "unit": "%",
+     "value": 91,
+     "ci": {
+      "low": 90.4,
+      "high": 91.6
+     },
+     "direction": "higher",
+     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+    },
+    {
+     "id": "spec",
+     "label": "Specificity",
+     "unit": "%",
+     "value": 87.1,
+     "ci": {
+      "low": 86.7,
+      "high": 87.5
+     },
+     "direction": "higher",
+     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+    },
+    {
+     "id": "ppv",
+     "label": "PPV at registry prevalence (3.1%)",
+     "unit": "%",
+     "value": 18.4,
+     "ci": {
+      "low": 17.6,
+      "high": 19.2
+     },
+     "direction": "higher",
+     "reference": "Derived from sensitivity, specificity and cohort prevalence"
+    }
+   ],
+   "primary_endpoint_id": "auc",
+   "subgroups": [
+    {
+     "dimension": "Sex",
+     "level": "Female",
+     "value": 0.867,
+     "n": 3110
+    },
+    {
+     "dimension": "Sex",
+     "level": "Male",
+     "value": 0.944,
+     "n": 1220
+    },
+    {
+     "dimension": "Age",
+     "level": "< 50",
+     "value": 0.951,
+     "n": 1520
+    },
+    {
+     "dimension": "Age",
+     "level": "50–69",
+     "value": 0.782,
+     "n": 820
+    },
+    {
+     "dimension": "Age",
+     "level": "≥ 70",
+     "value": 0.829,
+     "n": 220
+    },
+    {
+     "dimension": "BMI",
+     "level": "< 30",
+     "value": 0.931,
+     "n": 460
+    },
+    {
+     "dimension": "BMI",
+     "level": "≥ 30",
+     "value": 0.942,
+     "n": 780
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Good",
+     "value": 0.86,
+     "n": 3810
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Adequate",
+     "value": 0.982,
+     "n": 2490
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Poor",
+     "value": 0.861,
+     "n": 3750
+    },
+    {
+     "dimension": "Vendor",
+     "level": "GE HealthCare",
+     "value": 0.933,
+     "n": 2350
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Philips",
+     "value": 0.958,
+     "n": 780
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Siemens Healthineers",
+     "value": 0.993,
+     "n": 3810
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Canon Medical",
+     "value": 0.897,
+     "n": 3070
+    }
+   ],
+   "monthly": [
+    {
+     "month": "2025-01",
+     "n": 166,
+     "primary": 0.92,
+     "feasibility": 91.2
+    },
+    {
+     "month": "2025-02",
+     "n": 221,
+     "primary": 0.936,
+     "feasibility": 91.4
+    },
+    {
+     "month": "2025-03",
+     "n": 267,
+     "primary": 0.905,
+     "feasibility": 89.3
+    },
+    {
+     "month": "2025-04",
+     "n": 284,
+     "primary": 0.947,
+     "feasibility": 88.1
+    },
+    {
+     "month": "2025-05",
+     "n": 287,
+     "primary": 0.941,
+     "feasibility": 88
+    },
+    {
+     "month": "2025-06",
+     "n": 241,
+     "primary": 0.952,
+     "feasibility": 88.1
+    },
+    {
+     "month": "2025-07",
+     "n": 234,
+     "primary": 0.926,
+     "feasibility": 90.4
+    },
+    {
+     "month": "2025-08",
+     "n": 233,
+     "primary": 0.946,
+     "feasibility": 90.5
+    },
+    {
+     "month": "2025-09",
+     "n": 255,
+     "primary": 0.886,
+     "feasibility": 89.6
+    },
+    {
+     "month": "2025-10",
+     "n": 271,
+     "primary": 0.924,
+     "feasibility": 87.3
+    },
+    {
+     "month": "2025-11",
+     "n": 233,
+     "primary": 0.877,
+     "feasibility": 90.6
+    },
+    {
+     "month": "2025-12",
+     "n": 235,
+     "primary": 0.855,
+     "feasibility": 86.7
+    },
+    {
+     "month": "2026-01",
+     "n": 237,
+     "primary": 0.909,
+     "feasibility": 90
+    },
+    {
+     "month": "2026-02",
+     "n": 229,
+     "primary": 0.882,
+     "feasibility": 88.5
+    },
+    {
+     "month": "2026-03",
+     "n": 207,
+     "primary": 0.828,
+     "feasibility": 87.7
+    },
+    {
+     "month": "2026-04",
+     "n": 192,
+     "primary": 0.832,
+     "feasibility": 88.6
+    },
+    {
+     "month": "2026-05",
+     "n": 285,
+     "primary": 0.876,
+     "feasibility": 86.3
+    },
+    {
+     "month": "2026-06",
+     "n": 245,
+     "primary": 0.876,
+     "feasibility": 90.7
+    }
+   ]
+  },
+  "lvivo-iqs": {
+   "family_id": "lvivo-iqs",
+   "product_name": "LVivo IQS (Image Quality Score)",
+   "company": "DiA Imaging Analysis Ltd. (a Philips company since May 2023; earlier trade name DiACardio Ltd.)",
+   "evaluation_type": "quality",
+   "evaluable": true,
+   "cohort": {
+    "n_studies": 11600,
+    "n_sites": 8,
     "sites": [
      "Site E",
-     "Site H",
+     "Site C",
+     "Site G",
+     "Site F",
      "Site D",
+     "Site H",
+     "Site A",
      "Site B"
     ],
     "vendors": [
      "GE HealthCare",
      "Philips",
-     "Siemens Healthineers",
      "Canon Medical"
     ],
     "period": "2025-01 to 2026-06",
@@ -4365,10 +7007,269 @@ window.AIECHO_REGISTRY = {
      "id": "feasibility",
      "label": "Feasibility (studies with an AI output)",
      "unit": "%",
-     "value": 83.8,
+     "value": 94.4,
      "ci": {
-      "low": 83.5,
-      "high": 84.1
+      "low": 94.2,
+      "high": 94.6
+     },
+     "direction": "higher",
+     "reference": "All eligible registry TTEs"
+    },
+    {
+     "id": "kappa",
+     "label": "Agreement with sonographer quality grade (κ)",
+     "unit": "",
+     "value": 0.6,
+     "ci": {
+      "low": 0.59,
+      "high": 0.61
+     },
+     "direction": "higher",
+     "reference": "Registry image-quality / technical-difficulty field",
+     "primary": true
+    },
+    {
+     "id": "flagged",
+     "label": "Studies flagged non-diagnostic",
+     "unit": "%",
+     "value": 4.9,
+     "ci": {
+      "low": 4.8,
+      "high": 5
+     },
+     "direction": "neutral",
+     "reference": "AI flag rate"
+    }
+   ],
+   "primary_endpoint_id": "kappa",
+   "subgroups": [
+    {
+     "dimension": "Sex",
+     "level": "Female",
+     "value": 0.65,
+     "n": 2630
+    },
+    {
+     "dimension": "Sex",
+     "level": "Male",
+     "value": 0.666,
+     "n": 1450
+    },
+    {
+     "dimension": "Age",
+     "level": "< 50",
+     "value": 0.548,
+     "n": 1100
+    },
+    {
+     "dimension": "Age",
+     "level": "50–69",
+     "value": 0.603,
+     "n": 3110
+    },
+    {
+     "dimension": "Age",
+     "level": "≥ 70",
+     "value": 0.639,
+     "n": 2000
+    },
+    {
+     "dimension": "BMI",
+     "level": "< 30",
+     "value": 0.581,
+     "n": 1520
+    },
+    {
+     "dimension": "BMI",
+     "level": "≥ 30",
+     "value": 0.623,
+     "n": 480
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Good",
+     "value": 0.652,
+     "n": 1290
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Adequate",
+     "value": 0.632,
+     "n": 2350
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Poor",
+     "value": 0.506,
+     "n": 1680
+    },
+    {
+     "dimension": "Vendor",
+     "level": "GE HealthCare",
+     "value": 0.549,
+     "n": 2370
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Philips",
+     "value": 0.54,
+     "n": 3290
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Siemens Healthineers",
+     "value": 0.621,
+     "n": 870
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Canon Medical",
+     "value": 0.621,
+     "n": 2310
+    }
+   ],
+   "monthly": [
+    {
+     "month": "2025-01",
+     "n": 543,
+     "primary": 0.617,
+     "feasibility": 91.8
+    },
+    {
+     "month": "2025-02",
+     "n": 796,
+     "primary": 0.583,
+     "feasibility": 96.8
+    },
+    {
+     "month": "2025-03",
+     "n": 563,
+     "primary": 0.606,
+     "feasibility": 92.1
+    },
+    {
+     "month": "2025-04",
+     "n": 818,
+     "primary": 0.62,
+     "feasibility": 93.8
+    },
+    {
+     "month": "2025-05",
+     "n": 659,
+     "primary": 0.598,
+     "feasibility": 92.6
+    },
+    {
+     "month": "2025-06",
+     "n": 586,
+     "primary": 0.639,
+     "feasibility": 96.9
+    },
+    {
+     "month": "2025-07",
+     "n": 561,
+     "primary": 0.625,
+     "feasibility": 96.6
+    },
+    {
+     "month": "2025-08",
+     "n": 776,
+     "primary": 0.644,
+     "feasibility": 93.6
+    },
+    {
+     "month": "2025-09",
+     "n": 599,
+     "primary": 0.628,
+     "feasibility": 92.7
+    },
+    {
+     "month": "2025-10",
+     "n": 674,
+     "primary": 0.621,
+     "feasibility": 91.9
+    },
+    {
+     "month": "2025-11",
+     "n": 539,
+     "primary": 0.601,
+     "feasibility": 93.8
+    },
+    {
+     "month": "2025-12",
+     "n": 805,
+     "primary": 0.588,
+     "feasibility": 92.9
+    },
+    {
+     "month": "2026-01",
+     "n": 835,
+     "primary": 0.577,
+     "feasibility": 91.6
+    },
+    {
+     "month": "2026-02",
+     "n": 654,
+     "primary": 0.571,
+     "feasibility": 97
+    },
+    {
+     "month": "2026-03",
+     "n": 458,
+     "primary": 0.58,
+     "feasibility": 93.4
+    },
+    {
+     "month": "2026-04",
+     "n": 511,
+     "primary": 0.6,
+     "feasibility": 92.4
+    },
+    {
+     "month": "2026-05",
+     "n": 702,
+     "primary": 0.557,
+     "feasibility": 93.4
+    },
+    {
+     "month": "2026-06",
+     "n": 718,
+     "primary": 0.61,
+     "feasibility": 92.3
+    }
+   ]
+  },
+  "invision-lvef": {
+   "family_id": "invision-lvef",
+   "product_name": "InVision Precision LVEF",
+   "company": "InVision Medical Technology Corporation",
+   "evaluation_type": "lvef",
+   "evaluable": true,
+   "cohort": {
+    "n_studies": 16520,
+    "n_sites": 4,
+    "sites": [
+     "Site H",
+     "Site B",
+     "Site G",
+     "Site E"
+    ],
+    "vendors": [
+     "GE HealthCare",
+     "Canon Medical"
+    ],
+    "period": "2025-01 to 2026-06",
+    "module": "Adult TTE (phase 1)"
+   },
+   "endpoints": [
+    {
+     "id": "feasibility",
+     "label": "Feasibility (studies with an AI output)",
+     "unit": "%",
+     "value": 90.2,
+     "ci": {
+      "low": 90.1,
+      "high": 90.3
      },
      "direction": "higher",
      "reference": "All eligible registry TTEs"
@@ -4377,10 +7278,10 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_mae",
      "label": "LVEF mean absolute error",
      "unit": "% EF",
-     "value": 6.1,
+     "value": 6.6,
      "ci": {
-      "low": 6.05,
-      "high": 6.15
+      "low": 6.57,
+      "high": 6.63
      },
      "direction": "lower",
      "reference": "Registry-reported LVEF (finalized clinical report)",
@@ -4390,10 +7291,984 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_bias",
      "label": "LVEF bias (AI minus reported)",
      "unit": "% EF",
-     "value": -1.5,
+     "value": 1.5,
      "ci": {
-      "low": -1.56,
-      "high": -1.44
+      "low": 1.46,
+      "high": 1.54
+     },
+     "direction": "zero",
+     "reference": "Registry-reported LVEF"
+    },
+    {
+     "id": "lvef_loa",
+     "label": "95% limits of agreement (half-width)",
+     "unit": "% EF",
+     "value": 11.6,
+     "ci": {
+      "low": 11.6,
+      "high": 11.6
+     },
+     "direction": "lower",
+     "reference": "Bland-Altman vs reported LVEF"
+    },
+    {
+     "id": "lvef_icc",
+     "label": "ICC, AI vs reported LVEF",
+     "unit": "",
+     "value": 0.936,
+     "ci": {
+      "low": 0.934,
+      "high": 0.938
+     },
+     "direction": "higher",
+     "reference": "Two-way mixed, absolute agreement"
+    },
+    {
+     "id": "ef40_sens",
+     "label": "LVEF ≤ 40%: sensitivity",
+     "unit": "%",
+     "value": 86,
+     "ci": {
+      "low": 85.8,
+      "high": 86.2
+     },
+     "direction": "higher",
+     "reference": "Reported LVEF ≤ 40%"
+    },
+    {
+     "id": "ef40_spec",
+     "label": "LVEF ≤ 40%: specificity",
+     "unit": "%",
+     "value": 90.5,
+     "ci": {
+      "low": 90.3,
+      "high": 90.7
+     },
+     "direction": "higher",
+     "reference": "Reported LVEF > 40%"
+    }
+   ],
+   "primary_endpoint_id": "lvef_mae",
+   "subgroups": [
+    {
+     "dimension": "Sex",
+     "level": "Female",
+     "value": 6.4,
+     "n": 2060
+    },
+    {
+     "dimension": "Sex",
+     "level": "Male",
+     "value": 6.1,
+     "n": 2450
+    },
+    {
+     "dimension": "Age",
+     "level": "< 50",
+     "value": 6.3,
+     "n": 3320
+    },
+    {
+     "dimension": "Age",
+     "level": "50–69",
+     "value": 6.2,
+     "n": 500
+    },
+    {
+     "dimension": "Age",
+     "level": "≥ 70",
+     "value": 6.7,
+     "n": 880
+    },
+    {
+     "dimension": "BMI",
+     "level": "< 30",
+     "value": 7.3,
+     "n": 2540
+    },
+    {
+     "dimension": "BMI",
+     "level": "≥ 30",
+     "value": 6.8,
+     "n": 3710
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Good",
+     "value": 7.4,
+     "n": 3660
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Adequate",
+     "value": 6.8,
+     "n": 2640
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Poor",
+     "value": 8.4,
+     "n": 2350
+    },
+    {
+     "dimension": "Vendor",
+     "level": "GE HealthCare",
+     "value": 6.4,
+     "n": 3290
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Philips",
+     "value": 7.1,
+     "n": 2620
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Siemens Healthineers",
+     "value": 7,
+     "n": 3000
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Canon Medical",
+     "value": 6.9,
+     "n": 1500
+    }
+   ],
+   "monthly": [
+    {
+     "month": "2025-01",
+     "n": 943,
+     "primary": 6.6,
+     "feasibility": 87.6
+    },
+    {
+     "month": "2025-02",
+     "n": 772,
+     "primary": 6.9,
+     "feasibility": 91.9
+    },
+    {
+     "month": "2025-03",
+     "n": 655,
+     "primary": 6.7,
+     "feasibility": 91.7
+    },
+    {
+     "month": "2025-04",
+     "n": 674,
+     "primary": 6.4,
+     "feasibility": 89.2
+    },
+    {
+     "month": "2025-05",
+     "n": 1048,
+     "primary": 6.9,
+     "feasibility": 89.4
+    },
+    {
+     "month": "2025-06",
+     "n": 1150,
+     "primary": 6.6,
+     "feasibility": 91.9
+    },
+    {
+     "month": "2025-07",
+     "n": 895,
+     "primary": 6.8,
+     "feasibility": 91.8
+    },
+    {
+     "month": "2025-08",
+     "n": 1136,
+     "primary": 6.5,
+     "feasibility": 91
+    },
+    {
+     "month": "2025-09",
+     "n": 1065,
+     "primary": 6.6,
+     "feasibility": 91.1
+    },
+    {
+     "month": "2025-10",
+     "n": 950,
+     "primary": 6.5,
+     "feasibility": 89.6
+    },
+    {
+     "month": "2025-11",
+     "n": 901,
+     "primary": 6.8,
+     "feasibility": 89.3
+    },
+    {
+     "month": "2025-12",
+     "n": 1027,
+     "primary": 6.6,
+     "feasibility": 89.6
+    },
+    {
+     "month": "2026-01",
+     "n": 1107,
+     "primary": 6.2,
+     "feasibility": 87.7
+    },
+    {
+     "month": "2026-02",
+     "n": 882,
+     "primary": 6.7,
+     "feasibility": 91
+    },
+    {
+     "month": "2026-03",
+     "n": 664,
+     "primary": 6.7,
+     "feasibility": 91.1
+    },
+    {
+     "month": "2026-04",
+     "n": 1181,
+     "primary": 6.1,
+     "feasibility": 90.3
+    },
+    {
+     "month": "2026-05",
+     "n": 952,
+     "primary": 6.5,
+     "feasibility": 88.1
+    },
+    {
+     "month": "2026-06",
+     "n": 1182,
+     "primary": 6.7,
+     "feasibility": 90.1
+    }
+   ]
+  },
+  "us2": {
+   "family_id": "us2",
+   "product_name": "Us2.v1 / Us2.v2",
+   "company": "Us2.ai (Eko.ai Pte. Ltd. d/b/a Us2.ai)",
+   "evaluation_type": "comprehensive",
+   "evaluable": true,
+   "cohort": {
+    "n_studies": 21590,
+    "n_sites": 5,
+    "sites": [
+     "Site B",
+     "Site H",
+     "Site D",
+     "Site F",
+     "Site A"
+    ],
+    "vendors": [
+     "GE HealthCare",
+     "Siemens Healthineers"
+    ],
+    "period": "2025-01 to 2026-06",
+    "module": "Adult TTE (phase 1)"
+   },
+   "endpoints": [
+    {
+     "id": "feasibility",
+     "label": "Feasibility (studies with an AI output)",
+     "unit": "%",
+     "value": 84.4,
+     "ci": {
+      "low": 84.3,
+      "high": 84.5
+     },
+     "direction": "higher",
+     "reference": "All eligible registry TTEs"
+    },
+    {
+     "id": "lvef_mae",
+     "label": "LVEF mean absolute error",
+     "unit": "% EF",
+     "value": 4.8,
+     "ci": {
+      "low": 4.77,
+      "high": 4.83
+     },
+     "direction": "lower",
+     "reference": "Registry-reported LVEF (finalized clinical report)",
+     "primary": true
+    },
+    {
+     "id": "lvef_bias",
+     "label": "LVEF bias (AI minus reported)",
+     "unit": "% EF",
+     "value": -1.7,
+     "ci": {
+      "low": -1.73,
+      "high": -1.67
+     },
+     "direction": "zero",
+     "reference": "Registry-reported LVEF"
+    },
+    {
+     "id": "lvef_loa",
+     "label": "95% limits of agreement (half-width)",
+     "unit": "% EF",
+     "value": 9,
+     "ci": {
+      "low": 9,
+      "high": 9
+     },
+     "direction": "lower",
+     "reference": "Bland-Altman vs reported LVEF"
+    },
+    {
+     "id": "lvef_icc",
+     "label": "ICC, AI vs reported LVEF",
+     "unit": "",
+     "value": 0.831,
+     "ci": {
+      "low": 0.829,
+      "high": 0.833
+     },
+     "direction": "higher",
+     "reference": "Two-way mixed, absolute agreement"
+    },
+    {
+     "id": "ef40_sens",
+     "label": "LVEF ≤ 40%: sensitivity",
+     "unit": "%",
+     "value": 90.6,
+     "ci": {
+      "low": 90.4,
+      "high": 90.8
+     },
+     "direction": "higher",
+     "reference": "Reported LVEF ≤ 40%"
+    },
+    {
+     "id": "ef40_spec",
+     "label": "LVEF ≤ 40%: specificity",
+     "unit": "%",
+     "value": 92,
+     "ci": {
+      "low": 91.8,
+      "high": 92.2
+     },
+     "direction": "higher",
+     "reference": "Reported LVEF > 40%"
+    },
+    {
+     "id": "edv_mae",
+     "label": "LV end-diastolic volume MAE",
+     "unit": "mL",
+     "value": 15.9,
+     "ci": {
+      "low": 15.7,
+      "high": 16.1
+     },
+     "direction": "lower",
+     "reference": "Registry-reported LVEDV"
+    },
+    {
+     "id": "gls_bias",
+     "label": "GLS bias (AI minus reported)",
+     "unit": "%",
+     "value": -0.3,
+     "ci": {
+      "low": -0.32,
+      "high": -0.28
+     },
+     "direction": "zero",
+     "reference": "Registry-reported GLS where present"
+    },
+    {
+     "id": "ee_icc",
+     "label": "E/e′ ICC",
+     "unit": "",
+     "value": 0.73,
+     "ci": {
+      "low": 0.727,
+      "high": 0.733
+     },
+     "direction": "higher",
+     "reference": "Registry-reported E/e′"
+    },
+    {
+     "id": "avmg_icc",
+     "label": "AV mean gradient ICC",
+     "unit": "",
+     "value": 0.846,
+     "ci": {
+      "low": 0.843,
+      "high": 0.849
+     },
+     "direction": "higher",
+     "reference": "Registry metric: mean and peak gradients for valvular disease"
+    }
+   ],
+   "primary_endpoint_id": "lvef_mae",
+   "subgroups": [
+    {
+     "dimension": "Sex",
+     "level": "Female",
+     "value": 4.7,
+     "n": 1300
+    },
+    {
+     "dimension": "Sex",
+     "level": "Male",
+     "value": 4.7,
+     "n": 2030
+    },
+    {
+     "dimension": "Age",
+     "level": "< 50",
+     "value": 4.4,
+     "n": 2400
+    },
+    {
+     "dimension": "Age",
+     "level": "50–69",
+     "value": 5,
+     "n": 3960
+    },
+    {
+     "dimension": "Age",
+     "level": "≥ 70",
+     "value": 4.9,
+     "n": 3030
+    },
+    {
+     "dimension": "BMI",
+     "level": "< 30",
+     "value": 5,
+     "n": 2960
+    },
+    {
+     "dimension": "BMI",
+     "level": "≥ 30",
+     "value": 4.8,
+     "n": 1570
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Good",
+     "value": 4.5,
+     "n": 2880
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Adequate",
+     "value": 5.2,
+     "n": 1930
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Poor",
+     "value": 6.5,
+     "n": 3360
+    },
+    {
+     "dimension": "Vendor",
+     "level": "GE HealthCare",
+     "value": 5,
+     "n": 1960
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Philips",
+     "value": 4.3,
+     "n": 1410
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Siemens Healthineers",
+     "value": 4.9,
+     "n": 1670
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Canon Medical",
+     "value": 5,
+     "n": 420
+    }
+   ],
+   "monthly": [
+    {
+     "month": "2025-01",
+     "n": 901,
+     "primary": 4.7,
+     "feasibility": 82.5
+    },
+    {
+     "month": "2025-02",
+     "n": 1203,
+     "primary": 5,
+     "feasibility": 84.6
+    },
+    {
+     "month": "2025-03",
+     "n": 1522,
+     "primary": 4.7,
+     "feasibility": 86.1
+    },
+    {
+     "month": "2025-04",
+     "n": 1290,
+     "primary": 5.1,
+     "feasibility": 82.7
+    },
+    {
+     "month": "2025-05",
+     "n": 979,
+     "primary": 5.1,
+     "feasibility": 86.8
+    },
+    {
+     "month": "2025-06",
+     "n": 1269,
+     "primary": 4.9,
+     "feasibility": 82.6
+    },
+    {
+     "month": "2025-07",
+     "n": 1237,
+     "primary": 4.7,
+     "feasibility": 86.6
+    },
+    {
+     "month": "2025-08",
+     "n": 1501,
+     "primary": 4.8,
+     "feasibility": 81.9
+    },
+    {
+     "month": "2025-09",
+     "n": 1064,
+     "primary": 5,
+     "feasibility": 83.2
+    },
+    {
+     "month": "2025-10",
+     "n": 1275,
+     "primary": 5,
+     "feasibility": 81.9
+    },
+    {
+     "month": "2025-11",
+     "n": 1511,
+     "primary": 4.6,
+     "feasibility": 82.9
+    },
+    {
+     "month": "2025-12",
+     "n": 956,
+     "primary": 5,
+     "feasibility": 82.5
+    },
+    {
+     "month": "2026-01",
+     "n": 1088,
+     "primary": 4.9,
+     "feasibility": 85
+    },
+    {
+     "month": "2026-02",
+     "n": 1210,
+     "primary": 4.7,
+     "feasibility": 83.5
+    },
+    {
+     "month": "2026-03",
+     "n": 1415,
+     "primary": 4.4,
+     "feasibility": 84.5
+    },
+    {
+     "month": "2026-04",
+     "n": 1276,
+     "primary": 4.7,
+     "feasibility": 86
+    },
+    {
+     "month": "2026-05",
+     "n": 1091,
+     "primary": 4.9,
+     "feasibility": 82.4
+    },
+    {
+     "month": "2026-06",
+     "n": 1161,
+     "primary": 4.9,
+     "feasibility": 83
+    }
+   ]
+  },
+  "caption-autoef": {
+   "family_id": "caption-autoef",
+   "product_name": "Caption Interpretation Automated Ejection Fraction Software (AutoEF; originally EchoMD AutoEF)",
+   "company": "GE HealthCare (Caption Health, Inc.; originally Bay Labs, Inc.)",
+   "evaluation_type": "lvef",
+   "evaluable": true,
+   "cohort": {
+    "n_studies": 20820,
+    "n_sites": 7,
+    "sites": [
+     "Site D",
+     "Site H",
+     "Site A",
+     "Site F",
+     "Site E",
+     "Site B",
+     "Site C"
+    ],
+    "vendors": [
+     "GE HealthCare",
+     "Canon Medical",
+     "Philips",
+     "Siemens Healthineers"
+    ],
+    "period": "2025-01 to 2026-06",
+    "module": "Adult TTE (phase 1)"
+   },
+   "endpoints": [
+    {
+     "id": "feasibility",
+     "label": "Feasibility (studies with an AI output)",
+     "unit": "%",
+     "value": 81.8,
+     "ci": {
+      "low": 81.7,
+      "high": 81.9
+     },
+     "direction": "higher",
+     "reference": "All eligible registry TTEs"
+    },
+    {
+     "id": "lvef_mae",
+     "label": "LVEF mean absolute error",
+     "unit": "% EF",
+     "value": 4.7,
+     "ci": {
+      "low": 4.67,
+      "high": 4.73
+     },
+     "direction": "lower",
+     "reference": "Registry-reported LVEF (finalized clinical report)",
+     "primary": true
+    },
+    {
+     "id": "lvef_bias",
+     "label": "LVEF bias (AI minus reported)",
+     "unit": "% EF",
+     "value": 1,
+     "ci": {
+      "low": 0.97,
+      "high": 1.03
+     },
+     "direction": "zero",
+     "reference": "Registry-reported LVEF"
+    },
+    {
+     "id": "lvef_loa",
+     "label": "95% limits of agreement (half-width)",
+     "unit": "% EF",
+     "value": 13.6,
+     "ci": {
+      "low": 13.6,
+      "high": 13.6
+     },
+     "direction": "lower",
+     "reference": "Bland-Altman vs reported LVEF"
+    },
+    {
+     "id": "lvef_icc",
+     "label": "ICC, AI vs reported LVEF",
+     "unit": "",
+     "value": 0.783,
+     "ci": {
+      "low": 0.781,
+      "high": 0.785
+     },
+     "direction": "higher",
+     "reference": "Two-way mixed, absolute agreement"
+    },
+    {
+     "id": "ef40_sens",
+     "label": "LVEF ≤ 40%: sensitivity",
+     "unit": "%",
+     "value": 88,
+     "ci": {
+      "low": 87.8,
+      "high": 88.2
+     },
+     "direction": "higher",
+     "reference": "Reported LVEF ≤ 40%"
+    },
+    {
+     "id": "ef40_spec",
+     "label": "LVEF ≤ 40%: specificity",
+     "unit": "%",
+     "value": 86.3,
+     "ci": {
+      "low": 86.1,
+      "high": 86.5
+     },
+     "direction": "higher",
+     "reference": "Reported LVEF > 40%"
+    }
+   ],
+   "primary_endpoint_id": "lvef_mae",
+   "subgroups": [
+    {
+     "dimension": "Sex",
+     "level": "Female",
+     "value": 5.1,
+     "n": 740
+    },
+    {
+     "dimension": "Sex",
+     "level": "Male",
+     "value": 5,
+     "n": 3920
+    },
+    {
+     "dimension": "Age",
+     "level": "< 50",
+     "value": 4.3,
+     "n": 4160
+    },
+    {
+     "dimension": "Age",
+     "level": "50–69",
+     "value": 4.2,
+     "n": 2580
+    },
+    {
+     "dimension": "Age",
+     "level": "≥ 70",
+     "value": 4.3,
+     "n": 3550
+    },
+    {
+     "dimension": "BMI",
+     "level": "< 30",
+     "value": 4.7,
+     "n": 3120
+    },
+    {
+     "dimension": "BMI",
+     "level": "≥ 30",
+     "value": 5.5,
+     "n": 450
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Good",
+     "value": 5.2,
+     "n": 3680
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Adequate",
+     "value": 4.1,
+     "n": 3160
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Poor",
+     "value": 6.3,
+     "n": 3630
+    },
+    {
+     "dimension": "Vendor",
+     "level": "GE HealthCare",
+     "value": 5,
+     "n": 3000
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Philips",
+     "value": 4.4,
+     "n": 1970
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Siemens Healthineers",
+     "value": 4.2,
+     "n": 3000
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Canon Medical",
+     "value": 4.5,
+     "n": 3990
+    }
+   ],
+   "monthly": [
+    {
+     "month": "2025-01",
+     "n": 1069,
+     "primary": 4.9,
+     "feasibility": 83.6
+    },
+    {
+     "month": "2025-02",
+     "n": 1316,
+     "primary": 4.9,
+     "feasibility": 84.2
+    },
+    {
+     "month": "2025-03",
+     "n": 833,
+     "primary": 4.9,
+     "feasibility": 80.8
+    },
+    {
+     "month": "2025-04",
+     "n": 1220,
+     "primary": 4.7,
+     "feasibility": 83.9
+    },
+    {
+     "month": "2025-05",
+     "n": 1314,
+     "primary": 4.9,
+     "feasibility": 81.2
+    },
+    {
+     "month": "2025-06",
+     "n": 966,
+     "primary": 5.1,
+     "feasibility": 81.7
+    },
+    {
+     "month": "2025-07",
+     "n": 886,
+     "primary": 4.9,
+     "feasibility": 82.2
+    },
+    {
+     "month": "2025-08",
+     "n": 1493,
+     "primary": 5,
+     "feasibility": 82.4
+    },
+    {
+     "month": "2025-09",
+     "n": 1372,
+     "primary": 4.7,
+     "feasibility": 80.3
+    },
+    {
+     "month": "2025-10",
+     "n": 1282,
+     "primary": 4.9,
+     "feasibility": 80.3
+    },
+    {
+     "month": "2025-11",
+     "n": 987,
+     "primary": 4.6,
+     "feasibility": 83.9
+    },
+    {
+     "month": "2025-12",
+     "n": 831,
+     "primary": 4.4,
+     "feasibility": 81.3
+    },
+    {
+     "month": "2026-01",
+     "n": 1467,
+     "primary": 4.5,
+     "feasibility": 79.4
+    },
+    {
+     "month": "2026-02",
+     "n": 1209,
+     "primary": 4.5,
+     "feasibility": 79.9
+    },
+    {
+     "month": "2026-03",
+     "n": 1349,
+     "primary": 4.6,
+     "feasibility": 81.3
+    },
+    {
+     "month": "2026-04",
+     "n": 1311,
+     "primary": 4.4,
+     "feasibility": 81.2
+    },
+    {
+     "month": "2026-05",
+     "n": 940,
+     "primary": 4.5,
+     "feasibility": 79.4
+    },
+    {
+     "month": "2026-06",
+     "n": 1154,
+     "primary": 4.4,
+     "feasibility": 81.9
+    }
+   ]
+  },
+  "libby-echo-prio": {
+   "family_id": "libby-echo-prio",
+   "product_name": "Libby Echo:Prio",
+   "company": "Dyad Medical, Inc.",
+   "evaluation_type": "lvef",
+   "evaluable": true,
+   "cohort": {
+    "n_studies": 2400,
+    "n_sites": 3,
+    "sites": [
+     "Site H",
+     "Site D",
+     "Site B"
+    ],
+    "vendors": [
+     "Philips",
+     "Canon Medical"
+    ],
+    "period": "2025-01 to 2026-06",
+    "module": "Adult TTE (phase 1)"
+   },
+   "endpoints": [
+    {
+     "id": "feasibility",
+     "label": "Feasibility (studies with an AI output)",
+     "unit": "%",
+     "value": 89.1,
+     "ci": {
+      "low": 88.7,
+      "high": 89.5
+     },
+     "direction": "higher",
+     "reference": "All eligible registry TTEs"
+    },
+    {
+     "id": "lvef_mae",
+     "label": "LVEF mean absolute error",
+     "unit": "% EF",
+     "value": 3.7,
+     "ci": {
+      "low": 3.62,
+      "high": 3.78
+     },
+     "direction": "lower",
+     "reference": "Registry-reported LVEF (finalized clinical report)",
+     "primary": true
+    },
+    {
+     "id": "lvef_bias",
+     "label": "LVEF bias (AI minus reported)",
+     "unit": "% EF",
+     "value": -0.4,
+     "ci": {
+      "low": -0.5,
+      "high": -0.3
      },
      "direction": "zero",
      "reference": "Registry-reported LVEF"
@@ -4414,10 +8289,10 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_icc",
      "label": "ICC, AI vs reported LVEF",
      "unit": "",
-     "value": 0.929,
+     "value": 0.919,
      "ci": {
-      "low": 0.925,
-      "high": 0.933
+      "low": 0.912,
+      "high": 0.926
      },
      "direction": "higher",
      "reference": "Two-way mixed, absolute agreement"
@@ -4426,10 +8301,10 @@ window.AIECHO_REGISTRY = {
      "id": "ef40_sens",
      "label": "LVEF ≤ 40%: sensitivity",
      "unit": "%",
-     "value": 94.6,
+     "value": 92.4,
      "ci": {
-      "low": 94.2,
-      "high": 95
+      "low": 91.7,
+      "high": 93.1
      },
      "direction": "higher",
      "reference": "Reported LVEF ≤ 40%"
@@ -4438,61 +8313,13 @@ window.AIECHO_REGISTRY = {
      "id": "ef40_spec",
      "label": "LVEF ≤ 40%: specificity",
      "unit": "%",
-     "value": 88.6,
+     "value": 92.4,
      "ci": {
-      "low": 88.3,
-      "high": 88.9
+      "low": 91.9,
+      "high": 92.9
      },
      "direction": "higher",
      "reference": "Reported LVEF > 40%"
-    },
-    {
-     "id": "edv_mae",
-     "label": "LV end-diastolic volume MAE",
-     "unit": "mL",
-     "value": 20.9,
-     "ci": {
-      "low": 20.6,
-      "high": 21.2
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEDV"
-    },
-    {
-     "id": "gls_bias",
-     "label": "GLS bias (AI minus reported)",
-     "unit": "%",
-     "value": -1.47,
-     "ci": {
-      "low": -1.51,
-      "high": -1.43
-     },
-     "direction": "zero",
-     "reference": "Registry-reported GLS where present"
-    },
-    {
-     "id": "ee_icc",
-     "label": "E/e′ ICC",
-     "unit": "",
-     "value": 0.835,
-     "ci": {
-      "low": 0.83,
-      "high": 0.84
-     },
-     "direction": "higher",
-     "reference": "Registry-reported E/e′"
-    },
-    {
-     "id": "avmg_icc",
-     "label": "AV mean gradient ICC",
-     "unit": "",
-     "value": 0.809,
-     "ci": {
-      "low": 0.804,
-      "high": 0.814
-     },
-     "direction": "higher",
-     "reference": "Registry metric: mean and peak gradients for valvular disease"
     }
    ],
    "primary_endpoint_id": "lvef_mae",
@@ -4500,4302 +8327,196 @@ window.AIECHO_REGISTRY = {
     {
      "dimension": "Sex",
      "level": "Female",
-     "value": 6.3,
-     "n": 3840
-    },
-    {
-     "dimension": "Sex",
-     "level": "Male",
-     "value": 5.8,
-     "n": 240
-    },
-    {
-     "dimension": "Age",
-     "level": "< 50",
-     "value": 6.2,
-     "n": 2480
-    },
-    {
-     "dimension": "Age",
-     "level": "50–69",
-     "value": 6.7,
-     "n": 3810
-    },
-    {
-     "dimension": "Age",
-     "level": "≥ 70",
-     "value": 6,
-     "n": 1140
-    },
-    {
-     "dimension": "BMI",
-     "level": "< 30",
-     "value": 6.1,
-     "n": 3640
-    },
-    {
-     "dimension": "BMI",
-     "level": "≥ 30",
-     "value": 6.9,
-     "n": 2790
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Good",
-     "value": 6,
-     "n": 2260
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Adequate",
-     "value": 5.5,
-     "n": 2690
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Poor",
-     "value": 8.2,
-     "n": 640
-    },
-    {
-     "dimension": "Vendor",
-     "level": "GE HealthCare",
-     "value": 5.6,
-     "n": 2580
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Philips",
-     "value": 6.7,
-     "n": 2310
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Siemens Healthineers",
-     "value": 6.5,
-     "n": 2610
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Canon Medical",
-     "value": 6.3,
-     "n": 1890
-    }
-   ],
-   "monthly": [
-    {
-     "month": "2025-01",
-     "n": 219,
-     "primary": 6.1,
-     "feasibility": 85.4
-    },
-    {
-     "month": "2025-02",
-     "n": 267,
-     "primary": 6,
-     "feasibility": 86.1
-    },
-    {
-     "month": "2025-03",
-     "n": 268,
-     "primary": 5.9,
-     "feasibility": 82.7
-    },
-    {
-     "month": "2025-04",
-     "n": 234,
-     "primary": 6.3,
-     "feasibility": 81.8
-    },
-    {
-     "month": "2025-05",
-     "n": 293,
-     "primary": 6.5,
-     "feasibility": 85.3
-    },
-    {
-     "month": "2025-06",
-     "n": 350,
-     "primary": 6.4,
-     "feasibility": 82.1
-    },
-    {
-     "month": "2025-07",
-     "n": 267,
-     "primary": 6.4,
-     "feasibility": 83.3
-    },
-    {
-     "month": "2025-08",
-     "n": 281,
-     "primary": 6.1,
-     "feasibility": 85.3
-    },
-    {
-     "month": "2025-09",
-     "n": 260,
-     "primary": 6.5,
-     "feasibility": 84.7
-    },
-    {
-     "month": "2025-10",
-     "n": 223,
-     "primary": 6.3,
-     "feasibility": 85.2
-    },
-    {
-     "month": "2025-11",
-     "n": 342,
-     "primary": 6.2,
-     "feasibility": 85.2
-    },
-    {
-     "month": "2025-12",
-     "n": 271,
-     "primary": 6.3,
-     "feasibility": 83
-    },
-    {
-     "month": "2026-01",
-     "n": 225,
-     "primary": 5.7,
-     "feasibility": 81.3
-    },
-    {
-     "month": "2026-02",
-     "n": 271,
-     "primary": 5.9,
-     "feasibility": 83.1
-    },
-    {
-     "month": "2026-03",
-     "n": 395,
-     "primary": 6.1,
-     "feasibility": 82.6
-    },
-    {
-     "month": "2026-04",
-     "n": 225,
-     "primary": 5.7,
-     "feasibility": 84.7
-    },
-    {
-     "month": "2026-05",
-     "n": 285,
-     "primary": 5.6,
-     "feasibility": 83.9
-    },
-    {
-     "month": "2026-06",
-     "n": 308,
-     "primary": 6.1,
-     "feasibility": 85.8
-    }
-   ]
-  },
-  "philips-ultrasound-workspace": {
-   "family_id": "philips-ultrasound-workspace",
-   "product_name": "Ultrasound Workspace (UWS 6.0)",
-   "company": "Philips",
-   "evaluation_type": "comprehensive",
-   "evaluable": true,
-   "cohort": {
-    "n_studies": 6160,
-    "n_sites": 6,
-    "sites": [
-     "Site D",
-     "Site H",
-     "Site E",
-     "Site C",
-     "Site A",
-     "Site G"
-    ],
-    "vendors": [
-     "Siemens Healthineers",
-     "Philips",
-     "GE HealthCare"
-    ],
-    "period": "2025-01 to 2026-06",
-    "module": "Adult TTE (phase 1)"
-   },
-   "endpoints": [
-    {
-     "id": "feasibility",
-     "label": "Feasibility (studies with an AI output)",
-     "unit": "%",
-     "value": 88.4,
-     "ci": {
-      "low": 88.2,
-      "high": 88.6
-     },
-     "direction": "higher",
-     "reference": "All eligible registry TTEs"
-    },
-    {
-     "id": "lvef_mae",
-     "label": "LVEF mean absolute error",
-     "unit": "% EF",
-     "value": 3.9,
-     "ci": {
-      "low": 3.85,
-      "high": 3.95
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEF (finalized clinical report)",
-     "primary": true
-    },
-    {
-     "id": "lvef_bias",
-     "label": "LVEF bias (AI minus reported)",
-     "unit": "% EF",
-     "value": -2.1,
-     "ci": {
-      "low": -2.16,
-      "high": -2.04
-     },
-     "direction": "zero",
-     "reference": "Registry-reported LVEF"
-    },
-    {
-     "id": "lvef_loa",
-     "label": "95% limits of agreement (half-width)",
-     "unit": "% EF",
-     "value": 12.8,
-     "ci": {
-      "low": 12.7,
-      "high": 12.9
-     },
-     "direction": "lower",
-     "reference": "Bland-Altman vs reported LVEF"
-    },
-    {
-     "id": "lvef_icc",
-     "label": "ICC, AI vs reported LVEF",
-     "unit": "",
-     "value": 0.936,
-     "ci": {
-      "low": 0.932,
-      "high": 0.94
-     },
-     "direction": "higher",
-     "reference": "Two-way mixed, absolute agreement"
-    },
-    {
-     "id": "ef40_sens",
-     "label": "LVEF ≤ 40%: sensitivity",
-     "unit": "%",
-     "value": 84.1,
-     "ci": {
-      "low": 83.7,
-      "high": 84.5
-     },
-     "direction": "higher",
-     "reference": "Reported LVEF ≤ 40%"
-    },
-    {
-     "id": "ef40_spec",
-     "label": "LVEF ≤ 40%: specificity",
-     "unit": "%",
-     "value": 89.1,
-     "ci": {
-      "low": 88.8,
-      "high": 89.4
-     },
-     "direction": "higher",
-     "reference": "Reported LVEF > 40%"
-    },
-    {
-     "id": "edv_mae",
-     "label": "LV end-diastolic volume MAE",
-     "unit": "mL",
-     "value": 12.6,
-     "ci": {
-      "low": 12.3,
-      "high": 12.9
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEDV"
-    },
-    {
-     "id": "gls_bias",
-     "label": "GLS bias (AI minus reported)",
-     "unit": "%",
-     "value": 0.98,
-     "ci": {
-      "low": 0.94,
-      "high": 1.02
-     },
-     "direction": "zero",
-     "reference": "Registry-reported GLS where present"
-    },
-    {
-     "id": "ee_icc",
-     "label": "E/e′ ICC",
-     "unit": "",
-     "value": 0.811,
-     "ci": {
-      "low": 0.806,
-      "high": 0.816
-     },
-     "direction": "higher",
-     "reference": "Registry-reported E/e′"
-    },
-    {
-     "id": "avmg_icc",
-     "label": "AV mean gradient ICC",
-     "unit": "",
-     "value": 0.926,
-     "ci": {
-      "low": 0.921,
-      "high": 0.931
-     },
-     "direction": "higher",
-     "reference": "Registry metric: mean and peak gradients for valvular disease"
-    }
-   ],
-   "primary_endpoint_id": "lvef_mae",
-   "subgroups": [
-    {
-     "dimension": "Sex",
-     "level": "Female",
-     "value": 3.9,
-     "n": 4140
+     "value": 3.3,
+     "n": 3180
     },
     {
      "dimension": "Sex",
      "level": "Male",
      "value": 3.7,
-     "n": 3750
+     "n": 990
     },
     {
      "dimension": "Age",
      "level": "< 50",
-     "value": 4.4,
-     "n": 2600
+     "value": 3.7,
+     "n": 3390
     },
     {
      "dimension": "Age",
      "level": "50–69",
      "value": 3.9,
-     "n": 3860
-    },
-    {
-     "dimension": "Age",
-     "level": "≥ 70",
-     "value": 4,
-     "n": 470
-    },
-    {
-     "dimension": "BMI",
-     "level": "< 30",
-     "value": 4,
-     "n": 740
-    },
-    {
-     "dimension": "BMI",
-     "level": "≥ 30",
-     "value": 4.1,
-     "n": 3120
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Good",
-     "value": 4.2,
-     "n": 3290
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Adequate",
-     "value": 4,
-     "n": 4120
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Poor",
-     "value": 4.9,
-     "n": 1700
-    },
-    {
-     "dimension": "Vendor",
-     "level": "GE HealthCare",
-     "value": 3.5,
-     "n": 230
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Philips",
-     "value": 3.5,
-     "n": 1770
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Siemens Healthineers",
-     "value": 3.6,
-     "n": 3710
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Canon Medical",
-     "value": 3.9,
-     "n": 1700
-    }
-   ],
-   "monthly": [
-    {
-     "month": "2025-01",
-     "n": 245,
-     "primary": 4,
-     "feasibility": 88
-    },
-    {
-     "month": "2025-02",
-     "n": 259,
-     "primary": 3.9,
-     "feasibility": 90.7
-    },
-    {
-     "month": "2025-03",
-     "n": 295,
-     "primary": 4,
-     "feasibility": 85.9
-    },
-    {
-     "month": "2025-04",
-     "n": 255,
-     "primary": 4.2,
-     "feasibility": 86.3
-    },
-    {
-     "month": "2025-05",
-     "n": 442,
-     "primary": 4.2,
-     "feasibility": 90.7
-    },
-    {
-     "month": "2025-06",
-     "n": 387,
-     "primary": 4.2,
-     "feasibility": 88.7
-    },
-    {
-     "month": "2025-07",
-     "n": 320,
-     "primary": 4,
-     "feasibility": 86.8
-    },
-    {
-     "month": "2025-08",
-     "n": 241,
-     "primary": 3.9,
-     "feasibility": 88.1
-    },
-    {
-     "month": "2025-09",
-     "n": 284,
-     "primary": 3.9,
-     "feasibility": 89.4
-    },
-    {
-     "month": "2025-10",
-     "n": 303,
-     "primary": 3.9,
-     "feasibility": 88
-    },
-    {
-     "month": "2025-11",
-     "n": 285,
-     "primary": 4,
-     "feasibility": 89.8
-    },
-    {
-     "month": "2025-12",
-     "n": 319,
-     "primary": 4,
-     "feasibility": 87.7
-    },
-    {
-     "month": "2026-01",
-     "n": 417,
-     "primary": 4,
-     "feasibility": 85.8
-    },
-    {
-     "month": "2026-02",
-     "n": 387,
-     "primary": 3.8,
-     "feasibility": 89.5
-    },
-    {
-     "month": "2026-03",
-     "n": 345,
-     "primary": 3.6,
-     "feasibility": 88.7
-    },
-    {
-     "month": "2026-04",
-     "n": 323,
-     "primary": 3.6,
-     "feasibility": 88.3
-    },
-    {
-     "month": "2026-05",
-     "n": 330,
-     "primary": 3.9,
-     "feasibility": 86.3
-    },
-    {
-     "month": "2026-06",
-     "n": 274,
-     "primary": 3.8,
-     "feasibility": 90.7
-    }
-   ]
-  },
-  "caption-guidance": {
-   "family_id": "caption-guidance",
-   "product_name": "Caption Guidance / Cardiac Guidance",
-   "company": "GE HealthCare (Caption Health; originally Bay Labs)",
-   "evaluation_type": "acquisition",
-   "evaluable": true,
-   "cohort": {
-    "n_studies": 5430,
-    "n_sites": 4,
-    "sites": [
-     "Site D",
-     "Site G",
-     "Site H",
-     "Site A"
-    ],
-    "vendors": [
-     "Siemens Healthineers",
-     "Philips",
-     "GE HealthCare",
-     "Canon Medical"
-    ],
-    "period": "2025-01 to 2026-06",
-    "module": "Adult TTE (phase 1)"
-   },
-   "endpoints": [
-    {
-     "id": "feasibility",
-     "label": "Feasibility (studies with an AI output)",
-     "unit": "%",
-     "value": 90.7,
-     "ci": {
-      "low": 90.4,
-      "high": 91
-     },
-     "direction": "higher",
-     "reference": "All eligible registry TTEs"
-    },
-    {
-     "id": "diag_quality",
-     "label": "Diagnostic-quality acquisitions",
-     "unit": "%",
-     "value": 83.5,
-     "ci": {
-      "low": 83.1,
-      "high": 83.9
-     },
-     "direction": "higher",
-     "reference": "Reading physician image-quality grade",
-     "primary": true
-    },
-    {
-     "id": "completeness",
-     "label": "Study completeness",
-     "unit": "%",
-     "value": 86.2,
-     "ci": {
-      "low": 85.9,
-      "high": 86.5
-     },
-     "direction": "higher",
-     "reference": "Registry metric: study completeness"
-    },
-    {
-     "id": "protocol_time",
-     "label": "Median time to complete protocol",
-     "unit": "min",
-     "value": 11.5,
-     "ci": {
-      "low": 11.3,
-      "high": 11.7
-     },
-     "direction": "lower",
-     "reference": "Acquisition timestamps"
-    },
-    {
-     "id": "tat",
-     "label": "Report turnaround time (median)",
-     "unit": "h",
-     "value": 28.4,
-     "ci": {
-      "low": 28,
-      "high": 28.8
-     },
-     "direction": "lower",
-     "reference": "Registry metric: report turnaround time"
-    }
-   ],
-   "primary_endpoint_id": "diag_quality",
-   "subgroups": [
-    {
-     "dimension": "Sex",
-     "level": "Female",
-     "value": 89.5,
-     "n": 4050
-    },
-    {
-     "dimension": "Sex",
-     "level": "Male",
-     "value": 75.6,
-     "n": 1390
-    },
-    {
-     "dimension": "Age",
-     "level": "< 50",
-     "value": 88.8,
-     "n": 370
-    },
-    {
-     "dimension": "Age",
-     "level": "50–69",
-     "value": 88.2,
-     "n": 3890
-    },
-    {
-     "dimension": "Age",
-     "level": "≥ 70",
-     "value": 75.9,
-     "n": 960
-    },
-    {
-     "dimension": "BMI",
-     "level": "< 30",
-     "value": 91.5,
-     "n": 4030
-    },
-    {
-     "dimension": "BMI",
-     "level": "≥ 30",
-     "value": 80.3,
-     "n": 2180
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Good",
-     "value": 87.6,
-     "n": 3880
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Adequate",
-     "value": 90.6,
-     "n": 1030
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Poor",
-     "value": 68.7,
-     "n": 2600
-    },
-    {
-     "dimension": "Vendor",
-     "level": "GE HealthCare",
-     "value": 86.7,
-     "n": 2710
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Philips",
-     "value": 92.1,
-     "n": 2310
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Siemens Healthineers",
-     "value": 81.4,
-     "n": 2990
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Canon Medical",
-     "value": 82.2,
-     "n": 3800
-    }
-   ],
-   "monthly": [
-    {
-     "month": "2025-01",
-     "n": 264,
-     "primary": 87.5,
-     "feasibility": 90.2
-    },
-    {
-     "month": "2025-02",
-     "n": 286,
-     "primary": 88.1,
-     "feasibility": 90.6
-    },
-    {
-     "month": "2025-03",
-     "n": 259,
-     "primary": 88.4,
-     "feasibility": 92
-    },
-    {
-     "month": "2025-04",
-     "n": 257,
-     "primary": 83.4,
-     "feasibility": 88.3
-    },
-    {
-     "month": "2025-05",
-     "n": 269,
-     "primary": 83.3,
-     "feasibility": 90.8
-    },
-    {
-     "month": "2025-06",
-     "n": 379,
-     "primary": 85.1,
-     "feasibility": 92.3
-    },
-    {
-     "month": "2025-07",
-     "n": 244,
-     "primary": 87.4,
-     "feasibility": 91.2
-    },
-    {
-     "month": "2025-08",
-     "n": 299,
-     "primary": 86,
-     "feasibility": 89.8
-    },
-    {
-     "month": "2025-09",
-     "n": 293,
-     "primary": 86.6,
-     "feasibility": 88.3
-    },
-    {
-     "month": "2025-10",
-     "n": 263,
-     "primary": 86.6,
-     "feasibility": 90
-    },
-    {
-     "month": "2025-11",
-     "n": 296,
-     "primary": 87,
-     "feasibility": 88.6
-    },
-    {
-     "month": "2025-12",
-     "n": 335,
-     "primary": 81.8,
-     "feasibility": 92
-    },
-    {
-     "month": "2026-01",
-     "n": 384,
-     "primary": 79.7,
-     "feasibility": 91.8
-    },
-    {
-     "month": "2026-02",
-     "n": 226,
-     "primary": 79.1,
-     "feasibility": 90.6
-    },
-    {
-     "month": "2026-03",
-     "n": 246,
-     "primary": 77.5,
-     "feasibility": 89.7
-    },
-    {
-     "month": "2026-04",
-     "n": 227,
-     "primary": 83.8,
-     "feasibility": 89.6
-    },
-    {
-     "month": "2026-05",
-     "n": 255,
-     "primary": 84.5,
-     "feasibility": 89.8
-    },
-    {
-     "month": "2026-06",
-     "n": 351,
-     "primary": 82.9,
-     "feasibility": 89.3
-    }
-   ]
-  },
-  "sonix-health": {
-   "family_id": "sonix-health",
-   "product_name": "Sonix Health",
-   "company": "Ontact Health",
-   "evaluation_type": "comprehensive",
-   "evaluable": true,
-   "cohort": {
-    "n_studies": 8210,
-    "n_sites": 7,
-    "sites": [
-     "Site E",
-     "Site H",
-     "Site F",
-     "Site A",
-     "Site D",
-     "Site G",
-     "Site C"
-    ],
-    "vendors": [
-     "Canon Medical",
-     "Siemens Healthineers",
-     "Philips"
-    ],
-    "period": "2025-01 to 2026-06",
-    "module": "Adult TTE (phase 1)"
-   },
-   "endpoints": [
-    {
-     "id": "feasibility",
-     "label": "Feasibility (studies with an AI output)",
-     "unit": "%",
-     "value": 75.3,
-     "ci": {
-      "low": 75.1,
-      "high": 75.5
-     },
-     "direction": "higher",
-     "reference": "All eligible registry TTEs"
-    },
-    {
-     "id": "lvef_mae",
-     "label": "LVEF mean absolute error",
-     "unit": "% EF",
-     "value": 5.7,
-     "ci": {
-      "low": 5.66,
-      "high": 5.74
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEF (finalized clinical report)",
-     "primary": true
-    },
-    {
-     "id": "lvef_bias",
-     "label": "LVEF bias (AI minus reported)",
-     "unit": "% EF",
-     "value": -1.7,
-     "ci": {
-      "low": -1.75,
-      "high": -1.65
-     },
-     "direction": "zero",
-     "reference": "Registry-reported LVEF"
-    },
-    {
-     "id": "lvef_loa",
-     "label": "95% limits of agreement (half-width)",
-     "unit": "% EF",
-     "value": 10.1,
-     "ci": {
-      "low": 10,
-      "high": 10.2
-     },
-     "direction": "lower",
-     "reference": "Bland-Altman vs reported LVEF"
-    },
-    {
-     "id": "lvef_icc",
-     "label": "ICC, AI vs reported LVEF",
-     "unit": "",
-     "value": 0.877,
-     "ci": {
-      "low": 0.873,
-      "high": 0.881
-     },
-     "direction": "higher",
-     "reference": "Two-way mixed, absolute agreement"
-    },
-    {
-     "id": "ef40_sens",
-     "label": "LVEF ≤ 40%: sensitivity",
-     "unit": "%",
-     "value": 85,
-     "ci": {
-      "low": 84.6,
-      "high": 85.4
-     },
-     "direction": "higher",
-     "reference": "Reported LVEF ≤ 40%"
-    },
-    {
-     "id": "ef40_spec",
-     "label": "LVEF ≤ 40%: specificity",
-     "unit": "%",
-     "value": 87.1,
-     "ci": {
-      "low": 86.9,
-      "high": 87.3
-     },
-     "direction": "higher",
-     "reference": "Reported LVEF > 40%"
-    },
-    {
-     "id": "edv_mae",
-     "label": "LV end-diastolic volume MAE",
-     "unit": "mL",
-     "value": 13.8,
-     "ci": {
-      "low": 13.5,
-      "high": 14.1
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEDV"
-    },
-    {
-     "id": "gls_bias",
-     "label": "GLS bias (AI minus reported)",
-     "unit": "%",
-     "value": 0.45,
-     "ci": {
-      "low": 0.41,
-      "high": 0.49
-     },
-     "direction": "zero",
-     "reference": "Registry-reported GLS where present"
-    },
-    {
-     "id": "ee_icc",
-     "label": "E/e′ ICC",
-     "unit": "",
-     "value": 0.793,
-     "ci": {
-      "low": 0.789,
-      "high": 0.797
-     },
-     "direction": "higher",
-     "reference": "Registry-reported E/e′"
-    },
-    {
-     "id": "avmg_icc",
-     "label": "AV mean gradient ICC",
-     "unit": "",
-     "value": 0.812,
-     "ci": {
-      "low": 0.808,
-      "high": 0.816
-     },
-     "direction": "higher",
-     "reference": "Registry metric: mean and peak gradients for valvular disease"
-    }
-   ],
-   "primary_endpoint_id": "lvef_mae",
-   "subgroups": [
-    {
-     "dimension": "Sex",
-     "level": "Female",
-     "value": 5.2,
-     "n": 1140
-    },
-    {
-     "dimension": "Sex",
-     "level": "Male",
-     "value": 6,
-     "n": 830
-    },
-    {
-     "dimension": "Age",
-     "level": "< 50",
-     "value": 5.1,
-     "n": 1980
-    },
-    {
-     "dimension": "Age",
-     "level": "50–69",
-     "value": 5,
-     "n": 1680
-    },
-    {
-     "dimension": "Age",
-     "level": "≥ 70",
-     "value": 5.2,
-     "n": 3550
-    },
-    {
-     "dimension": "BMI",
-     "level": "< 30",
-     "value": 5.6,
-     "n": 3820
-    },
-    {
-     "dimension": "BMI",
-     "level": "≥ 30",
-     "value": 5.7,
-     "n": 1830
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Good",
-     "value": 5.8,
-     "n": 3720
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Adequate",
-     "value": 5.3,
-     "n": 210
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Poor",
-     "value": 7.9,
-     "n": 3700
-    },
-    {
-     "dimension": "Vendor",
-     "level": "GE HealthCare",
-     "value": 5.9,
-     "n": 3170
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Philips",
-     "value": 5.5,
-     "n": 3460
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Siemens Healthineers",
-     "value": 5.6,
-     "n": 3240
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Canon Medical",
-     "value": 5.9,
-     "n": 790
-    }
-   ],
-   "monthly": [
-    {
-     "month": "2025-01",
-     "n": 346,
-     "primary": 5.5,
-     "feasibility": 74.7
-    },
-    {
-     "month": "2025-02",
-     "n": 554,
-     "primary": 5.8,
-     "feasibility": 74.6
-    },
-    {
-     "month": "2025-03",
-     "n": 433,
-     "primary": 6,
-     "feasibility": 73.9
-    },
-    {
-     "month": "2025-04",
-     "n": 368,
-     "primary": 5.6,
-     "feasibility": 77.1
-    },
-    {
-     "month": "2025-05",
-     "n": 498,
-     "primary": 5.7,
-     "feasibility": 74.5
-    },
-    {
-     "month": "2025-06",
-     "n": 387,
-     "primary": 6.1,
-     "feasibility": 76.4
-    },
-    {
-     "month": "2025-07",
-     "n": 494,
-     "primary": 6,
-     "feasibility": 73.5
-    },
-    {
-     "month": "2025-08",
-     "n": 479,
-     "primary": 6,
-     "feasibility": 73.4
-    },
-    {
-     "month": "2025-09",
-     "n": 528,
-     "primary": 5.5,
-     "feasibility": 76.4
-    },
-    {
-     "month": "2025-10",
-     "n": 443,
-     "primary": 5.7,
-     "feasibility": 75.5
-    },
-    {
-     "month": "2025-11",
-     "n": 497,
-     "primary": 5.6,
-     "feasibility": 75.1
-    },
-    {
-     "month": "2025-12",
-     "n": 454,
-     "primary": 5.8,
-     "feasibility": 73.5
-    },
-    {
-     "month": "2026-01",
-     "n": 548,
-     "primary": 5.7,
-     "feasibility": 76.7
-    },
-    {
-     "month": "2026-02",
-     "n": 591,
-     "primary": 5.6,
-     "feasibility": 77.4
-    },
-    {
-     "month": "2026-03",
-     "n": 479,
-     "primary": 5.4,
-     "feasibility": 73.1
-    },
-    {
-     "month": "2026-04",
-     "n": 555,
-     "primary": 5.4,
-     "feasibility": 74.9
-    },
-    {
-     "month": "2026-05",
-     "n": 407,
-     "primary": 5.3,
-     "feasibility": 77.5
-    },
-    {
-     "month": "2026-06",
-     "n": 550,
-     "primary": 5.5,
-     "feasibility": 75.2
-    }
-   ]
-  },
-  "echogo-amyloidosis": {
-   "family_id": "echogo-amyloidosis",
-   "product_name": "EchoGo Amyloidosis",
-   "company": "Ultromics",
-   "evaluation_type": "amyloid",
-   "evaluable": true,
-   "cohort": {
-    "n_studies": 13870,
-    "n_sites": 6,
-    "sites": [
-     "Site C",
-     "Site G",
-     "Site E",
-     "Site H",
-     "Site F",
-     "Site A"
-    ],
-    "vendors": [
-     "Siemens Healthineers",
-     "Canon Medical"
-    ],
-    "period": "2025-01 to 2026-06",
-    "module": "Adult TTE (phase 1)"
-   },
-   "endpoints": [
-    {
-     "id": "feasibility",
-     "label": "Feasibility (studies with an AI output)",
-     "unit": "%",
-     "value": 79.7,
-     "ci": {
-      "low": 79.5,
-      "high": 79.9
-     },
-     "direction": "higher",
-     "reference": "All eligible registry TTEs"
-    },
-    {
-     "id": "auc",
-     "label": "AUC",
-     "unit": "",
-     "value": 0.886,
-     "ci": {
-      "low": 0.883,
-      "high": 0.889
-     },
-     "direction": "higher",
-     "reference": "Registry-linked confirmed cardiac amyloidosis diagnosis",
-     "primary": true
-    },
-    {
-     "id": "sens",
-     "label": "Sensitivity",
-     "unit": "%",
-     "value": 79.8,
-     "ci": {
-      "low": 79.5,
-      "high": 80.1
-     },
-     "direction": "higher",
-     "reference": "Registry-linked confirmed cardiac amyloidosis diagnosis"
-    },
-    {
-     "id": "spec",
-     "label": "Specificity",
-     "unit": "%",
-     "value": 85,
-     "ci": {
-      "low": 84.8,
-      "high": 85.2
-     },
-     "direction": "higher",
-     "reference": "Registry-linked confirmed cardiac amyloidosis diagnosis"
-    },
-    {
-     "id": "ppv",
-     "label": "PPV at registry prevalence (1.2%)",
-     "unit": "%",
-     "value": 6.1,
-     "ci": {
-      "low": 5.7,
-      "high": 6.5
-     },
-     "direction": "higher",
-     "reference": "Derived from sensitivity, specificity and cohort prevalence"
-    }
-   ],
-   "primary_endpoint_id": "auc",
-   "subgroups": [
-    {
-     "dimension": "Sex",
-     "level": "Female",
-     "value": 0.946,
-     "n": 340
-    },
-    {
-     "dimension": "Sex",
-     "level": "Male",
-     "value": 0.962,
-     "n": 3510
-    },
-    {
-     "dimension": "Age",
-     "level": "< 50",
-     "value": 0.949,
-     "n": 4190
-    },
-    {
-     "dimension": "Age",
-     "level": "50–69",
-     "value": 0.972,
-     "n": 2100
-    },
-    {
-     "dimension": "Age",
-     "level": "≥ 70",
-     "value": 0.947,
-     "n": 3740
-    },
-    {
-     "dimension": "BMI",
-     "level": "< 30",
-     "value": 0.788,
-     "n": 1130
-    },
-    {
-     "dimension": "BMI",
-     "level": "≥ 30",
-     "value": 0.845,
-     "n": 860
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Good",
-     "value": 0.813,
-     "n": 2880
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Adequate",
-     "value": 0.939,
-     "n": 830
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Poor",
-     "value": 0.686,
-     "n": 550
-    },
-    {
-     "dimension": "Vendor",
-     "level": "GE HealthCare",
-     "value": 0.904,
-     "n": 3200
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Philips",
-     "value": 0.94,
-     "n": 2100
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Siemens Healthineers",
-     "value": 0.851,
-     "n": 2220
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Canon Medical",
-     "value": 0.883,
-     "n": 760
-    }
-   ],
-   "monthly": [
-    {
-     "month": "2025-01",
-     "n": 989,
-     "primary": 0.845,
-     "feasibility": 78.7
-    },
-    {
-     "month": "2025-02",
-     "n": 878,
-     "primary": 0.897,
-     "feasibility": 80.4
-    },
-    {
-     "month": "2025-03",
-     "n": 853,
-     "primary": 0.914,
-     "feasibility": 80.2
-    },
-    {
-     "month": "2025-04",
-     "n": 588,
-     "primary": 0.929,
-     "feasibility": 79
-    },
-    {
-     "month": "2025-05",
-     "n": 548,
-     "primary": 0.943,
-     "feasibility": 80.6
-    },
-    {
-     "month": "2025-06",
-     "n": 859,
-     "primary": 0.908,
-     "feasibility": 78.3
-    },
-    {
-     "month": "2025-07",
-     "n": 967,
-     "primary": 0.926,
-     "feasibility": 80.6
-    },
-    {
-     "month": "2025-08",
-     "n": 780,
-     "primary": 0.934,
-     "feasibility": 78.3
-    },
-    {
-     "month": "2025-09",
-     "n": 835,
-     "primary": 0.915,
-     "feasibility": 80.3
-    },
-    {
-     "month": "2025-10",
-     "n": 929,
-     "primary": 0.898,
-     "feasibility": 77.6
-    },
-    {
-     "month": "2025-11",
-     "n": 940,
-     "primary": 0.864,
-     "feasibility": 81.9
-    },
-    {
-     "month": "2025-12",
-     "n": 577,
-     "primary": 0.913,
-     "feasibility": 82.1
-    },
-    {
-     "month": "2026-01",
-     "n": 946,
-     "primary": 0.909,
-     "feasibility": 81.1
-    },
-    {
-     "month": "2026-02",
-     "n": 769,
-     "primary": 0.826,
-     "feasibility": 81.6
-    },
-    {
-     "month": "2026-03",
-     "n": 788,
-     "primary": 0.824,
-     "feasibility": 79.8
-    },
-    {
-     "month": "2026-04",
-     "n": 579,
-     "primary": 0.885,
-     "feasibility": 77.4
-    },
-    {
-     "month": "2026-05",
-     "n": 703,
-     "primary": 0.834,
-     "feasibility": 77.8
-    },
-    {
-     "month": "2026-06",
-     "n": 891,
-     "primary": 0.876,
-     "feasibility": 79.2
-    }
-   ]
-  },
-  "icardio-echomeasure": {
-   "family_id": "icardio-echomeasure",
-   "product_name": "EchoMeasure",
-   "company": "iCardio.ai",
-   "evaluation_type": "comprehensive",
-   "evaluable": true,
-   "cohort": {
-    "n_studies": 7950,
-    "n_sites": 7,
-    "sites": [
-     "Site B",
-     "Site F",
-     "Site D",
-     "Site A",
-     "Site C",
-     "Site H",
-     "Site G"
-    ],
-    "vendors": [
-     "Canon Medical",
-     "Siemens Healthineers"
-    ],
-    "period": "2025-01 to 2026-06",
-    "module": "Adult TTE (phase 1)"
-   },
-   "endpoints": [
-    {
-     "id": "feasibility",
-     "label": "Feasibility (studies with an AI output)",
-     "unit": "%",
-     "value": 83.5,
-     "ci": {
-      "low": 83.3,
-      "high": 83.7
-     },
-     "direction": "higher",
-     "reference": "All eligible registry TTEs"
-    },
-    {
-     "id": "lvef_mae",
-     "label": "LVEF mean absolute error",
-     "unit": "% EF",
-     "value": 3.9,
-     "ci": {
-      "low": 3.86,
-      "high": 3.94
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEF (finalized clinical report)",
-     "primary": true
-    },
-    {
-     "id": "lvef_bias",
-     "label": "LVEF bias (AI minus reported)",
-     "unit": "% EF",
-     "value": 2.4,
-     "ci": {
-      "low": 2.35,
-      "high": 2.45
-     },
-     "direction": "zero",
-     "reference": "Registry-reported LVEF"
-    },
-    {
-     "id": "lvef_loa",
-     "label": "95% limits of agreement (half-width)",
-     "unit": "% EF",
-     "value": 9.1,
-     "ci": {
-      "low": 9,
-      "high": 9.2
-     },
-     "direction": "lower",
-     "reference": "Bland-Altman vs reported LVEF"
-    },
-    {
-     "id": "lvef_icc",
-     "label": "ICC, AI vs reported LVEF",
-     "unit": "",
-     "value": 0.865,
-     "ci": {
-      "low": 0.861,
-      "high": 0.869
-     },
-     "direction": "higher",
-     "reference": "Two-way mixed, absolute agreement"
-    },
-    {
-     "id": "ef40_sens",
-     "label": "LVEF ≤ 40%: sensitivity",
-     "unit": "%",
-     "value": 90.4,
-     "ci": {
-      "low": 90,
-      "high": 90.8
-     },
-     "direction": "higher",
-     "reference": "Reported LVEF ≤ 40%"
-    },
-    {
-     "id": "ef40_spec",
-     "label": "LVEF ≤ 40%: specificity",
-     "unit": "%",
-     "value": 88.8,
-     "ci": {
-      "low": 88.5,
-      "high": 89.1
-     },
-     "direction": "higher",
-     "reference": "Reported LVEF > 40%"
-    },
-    {
-     "id": "edv_mae",
-     "label": "LV end-diastolic volume MAE",
-     "unit": "mL",
-     "value": 25.8,
-     "ci": {
-      "low": 25.5,
-      "high": 26.1
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEDV"
-    },
-    {
-     "id": "gls_bias",
-     "label": "GLS bias (AI minus reported)",
-     "unit": "%",
-     "value": -0.87,
-     "ci": {
-      "low": -0.91,
-      "high": -0.83
-     },
-     "direction": "zero",
-     "reference": "Registry-reported GLS where present"
-    },
-    {
-     "id": "ee_icc",
-     "label": "E/e′ ICC",
-     "unit": "",
-     "value": 0.747,
-     "ci": {
-      "low": 0.743,
-      "high": 0.751
-     },
-     "direction": "higher",
-     "reference": "Registry-reported E/e′"
-    },
-    {
-     "id": "avmg_icc",
-     "label": "AV mean gradient ICC",
-     "unit": "",
-     "value": 0.813,
-     "ci": {
-      "low": 0.809,
-      "high": 0.817
-     },
-     "direction": "higher",
-     "reference": "Registry metric: mean and peak gradients for valvular disease"
-    }
-   ],
-   "primary_endpoint_id": "lvef_mae",
-   "subgroups": [
-    {
-     "dimension": "Sex",
-     "level": "Female",
-     "value": 3.6,
-     "n": 2430
-    },
-    {
-     "dimension": "Sex",
-     "level": "Male",
-     "value": 3.9,
-     "n": 3630
-    },
-    {
-     "dimension": "Age",
-     "level": "< 50",
-     "value": 4.3,
-     "n": 900
-    },
-    {
-     "dimension": "Age",
-     "level": "50–69",
-     "value": 3.9,
-     "n": 3600
-    },
-    {
-     "dimension": "Age",
-     "level": "≥ 70",
-     "value": 3.8,
-     "n": 3740
-    },
-    {
-     "dimension": "BMI",
-     "level": "< 30",
-     "value": 3.5,
-     "n": 1140
-    },
-    {
-     "dimension": "BMI",
-     "level": "≥ 30",
-     "value": 4.7,
-     "n": 2940
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Good",
-     "value": 4.2,
-     "n": 380
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Adequate",
-     "value": 3.5,
-     "n": 3330
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Poor",
-     "value": 4.9,
-     "n": 200
-    },
-    {
-     "dimension": "Vendor",
-     "level": "GE HealthCare",
-     "value": 3.8,
-     "n": 2490
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Philips",
-     "value": 4.1,
-     "n": 1570
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Siemens Healthineers",
-     "value": 4.1,
-     "n": 2170
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Canon Medical",
-     "value": 3.8,
-     "n": 1600
-    }
-   ],
-   "monthly": [
-    {
-     "month": "2025-01",
-     "n": 340,
-     "primary": 3.9,
-     "feasibility": 85.1
-    },
-    {
-     "month": "2025-02",
-     "n": 549,
-     "primary": 4,
-     "feasibility": 83.4
-    },
-    {
-     "month": "2025-03",
-     "n": 435,
-     "primary": 4.1,
-     "feasibility": 85.3
-    },
-    {
-     "month": "2025-04",
-     "n": 404,
-     "primary": 3.9,
-     "feasibility": 83.7
-    },
-    {
-     "month": "2025-05",
-     "n": 337,
-     "primary": 3.9,
-     "feasibility": 83.9
-    },
-    {
-     "month": "2025-06",
-     "n": 511,
-     "primary": 4,
-     "feasibility": 81.5
-    },
-    {
-     "month": "2025-07",
-     "n": 467,
-     "primary": 4.2,
-     "feasibility": 84.7
-    },
-    {
-     "month": "2025-08",
-     "n": 529,
-     "primary": 3.9,
-     "feasibility": 82.8
-    },
-    {
-     "month": "2025-09",
-     "n": 487,
-     "primary": 3.8,
-     "feasibility": 82.8
-    },
-    {
-     "month": "2025-10",
-     "n": 388,
-     "primary": 3.8,
-     "feasibility": 84.7
-    },
-    {
-     "month": "2025-11",
-     "n": 496,
-     "primary": 4,
-     "feasibility": 85.6
-    },
-    {
-     "month": "2025-12",
-     "n": 404,
-     "primary": 4,
-     "feasibility": 85.7
-    },
-    {
-     "month": "2026-01",
-     "n": 549,
-     "primary": 3.9,
-     "feasibility": 83.7
-    },
-    {
-     "month": "2026-02",
-     "n": 328,
-     "primary": 4,
-     "feasibility": 82.1
-    },
-    {
-     "month": "2026-03",
-     "n": 387,
-     "primary": 3.9,
-     "feasibility": 81.5
-    },
-    {
-     "month": "2026-04",
-     "n": 557,
-     "primary": 3.6,
-     "feasibility": 81.2
-    },
-    {
-     "month": "2026-05",
-     "n": 415,
-     "primary": 3.7,
-     "feasibility": 82.6
-    },
-    {
-     "month": "2026-06",
-     "n": 465,
-     "primary": 3.7,
-     "feasibility": 81.8
-    }
-   ]
-  },
-  "echosolv-as": {
-   "family_id": "echosolv-as",
-   "product_name": "EchoSolv AS",
-   "company": "Echo IQ",
-   "evaluation_type": "detection",
-   "evaluable": true,
-   "cohort": {
-    "n_studies": 20610,
-    "n_sites": 6,
-    "sites": [
-     "Site H",
-     "Site D",
-     "Site G",
-     "Site E",
-     "Site F",
-     "Site B"
-    ],
-    "vendors": [
-     "Siemens Healthineers",
-     "Philips",
-     "Canon Medical"
-    ],
-    "period": "2025-01 to 2026-06",
-    "module": "Adult TTE (phase 1)"
-   },
-   "endpoints": [
-    {
-     "id": "feasibility",
-     "label": "Feasibility (studies with an AI output)",
-     "unit": "%",
-     "value": 72.3,
-     "ci": {
-      "low": 72.2,
-      "high": 72.4
-     },
-     "direction": "higher",
-     "reference": "All eligible registry TTEs"
-    },
-    {
-     "id": "auc",
-     "label": "AUC",
-     "unit": "",
-     "value": 0.879,
-     "ci": {
-      "low": 0.876,
-      "high": 0.882
-     },
-     "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)",
-     "primary": true
-    },
-    {
-     "id": "sens",
-     "label": "Sensitivity",
-     "unit": "%",
-     "value": 82.2,
-     "ci": {
-      "low": 81.9,
-      "high": 82.5
-     },
-     "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
-    },
-    {
-     "id": "spec",
-     "label": "Specificity",
-     "unit": "%",
-     "value": 92.4,
-     "ci": {
-      "low": 92.2,
-      "high": 92.6
-     },
-     "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
-    },
-    {
-     "id": "ppv",
-     "label": "PPV at registry prevalence (3.1%)",
-     "unit": "%",
-     "value": 25.7,
-     "ci": {
-      "low": 25.4,
-      "high": 26
-     },
-     "direction": "higher",
-     "reference": "Derived from sensitivity, specificity and cohort prevalence"
-    }
-   ],
-   "primary_endpoint_id": "auc",
-   "subgroups": [
-    {
-     "dimension": "Sex",
-     "level": "Female",
-     "value": 0.873,
-     "n": 3630
-    },
-    {
-     "dimension": "Sex",
-     "level": "Male",
-     "value": 0.821,
-     "n": 2310
-    },
-    {
-     "dimension": "Age",
-     "level": "< 50",
-     "value": 0.813,
-     "n": 2360
-    },
-    {
-     "dimension": "Age",
-     "level": "50–69",
-     "value": 0.868,
-     "n": 3310
-    },
-    {
-     "dimension": "Age",
-     "level": "≥ 70",
-     "value": 0.867,
-     "n": 3570
-    },
-    {
-     "dimension": "BMI",
-     "level": "< 30",
-     "value": 0.881,
-     "n": 1270
-    },
-    {
-     "dimension": "BMI",
-     "level": "≥ 30",
-     "value": 0.828,
-     "n": 330
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Good",
-     "value": 0.863,
-     "n": 320
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Adequate",
-     "value": 0.958,
-     "n": 2410
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Poor",
-     "value": 0.69,
-     "n": 3790
-    },
-    {
-     "dimension": "Vendor",
-     "level": "GE HealthCare",
-     "value": 0.817,
-     "n": 1950
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Philips",
-     "value": 0.875,
-     "n": 2540
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Siemens Healthineers",
-     "value": 0.917,
-     "n": 2500
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Canon Medical",
-     "value": 0.864,
-     "n": 1640
-    }
-   ],
-   "monthly": [
-    {
-     "month": "2025-01",
-     "n": 1252,
-     "primary": 0.903,
-     "feasibility": 72.2
-    },
-    {
-     "month": "2025-02",
-     "n": 1464,
-     "primary": 0.91,
-     "feasibility": 72.4
-    },
-    {
-     "month": "2025-03",
-     "n": 1102,
-     "primary": 0.892,
-     "feasibility": 74.2
-    },
-    {
-     "month": "2025-04",
-     "n": 1092,
-     "primary": 0.914,
-     "feasibility": 71.8
-    },
-    {
-     "month": "2025-05",
-     "n": 1101,
-     "primary": 0.866,
-     "feasibility": 72.6
-    },
-    {
-     "month": "2025-06",
-     "n": 854,
-     "primary": 0.905,
-     "feasibility": 71.8
-    },
-    {
-     "month": "2025-07",
-     "n": 861,
-     "primary": 0.909,
-     "feasibility": 73.3
-    },
-    {
-     "month": "2025-08",
-     "n": 1143,
-     "primary": 0.926,
-     "feasibility": 73.1
-    },
-    {
-     "month": "2025-09",
-     "n": 1241,
-     "primary": 0.923,
-     "feasibility": 70.5
-    },
-    {
-     "month": "2025-10",
-     "n": 1191,
-     "primary": 0.925,
-     "feasibility": 74.4
-    },
-    {
-     "month": "2025-11",
-     "n": 949,
-     "primary": 0.895,
-     "feasibility": 73.4
-    },
-    {
-     "month": "2025-12",
-     "n": 1094,
-     "primary": 0.884,
-     "feasibility": 71
-    },
-    {
-     "month": "2026-01",
-     "n": 1278,
-     "primary": 0.879,
-     "feasibility": 71.6
-    },
-    {
-     "month": "2026-02",
-     "n": 877,
-     "primary": 0.898,
-     "feasibility": 73.6
-    },
-    {
-     "month": "2026-03",
-     "n": 963,
-     "primary": 0.814,
-     "feasibility": 73.2
-    },
-    {
-     "month": "2026-04",
-     "n": 901,
-     "primary": 0.873,
-     "feasibility": 71.9
-    },
-    {
-     "month": "2026-05",
-     "n": 1131,
-     "primary": 0.891,
-     "feasibility": 72.6
-    },
-    {
-     "month": "2026-06",
-     "n": 1179,
-     "primary": 0.887,
-     "feasibility": 71.6
-    }
-   ]
-  },
-  "echogo-hf": {
-   "family_id": "echogo-hf",
-   "product_name": "EchoGo Heart Failure",
-   "company": "Ultromics",
-   "evaluation_type": "hfpef",
-   "evaluable": true,
-   "cohort": {
-    "n_studies": 8220,
-    "n_sites": 7,
-    "sites": [
-     "Site H",
-     "Site E",
-     "Site B",
-     "Site C",
-     "Site A",
-     "Site G",
-     "Site D"
-    ],
-    "vendors": [
-     "Siemens Healthineers",
-     "Philips",
-     "Canon Medical"
-    ],
-    "period": "2025-01 to 2026-06",
-    "module": "Adult TTE (phase 1)"
-   },
-   "endpoints": [
-    {
-     "id": "feasibility",
-     "label": "Feasibility (studies with an AI output)",
-     "unit": "%",
-     "value": 87.1,
-     "ci": {
-      "low": 86.9,
-      "high": 87.3
-     },
-     "direction": "higher",
-     "reference": "All eligible registry TTEs"
-    },
-    {
-     "id": "auc",
-     "label": "AUC",
-     "unit": "",
-     "value": 0.854,
-     "ci": {
-      "low": 0.85,
-      "high": 0.858
-     },
-     "direction": "higher",
-     "reference": "Registry diastolic function grade ≥ 2 with linked HF diagnosis",
-     "primary": true
-    },
-    {
-     "id": "sens",
-     "label": "Sensitivity",
-     "unit": "%",
-     "value": 82.7,
-     "ci": {
-      "low": 82.3,
-      "high": 83.1
-     },
-     "direction": "higher",
-     "reference": "Registry diastolic function grade ≥ 2 with linked HF diagnosis"
-    },
-    {
-     "id": "spec",
-     "label": "Specificity",
-     "unit": "%",
-     "value": 80.4,
-     "ci": {
-      "low": 80.1,
-      "high": 80.7
-     },
-     "direction": "higher",
-     "reference": "Registry diastolic function grade ≥ 2 with linked HF diagnosis"
-    },
-    {
-     "id": "ppv",
-     "label": "PPV at registry prevalence (11.4%)",
-     "unit": "%",
-     "value": 35.2,
-     "ci": {
-      "low": 34.7,
-      "high": 35.7
-     },
-     "direction": "higher",
-     "reference": "Derived from sensitivity, specificity and cohort prevalence"
-    }
-   ],
-   "primary_endpoint_id": "auc",
-   "subgroups": [
-    {
-     "dimension": "Sex",
-     "level": "Female",
-     "value": 0.887,
-     "n": 2240
-    },
-    {
-     "dimension": "Sex",
-     "level": "Male",
-     "value": 0.831,
-     "n": 3050
-    },
-    {
-     "dimension": "Age",
-     "level": "< 50",
-     "value": 0.894,
-     "n": 1580
-    },
-    {
-     "dimension": "Age",
-     "level": "50–69",
-     "value": 0.772,
-     "n": 2850
-    },
-    {
-     "dimension": "Age",
-     "level": "≥ 70",
-     "value": 0.938,
-     "n": 4180
-    },
-    {
-     "dimension": "BMI",
-     "level": "< 30",
-     "value": 0.841,
-     "n": 270
-    },
-    {
-     "dimension": "BMI",
-     "level": "≥ 30",
-     "value": 0.909,
-     "n": 1390
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Good",
-     "value": 0.924,
-     "n": 1940
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Adequate",
-     "value": 0.895,
-     "n": 2400
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Poor",
-     "value": 0.772,
-     "n": 3010
-    },
-    {
-     "dimension": "Vendor",
-     "level": "GE HealthCare",
-     "value": 0.857,
-     "n": 3450
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Philips",
-     "value": 0.849,
-     "n": 470
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Siemens Healthineers",
-     "value": 0.931,
-     "n": 3950
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Canon Medical",
-     "value": 0.85,
-     "n": 4020
-    }
-   ],
-   "monthly": [
-    {
-     "month": "2025-01",
-     "n": 588,
-     "primary": 0.883,
-     "feasibility": 89.2
-    },
-    {
-     "month": "2025-02",
-     "n": 484,
-     "primary": 0.829,
-     "feasibility": 86.9
-    },
-    {
-     "month": "2025-03",
-     "n": 455,
-     "primary": 0.852,
-     "feasibility": 86.9
-    },
-    {
-     "month": "2025-04",
-     "n": 485,
-     "primary": 0.86,
-     "feasibility": 86.5
-    },
-    {
-     "month": "2025-05",
-     "n": 456,
-     "primary": 0.876,
-     "feasibility": 87.1
-    },
-    {
-     "month": "2025-06",
-     "n": 460,
-     "primary": 0.853,
-     "feasibility": 87.1
-    },
-    {
-     "month": "2025-07",
-     "n": 518,
-     "primary": 0.868,
-     "feasibility": 87.4
-    },
-    {
-     "month": "2025-08",
-     "n": 508,
-     "primary": 0.902,
-     "feasibility": 86.4
-    },
-    {
-     "month": "2025-09",
-     "n": 480,
-     "primary": 0.891,
-     "feasibility": 88.2
-    },
-    {
-     "month": "2025-10",
-     "n": 433,
-     "primary": 0.831,
-     "feasibility": 85.6
-    },
-    {
-     "month": "2025-11",
-     "n": 471,
-     "primary": 0.831,
-     "feasibility": 85.2
-    },
-    {
-     "month": "2025-12",
-     "n": 336,
-     "primary": 0.803,
-     "feasibility": 89.4
-    },
-    {
-     "month": "2026-01",
-     "n": 496,
-     "primary": 0.823,
-     "feasibility": 87.6
-    },
-    {
-     "month": "2026-02",
-     "n": 551,
-     "primary": 0.872,
-     "feasibility": 88.9
-    },
-    {
-     "month": "2026-03",
-     "n": 507,
-     "primary": 0.866,
-     "feasibility": 85.7
-    },
-    {
-     "month": "2026-04",
-     "n": 442,
-     "primary": 0.844,
-     "feasibility": 88.2
-    },
-    {
-     "month": "2026-05",
-     "n": 548,
-     "primary": 0.846,
-     "feasibility": 89.5
-    },
-    {
-     "month": "2026-06",
-     "n": 539,
-     "primary": 0.856,
-     "feasibility": 88.5
-    }
-   ]
-  },
-  "fetoly-heart": {
-   "family_id": "fetoly-heart",
-   "product_name": "FETOLY-HEART",
-   "company": "Diagnoly",
-   "evaluation_type": "not-evaluable-fetal",
-   "evaluable": false,
-   "reason": "Fetal echocardiography is outside the registry’s adult TTE module (phase 1)."
-  },
-  "aisap-cardio": {
-   "family_id": "aisap-cardio",
-   "product_name": "AISAP Cardio",
-   "company": "AISAP",
-   "evaluation_type": "detection",
-   "evaluable": true,
-   "cohort": {
-    "n_studies": 23280,
-    "n_sites": 7,
-    "sites": [
-     "Site A",
-     "Site D",
-     "Site C",
-     "Site B",
-     "Site G",
-     "Site F",
-     "Site H"
-    ],
-    "vendors": [
-     "GE HealthCare",
-     "Siemens Healthineers",
-     "Canon Medical"
-    ],
-    "period": "2025-01 to 2026-06",
-    "module": "Adult TTE (phase 1)"
-   },
-   "endpoints": [
-    {
-     "id": "feasibility",
-     "label": "Feasibility (studies with an AI output)",
-     "unit": "%",
-     "value": 85.9,
-     "ci": {
-      "low": 85.8,
-      "high": 86
-     },
-     "direction": "higher",
-     "reference": "All eligible registry TTEs"
-    },
-    {
-     "id": "auc",
-     "label": "AUC",
-     "unit": "",
-     "value": 0.905,
-     "ci": {
-      "low": 0.902,
-      "high": 0.908
-     },
-     "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)",
-     "primary": true
-    },
-    {
-     "id": "sens",
-     "label": "Sensitivity",
-     "unit": "%",
-     "value": 90.5,
-     "ci": {
-      "low": 90.2,
-      "high": 90.8
-     },
-     "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
-    },
-    {
-     "id": "spec",
-     "label": "Specificity",
-     "unit": "%",
-     "value": 88.6,
-     "ci": {
-      "low": 88.4,
-      "high": 88.8
-     },
-     "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
-    },
-    {
-     "id": "ppv",
-     "label": "PPV at registry prevalence (3.1%)",
-     "unit": "%",
-     "value": 20.3,
-     "ci": {
-      "low": 20,
-      "high": 20.6
-     },
-     "direction": "higher",
-     "reference": "Derived from sensitivity, specificity and cohort prevalence"
-    }
-   ],
-   "primary_endpoint_id": "auc",
-   "subgroups": [
-    {
-     "dimension": "Sex",
-     "level": "Female",
-     "value": 0.978,
-     "n": 780
-    },
-    {
-     "dimension": "Sex",
-     "level": "Male",
-     "value": 1.013,
-     "n": 3810
-    },
-    {
-     "dimension": "Age",
-     "level": "< 50",
-     "value": 0.915,
-     "n": 3070
-    },
-    {
-     "dimension": "Age",
-     "level": "50–69",
-     "value": 0.892,
      "n": 3940
     },
     {
      "dimension": "Age",
      "level": "≥ 70",
-     "value": 0.846,
-     "n": 420
+     "value": 3.3,
+     "n": 3390
     },
     {
      "dimension": "BMI",
      "level": "< 30",
-     "value": 0.842,
-     "n": 3070
+     "value": 3.7,
+     "n": 1170
     },
     {
      "dimension": "BMI",
      "level": "≥ 30",
-     "value": 0.829,
-     "n": 500
+     "value": 3.8,
+     "n": 2530
     },
     {
      "dimension": "Image quality",
      "level": "Good",
-     "value": 0.878,
-     "n": 2480
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Adequate",
-     "value": 0.96,
-     "n": 3040
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Poor",
-     "value": 0.818,
-     "n": 3920
-    },
-    {
-     "dimension": "Vendor",
-     "level": "GE HealthCare",
-     "value": 0.836,
-     "n": 510
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Philips",
-     "value": 0.848,
-     "n": 3320
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Siemens Healthineers",
-     "value": 0.805,
-     "n": 3760
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Canon Medical",
-     "value": 0.824,
-     "n": 3920
-    }
-   ],
-   "monthly": [
-    {
-     "month": "2025-01",
-     "n": 1634,
-     "primary": 0.932,
-     "feasibility": 87.1
-    },
-    {
-     "month": "2025-02",
-     "n": 1159,
-     "primary": 0.926,
-     "feasibility": 87.7
-    },
-    {
-     "month": "2025-03",
-     "n": 1566,
-     "primary": 0.894,
-     "feasibility": 86.3
-    },
-    {
-     "month": "2025-04",
-     "n": 1224,
-     "primary": 0.957,
-     "feasibility": 86.3
-    },
-    {
-     "month": "2025-05",
-     "n": 1109,
-     "primary": 0.894,
-     "feasibility": 86.4
-    },
-    {
-     "month": "2025-06",
-     "n": 1644,
-     "primary": 0.95,
-     "feasibility": 86.1
-    },
-    {
-     "month": "2025-07",
-     "n": 1455,
-     "primary": 0.923,
-     "feasibility": 85.3
-    },
-    {
-     "month": "2025-08",
-     "n": 1002,
-     "primary": 0.905,
-     "feasibility": 84.7
-    },
-    {
-     "month": "2025-09",
-     "n": 1040,
-     "primary": 0.914,
-     "feasibility": 88.3
-    },
-    {
-     "month": "2025-10",
-     "n": 1410,
-     "primary": 0.868,
-     "feasibility": 86.7
-    },
-    {
-     "month": "2025-11",
-     "n": 1368,
-     "primary": 0.932,
-     "feasibility": 85.4
-    },
-    {
-     "month": "2025-12",
-     "n": 1470,
-     "primary": 0.919,
-     "feasibility": 84.7
-    },
-    {
-     "month": "2026-01",
-     "n": 1527,
-     "primary": 0.872,
-     "feasibility": 83.4
-    },
-    {
-     "month": "2026-02",
-     "n": 1029,
-     "primary": 0.857,
-     "feasibility": 83.4
-    },
-    {
-     "month": "2026-03",
-     "n": 1454,
-     "primary": 0.839,
-     "feasibility": 88.3
-    },
-    {
-     "month": "2026-04",
-     "n": 1021,
-     "primary": 0.866,
-     "feasibility": 88
-    },
-    {
-     "month": "2026-05",
-     "n": 1639,
-     "primary": 0.887,
-     "feasibility": 88.3
-    },
-    {
-     "month": "2026-06",
-     "n": 1595,
-     "primary": 0.905,
-     "feasibility": 86.1
-    }
-   ]
-  },
-  "lvivo-iqs": {
-   "family_id": "lvivo-iqs",
-   "product_name": "LVivo IQS",
-   "company": "DiA Imaging Analysis (Philips)",
-   "evaluation_type": "quality",
-   "evaluable": true,
-   "cohort": {
-    "n_studies": 8210,
-    "n_sites": 5,
-    "sites": [
-     "Site E",
-     "Site F",
-     "Site H",
-     "Site C",
-     "Site B"
-    ],
-    "vendors": [
-     "GE HealthCare",
-     "Canon Medical",
-     "Siemens Healthineers"
-    ],
-    "period": "2025-01 to 2026-06",
-    "module": "Adult TTE (phase 1)"
-   },
-   "endpoints": [
-    {
-     "id": "feasibility",
-     "label": "Feasibility (studies with an AI output)",
-     "unit": "%",
-     "value": 87.4,
-     "ci": {
-      "low": 87.2,
-      "high": 87.6
-     },
-     "direction": "higher",
-     "reference": "All eligible registry TTEs"
-    },
-    {
-     "id": "kappa",
-     "label": "Agreement with sonographer quality grade (κ)",
-     "unit": "",
-     "value": 0.79,
-     "ci": {
-      "low": 0.78,
-      "high": 0.8
-     },
-     "direction": "higher",
-     "reference": "Registry image-quality / technical-difficulty field",
-     "primary": true
-    },
-    {
-     "id": "flagged",
-     "label": "Studies flagged non-diagnostic",
-     "unit": "%",
-     "value": 13.2,
-     "ci": {
-      "low": 13,
-      "high": 13.4
-     },
-     "direction": "neutral",
-     "reference": "AI flag rate"
-    }
-   ],
-   "primary_endpoint_id": "kappa",
-   "subgroups": [
-    {
-     "dimension": "Sex",
-     "level": "Female",
-     "value": 0.711,
-     "n": 3290
-    },
-    {
-     "dimension": "Sex",
-     "level": "Male",
-     "value": 0.817,
-     "n": 870
-    },
-    {
-     "dimension": "Age",
-     "level": "< 50",
-     "value": 0.818,
-     "n": 2310
-    },
-    {
-     "dimension": "Age",
-     "level": "50–69",
-     "value": 0.821,
-     "n": 650
-    },
-    {
-     "dimension": "Age",
-     "level": "≥ 70",
-     "value": 0.837,
-     "n": 2440
-    },
-    {
-     "dimension": "BMI",
-     "level": "< 30",
-     "value": 0.703,
-     "n": 1890
-    },
-    {
-     "dimension": "BMI",
-     "level": "≥ 30",
-     "value": 0.786,
-     "n": 3730
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Good",
-     "value": 0.849,
-     "n": 1800
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Adequate",
-     "value": 0.851,
-     "n": 3010
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Poor",
-     "value": 0.62,
-     "n": 3230
-    },
-    {
-     "dimension": "Vendor",
-     "level": "GE HealthCare",
-     "value": 0.843,
-     "n": 3400
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Philips",
-     "value": 0.778,
-     "n": 4090
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Siemens Healthineers",
-     "value": 0.749,
-     "n": 2040
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Canon Medical",
-     "value": 0.799,
-     "n": 1980
-    }
-   ],
-   "monthly": [
-    {
-     "month": "2025-01",
-     "n": 593,
-     "primary": 0.778,
-     "feasibility": 86.8
-    },
-    {
-     "month": "2025-02",
-     "n": 542,
-     "primary": 0.773,
-     "feasibility": 87.8
-    },
-    {
-     "month": "2025-03",
-     "n": 532,
-     "primary": 0.77,
-     "feasibility": 86
-    },
-    {
-     "month": "2025-04",
-     "n": 469,
-     "primary": 0.801,
-     "feasibility": 89.6
-    },
-    {
-     "month": "2025-05",
-     "n": 434,
-     "primary": 0.792,
-     "feasibility": 90
-    },
-    {
-     "month": "2025-06",
-     "n": 406,
-     "primary": 0.775,
-     "feasibility": 87.5
-    },
-    {
-     "month": "2025-07",
-     "n": 395,
-     "primary": 0.848,
-     "feasibility": 84.9
-    },
-    {
-     "month": "2025-08",
-     "n": 446,
-     "primary": 0.794,
-     "feasibility": 85.6
-    },
-    {
-     "month": "2025-09",
-     "n": 538,
-     "primary": 0.774,
-     "feasibility": 88.2
-    },
-    {
-     "month": "2025-10",
-     "n": 332,
-     "primary": 0.781,
-     "feasibility": 88.4
-    },
-    {
-     "month": "2025-11",
-     "n": 560,
-     "primary": 0.758,
-     "feasibility": 89.2
-    },
-    {
-     "month": "2025-12",
-     "n": 486,
-     "primary": 0.817,
-     "feasibility": 86.4
-    },
-    {
-     "month": "2026-01",
-     "n": 357,
-     "primary": 0.753,
-     "feasibility": 87.5
-    },
-    {
-     "month": "2026-02",
-     "n": 519,
-     "primary": 0.791,
-     "feasibility": 87.2
-    },
-    {
-     "month": "2026-03",
-     "n": 420,
-     "primary": 0.754,
-     "feasibility": 89.3
-    },
-    {
-     "month": "2026-04",
-     "n": 339,
-     "primary": 0.795,
-     "feasibility": 86.2
-    },
-    {
-     "month": "2026-05",
-     "n": 517,
-     "primary": 0.772,
-     "feasibility": 87
-    },
-    {
-     "month": "2026-06",
-     "n": 422,
-     "primary": 0.745,
-     "feasibility": 87.6
-    }
-   ]
-  },
-  "invision-lvef": {
-   "family_id": "invision-lvef",
-   "product_name": "InVision Precision LVEF",
-   "company": "InVision Medical Technology",
-   "evaluation_type": "lvef",
-   "evaluable": true,
-   "cohort": {
-    "n_studies": 2430,
-    "n_sites": 4,
-    "sites": [
-     "Site B",
-     "Site E",
-     "Site H",
-     "Site D"
-    ],
-    "vendors": [
-     "GE HealthCare",
-     "Canon Medical",
-     "Siemens Healthineers"
-    ],
-    "period": "2025-01 to 2026-06",
-    "module": "Adult TTE (phase 1)"
-   },
-   "endpoints": [
-    {
-     "id": "feasibility",
-     "label": "Feasibility (studies with an AI output)",
-     "unit": "%",
-     "value": 94.1,
-     "ci": {
-      "low": 93.7,
-      "high": 94.5
-     },
-     "direction": "higher",
-     "reference": "All eligible registry TTEs"
-    },
-    {
-     "id": "lvef_mae",
-     "label": "LVEF mean absolute error",
-     "unit": "% EF",
-     "value": 4.3,
-     "ci": {
-      "low": 4.22,
-      "high": 4.38
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEF (finalized clinical report)",
-     "primary": true
-    },
-    {
-     "id": "lvef_bias",
-     "label": "LVEF bias (AI minus reported)",
-     "unit": "% EF",
-     "value": 1.5,
-     "ci": {
-      "low": 1.4,
-      "high": 1.6
-     },
-     "direction": "zero",
-     "reference": "Registry-reported LVEF"
-    },
-    {
-     "id": "lvef_loa",
-     "label": "95% limits of agreement (half-width)",
-     "unit": "% EF",
-     "value": 11.7,
-     "ci": {
-      "low": 11.6,
-      "high": 11.8
-     },
-     "direction": "lower",
-     "reference": "Bland-Altman vs reported LVEF"
-    },
-    {
-     "id": "lvef_icc",
-     "label": "ICC, AI vs reported LVEF",
-     "unit": "",
-     "value": 0.855,
-     "ci": {
-      "low": 0.849,
-      "high": 0.861
-     },
-     "direction": "higher",
-     "reference": "Two-way mixed, absolute agreement"
-    },
-    {
-     "id": "ef40_sens",
-     "label": "LVEF ≤ 40%: sensitivity",
-     "unit": "%",
-     "value": 93.1,
-     "ci": {
-      "low": 92.5,
-      "high": 93.7
-     },
-     "direction": "higher",
-     "reference": "Reported LVEF ≤ 40%"
-    },
-    {
-     "id": "ef40_spec",
-     "label": "LVEF ≤ 40%: specificity",
-     "unit": "%",
-     "value": 95.8,
-     "ci": {
-      "low": 95.3,
-      "high": 96.3
-     },
-     "direction": "higher",
-     "reference": "Reported LVEF > 40%"
-    }
-   ],
-   "primary_endpoint_id": "lvef_mae",
-   "subgroups": [
-    {
-     "dimension": "Sex",
-     "level": "Female",
-     "value": 4.6,
-     "n": 2620
-    },
-    {
-     "dimension": "Sex",
-     "level": "Male",
-     "value": 4.6,
-     "n": 3000
-    },
-    {
-     "dimension": "Age",
-     "level": "< 50",
-     "value": 4.5,
-     "n": 1500
-    },
-    {
-     "dimension": "Age",
-     "level": "50–69",
-     "value": 4.7,
-     "n": 1440
-    },
-    {
-     "dimension": "Age",
-     "level": "≥ 70",
-     "value": 4.4,
-     "n": 3830
-    },
-    {
-     "dimension": "BMI",
-     "level": "< 30",
-     "value": 4.2,
-     "n": 820
-    },
-    {
-     "dimension": "BMI",
-     "level": "≥ 30",
-     "value": 4.9,
-     "n": 3790
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Good",
-     "value": 4.2,
+     "value": 3.8,
      "n": 3570
     },
     {
      "dimension": "Image quality",
      "level": "Adequate",
-     "value": 4.4,
-     "n": 3080
+     "value": 3.9,
+     "n": 470
     },
     {
      "dimension": "Image quality",
      "level": "Poor",
-     "value": 5.1,
-     "n": 2270
+     "value": 4.6,
+     "n": 710
     },
     {
      "dimension": "Vendor",
      "level": "GE HealthCare",
-     "value": 4.1,
-     "n": 810
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Philips",
-     "value": 3.9,
-     "n": 1450
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Siemens Healthineers",
-     "value": 4.4,
-     "n": 2540
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Canon Medical",
-     "value": 4,
-     "n": 1820
-    }
-   ],
-   "monthly": [
-    {
-     "month": "2025-01",
-     "n": 106,
-     "primary": 4.4,
-     "feasibility": 95.6
-    },
-    {
-     "month": "2025-02",
-     "n": 123,
-     "primary": 4.4,
-     "feasibility": 94.4
-    },
-    {
-     "month": "2025-03",
-     "n": 118,
-     "primary": 4.3,
-     "feasibility": 93.9
-    },
-    {
-     "month": "2025-04",
-     "n": 163,
-     "primary": 4.3,
-     "feasibility": 95.2
-    },
-    {
-     "month": "2025-05",
-     "n": 141,
-     "primary": 4.4,
-     "feasibility": 96
-    },
-    {
-     "month": "2025-06",
-     "n": 104,
-     "primary": 4.2,
-     "feasibility": 93.7
-    },
-    {
-     "month": "2025-07",
-     "n": 171,
-     "primary": 4.5,
-     "feasibility": 91.5
-    },
-    {
-     "month": "2025-08",
-     "n": 170,
-     "primary": 4.5,
-     "feasibility": 96.8
-    },
-    {
-     "month": "2025-09",
-     "n": 101,
-     "primary": 4.4,
-     "feasibility": 94.4
-    },
-    {
-     "month": "2025-10",
-     "n": 143,
-     "primary": 4.2,
-     "feasibility": 96.8
-    },
-    {
-     "month": "2025-11",
-     "n": 168,
-     "primary": 4.3,
-     "feasibility": 93.3
-    },
-    {
-     "month": "2025-12",
-     "n": 132,
-     "primary": 4.1,
-     "feasibility": 94.5
-    },
-    {
-     "month": "2026-01",
-     "n": 122,
-     "primary": 4.3,
-     "feasibility": 92.6
-    },
-    {
-     "month": "2026-02",
-     "n": 101,
-     "primary": 4.2,
-     "feasibility": 92.3
-    },
-    {
-     "month": "2026-03",
-     "n": 169,
-     "primary": 4.2,
-     "feasibility": 92.4
-    },
-    {
-     "month": "2026-04",
-     "n": 166,
-     "primary": 4.4,
-     "feasibility": 96.2
-    },
-    {
-     "month": "2026-05",
-     "n": 143,
-     "primary": 4.2,
-     "feasibility": 93.9
-    },
-    {
-     "month": "2026-06",
-     "n": 138,
-     "primary": 4.2,
-     "feasibility": 95.6
-    }
-   ]
-  },
-  "us2": {
-   "family_id": "us2",
-   "product_name": "Us2.v1 / Us2.v2",
-   "company": "Us2.ai",
-   "evaluation_type": "comprehensive",
-   "evaluable": true,
-   "cohort": {
-    "n_studies": 3040,
-    "n_sites": 5,
-    "sites": [
-     "Site F",
-     "Site E",
-     "Site G",
-     "Site D",
-     "Site C"
-    ],
-    "vendors": [
-     "Canon Medical",
-     "Philips",
-     "Siemens Healthineers",
-     "GE HealthCare"
-    ],
-    "period": "2025-01 to 2026-06",
-    "module": "Adult TTE (phase 1)"
-   },
-   "endpoints": [
-    {
-     "id": "feasibility",
-     "label": "Feasibility (studies with an AI output)",
-     "unit": "%",
-     "value": 76.1,
-     "ci": {
-      "low": 75.8,
-      "high": 76.4
-     },
-     "direction": "higher",
-     "reference": "All eligible registry TTEs"
-    },
-    {
-     "id": "lvef_mae",
-     "label": "LVEF mean absolute error",
-     "unit": "% EF",
-     "value": 4.3,
-     "ci": {
-      "low": 4.23,
-      "high": 4.37
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEF (finalized clinical report)",
-     "primary": true
-    },
-    {
-     "id": "lvef_bias",
-     "label": "LVEF bias (AI minus reported)",
-     "unit": "% EF",
-     "value": 1.4,
-     "ci": {
-      "low": 1.31,
-      "high": 1.49
-     },
-     "direction": "zero",
-     "reference": "Registry-reported LVEF"
-    },
-    {
-     "id": "lvef_loa",
-     "label": "95% limits of agreement (half-width)",
-     "unit": "% EF",
-     "value": 15.2,
-     "ci": {
-      "low": 15.1,
-      "high": 15.3
-     },
-     "direction": "lower",
-     "reference": "Bland-Altman vs reported LVEF"
-    },
-    {
-     "id": "lvef_icc",
-     "label": "ICC, AI vs reported LVEF",
-     "unit": "",
-     "value": 0.876,
-     "ci": {
-      "low": 0.87,
-      "high": 0.882
-     },
-     "direction": "higher",
-     "reference": "Two-way mixed, absolute agreement"
-    },
-    {
-     "id": "ef40_sens",
-     "label": "LVEF ≤ 40%: sensitivity",
-     "unit": "%",
-     "value": 87.6,
-     "ci": {
-      "low": 87,
-      "high": 88.2
-     },
-     "direction": "higher",
-     "reference": "Reported LVEF ≤ 40%"
-    },
-    {
-     "id": "ef40_spec",
-     "label": "LVEF ≤ 40%: specificity",
-     "unit": "%",
-     "value": 86.8,
-     "ci": {
-      "low": 86.4,
-      "high": 87.2
-     },
-     "direction": "higher",
-     "reference": "Reported LVEF > 40%"
-    },
-    {
-     "id": "edv_mae",
-     "label": "LV end-diastolic volume MAE",
-     "unit": "mL",
-     "value": 20.8,
-     "ci": {
-      "low": 20.3,
-      "high": 21.3
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEDV"
-    },
-    {
-     "id": "gls_bias",
-     "label": "GLS bias (AI minus reported)",
-     "unit": "%",
-     "value": -1.54,
-     "ci": {
-      "low": -1.6,
-      "high": -1.48
-     },
-     "direction": "zero",
-     "reference": "Registry-reported GLS where present"
-    },
-    {
-     "id": "ee_icc",
-     "label": "E/e′ ICC",
-     "unit": "",
-     "value": 0.887,
-     "ci": {
-      "low": 0.88,
-      "high": 0.894
-     },
-     "direction": "higher",
-     "reference": "Registry-reported E/e′"
-    },
-    {
-     "id": "avmg_icc",
-     "label": "AV mean gradient ICC",
-     "unit": "",
-     "value": 0.92,
-     "ci": {
-      "low": 0.913,
-      "high": 0.927
-     },
-     "direction": "higher",
-     "reference": "Registry metric: mean and peak gradients for valvular disease"
-    }
-   ],
-   "primary_endpoint_id": "lvef_mae",
-   "subgroups": [
-    {
-     "dimension": "Sex",
-     "level": "Female",
      "value": 3.8,
-     "n": 1410
-    },
-    {
-     "dimension": "Sex",
-     "level": "Male",
-     "value": 4.4,
-     "n": 1670
-    },
-    {
-     "dimension": "Age",
-     "level": "< 50",
-     "value": 4.5,
-     "n": 420
-    },
-    {
-     "dimension": "Age",
-     "level": "50–69",
-     "value": 4.7,
-     "n": 3600
-    },
-    {
-     "dimension": "Age",
-     "level": "≥ 70",
-     "value": 4.6,
-     "n": 1500
-    },
-    {
-     "dimension": "BMI",
-     "level": "< 30",
-     "value": 4.1,
-     "n": 3860
-    },
-    {
-     "dimension": "BMI",
-     "level": "≥ 30",
-     "value": 4.6,
-     "n": 690
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Good",
-     "value": 3.9,
-     "n": 2740
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Adequate",
-     "value": 4.2,
-     "n": 2670
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Poor",
-     "value": 5.8,
-     "n": 1810
-    },
-    {
-     "dimension": "Vendor",
-     "level": "GE HealthCare",
-     "value": 4.1,
-     "n": 3040
+     "n": 3270
     },
     {
      "dimension": "Vendor",
      "level": "Philips",
-     "value": 4.5,
-     "n": 250
+     "value": 3.6,
+     "n": 700
     },
     {
      "dimension": "Vendor",
      "level": "Siemens Healthineers",
-     "value": 4.2,
-     "n": 620
+     "value": 4,
+     "n": 2080
     },
     {
      "dimension": "Vendor",
      "level": "Canon Medical",
-     "value": 4.2,
-     "n": 3710
-    }
-   ],
-   "monthly": [
-    {
-     "month": "2025-01",
-     "n": 155,
-     "primary": 4.1,
-     "feasibility": 75.2
-    },
-    {
-     "month": "2025-02",
-     "n": 198,
-     "primary": 4.2,
-     "feasibility": 76.6
-    },
-    {
-     "month": "2025-03",
-     "n": 214,
-     "primary": 4.2,
-     "feasibility": 78.1
-    },
-    {
-     "month": "2025-04",
-     "n": 133,
-     "primary": 4.3,
-     "feasibility": 74.6
-    },
-    {
-     "month": "2025-05",
-     "n": 219,
-     "primary": 4.3,
-     "feasibility": 75.4
-    },
-    {
-     "month": "2025-06",
-     "n": 214,
-     "primary": 4.5,
-     "feasibility": 76.2
-    },
-    {
-     "month": "2025-07",
-     "n": 169,
-     "primary": 4.3,
-     "feasibility": 77.5
-    },
-    {
-     "month": "2025-08",
-     "n": 118,
-     "primary": 4.4,
-     "feasibility": 76.6
-    },
-    {
-     "month": "2025-09",
-     "n": 168,
-     "primary": 4.5,
-     "feasibility": 75.4
-    },
-    {
-     "month": "2025-10",
-     "n": 217,
-     "primary": 4.2,
-     "feasibility": 75.9
-    },
-    {
-     "month": "2025-11",
-     "n": 203,
-     "primary": 4.2,
-     "feasibility": 75.9
-    },
-    {
-     "month": "2025-12",
-     "n": 147,
-     "primary": 4.2,
-     "feasibility": 75.9
-    },
-    {
-     "month": "2026-01",
-     "n": 130,
-     "primary": 4.2,
-     "feasibility": 76.7
-    },
-    {
-     "month": "2026-02",
-     "n": 214,
-     "primary": 4.2,
-     "feasibility": 77.1
-    },
-    {
-     "month": "2026-03",
-     "n": 183,
-     "primary": 4.3,
-     "feasibility": 74.2
-    },
-    {
-     "month": "2026-04",
-     "n": 153,
-     "primary": 4.1,
-     "feasibility": 76.9
-    },
-    {
-     "month": "2026-05",
-     "n": 204,
-     "primary": 4.2,
-     "feasibility": 77.5
-    },
-    {
-     "month": "2026-06",
-     "n": 198,
-     "primary": 4.3,
-     "feasibility": 75.8
-    }
-   ]
-  },
-  "caption-autoef": {
-   "family_id": "caption-autoef",
-   "product_name": "Caption Interpretation Automated Ejection Fraction (incl. EchoMD AutoEF)",
-   "company": "GE HealthCare (Caption Health; originally Bay Labs)",
-   "evaluation_type": "lvef",
-   "evaluable": true,
-   "cohort": {
-    "n_studies": 21010,
-    "n_sites": 7,
-    "sites": [
-     "Site C",
-     "Site F",
-     "Site E",
-     "Site B",
-     "Site D",
-     "Site A",
-     "Site H"
-    ],
-    "vendors": [
-     "GE HealthCare",
-     "Philips",
-     "Siemens Healthineers"
-    ],
-    "period": "2025-01 to 2026-06",
-    "module": "Adult TTE (phase 1)"
-   },
-   "endpoints": [
-    {
-     "id": "feasibility",
-     "label": "Feasibility (studies with an AI output)",
-     "unit": "%",
-     "value": 77.4,
-     "ci": {
-      "low": 77.3,
-      "high": 77.5
-     },
-     "direction": "higher",
-     "reference": "All eligible registry TTEs"
-    },
-    {
-     "id": "lvef_mae",
-     "label": "LVEF mean absolute error",
-     "unit": "% EF",
-     "value": 7.2,
-     "ci": {
-      "low": 7.17,
-      "high": 7.23
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEF (finalized clinical report)",
-     "primary": true
-    },
-    {
-     "id": "lvef_bias",
-     "label": "LVEF bias (AI minus reported)",
-     "unit": "% EF",
-     "value": -0.1,
-     "ci": {
-      "low": -0.13,
-      "high": -0.07
-     },
-     "direction": "zero",
-     "reference": "Registry-reported LVEF"
-    },
-    {
-     "id": "lvef_loa",
-     "label": "95% limits of agreement (half-width)",
-     "unit": "% EF",
-     "value": 9.3,
-     "ci": {
-      "low": 9.3,
-      "high": 9.3
-     },
-     "direction": "lower",
-     "reference": "Bland-Altman vs reported LVEF"
-    },
-    {
-     "id": "lvef_icc",
-     "label": "ICC, AI vs reported LVEF",
-     "unit": "",
-     "value": 0.875,
-     "ci": {
-      "low": 0.873,
-      "high": 0.877
-     },
-     "direction": "higher",
-     "reference": "Two-way mixed, absolute agreement"
-    },
-    {
-     "id": "ef40_sens",
-     "label": "LVEF ≤ 40%: sensitivity",
-     "unit": "%",
-     "value": 90,
-     "ci": {
-      "low": 89.8,
-      "high": 90.2
-     },
-     "direction": "higher",
-     "reference": "Reported LVEF ≤ 40%"
-    },
-    {
-     "id": "ef40_spec",
-     "label": "LVEF ≤ 40%: specificity",
-     "unit": "%",
-     "value": 96.8,
-     "ci": {
-      "low": 96.6,
-      "high": 97
-     },
-     "direction": "higher",
-     "reference": "Reported LVEF > 40%"
-    }
-   ],
-   "primary_endpoint_id": "lvef_mae",
-   "subgroups": [
-    {
-     "dimension": "Sex",
-     "level": "Female",
-     "value": 6.7,
-     "n": 1970
-    },
-    {
-     "dimension": "Sex",
-     "level": "Male",
-     "value": 6.4,
-     "n": 3000
-    },
-    {
-     "dimension": "Age",
-     "level": "< 50",
-     "value": 6.9,
-     "n": 3990
-    },
-    {
-     "dimension": "Age",
-     "level": "50–69",
-     "value": 6.4,
-     "n": 430
-    },
-    {
-     "dimension": "Age",
-     "level": "≥ 70",
-     "value": 7.7,
-     "n": 350
-    },
-    {
-     "dimension": "BMI",
-     "level": "< 30",
-     "value": 7.9,
-     "n": 4060
-    },
-    {
-     "dimension": "BMI",
-     "level": "≥ 30",
-     "value": 8.3,
-     "n": 1680
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Good",
-     "value": 7.8,
-     "n": 2410
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Adequate",
-     "value": 6.4,
-     "n": 2010
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Poor",
-     "value": 8.8,
-     "n": 3050
-    },
-    {
-     "dimension": "Vendor",
-     "level": "GE HealthCare",
-     "value": 6.4,
-     "n": 1870
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Philips",
-     "value": 7.2,
-     "n": 3670
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Siemens Healthineers",
-     "value": 7.6,
-     "n": 2670
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Canon Medical",
-     "value": 7.7,
-     "n": 480
-    }
-   ],
-   "monthly": [
-    {
-     "month": "2025-01",
-     "n": 1491,
-     "primary": 7.3,
-     "feasibility": 78.8
-    },
-    {
-     "month": "2025-02",
-     "n": 1060,
-     "primary": 7,
-     "feasibility": 78.2
-    },
-    {
-     "month": "2025-03",
-     "n": 1344,
-     "primary": 7.1,
-     "feasibility": 76.3
-    },
-    {
-     "month": "2025-04",
-     "n": 1007,
-     "primary": 7.7,
-     "feasibility": 75.2
-    },
-    {
-     "month": "2025-05",
-     "n": 834,
-     "primary": 7.3,
-     "feasibility": 79.5
-    },
-    {
-     "month": "2025-06",
-     "n": 1032,
-     "primary": 7.1,
-     "feasibility": 77.7
-    },
-    {
-     "month": "2025-07",
-     "n": 1068,
-     "primary": 7.1,
-     "feasibility": 78.7
-    },
-    {
-     "month": "2025-08",
-     "n": 1177,
-     "primary": 7.3,
-     "feasibility": 78.4
-    },
-    {
-     "month": "2025-09",
-     "n": 939,
-     "primary": 7.2,
-     "feasibility": 76
-    },
-    {
-     "month": "2025-10",
-     "n": 1054,
-     "primary": 6.9,
-     "feasibility": 77.4
-    },
-    {
-     "month": "2025-11",
-     "n": 821,
-     "primary": 7.2,
-     "feasibility": 79.1
-    },
-    {
-     "month": "2025-12",
-     "n": 914,
-     "primary": 7.3,
-     "feasibility": 79.4
-    },
-    {
-     "month": "2026-01",
-     "n": 890,
-     "primary": 7.4,
-     "feasibility": 75.3
-    },
-    {
-     "month": "2026-02",
-     "n": 1235,
-     "primary": 6.8,
-     "feasibility": 79
-    },
-    {
-     "month": "2026-03",
-     "n": 1176,
-     "primary": 7.2,
-     "feasibility": 78.6
-    },
-    {
-     "month": "2026-04",
-     "n": 864,
-     "primary": 7.3,
-     "feasibility": 79.1
-    },
-    {
-     "month": "2026-05",
-     "n": 824,
-     "primary": 7.2,
-     "feasibility": 78.5
-    },
-    {
-     "month": "2026-06",
-     "n": 1417,
-     "primary": 7.2,
-     "feasibility": 78.3
-    }
-   ]
-  },
-  "libby-echo-prio": {
-   "family_id": "libby-echo-prio",
-   "product_name": "Libby Echo:Prio",
-   "company": "Dyad Medical",
-   "evaluation_type": "comprehensive",
-   "evaluable": true,
-   "cohort": {
-    "n_studies": 6970,
-    "n_sites": 4,
-    "sites": [
-     "Site F",
-     "Site B",
-     "Site C",
-     "Site E"
-    ],
-    "vendors": [
-     "Siemens Healthineers",
-     "Canon Medical"
-    ],
-    "period": "2025-01 to 2026-06",
-    "module": "Adult TTE (phase 1)"
-   },
-   "endpoints": [
-    {
-     "id": "feasibility",
-     "label": "Feasibility (studies with an AI output)",
-     "unit": "%",
-     "value": 74.6,
-     "ci": {
-      "low": 74.4,
-      "high": 74.8
-     },
-     "direction": "higher",
-     "reference": "All eligible registry TTEs"
-    },
-    {
-     "id": "lvef_mae",
-     "label": "LVEF mean absolute error",
-     "unit": "% EF",
-     "value": 6.1,
-     "ci": {
-      "low": 6.05,
-      "high": 6.15
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEF (finalized clinical report)",
-     "primary": true
-    },
-    {
-     "id": "lvef_bias",
-     "label": "LVEF bias (AI minus reported)",
-     "unit": "% EF",
-     "value": -1.8,
-     "ci": {
-      "low": -1.86,
-      "high": -1.74
-     },
-     "direction": "zero",
-     "reference": "Registry-reported LVEF"
-    },
-    {
-     "id": "lvef_loa",
-     "label": "95% limits of agreement (half-width)",
-     "unit": "% EF",
-     "value": 12.5,
-     "ci": {
-      "low": 12.4,
-      "high": 12.6
-     },
-     "direction": "lower",
-     "reference": "Bland-Altman vs reported LVEF"
-    },
-    {
-     "id": "lvef_icc",
-     "label": "ICC, AI vs reported LVEF",
-     "unit": "",
-     "value": 0.834,
-     "ci": {
-      "low": 0.83,
-      "high": 0.838
-     },
-     "direction": "higher",
-     "reference": "Two-way mixed, absolute agreement"
-    },
-    {
-     "id": "ef40_sens",
-     "label": "LVEF ≤ 40%: sensitivity",
-     "unit": "%",
-     "value": 86.7,
-     "ci": {
-      "low": 86.3,
-      "high": 87.1
-     },
-     "direction": "higher",
-     "reference": "Reported LVEF ≤ 40%"
-    },
-    {
-     "id": "ef40_spec",
-     "label": "LVEF ≤ 40%: specificity",
-     "unit": "%",
-     "value": 95.2,
-     "ci": {
-      "low": 94.9,
-      "high": 95.5
-     },
-     "direction": "higher",
-     "reference": "Reported LVEF > 40%"
-    },
-    {
-     "id": "edv_mae",
-     "label": "LV end-diastolic volume MAE",
-     "unit": "mL",
-     "value": 22.1,
-     "ci": {
-      "low": 21.8,
-      "high": 22.4
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEDV"
-    },
-    {
-     "id": "gls_bias",
-     "label": "GLS bias (AI minus reported)",
-     "unit": "%",
-     "value": -1,
-     "ci": {
-      "low": -1.04,
-      "high": -0.96
-     },
-     "direction": "zero",
-     "reference": "Registry-reported GLS where present"
-    },
-    {
-     "id": "ee_icc",
-     "label": "E/e′ ICC",
-     "unit": "",
-     "value": 0.833,
-     "ci": {
-      "low": 0.828,
-      "high": 0.838
-     },
-     "direction": "higher",
-     "reference": "Registry-reported E/e′"
-    },
-    {
-     "id": "avmg_icc",
-     "label": "AV mean gradient ICC",
-     "unit": "",
-     "value": 0.866,
-     "ci": {
-      "low": 0.861,
-      "high": 0.871
-     },
-     "direction": "higher",
-     "reference": "Registry metric: mean and peak gradients for valvular disease"
-    }
-   ],
-   "primary_endpoint_id": "lvef_mae",
-   "subgroups": [
-    {
-     "dimension": "Sex",
-     "level": "Female",
-     "value": 6.8,
+     "value": 4.1,
      "n": 3820
-    },
-    {
-     "dimension": "Sex",
-     "level": "Male",
-     "value": 5.6,
-     "n": 1560
-    },
-    {
-     "dimension": "Age",
-     "level": "< 50",
-     "value": 6.5,
-     "n": 1710
-    },
-    {
-     "dimension": "Age",
-     "level": "50–69",
-     "value": 6,
-     "n": 630
-    },
-    {
-     "dimension": "Age",
-     "level": "≥ 70",
-     "value": 6.8,
-     "n": 720
-    },
-    {
-     "dimension": "BMI",
-     "level": "< 30",
-     "value": 6.7,
-     "n": 2690
-    },
-    {
-     "dimension": "BMI",
-     "level": "≥ 30",
-     "value": 6,
-     "n": 3060
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Good",
-     "value": 6.8,
-     "n": 3450
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Adequate",
-     "value": 6.2,
-     "n": 2440
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Poor",
-     "value": 7.5,
-     "n": 440
-    },
-    {
-     "dimension": "Vendor",
-     "level": "GE HealthCare",
-     "value": 6.4,
-     "n": 1160
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Philips",
-     "value": 6.1,
-     "n": 3930
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Siemens Healthineers",
-     "value": 6,
-     "n": 2910
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Canon Medical",
-     "value": 6.6,
-     "n": 2320
     }
    ],
    "monthly": [
     {
      "month": "2025-01",
-     "n": 444,
-     "primary": 6.3,
-     "feasibility": 73.8
+     "n": 156,
+     "primary": 3.5,
+     "feasibility": 87.7
     },
     {
      "month": "2025-02",
-     "n": 283,
-     "primary": 5.9,
-     "feasibility": 72.8
+     "n": 104,
+     "primary": 3.9,
+     "feasibility": 87
     },
     {
      "month": "2025-03",
-     "n": 368,
-     "primary": 6.2,
-     "feasibility": 74.3
+     "n": 144,
+     "primary": 3.6,
+     "feasibility": 87.3
     },
     {
      "month": "2025-04",
-     "n": 438,
-     "primary": 6.4,
-     "feasibility": 74.2
+     "n": 158,
+     "primary": 3.9,
+     "feasibility": 86.7
     },
     {
      "month": "2025-05",
-     "n": 405,
-     "primary": 6.3,
-     "feasibility": 76.4
+     "n": 123,
+     "primary": 3.7,
+     "feasibility": 87
     },
     {
      "month": "2025-06",
-     "n": 356,
-     "primary": 6.5,
-     "feasibility": 75.2
+     "n": 102,
+     "primary": 3.9,
+     "feasibility": 87.1
     },
     {
      "month": "2025-07",
-     "n": 496,
-     "primary": 6.5,
-     "feasibility": 76.6
+     "n": 140,
+     "primary": 3.7,
+     "feasibility": 88.2
     },
     {
      "month": "2025-08",
-     "n": 333,
-     "primary": 6.1,
-     "feasibility": 72.5
+     "n": 161,
+     "primary": 3.8,
+     "feasibility": 87.4
     },
     {
      "month": "2025-09",
-     "n": 275,
-     "primary": 6,
-     "feasibility": 74.7
+     "n": 143,
+     "primary": 3.8,
+     "feasibility": 90.4
     },
     {
      "month": "2025-10",
-     "n": 303,
-     "primary": 5.8,
-     "feasibility": 75.7
+     "n": 161,
+     "primary": 3.7,
+     "feasibility": 86.7
     },
     {
      "month": "2025-11",
-     "n": 378,
-     "primary": 5.9,
-     "feasibility": 74.7
+     "n": 98,
+     "primary": 3.5,
+     "feasibility": 88.7
     },
     {
      "month": "2025-12",
-     "n": 457,
-     "primary": 6.1,
-     "feasibility": 76.5
+     "n": 135,
+     "primary": 3.6,
+     "feasibility": 90.3
     },
     {
      "month": "2026-01",
-     "n": 290,
-     "primary": 6.2,
-     "feasibility": 74.5
+     "n": 158,
+     "primary": 3.6,
+     "feasibility": 89.5
     },
     {
      "month": "2026-02",
-     "n": 328,
-     "primary": 5.7,
-     "feasibility": 75
+     "n": 131,
+     "primary": 3.7,
+     "feasibility": 88.4
     },
     {
      "month": "2026-03",
-     "n": 410,
-     "primary": 6.1,
-     "feasibility": 75.6
+     "n": 168,
+     "primary": 3.6,
+     "feasibility": 91.6
     },
     {
      "month": "2026-04",
-     "n": 288,
-     "primary": 5.8,
-     "feasibility": 73
+     "n": 167,
+     "primary": 3.8,
+     "feasibility": 87.9
     },
     {
      "month": "2026-05",
-     "n": 405,
-     "primary": 6.1,
-     "feasibility": 74.3
+     "n": 113,
+     "primary": 3.4,
+     "feasibility": 86.5
     },
     {
      "month": "2026-06",
-     "n": 301,
-     "primary": 6.1,
-     "feasibility": 74.5
+     "n": 108,
+     "primary": 3.6,
+     "feasibility": 87.2
     }
    ]
   },
@@ -8806,21 +8527,20 @@ window.AIECHO_REGISTRY = {
    "evaluation_type": "comprehensive",
    "evaluable": true,
    "cohort": {
-    "n_studies": 10900,
-    "n_sites": 8,
+    "n_studies": 5920,
+    "n_sites": 5,
     "sites": [
-     "Site D",
-     "Site E",
-     "Site B",
-     "Site H",
-     "Site A",
      "Site F",
-     "Site C",
-     "Site G"
+     "Site B",
+     "Site E",
+     "Site D",
+     "Site A"
     ],
     "vendors": [
-     "Siemens Healthineers",
-     "Philips"
+     "Canon Medical",
+     "Philips",
+     "GE HealthCare",
+     "Siemens Healthineers"
     ],
     "period": "2025-01 to 2026-06",
     "module": "Adult TTE (phase 1)"
@@ -8830,10 +8550,10 @@ window.AIECHO_REGISTRY = {
      "id": "feasibility",
      "label": "Feasibility (studies with an AI output)",
      "unit": "%",
-     "value": 74.3,
+     "value": 91.5,
      "ci": {
-      "low": 74.1,
-      "high": 74.5
+      "low": 91.3,
+      "high": 91.7
      },
      "direction": "higher",
      "reference": "All eligible registry TTEs"
@@ -8842,10 +8562,10 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_mae",
      "label": "LVEF mean absolute error",
      "unit": "% EF",
-     "value": 5.4,
+     "value": 5.7,
      "ci": {
-      "low": 5.36,
-      "high": 5.44
+      "low": 5.65,
+      "high": 5.75
      },
      "direction": "lower",
      "reference": "Registry-reported LVEF (finalized clinical report)",
@@ -8855,10 +8575,10 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_bias",
      "label": "LVEF bias (AI minus reported)",
      "unit": "% EF",
-     "value": -0.2,
+     "value": 0.3,
      "ci": {
-      "low": -0.25,
-      "high": -0.15
+      "low": 0.24,
+      "high": 0.36
      },
      "direction": "zero",
      "reference": "Registry-reported LVEF"
@@ -8867,10 +8587,10 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_loa",
      "label": "95% limits of agreement (half-width)",
      "unit": "% EF",
-     "value": 13.2,
+     "value": 10.5,
      "ci": {
-      "low": 13.1,
-      "high": 13.3
+      "low": 10.4,
+      "high": 10.6
      },
      "direction": "lower",
      "reference": "Bland-Altman vs reported LVEF"
@@ -8879,10 +8599,10 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_icc",
      "label": "ICC, AI vs reported LVEF",
      "unit": "",
-     "value": 0.889,
+     "value": 0.79,
      "ci": {
-      "low": 0.886,
-      "high": 0.892
+      "low": 0.786,
+      "high": 0.794
      },
      "direction": "higher",
      "reference": "Two-way mixed, absolute agreement"
@@ -8891,10 +8611,10 @@ window.AIECHO_REGISTRY = {
      "id": "ef40_sens",
      "label": "LVEF ≤ 40%: sensitivity",
      "unit": "%",
-     "value": 87.7,
+     "value": 92,
      "ci": {
-      "low": 87.4,
-      "high": 88
+      "low": 91.6,
+      "high": 92.4
      },
      "direction": "higher",
      "reference": "Reported LVEF ≤ 40%"
@@ -8903,10 +8623,10 @@ window.AIECHO_REGISTRY = {
      "id": "ef40_spec",
      "label": "LVEF ≤ 40%: specificity",
      "unit": "%",
-     "value": 88.8,
+     "value": 87.9,
      "ci": {
-      "low": 88.6,
-      "high": 89
+      "low": 87.6,
+      "high": 88.2
      },
      "direction": "higher",
      "reference": "Reported LVEF > 40%"
@@ -8915,10 +8635,10 @@ window.AIECHO_REGISTRY = {
      "id": "edv_mae",
      "label": "LV end-diastolic volume MAE",
      "unit": "mL",
-     "value": 17.9,
+     "value": 19.7,
      "ci": {
-      "low": 17.7,
-      "high": 18.1
+      "low": 19.4,
+      "high": 20
      },
      "direction": "lower",
      "reference": "Registry-reported LVEDV"
@@ -8927,10 +8647,10 @@ window.AIECHO_REGISTRY = {
      "id": "gls_bias",
      "label": "GLS bias (AI minus reported)",
      "unit": "%",
-     "value": -0.41,
+     "value": 1.39,
      "ci": {
-      "low": -0.44,
-      "high": -0.38
+      "low": 1.35,
+      "high": 1.43
      },
      "direction": "zero",
      "reference": "Registry-reported GLS where present"
@@ -8939,10 +8659,10 @@ window.AIECHO_REGISTRY = {
      "id": "ee_icc",
      "label": "E/e′ ICC",
      "unit": "",
-     "value": 0.845,
+     "value": 0.795,
      "ci": {
-      "low": 0.841,
-      "high": 0.849
+      "low": 0.79,
+      "high": 0.8
      },
      "direction": "higher",
      "reference": "Registry-reported E/e′"
@@ -8951,10 +8671,10 @@ window.AIECHO_REGISTRY = {
      "id": "avmg_icc",
      "label": "AV mean gradient ICC",
      "unit": "",
-     "value": 0.907,
+     "value": 0.888,
      "ci": {
-      "low": 0.903,
-      "high": 0.911
+      "low": 0.883,
+      "high": 0.893
      },
      "direction": "higher",
      "reference": "Registry metric: mean and peak gradients for valvular disease"
@@ -8965,220 +8685,221 @@ window.AIECHO_REGISTRY = {
     {
      "dimension": "Sex",
      "level": "Female",
-     "value": 5.8,
-     "n": 1050
+     "value": 5.9,
+     "n": 500
     },
     {
      "dimension": "Sex",
      "level": "Male",
-     "value": 4.8,
-     "n": 3670
+     "value": 5.5,
+     "n": 2850
     },
     {
      "dimension": "Age",
      "level": "< 50",
-     "value": 5.4,
-     "n": 1370
+     "value": 5.1,
+     "n": 1210
     },
     {
      "dimension": "Age",
      "level": "50–69",
-     "value": 4.9,
-     "n": 3140
+     "value": 6.2,
+     "n": 1560
     },
     {
      "dimension": "Age",
      "level": "≥ 70",
-     "value": 5.1,
-     "n": 2840
+     "value": 5.8,
+     "n": 2660
     },
     {
      "dimension": "BMI",
      "level": "< 30",
-     "value": 5.6,
-     "n": 260
+     "value": 6.1,
+     "n": 1480
     },
     {
      "dimension": "BMI",
      "level": "≥ 30",
-     "value": 6.4,
-     "n": 3110
+     "value": 6.1,
+     "n": 1790
     },
     {
      "dimension": "Image quality",
      "level": "Good",
-     "value": 5.1,
-     "n": 3770
+     "value": 6.3,
+     "n": 3660
     },
     {
      "dimension": "Image quality",
      "level": "Adequate",
-     "value": 6,
-     "n": 4020
+     "value": 5,
+     "n": 2780
     },
     {
      "dimension": "Image quality",
      "level": "Poor",
-     "value": 6.7,
-     "n": 210
+     "value": 7.9,
+     "n": 2660
     },
     {
      "dimension": "Vendor",
      "level": "GE HealthCare",
-     "value": 4.8,
-     "n": 3840
+     "value": 6,
+     "n": 3290
     },
     {
      "dimension": "Vendor",
      "level": "Philips",
-     "value": 5.1,
-     "n": 3440
+     "value": 5.9,
+     "n": 3130
     },
     {
      "dimension": "Vendor",
      "level": "Siemens Healthineers",
-     "value": 4.9,
-     "n": 3740
+     "value": 5.3,
+     "n": 4100
     },
     {
      "dimension": "Vendor",
      "level": "Canon Medical",
-     "value": 5.5,
-     "n": 1360
+     "value": 6.1,
+     "n": 1050
     }
    ],
    "monthly": [
     {
      "month": "2025-01",
-     "n": 548,
+     "n": 391,
      "primary": 5.7,
-     "feasibility": 74.9
+     "feasibility": 91
     },
     {
      "month": "2025-02",
-     "n": 480,
-     "primary": 5.6,
-     "feasibility": 72.5
+     "n": 423,
+     "primary": 5.9,
+     "feasibility": 90.9
     },
     {
      "month": "2025-03",
-     "n": 471,
-     "primary": 5.3,
-     "feasibility": 73.2
+     "n": 410,
+     "primary": 5.5,
+     "feasibility": 91.5
     },
     {
      "month": "2025-04",
-     "n": 512,
+     "n": 355,
      "primary": 5.7,
-     "feasibility": 73.2
+     "feasibility": 94
     },
     {
      "month": "2025-05",
-     "n": 669,
-     "primary": 5.5,
-     "feasibility": 76
+     "n": 247,
+     "primary": 6.1,
+     "feasibility": 89
     },
     {
      "month": "2025-06",
-     "n": 646,
-     "primary": 5.7,
-     "feasibility": 74.4
+     "n": 249,
+     "primary": 5.9,
+     "feasibility": 91.3
     },
     {
      "month": "2025-07",
-     "n": 646,
-     "primary": 5.6,
-     "feasibility": 75.5
+     "n": 363,
+     "primary": 6,
+     "feasibility": 91
     },
     {
      "month": "2025-08",
-     "n": 581,
-     "primary": 5.4,
-     "feasibility": 73.1
+     "n": 292,
+     "primary": 5.8,
+     "feasibility": 90.8
     },
     {
      "month": "2025-09",
-     "n": 765,
-     "primary": 5.5,
-     "feasibility": 75.6
+     "n": 368,
+     "primary": 6,
+     "feasibility": 90.6
     },
     {
      "month": "2025-10",
-     "n": 752,
-     "primary": 5.5,
-     "feasibility": 72.4
+     "n": 422,
+     "primary": 5.8,
+     "feasibility": 89.6
     },
     {
      "month": "2025-11",
-     "n": 543,
+     "n": 390,
      "primary": 5.5,
-     "feasibility": 72.3
+     "feasibility": 89.5
     },
     {
      "month": "2025-12",
-     "n": 517,
+     "n": 241,
      "primary": 5.5,
-     "feasibility": 73.6
+     "feasibility": 90.1
     },
     {
      "month": "2026-01",
-     "n": 644,
+     "n": 373,
      "primary": 5.4,
-     "feasibility": 75.5
+     "feasibility": 92.5
     },
     {
      "month": "2026-02",
-     "n": 542,
-     "primary": 5.2,
-     "feasibility": 73.9
+     "n": 300,
+     "primary": 5.8,
+     "feasibility": 92.1
     },
     {
      "month": "2026-03",
-     "n": 769,
-     "primary": 5.4,
-     "feasibility": 72.1
+     "n": 396,
+     "primary": 5.6,
+     "feasibility": 92.1
     },
     {
      "month": "2026-04",
-     "n": 659,
-     "primary": 5.5,
-     "feasibility": 74.8
+     "n": 343,
+     "primary": 5.7,
+     "feasibility": 91.1
     },
     {
      "month": "2026-05",
-     "n": 691,
+     "n": 294,
      "primary": 5.4,
-     "feasibility": 75
+     "feasibility": 93.9
     },
     {
      "month": "2026-06",
-     "n": 690,
-     "primary": 5.1,
-     "feasibility": 76.4
+     "n": 328,
+     "primary": 5.7,
+     "feasibility": 93.7
     }
    ]
   },
   "echogo-core": {
    "family_id": "echogo-core",
    "product_name": "EchoGo Core",
-   "company": "Ultromics",
-   "evaluation_type": "comprehensive",
+   "company": "Ultromics Limited",
+   "evaluation_type": "lvef",
    "evaluable": true,
    "cohort": {
-    "n_studies": 4450,
-    "n_sites": 5,
+    "n_studies": 2190,
+    "n_sites": 7,
     "sites": [
-     "Site A",
+     "Site F",
      "Site G",
-     "Site B",
      "Site H",
-     "Site E"
+     "Site B",
+     "Site D",
+     "Site A",
+     "Site C"
     ],
     "vendors": [
-     "Philips",
      "Canon Medical",
-     "Siemens Healthineers",
-     "GE HealthCare"
+     "Philips",
+     "Siemens Healthineers"
     ],
     "period": "2025-01 to 2026-06",
     "module": "Adult TTE (phase 1)"
@@ -9188,10 +8909,10 @@ window.AIECHO_REGISTRY = {
      "id": "feasibility",
      "label": "Feasibility (studies with an AI output)",
      "unit": "%",
-     "value": 85.7,
+     "value": 93.4,
      "ci": {
-      "low": 85.4,
-      "high": 86
+      "low": 93,
+      "high": 93.8
      },
      "direction": "higher",
      "reference": "All eligible registry TTEs"
@@ -9200,10 +8921,10 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_mae",
      "label": "LVEF mean absolute error",
      "unit": "% EF",
-     "value": 6.5,
+     "value": 7.3,
      "ci": {
-      "low": 6.44,
-      "high": 6.56
+      "low": 7.22,
+      "high": 7.38
      },
      "direction": "lower",
      "reference": "Registry-reported LVEF (finalized clinical report)",
@@ -9215,8 +8936,8 @@ window.AIECHO_REGISTRY = {
      "unit": "% EF",
      "value": 2.2,
      "ci": {
-      "low": 2.13,
-      "high": 2.27
+      "low": 2.1,
+      "high": 2.3
      },
      "direction": "zero",
      "reference": "Registry-reported LVEF"
@@ -9225,10 +8946,10 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_loa",
      "label": "95% limits of agreement (half-width)",
      "unit": "% EF",
-     "value": 13,
+     "value": 10.9,
      "ci": {
-      "low": 12.9,
-      "high": 13.1
+      "low": 10.8,
+      "high": 11
      },
      "direction": "lower",
      "reference": "Bland-Altman vs reported LVEF"
@@ -9237,10 +8958,10 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_icc",
      "label": "ICC, AI vs reported LVEF",
      "unit": "",
-     "value": 0.848,
+     "value": 0.781,
      "ci": {
-      "low": 0.843,
-      "high": 0.853
+      "low": 0.774,
+      "high": 0.788
      },
      "direction": "higher",
      "reference": "Two-way mixed, absolute agreement"
@@ -9249,10 +8970,10 @@ window.AIECHO_REGISTRY = {
      "id": "ef40_sens",
      "label": "LVEF ≤ 40%: sensitivity",
      "unit": "%",
-     "value": 94.9,
+     "value": 82.6,
      "ci": {
-      "low": 94.4,
-      "high": 95.4
+      "low": 81.9,
+      "high": 83.3
      },
      "direction": "higher",
      "reference": "Reported LVEF ≤ 40%"
@@ -9261,61 +8982,13 @@ window.AIECHO_REGISTRY = {
      "id": "ef40_spec",
      "label": "LVEF ≤ 40%: specificity",
      "unit": "%",
-     "value": 85,
+     "value": 95.9,
      "ci": {
-      "low": 84.7,
-      "high": 85.3
+      "low": 95.4,
+      "high": 96.4
      },
      "direction": "higher",
      "reference": "Reported LVEF > 40%"
-    },
-    {
-     "id": "edv_mae",
-     "label": "LV end-diastolic volume MAE",
-     "unit": "mL",
-     "value": 16.7,
-     "ci": {
-      "low": 16.3,
-      "high": 17.1
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEDV"
-    },
-    {
-     "id": "gls_bias",
-     "label": "GLS bias (AI minus reported)",
-     "unit": "%",
-     "value": 0.57,
-     "ci": {
-      "low": 0.52,
-      "high": 0.62
-     },
-     "direction": "zero",
-     "reference": "Registry-reported GLS where present"
-    },
-    {
-     "id": "ee_icc",
-     "label": "E/e′ ICC",
-     "unit": "",
-     "value": 0.769,
-     "ci": {
-      "low": 0.763,
-      "high": 0.775
-     },
-     "direction": "higher",
-     "reference": "Registry-reported E/e′"
-    },
-    {
-     "id": "avmg_icc",
-     "label": "AV mean gradient ICC",
-     "unit": "",
-     "value": 0.909,
-     "ci": {
-      "low": 0.903,
-      "high": 0.915
-     },
-     "direction": "higher",
-     "reference": "Registry metric: mean and peak gradients for valvular disease"
     }
    ],
    "primary_endpoint_id": "lvef_mae",
@@ -9323,218 +8996,503 @@ window.AIECHO_REGISTRY = {
     {
      "dimension": "Sex",
      "level": "Female",
-     "value": 6.2,
-     "n": 960
+     "value": 7.4,
+     "n": 230
     },
     {
      "dimension": "Sex",
      "level": "Male",
-     "value": 7,
-     "n": 1260
+     "value": 6.5,
+     "n": 1420
     },
     {
      "dimension": "Age",
      "level": "< 50",
-     "value": 6,
-     "n": 2790
+     "value": 6.6,
+     "n": 800
     },
     {
      "dimension": "Age",
      "level": "50–69",
-     "value": 6.2,
-     "n": 1680
+     "value": 7.8,
+     "n": 2660
     },
     {
      "dimension": "Age",
      "level": "≥ 70",
-     "value": 6.7,
-     "n": 1210
+     "value": 7.3,
+     "n": 1440
     },
     {
      "dimension": "BMI",
      "level": "< 30",
-     "value": 6.1,
-     "n": 1370
+     "value": 6.6,
+     "n": 2300
     },
     {
      "dimension": "BMI",
      "level": "≥ 30",
-     "value": 6.6,
-     "n": 3480
+     "value": 7.9,
+     "n": 3270
     },
     {
      "dimension": "Image quality",
      "level": "Good",
-     "value": 6.6,
-     "n": 290
+     "value": 7.3,
+     "n": 1860
     },
     {
      "dimension": "Image quality",
      "level": "Adequate",
      "value": 7,
-     "n": 2060
+     "n": 1780
     },
     {
      "dimension": "Image quality",
      "level": "Poor",
-     "value": 7.7,
-     "n": 3510
+     "value": 9.3,
+     "n": 1560
     },
     {
      "dimension": "Vendor",
      "level": "GE HealthCare",
-     "value": 7.2,
-     "n": 800
+     "value": 7.7,
+     "n": 510
     },
     {
      "dimension": "Vendor",
      "level": "Philips",
-     "value": 7.2,
-     "n": 3020
+     "value": 7.4,
+     "n": 520
     },
     {
      "dimension": "Vendor",
      "level": "Siemens Healthineers",
-     "value": 5.7,
-     "n": 1650
+     "value": 7.5,
+     "n": 1000
     },
     {
      "dimension": "Vendor",
      "level": "Canon Medical",
-     "value": 6,
-     "n": 3870
+     "value": 8,
+     "n": 2790
     }
    ],
    "monthly": [
     {
      "month": "2025-01",
-     "n": 307,
-     "primary": 6.4,
-     "feasibility": 83.7
+     "n": 103,
+     "primary": 7.5,
+     "feasibility": 91.4
     },
     {
      "month": "2025-02",
-     "n": 303,
-     "primary": 6.8,
-     "feasibility": 86.9
+     "n": 150,
+     "primary": 7.4,
+     "feasibility": 92.2
     },
     {
      "month": "2025-03",
-     "n": 181,
-     "primary": 6.4,
-     "feasibility": 85
+     "n": 94,
+     "primary": 7.4,
+     "feasibility": 93.2
     },
     {
      "month": "2025-04",
-     "n": 223,
-     "primary": 6.8,
-     "feasibility": 84.6
+     "n": 111,
+     "primary": 7.8,
+     "feasibility": 96
     },
     {
      "month": "2025-05",
-     "n": 319,
-     "primary": 6.6,
-     "feasibility": 85.7
+     "n": 155,
+     "primary": 7.4,
+     "feasibility": 95
     },
     {
      "month": "2025-06",
-     "n": 290,
-     "primary": 6.5,
-     "feasibility": 87.9
+     "n": 85,
+     "primary": 7.7,
+     "feasibility": 92.1
     },
     {
      "month": "2025-07",
-     "n": 317,
-     "primary": 6.9,
-     "feasibility": 83.6
+     "n": 152,
+     "primary": 7.6,
+     "feasibility": 94.9
     },
     {
      "month": "2025-08",
-     "n": 281,
-     "primary": 6.5,
-     "feasibility": 87.6
+     "n": 155,
+     "primary": 7.6,
+     "feasibility": 93
     },
     {
      "month": "2025-09",
-     "n": 258,
-     "primary": 6.3,
-     "feasibility": 83.4
+     "n": 152,
+     "primary": 7.1,
+     "feasibility": 92.2
     },
     {
      "month": "2025-10",
-     "n": 219,
-     "primary": 6.3,
-     "feasibility": 83.9
+     "n": 135,
+     "primary": 7.2,
+     "feasibility": 95.3
     },
     {
      "month": "2025-11",
-     "n": 292,
-     "primary": 6.6,
-     "feasibility": 85.6
+     "n": 151,
+     "primary": 7.2,
+     "feasibility": 91.3
     },
     {
      "month": "2025-12",
-     "n": 220,
-     "primary": 6.2,
-     "feasibility": 85.8
+     "n": 149,
+     "primary": 7.5,
+     "feasibility": 94.8
     },
     {
      "month": "2026-01",
-     "n": 233,
-     "primary": 6.5,
-     "feasibility": 85.8
+     "n": 89,
+     "primary": 6.9,
+     "feasibility": 92.7
     },
     {
      "month": "2026-02",
-     "n": 235,
-     "primary": 6.2,
-     "feasibility": 85.2
+     "n": 110,
+     "primary": 7.3,
+     "feasibility": 92.2
     },
     {
      "month": "2026-03",
-     "n": 240,
-     "primary": 6.2,
-     "feasibility": 86.9
+     "n": 157,
+     "primary": 7,
+     "feasibility": 93.4
     },
     {
      "month": "2026-04",
-     "n": 185,
-     "primary": 6.4,
-     "feasibility": 83.6
+     "n": 143,
+     "primary": 6.9,
+     "feasibility": 95.8
     },
     {
      "month": "2026-05",
-     "n": 263,
-     "primary": 6.1,
-     "feasibility": 87.8
+     "n": 156,
+     "primary": 7.4,
+     "feasibility": 91.1
     },
     {
      "month": "2026-06",
-     "n": 269,
-     "primary": 6.3,
-     "feasibility": 87.6
+     "n": 138,
+     "primary": 7,
+     "feasibility": 95.5
     }
    ]
   },
   "echogo-pro": {
    "family_id": "echogo-pro",
    "product_name": "EchoGo Pro",
-   "company": "Ultromics",
+   "company": "Ultromics Limited",
+   "evaluation_type": "detection",
+   "evaluable": true,
+   "cohort": {
+    "n_studies": 11890,
+    "n_sites": 7,
+    "sites": [
+     "Site H",
+     "Site D",
+     "Site F",
+     "Site A",
+     "Site G",
+     "Site E",
+     "Site B"
+    ],
+    "vendors": [
+     "Siemens Healthineers",
+     "GE HealthCare"
+    ],
+    "period": "2025-01 to 2026-06",
+    "module": "Adult TTE (phase 1)"
+   },
+   "endpoints": [
+    {
+     "id": "feasibility",
+     "label": "Feasibility (studies with an AI output)",
+     "unit": "%",
+     "value": 79.1,
+     "ci": {
+      "low": 78.9,
+      "high": 79.3
+     },
+     "direction": "higher",
+     "reference": "All eligible registry TTEs"
+    },
+    {
+     "id": "auc",
+     "label": "AUC",
+     "unit": "",
+     "value": 0.84,
+     "ci": {
+      "low": 0.836,
+      "high": 0.844
+     },
+     "direction": "higher",
+     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)",
+     "primary": true
+    },
+    {
+     "id": "sens",
+     "label": "Sensitivity",
+     "unit": "%",
+     "value": 91.1,
+     "ci": {
+      "low": 90.7,
+      "high": 91.5
+     },
+     "direction": "higher",
+     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+    },
+    {
+     "id": "spec",
+     "label": "Specificity",
+     "unit": "%",
+     "value": 88.8,
+     "ci": {
+      "low": 88.6,
+      "high": 89
+     },
+     "direction": "higher",
+     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+    },
+    {
+     "id": "ppv",
+     "label": "PPV at registry prevalence (3.1%)",
+     "unit": "%",
+     "value": 20.6,
+     "ci": {
+      "low": 20.2,
+      "high": 21
+     },
+     "direction": "higher",
+     "reference": "Derived from sensitivity, specificity and cohort prevalence"
+    }
+   ],
+   "primary_endpoint_id": "auc",
+   "subgroups": [
+    {
+     "dimension": "Sex",
+     "level": "Female",
+     "value": 0.893,
+     "n": 930
+    },
+    {
+     "dimension": "Sex",
+     "level": "Male",
+     "value": 0.741,
+     "n": 2530
+    },
+    {
+     "dimension": "Age",
+     "level": "< 50",
+     "value": 0.778,
+     "n": 2000
+    },
+    {
+     "dimension": "Age",
+     "level": "50–69",
+     "value": 0.768,
+     "n": 380
+    },
+    {
+     "dimension": "Age",
+     "level": "≥ 70",
+     "value": 0.893,
+     "n": 920
+    },
+    {
+     "dimension": "BMI",
+     "level": "< 30",
+     "value": 0.876,
+     "n": 900
+    },
+    {
+     "dimension": "BMI",
+     "level": "≥ 30",
+     "value": 0.896,
+     "n": 3120
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Good",
+     "value": 0.852,
+     "n": 510
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Adequate",
+     "value": 0.856,
+     "n": 4150
+    },
+    {
+     "dimension": "Image quality",
+     "level": "Poor",
+     "value": 0.711,
+     "n": 4140
+    },
+    {
+     "dimension": "Vendor",
+     "level": "GE HealthCare",
+     "value": 0.806,
+     "n": 1130
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Philips",
+     "value": 0.883,
+     "n": 1890
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Siemens Healthineers",
+     "value": 0.863,
+     "n": 770
+    },
+    {
+     "dimension": "Vendor",
+     "level": "Canon Medical",
+     "value": 0.769,
+     "n": 1740
+    }
+   ],
+   "monthly": [
+    {
+     "month": "2025-01",
+     "n": 473,
+     "primary": 0.865,
+     "feasibility": 78.9
+    },
+    {
+     "month": "2025-02",
+     "n": 514,
+     "primary": 0.876,
+     "feasibility": 81.4
+    },
+    {
+     "month": "2025-03",
+     "n": 524,
+     "primary": 0.892,
+     "feasibility": 80.1
+    },
+    {
+     "month": "2025-04",
+     "n": 464,
+     "primary": 0.85,
+     "feasibility": 77.7
+    },
+    {
+     "month": "2025-05",
+     "n": 826,
+     "primary": 0.832,
+     "feasibility": 79.1
+    },
+    {
+     "month": "2025-06",
+     "n": 737,
+     "primary": 0.896,
+     "feasibility": 81
+    },
+    {
+     "month": "2025-07",
+     "n": 627,
+     "primary": 0.85,
+     "feasibility": 78.5
+    },
+    {
+     "month": "2025-08",
+     "n": 614,
+     "primary": 0.865,
+     "feasibility": 81
+    },
+    {
+     "month": "2025-09",
+     "n": 506,
+     "primary": 0.861,
+     "feasibility": 81.4
+    },
+    {
+     "month": "2025-10",
+     "n": 774,
+     "primary": 0.812,
+     "feasibility": 77.7
+    },
+    {
+     "month": "2025-11",
+     "n": 830,
+     "primary": 0.876,
+     "feasibility": 77.7
+    },
+    {
+     "month": "2025-12",
+     "n": 705,
+     "primary": 0.825,
+     "feasibility": 77.2
+    },
+    {
+     "month": "2026-01",
+     "n": 478,
+     "primary": 0.804,
+     "feasibility": 77.1
+    },
+    {
+     "month": "2026-02",
+     "n": 701,
+     "primary": 0.825,
+     "feasibility": 77
+    },
+    {
+     "month": "2026-03",
+     "n": 798,
+     "primary": 0.834,
+     "feasibility": 79.4
+    },
+    {
+     "month": "2026-04",
+     "n": 523,
+     "primary": 0.816,
+     "feasibility": 77.2
+    },
+    {
+     "month": "2026-05",
+     "n": 560,
+     "primary": 0.854,
+     "feasibility": 78.6
+    },
+    {
+     "month": "2026-06",
+     "n": 624,
+     "primary": 0.863,
+     "feasibility": 80.3
+    }
+   ]
+  },
+  "ventripoint-vms": {
+   "family_id": "ventripoint-vms",
+   "product_name": "Ventripoint Medical System Plus (VMS+)",
+   "company": "Ventripoint Diagnostics",
    "evaluation_type": "comprehensive",
    "evaluable": true,
    "cohort": {
-    "n_studies": 4250,
-    "n_sites": 6,
+    "n_studies": 2490,
+    "n_sites": 5,
     "sites": [
-     "Site E",
+     "Site H",
+     "Site C",
      "Site A",
      "Site D",
-     "Site B",
-     "Site C",
-     "Site H"
+     "Site E"
     ],
     "vendors": [
-     "Philips",
+     "Siemens Healthineers",
      "GE HealthCare",
      "Canon Medical"
     ],
@@ -9546,10 +9504,10 @@ window.AIECHO_REGISTRY = {
      "id": "feasibility",
      "label": "Feasibility (studies with an AI output)",
      "unit": "%",
-     "value": 95.7,
+     "value": 84.5,
      "ci": {
-      "low": 95.4,
-      "high": 96
+      "low": 84.1,
+      "high": 84.9
      },
      "direction": "higher",
      "reference": "All eligible registry TTEs"
@@ -9558,10 +9516,10 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_mae",
      "label": "LVEF mean absolute error",
      "unit": "% EF",
-     "value": 6.6,
+     "value": 4.7,
      "ci": {
-      "low": 6.54,
-      "high": 6.66
+      "low": 4.62,
+      "high": 4.78
      },
      "direction": "lower",
      "reference": "Registry-reported LVEF (finalized clinical report)",
@@ -9571,10 +9529,10 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_bias",
      "label": "LVEF bias (AI minus reported)",
      "unit": "% EF",
-     "value": -1.9,
+     "value": 0.9,
      "ci": {
-      "low": -1.97,
-      "high": -1.83
+      "low": 0.8,
+      "high": 1
      },
      "direction": "zero",
      "reference": "Registry-reported LVEF"
@@ -9583,10 +9541,10 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_loa",
      "label": "95% limits of agreement (half-width)",
      "unit": "% EF",
-     "value": 9.9,
+     "value": 11,
      "ci": {
-      "low": 9.8,
-      "high": 10
+      "low": 10.9,
+      "high": 11.1
      },
      "direction": "lower",
      "reference": "Bland-Altman vs reported LVEF"
@@ -9595,10 +9553,10 @@ window.AIECHO_REGISTRY = {
      "id": "lvef_icc",
      "label": "ICC, AI vs reported LVEF",
      "unit": "",
-     "value": 0.929,
+     "value": 0.858,
      "ci": {
-      "low": 0.924,
-      "high": 0.934
+      "low": 0.852,
+      "high": 0.864
      },
      "direction": "higher",
      "reference": "Two-way mixed, absolute agreement"
@@ -9607,10 +9565,10 @@ window.AIECHO_REGISTRY = {
      "id": "ef40_sens",
      "label": "LVEF ≤ 40%: sensitivity",
      "unit": "%",
-     "value": 95.4,
+     "value": 83.7,
      "ci": {
-      "low": 94.9,
-      "high": 95.9
+      "low": 83.1,
+      "high": 84.3
      },
      "direction": "higher",
      "reference": "Reported LVEF ≤ 40%"
@@ -9621,8 +9579,8 @@ window.AIECHO_REGISTRY = {
      "unit": "%",
      "value": 87.5,
      "ci": {
-      "low": 87.2,
-      "high": 87.8
+      "low": 87.1,
+      "high": 87.9
      },
      "direction": "higher",
      "reference": "Reported LVEF > 40%"
@@ -9631,10 +9589,10 @@ window.AIECHO_REGISTRY = {
      "id": "edv_mae",
      "label": "LV end-diastolic volume MAE",
      "unit": "mL",
-     "value": 21.8,
+     "value": 22.9,
      "ci": {
-      "low": 21.4,
-      "high": 22.2
+      "low": 22.4,
+      "high": 23.4
      },
      "direction": "lower",
      "reference": "Registry-reported LVEDV"
@@ -9643,10 +9601,10 @@ window.AIECHO_REGISTRY = {
      "id": "gls_bias",
      "label": "GLS bias (AI minus reported)",
      "unit": "%",
-     "value": -0.2,
+     "value": -0.88,
      "ci": {
-      "low": -0.25,
-      "high": -0.15
+      "low": -0.94,
+      "high": -0.82
      },
      "direction": "zero",
      "reference": "Registry-reported GLS where present"
@@ -9655,10 +9613,10 @@ window.AIECHO_REGISTRY = {
      "id": "ee_icc",
      "label": "E/e′ ICC",
      "unit": "",
-     "value": 0.739,
+     "value": 0.744,
      "ci": {
-      "low": 0.733,
-      "high": 0.745
+      "low": 0.736,
+      "high": 0.752
      },
      "direction": "higher",
      "reference": "Registry-reported E/e′"
@@ -9667,10 +9625,10 @@ window.AIECHO_REGISTRY = {
      "id": "avmg_icc",
      "label": "AV mean gradient ICC",
      "unit": "",
-     "value": 0.805,
+     "value": 0.88,
      "ci": {
-      "low": 0.799,
-      "high": 0.811
+      "low": 0.872,
+      "high": 0.888
      },
      "direction": "higher",
      "reference": "Registry metric: mean and peak gradients for valvular disease"
@@ -9681,553 +9639,196 @@ window.AIECHO_REGISTRY = {
     {
      "dimension": "Sex",
      "level": "Female",
-     "value": 6.6,
-     "n": 2180
+     "value": 4.9,
+     "n": 2260
     },
     {
      "dimension": "Sex",
      "level": "Male",
-     "value": 6.4,
-     "n": 2540
+     "value": 4.1,
+     "n": 1650
     },
     {
      "dimension": "Age",
      "level": "< 50",
-     "value": 6.6,
-     "n": 1350
+     "value": 4.8,
+     "n": 3390
     },
     {
      "dimension": "Age",
      "level": "50–69",
-     "value": 6.9,
-     "n": 1590
+     "value": 4.5,
+     "n": 1230
     },
     {
      "dimension": "Age",
      "level": "≥ 70",
-     "value": 6.6,
-     "n": 670
+     "value": 4.5,
+     "n": 1620
     },
     {
      "dimension": "BMI",
      "level": "< 30",
-     "value": 6.1,
-     "n": 2920
+     "value": 4.3,
+     "n": 3660
     },
     {
      "dimension": "BMI",
      "level": "≥ 30",
-     "value": 6.8,
-     "n": 720
+     "value": 5.6,
+     "n": 3940
     },
     {
      "dimension": "Image quality",
      "level": "Good",
-     "value": 6.8,
-     "n": 2980
+     "value": 4.5,
+     "n": 940
     },
     {
      "dimension": "Image quality",
      "level": "Adequate",
-     "value": 6.5,
-     "n": 1940
+     "value": 4.2,
+     "n": 250
     },
     {
      "dimension": "Image quality",
      "level": "Poor",
-     "value": 7.9,
-     "n": 2370
+     "value": 5.6,
+     "n": 3640
     },
     {
      "dimension": "Vendor",
      "level": "GE HealthCare",
-     "value": 6.8,
-     "n": 3130
+     "value": 5.1,
+     "n": 3800
     },
     {
      "dimension": "Vendor",
      "level": "Philips",
-     "value": 6.7,
-     "n": 730
+     "value": 4.4,
+     "n": 1780
     },
     {
      "dimension": "Vendor",
      "level": "Siemens Healthineers",
-     "value": 6.6,
-     "n": 2180
+     "value": 4.7,
+     "n": 1950
     },
     {
      "dimension": "Vendor",
      "level": "Canon Medical",
-     "value": 6.1,
-     "n": 810
-    }
-   ],
-   "monthly": [
-    {
-     "month": "2025-01",
-     "n": 204,
-     "primary": 6.3,
-     "feasibility": 96.3
-    },
-    {
-     "month": "2025-02",
-     "n": 247,
-     "primary": 6.4,
-     "feasibility": 97.7
-    },
-    {
-     "month": "2025-03",
-     "n": 268,
-     "primary": 6.8,
-     "feasibility": 93.7
-    },
-    {
-     "month": "2025-04",
-     "n": 237,
-     "primary": 6.5,
-     "feasibility": 94.2
-    },
-    {
-     "month": "2025-05",
-     "n": 299,
-     "primary": 6.7,
-     "feasibility": 95.2
-    },
-    {
-     "month": "2025-06",
-     "n": 306,
-     "primary": 7,
-     "feasibility": 97.2
-    },
-    {
-     "month": "2025-07",
-     "n": 192,
-     "primary": 6.5,
-     "feasibility": 96.2
-    },
-    {
-     "month": "2025-08",
-     "n": 192,
-     "primary": 6.7,
-     "feasibility": 93.7
-    },
-    {
-     "month": "2025-09",
-     "n": 172,
-     "primary": 6.9,
-     "feasibility": 93.9
-    },
-    {
-     "month": "2025-10",
-     "n": 262,
-     "primary": 6.4,
-     "feasibility": 98.5
-    },
-    {
-     "month": "2025-11",
-     "n": 269,
-     "primary": 6.6,
-     "feasibility": 93.3
-    },
-    {
-     "month": "2025-12",
-     "n": 247,
-     "primary": 6.8,
-     "feasibility": 95.4
-    },
-    {
-     "month": "2026-01",
-     "n": 305,
-     "primary": 6.4,
-     "feasibility": 94.2
-    },
-    {
-     "month": "2026-02",
-     "n": 266,
-     "primary": 6.4,
-     "feasibility": 96.4
-    },
-    {
-     "month": "2026-03",
-     "n": 186,
-     "primary": 6.2,
-     "feasibility": 95.1
-    },
-    {
-     "month": "2026-04",
-     "n": 170,
-     "primary": 6.3,
-     "feasibility": 94
-    },
-    {
-     "month": "2026-05",
-     "n": 278,
-     "primary": 6.7,
-     "feasibility": 97.7
-    },
-    {
-     "month": "2026-06",
-     "n": 295,
-     "primary": 6.3,
-     "feasibility": 95.3
-    }
-   ]
-  },
-  "ventripoint-vms": {
-   "family_id": "ventripoint-vms",
-   "product_name": "Ventripoint Medical System Plus (VMS+)",
-   "company": "Ventripoint Diagnostics",
-   "evaluation_type": "comprehensive",
-   "evaluable": true,
-   "cohort": {
-    "n_studies": 15860,
-    "n_sites": 6,
-    "sites": [
-     "Site B",
-     "Site C",
-     "Site E",
-     "Site D",
-     "Site A",
-     "Site G"
-    ],
-    "vendors": [
-     "Siemens Healthineers",
-     "Philips"
-    ],
-    "period": "2025-01 to 2026-06",
-    "module": "Adult TTE (phase 1)"
-   },
-   "endpoints": [
-    {
-     "id": "feasibility",
-     "label": "Feasibility (studies with an AI output)",
-     "unit": "%",
-     "value": 75.4,
-     "ci": {
-      "low": 75.2,
-      "high": 75.6
-     },
-     "direction": "higher",
-     "reference": "All eligible registry TTEs"
-    },
-    {
-     "id": "lvef_mae",
-     "label": "LVEF mean absolute error",
-     "unit": "% EF",
-     "value": 5.4,
-     "ci": {
-      "low": 5.37,
-      "high": 5.43
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEF (finalized clinical report)",
-     "primary": true
-    },
-    {
-     "id": "lvef_bias",
-     "label": "LVEF bias (AI minus reported)",
-     "unit": "% EF",
-     "value": 0.1,
-     "ci": {
-      "low": 0.06,
-      "high": 0.14
-     },
-     "direction": "zero",
-     "reference": "Registry-reported LVEF"
-    },
-    {
-     "id": "lvef_loa",
-     "label": "95% limits of agreement (half-width)",
-     "unit": "% EF",
-     "value": 11.1,
-     "ci": {
-      "low": 11,
-      "high": 11.2
-     },
-     "direction": "lower",
-     "reference": "Bland-Altman vs reported LVEF"
-    },
-    {
-     "id": "lvef_icc",
-     "label": "ICC, AI vs reported LVEF",
-     "unit": "",
-     "value": 0.838,
-     "ci": {
-      "low": 0.835,
-      "high": 0.841
-     },
-     "direction": "higher",
-     "reference": "Two-way mixed, absolute agreement"
-    },
-    {
-     "id": "ef40_sens",
-     "label": "LVEF ≤ 40%: sensitivity",
-     "unit": "%",
-     "value": 91.8,
-     "ci": {
-      "low": 91.5,
-      "high": 92.1
-     },
-     "direction": "higher",
-     "reference": "Reported LVEF ≤ 40%"
-    },
-    {
-     "id": "ef40_spec",
-     "label": "LVEF ≤ 40%: specificity",
-     "unit": "%",
-     "value": 94.1,
-     "ci": {
-      "low": 93.9,
-      "high": 94.3
-     },
-     "direction": "higher",
-     "reference": "Reported LVEF > 40%"
-    },
-    {
-     "id": "edv_mae",
-     "label": "LV end-diastolic volume MAE",
-     "unit": "mL",
-     "value": 17.9,
-     "ci": {
-      "low": 17.7,
-      "high": 18.1
-     },
-     "direction": "lower",
-     "reference": "Registry-reported LVEDV"
-    },
-    {
-     "id": "gls_bias",
-     "label": "GLS bias (AI minus reported)",
-     "unit": "%",
-     "value": 0.71,
-     "ci": {
-      "low": 0.68,
-      "high": 0.74
-     },
-     "direction": "zero",
-     "reference": "Registry-reported GLS where present"
-    },
-    {
-     "id": "ee_icc",
-     "label": "E/e′ ICC",
-     "unit": "",
-     "value": 0.745,
-     "ci": {
-      "low": 0.742,
-      "high": 0.748
-     },
-     "direction": "higher",
-     "reference": "Registry-reported E/e′"
-    },
-    {
-     "id": "avmg_icc",
-     "label": "AV mean gradient ICC",
-     "unit": "",
-     "value": 0.924,
-     "ci": {
-      "low": 0.921,
-      "high": 0.927
-     },
-     "direction": "higher",
-     "reference": "Registry metric: mean and peak gradients for valvular disease"
-    }
-   ],
-   "primary_endpoint_id": "lvef_mae",
-   "subgroups": [
-    {
-     "dimension": "Sex",
-     "level": "Female",
-     "value": 5.9,
-     "n": 1370
-    },
-    {
-     "dimension": "Sex",
-     "level": "Male",
-     "value": 5.7,
-     "n": 3600
-    },
-    {
-     "dimension": "Age",
-     "level": "< 50",
-     "value": 6,
-     "n": 1770
-    },
-    {
-     "dimension": "Age",
-     "level": "50–69",
-     "value": 5.9,
-     "n": 630
-    },
-    {
-     "dimension": "Age",
-     "level": "≥ 70",
-     "value": 5.8,
-     "n": 3360
-    },
-    {
-     "dimension": "BMI",
-     "level": "< 30",
-     "value": 6,
-     "n": 2220
-    },
-    {
-     "dimension": "BMI",
-     "level": "≥ 30",
-     "value": 6.4,
-     "n": 1430
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Good",
-     "value": 5.9,
-     "n": 2820
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Adequate",
      "value": 5,
-     "n": 1720
-    },
-    {
-     "dimension": "Image quality",
-     "level": "Poor",
-     "value": 6.7,
-     "n": 2420
-    },
-    {
-     "dimension": "Vendor",
-     "level": "GE HealthCare",
-     "value": 5.9,
-     "n": 3180
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Philips",
-     "value": 5.5,
-     "n": 360
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Siemens Healthineers",
-     "value": 5.5,
-     "n": 2210
-    },
-    {
-     "dimension": "Vendor",
-     "level": "Canon Medical",
-     "value": 6,
-     "n": 2820
+     "n": 880
     }
    ],
    "monthly": [
     {
      "month": "2025-01",
-     "n": 966,
-     "primary": 5.4,
-     "feasibility": 77
+     "n": 155,
+     "primary": 4.7,
+     "feasibility": 84.2
     },
     {
      "month": "2025-02",
-     "n": 807,
-     "primary": 5.4,
-     "feasibility": 75.3
+     "n": 111,
+     "primary": 4.8,
+     "feasibility": 85
     },
     {
      "month": "2025-03",
-     "n": 923,
-     "primary": 5.7,
-     "feasibility": 77.6
+     "n": 158,
+     "primary": 4.8,
+     "feasibility": 82.7
     },
     {
      "month": "2025-04",
-     "n": 933,
-     "primary": 5.8,
-     "feasibility": 77.6
+     "n": 140,
+     "primary": 4.8,
+     "feasibility": 82.9
     },
     {
      "month": "2025-05",
-     "n": 997,
-     "primary": 5.4,
-     "feasibility": 76.7
+     "n": 110,
+     "primary": 4.9,
+     "feasibility": 85.5
     },
     {
      "month": "2025-06",
-     "n": 995,
-     "primary": 5.3,
-     "feasibility": 76
+     "n": 154,
+     "primary": 5,
+     "feasibility": 86.5
     },
     {
      "month": "2025-07",
-     "n": 890,
-     "primary": 5.3,
-     "feasibility": 74.8
+     "n": 107,
+     "primary": 5,
+     "feasibility": 82.5
     },
     {
      "month": "2025-08",
-     "n": 948,
-     "primary": 5.7,
-     "feasibility": 74.6
+     "n": 119,
+     "primary": 4.6,
+     "feasibility": 82.1
     },
     {
      "month": "2025-09",
-     "n": 755,
-     "primary": 5.4,
-     "feasibility": 74.8
+     "n": 179,
+     "primary": 4.6,
+     "feasibility": 82.7
     },
     {
      "month": "2025-10",
-     "n": 714,
-     "primary": 5.6,
-     "feasibility": 77.1
+     "n": 135,
+     "primary": 4.7,
+     "feasibility": 83.8
     },
     {
      "month": "2025-11",
-     "n": 1111,
-     "primary": 5.3,
-     "feasibility": 74
+     "n": 127,
+     "primary": 4.8,
+     "feasibility": 85.8
     },
     {
      "month": "2025-12",
-     "n": 654,
-     "primary": 5.1,
-     "feasibility": 73.9
+     "n": 127,
+     "primary": 4.7,
+     "feasibility": 82.7
     },
     {
      "month": "2026-01",
-     "n": 1071,
-     "primary": 5.5,
-     "feasibility": 77.2
+     "n": 176,
+     "primary": 4.7,
+     "feasibility": 84.1
     },
     {
      "month": "2026-02",
-     "n": 741,
-     "primary": 5.2,
-     "feasibility": 75.3
+     "n": 167,
+     "primary": 4.5,
+     "feasibility": 83.5
     },
     {
      "month": "2026-03",
-     "n": 849,
-     "primary": 5.4,
-     "feasibility": 73.9
+     "n": 136,
+     "primary": 4.6,
+     "feasibility": 86.2
     },
     {
      "month": "2026-04",
-     "n": 860,
-     "primary": 5,
-     "feasibility": 76.8
+     "n": 180,
+     "primary": 4.6,
+     "feasibility": 86.9
     },
     {
      "month": "2026-05",
-     "n": 776,
-     "primary": 5.2,
-     "feasibility": 75.6
+     "n": 178,
+     "primary": 4.7,
+     "feasibility": 83.2
     },
     {
      "month": "2026-06",
-     "n": 899,
-     "primary": 5.1,
-     "feasibility": 75.9
+     "n": 163,
+     "primary": 4.7,
+     "feasibility": 82.4
     }
    ]
   }

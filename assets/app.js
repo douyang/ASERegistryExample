@@ -11,7 +11,7 @@
   const CAT = {
     'acquisition-guidance': 'Acquisition guidance', 'lv-function-quantification': 'LV function (EF)', 'comprehensive-measurement': 'Comprehensive measurement',
     'disease-detection': 'Disease detection', 'hf-status-indicator': 'Heart failure indicator', 'amyloid-indicator': 'Cardiac amyloidosis indicator',
-    'fetal-echo': 'Fetal echo', 'interventional-guidance': 'Interventional guidance', 'image-quality': 'Image quality', 'system-embedded': 'System-embedded AI', 'other': 'Research pending',
+    'fetal-echo': 'Fetal echo', 'interventional-guidance': 'Interventional guidance', 'image-quality': 'Image quality', 'system-embedded': 'System-embedded AI', 'other': 'Other',
   };
   const VL = { fda_summary: 'FDA summary', fda_database: 'FDA database', peer_reviewed: 'Peer reviewed', company: 'Company', news: 'News', unverified: 'Unverified', doi_resolved: 'DOI resolved', pmid_resolved: 'PMID resolved', unresolved: 'Unresolved' };
   const vl = (v) => (v ? `<span class="vlevel ${esc(v)}">${esc(VL[v] || v)}</span>` : '');
@@ -22,7 +22,7 @@
   // ---------- state ----------
   const state = { tab: 'products', view: 'cards', q: '', sort: 'latest', sel: {}, regSel: null };
   const FILTERS = [
-    { key: 'category', label: 'Function', get: (f) => [f.category], name: (v) => CAT[v] || v },
+    { key: 'category', label: 'Function', get: (f) => [f.research_pending ? 'pending' : f.category], name: (v) => (v === 'pending' ? 'Research pending' : CAT[v] || v) },
     { key: 'pathway', label: 'Regulatory pathway', get: (f) => f.pathways },
     { key: 'evidence', label: 'Evidence', get: (f) => evidenceFlags(f) },
     { key: 'company', label: 'Company', get: (f) => [companyShort(f.company)] },
@@ -106,7 +106,7 @@
     if (!list.length) { host.innerHTML = '<p class="empty">No products match. Clear a filter or change the search.</p>'; return; }
     host.innerHTML = list.map((f) => `
       <article class="card" data-id="${esc(f.id)}">
-        <div class="card-top"><h3><button type="button" data-open="${esc(f.id)}">${esc(f.product_name)}</button></h3><span class="cat ${f.research_pending ? 'pending' : ''}">${esc(CAT[f.category] || f.category)}</span></div>
+        <div class="card-top"><h3><button type="button" data-open="${esc(f.id)}">${esc(f.product_name)}</button></h3><span class="cat ${f.research_pending ? 'pending' : ''}">${f.research_pending ? 'Research pending' : esc(CAT[f.category] || f.category)}</span></div>
         <p class="co">${esc(f.company)}</p>
         ${f.summary ? `<p class="sum">${esc(f.summary)}</p>` : ''}
         <div class="meta">
@@ -160,7 +160,7 @@
     const primaryReg = reg && reg.evaluable ? reg.endpoints.find((e) => e.id === reg.primary_endpoint_id) : null;
     return `
       <div class="panel-head">
-        <span class="cat ${f.research_pending ? 'pending' : ''}" style="justify-self:start">${esc(CAT[f.category] || f.category)}</span>
+        <span class="cat ${f.research_pending ? 'pending' : ''}" style="justify-self:start">${f.research_pending ? 'Research pending' : esc(CAT[f.category] || f.category)}</span>
         <h2 id="panel-title">${esc(f.product_name)}</h2>
         <p class="co">${esc(f.company)}</p>
         <div class="panel-links">${links}</div>

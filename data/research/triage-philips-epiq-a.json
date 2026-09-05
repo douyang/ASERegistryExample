@@ -1,0 +1,155 @@
+{
+  "group_id": "philips-epiq-a",
+  "records": [
+    {
+      "k_number": "K201012",
+      "device_name": "EPIQ Diagnostic Ultrasound System Series, Affiniti Diagnostic Ultrasound System Series, CX50 Diagnostic Ultrasound System, Sparq Diagnostic Ultrasound System, Lumify Diagnostic Ultrasound System",
+      "decision_date": "2020-05-01",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [],
+      "performance_summary": null,
+      "exclusion_reason": "AI feature not identifiable in summary. This is a Special 510(k) for expanded labeling only (lung and cardiac imaging guidance for COVID-19 patients). The summary states 'There are no changes in software, hardware, and intended uses of the subject devices comparing to the predicates' (p.27) and 'Relevant performance data does not apply to this submission' (p.27). No AI/ML, deep learning, or trained-algorithm language appears anywhere. The only automation mentioned is the QLAB table entry 'Semiautomatic border detection, chamber identification, contour generation, measurement parameters' (p.26), which is listed as Identical to the predicate K191647 and is not characterized as AI/ML."
+    },
+    {
+      "k_number": "K211597",
+      "device_name": "EPIQ Series Diagnostic Ultrasound System, Affiniti Series Diagnostic Ultrasound System",
+      "decision_date": "2021-09-08",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "Auto Measure",
+          "function": "AI/ML-enabled semi-automated, editable 2D and Doppler measurements during adult transthoracic echocardiography (TTE) with simultaneously acquired ECG; no new measurements introduced, same measurement set as predicate performed manually.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "The Philips Auto Measure feature provides the end user with semi-automated functionality for a subset of 2D and Doppler measurements currently available on the Philips EPIQ and Affiniti systems when performing or reviewing an adult transthoracic echocardiography (TTE) with simultaneously acquired electrocardiogram (ECG). The AI/ML-enabled algorithm is designed to produce semi-automated and editable measures.",
+          "page": 6
+        }
+      ],
+      "performance_summary": "No quantitative performance results reported. The summary states only that 'Non-clinical testing also included the Performance Validation Study for the proposed Auto Measure software application' and that 'Software Verification and Validation testing were used to support substantial equivalence of the new Auto Measure feature (as part of the EPIQ / Affiniti System software release version 9.0) to the currently marketed manual measuring options' (p.8). No accuracy, correlation, or sample-size figures are given.",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K212704",
+      "device_name": "Philips EPIQ Diagnostic Ultrasound System, Philips Affiniti Diagnostic Ultrasound System",
+      "decision_date": "2021-09-24",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "Liver Fat Quantification (Attenuation Quantification and Hepato-Renal Index Quantification)",
+          "function": "Measures liver attenuation coefficient (dB/cm-MHz) in a region of interest and the echogenicity ratio of liver parenchyma to adjacent renal cortex during abdominal ultrasound exam.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "The purpose of this Traditional 510(k) Pre-Market Notification is to introduce the following two new Liver Fat Quantification software features: (1) Attenuation Quantification: a measure of the attenuation coefficient in dB/cm-MHz of a region of interest in the liver (2) Hepato-Renal Index Quantification: a ratio measure of the echogenicity ('brightness') of the liver parenchyma relative to that of the adjacent renal cortex",
+          "page": 6
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "Non-cardiac: the only new features are Liver Fat Quantification tools (attenuation coefficient and hepato-renal index) for hepatic imaging. The summary does not use any AI/ML/deep learning language for these features; they are physics-based quantification measures compared to the Canon Aplio i-series reference device (K161843). No cardiac AI feature is named."
+    },
+    {
+      "k_number": "K231190",
+      "device_name": "EPIQ Series Diagnostic Ultrasound System",
+      "decision_date": "2023-05-12",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [],
+      "performance_summary": null,
+      "exclusion_reason": "AI feature not identifiable in summary. This clearance introduces only the mL26-8 linear array transducer for superficial imaging (Musculoskeletal, Ophthalmic, Pediatric, Peripheral Vessel, Small Organ) and adds the Ophthalmic indication: 'The purpose of this Traditional 510(k) Pre-Market Notification is to introduce the mL26-8 transducer' (p.4); 'The intended users, use environment, intended use, accessories and offered features are unchanged as compared to the predicate' (p.5). No AI/ML, algorithm, or automated-feature language appears. QIH product code is carried over from the predicate."
+    },
+    {
+      "k_number": "K233545",
+      "device_name": "EPIQ Series Diagnostic Ultrasound System",
+      "decision_date": "2023-11-30",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [],
+      "performance_summary": null,
+      "exclusion_reason": "AI feature not identifiable in summary. This clearance introduces only the X11-4t 3D transesophageal (TEE) cardiac transducer hardware: 'The purpose of this Traditional 510(k) Pre-Market Notification is to introduce the X11-4t transducer' (p.4); 'The intended users, use environment, intended use, accessories and offered features are unchanged as compared to the predicate' (p.5). Although the transducer is cardiac, no AI/ML, algorithm, or automated software feature is named or evaluated. QIH product code is carried over from the predicate K231190."
+    },
+    {
+      "k_number": "K233788",
+      "device_name": "EPIQ Series Diagnostic Ultrasound System, Affiniti Series Diagnostic Ultrasound System",
+      "decision_date": "2024-02-13",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "Smart Doppler View ID",
+          "function": "AI-based classification of an acquired cardiac Doppler spectrum (PWD/CWD/TDI) during adult TTE to automatically select the matching Doppler calculation package touch-screen group (Aortic Valve, Mitral Valve, Tricuspid Valve, Pulmonic Valve, Venous Flow, TDI Vel & Ratio). Workflow automation only; performs no measurements itself.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "The Smart Doppler View ID feature automates this navigation and selects the associated calculation package group for the user based on the provided Doppler Spectrum acquired by the user using an artificial intelligence-based algorithm.",
+          "page": 6
+        },
+        {
+          "name": "AutoMeasure",
+          "function": "Semi-automated cardiac adult TTE measurements (referenced as the commercially available function cleared under K211597 that may perform measurements after Smart Doppler View ID selects the calculation group).",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "Any cardiac adult TTE measurements resulting from the view selection are performed either manually by the user or by the commercially available AutoMeasure function (K211597).",
+          "page": 9
+        }
+      ],
+      "performance_summary": "Retrospective standalone study: 1100 previously collected adult TTE Doppler clips from 400 subjects at a US hospital (56.3% female; mean age 61.9 +/- 16.6 y; 53.8% Black or African American, 31.3% White) were processed by the Smart Doppler View ID algorithm and compared to ground-truth touch-screen groups derived from ASE-guideline standard-of-care measurements performed by board-certified cardiologists and cardiac sonographers; test data were distinct from training data. Primary endpoint: 'The results of the primary endpoint analysis demonstrated algorithm accuracy of 97.5% (95%CI 96.3%, 98.3%), p-value <0.0001, thereby meeting the acceptance criteria for the study.' (p.11). No clinical investigation was required.",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K240850",
+      "device_name": "EPIQ Series Diagnostic Ultrasound Systems; Affiniti Series Diagnostic Ultrasound Systems",
+      "decision_date": "2024-04-24",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "Smart View Select (SVS)",
+          "function": "Deep-learning view classification of each acquired adult TTE image and automatic selection of the optimal apical triplet (A4C, A2C, A3C) for LV analysis with AutoStrain LV or 2D Auto LV (GLS and EF). Integrates the unchanged LVivo Seamless neural network (DiA, K212466) plus a non-AI scan-depth heuristic. EPIQ only.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Smart View Select is an automated software feature that assists the user in selection of images for analysis with the existing Philips AutoStrain LV or 2D Auto LV application in Adult Echo Transthoracic (TTE) examination. This feature automatically classifies each acquired image by view and selects an appropriate set of images for left ventricle (LV) analysis. The classification is based on a Deep Learning AI interface engine; the selection is a non-AI algorithm that considers the view classification and image depth to select the optimal set of images.",
+          "page": 6
+        },
+        {
+          "name": "Segmental Wall Motion (SWM)",
+          "function": "Machine-learning semi-automated evaluation of LV regional function from three apical views (A4C, A2C, A3C): border detection and tracking, per-segment wall motion scores for 17 LV segments, and Wall Motion Score Index (WMSI). Integrates the LVivo SG module (DiA, K161382) with AutoStrain LV (K190913) border initialization as backup; users can edit scores. EPIQ and Affiniti.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "The application then provides segmental wall motion scores for each of the 17 segments of the LV by using machine learning algorithms and an overall wall motion score index (WMSI) is calculated as the average of the segmental scores.",
+          "page": 6
+        },
+        {
+          "name": "AutoStrain LV / 2D Auto LV",
+          "function": "Existing Philips LV strain (GLS) and EF analysis applications that consume the clips selected by SVS; AutoStrain LV (K190913) border initialization is also used as backup for SWM.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "Smart View Select is an automated software feature that assists the user in selection of images for analysis with the existing Philips AutoStrain LV or 2D Auto LV application in Adult Echo Transthoracic (TTE) examination.",
+          "page": 6
+        }
+      ],
+      "performance_summary": "Two retrospective data analysis studies (p.15). SVS study: GLS and biplane EF computed by AutoStrain LV on SVS-selected clips vs. ground truth from clips manually selected by three clinical expert reviewers (averaged); acceptance criterion lower 95% confidence bound of Pearson r > 0.8. 'the Pearsons' correlation coefficient was 0.911 (95%CI 0.855,0.946) and 0.941 (95%CI 0.903,0.965), for GLS and EF, respectively.' SWM study: WMSI from integrated SWM algorithm vs. LVivo SWM (DiA) ground truth, two phases with 7-day washout, three reviewers; 'the Pearsons' correlation coefficient was 0.957 (95%CI 0.933,0.972) and 0.913 (95%CI 0.857,0.948), for the manual and SVS workflows, respectively.' All predefined acceptance criteria met. Sample sizes not stated in summary. No clinical investigation required.",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K240980",
+      "device_name": "EPIQ Series Diagnostic Ultrasound System",
+      "decision_date": "2024-10-07",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "3D Auto TV (Tricuspid Valve)",
+          "function": "Semi-automated quantification of the tricuspid valve annulus from 3D TTE/TEE images via machine-learning model-based segmentation (algorithm trained on tricuspid valve images; same method as QLAB 3D Auto MV, K200974). Outputs TV annulus perimeter (2D/3D), max/min diameter, perimeter-derived diameter, height, and area; user can edit, accept, or reject landmark proposals.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "3D surface model is created semi-automatically using machine learning algorithm without user interaction. User is able to edit, accept, or reject the initial landmark proposals of the mitral valve anatomical locations. ... Subject device uses identical method for contour generation as the reference device K200974. The only difference is the algorithm is trained on tricuspid valve images, where the reference device was trained using mitral valve images.",
+          "page": 8
+        },
+        {
+          "name": "3D Auto CFQ (Color Flow Quantification)",
+          "function": "Semi-automated quantification of mitral regurgitation volume and peak flow rate from 3D color flow TEE images (X8-2t). Uses the machine-learning-generated 3D mitral valve model (from K200974 3D Auto MV) as input to a new iterative fluid-dynamic flow model; the flow model itself is physics-based, not described as ML.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "The 3D Auto CFQ software provides semi-automated quantification of Mitral Regurgitation (MR) volume and peak flow rate based on 3D color flow images. This application uses a known fluid dynamic model of flow that is adapted to the acquired color information.",
+          "page": 6
+        }
+      ],
+      "performance_summary": "3D Auto TV (p.13-14): TTE and TEE clips measured by 3 clinical expert reviewers with 3D Auto TV vs. manual measurement in TOMTEC 4D Cardio-View (K213544) as ground truth; 'Confidence intervals for the limits of agreement were within the acceptance criteria +/- 46% and +/- 52% for annulus size and annulus shape, respectively, within TEE and TTE arms.' Relative bias within +/- 17.37% for distance (size) and +/- 23.68% for circumference (shape); in-silico phantom mean relative error within +/- 1% with LoA within +/- 5%. 3D Auto CFQ (p.14): regurgitant volume vs. cardiac MRI ground truth; 'limits of agreement (LoA) of -49.29 (lower LoA) and 25.09 (upper LoA)' with 95% CIs (-58.37,-40.20) and (16.01,34.18), meeting the maximum allowable difference of 61.6 mL; mean bias within +/- 19.2 mL criterion met; peak flow rate vs. 2D PISA Pearson r 95% CI bounds exceeded 0.8 for both fully- and semi-automated modes. Sample sizes not stated in summary. No clinical investigation required.",
+      "exclusion_reason": null
+    }
+  ],
+  "notes": "All eight FDA summary text files were read in full; no web search was needed since every included feature is explicitly named in the FDA text. Four clearances carry a cardiac AI/ML feature: K211597 (Auto Measure, AI/ML semi-automated 2D/Doppler TTE measurements; no numeric performance reported), K233788 (Smart Doppler View ID, AI Doppler-spectrum-to-calc-package classification, accuracy 97.5%), K240850 (Smart View Select deep-learning view classification for AutoStrain LV/2D Auto LV, and ML Segmental Wall Motion / WMSI; Pearson r 0.91-0.96), and K240980 (3D Auto TV ML model-based tricuspid annulus segmentation; 3D Auto CFQ MR volume using ML-generated MV model plus fluid-dynamic flow model). Four clearances are excluded: K201012 is a labeling-only Special 510(k) (COVID-19 lung/cardiac labeling) with no software change and no AI language; K212704 introduces non-cardiac Liver Fat Quantification (attenuation, hepato-renal index) with no AI language; K231190 introduces only the mL26-8 superficial linear transducer; K233545 introduces only the X11-4t 3D TEE transducer. The QIH (Automated Radiological Image Processing Software) product code is present on all eight, which is likely why FDA listed them, but for the excluded four it is carried over from predicates rather than tied to any newly described AI feature. Note for K240850: SVS and SWM are integrations of DiA Imaging Analysis LVivo Seamless (K212466) and LVivo SG (K161382) algorithms onto Philips systems, so the underlying neural networks were not newly developed for this K, but this K is the first clearance of them on EPIQ/Affiniti. Note for K240980: the 3D Auto TV/CFQ feature was in the reference list of K233788's predicate chain only via QLAB 3D Auto MV (K200974); the ML segmentation method is reused, retrained on tricuspid images."
+}

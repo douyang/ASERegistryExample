@@ -12,13 +12,17 @@ const read = (f) => JSON.parse(fs.readFileSync(path.join(rdir, f), 'utf8'));
 const openfda = read('openfda_records.json');
 const seed = read('families.json');
 const warnings = [];
+const fdaUrl = (k) => {
+  const yy = k.startsWith('K') ? k.slice(1, 3) : k.slice(3, 5);
+  return `https://www.accessdata.fda.gov/cdrh_docs/pdf${yy}/${k}.pdf`;
+};
 
 // ---- 1. Load research outputs. Prefer <batch>.verified.json over <batch>.json.
 const files = fs.readdirSync(rdir).filter((f) => f.endsWith('.json') && !['openfda_records.json', 'families.json'].includes(f));
 const batches = new Map();
 for (const f of files) {
   const base = f.replace(/\.verified\.json$/, '').replace(/\.json$/, '');
-  if (f.startsWith('triage-')) continue; // triage files are handled separately
+  if (f.startsWith('triage-') || f.startsWith('critic-') || f.startsWith('_')) continue; // triage handled separately; critic/_scratch files are not catalog input
   const cur = batches.get(base);
   const isVerified = f.endsWith('.verified.json');
   if (!cur || (isVerified && !cur.verified)) batches.set(base, { file: f, verified: isVerified });
@@ -60,11 +64,27 @@ for (const s of allSeeds) {
   }
 }
 
-// ---- 4. Normalize each family against openFDA (authoritative for date, product code, applicant, device name).
-const fdaUrl = (k) => {
-  const yy = k.startsWith('K') ? k.slice(1, 3) : k.slice(3, 5);
-  return `https://www.accessdata.fda.gov/cdrh_docs/pdf${yy}/${k}.pdf`;
+// ---- 3b. Rewrite extraction-time local file references to the public FDA document URLs.
+const LOCAL_RE = /\/[^\s"')]*\/probe\/(?:txt|pdf)\/(K\d{6}|DEN\d{6})(_review)?\.(?:txt|pdf)/g;
+const publicUrl = (k, review) => (review ? `https://www.accessdata.fda.gov/cdrh_docs/reviews/${k}.pdf` : fdaUrl(k));
+const LOCAL_ANY = /\/tmp\/[^\s"')]*scratchpad\/[^\s"')]*/g;
+const rewrite = (v) => {
+  if (typeof v !== 'string') return v;
+  return v.replace(LOCAL_RE, (m, k, rev) => publicUrl(k, !!rev)).replace(LOCAL_ANY, (m) => {
+    if (/openfda_records\.json/.test(m)) return 'data/research/openfda_records.json (openFDA)';
+    const km = m.match(/(K\d{6}|DEN\d{6})(?:_review)?(?:_p(\d+))?/);
+    if (km) return publicUrl(km[1], /_review/.test(m)) + (km[2] ? ` (p${km[2]})` : '');
+    return m.split('/').pop();
+  });
 };
+function deepRewrite(x) {
+  if (Array.isArray(x)) return x.map(deepRewrite);
+  if (x && typeof x === 'object') { const o = {}; for (const [k, v] of Object.entries(x)) o[k] = deepRewrite(v); return o; }
+  return rewrite(x);
+}
+for (const [id, fam] of researched) researched.set(id, deepRewrite(fam));
+
+// ---- 4. Normalize each family against openFDA (authoritative for date, product code, applicant, device name).
 const pathwayOf = (k, c) => {
   if (k.startsWith('DEN')) return 'De Novo';
   const flags = (c.notable_flags || []).join(' ').toLowerCase();

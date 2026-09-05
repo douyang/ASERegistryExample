@@ -1,0 +1,244 @@
+{
+  "group_id": "ge-venue-vscan",
+  "records": [
+    {
+      "k_number": "K180599",
+      "device_name": "Venue",
+      "decision_date": "2018-05-02",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "Automated tools (unnamed)",
+          "function": "Unspecified automated workflow tools for common point-of-care assessments; described only as improvements to automated features cleared on predicate Venue K170714.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "The system includes several automated tools designed to simplify and shorten the workflow time of the healthcare professional for some common assessments.",
+          "page": 15
+        },
+        {
+          "name": "eFAST Navigation Tool and Review Summary",
+          "function": "Workflow automation for the eFAST trauma exam (navigation and review summary); not described as image-analysis AI/ML.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "Adding eFAST Navigation Tool and Review Summary feature that automates the workflow for the eFAST exam that can be done manually.",
+          "page": 16
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "AI feature not identifiable in summary. The 510(k) summary names no AI/ML, deep learning, or cardiac automated-measurement feature; it only states that 'Automated features cleared on predicate Venue (K170714) have improvements, to assist the user workflow' (page 16) and adds an eFAST workflow navigation tool. No AI testing section; no clinical studies."
+    },
+    {
+      "k_number": "K220800",
+      "device_name": "Venue Go",
+      "decision_date": "2022-06-21",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "cNerve",
+          "function": "Detects and tracks nerves during the scouting stage of a nerve block procedure (trained algorithm; adults only).",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "cNerve: may help the user to detect and track nerves during the scouting stage of a nerve block procedure, prior to inserting the needle to inject the anesthetic material. Is similar to the NerveTrack tool on cleared reference HS40 system by Samsung (K210426).",
+          "page": 8
+        },
+        {
+          "name": "Real-Time Ejection Fraction (EF)",
+          "function": "Automated real-time left ventricular ejection fraction tool on cardiac ultrasound; this K expands it from adults to pediatrics (excluding neonates). The summary does not explicitly label it AI/ML.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "Expanding Real-Time Ejection Fraction (EF) to pediatrics (excluding neonates). Real-Time EF tool is available on the cleared predicate Venue Go (K202233) for adults only.",
+          "page": 9
+        },
+        {
+          "name": "B-lines tool / Lung sweep / Lung Diagram",
+          "function": "Automated lung B-line counting tool, expanded to pediatrics.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "Expanding B-lines tool for pediatrics (excluding neonates). This allows Lung sweep and Lung Diagram to pediatrics (excluding neonates) as well.",
+          "page": 8
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K220851",
+      "device_name": "Venue",
+      "decision_date": "2022-06-27",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "cNerve",
+          "function": "Detects and tracks nerves during the scouting stage of a nerve block procedure (trained algorithm; adults only).",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "cNerve: may help the user to detect and track nerves during the scouting stage of a nerve block procedure, prior to inserting the needle to inject the anesthetic material. Is similar to the NerveTrack tool on cleared reference HS40 system by Samsung (K210426).",
+          "page": 9
+        },
+        {
+          "name": "Real-Time Ejection Fraction (EF)",
+          "function": "Automated real-time left ventricular ejection fraction tool on cardiac ultrasound; this K expands it from adults to pediatrics (excluding neonates). The summary does not explicitly label it AI/ML.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "Expanding Real-Time Ejection Fraction (EF) to pediatrics (excluding neonates). Real-Time EF tool is available on the cleared predicate Venue (K202132) for adults only.",
+          "page": 9
+        },
+        {
+          "name": "B-lines tool / Lung sweep / Lung Diagram",
+          "function": "Automated lung B-line counting tool, expanded to pediatrics.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "Expanding B-lines tool for pediatrics (excluding neonates). This allows Lung sweep and Lung Diagram to pediatrics (excluding neonates) as well.",
+          "page": 9
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K220848",
+      "device_name": "Venue Fit",
+      "decision_date": "2022-06-27",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "cNerve",
+          "function": "Detects and tracks nerves during the scouting stage of a nerve block procedure (trained algorithm; adults only).",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "cNerve: may help the user to detect and track nerves during the scouting stage of a nerve block procedure, prior to inserting the needle to inject the anesthetic material. Is similar to the NerveTrack tool on cleared reference HS40 system by Samsung (K210426).",
+          "page": 8
+        },
+        {
+          "name": "Real-Time Ejection Fraction (EF)",
+          "function": "Automated real-time left ventricular ejection fraction tool on cardiac ultrasound; this K expands it from adults to pediatrics (excluding neonates). The summary does not explicitly label it AI/ML.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "Expanding Real-Time Ejection Fraction (EF) to pediatrics (excluding neonates). Real-Time EF tool is available on the cleared predicate Venue Fit (K203137) for adults only.",
+          "page": 9
+        },
+        {
+          "name": "B-lines tool / Lung sweep / Lung Diagram",
+          "function": "Automated lung B-line counting tool, expanded to pediatrics.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "Expanding B-lines tool for pediatrics (excluding neonates). This allows Lung sweep and Lung Diagram to pediatrics (excluding neonates) as well.",
+          "page": 8
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K251322",
+      "device_name": "Venue; Venue Go; Venue Fit; Venue Sprint",
+      "decision_date": "2025-07-25",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "Caption Guidance (expanded to Vscan Air SL probe)",
+          "function": "Real-time AI acquisition guidance to obtain standard cardiac views via textual guidance, prescriptive graphical navigation and reference images; separately cleared as K243065; already on predicates Venue/Venue Go/Venue Fit, expanded here to the Vscan Air SL probe (Venue Sprint).",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "Expand Caption Guidance application for Vscan Air SL probe. Caption Guidance enables the user to obtain different cardiac views through textual guidance, prescriptive graphical navigation, and reference images. Caption Guidance has its own FDA clearance (K243065) and is similar to Caption Guidance cleared on predicates Venue K240111, Venue Go K240053 and Venue Fit K234106.",
+          "page": 9
+        },
+        {
+          "name": "Automated Function Imaging (AFI) with AI Auto ROI",
+          "function": "Automated global and regional systolic function (strain) assessment of LV, RV and LA on Venue and Venue Go, including an AI Auto ROI algorithm that automatically detects the myocardium; adapted from Vivid S70N (K223832) and EchoPAC (K220940).",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Automated Function Imaging (AFI): an automated tool for global and regional assessment of the systolic function of the left ventricle (LV), right ventricle (RV), and left atrium (LA). The AFI tool on proposed Venue and Venue Go is similar to AFI with Easy AFI LV tool available on the cleared references Vivid S70N (K223832) and EchoPAC Software Only/EchoPAC Plug-in (K220940) and includes AI Auto ROI algorithm that automatically detects the myocardium.",
+          "page": 9
+        },
+        {
+          "name": "Auto Bladder Volume (ABV)",
+          "function": "Deep learning automatic caliper placement for bladder height/width/length to compute bladder volume.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "Auto Bladder Volume uses a deep learning algorithm instead of traditional image analysis.",
+          "page": 10
+        },
+        {
+          "name": "cNeedle",
+          "function": "Needle visualization enhancement feature, added to the existing C2-9-RS probe (feature already cleared on predicates).",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "Addition of cNeedle feature on existing C2-9-RS probe. Both cleared on predicates Venue (K240111), Venue Go (K240053) and Venue Fit (K234106).",
+          "page": 9
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K261668",
+      "device_name": "Venue Go",
+      "decision_date": "2026-08-07",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "Caption Guidance with Auto Depth",
+          "function": "Cardiac view acquisition guidance (Caption Guidance, K243065 with approved PCCP) already on predicate K251322; this K adds Auto Depth, which automatically adjusts imaging depth in real time during Caption-guided scanning (identical to Auto Depth on Vscan Air K250087).",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "Adding Auto Depth on Caption guidance: automatically adjusts the imaging depth in real time to optimize visualization. Caption Guidance has its own FDA clearance with approved PCCP (K243065) and cleared instructions for use which is also provided to customers who order this optional application. Caption guidance feature is already cleared on predicate Venue Go K251322. On the proposed Venue Go, we are expanding SW scanning capability to support Auto Depth. This is identical to Auto Depth on Caption guidance as implemented on cleared Vscan Air K250087.",
+          "page": 8
+        },
+        {
+          "name": "Auto Gastric Volume (AGV)",
+          "function": "AI gastric antrum segmentation, content classification, quality indicator and landmark detection to compute cross-sectional area, gastric volume and volume-to-weight ratio for aspiration-risk assessment.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "Auto Gastric Volume (AGV): provides a simplified workflow for gastric volume calculations and content assessment. The tool helps the user to obtain a gastric view of the antrum during live scanning, presents the content assessment of the gastric content and calculates the cross-sectional area (CSA).",
+          "page": 8
+        },
+        {
+          "name": "cNeedle 2.0",
+          "function": "Improved-accuracy needle detection/visualization algorithm (new version of cNeedle).",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "cNeedle: the proposed Venue Go system supports a new version of the cNeedle feature (known as cNeedle 2.0). cNeedle 2.0 has an improved robustness compared to the cNeedle on predicate, due to improvements in the accuracy of the algorithm.",
+          "page": 8
+        },
+        {
+          "name": "Auto Catheter Vessel Ratio (CVR)",
+          "function": "Semi-automated vessel diameter measurement and catheter-to-vessel ratio display for vascular access.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "Auto Catheter Vessel Ratio (CVR): a semi-automated tool intended to measure vessel's diameter and present the Catheter to Vessel Ratio calculations (when the catheters' diameters are selected from a predefined list).",
+          "page": 8
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K250087",
+      "device_name": "Vscan Air",
+      "decision_date": "2025-05-01",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "Caption AI (Caption Guidance + Caption Interpretation AutoEF)",
+          "function": "Real-time user guidance for acquisition of cardiac ultrasound images (Caption Guidance, K201992) plus automated estimation of left ventricular ejection fraction (Caption Interpretation AutoEF, K210747); added as compatibility on Vscan Air.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Added compatibility with Caption AI which provides real-time user guidance to assist medical professionals in the acquisition of cardiac ultrasound images and provides an automated estimation of left ventricular ejection fraction. Caption AI incorporates two separately cleared software features: Caption Guidance (K201992) and Caption Interpretation AutoEF (K210747).",
+          "page": 8
+        },
+        {
+          "name": "Auto bladder volume",
+          "function": "Deep learning automatic caliper placement in transverse and longitudinal views (Vscan Air CL probe) to compute urinary bladder volume.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "Auto bladder volume uses a deep learning algorithm to automatically place the measurement calipers in transverse and longitudinal views when using the Vscan Air CL probe instead of traditional image analysis.",
+          "page": 8
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": null
+    }
+  ],
+  "notes": "All seven FDA summary text files were read in full; no web search was used. Decision dates and device names taken from openfda_records.json. CAVEAT for the 2022 trio (K220800 Venue Go, K220851 Venue, K220848 Venue Fit; near-identical summaries): the only feature with an 'AI Summary of Testing' is cNerve (nerve tracking; 124 sequences / 3,776 frames from 44 individuals; acceptance criterion at least 70% of sequences meaningfully detected and at least 80% of those meeting frame accuracy; no numeric result reported). The cardiac item is 'Real-Time Ejection Fraction (EF)', an automated EF tool carried over from the predicate and expanded to pediatrics in these Ks; the summaries never label it AI/ML and report no EF performance. These three are marked is_cardiac_ultrasound_ai=true on the basis that an automated EF tool on cardiac ultrasound is named and its scope changed in the K, but if the registry requires the summary to explicitly describe the cardiac feature as AI/ML they should be downgraded to false with reason 'cardiac feature (Real-Time EF) not described as AI/ML in summary; AI testing covers cNerve only'. K180599: no AI or cardiac feature identifiable; excluded. K251322: cardiac AI clearly present (Caption Guidance expanded to Vscan Air SL probe on Venue Sprint; new AFI with 'AI Auto ROI algorithm' for LV/RV/LA on Venue and Venue Go). Only Auto Bladder Volume has reported performance (1,874 images from 101 individuals; automatic caliper placement success 95.09% at 95% confidence; BMI subgroups 92.6-95.64%); no cardiac AI performance in summary, so performance_summary is null. K261668: cardiac AI is carried over (Caption Guidance on predicate K251322) with Auto Depth added; whether Auto Depth itself is ML is not stated. Reported performance is for non-cardiac features only: AGV (antrum segmentation mean Dice 0.876 all frames / 0.913 clear-fluid; content classification 82.57% classified, 86.93% accuracy; quality indicator 91.18% enabling on suitable frames, 94.32% prevention on non-measurable; landmarks precision 90.33% / recall 85.94%; expert acceptance 95.9% of 195 clips) and cNeedle 2.0 (sensitivity 85.82%, specificity 98.35% positive clips, overall specificity 90.67%; 11,784 frames from 105 subjects; 100% cases rated at least as good as B-mode). K250087: cardiac AI clearly present via Caption AI (Caption Guidance K201992 + Caption Interpretation AutoEF K210747), introduced to Vscan Air in this K; only Auto bladder volume performance is reported (1,817 images from 142 individuals; caliper placement success 92.24% at 90% confidence; BMI >25: 92%, <25: 95%); no AutoEF performance in this summary, so performance_summary is null. Note the K261668 summary says Auto Depth on Caption guidance was 'implemented on cleared Vscan Air K250087', but the K250087 summary text does not mention Auto Depth."
+}

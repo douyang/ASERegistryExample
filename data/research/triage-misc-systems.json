@@ -1,0 +1,228 @@
+{
+  "group_id": "misc-systems",
+  "records": [
+    {
+      "k_number": "K251673",
+      "device_name": "X9 Ultrasound System",
+      "decision_date": "2025-10-17",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "X9 Machine Learning Model (AV fistula/graft vessel detection and localization)",
+          "function": "ML model on B-mode images determines whether a hemodialysis access vessel (arteriovenous fistula/graft) is visible and estimates its lateral location to guide handpiece alignment prior to cannulation. Validation: 378 images from 63 AVF/G participants; Access Presence Sensitivity 94.5% (criterion >=75%), mean lateral error 0.492 mm (criterion <=3 mm), mean Dice 81.3% (criterion >=75%).",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "A Machine Learning Model Validation was performed to confirm that the ML model correctly determined if an access vessel was visible and if the average lateral error between the ML Model and the access vessel True Location was acceptable.",
+          "page": 7
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "Only AI/ML feature is vascular-access (AV fistula/graft) vessel detection for dialysis cannulation guidance; indications are limited to vascular access imaging and the device has no cardiac application (IFU p.4; ML validation pp.7-8)."
+    },
+    {
+      "k_number": "K250959",
+      "device_name": "BioticsAI",
+      "decision_date": "2025-12-22",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "AI-1: High-Level Anatomy Classification",
+          "function": "Multi-label classification of the general fetal anatomical region in a 2D fetal ultrasound image (head/brain, face, thorax/chest ('Heart Screening Planes'), abdomen, limbs). Standalone testing on 11,186 images / 296 patients: 'Heart Screening' plane detection sensitivity 0.912 (95% CI 0.895-0.928), specificity 0.990.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "BioticsAI uses artificial intelligence (A.I.) to automatically annotate ultrasound images with fetal anatomical planes and structures to facilitate ultrasound review and report generation for fetal ultrasound anatomical scans.",
+          "page": 6
+        },
+        {
+          "name": "AI-2: Per-Class Top-1 Fetal Plane Classification",
+          "function": "Classifies 13 standard ISUOG/AIUM mid-trimester fetal planes (abdomen, face, head, heart 4-chamber, femur, sagittal spine) and picks the top-1 image per plane. thorax_lungs_four_heart_chambers sensitivity 0.969, specificity 0.997.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "Provides fetal anatomical plane classifications using a per-class Top-1 approach. A fetal \"plane\" refers to a standardized cross-sectional view defined by ISUOG and aligned with AIUM guidance for mid-trimester fetal anatomy scans.",
+          "page": 7
+        },
+        {
+          "name": "AI-3: Fetal Anatomical Structure Classification",
+          "function": "Multi-label detection of fetal anatomical structures within supported planes, including 16 fetal thorax/heart structures (LV, RV, LA, RA, ventricular septum, LVOT, RVOT, aorta, pulmonary artery, SVC, etc.) on 4-chamber, LVOT, RVOT, 3VV, 3VT planes to support quality-criteria verification. Sensitivity 0.978 on diagnostically acceptable images, specificity 0.989 for thorax/heart structures.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "Automatic detection of 16 fetal thorax and heart anatomical structures on the views \"Four Chamber\", \"LVOT\", \"RVOT\", \"3VV\", \"3VT\" 0.978 (0.969, 0.985) 0.925 (0.911, 0.939) 0.989 (0.988, 0.99)",
+          "page": 16
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "Fetal (OB) anatomy-scan AI: detects fetal planes and structures as a concurrent reading aid for fetal ultrasound (IFU p.4). The only cardiac content is detection of fetal heart screening planes (4CH, LVOT, RVOT, 3VV, 3VT) and fetal cardiac structures within a mid-trimester OB anatomy scan; this is fetal anatomy screening, not echocardiography, and provides no cardiac function/measurement output. Borderline; flagged in notes."
+    },
+    {
+      "k_number": "K241949",
+      "device_name": "Digital Color Doppler Ultrasound System (P60 Series)",
+      "decision_date": "2025-01-17",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "S-FetusAI (S-Fetus-Recognition and S-Fetus-Measure)",
+          "function": "AI/ML automatic recognition of 14 fetal standard sections and automatic measurement of fetal growth parameters (9 sections, 11 growth parameters) plus spinal cone end (Sp) positioning. Standalone: recognition accuracy 90.01% (3717 images, criterion >=85%), measurement accuracy 85% (2929 images, criterion >=80%); clinical study of 158 cases showed non-inferiority to manual recognition.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "The P60 Series Digital Color Doppler Ultrasound System add one new feature: S-FetusAI, which is carried out using the Artificial Intelligence or Machine Learning algorithm.",
+          "page": 9
+        },
+        {
+          "name": "Auto EF (listed auto measurement; NOT identified as AI/ML in this summary)",
+          "function": "Automated ejection fraction measurement listed among 'auto measurements' migrated from the predicate/reference devices S90 Exp (K222596) and P20 Elite (K221140). The summary does not describe it as AI/ML-based and reports no performance data for it.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "The P60 Series Digital Color Doppler Ultrasound System have the following new features (auto measurements), including Auto Bladder, Auto IMT, Auto EF, Auto NT, Auto OB, S-Endo. and S-Follicle, which have been migrated from the predicate device S90 Exp Series (K222596) and P20 Elite Series (K221140);",
+          "page": 9
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "The only feature identified as AI/ML is S-FetusAI (fetal section recognition and biometry). Auto EF is present but is a carry-over from predicate/reference devices, is not described as AI/ML-based, and has no performance data in this summary; the summary explicitly says the other new auto measurements (S-Breast, S-Thyroid, S-hip) are 'not based on AI/ML or deep learning-based technologies' (p.9)."
+    },
+    {
+      "k_number": "K253716",
+      "device_name": "uSONIQUE Genesis, uSONIQUE Genesis Pro, uSONIQUE Genesis Elite, uSONIQUE Genesis Super, uSONIQUE Pulse, uSONIQUE Pulse Pro, uSONIQUE Pulse Elite, uSONIQUE Pulse Super, uSONIQUE Venus, uSONIQUE Venus Pro, uSONIQUE Venus Elite, uSONIQUE Venus Super",
+      "decision_date": "2026-05-15",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "Auto EF / Fast EF",
+          "function": "Machine-learning segmentation of the left ventricle on A2C and A4C cine loops with ED/ES detection to compute ejection fraction; Auto EF is the non-real-time workflow and Fast EF the real-time workflow (compared to GE LOGIQ E10 Auto EF2.0). Explicitly listed under 'Summary of the Machine Learning Algorithm'.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Summary of the Machine Learning Algorithm ⚫ Auto EF and Fast EF ... The overall model performance was evaluated using the Dice score (for segmentation accuracy) and EF relative error (for biometric measurement precision), specifically for AutoEF/FastEF testing.",
+          "page": 17
+        },
+        {
+          "name": "uWorks Echo (Auto Workflow, cardiology)",
+          "function": "Automatic echocardiography workflow consisting of a view recognition algorithm, an image quality assessment algorithm, and an automatic measurement algorithm across 14 standard echo views (PLAX, PSAX_AV, PSAX_PA, PSAX_MV, PSAX_PM, PSAX_A, A2C, A3C, A4C, A5C, RVI, S4C, SIVC, SSN); a scanning assistant sequences the views. Compared to GE Voluson SonoLyst (OB only) as reference; explicitly listed under the ML algorithm summary.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "The uWorks Echo algorithm primarily consists of three algorithmic components: view recognition algorithm, quality assessment algorithm and automatic measurement algorithm.",
+          "page": 23
+        },
+        {
+          "name": "Fast Strain / 2D Strain LV, 2D Strain RV, 2D Strain LA",
+          "function": "Speckle-tracking strain (compared to GE Vivid AFI, AFI RV, AFI LA); Fast Strain is the real-time mode and 2D Strain the non-real-time mode. Performance testing stated but no numbers given; not explicitly labeled ML in the summary.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "For the proposed device, 2D Strain(AFI) measurement is divided into two distinct functional modes based on workflow: non-real-time and real-time scenarios, corresponding to \"2D Strain\" and \"Fast Strain,\" respectively.",
+          "page": 15
+        },
+        {
+          "name": "Auto WMA (Auto Wall Motion Analysis)",
+          "function": "Automated LV wall motion analysis, compared to Philips EPIQ/Affiniti Auto SWMS (reference device K240850). Performance testing stated but no numbers; not explicitly labeled ML in the summary.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Auto WMA (Auto Wall Motion Analysis) Yes Yes Yes Auto SWMS Same",
+          "page": 13
+        },
+        {
+          "name": "4D MVQ (4D Mitral Valve Quantification) and 4D LAAQ (4D Left Atrial Appendage Quantification)",
+          "function": "4D TEE-based automated mitral valve and left atrial appendage quantification, compared to GE Vivid 4D Auto MVQ and 4D Auto LAQ (K220882). Genesis and Pulse only (not Venus). Performance testing stated but no numbers; not explicitly labeled ML.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "4D MVQ (4D Mitral Valve Quantification) Yes Yes No 4D Auto MVQ(K220882)",
+          "page": 12
+        },
+        {
+          "name": "Auto OB (deep learning) and uWorks OB / uWorks ABD",
+          "function": "Deep-learning fetal biometry (BPD/HC, AC, HL/FL) and automatic OB and abdominal workflows (view recognition, quality assessment, auto measurement). Non-cardiac.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "The only difference is that Auto OB in the proposed device adopt deep learning technology.",
+          "page": 15
+        }
+      ],
+      "performance_summary": "Auto EF/Fast EF (ML): acceptance criteria Dice >80% and relative EF error <5%; validation set of 50 cases each for A2C and A4C drawn from 74 subjects (age 18-77; 47.3% female; China 63.5%, US 36.5%; BMI 15.0-34.75), prospectively collected on uSONIQUE Genesis; ground truth by annotators reviewed by two radiologists (>=3 y) with senior-radiologist arbitration. Results: 'The Fast EF/Auto EF of EF measurements has average Dice of 92% and average absolute final measure error of 4.4% in A2C, 91.7% and 4.2% in A4C' (p.18). uWorks Echo (ML): 14 echo views, 55 test cases per view from 111 subjects (China 67%, US 33%); acceptance view recognition >90%, quality assessment >80%, auto measurement >80%. Results: 'The view recognition algorithm has average accuracy of 0.9934. The quality assessment algorithm has average accuracy of 0.9362. The automatic measure algorithm has average Dice of 0.9353 and average measurement error of 0.0514' (p.24). Fast Strain/2D Strain, Auto WMA, 4D MVQ, 4D LAAQ: performance testing stated (p.17) but no numeric results reported.",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K253720",
+      "device_name": "uSONIQUE Nova, uSONIQUE Nova Elite, uSONIQUE Vita, uSONIQUE Vita Elite, uSONIQUE Grace, uSONIQUE Grace Elite",
+      "decision_date": "2026-05-21",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "Auto EF / Fast EF",
+          "function": "Machine-learning LV segmentation on A2C and A4C cine loops with ED/ES frame detection to compute ejection fraction; Auto EF is non-real-time and Fast EF real-time (compared to GE LOGIQ E10 Auto EF2.0). Explicitly listed under 'Summary of the Machine Learning Algorithm'.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "For the proposed devices, we distinguished non-real-time and real-time ejection fraction measurement scenarios and divided them into two functions, which correspond to \"Auto EF\" and \"Fast EF\" respectively.",
+          "page": 12
+        },
+        {
+          "name": "uWorks Echo (Auto Workflow, cardiology)",
+          "function": "Automatic echocardiography workflow: view recognition, image quality assessment, and automatic measurement across 14 standard echo views (PLAX, PSAX_AV, PSAX_PA, PSAX_MV, PSAX_PM, PSAX_A, A2C, A3C, A4C, A5C, RVI, S4C, SIVC, SSN) with a scanning assistant. Reference device GE Voluson SonoLyst (OB only). Listed under the ML algorithm summary.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "The uWorks Echo algorithm primarily consists of three algorithmic components: view recognition algorithm, quality assessment algorithm and automatic measurement algorithm.",
+          "page": 17
+        },
+        {
+          "name": "Fast Strain / 2D Strain LV, 2D Strain RV, 2D Strain LA",
+          "function": "Speckle-tracking strain compared to GE Vivid AFI / AFI RV / AFI LA; Fast Strain is the real-time mode. Performance testing stated but no numbers; not explicitly labeled ML.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "For the proposed device, 2D Strain(AFI) measurement is divided into two distinct functional modes based on workflow: non-real-time and real-time scenarios, corresponding to \"2D Strain\" and \"Fast Strain,\" respectively.",
+          "page": 12
+        },
+        {
+          "name": "Auto WMA (Auto Wall Motion Analysis)",
+          "function": "Automated LV wall motion analysis compared to Philips EPIQ/Affiniti Auto SWMS (K240850). Performance testing stated but no numbers; not explicitly labeled ML.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Auto WMA (Auto Wall Motion Analysis) Yes Auto SWMS Same",
+          "page": 11
+        },
+        {
+          "name": "Auto OB (deep learning) and uWorks OB / uWorks ABD",
+          "function": "Deep-learning fetal biometry (BPD/HC, AC, HL/FL) and automatic OB and abdominal workflows. Non-cardiac.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "The only difference is that Auto OB in the proposed device adopt deep learning technology.",
+          "page": 12
+        }
+      ],
+      "performance_summary": "Auto EF/Fast EF (ML): acceptance criteria Dice >80% and relative EF error <5%; validation set of 45 cases each for A2C and A4C from 68 subjects (age 17-80; 53% female; China 40%, US 60%; BMI 15.57-38.27), prospectively collected on uSONIQUE Nova; ground truth by 2 reviewers (>=3 y) with arbitration (>=5 y). Results: 'The Fast EF/Auto EF of EF measurements has average Dice of 91.7% and average absolute final measure error of 4.4% in A2C, 90.8% and 4.7% in A4C. In the ED/ES detection, the average ES deviation in A2C is 1.36, and the average ED deviation is 1.24. In A4C, the average ES deviation is 1.29, and the average ED deviation is 1.44' (p.14). uWorks Echo (ML): 14 echo views, 50 test cases per view (45 for PSAX_PA) from 93 subjects (China 66%, US 34%); acceptance view recognition >90%, quality >80%, auto measurement >80%. Results: 'The view recognition algorithm has average accuracy of 98.09%. The quality assessment algorithm has average accuracy of 91.27%. The automatic measure algorithm has average Dice of 93.83% and average measurement error of 4.28%' (p.17). Fast Strain/2D Strain and Auto WMA: performance testing stated (pp.13-14) but no numeric results reported.",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K181574",
+      "device_name": "Uscan",
+      "decision_date": "2018-07-10",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "Automated bladder volume measurement",
+          "function": "Automatically determines bladder volume from a bladder image on the handheld Uscan system. The summary never uses the terms AI, machine learning, deep learning, neural network, or algorithm; the automation method is not described and no performance data are reported.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "The Uscan can also be used to obtain an image of the bladder that is used to automatically determine bladder volume.",
+          "page": 8
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "Only automated feature is bladder volume measurement; the summary contains no AI/ML terminology at all. Indications are Abdominal, Musculoskeletal, Pediatric, Small Organ (prostate), and Peripheral Vessel; cardiac is not an indicated application (Cardiac appears only in the SonoSite SII reference-device column of the comparison table, p.8)."
+    },
+    {
+      "k_number": "K242594",
+      "device_name": "DEEPECHO",
+      "decision_date": "2025-05-23",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "DEEPECHO fetal biometry view detection and measurement",
+          "function": "Machine-learning detection of standard fetal biometry views (cephalic, abdominal, femoral) on 2D fetal ultrasound and automatic caliper placement/measurement of HC, BPD, AC, FL with derived GA and EFW; cloud SaMD, real-time view detection via HDMI capture. Standalone test: 397 subjects / 23,544 images from 15 sites; view sensitivity 86.9% (abdominal), 98.2% (cephalic), 91.8% (femoral); Deming regression slopes 0.969-1.026 for FL/HC/AC/BPD vs three sonographers.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "DEEPECHO is intended to analyze fetal ultrasound images and clips using machine learning techniques to detect standard biometry views. Upon views detection, DEEPECHO assists in measurements computation of fetal biometric parameters (i.e., head circumference, abdominal circumference, femur length, and bi-parietal diameter).",
+          "page": 4
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "Despite the product name, DEEPECHO is fetal (OB) biometry software: it detects cephalic, abdominal, and femoral views and measures HC/BPD/AC/FL. No cardiac view, structure, or measurement is detected or output (comparison table p.8 lists views as Cephalic, Abdominal, Femoral only)."
+    }
+  ],
+  "notes": "All seven FDA summary text files were read in full; no web search was used, every decision is grounded in the FDA text. Decision dates and device names are from openfda_records.json. Page numbers refer to the '===== PAGE n =====' markers (PDF page numbers, including the cover letter). Key judgment calls: (1) K253716 and K253720 are the only two Ks with cardiac AI; United Imaging explicitly places Auto EF/Fast EF and uWorks Echo under 'Summary of the Machine Learning Algorithm' with quantitative test results, while Fast Strain/2D Strain, Auto WMA, 4D MVQ and 4D LAAQ are cardiac automated features whose ML basis is not stated. Because the predicate is GE LOGIQ E10 and references are GE Vivid, Philips EPIQ, Voluson and Mindray Consona, all uSONIQUE features are new to this manufacturer's US clearance (introduced_in_this_k=true), though they are positioned as equivalents of already-cleared competitor features. K253716 test data were acquired on uSONIQUE Genesis; K253720 on uSONIQUE Nova. (2) K250959 BioticsAI is borderline: its AI detects fetal heart screening planes (4CH, LVOT, RVOT, 3VV, 3VT) and 16 fetal cardiac structures, with reported sensitivity/specificity, but this is a mid-trimester OB anatomy screening aid with no cardiac function or measurement output; classified as not cardiac echocardiography AI. Reclassify if the registry scope includes fetal cardiac screening plane detection. (3) K241949 SonoScape P60: Auto EF is listed as a migrated auto measurement from K222596/K221140 and is not described as AI/ML; the only feature the summary identifies as AI/ML is S-FetusAI (fetal). (4) K242594 DEEPECHO is fetal biometry only despite the 'echo' name. (5) K181574 Uscan has no AI/ML wording; its automated bladder volume feature was also present in the K160420 predicate ('Distance, volume calculations'), so introduced_in_this_k=false. (6) K251673 X9 is an ML vascular-access localization device with no cardiac scope."
+}

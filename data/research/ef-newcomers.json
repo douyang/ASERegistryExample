@@ -1,0 +1,645 @@
+{
+  "batch_id": "ef-newcomers",
+  "families": [
+    {
+      "id": "echoconfidence",
+      "product_name": "EchoConfidence (USA)",
+      "company": "Mycardium AI Limited",
+      "company_website": "https://www.mycardium.com/",
+      "product_url": "https://www.mycardium.com/echoconfidence",
+      "category": "comprehensive-measurement",
+      "tags": [
+        "LVEF",
+        "chamber segmentation",
+        "view classification",
+        "Doppler",
+        "comprehensive measurement",
+        "core lab",
+        "vendor-neutral"
+      ],
+      "modality_scope": [
+        "TTE"
+      ],
+      "deployment": [
+        "vendor-neutral",
+        "PACS-integrated",
+        "workstation"
+      ],
+      "summary": "EchoConfidence is software-as-a-medical-device that classifies transthoracic echo views, segments cardiac chambers and great vessels, and produces automated structural, functional and Doppler measurements (the company states over 100 measurements) with editable contours and report generation. FDA 510(k) K250670 (cleared 2025-06-30) was supported by a 200-patient retrospective US core-lab study comparing AI mean absolute error against three expert readers, using the +25% upper-95%-CI criterion borrowed from the us2.ai predicate.",
+      "intended_use_quote": "EchoConfidence is Software as a Medical Device (SaMD) that displays images from a Transthoracic Echocardiogram, and assists the user in reviewing the images, making measurements and writing a report.",
+      "indications_for_use_quote": "EchoConfidence is Software as a Medical Device (SaMD) that displays images from a Transthoracic Echocardiogram, and assists the user in reviewing the images, making measurements and writing a report. The intended medical indication is for patients requiring review or analysis of their echocardiographic images acquired for their cardiac anatomy, structure and function. This includes automatic view classification; segmentation of cardiac structures including the left and right ventricle, chamber walls, left and right atria and great vessels; measures of cardiac function; and Doppler assessments. The intended patient population is both healthy individuals and patients in whom an underlying cardiac disease is known or suspected; the intended patient age range is for adults (>= 22 years old) and adolescent in the age range 18 – 21 years old.",
+      "embedded_ai_features": [
+        "automatic view classification (company states 23 view classes)",
+        "segmentation of LV, RV, chamber walls, LA, RA and great vessels",
+        "automated measures of cardiac function",
+        "Doppler assessments",
+        "manual editing of AI contours/fiducial points (human-in-the-loop)",
+        "multi-beat averaging (company)",
+        "batch analysis and serial-scan comparison (company)"
+      ],
+      "clearances": [
+        {
+          "k_number": "K250670",
+          "decision_date": "2025-06-30",
+          "pathway": "510(k)",
+          "product_code": "QIH",
+          "predicates": [
+            "K210791",
+            "K191171"
+          ],
+          "changes_summary": null,
+          "notable_flags": [
+            "Abbreviated 510(k) (openFDA clearance_type)",
+            "first clearance",
+            "SaMD"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K250670.pdf"
+        }
+      ],
+      "performance_claims": [
+        {
+          "k_number": "K250670",
+          "endpoint": "Primary endpoint: AI mean absolute error vs 3 human experts compared with inter-expert MAE, across all measurements (over 100), per case",
+          "metric": "Median difference between AI-vs-expert MAE and expert-vs-expert MAE, expressed as % of expert MAE; acceptance = upper 95% bootstrap CI < +25%",
+          "value": "Upper 95% CI < 0% (i.e., well below the +25% criterion); point estimate 'substantially below 0%' in the majority of cases. Exact numeric values not given.",
+          "comparator": "3 US-accredited, US-based core-lab expert readers measuring independently; ~10% of measurements reviewed/adjusted by a physician",
+          "n_studies": 200,
+          "n_patients": 200,
+          "n_sites": 1,
+          "dataset_description": "200 comprehensive echocardiograms from 200 different patients delivered via a US Echocardiography CoreLab; non-public data; core lab did not supply any training data",
+          "subgroup_notes": "Primary analysis repeated in 20 subgroups (age, gender, ethnicity, cardiac pathologies, ultrasound vendor/model, year of scan, qualitative image quality); finding stated to be consistent across subgroups with wider CIs; subgroup tables are in the IFU, not the summary",
+          "quote": "The primary criteria for acceptance are that the upper 95% confidence interval is less than +25%. In the majority of cases the point estimate is substantially below 0% (i.e. the AI agrees with the humans more than they agree with each other. [...] The reporting shows that the point estimation is such that the AI agrees with the human experts better than the humans agree with themselves: that the upper 95% confidence interval is also <0%, and well below the +25% criterion standard; across the subgroups, whilst there is increased noise and wider confidence intervals (as would be expected with fewer cases), the finding is consistent amongst the subgroups.",
+          "page": 6,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K250670",
+          "endpoint": "Agreement of AI measurements with average of expert measurements",
+          "metric": "Bland-Altman (bias / limits of agreement)",
+          "value": "Reported to FDA; numeric values not provided in the 510(k) summary",
+          "comparator": "Average of the 3 human experts' measurements",
+          "n_studies": 200,
+          "n_patients": 200,
+          "n_sites": 1,
+          "dataset_description": "Same 200-case US core-lab validation set",
+          "subgroup_notes": null,
+          "quote": "Bland-Altman analysis was reported, based on averages of the human experts’ measurements.",
+          "page": 7,
+          "verification": "fda_summary"
+        }
+      ],
+      "training_data": {
+        "disclosed": true,
+        "n_studies": null,
+        "n_patients": 20000,
+        "n_sites": null,
+        "description": "Company newsletter (July 2025): 'Trained on 100,000+ echo images from over 20,000 patients'; product page: 'fixed Convolutional Neural Networks (CNN) trained on over 100,000 images'. FDA summary states only that the development/internal-test dataset came from a separate (non-core-lab) source, with patients tagged as training or internal testing; no size given in the FDA summary.",
+        "source": "https://www.mycardium.com/download-finalechoconfidencefdanl_1751649751.pdf ; FDA summary K250670 p.7",
+        "verification": "company"
+      },
+      "validation_data": {
+        "n_studies": 200,
+        "n_patients": 200,
+        "n_sites": 1,
+        "description": "200 comprehensive TTE studies from 200 patients from a US Echocardiography CoreLab (non-public data held on core-lab servers); 3 US-based expert readers; demographic/subgroup breakdown (age, gender, ethnicity, pathology, vendor/model, scan year, image quality) tabulated in the IFU",
+        "independent_of_training": true,
+        "source": "FDA summary K250670 pp.6-7",
+        "verification": "fda_summary"
+      },
+      "prior_validations": [
+        {
+          "description": "Company states EchoConfidence was 'Validated against six international expert readers', 'Benchmarked using Mean Absolute Error (MAE) to match inter-expert consistency' and 'Reviewed using unseen datasets labelled by 8–15 certified cardiologists and sonographers' (no numbers or publication cited).",
+          "source_url": "https://www.mycardium.com/download-finalechoconfidencefdanl_1751649751.pdf",
+          "verification": "company"
+        },
+        {
+          "description": "Company product page claims 'over 95% accuracy across 23 automatic view classifications' and 'Automated AI measurement of >98% of echo parameters'; CE Class IIb marked.",
+          "source_url": "https://www.mycardium.com/echoconfidence",
+          "verification": "company"
+        }
+      ],
+      "papers": [],
+      "clinical_trials": [],
+      "open_questions": [
+        "No peer-reviewed publication describing EchoConfidence or its validation was found on PubMed (searches: 'EchoConfidence', 'Mycardium[Affiliation]'); the whitepapers listed on the company page (Francis/Shun-Shin/Stowell collaborative-AI work; Howard et al. video classification) are not explicitly attributed to the product, so they were not catalogued.",
+        "Numeric point estimates and CIs for the primary MAE endpoint, and Bland-Altman bias/LoA, are not in the 510(k) summary (subgroup tables are said to be in the IFU).",
+        "The 510(k) summary's Device Description field (page 5) did not survive text extraction; the device description here relies on the IFU and company materials.",
+        "Training set size (100,000+ images / >20,000 patients) is a company claim only; the FDA summary gives no numbers.",
+        "The 18-21 year adolescent subgroup was explicitly not evaluated separately (summary p.6).",
+        "Company claim of 'over 40% improvement in measurement precision' (newsletter) has no cited source.",
+        "Deployment model (cloud vs on-premise) is not stated in the FDA summary; company says vendor-neutral with PACS/EHR integration."
+      ],
+      "sources": [
+        {
+          "fact": "Decision date 2025-06-30, product code QIH, applicant Mycardium AI Limited, clearance type Abbreviated",
+          "url_or_file": "openfda_records.json[K250670]",
+          "verification": "fda_database"
+        },
+        {
+          "fact": "Indications for use, predicates K210791 (us2ai) and K191171 (EchoGo Core), validation study design and results",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K250670.txt (pages 4-7)",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "Company training/validation claims (100,000+ images, 20,000 patients, six international readers)",
+          "url_or_file": "https://www.mycardium.com/download-finalechoconfidencefdanl_1751649751.pdf",
+          "verification": "company"
+        },
+        {
+          "fact": "Product features, >100 measurements, 23 view classes, vendor-neutral PACS/EHR integration, CE IIb",
+          "url_or_file": "https://www.mycardium.com/echoconfidence",
+          "verification": "company"
+        },
+        {
+          "fact": "PubMed searches returned no product-specific papers",
+          "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=EchoConfidence",
+          "verification": "peer_reviewed"
+        }
+      ]
+    },
+    {
+      "id": "clarius-ef-ai",
+      "product_name": "Clarius Ejection Fraction AI",
+      "company": "Clarius Mobile Health Corp.",
+      "company_website": "https://clarius.com/",
+      "product_url": "https://clarius.com/blog/clarius-ejection-fraction-ai-real-time-automated-cardiac-assessment-in-acute-and-primary-care/",
+      "category": "lv-function-quantification",
+      "tags": [
+        "LVEF",
+        "handheld",
+        "POCUS",
+        "real-time",
+        "PCCP",
+        "Simpson single-plane",
+        "Teichholz",
+        "fractional area change"
+      ],
+      "modality_scope": [
+        "POCUS",
+        "handheld",
+        "TTE"
+      ],
+      "deployment": [
+        "on-device",
+        "ultrasound-system-embedded",
+        "mobile app (iOS/Android)"
+      ],
+      "summary": "Clarius Ejection Fraction AI is a deep-learning segmentation/landmark algorithm embedded in the Clarius App that automatically selects end-diastolic and end-systolic frames and computes LVEF in real time from PLAX (Teichholz), PSAX (fractional area change) and apical 4-/2-chamber (single-plane Simpson) views acquired with Clarius PA HD3, PAL HD3 and C3 HD3 handheld scanners. K253593 (cleared 2026-03-02, with a PCCP) was supported by a 279-exam retrospective non-inferiority study against three blinded reviewers.",
+      "intended_use_quote": "Intended for use as an assistive tool utilizing an artificial intelligence/machine learning-based algorithm for semi-automated measurement of cardiac ultrasound images for determination of left ventricular ejection fraction.",
+      "indications_for_use_quote": "Clarius Ejection Fraction AI is intended for semi- automatic non -invasive measurement of the left ventricular ejection fraction on ultrasound data acquired by the Clarius Ultrasound Scanner (i.e., phased array and curvilinear scanners). The user shall be a healthcare professional trained and qualified in ultrasound. The user retains the responsibility of confirming the validity of the measurements based on standard practices and clinical judgment. Clarius Ejection Fraction Al is intended for use in adult patients only.",
+      "embedded_ai_features": [
+        "automatic capture of ED and ES frames",
+        "deep-learning LV segmentation mask or landmark markers in ED and ES",
+        "automatic LVEF calculation (single-plane Simpson for apical, fractional area change for PSAX, Teichholz for PLAX)",
+        "manual caliper adjustment of AI result",
+        "real-time display in Clarius App during scanning (Cardiac Basic / Cardiac Advanced presets)"
+      ],
+      "clearances": [
+        {
+          "k_number": "K253593",
+          "decision_date": "2026-03-02",
+          "pathway": "510(k) with PCCP",
+          "product_code": "QIH",
+          "predicates": [
+            "K210747"
+          ],
+          "changes_summary": null,
+          "notable_flags": [
+            "PCCP",
+            "on-device",
+            "handheld/POCUS",
+            "not stand-alone software (integrated into Clarius App)",
+            "Traditional 510(k)"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253593.pdf"
+        }
+      ],
+      "performance_claims": [
+        {
+          "k_number": "K253593",
+          "endpoint": "LVEF non-inferiority, apical views (single-plane Simpson): mean absolute difference AI vs mean-reviewer compared with inter-reviewer mean absolute difference",
+          "metric": "One-sided t-test, equivalence margin 10 EF points; p-value, t-value, mean difference",
+          "value": "p = 5.57e-21 (97.5% CI: -inf, -3.00); t = -11; equivalence margin 10; mean difference -6.27",
+          "comparator": "Mean of three blinded human reviewers' manual EF measurements",
+          "n_studies": 279,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "279 exams from an anonymized multi-center cloud database (US 72, Canada 44, Germany 22, unknown 21, Turkey 18, UK 10, and 30 other countries); all acquired with Clarius C3 HD3 / PA HD3 scanners; institutions used for training excluded",
+          "subgroup_notes": "No age, gender or clinical diagnosis information was available for the verification set; exams where the AI failed to produce a measurement were excluded from comparisons",
+          "quote": "The automatic LV EF measurement was found to be non-inferior to that of experienced ultrasound users as shown by statistically significant p-values of 5.57e-21 (97.5%CI: - inf, -3.00), 1.57e-36 (97.5%CI: - inf, -2.1) and 1.12e -18 (97.5%CI: - inf, -2.38) for the Apical, PSAX and PLAX views respectively.",
+          "page": 14,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K253593",
+          "endpoint": "LVEF non-inferiority, PSAX view (fractional area change)",
+          "metric": "One-sided t-test, equivalence margin 10; p-value, t-value, mean difference",
+          "value": "p = 1.57e-36 (97.5% CI: -inf, -2.18); t = -18; equivalence margin 10; mean difference -3.87",
+          "comparator": "Mean of three blinded human reviewers",
+          "n_studies": 279,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Same 279-exam multi-center verification set",
+          "subgroup_notes": "Narrative text on p.14 gives the PSAX CI bound as -2.1 while Table 2 gives -2.18",
+          "quote": "Fractional Area Change PSAX 1.57e-36 (97.5%CI: - inf, -2.18) -18 10 -3.87",
+          "page": 15,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K253593",
+          "endpoint": "LVEF non-inferiority, PLAX view (Teichholz)",
+          "metric": "One-sided t-test, equivalence margin 10; p-value, t-value, mean difference",
+          "value": "p = 1.12e-18 (97.5% CI: -inf, -2.38); t = -10; equivalence margin 10; mean difference -5.92",
+          "comparator": "Mean of three blinded human reviewers",
+          "n_studies": 279,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Same 279-exam multi-center verification set",
+          "subgroup_notes": null,
+          "quote": "Teicholz method PLAX 1.12e-18 (97.5%CI: - inf, -2.38) -10 10 -5.92",
+          "page": 15,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K253593",
+          "endpoint": "Reliability of AI EF vs mean of reviewers (all views/methods pooled)",
+          "metric": "ICC with 95% CI",
+          "value": "AI_EF vs Mean_Reviewers ICC 0.78 [0.71, 0.83]; reviewer pairs: R1 vs R2 0.67 [0.59, 0.74], R1 vs R3 0.64 [0.53, 0.71], R2 vs R3 0.54 [0.41, 0.64]",
+          "comparator": "Mean of three reviewers; inter-reviewer ICCs shown for context",
+          "n_studies": 279,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Same 279-exam multi-center verification set",
+          "subgroup_notes": "Summary characterises agreement as 'moderate to good' across C3 HD3 and PA HD3 scanners; per-scanner ICCs not tabulated",
+          "quote": "Table 3: ICC values of Reviewers and Clarius Ejection Fraction AI Comparison Pair ICC 95% CI Reviewer1 vs. Reviewer2 0.67 [0.59 0.74] Reviewer1 vs. Reviewer3 0.64 [0.53 0.71] Reviewer2 vs. Reviewer3 0.54 [0.41 0.64] AI_EF vs. Mean_Reviewers 0.78 [0.71 0.83]",
+          "page": 15,
+          "verification": "fda_summary"
+        }
+      ],
+      "training_data": {
+        "disclosed": false,
+        "n_studies": null,
+        "n_patients": null,
+        "n_sites": null,
+        "description": "FDA summary: model developed with training, tuning (validation) and internal-testing sets collected from the Clarius Cloud and/or partner clinics, partitioned by unique anonymous patient identifier; institutions used for development were excluded from the verification study. No sizes given. Company press release: 'developed using thousands of cardiac ultrasound images annotated by clinicians'.",
+        "source": "FDA summary K253593 pp.12-13; https://clarius.com/press/fda-clears-clarius-ejection-fraction-ai-to-deliver-objective-real-time-cardiac-ultrasound-assessments-for-primary-care-and-emergency-medicine/",
+        "verification": "fda_summary"
+      },
+      "validation_data": {
+        "n_studies": 279,
+        "n_patients": null,
+        "n_sites": null,
+        "description": "279 de-identified cardiac exams randomly drawn from an anonymized multi-center cloud database spanning 36 listed countries (US 72, Canada 44, Germany 22, unknown 21, Turkey 18, UK 10 ...); acquired with Clarius C3 HD3 and PA HD3 scanners; three blinded reviewers; no demographic or clinical metadata available; poor-quality/incomplete-anatomy images excluded",
+        "independent_of_training": true,
+        "source": "FDA summary K253593 pp.12-14",
+        "verification": "fda_summary"
+      },
+      "prior_validations": [
+        {
+          "description": "A clinical design-validation (usability) study with production-equivalent units in a simulated use environment showed users could activate the tool on C3 HD3 / PA HD3, obtain PLAX/PSAX/apical EF, view ED/ES frames and adjust results; no quantitative results reported.",
+          "source_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253593.pdf",
+          "verification": "fda_summary"
+        }
+      ],
+      "papers": [],
+      "clinical_trials": [],
+      "open_questions": [
+        "No peer-reviewed publication of Clarius Ejection Fraction AI was found on PubMed (searches for 'Clarius' with ejection fraction / deep learning / affiliation).",
+        "Number of unique patients and number of contributing sites in the 279-exam verification set are not stated (counts are per exam/image, and 21 exams have unknown origin).",
+        "Bias / limits of agreement and per-scanner (C3 HD3 vs PA HD3) ICCs are not reported in the summary.",
+        "Training/tuning/internal-test set sizes are not disclosed; company says only 'thousands of images'.",
+        "Clarius press release announcing clearance is dated June 2, 2026, three months after the FDA decision date (2026-03-02).",
+        "PCCP scope (new scanners, hyperparameters, post-processing, masked-autoencoder architecture) means the marketed model may change without a new 510(k)."
+      ],
+      "sources": [
+        {
+          "fact": "Decision date 2026-03-02, product code QIH, applicant Clarius Mobile Health Corp., Traditional 510(k)",
+          "url_or_file": "openfda_records.json[K253593]",
+          "verification": "fda_database"
+        },
+        {
+          "fact": "Indications, predicate K210747, device description, verification study results, ICC table, PCCP",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K253593.txt (pages 5-19)",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "Press release: availability on PA HD3/PAL HD3/C3 HD3, 'thousands of cardiac ultrasound images', app-based delivery",
+          "url_or_file": "https://clarius.com/press/fda-clears-clarius-ejection-fraction-ai-to-deliver-objective-real-time-cardiac-ultrasound-assessments-for-primary-care-and-emergency-medicine/",
+          "verification": "company"
+        },
+        {
+          "fact": "Blog: supported views (PLAX, PSAX, 4-chamber, 2-chamber), membership/licence access",
+          "url_or_file": "https://clarius.com/blog/clarius-ejection-fraction-ai-real-time-automated-cardiac-assessment-in-acute-and-primary-care/",
+          "verification": "company"
+        }
+      ]
+    },
+    {
+      "id": "ligence-heart",
+      "product_name": "Ligence Heart",
+      "company": "Ligence, UAB",
+      "company_website": "https://ligence.io/",
+      "product_url": "https://ligence.io/",
+      "category": "comprehensive-measurement",
+      "tags": [
+        "LVEF",
+        "LV volumes",
+        "lateral e'",
+        "GLS",
+        "segmental strain",
+        "view classification",
+        "automated reporting",
+        "PACS",
+        "cloud"
+      ],
+      "modality_scope": [
+        "TTE"
+      ],
+      "deployment": [
+        "cloud",
+        "PACS-integrated",
+        "vendor-neutral",
+        "web viewer"
+      ],
+      "summary": "Ligence Heart is fully automated post-processing software that classifies 2D TTE views, selects cardiac cycles, detects borders and generates a PACS-compatible structured report that the clinician can accept or edit. K252105 (2025-09-26) covered four LV measurements (biplane LVEF, LVEDV, LVESV and lateral e') validated on 524 analysable studies at a US core lab using the individual equivalence coefficient; K253535 (2026-02-27, 510(k) statement only) added fully automated LV global longitudinal and segmental strain according to the company.",
+      "intended_use_quote": null,
+      "indications_for_use_quote": "Ligence Heart is a fully automated software platform that processes, analyses and makes measurements on acquired transthoracic cardiac ultrasound images, automatically producing a full report with measurements of several key cardiac structural and functional parameters. The data produced by this software is intended to be used to support qualified cardiologists or sonographers for clinical decision making. Ligence Heart is indicated for use in adult patients. Ligence Heart has not been validated for the assessment of congenital heart disease, valve disease, pericardial disease, and/or intra-cardiac lesions (e.g., tumors, thrombi). Limitations: * Poor image capture will lead to poor annotations and subsequent measurements. * Multiple image quality algorithms are used to filter out images of poor quality. * Our software complements good patient care and does not exempt the user from the responsibility to provide supervision, clinically review the patient, and make appropriate clinical decisions. * If no gender is present, female referenced guideline values will be used for conclusions. * If Body Surface Area (BSA) is not present, indexed values cannot be provided. * During image acquisition, inappropriate use of the echo machine, use of non-cardiac ultrasound probes, or use of suboptimal settings (e.g., gain, contrast, depth) may lead to lower accuracy of the software. * Ligence Heart has not been validated in patients with prosthetic or surgically altered cardiac valves, implantable intracardiac devices, or irregular (non-sinus) rhythm; these conditions may affect automated measurement accuracy.",
+      "embedded_ai_features": [
+        "machine-learning view classification",
+        "automatic cardiac cycle (clip) selection",
+        "automatic endocardial border detection",
+        "biplane method-of-disks LVEF, LVEDV, LVESV",
+        "lateral mitral annular e' (tissue Doppler)",
+        "image-quality filtering algorithms",
+        "automated structured report with guideline reference ranges, user accept/edit, PDF export",
+        "fully automated LV global longitudinal strain and segmental strain (added with K253535, per company)"
+      ],
+      "clearances": [
+        {
+          "k_number": "K252105",
+          "decision_date": "2025-09-26",
+          "pathway": "510(k)",
+          "product_code": "QIH",
+          "predicates": [
+            "K210791"
+          ],
+          "changes_summary": null,
+          "notable_flags": [
+            "first US clearance",
+            "Traditional 510(k)",
+            "PACS-integrated",
+            "fully automated incl. clip selection"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K252105.pdf"
+        },
+        {
+          "k_number": "K253535",
+          "decision_date": "2026-02-27",
+          "pathway": "510(k)",
+          "product_code": "QIH",
+          "predicates": [],
+          "changes_summary": "Company announcement (2026-04-14) states this second clearance covers Ligence Heart v4.0.0 and adds fully automated LV global longitudinal strain and segmental strain analysis with an interactive Strain View UI, plus the existing automated measures (biplane LVEF). FDA posted a 510(k) Statement rather than a Summary, so predicates and performance data are not public.",
+          "notable_flags": [
+            "510(k) Statement (no summary published)",
+            "Traditional 510(k)",
+            "GLS (per company)"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253535.pdf"
+        }
+      ],
+      "performance_claims": [
+        {
+          "k_number": "K252105",
+          "endpoint": "Interchangeability of automated LVEF, LVEDV, LVESV (biplane MOD) and lateral e' with expert sonographer measurements",
+          "metric": "Reference-scaled Individual Equivalence Coefficient (IEC); non-inferiority if upper 95% CI < 0.25",
+          "value": "All four parameters met the criterion (upper 95% CI of IEC < 0.25); point estimates not reported",
+          "comparator": "Three independent expert sonographers at a US independent echocardiography core laboratory",
+          "n_studies": 524,
+          "n_patients": 524,
+          "n_sites": 1,
+          "dataset_description": "600 previously acquired echocardiograms at a US core lab; 76 excluded for missing views or corrupt metadata; 524 analysed by all three readers. Age 49.48 ± 13.56 y; male 319 (60.88%), female 205 (39.12%); height 173.36 ± 10.52 cm; weight 88.92 ± 21.11 kg; LVEF 34.45 ± 15.78%",
+          "subgroup_notes": "LVEF distribution: normal >50% 120 (22.90%), reduced <50% 404 (77.10%) of which mildly reduced 40-50% 64 (12.21%), moderately reduced 30-40% 85 (16.22%), severely reduced <30% 255 (48.66%). No sex/vendor/image-quality subgroup results reported.",
+          "quote": "Primary Clinical Performance Endpoint was Individual Equivalence Coefficient (IEC). Agreement between Ligence Heart and three independent expert sonographers was quantified using the reference-scaled IEC. Automated measurements are deemed interchangeable when the upper level of the IEC 95% confidence interval was < 0.25, a non-inferiority margin derived from individual-bioequivalence principles. All four parameters met the non-inferiority criterion, confirming that Ligence Heart measurements are interchangeable with expert human measurements.",
+          "page": 9,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K252105",
+          "endpoint": "Agreement of automated LVEF, LVEDV, LVESV and lateral e' with expert measurements (secondary)",
+          "metric": "ICC",
+          "value": "ICC >= 0.90 for all four parameters (per-parameter values not given)",
+          "comparator": "Three independent expert sonographers (US core lab)",
+          "n_studies": 524,
+          "n_patients": 524,
+          "n_sites": 1,
+          "dataset_description": "Same 524-study US core-lab validation cohort",
+          "subgroup_notes": null,
+          "quote": "Secondary agreement metrics were consistent with the IEC result. Intraclass Correlation Coefficients (ICC) were ≥ 0.90 for all four parameters. No device-related adverse events, malfunctions, or unmediated issues occurred during the study.",
+          "page": 9,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K252105",
+          "endpoint": "Study exclusions / analysable rate",
+          "metric": "count",
+          "value": "76 of 600 studies excluded (missing views or corrupt metadata); 524 analysed",
+          "comparator": null,
+          "n_studies": 600,
+          "n_patients": null,
+          "n_sites": 1,
+          "dataset_description": "600 previously acquired echocardiograms at a US independent echocardiography core laboratory",
+          "subgroup_notes": null,
+          "quote": "A formal retrospective non-interventional validation study was conducted at a U.S. based independent Echocardiography Core Laboratory using 600 previously acquired echocardiograms to evaluate the performance of the device for each claimed measurement. Test datasets were strictly segregated from algorithm training datasets, as they are from completely separate cohorts. A cumulative total of 76 studies were excluded because of missing views or corrupt metadata. Ultimately, 524 echocardiographic studies were assessed by all three human readers, satisfied the predefined quality criteria, and were included in the final analysis.",
+          "page": 8,
+          "verification": "fda_summary"
+        }
+      ],
+      "training_data": {
+        "disclosed": false,
+        "n_studies": null,
+        "n_patients": null,
+        "n_sites": null,
+        "description": "FDA summary states only that test datasets were 'strictly segregated from algorithm training datasets, as they are from completely separate cohorts'; no training set size, sites or vendors given. No company source with training-set numbers was found.",
+        "source": "FDA summary K252105 p.8",
+        "verification": "fda_summary"
+      },
+      "validation_data": {
+        "n_studies": 524,
+        "n_patients": 524,
+        "n_sites": 1,
+        "description": "600 previously acquired TTE studies at a US independent echocardiography core lab, 524 analysable; mean age 49.5 y, 61% male, mean LVEF 34.5% with 77% having LVEF <50%; three expert sonographer readers",
+        "independent_of_training": true,
+        "source": "FDA summary K252105 pp.8-9",
+        "verification": "fda_summary"
+      },
+      "prior_validations": [
+        {
+          "description": "CE mark under MDR 2017/745 as a Class IIa device (company news).",
+          "source_url": "https://ligence.io/ligence-receives-certificate-for-the-ligence-heart-ai-system/",
+          "verification": "company"
+        },
+        {
+          "description": "Company reports an ESC-presented Dresden study (Botan et al.) of 1,245 patients in which fully automated aortic-valve/aortic-stenosis parameters correlated with clinician values (R ~0.81-0.98); no PubMed record located.",
+          "source_url": "https://ligence.io/ensuring-the-path-to-correct-as-diagnosis-is-ai-an-adequate-and-promising-tool/",
+          "verification": "company"
+        },
+        {
+          "description": "Company reports Ligence Heart validated against CMR-referenced LVEF at John Paul II Hospital, Krakow (Polish Archives of Internal Medicine 2025; R = 0.87 vs CMR, R = 0.88-0.90 vs experts).",
+          "source_url": "https://ligence.io/ligence-heart-validated-in-study-from-john-paul-ii-hospital-in-krakow/",
+          "verification": "company"
+        }
+      ],
+      "papers": [
+        {
+          "title": "Artificial intelligence for automated evaluation of aortic measurements in 2D echocardiography: Feasibility, accuracy, and reproducibility",
+          "first_author": "Karužas A",
+          "journal": "Echocardiography",
+          "year": 2022,
+          "doi": "10.1111/echo.15475",
+          "pmid": "36266744",
+          "url": "https://doi.org/10.1111/echo.15475",
+          "relation": "algorithm-development",
+          "n_subjects": 58,
+          "key_result": "Company-authored. Ligence Heart v2 PLAX aortic measurements (annulus, sinus, STJ, ascending aorta) feasible in 93-95% of 58 studies; automated values correlated more strongly with an expert cardiologist than a group of three cardiologists did.",
+          "verification": "pmid_resolved"
+        },
+        {
+          "title": "Deep Learning-Driven Automated Assessment of Left Ventricular Diastolic Function in Echocardiography",
+          "first_author": "Karužas A",
+          "journal": "Echocardiography",
+          "year": 2025,
+          "doi": "10.1111/echo.70290",
+          "pmid": "40892533",
+          "url": "https://doi.org/10.1111/echo.70290",
+          "relation": "algorithm-development",
+          "n_subjects": 302,
+          "key_result": "Company-authored prospective study; Ligence Heart diastolic parameters vs expert manual: E velocity r = 0.93, A velocity r = 0.88, E/A r = 0.94, LAVi r = 0.92; lower agreement for TR velocity; good classification of normal and severe diastolic dysfunction, more variability in intermediate grades.",
+          "verification": "pmid_resolved"
+        },
+        {
+          "title": "Artificial intelligence implementation in automated heart chambers quantification during pharmacological stress echocardiography",
+          "first_author": "Karuzas A",
+          "journal": "European Heart Journal - Digital Health",
+          "year": 2026,
+          "doi": "10.1093/ehjdh/ztaf121",
+          "pmid": "41574030",
+          "url": "https://doi.org/10.1093/ehjdh/ztaf121",
+          "relation": "algorithm-development",
+          "n_subjects": 240,
+          "key_result": "Company-authored multi-centre study (5 sites, 4 countries) of pharmacological stress echo: ML LV and LA volumes vs expert tracings ICC 0.84-0.93 at rest and stress; moderate agreement for RA/RV areas; poor image quality reduced yield.",
+          "verification": "pmid_resolved"
+        },
+        {
+          "title": "Left ventricular ejection fraction assessment: artificial intelligence compared with echocardiography expert and cardiac magnetic resonance measurements",
+          "first_author": "Mołek-Dziadosz P",
+          "journal": "Polish Archives of Internal Medicine",
+          "year": 2025,
+          "doi": "10.20452/pamw.17104",
+          "pmid": "40888426",
+          "url": "https://doi.org/10.20452/pamw.17104",
+          "relation": "external-validation",
+          "n_subjects": 118,
+          "key_result": "Independent (Krakow) retrospective study; AI multiloop LVEF vs CMR R = 0.87 (kappa 0.68) and vs experts R = 0.88-0.90; single best-loop AI vs CMR R = 0.89 (kappa 0.75). Attribution to Ligence Heart is from the vendor's news page; the PubMed abstract does not name the product.",
+          "verification": "pmid_resolved"
+        },
+        {
+          "title": "Fully Automatic AI-Based Quantification of LV Mass in Echocardiography: A Multimodality Validation",
+          "first_author": "Sveric KM",
+          "journal": "JACC: Cardiovascular Imaging",
+          "year": 2026,
+          "doi": "10.1016/j.jcmg.2025.09.014",
+          "pmid": "41165630",
+          "url": "https://doi.org/10.1016/j.jcmg.2025.09.014",
+          "relation": "external-validation",
+          "n_subjects": 218,
+          "key_result": "Dresden study vs CT reference: AI LV mass hybrid method ICC 0.76 / MAPE 0.16 (linear method ICC 0.49); AI reduced measurement error ~20% vs experts; AUC for increased LV mass 0.78 vs 0.71 (linear) and 0.84 vs 0.77 (hybrid). Attribution to Ligence Heart is from the vendor's news page; the abstract does not name the product.",
+          "verification": "pmid_resolved"
+        },
+        {
+          "title": "Validation of a fully automated AI system for accurate left ventricular mass measurement in echocardiography",
+          "first_author": "Sveric K",
+          "journal": "European Heart Journal - Cardiovascular Imaging (abstract supplement)",
+          "year": 2025,
+          "doi": "10.1093/ehjci/jeae333.039",
+          "pmid": null,
+          "url": "https://doi.org/10.1093/ehjci/jeae333.039",
+          "relation": "external-validation",
+          "n_subjects": 164,
+          "key_result": "Congress abstract (Dresden): AI vs human LV mass r = 0.83, MAE 22 g; AI vs CT r = 0.69, MAE 28 g compared with human vs CT r = 0.62, MAE 37 g (numbers as reported on the vendor news page).",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Model-guided medicine for early diagnosis of transthyretin-associated cardiac amyloidosis using multimodal data integration and standardized interoperable models (the CRONOS-ATTR study)",
+          "first_author": "Ramos-Polo R",
+          "journal": "International Journal of Computer Assisted Radiology and Surgery",
+          "year": 2026,
+          "doi": "10.1007/s11548-026-03640-0",
+          "pmid": "42340636",
+          "url": "https://doi.org/10.1007/s11548-026-03640-0",
+          "relation": "other",
+          "n_subjects": 124,
+          "key_result": "Uses Ligence Heart echo outputs (with Cardiolyse ECG AI) as inputs to an XGBoost ATTR-CM screening model (AUC 0.84); not a validation of Ligence Heart measurements.",
+          "verification": "pmid_resolved"
+        }
+      ],
+      "clinical_trials": [],
+      "open_questions": [
+        "K253535 was filed with a 510(k) Statement, so its indications for use, predicates, changes and performance data are not public; the GLS/strain content of that clearance rests on the company's 2026-04-14 announcement.",
+        "Per-parameter IEC point estimates/CIs and per-parameter ICCs for K252105 are not given (only 'all met <0.25' and 'ICC >= 0.90').",
+        "Training data size, sites and vendors are not disclosed in either FDA document or on the company site.",
+        "The K252105 validation cohort is heavily enriched for reduced LVEF (77% <50%; 49% <30%) and its vendor/image-quality mix is not described.",
+        "Dresden-group papers on fully automated LVEF (Sveric 2023 Diagnostics PMID 37046515; Sveric 2024 Int J Cardiol PMID 37757986) and GLS (Sveric 2024 EHJ Imaging Methods and Practice PMID 39712903) likely evaluate Ligence Heart but neither the abstracts nor available full text name the vendor, so they were not catalogued.",
+        "Company FDA-clearance news page is dated 2025-11-26, two months after the 2025-09-26 decision date.",
+        "FDA summary p.9 contains a garbled sentence ('No distinctions between the two systems do not introduce new questions')."
+      ],
+      "sources": [
+        {
+          "fact": "K252105 decision 2025-09-26 and K253535 decision 2026-02-27; product code QIH; applicant Ligence Uab; K253535 is a Statement",
+          "url_or_file": "openfda_records.json[K252105, K253535]",
+          "verification": "fda_database"
+        },
+        {
+          "fact": "Indications, predicate K210791, four cleared measurements, 600/524-study US core-lab validation, IEC and ICC results, cohort demographics",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K252105.txt (pages 4-9)",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K253535 clearance letter only (no summary or IFU text extracted)",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K253535.txt",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K253535 database entry: Traditional, Statement, received 2025-11-13",
+          "url_or_file": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K253535",
+          "verification": "fda_database"
+        },
+        {
+          "fact": "First-clearance announcement (dated 2025-11-26) citing US core-lab validation",
+          "url_or_file": "https://ligence.io/ligence-heart-gains-fda-510k-clearance/",
+          "verification": "company"
+        },
+        {
+          "fact": "Second-clearance announcement (2026-04-14): v4.0.0, fully automated LV GLS and segmental strain, private cloud option",
+          "url_or_file": "https://ligence.io/ligence-secures-second-fda-510k-clearance-adding-fully-automated-left-ventricular-strain-analysis/",
+          "verification": "company"
+        },
+        {
+          "fact": "PACS integration via DICOM SR / GSPS and HTML5 DICOM viewer",
+          "url_or_file": "https://ligence.io/pacs/",
+          "verification": "company"
+        },
+        {
+          "fact": "Vendor attribution of Krakow PAIM, Dresden JACC and EHJCI LV-mass studies to Ligence Heart",
+          "url_or_file": "https://ligence.io/resources/",
+          "verification": "company"
+        },
+        {
+          "fact": "PubMed/Crossref resolution of listed papers",
+          "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=36266744,40892533,41574030,40888426,41165630,42340636 ; https://api.crossref.org/works/10.1093/ehjci/jeae333.039",
+          "verification": "peer_reviewed"
+        }
+      ]
+    }
+  ],
+  "notes": "All four FDA documents were read in full. K250670 (EchoConfidence) and K252105 (Ligence Heart) are terse summaries that report acceptance-criterion outcomes without point estimates; K253593 (Clarius) is the only one with tabulated statistics and it carries a PCCP; K253535 (Ligence Heart second clearance) is a 510(k) Statement with no public summary. ClinicalTrials.gov searches for 'Ligence', 'Mycardium', 'EchoConfidence' and 'Clarius ejection fraction' returned no studies. No peer-reviewed papers were found for EchoConfidence or Clarius EF AI; Ligence has company-authored feasibility papers and independent Krakow/Dresden validations (product attribution for the latter comes from the vendor's site). Company-sourced numbers (Mycardium 100,000+ images / 20,000 patients; Clarius 'thousands of images') are labelled as such. Page numbers refer to the '===== PAGE n =====' markers in the extracted text files."
+}

@@ -1,0 +1,102 @@
+{
+  "group_id": "philips-lumify",
+  "records": [
+    {
+      "k_number": "K223771",
+      "device_name": "Lumify Diagnostic Ultrasound System",
+      "decision_date": "2023-05-04",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "Expanded B-lines Software Feature (merged B-line detection and B-line counting)",
+          "function": "Machine-learning classifier that identifies B-lines and merged (confluent) B-lines in each frame of a lung ultrasound cine loop, counts B-lines, and reports a loop-level category (0, 1-2, 3+, or merged) for up to 12 lung zones; user can accept or adjust. Lung preset only, Android only; C5-2, L12-4, S4-1 transducers.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "The Expanded B-lines Software Feature, with the updated merged B-line detection feature, uses machine learning as part of the algorithm design. Relevant image features extracted from a lung ultrasound cine loop are provided to a machine learning classifier that identifies B-lines and/or merged B-lines in each frame.",
+          "page": 7
+        },
+        {
+          "name": "Automated B-line counting (original, carried over from K203406)",
+          "function": "Automatic counting of B-lines in lung ultrasound cine loops with optional manual adjustment; predicate feature extended in this K to the C5-2 transducer.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "The capability of the existing automated B-lines feature (K203406) has been extended to include detection of the presence of merged B-line in cine loops (subject of this submission) and to include support of the expanded B-lines feature (including B-line counting) on a previously cleared Lumify C5-2 transducer (K152899).",
+          "page": 6
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "The only AI/ML feature in this clearance is the lung B-line / merged B-line detection algorithm (Lung preset). No cardiac AI feature is described; 'Cardiac' appears only in the unchanged system-level indications for use. Performance reported (lung only): merged B-line detection sensitivity 0.83 (95% CI 0.77-0.88), specificity 0.92 (0.88-0.96) on 416 loops from 157 subjects; B-line count ICC 0.91 (0.89-0.93) (page 10)."
+    },
+    {
+      "k_number": "K232500",
+      "device_name": "Lumify Diagnostic Ultrasound System",
+      "decision_date": "2023-10-26",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "Auto EF Quantification (based on DiA LVivo EF, K210053)",
+          "function": "AI/neural-network-based automated left ventricular border tracing and tracking across the cardiac cycle from a single apical four-chamber (A4CH) view, with automated ED/ES frame selection and Simpson's method-of-discs volume calculation, outputting EF, EDV and ESV; includes automated rejection of false results and user editing of the LV contour. Cardiac preset, S4-1 transducer, Android (Lumify 5.0).",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Auto EF is a new Artificial Intelligence (AI) feature available on the S4-1 transducer in the Cardiac Preset on the Lumify application based on the LVivo EF algorithm developed by DiA. Lumify Auto EF Quantification feature is a subset of LVivo platform. It provides automated assessment of the LV EF supporting evaluation from only apical four chamber (A4CH) view. The software automatically traces and tracks LV borders in each frame of the cardiac cycle and provides only the results for Ejection Fraction (EF), End Diastolic Volume (EDV), and End Systolic Volumes (ESV).",
+          "page": 6
+        }
+      ],
+      "performance_summary": "Retrospective clinical performance study on A4CH clips from 80 subjects referred for cardiac evaluation, acquired with Lumify (57 male / 23 female; age 19-92, mean 64 +/- 14; 37.5% normal LV function, 16.25% mild, 25% moderate, 21.25% severe dysfunction). Test data were distinct from training data. Automated EF vs. average manual tracing by sonographers: r = 0.82 (95% CI 0.72-0.88), meeting the endpoint; EDV r = 0.95 (0.91-0.96); ESV r = 0.94 (0.90-0.96). LVivo EF automatically processed 76/80 clips (95%). Quote (page 13): \"Strong correlation was demonstrated between LVivo EF ejection fraction (EF) measurements and the average results by manual tracing, r=0.82, 95% CI (0.72, 0.88), meeting the end point criteria. Additionally, strong correlations were demonstrated for end-diastolic volume (EDV) and end-systolic volume (ESV) with r=0.95, 95% CI (0.91, 0.96) and r= 0.94, 95% CI (0.90, 0.96), respectively. The LVivoEF automatically processed 76 out of 80 clips (95%).\"",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K252557",
+      "device_name": "Lumify Diagnostic Ultrasound System",
+      "decision_date": "2025-12-22",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "Lung Application 3 - Pleural Line assessment",
+          "function": "Machine-learning classification of pleural line appearance in lung ultrasound frames as normal or irregular, with cineloop-level reporting and manual adjustment. C5-2, S4-1, L12-4 transducers; Android; adults.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "The Pleural Line feature identifies and assesses the appearance of pleural lines as normal or irregular (defined as thickened, interrupted, fragmented, jagged, uneven, or otherwise non-smooth appearance on ultrasound).",
+          "page": 6
+        },
+        {
+          "name": "Lung Application 3 - Lung Image View Quality assessment",
+          "function": "Machine-learning assessment of whether incoming lung ultrasound frames are adequate for interpretation, with real-time green/red feedback.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "The lung view quality tool assesses the adequacy of ultrasound frames based on overall image appearance and the presence of any pleural lines. ... It utilizes machine learning algorithms trained on a large dataset of expert-annotated lung ultrasound images to ensure accurate analysis.",
+          "page": 6
+        },
+        {
+          "name": "B-lines tool (merged/not merged) - predicate feature from K223771",
+          "function": "Detection and classification of B-lines in lung ultrasound frames; described only as the predicate's principle of operation.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "The B-lines tool detects B-lines in incoming ultrasound frames and classifies them as merged or not merged.",
+          "page": 11
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "All AI features in this clearance (pleural line classification, lung view quality) operate on lung ultrasound. Predicate is K223771 (lung B-lines), and the summary does not mention Auto EF or any cardiac feature. Lung-only performance reported: view quality 87.9% concordance, kappa 0.67 (95% CI 0.61-0.72), PABAK 0.76; pleural line 85.6% concordance, kappa 0.66 (0.61-0.71), PABAK 0.71 (page 12)."
+    },
+    {
+      "k_number": "K252558",
+      "device_name": "Lumify Diagnostic Ultrasound System",
+      "decision_date": "2026-05-05",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "FAST Auto Assist",
+          "function": "AI real-time detection and labeling of abdominal zones and organs in the LUQ, RUQ, and suprapubic (SP) regions during an abdominal FAST exam; S4-1 and C5-2 transducers, Android, adults. Described as a subset of the Kosmos AI FAST secondary predicate (K233826) limited to the three abdominal regions.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "This additional feature is added to detect organs and respective zone in real-time during an abdominal FAST Exam. The software function detects and labels organs in the LUQ (Left Upper Quadrant), RUQ (Right Upper Quadrant), and SP (Supra-Pubic) regions that appear during an abdominal FAST exam scan.",
+          "page": 9
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "The AI feature (FAST Auto Assist) is limited to abdominal FAST zones (LUQ, RUQ, suprapubic); no pericardial/subxiphoid cardiac view or cardiac measurement is included. The Kosmos secondary predicate's AI FAST covers cardiac, thoracic and abdominal, but the summary states the Lumify subject device 'includes a subset of the secondary predicate device: real-time detection and labeling of the anatomical structures in the LUQ, RUQ, and SP regions' (page 9). Abdominal-only performance: overall accuracy 86.0% (95% CI 80.85-90.24%) on 229 loops from 82 patients; zone sensitivity 83.3-96.1%, organ sensitivity 82.3-98.6% (pages 11-12)."
+    }
+  ],
+  "notes": "All four FDA summary texts were read in full. Only K232500 (Oct 26, 2023) contains a cardiac ultrasound AI feature: Auto EF Quantification, a DiA LVivo EF-derived neural-network LV border tracing tool producing EF/EDV/ESV from a single A4CH view on the S4-1 transducer, with reported validation (r=0.82 vs manual EF, n=80). K223771 (Expanded B-lines, lung), K252557 (Lung Application 3: pleural line and lung view quality), and K252558 (FAST Auto Assist: LUQ/RUQ/SP abdominal organ/zone labeling) are non-cardiac. Note that K252557 and K252558 cite K223771, not K232500, as their Lumify predicate, so their summaries do not carry forward or mention Auto EF; whether Auto EF remains in the shipping software is not determinable from these summaries. 'Cardiac' and 'Cardiac Fetal Echo' appear in every K's system-level indications for use, but that is the unchanged imaging indication, not an AI feature. No web search was needed; all decisions are grounded in the FDA text."
+}

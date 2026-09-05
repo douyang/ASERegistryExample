@@ -1,0 +1,145 @@
+{
+  "group_id": "canon-aplio",
+  "records": [
+    {
+      "k_number": "K212333",
+      "device_name": "Aplio i900/i800/i700 Diagnostic Ultrasound System, Software V6.5",
+      "decision_date": "2022-01-24",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "2D Wall Motion Tracking (2D WMT) with Full-assist function",
+          "function": "AI/ML-supported automated initial contour tracing of the left ventricle for 2D speckle-tracking wall motion (strain) analysis",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "the promotion of the support by artificial intelligence (AI) and/or machine learning (ML) of the automated initial contour tracing capability of 2D Wall Motion Tracking for left ventricle (2D WMT) and Auto Ejection Fraction for left ventricle (Auto EF), marketed by Canon as 2D WMT with Full-assist function and Auto EF with Full-assist function, respectively.",
+          "page": 6
+        },
+        {
+          "name": "Auto EF (Auto Ejection Fraction) with Full-assist function",
+          "function": "AI/ML-supported automated initial LV contour tracing for automated left ventricular ejection fraction",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "The expansion of marketing language for several previously 510(k) cleared features is also proposed in the subject submission, including the promotion of the support by artificial intelligence (AI) and/or machine learning (ML) of the automated initial contour tracing capability of 2D Wall Motion Tracking for left ventricle (2D WMT) and Auto Ejection Fraction for left ventricle (Auto EF)",
+          "page": 6
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K233195",
+      "device_name": "Aplio i900, Aplio i800 and Aplio i700 Software V8.1 Diagnostic Ultrasound System",
+      "decision_date": "2024-01-24",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "Left Atrial Appendage (LAA) Analysis",
+          "function": "New cardiac feature: assessment of user-specified LAA dimensions and generation of a shape model of the left atrial appendage for transcatheter LAAO planning. Summary does NOT describe AI/ML/deep learning; it is the only plausible AI candidate in this clearance.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Left Atrial Appendage (LAA) Analysis, a new feature which enables the assessment of dimensions for certain user specified parameters, as well as provides a shape model of the left atrial appendage",
+          "page": 6
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "AI feature not identifiable in summary. No occurrence of artificial intelligence, machine learning, deep learning, neural network, or algorithm anywhere in the summary. New/improved features listed are LAA Analysis, Strain Ratio Measurement (elastography), Ultra Wideview for Mecha4D, CEUS viewer, and Olympus EUS transducer integration. LAA Analysis is cardiac (10 in-vivo cine data sets, cardiologist-evaluated, equivalent to manual measurements, p.7) but the text never attributes it to AI/ML; flag for manual review."
+    },
+    {
+      "k_number": "K241582",
+      "device_name": "Aplio i900/i800/i700 Diagnostic Ultrasound System, Software V7.0 (TUS-AI900, TUS-AI800, TUS-AI700)",
+      "decision_date": "2024-09-12",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "Auto Plane Detection",
+          "function": "Deep-learning automatic recognition/selection of cardiac views (A4C/A2C/A3C/SAX) as candidates for 2D Wall Motion Tracking",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Auto Plane Detection, which introduces a deep learning method to the existing 2D Wall Motion Tracking (WMT) feature for the automatic selection of appropriate candidate cardiac views (A4C/A2C/A3C/SAX)",
+          "page": 7
+        },
+        {
+          "name": "Quick Strain",
+          "function": "Works with Auto Plane Detection to launch 2D WMT LV simultaneously on A4C, A3C and A2C views, producing EDV, ESV, EF and GLS with reduced operation time",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Quick Strain, which operates in conjunction with Auto Plane Detection to enable 2D WMT LV to be launched simultaneously for A4C, A3C, and A2C cardiac views",
+          "page": 7
+        },
+        {
+          "name": "Auto LVOT",
+          "function": "Deep-learning automatic tracing of LVOT pulsed-wave Doppler waveforms for Doppler trace measurements (e.g., VTI)",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Auto LVOT, an improvement to existing non-AI Doppler trace measurement methods, by introducing a deep learning method to trace LVOT Doppler waveforms",
+          "page": 7
+        },
+        {
+          "name": "Auto AoV",
+          "function": "Deep-learning automatic tracing of aortic valve Doppler waveforms for Doppler trace measurements",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Auto AoV, an improvement to existing non-AI Doppler trace measurement methods, by introducing a deep learning method to trace AV Doppler waveforms",
+          "page": 7
+        }
+      ],
+      "performance_summary": "Validation on sequestered U.S. data (239 patients acquired over two months at one U.S. site with the predicate device; ground truth from three licensed sonographers). Auto Plane Detection (50 patients, age 20-98, BMI 16.4-71.6, EF severity strata balanced): acceptance criterion >90% agreement with sonographer-selected views for each of A4C/A3C/A2C/SAX; achieved for all four views with an average pass rate of 97%; subgroup logistic regression showed no confounders. Quick Strain (50 patients): 68% average reduction in operation time, all ICC(2,1) >0.75, NRMSE for EDV/ESV/EF/GLS <10% vs conventional 2D WMT LV. Auto LVOT (45 patients): 78% average reduction in operation time over 3 heart cycles, ICC >0.75, NRMSE <10% vs manual LVOT trace. Auto AoV (45 patients): 71% average reduction in operation time, ICC >0.75, NRMSE <10% vs manual AV trace. Quote (p.8): \"Auto Plane Detection achieved these criteria for each of the four views, with an average pass rate of 97% across these four views.\" Quote (p.9): \"All prespecified performance criteria were passed by Quick Strain which achieved an average 68% reduction in operation time\". Quote (p.10): \"Auto LVOT demonstrated an average 78% reduction in operation time (3 consecutive heart cycles)\". Quote (p.11): \"demonstration by Auto AoV of an average 71% reduction in operation time (3 consecutive heart cycles)\".",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K252074",
+      "device_name": "Aplio i900, Aplio i800 and Aplio i700 Software V9.0 Diagnostic Ultrasound System",
+      "decision_date": "2025-10-31",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "3rd Harmonic Imaging (3-HI)",
+          "function": "Deep-learning-enabled image filtering for abdominal B-mode images to improve spatial resolution, contrast resolution and artifact suppression; locked algorithm, no continuous learning",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "3rd Harmonic Imaging (3-HI), a new deep learning (DL) enabled filtering process for images of the abdominal region, which enables higher spatial resolution, contrast resolution, and reduced artifacts",
+          "page": 7
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "The only AI/ML feature named is 3rd Harmonic Imaging (3-HI), a deep-learning abdominal image-quality filter validated on abdominal images from 30 U.S. patients by three radiologists (p.8-9). Other changes (SMI Angio Mode, Precision+ Fine Processing, Auto Tune for SWE/SWD, Windows 11) are non-AI and non-cardiac. No cardiac AI feature is named in this summary; previously cleared cardiac AI (Auto EF / 2D WMT Full-assist, Auto Plane Detection, etc.) is presumably carried over from predicate K242808 but is not mentioned."
+    },
+    {
+      "k_number": "K253597",
+      "device_name": "Aplio beyond and Aplio me Software V2.0 Diagnostic Ultrasound System",
+      "decision_date": "2026-01-20",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [],
+      "performance_summary": null,
+      "exclusion_reason": "AI feature not identifiable in summary. No occurrence of artificial intelligence, machine learning, deep learning, neural network or algorithm. This is a new-platform clearance (Aplio beyond CUS-ABE00 / Aplio me CUS-AME00) whose software architecture was migrated largely unchanged from predicate Aplio i700 V8.5 (K242808) (p.7); the only software differences named are Precision+ Fine Processing, Breast Scan Guide, strain ratio, SWE Quad View, and sensor-based features (Fusion, Smart Body Mark, Smart Navigation, Breast Package) (p.8). The predicate lineage carries cardiac AI (Auto EF / 2D WMT Full-assist per K212333 and K250328), so cardiac AI is very likely present on this platform, but the summary does not name it; flag for manual review."
+    },
+    {
+      "k_number": "K250328",
+      "device_name": "UltraExtend NX CUW-U001S V2.0 Ultrasound Image Analysis Program",
+      "decision_date": "2025-04-30",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "2D Wall Motion Tracking with Full-assist function for left ventricle",
+          "function": "AI/ML-enabled automated initial LV contour for 2D speckle-tracking wall motion / strain analysis, offline on the UltraExtend NX workstation (migrated unchanged from Aplio i-series V7.0, K223017)",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "2D Wall Motion Tracking, which is expanded to include left atrial analysis and the AI/ML-enabled Full-assist function for left ventricle, both of which are not available with the primary predicate device",
+          "page": 7
+        },
+        {
+          "name": "Auto EF LV with Full-assist function",
+          "function": "AI/ML-enabled automated left ventricular ejection fraction, offline on the UltraExtend NX workstation (migrated unchanged from K223017)",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "Auto EF LV, including with the AI/ML-enabled Full-assist function for the left ventricle, which are not available with the primary predicate device",
+          "page": 7
+        }
+      ],
+      "performance_summary": "No numeric results reported. Both AI/ML features were integrated without modification from reference device K223017 and re-tested on a representative subset of the original clinical validation data using the same acceptance criteria and same ground truth; all passed. Quote (p.7): \"In this submission, 2D Wall Motion Tracking with Full-assist function for left ventricle (LV) and Auto EF with Full-assist function for LV, as cleared with the reference device, were both integrated without modification into UltraExtend NX, V2.0.\" Quote (p.8): \"The results of this testing demonstrate that both features perform as intended when integrated into the subject device, and with substantial equivalence as with the reference device.\"",
+      "exclusion_reason": null
+    }
+  ],
+  "notes": "All six summaries read in full (letter pages, IFU pages, 510(k) summary) plus a regex keyword sweep for AI/ML/deep learning/auto/algorithm terms. Three clearances are cardiac AI: K212333 (first FDA text to label Canon's 2D WMT Full-assist and Auto EF Full-assist as AI/ML; features themselves were previously cleared, K212333 added the AI/ML marketing claim), K241582 (introduces four new deep-learning cardiac features with quantitative validation: Auto Plane Detection view recognition 97% avg agreement, Quick Strain, Auto LVOT, Auto AoV Doppler auto-trace), and K250328 (UltraExtend NX offline workstation carrying Auto EF/2D WMT Full-assist unchanged from K223017). K252074's only AI feature is an abdominal DL image filter (3-HI). K233195 and K253597 never use AI/ML language; K233195's LAA Analysis is cardiac but not described as AI, and K253597 is a platform migration that names no AI feature. Note that the reference device K223017 (Aplio i-series V7.0, cleared 2023-03-31), which K250328 identifies as the original clearance of the AI/ML Full-assist performance testing, and predicate K242808 (V8.5) are not in this group and may deserve separate triage. WebSearch for Canon 'LAA Analysis' AI returned no source describing that feature as AI/ML (results concerned CT-based LAA deep learning and Canon Echo Fusion, e.g. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9068333/), so the K233195 decision rests on the FDA text alone. Page numbers refer to the '===== PAGE n =====' markers in the extracted text files."
+}

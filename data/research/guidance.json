@@ -1,0 +1,1007 @@
+{
+ "batch_id": "guidance",
+ "families": [
+  {
+   "id": "ultrasight-guidance",
+   "product_name": "UltraSight AI Guidance / UltraSight Guidance",
+   "company": "UltraSight Ltd.",
+   "company_website": "https://ultrasight.com/",
+   "product_url": "https://ultrasight.com/solution/",
+   "category": "acquisition-guidance",
+   "tags": [
+    "real-time probe guidance",
+    "image quality bar",
+    "view detection",
+    "10 standard TTE views",
+    "novice users",
+    "non-sonographer",
+    "PCCP",
+    "Philips Lumify"
+   ],
+   "modality_scope": [
+    "TTE",
+    "POCUS",
+    "handheld",
+    "2D"
+   ],
+   "deployment": [
+    "on-device",
+    "handheld",
+    "tablet app",
+    "ultrasound-system-accessory (Philips Lumify S4-1)"
+   ],
+   "summary": "Mobile-app accessory to the Philips Lumify handheld ultrasound that gives non-expert users real-time probe-manipulation cues (rotate/tilt/rock/slide), a diagnosability quality bar and view detection for ten standard 2D-TTE views in adults; expert sonographers are excluded from the intended users. First cleared July 2023 (K223347, predicate Caption Guidance DEN190040); the December 2025 clearance (K251416) added an image pre-processing step and a PCCP covering model retraining, additional ultrasound systems and additional cardiac views.",
+   "intended_use_quote": "The UltraSight AI Guidance software is intended to assist medical professionals in the acquisition of cardiac ultrasound images. UltraSight AI Guidance software is an accessory to compatible general purpose diagnostic ultrasound systems",
+   "indications_for_use_quote": "The UltraSight AI Guidance is intended to assist medical professionals (not including expert sonographers) in acquiring cardiac ultrasound images. UltraSight AI Guidance is an accessory to compatible general-purpose diagnostic ultrasound systems. UltraSight AI Guidance is indicated for use in two-dimensional transthoracic echocardiography (2D- TTE) for adult patients, specifically in the acquisition of the following standard views: Parasternal Long-Axis (PLAX), Parasternal Short-Axis at the Aortic Valve (PSAX-AV), Parasternal Short-Axis at the Mitral Valve (PSAX-MV), Parasternal Short-Axis at the Papillary Muscle (PSAX-PM), Apical 4-Chamber (AP4), Apical 5-Chamber (AP5), Apical 2-Chamber (AP2), Apical 3 -Chamber (AP3), Subcostal 4- Chamber (SubC4), and Subcostal Inferior Vena Cava (SC-IVC).",
+   "embedded_ai_features": [
+    "Quality Bar (image diagnosability score, ACEP grade >=3 threshold)",
+    "View Detection (No heart / Navigate / Hold position states)",
+    "Probe Guidance (rotation, tilt, rock, lateral-medial and superior-inferior slide cues via 3D probe display)",
+    "Image pre-processing step (added K251416) to enable additional probes under PCCP"
+   ],
+   "clearances": [
+    {
+     "k_number": "K223347",
+     "decision_date": "2023-07-24",
+     "pathway": "510(k)",
+     "product_code": "QJU",
+     "predicates": [
+      "DEN190040"
+     ],
+     "changes_summary": "Initial clearance. Versus predicate Caption Guidance: runs on Philips Lumify with S4-1 probe on Samsung Tab S6/S7 tablets instead of Terason uSmart 3200t; no auto-capture or save-best-clip features (user saves clips manually in Lumify interface); intended users exclude expert sonographers.",
+     "notable_flags": [
+      "on-device",
+      "handheld accessory",
+      "intended users exclude expert sonographers",
+      "clinical MRMC pivotal study (n=240)"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K223347.pdf"
+    },
+    {
+     "k_number": "K251416",
+     "decision_date": "2025-12-17",
+     "pathway": "510(k) with PCCP",
+     "product_code": "QJU",
+     "predicates": [
+      "K223347"
+     ],
+     "changes_summary": "Renamed UltraSight Guidance. 'the main modification introduced is the addition of a pre-processing step, done prior to feeding images as an input to the device' to enable future compatibility with additional ultrasound probes under a PCCP. PCCP modifications: M1 model re-training; M2 expand compatibility with additional ultrasound systems (image-parameter boundaries of applicability); M3 expanded list of cardiac views (with a clinical utility test requiring the clinical outcome be achieved in >=75% of subjects). Supporting text messages now appear on screen regarding guidance cues. Compatible system still Philips Lumify with S4-1 probe and tablets defined in labeling.",
+     "notable_flags": [
+      "PCCP",
+      "on-device",
+      "handheld accessory",
+      "standalone bench testing only (no new clinical study)"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251416.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K223347",
+     "endpoint": "Quality bar: diagnosable vs non-diagnosable clip classification",
+     "metric": "AUC",
+     "value": "mean AUC 0.86 (95% CI 0.85-0.87); success criterion AUC > 0.8",
+     "comparator": "Clip diagnosability label by three cardiologists",
+     "n_studies": null,
+     "n_patients": 312,
+     "n_sites": null,
+     "dataset_description": "Table 1: performance tests for Quality Bar - 312 subjects, 5,800 clips; page 11 text says 'The test was performed on 312 clips'. Collected at sites geographically separated from algorithm-development sites.",
+     "subgroup_notes": "Stratified per target cardiac view: AUC > 0.8 and PPV > 0.75 for each view.",
+     "quote": "The test assessed the classification performance between “diagnosable” and “non diagnosable” clips of each view. The mean AUC was 0.86 with 95% CI [0.85, 0.87]  showing good classification performance, relative to the success criteria of AUC > 0.8.",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K223347",
+     "endpoint": "Quality bar: diagnosable vs non-diagnosable clip classification",
+     "metric": "PPV",
+     "value": "mean PPV 0.93 (95% CI 0.92-0.94); success criterion PPV > 0.75",
+     "comparator": "Clip diagnosability label by three cardiologists",
+     "n_studies": null,
+     "n_patients": 312,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "The mean PPV was 0.93 with 95% CI [0.92, 0.94] relative to the success criteria of PPV > 0.75, showing good classification performance. Stratified analysis was performed, for each target cardiac view the AUC was greater than 0.8, and the PPV was above 0.75.",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K223347",
+     "endpoint": "View detection: Hold position vs Navigate and Hold position vs No heart (frame level)",
+     "metric": "AUC",
+     "value": "mean AUC 0.988 (95% CI 0.985-0.990); success criterion AUC > 0.8",
+     "comparator": "Frame-level annotation by expert sonographers",
+     "n_studies": null,
+     "n_patients": 75,
+     "n_sites": null,
+     "dataset_description": "75 subjects, 2.3 million frames",
+     "subgroup_notes": "Each individual binary classification test AUC above 0.8.",
+     "quote": "The test was performed on 75 subjects on a total of 2.3 million frames of ultrasound images. ... The ground truth labels were defined on the frame level using annotation of expert sonographers. The mean AUC was 0.988 with 95% CI [0.985, 0.990] showing good classification performance, relative to the success criteria of AUC > 0.8.",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K223347",
+     "endpoint": "Probe guidance cue prediction (rotation, tilt, rock, x/y slide; frame level binary tests)",
+     "metric": "AUC",
+     "value": "mean AUC 0.821 (95% CI 0.813-0.827); success criterion AUC > 0.8",
+     "comparator": "Recorded probe position vs target view (binary classification tests per cue/direction)",
+     "n_studies": null,
+     "n_patients": 75,
+     "n_sites": null,
+     "dataset_description": "75 subjects, 2.3 million frames",
+     "subgroup_notes": null,
+     "quote": "The testing was performed on 75 subjects on a total of 2.3 million frames of ultrasound images. The testing evaluated the frame level accuracy of each guidance cue prediction. ... The mean AUC was 0.821 with 95% CI [0.813, 0.827]  showing good classification performance, relative to the success criteria of AUC > 0.8.",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K223347",
+     "endpoint": "Pilot MRMC study: novice exams of sufficient quality for LV size, LV function, RV size, pericardial effusion (co-primary)",
+     "metric": "% of exams sufficient (majority of 5 cardiologists)",
+     "value": "100% for all four co-primary parameters",
+     "comparator": "Blinded panel of 5 expert cardiologists; sonographer scans on same Lumify hardware without AI as comparison",
+     "n_studies": null,
+     "n_patients": 61,
+     "n_sites": 1,
+     "dataset_description": "Prospective single-center MRMC pilot; 61 subjects",
+     "subgroup_notes": "Secondary endpoints 90-100%; per-view diagnostic quality 80-100% for PLAX, PSAX AV, PSAX MV, PSAX PM, AP2, AP3, AP5, Sub4C, SC-IVC; 78.6-97.9% of clips ACEP score >= 3.",
+     "quote": "Sixty-one (61) subjects were scanned twice, once by a non-expert user, using Philips Lumify with the UltraSight AI guidance; and, by a cardiac sonographer using the Philips Lumify hardware but without AI guidance. ... The exams performed by the non-expert users had sufficient visual quality in 100% of cases based on majority agreement to assess LV size and function, RV size , and pericardial effusion.",
+     "page": 12,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K223347",
+     "endpoint": "Pivotal MRMC study: novice exams of sufficient quality for LV size, LV function, RV size, pericardial effusion (4 co-primary endpoints)",
+     "metric": "% of exams sufficient (majority of 5 cardiologists)",
+     "value": "93-100% across the four co-primary endpoints",
+     "comparator": "Blinded panel of 5 expert cardiologists; sonographer scans on same Lumify hardware without AI as comparison",
+     "n_studies": null,
+     "n_patients": 240,
+     "n_sites": null,
+     "dataset_description": "Prospective multicenter MRMC pivotal study (number of sites not stated in summary); 240 subjects; users = medical professionals without specialized echo training",
+     "subgroup_notes": "Cohen's kappa intra-cardiologist variability on random 10% of exams: 'very good agreement'.",
+     "quote": "A total of 240 subjects were scanned twice, once by a non-expert user, using the Philips Lumify with the UltraSight AI guidance; and, by a cardiac sonographer using the Philips Lumify hardware but without AI guidance. ... For the 4 co-primary endpoints, the non-expert users’ scans were judged to have adequate visual quality on the majority agreement to assess the clinical parameters in nearly all subjects, in 93-100% of cases.",
+     "page": 13,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K223347",
+     "endpoint": "Pivotal MRMC study: secondary endpoints (sufficient quality by majority)",
+     "metric": "% of exams sufficient",
+     "value": "MV structure 98%; RV function 94%; LA size 94%; AV structure 89%; TV structure 74%; IVC size 67%",
+     "comparator": "Blinded panel of 5 expert cardiologists",
+     "n_studies": null,
+     "n_patients": 240,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "For the secondary endpoints, the percentage of exams performed by non-expert users that had sufficient visual quality based on majority agreement was 98% for MV structure, 94% for RV function and left atrium size, 89% for AV structure, 74% for TV structure, and 67% for IVC size.",
+     "page": 13,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K251416",
+     "endpoint": "Quality bar: diagnosable vs non-diagnosable clip classification (updated test set)",
+     "metric": "AUC and FPR (point estimates not reported)",
+     "value": "mean AUC within acceptance criterion AUC > 0.8; mean FPR met criterion FPR < 0.2 (95% CIs reported as meeting criteria; values not given)",
+     "comparator": "Majority vote of three expert cardiologists (two annotators + third adjudicator)",
+     "n_studies": null,
+     "n_patients": 134,
+     "n_sites": null,
+     "dataset_description": "134 patients (111 USA, 23 Israel), 26,362 clips; BMI 18-39.3; age 18-91 years; 50.7% female / 49.3% male",
+     "subgroup_notes": "Subgroup analyses across BMI (<25, >=25 and <30, >=30), age (<50, >=50 and <65, >=65), sex, and US vs non-US; results not reported numerically.",
+     "quote": "The test dataset was collected from clinical sites geographically distinct from those used for the development dataset. It included a total of 134 patients - 111 from the USA and 23 from Israel - comprising 26,362 ultrasound clips. ... The mean area under the receiver operating characteristic curve (AUC) was within the pre-defined acceptance criteria (AUC > 0.8) with 95% CI showing good classification performance, relative to the success criteria. The mean false positive rate (FPR) met the acceptance criteria of FPR <0.2 with 95% CI showing good classification performance.",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K251416",
+     "endpoint": "Probe guidance cue prediction (frame level binary tests)",
+     "metric": "AUC (point estimate not reported)",
+     "value": "mean AUC within acceptance criterion AUC > 0.8 (95% CI reported as meeting criterion; value not given)",
+     "comparator": "Recorded probe position during acquisition, ground truth by expert sonographers and/or cardiologists",
+     "n_studies": null,
+     "n_patients": 134,
+     "n_sites": null,
+     "dataset_description": "134 patients (111 USA, 23 Israel), 2.4 million frames; BMI 18-39.3; age 18-91; 50.7% female",
+     "subgroup_notes": "Subgroup analyses across BMI, age, sex, US vs non-US; not reported numerically.",
+     "quote": "The test dataset was collected from clinical sites geographically distinct from those used for the development dataset. It included a total of 134 patients - 111 from the USA and 23 from Israel - comprising 2.4 million ultrasound frames. ... The mean AUC was within the acceptance criteria of AUC>0.8 with 95% CI showing good classification performance.",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K223347",
+     "endpoint": "Pivotal study (peer-reviewed): novice exams with sufficient quality for LV size, LV function, RV size, pericardial effusion",
+     "metric": "% of studies sufficient",
+     "value": "99.2%, 99.6%, 92.9%, 100% respectively",
+     "comparator": "5 certified echocardiographers blinded to imager identity; expert sonographer scans on same Lumify device",
+     "n_studies": 240,
+     "n_patients": 240,
+     "n_sites": null,
+     "dataset_description": "Prospective multicenter; 6 nurses and 3 medical residents; 240 patients (61+/-16 years; 63% with cardiac pathology); 10 standard views; Lumify + UltraSight",
+     "subgroup_notes": "Concordant diagnostic interpretation novices vs sonographers 83-96%; quantitative analysis feasible in 83% of novice images with r>=0.74 vs sonographer images",
+     "quote": "Of the 240 studies acquired by novices, 99.2%, 99.6%, 92.9%, and 100% had sufficient quality to assess left ventricular size and function, right ventricular size, and pericardial effusion, respectively.",
+     "page": null,
+     "verification": "peer_reviewed"
+    }
+   ],
+   "training_data": {
+    "disclosed": true,
+    "n_studies": null,
+    "n_patients": 580,
+    "n_sites": null,
+    "description": "K223347 Table 1: algorithm development phase used 580 subjects and 5 million frames of ultrasound images; 'The data used for performance testing was collected at different sites, geographically separated, from the sites used for collection of the algorithm development data.' K251416 states development and test datasets came from geographically distinct clinical sites but gives no development-set size.",
+    "source": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K223347.txt (page 10)",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": 134,
+    "n_sites": null,
+    "description": "K223347 standalone tests: quality bar 312 subjects / 5,800 clips; view detection and guidance 75 subjects / 2.3 million frames; clinical pilot 61 subjects (single center) and pivotal 240 subjects (multicenter). K251416 standalone tests: 134 patients (111 USA, 23 Israel), 26,362 clips for quality bar and 2.4 million frames for guidance; BMI 18-39.3, age 18-91, 50.7% female.",
+    "independent_of_training": true,
+    "source": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K223347.txt (pages 10-13); /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K251416.txt (PDF pages 9-10, read from rendered page images)",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "CE Marking in the EU and UKCA Marking in the UK for the real-time cardiac ultrasound guidance software, announced around ESC 2022 (per trade press).",
+     "source_url": "https://www.fiercebiotech.com/medtech/esc-2022-ultrasight-claims-european-approval-ai-guided-heart-ultrasound",
+     "verification": "news"
+    },
+    {
+     "description": "Company press release for K223347 clearance (July 27, 2023) states compatibility with Philips Lumify and cites the 2022 multicenter study (LV function 99.6%, RV size 93%, pericardial effusion 100%).",
+     "source_url": "https://www.prnewswire.com/news-releases/fda-grants-clearance-for-ultrasights-ai-powered-cardiac-ultrasound-technology-301886516.html",
+     "verification": "news"
+    },
+    {
+     "description": "Company announcement (Jan 6, 2026) of FDA clearance to expand the Echo Stewardship Platform to handheld, laptop and cart-based ultrasound systems (corresponds to K251416 and its PCCP); no performance numbers given.",
+     "source_url": "https://ultrasight.com/fda-clearance-across-ultrasound-systems/",
+     "verification": "company"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Real-Time Artificial Intelligence-Based Guidance of Echocardiographic Imaging by Novices: Image Quality and Suitability for Diagnostic Interpretation and Quantitative Analysis",
+     "first_author": "Mor-Avi V",
+     "journal": "Circulation: Cardiovascular Imaging",
+     "year": 2023,
+     "doi": "10.1161/CIRCIMAGING.123.015569",
+     "pmid": "37955139",
+     "url": "https://doi.org/10.1161/CIRCIMAGING.123.015569",
+     "relation": "pivotal-validation",
+     "n_subjects": 240,
+     "key_result": "Novice (6 nurses, 3 residents) exams had sufficient quality to assess LV size, LV function, RV size and pericardial effusion in 99.2%, 99.6%, 92.9% and 100%; concordant interpretation with sonographer images in 83-96%; quantitative LV analysis feasible in 83% with r>=0.74.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial intelligence in breaking the learning curve for echocardiography: a secondary analysis of a multicentre trial",
+     "first_author": "Schissel C",
+     "journal": "European Heart Journal - Digital Health",
+     "year": 2026,
+     "doi": "10.1093/ehjdh/ztag065",
+     "pmid": "42146869",
+     "url": "https://doi.org/10.1093/ehjdh/ztag065",
+     "relation": "external-validation",
+     "n_subjects": 159,
+     "key_result": "Nine novices, 159 patients, 954 images: 97.7% met diagnostic threshold (score >=3); BMI had significant effect (P=0.0029) but all subgroups above threshold; experts ruled out LV dysfunction in 99.4% and hypertrophy in 98.7%.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Smarter FoCUS: AI-guided focused cardiac ultrasound enables novice detection of left ventricular dysfunction",
+     "first_author": "Kane CJ",
+     "journal": "European Heart Journal - Digital Health",
+     "year": 2026,
+     "doi": "10.1093/ehjdh/ztag066",
+     "pmid": "42169733",
+     "url": "https://doi.org/10.1093/ehjdh/ztag066",
+     "relation": "external-validation",
+     "n_subjects": 496,
+     "key_result": "496 adults; novices after 4-h workshop using Lumify + UltraSight guidance; adequate views in 95.0% (AI interpretation) and 97.4% (expert); two-step low-EF screening sensitivity 96.2%, specificity 95.4%, NPV 99.8%; validation cohort of 344 with sensitivity 100%, specificity 99.4%.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Improving structural heart disease screening: AI-ECG and novice AI-guided focused cardiac ultrasound",
+     "first_author": "Killalea MM",
+     "journal": "npj Digital Medicine",
+     "year": 2026,
+     "doi": "10.1038/s41746-026-02856-3",
+     "pmid": "42265270",
+     "url": "https://doi.org/10.1038/s41746-026-02856-3",
+     "relation": "external-validation",
+     "n_subjects": 995,
+     "key_result": "995 adults; nine novices with Lumify + UltraSight guidance; AI-FoCUS feasible in 97.3%; AI-FoCUS alone PPV 95.4% / NPV 98.0% for selected structural heart disease phenotypes vs comprehensive echo.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Reliability of minimally trained operator's left ventricular outflow tract velocity-time integral measurement guided by artificial intelligence: protocol for a multicentre randomised controlled trial",
+     "first_author": "Levy N",
+     "journal": "BMJ Open",
+     "year": 2025,
+     "doi": "10.1136/bmjopen-2025-105624",
+     "pmid": "41125264",
+     "url": "https://doi.org/10.1136/bmjopen-2025-105624",
+     "relation": "clinical-trial",
+     "n_subjects": 100,
+     "key_result": "Protocol only (NCT06486467): minimally trained operator vs expert LVOT VTI measurement, both guided by UltraSight AI to obtain the five-chamber view, before/after 250 mL fluid challenge in ICU patients; planned n=100.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "National Cost Savings From Use of Artificial Intelligence Guided Echocardiography in the Assessment of Intermediate-Risk Patients With Syncope in the Emergency Department",
+     "first_author": "Goldsmith A",
+     "journal": "JACEP Open",
+     "year": 2025,
+     "doi": "10.1016/j.acepjo.2025.100139",
+     "pmid": "40297198",
+     "url": "https://doi.org/10.1016/j.acepjo.2025.100139",
+     "relation": "other",
+     "n_subjects": null,
+     "key_result": "Monte Carlo cost model (returned by PubMed 'UltraSight' query): AI-assisted TTE-first strategy estimated to save $815M +/- $260M annually; not a validation of the device.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [
+    {
+     "nct_id": "NCT05090748",
+     "title": "A Pivotal Study for the Assessment of the Quality of Echocardiographic Clips When Obtained by Novice Users While Using the UltraSight Echocardiography Guidance (USEG) Software",
+     "status": "COMPLETED",
+     "url": "https://clinicaltrials.gov/study/NCT05090748"
+    },
+    {
+     "nct_id": "NCT05067803",
+     "title": "Pilot Study for the Assessment of the Quality of Echocardiography Exam When Obtained by Novice Users While Using the USEG Software",
+     "status": "COMPLETED",
+     "url": "https://clinicaltrials.gov/study/NCT05067803"
+    },
+    {
+     "nct_id": "NCT04981444",
+     "title": "Optimization of an Automated Ultrasound Cardiac Guidance Tool",
+     "status": "COMPLETED",
+     "url": "https://clinicaltrials.gov/study/NCT04981444"
+    },
+    {
+     "nct_id": "NCT05660044",
+     "title": "Human Factors Validation Study of Artificial Intelligence Ultrasound Navigation Software for Cardiac Imaging",
+     "status": "COMPLETED",
+     "url": "https://clinicaltrials.gov/study/NCT05660044"
+    },
+    {
+     "nct_id": "NCT05649826",
+     "title": "Optimization of an Ultrasound Cardiac Guidance Tool",
+     "status": "RECRUITING",
+     "url": "https://clinicaltrials.gov/study/NCT05649826"
+    },
+    {
+     "nct_id": "NCT07155434",
+     "title": "ENABLE-HCM - AI-ENabled Echocardiography With Ultrasound Beyond the Echo Lab for Better HCM Imaging and Expanded Access",
+     "status": "TERMINATED",
+     "url": "https://clinicaltrials.gov/study/NCT07155434"
+    },
+    {
+     "nct_id": "NCT06486467",
+     "title": "Reliability of Minimally Trained Operator's Velocity-Time Integral Measurement Guided by Artificial Intelligence VTI",
+     "status": "RECRUITING",
+     "url": "https://clinicaltrials.gov/study/NCT06486467"
+    }
+   ],
+   "open_questions": [
+    "K223347 Table 1 lists the quality-bar test as 312 subjects and 5,800 clips, but the narrative says 'The test was performed on 312 clips' - the unit (subjects vs clips) is ambiguous.",
+    "K223347 summary does not state the number of sites in the multicenter pivotal study, nor the number of novice users (Mor-Avi 2023 reports 6 nurses + 3 residents).",
+    "K251416 summary reports only that AUC > 0.8 and FPR < 0.2 acceptance criteria were met; no point estimates or CIs are given for the quality bar or guidance tests, and subgroup results are not reported numerically.",
+    "K251416 development (training) dataset size is not stated; the 580-subject / 5-million-frame figure comes from K223347 and may have grown.",
+    "K251416 PDF pages 5-12 have non-standard font encoding so the pypdf text is garbled; values were read from rendered page images (PDF pages 9-12) - page numbers refer to PDF page order.",
+    "Whether the pilot study (61 subjects) was published in a peer-reviewed journal could not be determined.",
+    "Which additional ultrasound systems have been added under the K251416 PCCP (company Jan-2026 release mentions handheld, laptop and cart-based systems) is not disclosed in the FDA summary."
+   ],
+   "sources": [
+    {
+     "fact": "K223347 indications, predicate, device description, Table 1 dataset sizes, standalone and clinical results",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K223347.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K251416 indications (Form 3881), pre-processing modification, PCCP table, 134-patient test datasets, acceptance criteria",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K251416.txt and rendered page images of https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251416.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Decision dates, product code QJU, applicant names",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Peer-reviewed papers and DOIs",
+     "url_or_file": "PubMed esearch/esummary/efetch and Crossref api.crossref.org/works/<doi> (this session)",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "Clinical trial registrations",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies?query.term=UltraSight",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Company website, solution page, Jan 2026 expanded clearance announcement",
+     "url_or_file": "https://ultrasight.com/fda-clearance-across-ultrasound-systems/",
+     "verification": "company"
+    },
+    {
+     "fact": "CE/UKCA marking and July 2023 clearance press coverage",
+     "url_or_file": "https://www.diagnosticimaging.com/view/ultrasight-ai-powered-cardiac-ultrasound-guidance-fda-nod",
+     "verification": "news"
+    }
+   ]
+  },
+  {
+   "id": "ultrasight-pvad-iq",
+   "product_name": "PVAD IQ Software",
+   "company": "UltraSight Ltd.",
+   "company_website": "https://ultrasight.com/",
+   "product_url": "https://ultrasight.com/critical-care/",
+   "category": "interventional-guidance",
+   "tags": [
+    "PVAD",
+    "Impella",
+    "microaxial flow pump",
+    "pump position",
+    "aortic annulus to inlet distance",
+    "landmark detection",
+    "clip acceptability",
+    "PCCP",
+    "critical care"
+   ],
+   "modality_scope": [
+    "TTE",
+    "POCUS",
+    "2D clips"
+   ],
+   "deployment": [
+    "software as a medical device",
+    "ultrasound vendor neutral",
+    "integrates with UltraSight Echo Stewardship platform (per company)"
+   ],
+   "summary": "Machine-learning software (product code QIH, 21 CFR 892.2050) that analyzes transthoracic echo clips of adults with a percutaneous ventricular assist device, detects the aortic annulus and PVAD inlet landmarks, reports the mean distance between them, and classifies clips as acceptable or non-acceptable for that measurement. Cleared December 2025 with a PCCP covering retraining, additional PVAD devices and additional views (AP3, AP5, subcostal LVOT); predicate is DiA's LVivo Software Application (K210053).",
+   "intended_use_quote": "The PVAD IQ Software is intended for non-invasive analysis of ultrasound images to detect and measure structures from cardiac ultrasound of patients 18 years old and above, with Percutaneous Ventricular Assist Devices (PVAD). Such use is typically utilized for clinical decision support by a qualiﬁed physician.",
+   "indications_for_use_quote": "The PVAD IQ software is intended for non-invasive analysis of ultrasound images to detect and measure structures from cardiac ultrasound of patients 18 years old and above, with a Percutaneous Ventricular Assist Device (PVAD). Such use is typically utilized for clinical decision support by a qualified physician.",
+   "embedded_ai_features": [
+    "Landmark identification (aortic annulus and PVAD inlet) with mean distance computation",
+    "Acceptability classification of clips (both landmarks simultaneously visible)",
+    "Manual measurement and annotation UI with raw data retained"
+   ],
+   "clearances": [
+    {
+     "k_number": "K252235",
+     "decision_date": "2025-12-18",
+     "pathway": "510(k) with PCCP",
+     "product_code": "QIH",
+     "predicates": [
+      "K210053"
+     ],
+     "changes_summary": "Initial clearance. Versus predicate LVivo (K210053): same intended use, vendor-neutral TTE clip processing and deep CNN landmark detection/classification, but different output (aortic annulus-to-PVAD inlet distance instead of LVEF/strain/wall motion).",
+     "notable_flags": [
+      "PCCP",
+      "Impella/PVAD positioning",
+      "QIH image processing (not QJU guidance)",
+      "reviewed by DHT8B Imaging Software Team"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K252235.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K252235",
+     "endpoint": "Aortic annulus to PVAD inlet distance",
+     "metric": "MAE",
+     "value": "0.42 cm (95% CI 0.38-0.47 cm); criterion 95% CI upper bound < 0.5 cm",
+     "comparator": "US board-certified cardiac sonographers experienced in PVAD/Impella echo",
+     "n_studies": null,
+     "n_patients": 186,
+     "n_sites": null,
+     "dataset_description": "963 clips from 186 patients; geographically distinct test datasets; ground truth by US board-certified cardiac sonographers",
+     "subgroup_notes": "'consistent performance across the entire operating range with no observed systematic bias' (page 9); no demographic subgroups reported.",
+     "quote": "To establish performance, PVAD IQ software was evaluated using geographically distinct test datasets comprising 963 clips from 186 patients. ... Distance measurement: a mean absolute error (MAE) with a 95% conﬁdence interval (CI) upper bound below 0.5 cm. The PVAD IQ software achieved an MAE of 0.42 cm with a 95% CI of (0.38–0.47 cm)",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K252235",
+     "endpoint": "Clip acceptability classification",
+     "metric": "Cohen's kappa",
+     "value": "0.71 (95% CI 0.66-0.75); criterion > 0.6",
+     "comparator": "Sonographer acceptability label",
+     "n_studies": null,
+     "n_patients": 186,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "Acceptability classiﬁcation requirement: Cohens kappa above 0.6. result: 0.71 with a 95% CI of (0.66–0.75)",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K252235",
+     "endpoint": "Landmark detection (visibility) of PVAD inlet and aortic annulus",
+     "metric": "AUC",
+     "value": "Inlet 0.92 (0.90-0.94); Annulus 0.98 (0.95-1.0); criterion > 0.8",
+     "comparator": "Sonographer annotation",
+     "n_studies": null,
+     "n_patients": 186,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "Landmark detection of inlet and aortic annulus requirement: AUC above 0.8. result: Inlet: 0.92 (0.9-0.94). Annulus: 0.98 (0.95, 1)",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K252235",
+     "endpoint": "Landmark position error",
+     "metric": "MAE",
+     "value": "Inlet 0.44 cm (0.41-0.48); Annulus 0.31 cm (0.30-0.33); criterion < 0.5 cm",
+     "comparator": "Sonographer landmark positions",
+     "n_studies": null,
+     "n_patients": 186,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "Landmark position requirement: MAE below 0.5 cm. results: Inlet: 0.44 (0.41-0.48) Annulus: 0.31 (0.3, 0.33)",
+     "page": 8,
+     "verification": "fda_summary"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "Summary states only that the algorithm is 'trained with clinical data' and that test datasets were 'geographically distinct'; no training set size given.",
+    "source": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K252235.txt",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": 186,
+    "n_sites": null,
+    "description": "963 clips from 186 patients with a PVAD; geographically distinct from training data; ground truth by US board-certified cardiac sonographers experienced in PVAD/Impella imaging. Views used in the cleared version are not specified (PCCP lists AP3, AP5 and subcostal LVOT as additional views).",
+    "independent_of_training": true,
+    "source": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K252235.txt (page 8)",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Company press release (Feb 25, 2026) announcing FDA clearance of PVAD IQ for use with the Echo Stewardship Platform in patients with a microaxial flow pump; references a first-in-human feasibility study of AI-guided FoCUS by ICU professionals at Shamir Medical Center, Israel (no n or results given).",
+     "source_url": "https://natlawreview.com/press-releases/ultrasighttm-advances-ai-enabled-workflows-cardiac-critical-care",
+     "verification": "news"
+    },
+    {
+     "description": "Company critical-care page cites MAE 0.42 cm, 'comparable to expert cardiologists' with 'lower variability than the inter-observer variability typically seen between cardiologists', attributed to a Baldetti L. presentation at THT 2026 (March 2026).",
+     "source_url": "https://ultrasight.com/critical-care/",
+     "verification": "company"
+    }
+   ],
+   "papers": [],
+   "clinical_trials": [],
+   "open_questions": [
+    "No peer-reviewed publication of PVAD IQ found on PubMed (searches: Impella/microaxial + AI/echo; Baldetti L); the THT 2026 presentation cited by the company was not located as an indexed abstract.",
+    "Training dataset size, number of sites, ultrasound vendors, and which PVAD models (Impella variants) were in the test set are not stated.",
+    "Number of test sites and which echo views are supported in the cleared version are not stated.",
+    "No clinicaltrials.gov registration found for PVAD IQ or the Shamir Medical Center feasibility study under 'PVAD IQ' or 'UltraSight Impella'."
+   ],
+   "sources": [
+    {
+     "fact": "Indications, predicate K210053, device description, performance results, PCCP",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K252235.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Decision date 2025-12-18, product code QIH, applicant",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Company product page and THT 2026 claim",
+     "url_or_file": "https://ultrasight.com/critical-care/",
+     "verification": "company"
+    },
+    {
+     "fact": "Feb 2026 clearance press release",
+     "url_or_file": "https://natlawreview.com/press-releases/ultrasighttm-advances-ai-enabled-workflows-cardiac-critical-care",
+     "verification": "news"
+    }
+   ]
+  },
+  {
+   "id": "heartfocus",
+   "product_name": "HeartFocus",
+   "company": "DESKi",
+   "company_website": "https://heartfocus.ai/",
+   "product_url": "https://heartfocus.ai/product",
+   "category": "acquisition-guidance",
+   "tags": [
+    "real-time probe guidance",
+    "diagnostic-quality view detection",
+    "auto record",
+    "best-effort record",
+    "10 standard TTE views",
+    "novice users",
+    "PCCP",
+    "Clarius",
+    "Butterfly iQ+ / iQ3",
+    "iPad",
+    "iPhone",
+    "offline"
+   ],
+   "modality_scope": [
+    "TTE",
+    "POCUS",
+    "handheld",
+    "2D"
+   ],
+   "deployment": [
+    "on-device",
+    "offline (no cloud server; data stored locally on tablet/phone)",
+    "handheld",
+    "tablet app (iPad/iPadOS)",
+    "iPhone app (iOS 17+)",
+    "DICOM export"
+   ],
+   "summary": "Deep-learning accessory app that provides live probe guidance, diagnostic-quality view detection, automatic clip recording and best-effort recording for ten standard 2D-TTE views in adults, running fully offline on a tablet or phone connected to a handheld probe. First cleared April 2025 (K242807, v1.1.1, Clarius PAHD3/PAHD/PAL scanners, predicate Caption Guidance DEN190040) with a PCCP for retraining, new ultrasound systems and new operating systems; the June 2026 Special 510(k) (K260780, v1.3.0) added iPhone support and documented PCCP-implemented Butterfly iQ+/iQ3 and iPadOS compatibility.",
+   "intended_use_quote": "The HeartFocus software is intended to assist healthcare professionals in the acquisition of cardiac ultrasound images. The HeartFocus software is an accessory to compatible general purpose diagnostic ultrasound systems.",
+   "indications_for_use_quote": "The HeartFocus software is intended to assist and guide medical professionals in the acquisition of cardiac ultrasound images. HeartFocus software is an accessory to compatible general-purpose diagnostic ultrasound systems. Heartfocus guides the acquisition of two-dimensional transthoracic echocardiography (2D-TTE). Specifically, in the acquisition of the following standard views: Parasternal Long-Axis (PLAX), Parasternal Short-Axis at the Aortic Valve (PSAX-AV), Parasternal Short-Axis at the Mitral Valve (PSAX-MV), Parasternal Short-Axis at the Papillary Muscle (PSAX-PM), Apical 4-Chamber (A4C), Apical 5-Chamber (A5C), Apical 2-Chamber (A2C), Apical 3-Chamber (A3C), Subcostal 4-Chamber (SC-4C), and Subcostal Inferior Vena Cava (SC-IVC). HeartFocus software is indicated for use in adult patients who require a cardiac ultrasound exam.",
+   "embedded_ai_features": [
+    "Live Guidance (ML model infers probe position relative to target and gives movement cues)",
+    "Diagnostic-Quality View Detection (frame-level classifier; blue-to-green triangle; also grades recorded clips)",
+    "Auto Record (automatic capture after consecutive diagnostic-quality frames)",
+    "Best-Effort Record (retrospective capture of highest-quality clip when auto-record not achieved)"
+   ],
+   "clearances": [
+    {
+     "k_number": "K242807",
+     "decision_date": "2025-04-04",
+     "pathway": "510(k) with PCCP",
+     "product_code": "QJU",
+     "predicates": [
+      "DEN190040"
+     ],
+     "changes_summary": "Initial clearance (HeartFocus v1.1.1). Versus predicate Caption Guidance: runs with Clarius Scanner PAHD3 (wireless), PAHD, PAL and Clarius Ultrasound Scanner Software instead of Terason uSmart; live guidance, view detection, Auto-Record and Best-Effort-Record map to Caption's prescriptive guidance, quality meter, Auto-Capture and Save Best Clip. Intended users include expert sonographers. PCCP: M1 retraining of core algorithms, M2 extension to new ultrasound systems, M3 extension to new operating systems.",
+     "notable_flags": [
+      "PCCP",
+      "on-device / offline",
+      "handheld accessory",
+      "clinical MRMC study (n=240, 2 sites US + France)",
+      "training set size disclosed"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242807.pdf"
+    },
+    {
+     "k_number": "K260780",
+     "decision_date": "2026-06-03",
+     "pathway": "510(k)",
+     "product_code": "QJU",
+     "predicates": [
+      "K242807"
+     ],
+     "changes_summary": "Special 510(k) for HeartFocus v1.3.0. Primary change: GUI/UX adaptation to Apple iPhone (iOS 17+, A12 Bionic, 4.7-inch display, portrait mode) scaling down from the cleared iPad format. Minor changes: SOUP updates (Qt 6.8.5, Butterfly SDK 2.0.2) and security patch HEAF-1578 (application-level patient data encryption). Also documents intermediate changes implemented under the K242807 PCCP: Butterfly Network iQ+ and iQ3 probe compatibility with algorithm retraining/validation (M1+M2) and Apple iPadOS compatibility (M3). No clinical study; 'No clinical investigations under 21 CFR Part 812 were conducted or are required'.",
+     "notable_flags": [
+      "Special 510(k)",
+      "PCCP-implemented Butterfly iQ+/iQ3 compatibility",
+      "iPhone",
+      "on-device / offline",
+      "summary pages are scanned images (no extractable text)"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf26/K260780.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K242807",
+     "endpoint": "Diagnostic-quality view detection (frame-level) vs expert annotation",
+     "metric": "Cohen's kappa (per reference view)",
+     "value": "0.699 [0.673, 0.724] to 0.873 [0.861, 0.884] across 10 views; criterion lower 95% CI bound > 0.6",
+     "comparator": "Consensus of expert annotator and expert reviewer (cardiologists and/or experienced sonographers), third expert for disagreements",
+     "n_studies": null,
+     "n_patients": 14,
+     "n_sites": null,
+     "dataset_description": "30,361 images from 14 patients (subset of the 290-patient / 361,104-image test set)",
+     "subgroup_notes": "Subgroup analyses across BMI (<25, 25-<30, >=30), age (<65, >=65) and sex reported as performed; results not given numerically.",
+     "quote": "The evaluation was performed on 30,361 images from 14 patients. Cohen’s kappa scores range from 0.699 [0.673, 0.724] to 0.873 [0.861, 0.884], meeting the success criteria of Cohen’s kappa score > 0.6 on the lower bound of the 95% CI for each reference view.",
+     "page": 15,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242807",
+     "endpoint": "Live guidance cue success (frame-level)",
+     "metric": "PPV (per reference view)",
+     "value": "0.810 [0.804, 0.816] to 0.953 [0.951, 0.955]; criterion lower 95% CI bound > 0.8",
+     "comparator": "Simultaneously recorded probe position relative to target position",
+     "n_studies": null,
+     "n_patients": 20,
+     "n_sites": null,
+     "dataset_description": "270,582 images from 20 patients with synchronized probe-position tracking",
+     "subgroup_notes": null,
+     "quote": "The evaluation was performed on 270,582 images from 20 patients. Guidance cues PPV ranges from 0.810 [0.804, 0.816] to 0.953 [0.951, 0.955], satisfying the success criteria of PPV > 0.8 on the lower bound of the 95% CI for each reference view.",
+     "page": 15,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242807",
+     "endpoint": "Auto record: high-quality records among auto-recorded clips",
+     "metric": "PPV (per reference view)",
+     "value": "Auto record alone 0.846 [0.665, 0.938] to 1.000 [0.908, 1.000]; Auto record + Best-effort record 0.816 [0.666, 0.908] to 1.000 [0.914, 1.000]; criterion lower 95% CI bound > 0.6 and point estimate > 0.8",
+     "comparator": "Expert-labelled diagnostic-quality clips",
+     "n_studies": null,
+     "n_patients": 34,
+     "n_sites": null,
+     "dataset_description": "211 long-duration clips from 34 patients",
+     "subgroup_notes": null,
+     "quote": "The evaluation was performed on 211 long-duration clips from 34 patients. While using the Auto record feature solely, the PPV ranges from 0.846 [0.665, 0.938] to 1.000 [0.908, 1.000], meeting the success criteria of PPV > 0.6 on the lower bound of the 95% CI and PPV > 0.8 on the point estimate for each reference view. While using both the Auto record and Best-Effort record, the PPV ranges from 0.816 [0.666, 0.908] to 1.000 [0.914, 1.000].",
+     "page": 15,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242807",
+     "endpoint": "Clinical study: novice (RN) exams of sufficient quality for qualitative visual assessment of LV size, LV function, RV size, non-trivial pericardial effusion (4 primary endpoints)",
+     "metric": "% of exams diagnostic quality [95% Wilson CI]",
+     "value": "100 [98.4;100] for each of the four primary endpoints",
+     "comparator": "Panel of 5 blinded expert cardiologist readers; control exam by trained medical professional without guidance on the same Clarius system",
+     "n_studies": null,
+     "n_patients": 240,
+     "n_sites": 2,
+     "dataset_description": "Prospective 2-center study (France, USA); 8 registered nurses each scanned 30 patients; 70.4% with cardiac abnormalities on standard-of-care echo; 59.6% BMI > 25; 18.8% cardiac implantable devices",
+     "subgroup_notes": "Subgroups by BMI, known cardiac abnormality, scan sequence number per nurse, and site: 'consistent performance across subgroups' (page 19).",
+     "quote": "A total of 240 adults aged 22 years and older who were scheduled for a clinically indicated echocardiography examination at one of the two investigation centers were included in this study, with 120 patients at Site 1 (France) and 120 patients at Site 2 (USA). ... Table 3: Primary endpoint results Endpoint Percent of diagnostic quality % [95% Wilson CI*] Qualitative Visual Assessment of LV Size 100 [98.4;100] Qualitative Visual Assessment of LV Function 100 [98.4;100] ... Qualitative Visual Assessment of RV Size 100 [98.4;100] Qualitative Visual Assessment of Non-Trivial Pericardial Effusion 100 [98.4;100]",
+     "page": 17,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242807",
+     "endpoint": "Clinical study: secondary endpoints (8 patient-level parameters)",
+     "metric": "% of exams diagnostic quality [95% Wilson CI]",
+     "value": "RV function 99.6 [97.7;99.9]; LA size 100 [98.4;100]; RA size 98.8 [96.4;99.6]; LV segmental kinetics 95.4 [92.0;97.4]; AV 98.8 [96.4;99.6]; MV 100 [98.4;100]; TV 95.4 [92.0;97.4]; IVC size 78.3 [72.7;83.1]",
+     "comparator": "Panel of 5 blinded expert cardiologists",
+     "n_studies": null,
+     "n_patients": 240,
+     "n_sites": 2,
+     "dataset_description": null,
+     "subgroup_notes": "Not hypothesis-tested; descriptive (no Type I error control).",
+     "quote": "Table 4: Secondary endpoint results Endpoint Percent of diagnostic quality % [95% Wilson CI*] Qualitative Visual Assessment of RV Function 99.6 [97.7;99.9] Qualitative Visual Assessment of LA Size 100 [98.4;100] Qualitative Visual Assessment of RA Size 98.8 [96.4;99.6] Qualitative Visual Assessment of Segmental Kinetics of the LV 95.4 [92.0;97.4] Qualitative Visual Assessment of AV 98.8 [96.4;99.6] ... Qualitative Visual Assessment of MV 100 [98.4;100] Qualitative Visual Assessment of TV 95.4 [92.0;97.4] Qualitative Visual Assessment of IVC Size 78.3 [72.7;83.1]",
+     "page": 18,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242807",
+     "endpoint": "Clinical study: concordance of diagnostic decision between novice (study) and expert (control) exams",
+     "metric": "% same decision",
+     "value": "Primary parameters 87.5% to 98.3%; secondary parameters 87.1% to 99.6%",
+     "comparator": "Expert control exam read by the same cardiologist panel",
+     "n_studies": null,
+     "n_patients": 240,
+     "n_sites": 2,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "The proportion of scans in which the diagnostic decision was the same between study and control exams was very high, further demonstrating the usability of HeartFocus guidance. For primary clinical parameters, the range was 87.5% to 98.3%. Similarly, for secondary clinical parameters, the range was 87.1% to 99.6%.",
+     "page": 19,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242807",
+     "endpoint": "Clinical study: per-view diagnostic-quality clips acquired by novices",
+     "metric": "% of exams with diagnostic-quality clip [95% Wilson CI]",
+     "value": "PLAX 97.5 [94.7;98.8]; PSAX-AV 89.2 [84.6;92.5]; PSAX-MV 90.8 [86.5;93.9]; PSAX-PM 97.1 [94.1;98.6]; A4C 96.2 [93.0;98.0]; A5C 93.3 [89.4;95.9]; A2C 82.5 [77.2;86.8]; A3C 90.0 [85.6;93.2]; SC-4C 89.2 [84.6;92.5]; SC-IVC 77.5 [71.8;82.3]",
+     "comparator": "Cardiologist panel, ACEP scale >= 3",
+     "n_studies": null,
+     "n_patients": 240,
+     "n_sites": 2,
+     "dataset_description": null,
+     "subgroup_notes": "Of 2400 targeted clips, 2362 recorded (38 missed); 67.4% saved by Auto record, 21.3% Best-effort, 11.3% manual; 99.7% of Auto-record clips, 93.9% of Best-effort clips and 40.5% of manual clips were diagnostic quality; mean acquisition time 23.6 +/- 10.6 min per limited exam.",
+     "quote": "Table 5: Study results: diagnostic-quality clips View Percent of diagnostic quality % [95% Wilson CI*] PLAX 97.5 [94.7;98.8] PSAX-AV 89.2 [84.6;92.5] PSAX-MV 90.8 [86.5;93.9] PSAX-PM 97.1 [94.1;98.6] A4C 96.2 [93.0;98.0] A5C 93.3 [89.4;95.9] A2C 82.5 [77.2;86.8] A3C 90.0 [85.6;93.2] SC-4C 89.2 [84.6;92.5] SC-IVC 77.5 [71.8;82.3]",
+     "page": 20,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242807",
+     "endpoint": "Human factors summative evaluation",
+     "metric": "% task success",
+     "value": "100% in 4 of 7 hazard-related scenarios; 97% in the remaining 3",
+     "comparator": "N/A",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "31 participants (users), simulated use environment",
+     "subgroup_notes": null,
+     "quote": "The summative evaluation was conducted with 31 participants representing the intended users of HeartFocus and included novices (registered nurse) and trained medical professionals (Cardiologists, Sonographers, Intensivists, Emergency Physicians). ... The user tests achieved a high success rate, with 100% success in 4 of the 7 scenarios and 97% success in the remaining 3",
+     "page": 13,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K260780",
+     "endpoint": "AI/ML performance with Butterfly iQ+ and iQ3 probes (PCCP M1+M2 validation): view classification",
+     "metric": "Cohen's kappa (range across views)",
+     "value": "0.640-0.929; criterion lower 95% CI bound > 0.6",
+     "comparator": "Expert labels per K242807 PCCP protocol",
+     "n_studies": null,
+     "n_patients": 80,
+     "n_sites": null,
+     "dataset_description": "~270,000 frames from 40 US + 40 non-US patients scanned with Butterfly iQ+/iQ3, plus historical reference datasets",
+     "subgroup_notes": "Subgroup analyses by BMI, age and sex stated; values not given. Page refers to PDF page 7 (scanned image).",
+     "quote": "Protocol: ~270,000 frames; 40 US patients + 40 non-US patients; historical reference datasets; subgroup analyses by BMI, age, and sex. Protocol identical to the FDA-cleared PCCP (K242807, Modifications M1, M2, M3). ... Results: PASS - View Classification kappa: 0.640-0.929; Auto Record PPV: 0.871-1.000; Live Guidance Combined PPV: 0.872-1.000. All PCCP success criteria met on first iteration.",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K260780",
+     "endpoint": "AI/ML performance with Butterfly iQ+ and iQ3 probes: Auto Record",
+     "metric": "PPV (range across views)",
+     "value": "0.871-1.000; criterion lower 95% CI bound > 0.6 and point estimate > 0.8",
+     "comparator": "Expert labels per K242807 PCCP protocol",
+     "n_studies": null,
+     "n_patients": 80,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "Results: PASS - View Classification kappa: 0.640-0.929; Auto Record PPV: 0.871-1.000; Live Guidance Combined PPV: 0.872-1.000. All PCCP success criteria met on first iteration.",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K260780",
+     "endpoint": "AI/ML performance with Butterfly iQ+ and iQ3 probes: Live Guidance",
+     "metric": "PPV (combined, range across views)",
+     "value": "0.872-1.000; criterion lower 95% CI bound > 0.8",
+     "comparator": "Recorded probe position per K242807 PCCP protocol",
+     "n_studies": null,
+     "n_patients": 80,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "Results: PASS - View Classification kappa: 0.640-0.929; Auto Record PPV: 0.871-1.000; Live Guidance Combined PPV: 0.872-1.000. All PCCP success criteria met on first iteration.",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K260780",
+     "endpoint": "Summative usability on iPhone (portrait UI)",
+     "metric": "% task success",
+     "value": "100% (8/8 participants); 0 use errors; 0 close calls",
+     "comparator": "N/A",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "8 novice participants",
+     "subgroup_notes": null,
+     "quote": "Protocol: N=8 representative novice participants (medical professionals with basic ultrasound training); simulated clinical environment; iPhone with HeartFocus v1.3.0 and Butterfly iQ3 probe; healthy volunteer subject. ... Results: PASS - 100% task success (8/8 participants); 0 use errors; 0 close calls; positive System Usability Scale (SUS) and AttrakDiff scores.",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242807",
+     "endpoint": "Pivotal study (peer-reviewed): novice nurse exams of sufficient quality for LV size, LV function, RV size, pericardial effusion",
+     "metric": "% of exams sufficient",
+     "value": "100% for all primary endpoints",
+     "comparator": "5 experienced cardiologists; expert (sonographer/cardiologist) exam without AI as control",
+     "n_studies": 240,
+     "n_patients": 240,
+     "n_sites": 2,
+     "dataset_description": "Prospective, international, nonrandomized noninferiority study at 2 centers (USA, France), Nov 2023 - Aug 2024; 240 patients, mean age 62.6, 48.8% women, mean BMI 26.6",
+     "subgroup_notes": null,
+     "quote": "A total of 240 patients (mean age 62.6 years; 117 women (48.8%); mean body mass index 26.6 kg/m2) completed the study. One hundred percent of the exams performed by novices with the studied software were of sufficient quality to assess the primary endpoints. Cardiac parameters assessed in exams conducted by novices and experts were strongly correlated.",
+     "page": null,
+     "verification": "peer_reviewed"
+    }
+   ],
+   "training_data": {
+    "disclosed": true,
+    "n_studies": null,
+    "n_patients": 1483,
+    "n_sites": null,
+    "description": "'In total, AI/ML algorithms were trained and tuned on 1,483 patients and 1,204,113 ultrasound images.' Collected on patients of varying BMI, age and sex; sites/vendors not stated. PCCP specifies that each new ultrasound system adds at least 20 patients (~270k frames) to the training set. K260780 states Butterfly iQ+/iQ3 support involved 'corresponding AI/ML algorithm retraining and validation' (numbers not given).",
+    "source": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K242807.txt (page 13)",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": 290,
+    "n_sites": null,
+    "description": "Standalone test set: 290 patients and 361,104 ultrasound images (view detection evaluated on 30,361 images/14 patients; guidance on 270,582 images/20 patients; recording on 211 long clips/34 patients). Clinical study data (240 patients, 120 US + 120 non-US) also used for retrospective evaluation. K260780 Butterfly validation: ~270,000 frames from 40 US + 40 non-US patients.",
+    "independent_of_training": null,
+    "source": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K242807.txt (pages 13, 15); K260780 PDF page 7 (image)",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Company/press coverage of the April 2025 FDA clearance describes HeartFocus as enabling novices to perform heart scans after a few hours of training and notes FDA approval of the PCCP; initial US availability on Butterfly Network handheld devices, US commercial launch announced Aug 27, 2025.",
+     "source_url": "https://www.dicardiology.com/content/heartfocus-introduces-first-us-clinical-product-butterfly-network",
+     "verification": "news"
+    },
+    {
+     "description": "Company website states HeartFocus is FDA cleared, now available on iPhone, supports DICOM/PACS integration, and cites the JACC: Advances trial ('100% nurses acquired diagnostic echo in 100% of patients', AI specificity 'greater than 99%'); a separate HeartFocus Link product for cart-based systems was announced May 28, 2026.",
+     "source_url": "https://heartfocus.ai/",
+     "verification": "company"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Artificial Intelligence Empowers Novice Users to Acquire Diagnostic-Quality Echocardiography",
+     "first_author": "Trost B",
+     "journal": "JACC: Advances",
+     "year": 2025,
+     "doi": "10.1016/j.jacadv.2025.102005",
+     "pmid": "40700992",
+     "url": "https://doi.org/10.1016/j.jacadv.2025.102005",
+     "relation": "pivotal-validation",
+     "n_subjects": 240,
+     "key_result": "Prospective international noninferiority study (2 centers, US and France, Nov 2023-Aug 2024); nurses without ultrasound experience using AI guidance: 100% of novice exams sufficient to assess LV size, LV function, RV size and pericardial effusion; parameters strongly correlated with expert exams.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [
+    {
+     "nct_id": "NCT05874128",
+     "title": "Prospective Evaluation of HeartFocus: A Software Supporting the Acquisition of Cardiac Ultrasound Exams (HF-01)",
+     "status": "COMPLETED",
+     "url": "https://clinicaltrials.gov/study/NCT05874128"
+    },
+    {
+     "nct_id": "NCT05490303",
+     "title": "Development of Guidance Algorithms for Acquisition of Echocardiographic Reference Views (HeartGuide: Preliminary Study; sponsor University Hospital, Bordeaux)",
+     "status": "COMPLETED",
+     "url": "https://clinicaltrials.gov/study/NCT05490303"
+    },
+    {
+     "nct_id": "NCT05265585",
+     "title": "Prospective Validation of an Artificial Intelligence Algorithm Identifying Echocardiographic Reference Views (sponsor University Hospital, Bordeaux)",
+     "status": "COMPLETED",
+     "url": "https://clinicaltrials.gov/study/NCT05265585"
+    }
+   ],
+   "open_questions": [
+    "K242807 does not state the number of sites or ultrasound vendors for the 1,483-patient training set, nor whether the 290-patient standalone test set was collected at sites independent of training.",
+    "Standalone subgroup analyses (BMI, age, sex) are stated to have been performed but no numeric subgroup results are given in either summary.",
+    "K260780 summary pages are scanned images (no extractable text); values were transcribed from rendered PDF pages 5-7 - page numbers refer to PDF page order.",
+    "K260780 does not give the size of the Butterfly retraining set or per-subgroup results; the 40 US + 40 non-US patient validation set is described only at the protocol level.",
+    "Whether NCT05490303 and NCT05265585 (University Hospital Bordeaux) are the algorithm-development studies for HeartFocus is inferred from clinicaltrials.gov returning them for the query 'DESKi echocardiography'; the FDA summaries do not reference them.",
+    "CE-mark status of HeartFocus was not confirmed from a fetched source (businesswire and massdevice pages returned HTTP 403).",
+    "The Trost 2025 abstract does not give per-parameter secondary results; those are taken from the FDA summary."
+   ],
+   "sources": [
+    {
+     "fact": "K242807 device description, indications, predicate comparison, training/test set sizes, standalone metrics, clinical study results, PCCP",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K242807.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K260780 indications, predicate K242807, v1.3.0 changes (iPhone, SOUP, security patch), PCCP-implemented Butterfly iQ+/iQ3 and iPadOS, Butterfly validation results",
+     "url_or_file": "Rendered page images (PDF pages 4-7) of https://www.accessdata.fda.gov/cdrh_docs/pdf26/K260780.pdf (text layer absent in /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K260780.txt)",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Decision dates 2025-04-04 and 2026-06-03, product code QJU, applicant DESKi, K260780 clearance_type Special",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Trost 2025 JACC Advances paper, DOI and abstract",
+     "url_or_file": "PubMed 40700992; Crossref 10.1016/j.jacadv.2025.102005; Europe PMC",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "Clinical trial registrations",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies?query.term=HeartFocus and query.term=DESKi echocardiography",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Company website (deski.ai redirects to heartfocus.ai), product URL, iPhone availability, HeartFocus Link",
+     "url_or_file": "https://heartfocus.ai/",
+     "verification": "company"
+    },
+    {
+     "fact": "US launch on Butterfly Network devices (Aug 2025)",
+     "url_or_file": "https://hitconsultant.net/2025/08/29/heartfocus-by-deski-launches-in-u-s-on-butterfly-network-handheld-ultrasound/",
+     "verification": "news"
+    }
+   ]
+  }
+ ],
+ "notes": "All five K-numbers read in full. K223347 and K252235 text extracts were clean. K251416 summary pages (PDF 5-12) use a font without a Unicode map, so the pypdf text is a substitution cipher with digits dropped; pages were rendered with PyMuPDF and read visually - page numbers cited are PDF page numbers (PDF page 9 = '510(k) Summary page 5 of 8'). K260780 summary pages are scanned images with no text layer; PDF pages 4-7 were rendered and transcribed - cited as PDF page numbers. K242807 text was one-word-per-line and was reflowed; page numbers are the original PAGE markers. Every performance number carries a verbatim quote; K251416 gives only pass/fail against AUC>0.8 and FPR<0.2 with no point estimates, recorded as such. Training-set sizes disclosed only for UltraSight Guidance (K223347: 580 subjects / 5M frames) and HeartFocus (K242807: 1,483 patients / 1,204,113 images); PVAD IQ discloses none. Papers verified via PubMed + Crossref this session; no peer-reviewed publication located for PVAD IQ. Company/press pages for businesswire, massdevice and diagnosticimaging returned HTTP 403; alternative outlets used."
+}

@@ -1,0 +1,188 @@
+{
+  "group_id": "esaote-mindray-sonosite",
+  "records": [
+    {
+      "k_number": "K230179",
+      "device_name": "6440 MyLabX90",
+      "decision_date": "2023-11-29",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "AutoEF (Cardio Package; Pie Medical Imaging Caas Qardia, K212376)",
+          "function": "AI-based automatic detection and tracking of the LV endocardial border to calculate LV end-diastolic/end-systolic volumes and ejection fraction (A2C/A4C).",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Cardio Package with new AUTO E.F. The AutoEF, based on Artificial Intelligence, detects and track, automatically, the LV endocardial border to calculate LV Volumes (Diastolic Volume - Systolic Volume) and EF (Ejection Fraction). The software module (powered with A.I.) is registered by Pie Medical Imaging B.V. as Caas Qardia (K212376)",
+          "page": 6
+        },
+        {
+          "name": "XStrain (AI-powered LV auto border detection)",
+          "function": "2D speckle-tracking LV strain / strain rate with AI-powered automatic LV endocardial border detection.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "XStrain allows clinicians to quantify endocardial velocities of contraction and relaxation and local deformation of the heart (Strain/Strain rate). Based on 2D speckle tracking technology with Angle -independent technology. A.I. Powered for auto border detection of left ventricle (LV).",
+          "page": 7
+        },
+        {
+          "name": "eDetect for Breast Lesions",
+          "function": "AI contour detection of breast lesions plus automatic proposal of BI-RADS morphologic parameters (shape, orientation, circumscribed).",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "eDetect for Breast Lesions contouring function supports the operator by detecting the lesion contour (with A.I. algorithm) in Breast measurements",
+          "page": 6
+        }
+      ],
+      "performance_summary": "Endocardium border segmentation (AutoEF, A2C/A4C): mean Dice 0.95 (SD 0.02) on 200 individually segmented test frames vs expert ground truth; acceptance criterion mean Dice > 0.9 with SD <= 0.03. Training 1221 frames, validation 306 frames, test 200 frames, no overlap; total dataset 2616 time sequences (A2C, A3C, A4C) from 399 patients with varied LV function (normal, MI, hypertrophy); images from Esaote MyLab Alpha and a non-Esaote scanner; annotations by 3 cardiologists (>20-30 yrs) and 1 clinical researcher using CAAS Qardia 1.0. Quote (p.11): \"For the A2C/A4C algorithm, the average Dice coefficient is 0.95 with a standard deviation of 0.02 for the 200 individually segmented frames.\" No clinical tests performed; no EF agreement statistics reported in the summary.",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K241671",
+      "device_name": "6450 Ultrasound System (MyLabE80); 6450 Ultrasound System (MyLabE85)",
+      "decision_date": "2025-05-16",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "XStrain LA (left atrial strain)",
+          "function": "Speckle-tracking left-atrial strain package (LASr, LAScd, LASct). NOT described as AI/ML in this summary; explicitly stated to use manual segmentation. Validated against TomTec AutoSTRAIN reference.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Summary of Testing, Strain Left Atrium (LA): Description: Strain functionality Left atrium (LA) with manual segmentation.",
+          "page": 8
+        }
+      ],
+      "performance_summary": "Not a confirmed AI feature, but for reference: XStrain LA vs TomTec AutoSTRAIN (TTA2 LOT 42.0) reference, ICC LASr = 0.84, LAScd = 0.76, LASct = 0.74 (p.8); adults >= 18 y with varied LV function, images from Esaote MyLab Alpha / MyLabX8 and GE Vivid E9/E95; no clinical studies.",
+      "exclusion_reason": "AI feature not identifiable in summary. The only new feature is XStrain LA, described as speckle-tracking with manual segmentation and no AI/ML language; the summary says new features are extensions of features already on the predicate (K192157) or reference device (K230179 MyLabX90) but does not name AutoEF or any AI function as present on this system. Product code QIH is listed, but no cardiac AI feature is clearly named."
+    },
+    {
+      "k_number": "K243253",
+      "device_name": "6600 Ultrasound System (MyLabA50); 6600 Ultrasound System (MyLabA70)",
+      "decision_date": "2025-06-18",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "AutoCM (Automatic Cardiac Measurement), AI-powered",
+          "function": "AI segmentation and automatic linear cardiac measurements (IVS, LVID, LVPW) during a cardiac exam; improvement of the existing manual cardiac measurement function.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "AutoCM: AutoCM (Automatic Cardiac Measurement), is a tool based on A.I. algorithm that supports the clinician in performing the Cardiac Measurements during a Cardiac ultrasound examination.",
+          "page": 6
+        },
+        {
+          "name": "AutoOB (Automatic Obstetric Biometric Measurement), AI-powered",
+          "function": "Two AI algorithms: fetal scan-plane classification and segmentation/measurement of OB biometry (HC, BPD, AC, FL, CRL, TCD, HL, UL, TL, NT).",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "AutoOB: AutoOB (Automatic Obstetric Biometric Measurement) is a tool based on A.I. algorithms that supports the clinician in performing the Obstetric Biometric Measurements during an Obstetric ultrasound examination.",
+          "page": 6
+        },
+        {
+          "name": "XStrain RV",
+          "function": "Right-ventricle speckle-tracking strain package; listed as an extension of XStrain, not described as AI-powered in this summary (contrast with AutoOB/AutoCM, which are labelled AI-powered).",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "The proposed 6600 Ultrasound System has included new Software features: AutoOB (AI-powered), AutoCM (AI-powered), XStrain RV.",
+          "page": 7
+        }
+      ],
+      "performance_summary": "AutoCM (AI Summary of Testing, p.8-9): algorithm for segmentation and measurement of IVS, LVID, LVPW; acceptance criteria success rate IVS > 80%, LVID > 90%, LVPW > 70%, plus T-test statistical equivalence of automatic vs manual measures at 95% confidence; \"All test results are in line with the acceptance criteria\" (actual success-rate values not reported). Trained on 2011 images, tested on 100 images, no overlap; training ground truth by consensus of two cardiologists (34 and 24 yrs experience), test set acquired and labelled at a different medical center by a cardiologist with 36 yrs experience; Caucasian adult male and female patients, Esaote MyLabX8 with phased-array transducers. No clinical studies.",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K253310",
+      "device_name": "7600 Ultrasound System (MyLabC25); 7600 Ultrasound System (MyLabC30)",
+      "decision_date": "2025-11-25",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "Unnamed inherited software features (from K243253 / K241671)",
+          "function": "Portable version of the cart-based 6600 (K243253). Summary states the software combines features already cleared in K243253 (which includes AI-powered AutoCM and AutoOB) and K241671, with no new functionality, but it does not name any AI feature.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "The proposed 7600 Ultrasound System includes a new software version that combines features FDA-cleared and already available in the predicate device 6600 Ultrasound Systems and on the reference device 6450 Ultrasound system. No new functionalities have been introduced in the current software release compared to the version previously cleared.",
+          "page": 6
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "AI feature not identifiable in summary. No AI/ML feature is named; the summary only states that the software carries over features cleared under predicate K243253 (whose summary names AI-powered AutoCM, a cardiac measurement tool) and reference K241671. Likely inherits AutoCM, but this is inference from the predicate, not from this summary's text. No performance data."
+    },
+    {
+      "k_number": "K253288",
+      "device_name": "6450 Ultrasound System (MyLabE80); 6450 Ultrasound System (MyLabE85)",
+      "decision_date": "2026-04-06",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "AutoCM (Automatic Cardiac Measurement)",
+          "function": "AI-based automatic cardiac linear measurements (IVS, LVID, LVPW) per the K243253 summary; made available on the 6450 platform with the PX 1-5 probe. Not re-described as AI in this summary; AI nature established in K243253.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "In addition, the following features, previously cleared under K243253, are now being made available on the 6450 Ultrasound System: AutoCM (available with PX 1-5 probe) AutoOB (available with C 1-8, C 2-9 and SB2C41 probes) XStrain RV (available with PX 1-5 probe)",
+          "page": 6
+        },
+        {
+          "name": "UroFusion AI prostate contouring",
+          "function": "U-Net segmentation of the prostate on MR and ultrasound images within the Urology fusion-imaging tool.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "UroFusion (including an AI-algorithm): a dedicated software feature designed to support a radiological clinical ultrasound examination (first modality) of the prostate by providing additional image information from a second imaging modality.",
+          "page": 6
+        },
+        {
+          "name": "AutoOB",
+          "function": "AI-based automatic OB biometry (from K243253), made available on the 6450 platform.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "AutoOB (available with C 1-8, C 2-9 and SB2C41 probes)",
+          "page": 6
+        }
+      ],
+      "performance_summary": "No performance data for AutoCM in this summary (it is carried over from K243253; see that record). The only AI testing summary here is for UroFusion prostate contouring (DICE volume >= 0.7, computation < 15 s; MR training 1016 series/841 patients, US training 128 volumes; MR test 150 series/150 patients, US test 1727 volumes/1172 patients), which is non-cardiac.",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K212265",
+      "device_name": "TEX20/TEX20 Pro/TEX20S/TEX20T/TEX20 Exp/TEX20 Elite Diagnostic Ultrasound System, TEX10/ TEX10 Pro/TEX10S/TEX10T/TEX10 Exp/TEX10 Elite/TE X/TE X Lite Diagnostic Ultrasound System",
+      "decision_date": "2021-11-16",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "Smart Nerve",
+          "function": "AI recognition of the interscalene and supraclavicular brachial plexus for visualization only (not for live interventional guidance).",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "Smart Nerve It is an AI (artificial intelligence) based feature. It is used to recognize the interscalene and supraclavicular brachial plexus. It is intended for visualization purpose only and not intended for live guidance during interventional procedure.",
+          "page": 8
+        },
+        {
+          "name": "Auto DFR / Smart Caliper / Smart Trace (carried over)",
+          "function": "Automated measurement/tracing features carried over from predicates M9 (K210416) and Resona I9 (K210699); not described as AI and not cardiac-specific in this summary.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "Among these features, the Auto DFR supported in proposed TEX20 series has been cleared in predicate device M9(K210416), the Smart Caliper and Smart Trace have been cleared in predicate device Resona I9(K210699).",
+          "page": 7
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "Only AI feature named is Smart Nerve (brachial plexus recognition for regional anesthesia), which is non-cardiac. No cardiac AI feature and no AI performance data in the summary."
+    },
+    {
+      "k_number": "K251106",
+      "device_name": "Sonosite LX and Sonosite PX Ultrasound Systems",
+      "decision_date": "2025-08-29",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "PIV Assist",
+          "function": "AI algorithm that automatically localizes and classifies veins vs arteries in 2D mode and auto-measures vessel depth and diameter for peripheral IV / vascular access (L12-3 and L19-5 transducers); automation of the Catheter-to-Vein Ratio feature.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "The PIV Assist automates the localization of vein and artery in 2D Mode. ... When a candidate vein is centered, the PIV Assist can automatically detect both diameter and depth measurements",
+          "page": 12
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "Only AI feature is PIV Assist for peripheral vascular access (vein/artery detection and sizing); non-cardiac. Performance reported (e.g., L19-5 vessel precision 97.32%, recall 97.07%; L12-3 precision 95.58%, recall 94.49%; validation 584 clips from 292 subjects at 3 US hospitals, p.14-17) but not relevant to echocardiography."
+    }
+  ],
+  "notes": "All seven local FDA summary text files were read in full. K243253's 510(k) summary pages (PDF pages 5-9) were scanned images with no extractable text, so they were rendered from /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/pdf/K243253.pdf to PNG and read visually; page numbers for K243253 refer to PDF pages. No web searches were used; every decision is grounded in the FDA summary text. Decisions: K230179 = cardiac AI (AutoEF via Pie Medical Caas Qardia K212376, plus AI-powered XStrain LV border detection; Dice 0.95 reported). K243253 = cardiac AI (AutoCM AI-powered IVS/LVID/LVPW measurement; trained 2011 / tested 100 images; success-rate criteria met but values not reported). K253288 = cardiac AI by carry-over (AutoCM explicitly named as now available on the 6450 with the PX 1-5 probe; AI nature and performance are documented only in K243253). Borderline calls the parent may want to revisit: (1) K241671 marked false because no AI feature is named; its only new feature, XStrain LA, is described as manual-segmentation speckle tracking, though the FDA AI list includes this K and the platform carries QIH; (2) K253310 marked false because it names no feature at all, but it is a portable repackaging of K243253 whose software 'combines features FDA-cleared' in K243253/K241671, so it almost certainly inherits AutoCM; if the registry policy is to count inherited cardiac AI on platform re-clearances, K253310 should flip to true. Esaote XStrain RV (K243253, K253288) is listed alongside AI-powered features but is not itself labelled AI in the summaries. Mindray K212265 (Smart Nerve) and Sonosite K251106 (PIV Assist) contain only non-cardiac AI."
+}

@@ -1,0 +1,332 @@
+{
+ "batch_id": "esaote",
+ "families": [
+  {
+   "id": "esaote-mylab-cardiac-ai",
+   "product_name": "MyLab X90 / A50 / A70 / E80 / E85 cardiac AI features (AutoEF, XStrain AI LV border detection, AutoCM)",
+   "company": "Esaote S.p.A.",
+   "company_website": "https://www.esaote.com/",
+   "product_url": "https://www.esaote.com/en-US/ultrasound/clinical-solutions/cardiovascular/",
+   "category": "system-embedded",
+   "tags": [
+    "AutoEF",
+    "LV ejection fraction",
+    "LV volumes",
+    "LV endocardial border segmentation",
+    "XStrain",
+    "GLS",
+    "speckle tracking",
+    "AutoCM",
+    "IVS",
+    "LVID",
+    "LVPW",
+    "linear cardiac measurements",
+    "CAAS Qardia"
+   ],
+   "modality_scope": [
+    "TTE"
+   ],
+   "deployment": [
+    "ultrasound-system-embedded"
+   ],
+   "summary": "Esaote MyLab cart-based ultrasound systems carry three cardiac AI features cleared as part of general-purpose system 510(k)s (product code IYN, plus IYO/ITX/QIH): AutoEF (K230179, MyLabX90), an AI LV endocardial border detection and tracking module for A2C/A4C LV volumes and EF that Esaote states is Pie Medical Imaging's Caas Qardia software (K212376); XStrain with AI-powered LV auto border detection for 2D speckle-tracking strain (K230179); and AutoCM (K243253, MyLabA50/A70), an AI segmentation and measurement tool for IVS, LVID and LVPW, subsequently made available on the 6450 MyLabE80/E85 platform (K253288). The FDA summaries report a mean Dice of 0.95 (SD 0.02) on 200 test frames for the AutoEF A2C/A4C segmentation and state that AutoCM met success-rate and t-test equivalence criteria on 100 test images without reporting the numeric results; no clinical studies were performed for any of the three clearances.",
+   "intended_use_quote": "The multifunctional ultrasound scanner MyLabX90 is used to collect, display, and analyze ultrasound images during ultrasound imaging procedures in combination with supported echographic probes.",
+   "indications_for_use_quote": "The multifunctional ultrasound scanner is used to collect, display and analyze ultrasound images during ultrasound imaging procedures in combination with supported echographic probes. Main application: - Cardiac Districts: Cardiac Adult, Cardiac Pediatric Invasive access: Transesophageal - Vascular Districts: Neonatal, Adult Cephalic, Vascular Invasive access: Not applicable - General Imaging Districts: Abdominal, Breast, Musculoskeletal, Neonatal, Pediatric, Small Organs (Testicles), Thyroid, Urological Invasive access: Intraoperative (Abdominal), Laparoscopic, Transrectal - Women Health Districts: OB/Fetal, Gynecology Invasive access: Transrectal, Transvaginal",
+   "embedded_ai_features": [
+    {
+     "name": "AutoEF (Cardio Package)",
+     "function": "AI-based automatic detection and tracking of the LV endocardial border on A2C/A4C views to compute LV end-diastolic and end-systolic volumes and ejection fraction; software module is Pie Medical Imaging Caas Qardia (K212376).",
+     "first_k_number": "K230179",
+     "quote": "Cardio Package with new AUTO E.F. The AutoEF, based on Artificial Intelligence, detects and track, automatically, the LV endocardial border to calculate LV Volumes (Diastolic Volume - Systolic Volume) and EF (Ejection Fraction). The software module (powered with A.I.) is registered by Pie Medical Imaging B.V. as Caas Qardia (K212376)"
+    },
+    {
+     "name": "XStrain (AI-powered LV auto border detection)",
+     "function": "2D angle-independent speckle-tracking quantification of endocardial velocities and LV strain/strain rate, with AI-powered automatic LV border detection. XStrain RV (K243253) extends the package to the right ventricle but is not described as AI-powered in that summary.",
+     "first_k_number": "K230179",
+     "quote": "XStrain allows clinicians to quantify endocardial velocities of contraction and relaxation and local deformation of the heart (Strain/Strain rate). Based on 2D speckle tracking technology with Angle -independent technology. A.I. Powered for auto border detection of left ventricle (LV)."
+    },
+    {
+     "name": "AutoCM (Automatic Cardiac Measurement)",
+     "function": "AI segmentation and automatic linear cardiac measurements (IVS, LVID, LVPW) during a cardiac exam; described as an improvement of the existing manual cardiac measurement function. Made available on the 6450 MyLabE80/E85 platform with the PX 1-5 probe under K253288.",
+     "first_k_number": "K243253",
+     "quote": "AutoCM: AutoCM (Automatic Cardiac Measurement), is a tool based on A.I. algorithm that supports the clinician in performing the Cardiac Measurements during a Cardiac ultrasound examination."
+    }
+   ],
+   "clearances": [
+    {
+     "k_number": "K230179",
+     "decision_date": "2023-11-29",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K173291",
+      "K192157",
+      "K212021"
+     ],
+     "changes_summary": "Upgraded 6440 system marketed as MyLabX90; added Cardio Package with AutoEF (AI LV endocardial border detection/tracking for LV volumes and EF, Pie Medical Caas Qardia K212376) and XStrain with AI-powered LV auto border detection. Also added non-cardiac eDetect breast lesion contouring AI, QAI, HyperDoppler, prostate biopsy stepper, new probes.",
+     "notable_flags": [
+      "AI module supplied by third party (Pie Medical Imaging Caas Qardia, K212376)",
+      "Additional product codes IYO, ITX, QIH on the clearance letter",
+      "No clinical tests performed",
+      "XStrain AI border detection has no performance data in the summary"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K230179.pdf"
+    },
+    {
+     "k_number": "K243253",
+     "decision_date": "2025-06-18",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K230179"
+     ],
+     "changes_summary": "New 6600 Ultrasound System (MyLabA50, MyLabA70); added AutoCM (AI-powered automatic cardiac measurements of IVS, LVID, LVPW), XStrain RV (right-ventricle strain extension, not described as AI), non-cardiac AutoOB (AI-powered), and new probes.",
+     "notable_flags": [
+      "Additional product codes IYO, ITX, QIH on the clearance letter",
+      "AutoCM numeric success rates not reported; summary states results met acceptance criteria",
+      "Training and test datasets described as Caucasian adult patients only",
+      "No clinical studies"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243253.pdf"
+    },
+    {
+     "k_number": "K253288",
+     "decision_date": "2026-04-06",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K241671",
+      "K243253"
+     ],
+     "changes_summary": "6450 Ultrasound System (MyLabE80, MyLabE85): introduced non-cardiac UroFusion prostate contouring AI and made AutoCM (PX 1-5 probe), AutoOB and XStrain RV, previously cleared under K243253, available on the 6450 platform. No new cardiac AI performance data.",
+     "notable_flags": [
+      "Additional product codes IYO, ITX, QIH on the clearance letter",
+      "Cardiac AI features carried over from K243253 without new performance data",
+      "No clinical studies"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253288.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K230179",
+     "endpoint": "AutoEF A2C/A4C LV endocardium (blood pool) segmentation vs expert annotation",
+     "metric": "Mean Dice coefficient (SD)",
+     "value": "0.95 (SD 0.02)",
+     "comparator": "Ground-truth LV blood pool endocardium annotations by annotators following an internal expert guideline (three cardiologists with >20 and >30 years of experience and one clinical researcher), annotated in a customized CAAS Qardia 1.0 application",
+     "n_studies": 200,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "200 individually segmented test frames (A2C/A4C), no overlap with the 1221-frame training and 306-frame validation sets; overall development dataset of 2616 time sequences (A2C, A3C, A4C) from 399 patients with varying age and gender and LV functional states including normal, myocardial infarction and myocardial hypertrophy; images acquired on Esaote MyLab Alpha and a non-Esaote scanner from different institutions",
+     "subgroup_notes": "Pre-specified acceptance criterion: mean Dice > 0.9 with SD at most 0.03 (citing Leclerc et al., 2019). No EF or volume agreement statistics reported. No subgroup results reported.",
+     "quote": "For the A2C/A4C algorithm, the average Dice coefficient is 0.95 with a standard deviation of 0.02 for the 200 individually segmented frames.",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K243253",
+     "endpoint": "AutoCM interventricular septum (IVS) automatic measurement vs manual measurement",
+     "metric": "Success rate",
+     "value": "Not reported numerically; acceptance threshold > 80% and summary states all results met acceptance criteria",
+     "comparator": "Manual measurements labelled by a cardiologist with 36 years of experience at a different medical center",
+     "n_studies": 100,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "100 test images acquired and labelled at a different medical center from the training data; adult male and female Caucasian patients; Esaote MyLabX8 with phased array transducers",
+     "subgroup_notes": "No subgroup results reported; summary states no discrimination on specific pathologies was considered.",
+     "quote": "Criteria to establish the final positive or negative outcome of the validation: - IVS: Success Rate > 80% - LVID: Success Rate > 90% - LVPW: Success Rate > 70% - T-Test acceptance criteria: Automatic and manual measures are statistically equivalent (not rejecting the null hypothesis) with 95% confidence level. All test results are in line with the acceptance criteria.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K243253",
+     "endpoint": "AutoCM LV internal diameter (LVID) automatic measurement vs manual measurement",
+     "metric": "Success rate",
+     "value": "Not reported numerically; acceptance threshold > 90% and summary states all results met acceptance criteria",
+     "comparator": "Manual measurements labelled by a cardiologist with 36 years of experience at a different medical center",
+     "n_studies": 100,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "100 test images acquired and labelled at a different medical center from the training data; adult male and female Caucasian patients; Esaote MyLabX8 with phased array transducers",
+     "subgroup_notes": null,
+     "quote": "- LVID: Success Rate > 90%",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K243253",
+     "endpoint": "AutoCM LV posterior wall (LVPW) automatic measurement vs manual measurement",
+     "metric": "Success rate",
+     "value": "Not reported numerically; acceptance threshold > 70% and summary states all results met acceptance criteria",
+     "comparator": "Manual measurements labelled by a cardiologist with 36 years of experience at a different medical center",
+     "n_studies": 100,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "100 test images acquired and labelled at a different medical center from the training data; adult male and female Caucasian patients; Esaote MyLabX8 with phased array transducers",
+     "subgroup_notes": null,
+     "quote": "- LVPW: Success Rate > 70%",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K243253",
+     "endpoint": "AutoCM automatic vs manual measures (IVS, LVID, LVPW) statistical equivalence",
+     "metric": "T-test (null hypothesis not rejected at 95% confidence)",
+     "value": "Criterion met per summary; test statistics not reported",
+     "comparator": "Manual measurements",
+     "n_studies": 100,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "100 test images, see above",
+     "subgroup_notes": null,
+     "quote": "- T-Test acceptance criteria: Automatic and manual measures are statistically equivalent (not rejecting the null hypothesis) with 95% confidence level. All test results are in line with the acceptance criteria.",
+     "page": 8,
+     "verification": "fda_summary"
+    }
+   ],
+   "training_data": {
+    "disclosed": true,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "AutoEF (K230179): A2C/A4C algorithm trained on 1527 image frames (1221 training, 306 validation) drawn from a development dataset of 2616 time sequences (A2C, A3C, A4C) from 399 patients with varying age and gender and LV functional states (normal, myocardial infarction, myocardial hypertrophy), acquired at different institutions on Esaote MyLab Alpha and a non-Esaote scanner, annotated in CAAS Qardia 1.0 per an internal guideline developed with three cardiologists and one clinical researcher; the 399-patient figure covers training, validation and test combined. AutoCM (K243253): trained on 2011 images of adult male and female Caucasian patients acquired on Esaote MyLabX8 with phased array transducers; ground truth by consensus of two cardiologists with 34 and 24 years of experience. XStrain AI border detection: no training data disclosed.",
+    "source": "FDA 510(k) summaries K230179 (p.11) and K243253 (p.8-9)",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "AutoEF (K230179): 200 individually segmented A2C/A4C test frames with no overlap with training or validation datasets (patient count for the test set not stated). AutoCM (K243253): 100 test images acquired and labelled in a different medical center from the training data by a cardiologist with 36 years of experience; no overlap with training. K253288 adds no cardiac AI test data.",
+    "independent_of_training": true,
+    "source": "FDA 510(k) summaries K230179 (p.11) and K243253 (p.9)",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "AutoEF module is Pie Medical Imaging Caas Qardia, separately cleared as K212376 (Pie Medical Imaging BV, decision 2022-05-16, product code LLZ) per openFDA; the K230179 summary states the software module is registered by Pie Medical Imaging B.V. as Caas Qardia (K212376).",
+     "source_url": "https://api.fda.gov/device/510k.json?search=k_number:K212376",
+     "verification": "fda_summary"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Echocardiography Core Laboratory Validation of a Novel Vendor-Independent Web-Based Software for the Assessment of Left Ventricular Global Longitudinal Strain",
+     "first_author": "Spitzer E",
+     "journal": "Journal of Cardiovascular Imaging",
+     "year": 2023,
+     "doi": "10.4250/jcvi.2022.0130",
+     "pmid": "37488918",
+     "url": "https://doi.org/10.4250/jcvi.2022.0130",
+     "relation": "external-validation",
+     "n_subjects": 30,
+     "key_result": "Core-lab validation of CAAS Qardia (the Pie Medical software underlying Esaote AutoEF) for GLS, not of AutoEF on Esaote systems: 30 datasets; mean GLS -15.0 +/- 3.5% (Qardia) vs -15.3 +/- 4.0% (TomTec 2DCPA) and -15.2 +/- 3.8% (AutoLV); bias -0.3% and -0.2%, ICC 0.88 and 0.89; intra-/inter-observer CV 4.4%/4.5% for Qardia.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial intelligence-derived left ventricular strain in echocardiography in patients treated with chemotherapy",
+     "first_author": "Kuwahara A",
+     "journal": "The International Journal of Cardiovascular Imaging",
+     "year": 2024,
+     "doi": "10.1007/s10554-024-03178-9",
+     "pmid": "39042233",
+     "url": "https://doi.org/10.1007/s10554-024-03178-9",
+     "relation": "external-validation",
+     "n_subjects": 94,
+     "key_result": "CAAS Qardia AI-based GLS vs conventional GE GLS in 94 chemotherapy patients: rho 0.74, bias -3.1% (95% LOA -8.1 to 2.0); inter-observer agreement between beginner and expert 0.82 (AI) vs 0.68 (conventional). Validates the Pie Medical software, not AutoEF on Esaote hardware.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial intelligence-assisted left ventricular global longitudinal strain assessment in patients with acute myocardial infarction: a RESUS-AMI trial sub-analysis",
+     "first_author": "Mekonnen D",
+     "journal": "The International Journal of Cardiovascular Imaging",
+     "year": 2025,
+     "doi": "10.1007/s10554-025-03409-7",
+     "pmid": "40301202",
+     "url": "https://doi.org/10.1007/s10554-025-03409-7",
+     "relation": "external-validation",
+     "n_subjects": 169,
+     "key_result": "CAAS Qardia 2.0 automated and semi-automated LVEF, volumes and GLS in 169 echocardiograms from STEMI patients; GLS correlated with CMR infarct size (r 0.58 automated, 0.64 semi-automated) and CMR LVEF (r -0.63 / -0.65) from 81 CMR recordings; inter-observer ICC for automated GLS 0.94. Abstract does not report automated LVEF agreement. Validates the Pie Medical software, not AutoEF on Esaote hardware.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Vendor differences in 2D-speckle tracking global longitudinal strain: an update on a 10-year standardization effort",
+     "first_author": "Balinisteanu A",
+     "journal": "European Heart Journal - Cardiovascular Imaging",
+     "year": 2025,
+     "doi": "10.1093/ehjci/jeaf155",
+     "pmid": "40418621",
+     "url": "https://doi.org/10.1093/ehjci/jeaf155",
+     "relation": "other",
+     "n_subjects": 62,
+     "key_result": "Inter-vendor GLS comparison in 62 subjects (372 exams) scanned on six systems including Esaote; Caas Qardia analysed among vendor-agnostic software; contemporary semi-automated clinical software (GE, Philips, Canon, Fujifilm, Caas Qardia) showed average maximum bias of 0.6% strain units. Does not evaluate Esaote AutoEF, XStrain AI border detection or AutoCM specifically.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [],
+   "open_questions": [
+    "No numeric success rates or t-test statistics reported for AutoCM (IVS, LVID, LVPW) in K243253; only the acceptance thresholds and a statement that all results met them.",
+    "No performance data of any kind for the XStrain AI-powered LV auto border detection in K230179, and no training/validation dataset disclosed for it.",
+    "AutoEF: no LV volume or EF agreement statistics reported, only segmentation Dice; patient count for the 200-frame test set and number of sites are not stated (only 'different institutions').",
+    "AutoEF Caas Qardia (K212376) 510(k) summary was not read this session; its own performance data may add to the segmentation results reported in K230179.",
+    "No peer-reviewed validation found by PubMed search for AutoEF, XStrain AI border detection or AutoCM on Esaote MyLab systems; the four papers listed validate Pie Medical CAAS Qardia (GLS) rather than the Esaote-embedded AutoEF EF output. PubMed hits for 'Esaote XStrain' (PMIDs 30619725, 28875298, 24066303) concern the pre-AI XStrain speckle-tracking package and were not included.",
+    "Esaote company page also attributes E/A ratio suggestion and LV mass / fractional shortening derivation to AutoCM; the K243253 summary only describes IVS, LVID and LVPW. Whether the additional outputs are within the cleared feature was not verified.",
+    "Whether AutoEF and XStrain AI border detection are also available on the 6600 (MyLabA50/A70) and 6450 (MyLabE80/E85) platforms is not stated in K243253 or K253288 (K253288 lists only AutoCM, AutoOB and XStrain RV as carried over).",
+    "K243253 summary pages 5-9 were image-only in the extracted text file; quotes and page numbers were transcribed by reading rendered page images of the FDA PDF."
+   ],
+   "sources": [
+    {
+     "fact": "K230179 device description, predicates, AutoEF and XStrain descriptions, AI Summary of Testing for endocardium border segmentation (Dice 0.95 SD 0.02, 200 test frames, 1221/306 training/validation frames, 2616 sequences from 399 patients), no clinical tests",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K230179.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K243253 predicates (K230179), AutoCM/AutoOB/XStrain RV descriptions, AutoCM acceptance criteria and dataset (2011 training / 100 test images, MyLabX8, Caucasian adults, truthing), no clinical studies",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/pdf/K243253.pdf (pages 5-9 rendered to research/ocr/K243253_p5-9.png)",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K253288 predicates (K241671, K243253), AutoCM/AutoOB/XStrain RV carried over to 6450 platform, UroFusion AI testing (non-cardiac), no clinical studies",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K253288.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Decision dates, product code IYN, applicant Esaote S.p.A., device names for K230179, K243253, K253288",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K212376 Caas Qardia, Pie Medical Imaging BV, decision 2022-05-16, product code LLZ",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K212376",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "PubMed search 'CAAS Qardia echocardiography' / 'Qardia' returned PMIDs 40418621, 40301202, 39042233, 37488918; abstracts via efetch",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Qardia",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "DOIs 10.4250/jcvi.2022.0130, 10.1007/s10554-024-03178-9, 10.1007/s10554-025-03409-7, 10.1093/ehjci/jeaf155 resolved on Crossref with matching titles",
+     "url_or_file": "https://api.crossref.org/works/",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "Company description: 'AutoEF automatically recognizes apical views and traces endocardial borders offering a proposal of left ventricular volumes and ejection fraction in just seconds.' and 'AutoCM complements this by automatically suggesting ventricular wall thickness, internal diameters, and derived values such as LV mass and fractional shortening directly from parasternal views.'",
+     "url_or_file": "https://www.esaote.com/en-US/ultrasound/clinical-solutions/cardiovascular/",
+     "verification": "company"
+    },
+    {
+     "fact": "MyLab X90 product page lists 'XStrain LV Automatic assessment of global longitudinal strain in the left ventricle' and 'AutoEF Automatic Ejection fraction assessment of the left ventricle' under the Augmented Insight AI umbrella",
+     "url_or_file": "https://www.esaote.com/ultrasound/ultrasound-system/mylab-x90/",
+     "verification": "company"
+    },
+    {
+     "fact": "Esaote presented AI-powered cardiac ultrasound tools at ESC 2025 (news item dated 2025-08-29; no feature-level performance data)",
+     "url_or_file": "https://healthcare-in-europe.com/en/news/esaote-ai-cardiac-ultrasound-esc-2025.html",
+     "verification": "news"
+    }
+   ]
+  }
+ ],
+ "notes": "Single family esaote-mylab-cardiac-ai covering K230179 (MyLabX90: AutoEF + XStrain AI LV border detection), K243253 (MyLabA50/A70: AutoCM) and K253288 (MyLabE80/E85: AutoCM carried over). Mindray and Sonosite K-numbers in the triage group were excluded by triage and not researched. The K243253 extracted text file was empty for the 510(k) summary pages, so pages 5-9 of the FDA PDF were rendered to PNG and read directly; page numbers cited for K243253 are PDF page numbers. AutoEF is Pie Medical Imaging Caas Qardia (K212376); the four papers listed validate Caas Qardia GLS rather than the Esaote-embedded feature and are labelled accordingly. No numeric AutoCM results and no XStrain AI performance data exist in the summaries; nothing was inferred."
+}

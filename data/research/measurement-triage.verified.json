@@ -1,0 +1,1244 @@
+{
+ "batch_id": "measurement-triage",
+ "families": [
+  {
+   "id": "sonix-health",
+   "product_name": "Sonix Health",
+   "company": "Ontact Health Co., Ltd.",
+   "company_website": "https://www.ontacthealth.com/",
+   "product_url": "https://www.sonixhealth.ai/en/product",
+   "category": "comprehensive-measurement",
+   "tags": [
+    "view classification",
+    "2D measurements",
+    "M-mode",
+    "Doppler",
+    "LVEF",
+    "GLS",
+    "LA strain",
+    "RV free wall strain",
+    "RV FAC",
+    "TAPSE",
+    "LV mass"
+   ],
+   "modality_scope": [
+    "TTE",
+    "2D",
+    "M-mode",
+    "PW Doppler",
+    "CW Doppler",
+    "TDI"
+   ],
+   "deployment": [
+    "workstation",
+    "on-premise software on customer PC",
+    "local network",
+    "DICOM",
+    "vendor-neutral"
+   ],
+   "summary": "Sonix Health is a software-only echocardiography analysis workstation from Ontact Health (Seoul) that classifies views and produces semi-automated 2D, M-mode and Doppler measurements per ASE guidelines for user review. K230209 (2023) cleared 18 views and a core measurement set; K240645 (2024) expanded to 36 views and added Auto-Strain (LV GLS/segmental strain, LA reservoir/contraction strain, RV free-wall strain) plus additional RV, M-mode and derived measurements.",
+   "intended_use_quote": "Sonix Health is intended for quantifying and reporting echocardiography for use by or on the order of a licensed physician. Sonix Health accepts DICOM-compliant medical images acquired from ultrasound imaging devices. Sonix Health is indicated for use in adult populations.\n\nUltrasound images are acquired via the B (2D), M, Pulsed-wave Doppler, and Continuous-wave Doppler modes.",
+   "indications_for_use_quote": "Sonix Health is intended for quantifying and reporting echocardiography for use by or on the order of a licensed physician. Sonix Health accepts DICOM-compliant medical images acquired from ultrasound imaging devices. Sonix Health is indicated for use in adult populations.\n\nUltrasound images are acquired via the B (2D), M, Pulsed-wave Doppler, and Continuous-wave Doppler modes.",
+   "embedded_ai_features": [
+    "Two-step deep learning: single view-identification model, then view-specific B-mode / M-mode / Doppler segmentation models",
+    "Semi-automated view classification (18 views in K230209; 36 views in K240645)",
+    "Semi-automated 2D, M-mode and Doppler measurements with user review/edit",
+    "Auto-Strain: LVGLS, segmental longitudinal strain, LA reservoir and contraction strain, RV free-wall strain (K240645)",
+    "Derived indices: EF (Teichholz and MOD), RWT, SV, LV mass, %FS, RV FAC, TAPSE (K240645)",
+    "Report generation"
+   ],
+   "clearances": [
+    {
+     "k_number": "K230209",
+     "decision_date": "2023-10-20",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K213544"
+     ],
+     "changes_summary": "Initial clearance. Predicate TOMTEC-ARENA (K213544); reference device Samsung Medison V8 Diagnostic Ultrasound System (K220975). 18 semi-automated views and 2D/M-mode/Doppler measurement set.",
+     "notable_flags": [
+      "software-only on customer PC",
+      "local network",
+      "Moderate Level of Concern software",
+      "no clinical testing",
+      "subsequent product code LLZ"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K230209.pdf"
+    },
+    {
+     "k_number": "K240645",
+     "decision_date": "2024-11-27",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K230209"
+     ],
+     "changes_summary": "Predicate is prior Sonix Health (K230209); reference devices EchoPAC Software Only/Plug-in (K220940) and TOMTEC-ARENA (K213544). View classification expanded from 18 to 36 views (adds PLAX zoomed views, A3C, A5C, PSAX levels, subcostal, RV-focused A4C, M-mode TAPSE, TDI septal/lateral/tricuspid). Adds Auto-Strain (LVGLS/LVSLS, LARS, LACtS, RVFWS), RV dimensions/areas/FAC, Teichholz EF/volumes, LV mass, %FS, RWT, LVOT (2D). Same intended use and indications.",
+     "notable_flags": [
+      "software-only on customer PC",
+      "local network",
+      "Basic Level of Documentation",
+      "standalone testing only",
+      "subsequent product code LLZ"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240645.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K230209",
+     "endpoint": "View recognition accuracy",
+     "metric": "average accuracy",
+     "value": "98.22%",
+     "comparator": "manual view labels (consensus of two RDCS sonographers supervised by two cardiologists)",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": 2,
+     "dataset_description": "2,744 test images (476 B-mode, 243 M-mode, 2,025 Doppler); 1,264 (47.7%) from a U.S. hospital and 1,384 (52.3%) from a South Korea hospital; 2,648 (96.5%) from American participants; American participants 65% male / 35% female; equipment from four major manufacturers; LVEF range 14-76% (mean 58%, SD 11%). Ground truth: consensus of two RDCS sonographers supervised by two cardiologists.",
+     "subgroup_notes": "American participants 65% male / 35% female; four equipment manufacturers; LVEF 14-76%",
+     "quote": "Sonix Health passed the test in two categories: an average accuracy of 98.22% for view recognition and a 93.98% average correlation coefficient when compared to manual measurements by participating experts.",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K230209",
+     "endpoint": "Automated measurements vs manual expert measurements",
+     "metric": "average correlation coefficient",
+     "value": "93.98% (0.9398 average)",
+     "comparator": "manual measurements by participating experts",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": 2,
+     "dataset_description": "2,744 test images (476 B-mode, 243 M-mode, 2,025 Doppler); 1,264 (47.7%) from a U.S. hospital and 1,384 (52.3%) from a South Korea hospital; 2,648 (96.5%) from American participants; American participants 65% male / 35% female; equipment from four major manufacturers; LVEF range 14-76% (mean 58%, SD 11%). Ground truth: consensus of two RDCS sonographers supervised by two cardiologists.",
+     "subgroup_notes": null,
+     "quote": "Sonix Health passed the test in two categories: an average accuracy of 98.22% for view recognition and a 93.98% average correlation coefficient when compared to manual measurements by participating experts.",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K230209",
+     "endpoint": "Test set composition",
+     "metric": "dataset counts",
+     "value": "2,744 test images (476 B-mode, 243 M-mode, 2,025 Doppler); 1,264 U.S. / 1,384 South Korea",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": 2,
+     "dataset_description": "2,744 test images (476 B-mode, 243 M-mode, 2,025 Doppler); 1,264 (47.7%) from a U.S. hospital and 1,384 (52.3%) from a South Korea hospital; 2,648 (96.5%) from American participants; American participants 65% male / 35% female; equipment from four major manufacturers; LVEF range 14-76% (mean 58%, SD 11%). Ground truth: consensus of two RDCS sonographers supervised by two cardiologists.",
+     "subgroup_notes": "Sex: 65% male / 35% female among American participants",
+     "quote": "For performance testing, we used 476 B-mode clinical images, 243 M-mode clinical images, and 2,025 Doppler images, resulting in a total of 2,744 test images to assess these functions. Of these, 2,648 (96.5%) were from American participants. The data was respectively collected with 1,264 (47.7 %) from a U.S. hospital and 1,384 (52.3%) from a South Korea hospital. The gender distribution for the American participants was 65% male and 35% female. Data was acquired using equipment from four major manufacturers.",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240645",
+     "endpoint": "View recognition accuracy for additional views",
+     "metric": "average accuracy",
+     "value": "96.25% (acceptance threshold 84%)",
+     "comparator": "manual view labels",
+     "n_studies": null,
+     "n_patients": 335,
+     "n_sites": 2,
+     "dataset_description": "Images from 335 patients acquired in clinical practice (Mayo Clinic Arizona and Severance Hospital, Seoul); summary states 303 (90%) American and 32 (10%) Korean patients (the summary's site/percentage breakdown is internally inconsistent: it also says 93 (30%) from U.S. hospitals and 200 (70%) from Korean hospital). Ground truth: consensus of two RDCS sonographers supervised by two cardiologists; strain ground truth established with EchoPAC (GLS, segmental, RV free wall) and TOMTEC Arena (LA strain).",
+     "subgroup_notes": null,
+     "quote": "it achieved an average accuracy of 96.25% for the additional views in the ‘View Recognition’ software (exceeding the acceptable threshold of 84%)",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240645",
+     "endpoint": "Auto Measure vs manual expert measurements",
+     "metric": "average correlation coefficient",
+     "value": "0.918 (acceptance threshold 0.80)",
+     "comparator": "manual measurements made by participating experts",
+     "n_studies": null,
+     "n_patients": 335,
+     "n_sites": 2,
+     "dataset_description": "Images from 335 patients acquired in clinical practice (Mayo Clinic Arizona and Severance Hospital, Seoul); summary states 303 (90%) American and 32 (10%) Korean patients (the summary's site/percentage breakdown is internally inconsistent: it also says 93 (30%) from U.S. hospitals and 200 (70%) from Korean hospital). Ground truth: consensus of two RDCS sonographers supervised by two cardiologists; strain ground truth established with EchoPAC (GLS, segmental, RV free wall) and TOMTEC Arena (LA strain).",
+     "subgroup_notes": null,
+     "quote": "an average correlation coefficient of 0.918 (above the acceptable threshold of 0.80) when compared to manual measurements made by participating experts for ‘Auto Measure’.",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240645",
+     "endpoint": "Auto Strain LVGLS, LA reservoir strain, LA contraction strain vs manual",
+     "metric": "average correlation coefficient",
+     "value": "0.88 (acceptance threshold 0.80)",
+     "comparator": "manual measurements by experts (EchoPAC for GLS; TOMTEC Arena for LA strain)",
+     "n_studies": null,
+     "n_patients": 335,
+     "n_sites": 2,
+     "dataset_description": "Images from 335 patients acquired in clinical practice (Mayo Clinic Arizona and Severance Hospital, Seoul); summary states 303 (90%) American and 32 (10%) Korean patients (the summary's site/percentage breakdown is internally inconsistent: it also says 93 (30%) from U.S. hospitals and 200 (70%) from Korean hospital). Ground truth: consensus of two RDCS sonographers supervised by two cardiologists; strain ground truth established with EchoPAC (GLS, segmental, RV free wall) and TOMTEC Arena (LA strain).",
+     "subgroup_notes": null,
+     "quote": "For the ‘Auto Strain’, it attained an average correlation coefficient of 0.88 for LVGLS values and LARS and LACts, surpassing the acceptable threshold of 0.80 when compared to manual measurements made by participating experts.",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240645",
+     "endpoint": "RV free wall strain vs manual",
+     "metric": "correlation coefficient",
+     "value": "0.69 (acceptance threshold 0.60)",
+     "comparator": "manual measurements by experts (EchoPAC)",
+     "n_studies": null,
+     "n_patients": 335,
+     "n_sites": 2,
+     "dataset_description": "Images from 335 patients acquired in clinical practice (Mayo Clinic Arizona and Severance Hospital, Seoul); summary states 303 (90%) American and 32 (10%) Korean patients (the summary's site/percentage breakdown is internally inconsistent: it also says 93 (30%) from U.S. hospitals and 200 (70%) from Korean hospital). Ground truth: consensus of two RDCS sonographers supervised by two cardiologists; strain ground truth established with EchoPAC (GLS, segmental, RV free wall) and TOMTEC Arena (LA strain).",
+     "subgroup_notes": null,
+     "quote": "it attained a correlation coefficient 0.69 of RV Free wall strain surpassing the acceptable threshold of 0.60 when compared to manual measurements made by participating experts.",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240645",
+     "endpoint": "Average GLS vs manual",
+     "metric": "RMSE",
+     "value": "2.16% (acceptance threshold 3.00)",
+     "comparator": "manual GLS (EchoPAC)",
+     "n_studies": null,
+     "n_patients": 335,
+     "n_sites": 2,
+     "dataset_description": "Images from 335 patients acquired in clinical practice (Mayo Clinic Arizona and Severance Hospital, Seoul); summary states 303 (90%) American and 32 (10%) Korean patients (the summary's site/percentage breakdown is internally inconsistent: it also says 93 (30%) from U.S. hospitals and 200 (70%) from Korean hospital). Ground truth: consensus of two RDCS sonographers supervised by two cardiologists; strain ground truth established with EchoPAC (GLS, segmental, RV free wall) and TOMTEC Arena (LA strain).",
+     "subgroup_notes": null,
+     "quote": "Additionally, it demonstrated an RMSE of 2.16 % for average GLS, staying below the acceptable threshold of 3.00.",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240645",
+     "endpoint": "Segmental longitudinal strain vs manual",
+     "metric": "RMSE",
+     "value": "6.32% (acceptance threshold 7.50%)",
+     "comparator": "manual segmental strain (EchoPAC)",
+     "n_studies": null,
+     "n_patients": 335,
+     "n_sites": 2,
+     "dataset_description": "Images from 335 patients acquired in clinical practice (Mayo Clinic Arizona and Severance Hospital, Seoul); summary states 303 (90%) American and 32 (10%) Korean patients (the summary's site/percentage breakdown is internally inconsistent: it also says 93 (30%) from U.S. hospitals and 200 (70%) from Korean hospital). Ground truth: consensus of two RDCS sonographers supervised by two cardiologists; strain ground truth established with EchoPAC (GLS, segmental, RV free wall) and TOMTEC Arena (LA strain).",
+     "subgroup_notes": "Summary states detailed results and subgroup analysis are in labeling, not in the summary",
+     "quote": "For Segmental Longitudinal Strain, the RMSE was 6.32%, also below the acceptable threshold of 7.50%, compared to manual measurements.",
+     "page": 10,
+     "verification": "fda_summary"
+    }
+   ],
+   "training_data": {
+    "disclosed": true,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": 6,
+    "description": "K230209 summary: training data collected from six centers; representative institution demographics 50.2% male, mean BMI 22.2, mean LVEF 67.0%. Training set size not stated. Both summaries state training and validation data are distinct and independent. Peer-reviewed papers from Ontact Health describe development on a 'nationwide echocardiographic dataset from five tertiary hospitals' (e.g., M-mode model trained on 5,958 M-mode images), but those papers do not name Sonix Health explicitly.",
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K230209.pdf (PAGE 9); PMID 38652399",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": 335,
+    "n_sites": 2,
+    "description": "K230209: 2,744 test images (476 B-mode, 243 M-mode, 2,025 Doppler) from one U.S. hospital (1,264) and one South Korean hospital (1,384), four equipment manufacturers, LVEF 14-76%. K240645: images from 335 patients (Mayo Clinic Arizona and Severance Hospital, Seoul); n_patients here refers to the K240645 test set; K230209 reports images, not patients.",
+    "independent_of_training": true,
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K230209.pdf (PAGE 9); https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240645.pdf (PAGE 9)",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Korea Biomedical Review (2026-05-06) reports company-stated performance for SONIX HEALTH: B-mode image classification 96% accuracy, Doppler 99%, M-mode 100%, LV GLS correlation ~0.97; 'one-click' analysis reducing examination time by more than 70%; in use at about 3,000 medical institutions worldwide as of end 2025; Samjin Pharmaceutical exclusive Korea distribution MOU. Also states MFDS Class II certification.",
+     "source_url": "https://www.koreabiomed.com/news/articleView.html?idxno=31541",
+     "verification": "news"
+    },
+    {
+     "description": "Ontact Health-affiliated papers validate the group's automated view identification and measurement pipeline: M-mode automation (PMID 38652399), diastolic function automation (PMID 38975004), STEMI cohort of 632 patients (PMID 39434367), and a prospective 40-exam workflow pilot showing LVEF noninferiority (PMID 42157304). Product name not stated in abstracts.",
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Ontact+Health%22%5BAffiliation%5D",
+     "verification": "peer_reviewed"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Fully automated quantification of cardiac chamber and function assessment in 2-D echocardiography: clinical feasibility of deep learning-based algorithms",
+     "first_author": "Kim S",
+     "journal": "Int J Cardiovasc Imaging",
+     "year": 2022,
+     "doi": "10.1007/s10554-021-02482-y",
+     "pmid": "35152371",
+     "url": "https://doi.org/10.1007/s10554-021-02482-y",
+     "relation": "algorithm-development",
+     "n_subjects": 500,
+     "key_result": "Author affiliations include Ontact Health Co., Ltd. (corresponding author), Yonsei CONNECT-AI Research Center, Severance Cardiovascular Hospital and Mayo Clinic Arizona (the two K240645 validation sites); 500 consecutive TTE patients; U-Net variants achieved average Dice 0.91-0.95 for four-chamber segmentation with no significant differences in LAV, LVEDV, LVESV, LV mass or EF vs ground truth. Does not name Sonix Health; predates clearance.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial intelligence-enhanced automation for M-mode echocardiographic analysis: ensuring fully automated, reliable, and reproducible measurements",
+     "first_author": "Jeong D",
+     "journal": "Int J Cardiovasc Imaging",
+     "year": 2024,
+     "doi": "10.1007/s10554-024-03095-x",
+     "pmid": "38652399",
+     "url": "https://doi.org/10.1007/s10554-024-03095-x",
+     "relation": "algorithm-development",
+     "n_subjects": null,
+     "key_result": "Ontact Health-affiliated. Developed on 5,958 M-mode images from five tertiary hospitals; view classification accuracy 99.8%, segmentation Dice 94.3%; internal test (100 images) PCC 0.81-0.99 vs experts; external test (280 images) PCC 0.84-0.98 (sinus rhythm) and 0.70-0.97 (AF). Product not named in abstract.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial intelligence-enhanced automation of left ventricular diastolic assessment: a pilot study for feasibility, diagnostic validation, and outcome prediction",
+     "first_author": "Park J",
+     "journal": "Cardiovasc Diagn Ther",
+     "year": 2024,
+     "doi": "10.21037/cdt-24-25",
+     "pmid": "38975004",
+     "url": "https://doi.org/10.21037/cdt-24-25",
+     "relation": "external-validation",
+     "n_subjects": 200,
+     "key_result": "Ontact Health-affiliated. External validation at Seoul National University Bundang Hospital (200 exams): view identification accuracy 99.1%; AI vs manual diastolic parameters Pearson 0.901-0.959; 94% concordance in guideline LVDF grading; AI-derived grades prognostic (adjusted HR 3.03). Product not named in abstract.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "An Artificial Intelligence-Based Automated Echocardiographic Analysis: Enhancing Efficiency and Prognostic Evaluation in Patients With Revascularized STEMI",
+     "first_author": "Jang Y",
+     "journal": "Korean Circ J",
+     "year": 2024,
+     "doi": "10.4070/kcj.2024.0060",
+     "pmid": "39434367",
+     "url": "https://doi.org/10.4070/kcj.2024.0060",
+     "relation": "real-world",
+     "n_subjects": 632,
+     "key_result": "Ontact Health-affiliated. 632 STEMI patients; view identification accuracy 98.5%; AI vs manual LVEF, GLS, LAVI and LA reservoir strain Pearson 0.81-0.92, ICC 0.74-0.90; AI measurements prognostic independent of clinical risk factors. Product not named in abstract.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Novel deep learning framework for simultaneous assessment of left ventricular mass and longitudinal strain: clinical feasibility and validation in patients with hypertrophic cardiomyopathy",
+     "first_author": "Park J",
+     "journal": "J Echocardiogr",
+     "year": 2025,
+     "doi": "10.1007/s12574-025-00694-y",
+     "pmid": "40650815",
+     "url": "https://doi.org/10.1007/s12574-025-00694-y",
+     "relation": "algorithm-development",
+     "n_subjects": 111,
+     "key_result": "Ontact Health-affiliated; 111 HCM patients with TTE and CMR; SMART (segmentation-based myocardial tracking) framework for automated LV mass and LVGLS; LVGLS-SMART vs manual LVGLS PCC 0.851; LVM-SMART vs CMR PCC 0.843 (mean difference 1 g) versus conventional TTE LVM PCC 0.652 (overestimation, mean difference 106 g). Product not named in abstract.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Fully automated artificial intelligence-based echocardiographic analysis substantially reduces workflow time while preserving measurement accuracy: a pilot study",
+     "first_author": "Sun J",
+     "journal": "J Cardiovasc Imaging",
+     "year": 2026,
+     "doi": "10.1186/s44348-026-00073-w",
+     "pmid": "42157304",
+     "url": "https://doi.org/10.1186/s44348-026-00073-w",
+     "relation": "clinical-trial",
+     "n_subjects": 40,
+     "key_result": "Ontact Health-affiliated prospective single-center pilot, 40 TTE exams: median analysis time 94 s (AI) vs 490 s (sonographer), P<0.001; AI LVEF noninferior to cardiologist-adjudicated reference (mean difference 0.00 points, upper 95% bound 1.41; ICC 0.902); secondary index ICCs 0.625-0.989. Product not named in abstract.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Reinventing the echocardiography workflow: from manual quantification to artificial intelligence-driven comprehensive interpretation",
+     "first_author": "Heo R",
+     "journal": "J Cardiovasc Imaging",
+     "year": 2026,
+     "doi": "10.1186/s44348-026-00087-4",
+     "pmid": "42649513",
+     "url": "https://doi.org/10.1186/s44348-026-00087-4",
+     "relation": "review",
+     "n_subjects": null,
+     "key_result": "Review by Ontact Health-affiliated authors (incl. CEO Hyuk-Jae Chang) on AI echo workflow.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial intelligence-enhanced comprehensive assessment of the aortic valve stenosis continuum in echocardiography",
+     "first_author": "Park J",
+     "journal": "EBioMedicine",
+     "year": 2025,
+     "doi": "10.1016/j.ebiom.2025.105560",
+     "pmid": "39842286",
+     "url": "https://doi.org/10.1016/j.ebiom.2025.105560",
+     "relation": "algorithm-development",
+     "n_subjects": 8427,
+     "key_result": "Ontact Health / Yonsei CONNECT-AI-affiliated. Dual-pathway AI system for aortic stenosis built on a nationwide echocardiographic developmental dataset (n=8,427) with internal test (n=841), distinct-hospital (n=1,696) and temporally distinct (n=772) test sets; the second pathway automates conventional AS evaluation (automatic measurement of conventional AS parameters correlated with manual measurement; AS staging accuracy 98.2% internal, 82.1% distinct hospital, 96.8% temporal). Product not named in abstract; relevance is to the automated Doppler/AS-measurement feature, not a Sonix Health validation.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [],
+   "open_questions": [
+    "Training set size (number of studies/patients) is not stated in either FDA summary; only 'six centers' and representative-institution demographics are given.",
+    "K230209 summary reports images, not patient counts, for the test set; number of patients unknown.",
+    "K240645 summary's site breakdown is internally inconsistent (303 American/32 Korean vs 93 U.S./200 Korean); actual per-site counts unresolved.",
+    "Per-measurement agreement statistics (Bland-Altman bias/LoA) and subgroup analyses are stated to be in labeling, not in the summary.",
+    "No paper explicitly names 'Sonix Health' in PubMed abstracts; linkage of Ontact Health-affiliated papers to the cleared device is by affiliation and methodology, not by explicit statement.",
+    "sonixhealth.ai product pages could not be parsed (JS-rendered); company-page deployment details beyond the FDA summary (on-premise PC, local network) unverified.",
+    "Korea Biomedical Review performance figures (96/99/100% classification accuracy, GLS r~0.97, ~3,000 institutions) are company statements reported in news; not verified against a primary source.",
+    "PubMed query '\"Sonix Health\"' returns only unrelated records (e.g., a SONIX vaccine paper); 'Ontact Health AND echocardiography' returns 17 records, most of which are disease-classification models (AS, pericardial disease, mitral valve etiology, LVH) rather than the cleared measurement product and were not added."
+   ],
+   "sources": [
+    {
+     "fact": "K230209 indications, predicates, device description, performance testing",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K230209.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K240645 predicates, expanded views/measurements, strain performance",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240645.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Decision dates 2023-10-20 and 2024-11-27, product code QIH, applicant Ontact Health Co., Ltd.",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K230209+K240645",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Company-reported performance, MFDS clearance, ~3,000 institutions, Samjin distribution",
+     "url_or_file": "https://www.koreabiomed.com/news/articleView.html?idxno=31541",
+     "verification": "news"
+    },
+    {
+     "fact": "Peer-reviewed papers (PubMed esearch/esummary/efetch; Crossref DOI resolution)",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ ; https://api.crossref.org/works/",
+     "verification": "peer_reviewed"
+    }
+   ]
+  },
+  {
+   "id": "icardio-echomeasure",
+   "product_name": "EchoMeasure",
+   "company": "iCardio.ai",
+   "company_website": "https://www.icardio.ai/",
+   "product_url": "https://www.icardio.ai/solutions",
+   "category": "comprehensive-measurement",
+   "tags": [
+    "view classification",
+    "image quality check",
+    "LV volumes",
+    "LV dimensions",
+    "aortic root",
+    "LVOT diameter",
+    "LA dimension",
+    "IVS/PW thickness",
+    "RV diameter",
+    "API"
+   ],
+   "modality_scope": [
+    "TTE",
+    "2D"
+   ],
+   "deployment": [
+    "cloud",
+    "on-premise server",
+    "API for third-party software/hardware vendors",
+    "browser interface",
+    "PDF report"
+   ],
+   "summary": "EchoMeasure (iCardio.ai, Los Angeles) processes previously acquired DICOM TTE studies, classifies views, checks image quality, identifies ED/ES frames, and outputs ten automated linear and volumetric measurements (LV volumes A2C/A4C/biplane, LV and RV diameters, wall thicknesses, aortic annulus, LVOT, sinus of Valsalva, sinotubular junction, LA dimension). Output is intended for consumption by third-party software and hardware vendors. The K241430 comparison table lists manual editing of automated results as 'No' (vs 'Yes' for the predicate), although the device description on the same summary says the reviewing clinician may accept, reject, edit or ignore the output. Cleared 2024-10-10 (K241430) with Libby Echo:Prio (K220956) as predicate.",
+   "intended_use_quote": "Quantification of cardiovascular function from an echocardiogram",
+   "indications_for_use_quote": "iCardio.ai EchoMeasure is software that is used to process previously acquired DICOM-compliant cardiac ultrasound images, and to make measurements on these images in order to provide automated estimation of several cardiac measurements. The data produced by this software is intended to be used to support qualified cardiologists, sonographers, or other licensed professional healthcare practitioners for clinical decision-making.\n\niCardio.ai EchoMeasure is indicated for use in adult patients.",
+   "embedded_ai_features": [
+    "Machine-learning view classification",
+    "Image quality grading",
+    "End-diastolic / end-systolic frame identification",
+    "Automated keypoint detection and segmentation",
+    "Ten automated measurements: LV volume (A2C, A4C, biplane; systole/diastole), LV diameter (systole/diastole), RV diameter, posterior wall thickness, aortic annulus, LVOT diameter, sinus of Valsalva, sinotubular junction, LA dimension, IVS thickness",
+    "Contours/keypoints overlaid on images; user confirmation/rejection of results (comparison table: manual editing 'No'; device description: clinician may 'accept, reject, edit, or ignore')",
+    "Automated report (browser interface, PDF)"
+   ],
+   "clearances": [
+    {
+     "k_number": "K241430",
+     "decision_date": "2024-10-10",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K220956"
+     ],
+     "changes_summary": "Initial clearance. Predicate Libby Echo:Prio (K220956). Differences vs predicate: adds image-quality checks and ten linear/volumetric measurements instead of EF; comparison table lists manual editing of automated results as 'No' (device description text says accept/reject/edit/ignore); output intended for third-party software consumption.",
+     "notable_flags": [
+      "cloud or on-premise server",
+      "standalone retrospective study",
+      "manual editing listed 'No' in comparison table (inconsistent with device description)",
+      "output for third-party vendors"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K241430.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K241430",
+     "endpoint": "Overall standalone accuracy (all measurements)",
+     "metric": "worst-case BLRSC vs prespecified threshold",
+     "value": "all measurements met predetermined accuracy limits (numeric threshold not stated)",
+     "comparator": "mean of three clinician-derived annotations",
+     "n_studies": 200,
+     "n_patients": 200,
+     "n_sites": 2,
+     "dataset_description": "Retrospective standalone study; 200 comprehensive echocardiography studies from 200 distinct patients sampled from two independent U.S. clinical sites in two states; 92 (46%) males, 108 (54%) females; GE and Teratech ultrasound machines; one DICOM per view (PLAX, A2C, A4C) selected by view-confidence score; ground truth = mean of three U.S.-based cardiac sonographers, independent of training annotators; no training data from these sites.",
+     "subgroup_notes": "Subgroup analyses by age, gender, weight, BMI and ultrasound scanner manufacturer; summary states worst-case BLRSC 'rarely exceeded' limits in any subgroup",
+     "quote": "The output showed very good agreement with the established Ground Truth. In no instance did the worst-case BLRSC for a given measurement (calculated based on the 95% confidence interval) fall below the predetermined, minimum allowable BLRSC threshold.",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241430",
+     "endpoint": "Aortic Annulus Diameter agreement vs mean of three sonographers",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
+     "value": "0.952 [0.829, 1.082]",
+     "comparator": "mean of three clinician-derived annotations",
+     "n_studies": 200,
+     "n_patients": 200,
+     "n_sites": 2,
+     "dataset_description": "Retrospective standalone study; 200 comprehensive echocardiography studies from 200 distinct patients sampled from two independent U.S. clinical sites in two states; 92 (46%) males, 108 (54%) females; GE and Teratech ultrasound machines; one DICOM per view (PLAX, A2C, A4C) selected by view-confidence score; ground truth = mean of three U.S.-based cardiac sonographers, independent of training annotators; no training data from these sites.",
+     "subgroup_notes": "Subgroup analyses by age, gender, weight, BMI and ultrasound scanner manufacturer; summary states worst-case BLRSC 'rarely exceeded' limits in any subgroup",
+     "quote": "Table 1: Model Performance Summary ... Aortic Annulus Diameter BLRSC 0.952 [0.829, 1.082]",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241430",
+     "endpoint": "Left Ventricular Outflow Tract Diameter agreement vs mean of three sonographers",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
+     "value": "1.112 [0.970, 1.255]",
+     "comparator": "mean of three clinician-derived annotations",
+     "n_studies": 200,
+     "n_patients": 200,
+     "n_sites": 2,
+     "dataset_description": "Retrospective standalone study; 200 comprehensive echocardiography studies from 200 distinct patients sampled from two independent U.S. clinical sites in two states; 92 (46%) males, 108 (54%) females; GE and Teratech ultrasound machines; one DICOM per view (PLAX, A2C, A4C) selected by view-confidence score; ground truth = mean of three U.S.-based cardiac sonographers, independent of training annotators; no training data from these sites.",
+     "subgroup_notes": "Subgroup analyses by age, gender, weight, BMI and ultrasound scanner manufacturer; summary states worst-case BLRSC 'rarely exceeded' limits in any subgroup",
+     "quote": "Table 1: Model Performance Summary ... Left Ventricular Outflow Tract Diameter BLRSC 1.112 [0.970, 1.255]",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241430",
+     "endpoint": "Sinus of Valsalva Diameter agreement vs mean of three sonographers",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
+     "value": "0.932 [0.848, 1.015]",
+     "comparator": "mean of three clinician-derived annotations",
+     "n_studies": 200,
+     "n_patients": 200,
+     "n_sites": 2,
+     "dataset_description": "Retrospective standalone study; 200 comprehensive echocardiography studies from 200 distinct patients sampled from two independent U.S. clinical sites in two states; 92 (46%) males, 108 (54%) females; GE and Teratech ultrasound machines; one DICOM per view (PLAX, A2C, A4C) selected by view-confidence score; ground truth = mean of three U.S.-based cardiac sonographers, independent of training annotators; no training data from these sites.",
+     "subgroup_notes": "Subgroup analyses by age, gender, weight, BMI and ultrasound scanner manufacturer; summary states worst-case BLRSC 'rarely exceeded' limits in any subgroup",
+     "quote": "Table 1: Model Performance Summary ... Sinus of Valsalva Diameter BLRSC 0.932 [0.848, 1.015]",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241430",
+     "endpoint": "Sinotubular Junction Diameter agreement vs mean of three sonographers",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
+     "value": "0.773 [0.676, 0.869]",
+     "comparator": "mean of three clinician-derived annotations",
+     "n_studies": 200,
+     "n_patients": 200,
+     "n_sites": 2,
+     "dataset_description": "Retrospective standalone study; 200 comprehensive echocardiography studies from 200 distinct patients sampled from two independent U.S. clinical sites in two states; 92 (46%) males, 108 (54%) females; GE and Teratech ultrasound machines; one DICOM per view (PLAX, A2C, A4C) selected by view-confidence score; ground truth = mean of three U.S.-based cardiac sonographers, independent of training annotators; no training data from these sites.",
+     "subgroup_notes": "Subgroup analyses by age, gender, weight, BMI and ultrasound scanner manufacturer; summary states worst-case BLRSC 'rarely exceeded' limits in any subgroup",
+     "quote": "Table 1: Model Performance Summary ... Sinotubular Junction Diameter BLRSC 0.773 [0.676, 0.869]",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241430",
+     "endpoint": "Left Atrial Diameter agreement vs mean of three sonographers",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
+     "value": "0.888 [0.830, 0.944]",
+     "comparator": "mean of three clinician-derived annotations",
+     "n_studies": 200,
+     "n_patients": 200,
+     "n_sites": 2,
+     "dataset_description": "Retrospective standalone study; 200 comprehensive echocardiography studies from 200 distinct patients sampled from two independent U.S. clinical sites in two states; 92 (46%) males, 108 (54%) females; GE and Teratech ultrasound machines; one DICOM per view (PLAX, A2C, A4C) selected by view-confidence score; ground truth = mean of three U.S.-based cardiac sonographers, independent of training annotators; no training data from these sites.",
+     "subgroup_notes": "Subgroup analyses by age, gender, weight, BMI and ultrasound scanner manufacturer; summary states worst-case BLRSC 'rarely exceeded' limits in any subgroup",
+     "quote": "Table 1: Model Performance Summary ... Left Atrial Diameter BLRSC 0.888 [0.830, 0.944]",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241430",
+     "endpoint": "Left Ventricular Diameter (Systole) agreement vs mean of three sonographers",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
+     "value": "0.860 [0.776, 0.945]",
+     "comparator": "mean of three clinician-derived annotations",
+     "n_studies": 200,
+     "n_patients": 200,
+     "n_sites": 2,
+     "dataset_description": "Retrospective standalone study; 200 comprehensive echocardiography studies from 200 distinct patients sampled from two independent U.S. clinical sites in two states; 92 (46%) males, 108 (54%) females; GE and Teratech ultrasound machines; one DICOM per view (PLAX, A2C, A4C) selected by view-confidence score; ground truth = mean of three U.S.-based cardiac sonographers, independent of training annotators; no training data from these sites.",
+     "subgroup_notes": "Subgroup analyses by age, gender, weight, BMI and ultrasound scanner manufacturer; summary states worst-case BLRSC 'rarely exceeded' limits in any subgroup",
+     "quote": "Table 1: Model Performance Summary ... Left Ventricular Diameter (Systole) BLRSC 0.860 [0.776, 0.945]",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241430",
+     "endpoint": "Left Ventricular Diameter (Diastole) agreement vs mean of three sonographers",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
+     "value": "0.791 [0.710, 0.869]",
+     "comparator": "mean of three clinician-derived annotations",
+     "n_studies": 200,
+     "n_patients": 200,
+     "n_sites": 2,
+     "dataset_description": "Retrospective standalone study; 200 comprehensive echocardiography studies from 200 distinct patients sampled from two independent U.S. clinical sites in two states; 92 (46%) males, 108 (54%) females; GE and Teratech ultrasound machines; one DICOM per view (PLAX, A2C, A4C) selected by view-confidence score; ground truth = mean of three U.S.-based cardiac sonographers, independent of training annotators; no training data from these sites.",
+     "subgroup_notes": "Subgroup analyses by age, gender, weight, BMI and ultrasound scanner manufacturer; summary states worst-case BLRSC 'rarely exceeded' limits in any subgroup",
+     "quote": "Table 1: Model Performance Summary ... Left Ventricular Diameter (Diastole) BLRSC 0.791 [0.710, 0.869]",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241430",
+     "endpoint": "Right Ventricular Diameter (Diastole) agreement vs mean of three sonographers",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
+     "value": "0.786 [0.715, 0.854]",
+     "comparator": "mean of three clinician-derived annotations",
+     "n_studies": 200,
+     "n_patients": 200,
+     "n_sites": 2,
+     "dataset_description": "Retrospective standalone study; 200 comprehensive echocardiography studies from 200 distinct patients sampled from two independent U.S. clinical sites in two states; 92 (46%) males, 108 (54%) females; GE and Teratech ultrasound machines; one DICOM per view (PLAX, A2C, A4C) selected by view-confidence score; ground truth = mean of three U.S.-based cardiac sonographers, independent of training annotators; no training data from these sites.",
+     "subgroup_notes": "Subgroup analyses by age, gender, weight, BMI and ultrasound scanner manufacturer; summary states worst-case BLRSC 'rarely exceeded' limits in any subgroup",
+     "quote": "Table 1: Model Performance Summary ... Right Ventricular Diameter (Diastole) BLRSC 0.786 [0.715, 0.854]",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241430",
+     "endpoint": "Interventricular Septal Thickness agreement vs mean of three sonographers",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
+     "value": "0.833 [0.731, 0.934]",
+     "comparator": "mean of three clinician-derived annotations",
+     "n_studies": 200,
+     "n_patients": 200,
+     "n_sites": 2,
+     "dataset_description": "Retrospective standalone study; 200 comprehensive echocardiography studies from 200 distinct patients sampled from two independent U.S. clinical sites in two states; 92 (46%) males, 108 (54%) females; GE and Teratech ultrasound machines; one DICOM per view (PLAX, A2C, A4C) selected by view-confidence score; ground truth = mean of three U.S.-based cardiac sonographers, independent of training annotators; no training data from these sites.",
+     "subgroup_notes": "Subgroup analyses by age, gender, weight, BMI and ultrasound scanner manufacturer; summary states worst-case BLRSC 'rarely exceeded' limits in any subgroup",
+     "quote": "Table 1: Model Performance Summary ... Interventricular Septal Thickness BLRSC 0.833 [0.731, 0.934]",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241430",
+     "endpoint": "Posterior Thickness agreement vs mean of three sonographers",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
+     "value": "0.785 [0.664, 0.904]",
+     "comparator": "mean of three clinician-derived annotations",
+     "n_studies": 200,
+     "n_patients": 200,
+     "n_sites": 2,
+     "dataset_description": "Retrospective standalone study; 200 comprehensive echocardiography studies from 200 distinct patients sampled from two independent U.S. clinical sites in two states; 92 (46%) males, 108 (54%) females; GE and Teratech ultrasound machines; one DICOM per view (PLAX, A2C, A4C) selected by view-confidence score; ground truth = mean of three U.S.-based cardiac sonographers, independent of training annotators; no training data from these sites.",
+     "subgroup_notes": "Subgroup analyses by age, gender, weight, BMI and ultrasound scanner manufacturer; summary states worst-case BLRSC 'rarely exceeded' limits in any subgroup",
+     "quote": "Table 1: Model Performance Summary ... Posterior Thickness BLRSC 0.785 [0.664, 0.904]",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241430",
+     "endpoint": "Left Ventricular Volume (A4C-Systole) agreement vs mean of three sonographers",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
+     "value": "1.059 [0.977, 1.158]",
+     "comparator": "mean of three clinician-derived annotations",
+     "n_studies": 200,
+     "n_patients": 200,
+     "n_sites": 2,
+     "dataset_description": "Retrospective standalone study; 200 comprehensive echocardiography studies from 200 distinct patients sampled from two independent U.S. clinical sites in two states; 92 (46%) males, 108 (54%) females; GE and Teratech ultrasound machines; one DICOM per view (PLAX, A2C, A4C) selected by view-confidence score; ground truth = mean of three U.S.-based cardiac sonographers, independent of training annotators; no training data from these sites.",
+     "subgroup_notes": "Subgroup analyses by age, gender, weight, BMI and ultrasound scanner manufacturer; summary states worst-case BLRSC 'rarely exceeded' limits in any subgroup",
+     "quote": "Table 1: Model Performance Summary ... Left Ventricular Volume (A4C-Systole) BLRSC 1.059 [0.977, 1.158]",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241430",
+     "endpoint": "Left Ventricular Volume (A4C-Diastole) agreement vs mean of three sonographers",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
+     "value": "0.943 [0.869, 1.013]",
+     "comparator": "mean of three clinician-derived annotations",
+     "n_studies": 200,
+     "n_patients": 200,
+     "n_sites": 2,
+     "dataset_description": "Retrospective standalone study; 200 comprehensive echocardiography studies from 200 distinct patients sampled from two independent U.S. clinical sites in two states; 92 (46%) males, 108 (54%) females; GE and Teratech ultrasound machines; one DICOM per view (PLAX, A2C, A4C) selected by view-confidence score; ground truth = mean of three U.S.-based cardiac sonographers, independent of training annotators; no training data from these sites.",
+     "subgroup_notes": "Subgroup analyses by age, gender, weight, BMI and ultrasound scanner manufacturer; summary states worst-case BLRSC 'rarely exceeded' limits in any subgroup",
+     "quote": "Table 1: Model Performance Summary ... Left Ventricular Volume (A4C-Diastole) BLRSC 0.943 [0.869, 1.013]",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241430",
+     "endpoint": "Left Ventricular Volume (A2C-Systole) agreement vs mean of three sonographers",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
+     "value": "0.936 [0.777, 1.048]",
+     "comparator": "mean of three clinician-derived annotations",
+     "n_studies": 200,
+     "n_patients": 200,
+     "n_sites": 2,
+     "dataset_description": "Retrospective standalone study; 200 comprehensive echocardiography studies from 200 distinct patients sampled from two independent U.S. clinical sites in two states; 92 (46%) males, 108 (54%) females; GE and Teratech ultrasound machines; one DICOM per view (PLAX, A2C, A4C) selected by view-confidence score; ground truth = mean of three U.S.-based cardiac sonographers, independent of training annotators; no training data from these sites.",
+     "subgroup_notes": "Subgroup analyses by age, gender, weight, BMI and ultrasound scanner manufacturer; summary states worst-case BLRSC 'rarely exceeded' limits in any subgroup",
+     "quote": "Table 1: Model Performance Summary ... Left Ventricular Volume (A2C-Systole) BLRSC 0.936 [0.777, 1.048]",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241430",
+     "endpoint": "Left Ventricular Volume (A2C-Diastole) agreement vs mean of three sonographers",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
+     "value": "1.005 [0.917, 1.096]",
+     "comparator": "mean of three clinician-derived annotations",
+     "n_studies": 200,
+     "n_patients": 200,
+     "n_sites": 2,
+     "dataset_description": "Retrospective standalone study; 200 comprehensive echocardiography studies from 200 distinct patients sampled from two independent U.S. clinical sites in two states; 92 (46%) males, 108 (54%) females; GE and Teratech ultrasound machines; one DICOM per view (PLAX, A2C, A4C) selected by view-confidence score; ground truth = mean of three U.S.-based cardiac sonographers, independent of training annotators; no training data from these sites.",
+     "subgroup_notes": "Subgroup analyses by age, gender, weight, BMI and ultrasound scanner manufacturer; summary states worst-case BLRSC 'rarely exceeded' limits in any subgroup",
+     "quote": "Table 1: Model Performance Summary ... Left Ventricular Volume (A2C-Diastole) BLRSC 1.005 [0.917, 1.096]",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241430",
+     "endpoint": "Biplane Left Ventricular Volume (Systole) agreement vs mean of three sonographers",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
+     "value": "0.906 [0.795, 0.993]",
+     "comparator": "mean of three clinician-derived annotations",
+     "n_studies": 200,
+     "n_patients": 200,
+     "n_sites": 2,
+     "dataset_description": "Retrospective standalone study; 200 comprehensive echocardiography studies from 200 distinct patients sampled from two independent U.S. clinical sites in two states; 92 (46%) males, 108 (54%) females; GE and Teratech ultrasound machines; one DICOM per view (PLAX, A2C, A4C) selected by view-confidence score; ground truth = mean of three U.S.-based cardiac sonographers, independent of training annotators; no training data from these sites.",
+     "subgroup_notes": "Subgroup analyses by age, gender, weight, BMI and ultrasound scanner manufacturer; summary states worst-case BLRSC 'rarely exceeded' limits in any subgroup",
+     "quote": "Table 1: Model Performance Summary ... Biplane Left Ventricular Volume (Systole) BLRSC 0.906 [0.795, 0.993]",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241430",
+     "endpoint": "Biplane Left Ventricular Volume (Diastole) agreement vs mean of three sonographers",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
+     "value": "0.972 [0.893, 1.054]",
+     "comparator": "mean of three clinician-derived annotations",
+     "n_studies": 200,
+     "n_patients": 200,
+     "n_sites": 2,
+     "dataset_description": "Retrospective standalone study; 200 comprehensive echocardiography studies from 200 distinct patients sampled from two independent U.S. clinical sites in two states; 92 (46%) males, 108 (54%) females; GE and Teratech ultrasound machines; one DICOM per view (PLAX, A2C, A4C) selected by view-confidence score; ground truth = mean of three U.S.-based cardiac sonographers, independent of training annotators; no training data from these sites.",
+     "subgroup_notes": "Subgroup analyses by age, gender, weight, BMI and ultrasound scanner manufacturer; summary states worst-case BLRSC 'rarely exceeded' limits in any subgroup",
+     "quote": "Table 1: Model Performance Summary ... Biplane Left Ventricular Volume (Diastole) BLRSC 0.972 [0.893, 1.054]",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241430",
+     "endpoint": "Subgroup robustness",
+     "metric": "worst-case BLRSC by subgroup",
+     "value": "no systematic bias reported across age, gender, weight, BMI, scanner manufacturer (numbers not in summary)",
+     "comparator": "mean of three clinician-derived annotations",
+     "n_studies": 200,
+     "n_patients": 200,
+     "n_sites": 2,
+     "dataset_description": "Retrospective standalone study; 200 comprehensive echocardiography studies from 200 distinct patients sampled from two independent U.S. clinical sites in two states; 92 (46%) males, 108 (54%) females; GE and Teratech ultrasound machines; one DICOM per view (PLAX, A2C, A4C) selected by view-confidence score; ground truth = mean of three U.S.-based cardiac sonographers, independent of training annotators; no training data from these sites.",
+     "subgroup_notes": "Subgroup analyses by age, gender, weight, BMI and ultrasound scanner manufacturer; summary states worst-case BLRSC 'rarely exceeded' limits in any subgroup",
+     "quote": "Subgroup analyses also revealed that the worst-case BLRSC rarely exceeded the prescribed accuracy/error limits for any subgroup investigated, including based on age, gender, weight, BMI, or Ultrasound scanner manufacturer.",
+     "page": 11,
+     "verification": "fda_summary"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "FDA summary states only that no data from the two validation sites was used for training or tuning and that training-data annotators were different sonographers. Company materials claim a proprietary database of 'over 200 million ultrasound images' (not device-specific, not verified).",
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K241430.pdf (PAGE 10); https://www.icardio.ai/post/icardio-ai-receives-fda-510-k-clearance-artificial-intelligence-for-echocardiography",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": 200,
+    "n_patients": 200,
+    "n_sites": 2,
+    "description": "Retrospective standalone study; 200 comprehensive echocardiography studies from 200 distinct patients sampled from two independent U.S. clinical sites in two states; 92 (46%) males, 108 (54%) females; GE and Teratech ultrasound machines; one DICOM per view (PLAX, A2C, A4C) selected by view-confidence score; ground truth = mean of three U.S.-based cardiac sonographers, independent of training annotators; no training data from these sites.",
+    "independent_of_training": true,
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K241430.pdf (PAGE 10)",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Company press release (2024-10-14) announcing FDA 510(k) clearance of EchoMeasure: view classification, image quality assessment and 'over a dozen linear and volumetric measurement estimations'; available via iCardio.ai API and through partner imaging platforms (UltraLinQ, deepc, HeartLab, SARC MedIQ); company claims database of over 200M images.",
+     "source_url": "https://www.icardio.ai/post/icardio-ai-receives-fda-510-k-clearance-artificial-intelligence-for-echocardiography",
+     "verification": "company"
+    },
+    {
+     "description": "MobiHealthNews coverage of EchoMeasure 510(k) clearance. (Page returned HTTP 403 during verification; content not read.)",
+     "source_url": "https://www.mobihealthnews.com/news/icardioai-gets-fda-510k-clearance-ai-echocardiography",
+     "verification": "unverified"
+    }
+   ],
+   "papers": [],
+   "clinical_trials": [],
+   "open_questions": [
+    "Training set size and sources are not disclosed in the FDA summary.",
+    "The minimum allowable BLRSC threshold per measurement is not stated numerically in the summary.",
+    "Median absolute error, percent error, Pearson/Spearman correlation and Individual Equivalence Coefficient results are stated to be in labeling, not the summary.",
+    "Age/BMI distribution (Fig. 1) is a figure not captured in text extraction.",
+    "No peer-reviewed publication specific to EchoMeasure's measurement performance was found on PubMed (searches: 'iCardio.ai', 'iCardio'[Affiliation], Sandler R, Sokol J).",
+    "Company-claimed '200M images' database is unverified and not linked to this device's training set.",
+    "K241430 is internally inconsistent on user editing: the substantial-equivalence table (p.9) says manual editing of automated results is 'No', while the device description (p.7) says the reviewing clinician may 'accept, reject, edit, or ignore' the output.",
+    "PubMed queries '\"EchoMeasure\"' (0 hits) and 'iCardio AND echocardiography' / 'icardio[Affiliation]' returned no EchoMeasure measurement-performance paper; the only iCardio.ai-affiliated echo papers are the Wessler 2023 AS paper, the 2026 MitralVision paper, and a 2026 intracardiac-echo segmentation paper (PMID 42296839), none about EchoMeasure."
+   ],
+   "sources": [
+    {
+     "fact": "K241430 device description, indications, predicate comparison, standalone study and BLRSC table",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K241430.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Decision date 2024-10-10, product code QIH, applicant Icardio.Ai",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K241430",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Measurement list, API deployment",
+     "url_or_file": "https://www.icardio.ai/solutions",
+     "verification": "company"
+    },
+    {
+     "fact": "Press release on 510(k) clearance and partner platforms",
+     "url_or_file": "https://www.icardio.ai/post/icardio-ai-receives-fda-510-k-clearance-artificial-intelligence-for-echocardiography",
+     "verification": "company"
+    }
+   ]
+  },
+  {
+   "id": "icardio-cardiovision",
+   "product_name": "CardioVision",
+   "company": "iCardio.ai",
+   "company_website": "https://www.icardio.ai/",
+   "product_url": "https://www.icardio.ai/solutions",
+   "category": "disease-detection",
+   "tags": [
+    "aortic stenosis",
+    "PLAX",
+    "single-view",
+    "screening",
+    "primary care",
+    "Breakthrough Device (company-reported)",
+    "QUO"
+   ],
+   "modality_scope": [
+    "TTE",
+    "2D",
+    "single PLAX cine loop",
+    "limited/screening echo"
+   ],
+   "deployment": [
+    "hosted on iCardio platform",
+    "third-party infrastructure",
+    "PACS/DICOM viewer/worklist integration"
+   ],
+   "summary": "CardioVision (iCardio.ai) is a CNN-based decision-support tool that analyzes a single PLAX cine-loop DICOM and outputs a binary 'none/mild' vs 'moderate/severe' aortic stenosis classification (or 'indeterminate' for poor image quality), intended as a diagnostic aid in outpatient settings for adults over 21. Cleared 2025-11-21 (K251293, product code QUO, 21 CFR 870.2200) with EchoGo Heart Failure (K222463) as predicate. Standalone validation: 650 studies from 608 subjects at 12 U.S. sites; AUROC 0.945, sensitivity 0.896, specificity 0.872.",
+   "intended_use_quote": "Providing adjunctive information on a patient’s cardiovascular condition (diagnostic aid for aortic stenosis).",
+   "indications_for_use_quote": "The iCardio.ai CardioVision™ AI is an automated machine learning–based decision support system, indicated as a diagnostic aid for patients undergoing an echocardiographic exam consisting of a single PLAX view in an outpatient environment, such as a primary care setting.\n\nWhen utilized by an interpreting clinician, this device provides information that may be useful in detecting moderate or severe aortic stenosis. iCardio.ai CardioVision™ AI is indicated in adult populations over 21 years of age. Patient management decisions should not be made solely on the results of the iCardio.ai CardioVision™ AI analysis. iCardio.ai CardioVision™ AI analyzes a single cine-loop DICOM of the parasternal long axis (PLAX).",
+   "embedded_ai_features": [
+    "Set of convolutional neural networks estimating likelihood of moderate or severe aortic stenosis from a single PLAX cine loop",
+    "Binary output none/mild vs moderate/severe; 'indeterminate' output for insufficient image quality",
+    "Auto view classification (accepts partial or full study containing at least one PLAX view with a full cardiac cycle)",
+    "Fixed (locked) models; pre/post-processing for PACS, DICOM viewer and worklist integration"
+   ],
+   "clearances": [
+    {
+     "k_number": "K251293",
+     "decision_date": "2025-11-21",
+     "pathway": "510(k)",
+     "product_code": "QUO",
+     "predicates": [
+      "K222463"
+     ],
+     "changes_summary": "Initial clearance. Predicate EchoGo Heart Failure 1.0 (Ultromics, K222463, QUO). Primary difference is the condition assessed (aortic stenosis vs HFpEF) and input (single PLAX loop vs A4C); adds auto-view classification; indicated for adults over 21 (predicate over 25).",
+     "notable_flags": [
+      "Breakthrough Device (company-reported, Feb 2024; not stated in FDA summary)",
+      "hosted on iCardio platform or third-party infrastructure",
+      "Adjunctive Cardiovascular Status Indicator 21 CFR 870.2200",
+      "reviewed by OHT2 Office of Cardiovascular Devices",
+      "human factors validation",
+      "excludes handheld ultrasound in validation"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251293.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K251293",
+     "endpoint": "Detection of moderate/severe aortic stenosis",
+     "metric": "AUROC",
+     "value": "0.945",
+     "comparator": "Level III echocardiographer ground truth (majority vote)",
+     "n_studies": 650,
+     "n_patients": 608,
+     "n_sites": 12,
+     "dataset_description": "Retrospective multi-center standalone study: 650 echocardiography studies from 608 subjects from 12 independent U.S. clinical sites; 7 studies (1.077%) rejected for poor image quality, leaving 643 analyzed; scanners from GE, Teratech, Siemens and Mindray; no handheld systems; ground truth by Level III echocardiographers with majority vote; no data from these sites used for training/tuning.",
+     "subgroup_notes": "Subgroup analyses across age, weight, BMI, clinical site, ultrasound manufacturer, PLAX subview and disease severity (moderate/severe); gender and race subgroups not possible due to anonymization; point estimates shown only in Figure 3 (not in text).",
+     "quote": "Dataset Size 643 Rejection Rate (%) 1.077 AUROC 0.945 Sensitivity 0.896 (95% Wilson score CI: [0.8427 , 0.9321]) Specificity 0.872 (95% Wilson score CI: [0.8384 , 0.8995]) PPV 0.734 (95% Wilson score CI: [0.673, 0.787]) NPV 0.955 (95% Wilson score CI: [0.931, 0.971])",
+     "page": 12,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K251293",
+     "endpoint": "Detection of moderate/severe aortic stenosis (excluding indeterminate)",
+     "metric": "sensitivity",
+     "value": "0.896 (95% Wilson CI 0.8427-0.9321)",
+     "comparator": "Level III echocardiographer ground truth (majority vote)",
+     "n_studies": 650,
+     "n_patients": 608,
+     "n_sites": 12,
+     "dataset_description": "Retrospective multi-center standalone study: 650 echocardiography studies from 608 subjects from 12 independent U.S. clinical sites; 7 studies (1.077%) rejected for poor image quality, leaving 643 analyzed; scanners from GE, Teratech, Siemens and Mindray; no handheld systems; ground truth by Level III echocardiographers with majority vote; no data from these sites used for training/tuning.",
+     "subgroup_notes": "Subgroup analyses across age, weight, BMI, clinical site, ultrasound manufacturer, PLAX subview and disease severity (moderate/severe); gender and race subgroups not possible due to anonymization; point estimates shown only in Figure 3 (not in text).",
+     "quote": "Without indeterminate outputs, the sensitivity was estimated to be 89.6% (95% Wilson score CI: 84.3%-93.2%), and the specificity was estimated to be 87.2% (95% Wilson score CI: 83.8%-90.0%).",
+     "page": 12,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K251293",
+     "endpoint": "Detection of moderate/severe aortic stenosis (excluding indeterminate)",
+     "metric": "specificity",
+     "value": "0.872 (95% Wilson CI 0.8384-0.8995)",
+     "comparator": "Level III echocardiographer ground truth (majority vote)",
+     "n_studies": 650,
+     "n_patients": 608,
+     "n_sites": 12,
+     "dataset_description": "Retrospective multi-center standalone study: 650 echocardiography studies from 608 subjects from 12 independent U.S. clinical sites; 7 studies (1.077%) rejected for poor image quality, leaving 643 analyzed; scanners from GE, Teratech, Siemens and Mindray; no handheld systems; ground truth by Level III echocardiographers with majority vote; no data from these sites used for training/tuning.",
+     "subgroup_notes": "Subgroup analyses across age, weight, BMI, clinical site, ultrasound manufacturer, PLAX subview and disease severity (moderate/severe); gender and race subgroups not possible due to anonymization; point estimates shown only in Figure 3 (not in text).",
+     "quote": "Without indeterminate outputs, the sensitivity was estimated to be 89.6% (95% Wilson score CI: 84.3%-93.2%), and the specificity was estimated to be 87.2% (95% Wilson score CI: 83.8%-90.0%).",
+     "page": 12,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K251293",
+     "endpoint": "Detection of moderate/severe aortic stenosis",
+     "metric": "PPV",
+     "value": "0.734 (95% Wilson CI 0.673-0.787)",
+     "comparator": "Level III echocardiographer ground truth (majority vote)",
+     "n_studies": 650,
+     "n_patients": 608,
+     "n_sites": 12,
+     "dataset_description": "Retrospective multi-center standalone study: 650 echocardiography studies from 608 subjects from 12 independent U.S. clinical sites; 7 studies (1.077%) rejected for poor image quality, leaving 643 analyzed; scanners from GE, Teratech, Siemens and Mindray; no handheld systems; ground truth by Level III echocardiographers with majority vote; no data from these sites used for training/tuning.",
+     "subgroup_notes": "Summary notes predictive values reflect study prevalence",
+     "quote": "PPV 0.734 (95% Wilson score CI: [0.673, 0.787])",
+     "page": 12,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K251293",
+     "endpoint": "Detection of moderate/severe aortic stenosis",
+     "metric": "NPV",
+     "value": "0.955 (95% Wilson CI 0.931-0.971)",
+     "comparator": "Level III echocardiographer ground truth (majority vote)",
+     "n_studies": 650,
+     "n_patients": 608,
+     "n_sites": 12,
+     "dataset_description": "Retrospective multi-center standalone study: 650 echocardiography studies from 608 subjects from 12 independent U.S. clinical sites; 7 studies (1.077%) rejected for poor image quality, leaving 643 analyzed; scanners from GE, Teratech, Siemens and Mindray; no handheld systems; ground truth by Level III echocardiographers with majority vote; no data from these sites used for training/tuning.",
+     "subgroup_notes": "Summary notes predictive values reflect study prevalence",
+     "quote": "NPV 0.955 (95% Wilson score CI: [0.931, 0.971])",
+     "page": 12,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K251293",
+     "endpoint": "Detection of moderate/severe aortic stenosis (including indeterminate outputs as misclassified)",
+     "metric": "sensitivity / specificity",
+     "value": "sensitivity 0.876 (95% Wilson CI 0.8213-0.9162); specificity 0.866 (95% Wilson CI 0.8324-0.8943)",
+     "comparator": "Level III echocardiographer ground truth (majority vote)",
+     "n_studies": 650,
+     "n_patients": 608,
+     "n_sites": 12,
+     "dataset_description": "Retrospective multi-center standalone study: 650 echocardiography studies from 608 subjects from 12 independent U.S. clinical sites; 7 studies (1.077%) rejected for poor image quality, leaving 643 analyzed; scanners from GE, Teratech, Siemens and Mindray; no handheld systems; ground truth by Level III echocardiographers with majority vote; no data from these sites used for training/tuning.",
+     "subgroup_notes": "Subgroup analyses across age, weight, BMI, clinical site, ultrasound manufacturer, PLAX subview and disease severity (moderate/severe); gender and race subgroups not possible due to anonymization; point estimates shown only in Figure 3 (not in text).",
+     "quote": "When including indeterminate outputs (i.e. rejections) in the sensitivity and specificity calculations, the sensitivity was estimated to be 0.876 (95% Wilson score CI: [0.8213, 0.9162]) and the specificity was estimated to be 0.866 (95% Wilson score CI: [0.8324 , 0.8943]).",
+     "page": 12,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K251293",
+     "endpoint": "Image-quality rejection rate",
+     "metric": "% indeterminate",
+     "value": "1.077% (7 of 650 studies)",
+     "comparator": null,
+     "n_studies": 650,
+     "n_patients": 608,
+     "n_sites": 12,
+     "dataset_description": "Retrospective multi-center standalone study: 650 echocardiography studies from 608 subjects from 12 independent U.S. clinical sites; 7 studies (1.077%) rejected for poor image quality, leaving 643 analyzed; scanners from GE, Teratech, Siemens and Mindray; no handheld systems; ground truth by Level III echocardiographers with majority vote; no data from these sites used for training/tuning.",
+     "subgroup_notes": null,
+     "quote": "Seven (7) out of 650 studies (1.077%) were rejected by the device for poor image quality.",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K251293",
+     "endpoint": "Human factors validation",
+     "metric": "critical task completion",
+     "value": "all participants completed results interpretation without errors (n not stated)",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "A human factors validation study was conducted to evaluate the usability of CardioVision™ AI for detecting moderate or severe aortic stenosis. All participants successfully completed the critical task of results interpretation without errors.",
+     "page": 11,
+     "verification": "fda_summary"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "FDA summary states only that no data from the 12 validation sites were used in training or tuning. The related Wessler et al. 2023 JASE algorithm paper (iCardio.ai co-authored) trained on 338 patients (~10,253 labeled images) with validation on 119 patients; whether that model is the cleared CardioVision model is not stated.",
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251293.pdf (PAGE 10); PMID 36641103",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": 650,
+    "n_patients": 608,
+    "n_sites": 12,
+    "description": "Retrospective multi-center standalone study: 650 echocardiography studies from 608 subjects from 12 independent U.S. clinical sites; 7 studies (1.077%) rejected for poor image quality, leaving 643 analyzed; scanners from GE, Teratech, Siemens and Mindray; no handheld systems; ground truth by Level III echocardiographers with majority vote; no data from these sites used for training/tuning.",
+    "independent_of_training": true,
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251293.pdf (PAGE 10-12)",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Company press release (2025-11-24) on second FDA 510(k) clearance for CardioVision; cites Wessler et al. JASE 2023 and states Breakthrough Device designation.",
+     "source_url": "https://www.icardio.ai/post/icardio-ai-receives-second-fda-510-k-clearance-cardiovision-tm-for-aortic-stenosis",
+     "verification": "company"
+    },
+    {
+     "description": "Company press release (2024-02-21): FDA Breakthrough Device designation for machine-learning system for automated detection of moderate and severe aortic stenosis using handheld ultrasound; partnership with Butterfly Network mentioned. Note: the cleared K251293 validation excluded handheld scanners.",
+     "source_url": "https://www.icardio.ai/post/icardio-ai-receives-fda-breakthrough-designation-for-aortic-stenosis",
+     "verification": "company"
+    },
+    {
+     "description": "Viz.ai and iCardio.ai partnership (2024-04-02) to integrate aortic stenosis detection into the Viz.ai Cardio Suite care-coordination platform.",
+     "source_url": "https://www.icardio.ai/post/viz-ai-and-icardio-ai-partner-on-aortic-stenosis-detection-using-ultrasound-imaging-and-artificial-intelligence",
+     "verification": "company"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Automated Detection of Aortic Stenosis Using Machine Learning",
+     "first_author": "Wessler BS",
+     "journal": "J Am Soc Echocardiogr",
+     "year": 2023,
+     "doi": "10.1016/j.echo.2023.01.006",
+     "pmid": "36641103",
+     "url": "https://doi.org/10.1016/j.echo.2023.01.006",
+     "relation": "algorithm-development",
+     "n_subjects": 577,
+     "key_result": "Tufts / iCardio.ai. CNNs for view identification and study-level AS grading trained on 338 patients, validated on 119, tested on 120: AUROC 0.96 for screening, 0.86 for no-significant vs significant (moderate/severe) AS; external validation in 8,502 outpatient TTEs showed PLAX-only AS screening AUROC 0.91. Cited by iCardio.ai as the CardioVision publication.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Automated Detection of Clinically Significant Mitral Regurgitation from Single-View B-Mode Echocardiography Using Deep Learning",
+     "first_author": "Sandler RA",
+     "journal": "J Am Soc Echocardiogr",
+     "year": 2026,
+     "doi": "10.1016/j.echo.2026.07.004",
+     "pmid": "42448004",
+     "url": "https://doi.org/10.1016/j.echo.2026.07.004",
+     "relation": "other",
+     "n_subjects": 629,
+     "key_result": "iCardio.ai 'MitralVision' (not the cleared CardioVision AS device): trained on 28,487 A4C loops from 11,244 studies across 20 U.S. states; external validation on 629 studies from 26 sites AUROC 0.91, sensitivity 82.1%, specificity 84.3%. Included as evidence of the company's single-view valvular pipeline; not a CardioVision validation.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [],
+   "open_questions": [
+    "Breakthrough Device designation is company-reported (Feb 2024 press release for a handheld-ultrasound AS tool) and is not mentioned in the K251293 FDA summary; confirm via FDA Breakthrough list.",
+    "FDA summary comparison table says validation on '6+ independent clinical sites' while the performance section says 12 sites; treated 12 as the study count.",
+    "Training set size/sources for the cleared model not disclosed; relationship to the Wessler 2023 training cohort unstated.",
+    "Subgroup sensitivity/specificity point estimates are in Figure 3 only (not captured in text extraction).",
+    "Gender and race subgroup performance could not be assessed due to anonymized data (per summary).",
+    "Human factors study participant count not stated.",
+    "Whether cleared use covers handheld/POCUS acquisition is unclear: validation excluded handheld scanners, whereas the Breakthrough press release targets handheld devices.",
+    "PubMed queries for 'CardioVision' return an unrelated academic package of the same name (Rouhollahi et al. 2023, Comput Med Imaging Graph, PMID 37633032: CT-based digital twins for aortic stenosis); it is not the iCardio.ai device and was not added."
+   ],
+   "sources": [
+    {
+     "fact": "K251293 indications, device description, predicate comparison, clinical performance table",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251293.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Decision date 2025-11-21, product code QUO, applicant Icardio.Ai, regulation 870.2200",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K251293",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Press releases: clearance, Breakthrough designation, Viz.ai partnership",
+     "url_or_file": "https://www.icardio.ai/releases",
+     "verification": "company"
+    },
+    {
+     "fact": "Wessler 2023 JASE paper (PubMed 36641103; Crossref DOI resolved)",
+     "url_or_file": "https://doi.org/10.1016/j.echo.2023.01.006",
+     "verification": "peer_reviewed"
+    }
+   ]
+  },
+  {
+   "id": "libby-echo-prio",
+   "product_name": "Libby Echo:Prio",
+   "company": "Dyad Medical, Inc.",
+   "company_website": "https://dyadmed.com/",
+   "product_url": null,
+   "category": "lv-function-quantification",
+   "tags": [
+    "LVEF",
+    "view classification",
+    "ED/ES frame detection",
+    "heart rate",
+    "LV segmentation",
+    "LA segmentation",
+    "cloud",
+    "browser"
+   ],
+   "modality_scope": [
+    "TTE",
+    "2D"
+   ],
+   "deployment": [
+    "cloud",
+    "browser-based",
+    "off-the-shelf hardware",
+    "vendor-neutral (clips from multiple scanners)"
+   ],
+   "summary": "Libby Echo:Prio (Dyad Medical, Boston) is browser-based, machine-learning echocardiography post-processing software that classifies views (PLAX, PSAX, A4C, A5C, A2C, A3C), identifies ED/ES frames with heart-rate estimation, segments LV endocardium, LA and LV myocardium, and produces a fully automated single-plane and biplane ejection fraction that the sonographer can accept, edit or reject. Cleared 2022-07-20 (K220956) with Bay Labs EchoMD AutoEF (K173780) as predicate; later served as the predicate for iCardio.ai EchoMeasure (K241430).",
+   "intended_use_quote": null,
+   "indications_for_use_quote": "Libby Echo:Prio is software that is used to process previously acquired DICOM-compliant cardiac ultrasound images, and to make measurements on these images in order to provide automated estimation of several cardiac measurements. The data produced by this software is intended to be used to support qualified cardiologists, sonographers, or other licensed professional healthcare practitioners for clinical decision-making.\n\nLibby Echo:Prio is indicated for use in adult patients.",
+   "embedded_ai_features": [
+    "Machine-learning echocardiographic view classification (PLAX, PSAX, A4C, A5C, A2C, A3C)",
+    "End-diastole / end-systole frame identification enabling heart-rate estimate",
+    "Automated LV endocardium, LA and LV myocardium segmentation",
+    "Fully automated ejection fraction (single plane and biplane) including clip selection",
+    "Qualitative user feedback on image quality",
+    "Manual markup/correction and report generation"
+   ],
+   "clearances": [
+    {
+     "k_number": "K220956",
+     "decision_date": "2022-07-20",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K173780"
+     ],
+     "changes_summary": "Initial clearance. Predicate EchoMD Automated Ejection Fraction Software (Bay Labs, K173780). Differences: browser-based UI vs PC/PACS; segmentation-based single-plane and biplane EF vs non-segmentation biplane EF; qualitative (not quantitative) image-quality feedback.",
+     "notable_flags": [
+      "cloud",
+      "browser-based",
+      "fully automated including clip selection",
+      "retrospective standalone testing"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K220956.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K220956",
+     "endpoint": "View classification",
+     "metric": "accuracy / F1 / sensitivity / specificity",
+     "value": "accuracy 97%; average F1 >96.6%; average sensitivity 96.8%; average specificity 98.5%",
+     "comparator": "ground truth for view classification not described in summary",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "'diverse clinical dataset', retrospective; size and sites not stated",
+     "subgroup_notes": null,
+     "quote": "The testing demonstrated view classification accuracy of 97% with an average F1 value of >96.6%, average sensitivity (Sn) of 96.8% and average Specificity (Sp) of 98.5%.",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K220956",
+     "endpoint": "Heart rate estimate (from ED/ES identification)",
+     "metric": "linear regression slope",
+     "value": "0.98 (95% CI reported but bounds not stated)",
+     "comparator": "12-lead ECG",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "'diverse clinical dataset', retrospective; size and sites not stated",
+     "subgroup_notes": null,
+     "quote": "The testing also demonstrated that the HR output estimate is with minimal bias (slope of 0.98 in linear regression with confidence interval of 95%) compared to the ground truth (12 -lead ECG) also showing exceptional accuracy in ED/ES identification.",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K220956",
+     "endpoint": "Ejection fraction agreement vs human experts",
+     "metric": "bivariate linear regression slope (BLS) [95% CI]",
+     "value": "0.79 (95% CI 0.52, 0.98)",
+     "comparator": "annotations by four human experts",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "'diverse clinical dataset', retrospective; size and sites not stated",
+     "subgroup_notes": null,
+     "quote": "Finally, the prediction of the EF output using the Libby™ Echo:Prio software had a slope of 0.79 for Bivariate Linear Regression (BLS) with the 95% confidence interval (CI) of (0.52, 0.98) compared with the annotations by four human experts. This is well within the range of typical measurement variation between different clinicians, which is usually described as inter-observer variation and can be as low as (0.37, 0.52) of the 95% CI.",
+     "page": 7,
+     "verification": "fda_summary"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "Not stated in FDA summary.",
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K220956.pdf",
+    "verification": "unverified"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "FDA summary describes only 'a diverse clinical dataset' evaluated retrospectively; no counts, sites, vendors or demographics given.",
+    "independent_of_training": null,
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K220956.pdf (PAGE 7)",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "DAIC news (2022-08-16): Dyad Medical announces FDA clearance of Echo:Prio, cloud-based AI for echocardiogram analysis accessible 'from any location on any device'; described as the second FDA clearance for the Libby platform; the article says the company's intravascular optical coherence tomography application is also FDA cleared (no product name given).",
+     "source_url": "https://www.dicardiology.com/content/dyad-medical-secures-fda-clearance-echo-prio-cardiac-imaging-analysis-platform",
+     "verification": "news"
+    },
+    {
+     "description": "MassDevice coverage of Echo:Prio clearance (page returned 403 in this session; not read).",
+     "source_url": "https://www.massdevice.com/dyad-medical-wins-fda-clearance-for-cardiac-imaging-platform-echoprio/",
+     "verification": "unverified"
+    }
+   ],
+   "papers": [],
+   "clinical_trials": [],
+   "open_questions": [
+    "Test dataset size, number of patients/sites, scanner vendors and demographics are not stated in the FDA summary.",
+    "Training data not described.",
+    "95% CI bounds for the heart-rate regression slope are not given.",
+    "No peer-reviewed echocardiography publication for Libby Echo:Prio found on PubMed ('Dyad Medical' returns only a 2025 coronary plaque/IVUS paper).",
+    "Company website dyadmed.com timed out; product page URL and current commercial status unverified.",
+    "Whether the ML model was locked at clearance, and whether an Indications for Use form (FDA 3881) exists for K220956, could not be determined from the PDF: page 3 is blank (no text and no images per pypdf) and the summary runs pages 4-9.",
+    "PubMed queries '\"Echo:Prio\" OR \"Libby Echo\"' and 'Dyad Medical AND echocardiography' return no relevant records; 'Dyad Medical[Affiliation]' returns only PMID 41303208 (2025, intravascular OCT calcium mapping), which is not an echocardiography paper."
+   ],
+   "sources": [
+    {
+     "fact": "K220956 device description, indications, predicate comparison, performance testing",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K220956.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Decision date 2022-07-20, product code QIH, applicant Dyad Medical, Inc.",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K220956+K241430",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Cloud/browser deployment, prior IVOCT clearance",
+     "url_or_file": "https://www.dicardiology.com/content/dyad-medical-secures-fda-clearance-echo-prio-cardiac-imaging-analysis-platform",
+     "verification": "news"
+    },
+    {
+     "fact": "Libby Echo:Prio is the predicate for iCardio.ai EchoMeasure",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K241430.pdf",
+     "verification": "fda_summary"
+    }
+   ]
+  }
+ ],
+ "notes": "All five FDA summaries read in full. Performance numbers are quoted verbatim with the 'PAGE n' index from the extracted text files. Dates and product codes taken from openfda_records.json. Papers were resolved via PubMed E-utilities and Crossref in this session; Ontact Health-affiliated papers do not name Sonix Health in their abstracts, so linkage is by affiliation/methodology. No PubMed papers were found for EchoMeasure or Libby Echo:Prio. CardioVision's Breakthrough Device status is company-reported only. ClinicalTrials.gov searches for iCardio, Ontact Health, Sonix Health, Dyad Medical and Libby Echo returned no relevant registrations. Company/news performance figures (Korea Biomedical Review for Sonix Health) are kept out of performance_claims and recorded under prior_validations. VERIFICATION PASS (2026-09-05): every performance_claims quote was located in the cited K text file at the cited PAGE marker and values/n/comparators match; decision dates and product codes match openFDA for K230209, K240645, K241430, K251293, K220956; predicates K213544, K230209, K220956, K222463, K173780 appear in the respective summaries; all are Traditional 510(k) with no PCCP language. All nine draft DOIs resolved on Crossref with matching titles and PMIDs matched on PubMed esummary; abstract numbers in key_result fields were confirmed by efetch. Korea Biomedical Review figures, iCardio.ai press releases (dates, partners, Breakthrough wording, Wessler citation, 200M-image claim) and the DAIC article were re-read live. MobiHealthNews and MassDevice pages returned HTTP 403 and remain unverified. No additional numeric performance metrics exist in the five summaries beyond those already captured (K241430 Table 1 has all 16 rows; K251293 Table 1 and text are fully captured); the K251293 subgroup point estimates are in Figure 3 only."
+}

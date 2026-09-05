@@ -5689,7 +5689,7 @@ window.AIECHO_PRODUCTS = {
     "limited/screening echo"
    ],
    "deployment": [
-    "cloud (iCardio platform)",
+    "hosted on iCardio platform",
     "third-party infrastructure",
     "PACS/DICOM viewer/worklist integration"
    ],
@@ -5716,7 +5716,7 @@ window.AIECHO_PRODUCTS = {
      "changes_summary": "Initial clearance. Predicate EchoGo Heart Failure 1.0 (Ultromics, K222463, QUO). Primary difference is the condition assessed (aortic stenosis vs HFpEF) and input (single PLAX loop vs A4C); adds auto-view classification; indicated for adults over 21 (predicate over 25).",
      "notable_flags": [
       "Breakthrough Device (company-reported, Feb 2024; not stated in FDA summary)",
-      "cloud or third-party infrastructure",
+      "hosted on iCardio platform or third-party infrastructure",
       "Adjunctive Cardiovascular Status Indicator 21 CFR 870.2200",
       "reviewed by OHT2 Office of Cardiovascular Devices",
       "human factors validation",
@@ -5920,7 +5920,8 @@ window.AIECHO_PRODUCTS = {
     "Subgroup sensitivity/specificity point estimates are in Figure 3 only (not captured in text extraction).",
     "Gender and race subgroup performance could not be assessed due to anonymized data (per summary).",
     "Human factors study participant count not stated.",
-    "Whether cleared use covers handheld/POCUS acquisition is unclear: validation excluded handheld scanners, whereas the Breakthrough press release targets handheld devices."
+    "Whether cleared use covers handheld/POCUS acquisition is unclear: validation excluded handheld scanners, whereas the Breakthrough press release targets handheld devices.",
+    "PubMed queries for 'CardioVision' return an unrelated academic package of the same name (Rouhollahi et al. 2023, Comput Med Imaging Graph, PMID 37633032: CT-based digital twins for aortic stenosis); it is not the iCardio.ai device and was not added."
    ],
    "sources": [
     {
@@ -5930,7 +5931,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "Decision date 2025-11-21, product code QUO, applicant Icardio.Ai, regulation 870.2200",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K251293",
      "verification": "fda_database"
     },
     {
@@ -5944,8 +5945,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "peer_reviewed"
     }
    ],
-   "_source_file": "measurement-triage.json",
-   "_verified": false,
+   "_source_file": "measurement-triage.verified.json",
+   "_verified": true,
    "first_cleared": "2025-11-21",
    "latest_cleared": "2025-11-21",
    "n_clearances": 1,
@@ -5958,7 +5959,7 @@ window.AIECHO_PRODUCTS = {
    "n_performance_claims": 8,
    "n_papers_resolved": 2,
    "n_papers": 2,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -14089,7 +14090,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1007/s10554-021-02482-y",
      "relation": "algorithm-development",
      "n_subjects": 500,
-     "key_result": "Yonsei CONNECT-AI / Mayo Clinic Arizona group (same institutions as Sonix Health validation sites); 500 consecutive TTE patients; U-Net variants achieved average Dice 0.91-0.95 for four-chamber segmentation with no significant differences in LAV, LVEDV, LVESV, LV mass or EF vs ground truth. Does not name Sonix Health; predates clearance.",
+     "key_result": "Author affiliations include Ontact Health Co., Ltd. (corresponding author), Yonsei CONNECT-AI Research Center, Severance Cardiovascular Hospital and Mayo Clinic Arizona (the two K240645 validation sites); 500 consecutive TTE patients; U-Net variants achieved average Dice 0.91-0.95 for four-chamber segmentation with no significant differences in LAV, LVEDV, LVESV, LV mass or EF vs ground truth. Does not name Sonix Health; predates clearance.",
      "verification": "doi_resolved"
     },
     {
@@ -14140,8 +14141,8 @@ window.AIECHO_PRODUCTS = {
      "pmid": "40650815",
      "url": "https://doi.org/10.1007/s12574-025-00694-y",
      "relation": "algorithm-development",
-     "n_subjects": null,
-     "key_result": "Ontact Health-affiliated SMART (segmentation-based myocardial tracking) framework for automated LV mass and LVGLS; comparable LVGLS and more accurate LVM than conventional TTE in HCM. Product not named in abstract.",
+     "n_subjects": 111,
+     "key_result": "Ontact Health-affiliated; 111 HCM patients with TTE and CMR; SMART (segmentation-based myocardial tracking) framework for automated LV mass and LVGLS; LVGLS-SMART vs manual LVGLS PCC 0.851; LVM-SMART vs CMR PCC 0.843 (mean difference 1 g) versus conventional TTE LVM PCC 0.652 (overestimation, mean difference 106 g). Product not named in abstract.",
      "verification": "doi_resolved"
     },
     {
@@ -14169,6 +14170,19 @@ window.AIECHO_PRODUCTS = {
      "n_subjects": null,
      "key_result": "Review by Ontact Health-affiliated authors (incl. CEO Hyuk-Jae Chang) on AI echo workflow.",
      "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial intelligence-enhanced comprehensive assessment of the aortic valve stenosis continuum in echocardiography",
+     "first_author": "Park J",
+     "journal": "EBioMedicine",
+     "year": 2025,
+     "doi": "10.1016/j.ebiom.2025.105560",
+     "pmid": "39842286",
+     "url": "https://doi.org/10.1016/j.ebiom.2025.105560",
+     "relation": "algorithm-development",
+     "n_subjects": 8427,
+     "key_result": "Ontact Health / Yonsei CONNECT-AI-affiliated. Dual-pathway AI system for aortic stenosis built on a nationwide echocardiographic developmental dataset (n=8,427) with internal test (n=841), distinct-hospital (n=1,696) and temporally distinct (n=772) test sets; the second pathway automates conventional AS evaluation (automatic measurement of conventional AS parameters correlated with manual measurement; AS staging accuracy 98.2% internal, 82.1% distinct hospital, 96.8% temporal). Product not named in abstract; relevance is to the automated Doppler/AS-measurement feature, not a Sonix Health validation.",
+     "verification": "doi_resolved"
     }
    ],
    "clinical_trials": [],
@@ -14179,7 +14193,8 @@ window.AIECHO_PRODUCTS = {
     "Per-measurement agreement statistics (Bland-Altman bias/LoA) and subgroup analyses are stated to be in labeling, not in the summary.",
     "No paper explicitly names 'Sonix Health' in PubMed abstracts; linkage of Ontact Health-affiliated papers to the cleared device is by affiliation and methodology, not by explicit statement.",
     "sonixhealth.ai product pages could not be parsed (JS-rendered); company-page deployment details beyond the FDA summary (on-premise PC, local network) unverified.",
-    "Korea Biomedical Review performance figures (96/99/100% classification accuracy, GLS r~0.97, ~3,000 institutions) are company statements reported in news; not verified against a primary source."
+    "Korea Biomedical Review performance figures (96/99/100% classification accuracy, GLS r~0.97, ~3,000 institutions) are company statements reported in news; not verified against a primary source.",
+    "PubMed query '\"Sonix Health\"' returns only unrelated records (e.g., a SONIX vaccine paper); 'Ontact Health AND echocardiography' returns 17 records, most of which are disease-classification models (AS, pericardial disease, mitral valve etiology, LVH) rather than the cleared measurement product and were not added."
    ],
    "sources": [
     {
@@ -14194,7 +14209,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "Decision dates 2023-10-20 and 2024-11-27, product code QIH, applicant Ontact Health Co., Ltd.",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K230209+K240645",
      "verification": "fda_database"
     },
     {
@@ -14208,8 +14223,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "peer_reviewed"
     }
    ],
-   "_source_file": "measurement-triage.json",
-   "_verified": false,
+   "_source_file": "measurement-triage.verified.json",
+   "_verified": true,
    "first_cleared": "2023-10-20",
    "latest_cleared": "2024-11-27",
    "n_clearances": 2,
@@ -14220,9 +14235,9 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 9,
-   "n_papers_resolved": 7,
-   "n_papers": 7,
-   "research_verified": false,
+   "n_papers_resolved": 8,
+   "n_papers": 8,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -14808,7 +14823,7 @@ window.AIECHO_PRODUCTS = {
     "browser interface",
     "PDF report"
    ],
-   "summary": "EchoMeasure (iCardio.ai, Los Angeles) processes previously acquired DICOM TTE studies, classifies views, checks image quality, identifies ED/ES frames, and outputs ten automated linear and volumetric measurements (LV volumes A2C/A4C/biplane, LV and RV diameters, wall thicknesses, aortic annulus, LVOT, sinus of Valsalva, sinotubular junction, LA dimension). Output is intended for consumption by third-party software; users can accept or reject but not edit results. Cleared 2024-10-10 (K241430) with Libby Echo:Prio (K220956) as predicate.",
+   "summary": "EchoMeasure (iCardio.ai, Los Angeles) processes previously acquired DICOM TTE studies, classifies views, checks image quality, identifies ED/ES frames, and outputs ten automated linear and volumetric measurements (LV volumes A2C/A4C/biplane, LV and RV diameters, wall thicknesses, aortic annulus, LVOT, sinus of Valsalva, sinotubular junction, LA dimension). Output is intended for consumption by third-party software and hardware vendors. The K241430 comparison table lists manual editing of automated results as 'No' (vs 'Yes' for the predicate), although the device description on the same summary says the reviewing clinician may accept, reject, edit or ignore the output. Cleared 2024-10-10 (K241430) with Libby Echo:Prio (K220956) as predicate.",
    "intended_use_quote": "Quantification of cardiovascular function from an echocardiogram",
    "indications_for_use_quote": "iCardio.ai EchoMeasure is software that is used to process previously acquired DICOM-compliant cardiac ultrasound images, and to make measurements on these images in order to provide automated estimation of several cardiac measurements. The data produced by this software is intended to be used to support qualified cardiologists, sonographers, or other licensed professional healthcare practitioners for clinical decision-making.\n\niCardio.ai EchoMeasure is indicated for use in adult patients.",
    "embedded_ai_features": [
@@ -14817,7 +14832,7 @@ window.AIECHO_PRODUCTS = {
     "End-diastolic / end-systolic frame identification",
     "Automated keypoint detection and segmentation",
     "Ten automated measurements: LV volume (A2C, A4C, biplane; systole/diastole), LV diameter (systole/diastole), RV diameter, posterior wall thickness, aortic annulus, LVOT diameter, sinus of Valsalva, sinotubular junction, LA dimension, IVS thickness",
-    "Contours/keypoints overlaid on images; user confirmation/rejection (no manual editing)",
+    "Contours/keypoints overlaid on images; user confirmation/rejection of results (comparison table: manual editing 'No'; device description: clinician may 'accept, reject, edit, or ignore')",
     "Automated report (browser interface, PDF)"
    ],
    "clearances": [
@@ -14831,11 +14846,11 @@ window.AIECHO_PRODUCTS = {
      "predicates": [
       "K220956"
      ],
-     "changes_summary": "Initial clearance. Predicate Libby Echo:Prio (K220956). Differences vs predicate: adds image-quality checks and ten linear/volumetric measurements instead of EF; removes manual editing of automated results; output intended for third-party software consumption.",
+     "changes_summary": "Initial clearance. Predicate Libby Echo:Prio (K220956). Differences vs predicate: adds image-quality checks and ten linear/volumetric measurements instead of EF; comparison table lists manual editing of automated results as 'No' (device description text says accept/reject/edit/ignore); output intended for third-party software consumption.",
      "notable_flags": [
       "cloud or on-premise server",
       "standalone retrospective study",
-      "no manual editing by user",
+      "manual editing listed 'No' in comparison table (inconsistent with device description)",
       "output for third-party vendors"
      ],
      "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K241430.pdf",
@@ -14862,7 +14877,7 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K241430",
      "endpoint": "Aortic Annulus Diameter agreement vs mean of three sonographers",
-     "metric": "BLRSC (bivariate linear regression slope) [95% CI]",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
      "value": "0.952 [0.829, 1.082]",
      "comparator": "mean of three clinician-derived annotations",
      "n_studies": 200,
@@ -14877,7 +14892,7 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K241430",
      "endpoint": "Left Ventricular Outflow Tract Diameter agreement vs mean of three sonographers",
-     "metric": "BLRSC (bivariate linear regression slope) [95% CI]",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
      "value": "1.112 [0.970, 1.255]",
      "comparator": "mean of three clinician-derived annotations",
      "n_studies": 200,
@@ -14892,7 +14907,7 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K241430",
      "endpoint": "Sinus of Valsalva Diameter agreement vs mean of three sonographers",
-     "metric": "BLRSC (bivariate linear regression slope) [95% CI]",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
      "value": "0.932 [0.848, 1.015]",
      "comparator": "mean of three clinician-derived annotations",
      "n_studies": 200,
@@ -14907,7 +14922,7 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K241430",
      "endpoint": "Sinotubular Junction Diameter agreement vs mean of three sonographers",
-     "metric": "BLRSC (bivariate linear regression slope) [95% CI]",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
      "value": "0.773 [0.676, 0.869]",
      "comparator": "mean of three clinician-derived annotations",
      "n_studies": 200,
@@ -14922,7 +14937,7 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K241430",
      "endpoint": "Left Atrial Diameter agreement vs mean of three sonographers",
-     "metric": "BLRSC (bivariate linear regression slope) [95% CI]",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
      "value": "0.888 [0.830, 0.944]",
      "comparator": "mean of three clinician-derived annotations",
      "n_studies": 200,
@@ -14937,7 +14952,7 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K241430",
      "endpoint": "Left Ventricular Diameter (Systole) agreement vs mean of three sonographers",
-     "metric": "BLRSC (bivariate linear regression slope) [95% CI]",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
      "value": "0.860 [0.776, 0.945]",
      "comparator": "mean of three clinician-derived annotations",
      "n_studies": 200,
@@ -14952,7 +14967,7 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K241430",
      "endpoint": "Left Ventricular Diameter (Diastole) agreement vs mean of three sonographers",
-     "metric": "BLRSC (bivariate linear regression slope) [95% CI]",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
      "value": "0.791 [0.710, 0.869]",
      "comparator": "mean of three clinician-derived annotations",
      "n_studies": 200,
@@ -14967,7 +14982,7 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K241430",
      "endpoint": "Right Ventricular Diameter (Diastole) agreement vs mean of three sonographers",
-     "metric": "BLRSC (bivariate linear regression slope) [95% CI]",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
      "value": "0.786 [0.715, 0.854]",
      "comparator": "mean of three clinician-derived annotations",
      "n_studies": 200,
@@ -14982,7 +14997,7 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K241430",
      "endpoint": "Interventricular Septal Thickness agreement vs mean of three sonographers",
-     "metric": "BLRSC (bivariate linear regression slope) [95% CI]",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
      "value": "0.833 [0.731, 0.934]",
      "comparator": "mean of three clinician-derived annotations",
      "n_studies": 200,
@@ -14997,7 +15012,7 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K241430",
      "endpoint": "Posterior Thickness agreement vs mean of three sonographers",
-     "metric": "BLRSC (bivariate linear regression slope) [95% CI]",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
      "value": "0.785 [0.664, 0.904]",
      "comparator": "mean of three clinician-derived annotations",
      "n_studies": 200,
@@ -15012,7 +15027,7 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K241430",
      "endpoint": "Left Ventricular Volume (A4C-Systole) agreement vs mean of three sonographers",
-     "metric": "BLRSC (bivariate linear regression slope) [95% CI]",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
      "value": "1.059 [0.977, 1.158]",
      "comparator": "mean of three clinician-derived annotations",
      "n_studies": 200,
@@ -15027,7 +15042,7 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K241430",
      "endpoint": "Left Ventricular Volume (A4C-Diastole) agreement vs mean of three sonographers",
-     "metric": "BLRSC (bivariate linear regression slope) [95% CI]",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
      "value": "0.943 [0.869, 1.013]",
      "comparator": "mean of three clinician-derived annotations",
      "n_studies": 200,
@@ -15042,7 +15057,7 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K241430",
      "endpoint": "Left Ventricular Volume (A2C-Systole) agreement vs mean of three sonographers",
-     "metric": "BLRSC (bivariate linear regression slope) [95% CI]",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
      "value": "0.936 [0.777, 1.048]",
      "comparator": "mean of three clinician-derived annotations",
      "n_studies": 200,
@@ -15057,7 +15072,7 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K241430",
      "endpoint": "Left Ventricular Volume (A2C-Diastole) agreement vs mean of three sonographers",
-     "metric": "BLRSC (bivariate linear regression slope) [95% CI]",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
      "value": "1.005 [0.917, 1.096]",
      "comparator": "mean of three clinician-derived annotations",
      "n_studies": 200,
@@ -15072,7 +15087,7 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K241430",
      "endpoint": "Biplane Left Ventricular Volume (Systole) agreement vs mean of three sonographers",
-     "metric": "BLRSC (bivariate linear regression slope) [95% CI]",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
      "value": "0.906 [0.795, 0.993]",
      "comparator": "mean of three clinician-derived annotations",
      "n_studies": 200,
@@ -15087,7 +15102,7 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K241430",
      "endpoint": "Biplane Left Ventricular Volume (Diastole) agreement vs mean of three sonographers",
-     "metric": "BLRSC (bivariate linear regression slope) [95% CI]",
+     "metric": "BLRSC (bivariate linear regression coefficient slope) [95% CI]",
      "value": "0.972 [0.893, 1.054]",
      "comparator": "mean of three clinician-derived annotations",
      "n_studies": 200,
@@ -15140,9 +15155,9 @@ window.AIECHO_PRODUCTS = {
      "verification": "company"
     },
     {
-     "description": "MobiHealthNews coverage of EchoMeasure 510(k) clearance.",
+     "description": "MobiHealthNews coverage of EchoMeasure 510(k) clearance. (Page returned HTTP 403 during verification; content not read.)",
      "source_url": "https://www.mobihealthnews.com/news/icardioai-gets-fda-510k-clearance-ai-echocardiography",
-     "verification": "news"
+     "verification": "unverified"
     }
    ],
    "papers": [],
@@ -15153,7 +15168,9 @@ window.AIECHO_PRODUCTS = {
     "Median absolute error, percent error, Pearson/Spearman correlation and Individual Equivalence Coefficient results are stated to be in labeling, not the summary.",
     "Age/BMI distribution (Fig. 1) is a figure not captured in text extraction.",
     "No peer-reviewed publication specific to EchoMeasure's measurement performance was found on PubMed (searches: 'iCardio.ai', 'iCardio'[Affiliation], Sandler R, Sokol J).",
-    "Company-claimed '200M images' database is unverified and not linked to this device's training set."
+    "Company-claimed '200M images' database is unverified and not linked to this device's training set.",
+    "K241430 is internally inconsistent on user editing: the substantial-equivalence table (p.9) says manual editing of automated results is 'No', while the device description (p.7) says the reviewing clinician may 'accept, reject, edit, or ignore' the output.",
+    "PubMed queries '\"EchoMeasure\"' (0 hits) and 'iCardio AND echocardiography' / 'icardio[Affiliation]' returned no EchoMeasure measurement-performance paper; the only iCardio.ai-affiliated echo papers are the Wessler 2023 AS paper, the 2026 MitralVision paper, and a 2026 intracardiac-echo segmentation paper (PMID 42296839), none about EchoMeasure."
    ],
    "sources": [
     {
@@ -15163,7 +15180,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "Decision date 2024-10-10, product code QIH, applicant Icardio.Ai",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K241430",
      "verification": "fda_database"
     },
     {
@@ -15177,8 +15194,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "company"
     }
    ],
-   "_source_file": "measurement-triage.json",
-   "_verified": false,
+   "_source_file": "measurement-triage.verified.json",
+   "_verified": true,
    "first_cleared": "2024-10-10",
    "latest_cleared": "2024-10-10",
    "n_clearances": 1,
@@ -15191,7 +15208,7 @@ window.AIECHO_PRODUCTS = {
    "n_performance_claims": 18,
    "n_papers_resolved": 0,
    "n_papers": 0,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -19259,7 +19276,7 @@ window.AIECHO_PRODUCTS = {
      "endpoint": "View classification",
      "metric": "accuracy / F1 / sensitivity / specificity",
      "value": "accuracy 97%; average F1 >96.6%; average sensitivity 96.8%; average specificity 98.5%",
-     "comparator": "expert view labels (not further described)",
+     "comparator": "ground truth for view classification not described in summary",
      "n_studies": null,
      "n_patients": null,
      "n_sites": null,
@@ -19320,14 +19337,14 @@ window.AIECHO_PRODUCTS = {
    },
    "prior_validations": [
     {
-     "description": "DAIC news (2022-08-16): Dyad Medical announces FDA clearance of Echo:Prio, cloud-based AI for echocardiogram analysis accessible 'from any location on any device'; company's second FDA clearance after an intravascular OCT application (Libby IAAA).",
+     "description": "DAIC news (2022-08-16): Dyad Medical announces FDA clearance of Echo:Prio, cloud-based AI for echocardiogram analysis accessible 'from any location on any device'; described as the second FDA clearance for the Libby platform; the article says the company's intravascular optical coherence tomography application is also FDA cleared (no product name given).",
      "source_url": "https://www.dicardiology.com/content/dyad-medical-secures-fda-clearance-echo-prio-cardiac-imaging-analysis-platform",
      "verification": "news"
     },
     {
      "description": "MassDevice coverage of Echo:Prio clearance (page returned 403 in this session; not read).",
      "source_url": "https://www.massdevice.com/dyad-medical-wins-fda-clearance-for-cardiac-imaging-platform-echoprio/",
-     "verification": "news"
+     "verification": "unverified"
     }
    ],
    "papers": [],
@@ -19338,7 +19355,8 @@ window.AIECHO_PRODUCTS = {
     "95% CI bounds for the heart-rate regression slope are not given.",
     "No peer-reviewed echocardiography publication for Libby Echo:Prio found on PubMed ('Dyad Medical' returns only a 2025 coronary plaque/IVUS paper).",
     "Company website dyadmed.com timed out; product page URL and current commercial status unverified.",
-    "Whether the ML model was locked at clearance, and whether the K220956 summary's IFU page (Form 3881) exists, could not be determined from the extracted text (page 3 blank)."
+    "Whether the ML model was locked at clearance, and whether an Indications for Use form (FDA 3881) exists for K220956, could not be determined from the PDF: page 3 is blank (no text and no images per pypdf) and the summary runs pages 4-9.",
+    "PubMed queries '\"Echo:Prio\" OR \"Libby Echo\"' and 'Dyad Medical AND echocardiography' return no relevant records; 'Dyad Medical[Affiliation]' returns only PMID 41303208 (2025, intravascular OCT calcium mapping), which is not an echocardiography paper."
    ],
    "sources": [
     {
@@ -19348,7 +19366,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "Decision date 2022-07-20, product code QIH, applicant Dyad Medical, Inc.",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K220956+K241430",
      "verification": "fda_database"
     },
     {
@@ -19362,8 +19380,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "fda_summary"
     }
    ],
-   "_source_file": "measurement-triage.json",
-   "_verified": false,
+   "_source_file": "measurement-triage.verified.json",
+   "_verified": true,
    "first_cleared": "2022-07-20",
    "latest_cleared": "2022-07-20",
    "n_clearances": 1,
@@ -19376,7 +19394,7 @@ window.AIECHO_PRODUCTS = {
    "n_performance_claims": 3,
    "n_papers_resolved": 0,
    "n_papers": 0,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   },
   {

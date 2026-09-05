@@ -5503,6 +5503,21 @@ window.AIECHO_PRODUCTS = {
      "quote": "AI assistance also resulted in a significant decrease in clinician interpretation time and increase in clinician confidence score (226 seconds [95% CI, 218-234] vs 274 seconds [95% CI, 265-283], P <.001; 4.63 [95% CI, 4.60-4.66] vs 3.90 [95% CI, 3.85-3.95], P <.001, respectively).",
      "page": null,
      "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K252294",
+     "endpoint": "Reader study (MRMC) for v1.2",
+     "metric": "not repeated; K242342 MRMC results restated",
+     "value": "AUC 0.974 (0.957-0.990) aided vs 0.825 (0.741-0.908) unaided, p=0.002 (restated)",
+     "comparator": "see K242342",
+     "n_studies": 200,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Restatement of the K242342 fully-crossed MRMC (14 readers x 200 exams); no new reader study for v1.2",
+     "subgroup_notes": "Note the summary calls the v1.1/v1.2 algorithms 'similar' here but 'the exact same algorithm' on p.8",
+     "quote": "The predicate and subject devices share similar device output displays and similar algorithms, resulting in minor variations of device performance, as presented above. Therefore, bench testing for the predicate device remains valid for the subject device. We remind here the corresponding Reader study results:",
+     "page": 10,
+     "verification": "fda_summary"
     }
    ],
    "training_data": {
@@ -5535,8 +5550,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "company"
     },
     {
-     "description": "Press: first 510(k) announced Nov 2024 (B-Right Screen); second clearance May 2025 adds cart-side tablet access to B-Right Screen feedback.",
-     "source_url": "https://www.businesswire.com/news/home/20241115006631/en/BrightHeart-Secures-FDA-Clearance-for-First-AI-Software-Revolutionizing-Prenatal-Fetal-Heart-Ultrasound-Evaluations",
+     "description": "Press: first 510(k) (B-Right Screen) Nov 2024; second clearance May 2025 adds cart-side tablet access to B-Right Screen feedback (per DAIC coverage of the May 14, 2025 announcement). The BusinessWire Nov 2024 release could not be retrieved in the verification session.",
+     "source_url": "https://www.dicardiology.com/content/brightheart-receives-fda-clearance-b-right-views",
      "verification": "news"
     }
    ],
@@ -5584,7 +5599,8 @@ window.AIECHO_PRODUCTS = {
     "Company homepage figures ('96% detection of major CHDs', '88%/70% reduction in FP/FN errors') could not be tied to a specific table in the FDA summaries or paper abstracts.",
     "Company press describes cart-side tablet display; the K251071 summary describes a 'device web interface' — mapping of tablet to web interface is inferred from press, not the FDA summary.",
     "No December 2025 press release for K252294 (v1.2) was located; the 'third-party user interface' vendor is not named.",
-    "Journal year discrepancy: Crossref issued-date 2025 vs PubMed 2026 for both Obstet Gynecol papers (online-first vs issue)."
+    "Journal year discrepancy: Crossref issued-date 2025 vs PubMed 2026 for both Obstet Gynecol papers (online-first vs issue).",
+    "BrightHeart-affiliated abstracts appear in the ISUOG 2026 World Congress supplement (Ultrasound Obstet Gynecol 68 S1; PMIDs 42673407, 42673166) but are not itemized to product level and were not added as papers."
    ],
    "sources": [
     {
@@ -5633,8 +5649,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "news"
     }
    ],
-   "_source_file": "fetal-rv.json",
-   "_verified": false,
+   "_source_file": "fetal-rv.verified.json",
+   "_verified": true,
    "first_cleared": "2024-11-14",
    "latest_cleared": "2025-12-08",
    "n_clearances": 3,
@@ -5644,10 +5660,10 @@ window.AIECHO_PRODUCTS = {
    "product_codes": [
     "POK"
    ],
-   "n_performance_claims": 24,
+   "n_performance_claims": 25,
    "n_papers_resolved": 2,
    "n_papers": 2,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -7941,16 +7957,17 @@ window.AIECHO_PRODUCTS = {
     "vendor-neutral (DICOM from non-GE systems; raw-data from GE Vivid)",
     "on-premise (centralized DICOM server deployment; remote access via Citrix per company page)"
    ],
-   "summary": "EchoPAC is GE HealthCare's offline review, quantification and reporting workstation software for Vivid raw data and DICOM ultrasound images, offered as standalone software or as a PACS plug-in. Successive 510(k)s added AI Auto ROI-based Easy AutoEF and Easy AFI LV (K220940) and an AI Cardiac Auto Doppler spectral-tracing algorithm plus 4D valve/chamber tools (K251342). The FDA summaries report Dice accuracy for the Auto ROI algorithm and Doppler test-set sizes and BMI-subgroup agreement, but no clinical study was required for any clearance.",
+   "summary": "EchoPAC is GE HealthCare's offline review, quantification and reporting workstation software for Vivid raw data and DICOM ultrasound images, offered as standalone software or as a PACS plug-in. K200852 carried the AI Auto Measure 2D and AI Auto Measure Spectrum Recognition features (cleared on Vivid E95 K200743) plus AFI 3.0/Auto EF 3.0/AFI RV/AFI LA into EchoPAC; K220940 added the AI Auto ROI-based Easy AutoEF and Easy AFI LV; K251342 added the AI Cardiac Auto Doppler spectral-tracing algorithms and 4D valve/chamber tools. K220940 reports Dice accuracy for the Auto ROI algorithm; K251342 reports Doppler test-set sizes and BMI-subgroup agreement; K200852 reports no performance data. None of the three clearances required a clinical study.",
    "intended_use_quote": "EchoPAC Software Only / EchoPAC Plug-in is intended for diagnostic review and analysis of ultrasound images, patient record management and reporting, for use by, or on the order of a licensed physician.",
    "indications_for_use_quote": "EchoPAC Software Only / EchoPAC Plug-in is intended for diagnostic review and analysis of ultrasound images, patient record management and reporting, for use by, or on the order of a licensed physician. EchoPAC Software Only / EchoPAC Plug-in allows post-processing of raw data images from GE ultrasound scanners and DICOM ultrasound images. Ultrasound images are acquired via B (2D), M, Color M modes, Color, Power, Pulsed and CW Doppler modes, Coded Pulse, Harmonic, 3D, and Real time (RT) 3D Mode (4D). Clinical applications include: Fetal/Obstetrics; Abdominal (including renal and GYN); Urology (including prostate); Pediatric; Small organs (breast, testes, thyroid); Neonatal and Adult Cephalic; Cardiac (adult and pediatric); Peripheral Vascular; Transesophageal (TEE); Musculo-skeletal Conventional; Musculo-skeletal Superficial; Transrectal (TR); Transvaginal (TV); Intraoperative (vascular); Intra-Cardiac; Thoracic/Pleural and Intra- Luminal.",
    "embedded_ai_features": [
     "Easy AutoEF (AutoEF 3.0 with AI Auto ROI algorithm) - K220940",
     "Easy AFI LV (AFI 3.0 with AI Auto ROI algorithm) - K220940",
     "AI Cardiac Auto Doppler (Tissue Doppler and Doppler Trace AI algorithms for auto-tracing spectral Doppler and heart-valve measurements) - K251342",
-    "Auto Doppler Spectrum Recognition (predicate feature per K251342)",
+    "AI Auto Measure - Spectrum Recognition (AI-based recognition of common Doppler spectra that starts the Auto Doppler measurement or opens the manual measurement folder; same feature as cleared on Vivid E95 K200743) - K200852",
     "4D Auto LVQ / 4D Auto TVQ / 4D Auto MVQ / 4D Auto LAQ / 4D Auto LHQ (semi-automated 4D chamber and valve quantification)",
-    "AI Auto Measure 2D (company page; not itemized in the summaries read)"
+    "AI Auto Measure - 2D (AI-based Cardiac Auto 2D semi-automated measurements on a PLAX image; same feature as cleared on Vivid E95 K200743) - K200852",
+    "AFI 3.0, Auto EF 3.0, AFI RV, AFI LA (same features as cleared on Vivid E95 K200743; AFI 3.0/Auto EF 3.0 extended to third-party DICOM images) - K200852; the summary does not describe these as AI"
    ],
    "clearances": [
     {
@@ -7960,10 +7977,16 @@ window.AIECHO_PRODUCTS = {
      "product_code": "LLZ",
      "device_name_fda": "EchoPAC Software Only, EchoPAC Plug-In",
      "applicant_fda": "GE Medical Systems Ultrasound and Primary Care Diagnostics",
-     "predicates": [],
-     "changes_summary": null,
+     "predicates": [
+      "K170847"
+     ],
+     "changes_summary": "Primary predicate EchoPAC Software Only / EchoPAC Plug-in (K170847); reference predicates Vivid S70N (K182450), Vivid E95 (K181685), Vivid E95 (K200743). Feature additions (all 'same feature as cleared on Vivid E95 K200743'): AI Auto Measure - 2D (semi-automated PLAX measurements), AI Auto Measure - Spectrum Recognition (automated recognition of Doppler spectra starting Auto Doppler), AFI 3.0 and Auto EF 3.0 (based on AFI 2.0/Auto EF 2.0 of K181685; extended to third-party DICOM images), AFI RV, AFI LA, Launchpad, FlexiLight and HD Color, 4D Auto TVQ (based on 4D Auto MVQ of K170847), DICOM PDF Read, Open 4D (third-party 3D/4D import), Z-score enhancement, 4D marker enhancement. Indications: added Obstetrics, Intra-luminal and Intra-Cardiac (cleared with Vivid S70N K182450); clarified Real time 3D as 4D. No performance data reported; no clinical studies required. Summary dated March 27, 2020.",
      "notable_flags": [
-      "510(k) summary pages 4-8 of extracted text are empty (likely scanned image); predicates and changes not recoverable from the text file"
+      "predicate K170847; reference devices K182450, K181685, K200743",
+      "AI Auto Measure 2D and Spectrum Recognition (from Vivid E95 K200743)",
+      "no performance data reported",
+      "no clinical study",
+      "summary pages 4-8 are vector-outlined text with no extractable text layer; content read from the rendered FDA PDF (summary pages 'Main-19' to 'Main-23')"
      ],
      "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200852.pdf",
      "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K200852",
@@ -8005,7 +8028,7 @@ window.AIECHO_PRODUCTS = {
       "QIH primary; LLZ secondary",
       "AI Cardiac Auto Doppler (two AI algorithms)",
       "BMI subgroup analysis reported",
-      "cloud-based licensing only (processing remains on workstation)",
+      "cloud-based software licensing (shared virtual licenses replacing USB dongles; summary says nothing about where processing occurs)",
       "no clinical study"
      ],
      "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251342.pdf",
@@ -8084,7 +8107,7 @@ window.AIECHO_PRODUCTS = {
      "n_patients": 41,
      "n_sites": null,
      "dataset_description": "Subset of the Vivid Pioneer dataset with BMI data: 41 patients, 433 Doppler measurements",
-     "subgroup_notes": "BMI <25 vs >=25",
+     "subgroup_notes": "BMI <25 vs >=25; quote spans pages 10-11 of the FDA PDF (page break after '-')",
      "quote": "For tissue Doppler, the mean performance metric was -0.002 (SD = 0.077) for BMI < 25 and -0.006 (SD = 0.081) for BMI ≥ 25.",
      "page": 10,
      "verification": "fda_summary"
@@ -8118,14 +8141,14 @@ window.AIECHO_PRODUCTS = {
     "n_studies": null,
     "n_patients": null,
     "n_sites": null,
-    "description": "K251342: Tissue Doppler test set 4106 recordings / 805 individuals; Doppler Trace test set 3390 recordings / 1369 individuals; 9 countries; 8 Vivid consoles; 14 probes; adult and pediatric; BMI subset 41 patients / 433 measurements. K220940: 135 images from 45 exams (Europe, Asia, US; 5 probes, 4 consoles).",
+    "description": "K251342: Tissue Doppler test set 4106 recordings / 805 individuals; Doppler Trace test set 3390 recordings / 1369 individuals; 9 countries; 8 Vivid consoles; 14 probe entries listed (M5S appears twice, i.e. 13 unique); adult and pediatric; BMI subset 41 patients / 433 measurements. K220940: 135 images from 45 exams (Europe, Asia, US; 5 probes, 4 consoles).",
     "independent_of_training": true,
     "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251342.pdf (pages 10-11); https://www.accessdata.fda.gov/cdrh_docs/pdf22/K220940.pdf (pages 7-8)",
     "verification": "fda_summary"
    },
    "prior_validations": [
     {
-     "description": "Company page: Easy AutoEF and Easy AFI LV deliver results in 1-click and less than 15 seconds; multi-vendor DICOM and 4D support; AI Auto Measure Spectrum Recognition and AI Auto Measure 2D.",
+     "description": "Company page (fetched this session) states: results 'in 1-click and less than 15 seconds with Easy AutoEF and Easy AFI LV'; 'AI Auto Measure Spectrum Recognition and AI Auto Measure 2D'; multi-vendor 2D and 4D DICOM; 'centralized DICOM server deployment'; 'Remote access is enabled by Citrix'. Company claims; no supporting data on the page.",
      "source_url": "https://www.gehealthcare.com/en-us/products/ultrasound/vivid/echopac",
      "verification": "company"
     },
@@ -8146,7 +8169,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1016/j.echo.2014.07.006",
      "relation": "external-validation",
      "n_subjects": 47,
-     "key_result": "GE Auto-EF vs Simpson: r=0.85, bias 3%, LOA 12%; vs CMR: r=0.74, bias 9%, LOA 17%. 4D Auto LVQ vs CMR: r=0.73, bias 9%, LOA 17%. Significant underestimation of volumes and EF vs CMR. (Earlier, pre-AI-Auto-ROI versions of the tools.)",
+     "key_result": "47 patients: GE Auto-EF vs Simpson r=0.85, bias 3%, LOA 12%; 4D Auto LVQ (3DE) vs Simpson r=0.79, bias 3%, LOA 14%; vs CMR Auto-EF r=0.74, bias 9%, LOA 17% and 3DE r=0.73, bias 9%, LOA 17%; intra/interobserver variability 6%/12% (Auto-EF) and 8%/11% (3DE); significant underestimation of volumes and EF vs CMR. (Pre-AI-Auto-ROI versions of the tools; abstract names the GE tool names, not EchoPAC.)",
      "verification": "doi_resolved"
     },
     {
@@ -8163,64 +8186,156 @@ window.AIECHO_PRODUCTS = {
      "verification": "doi_resolved"
     },
     {
-     "title": "Real-Time Automatic Ejection Fraction and Foreshortening Detection Using Deep Learning",
-     "first_author": "Smistad E",
-     "journal": "IEEE Trans Ultrason Ferroelectr Freq Control",
-     "year": 2020,
-     "doi": "10.1109/TUFFC.2020.2981037",
-     "pmid": "32175861",
-     "url": "https://doi.org/10.1109/TUFFC.2020.2981037",
-     "relation": "algorithm-development",
-     "n_subjects": null,
-     "key_result": "NTNU/GE Vingmed deep-learning LV segmentation and EF pipeline; whether this is the algorithm inside Easy AutoEF is not stated in the FDA summary (open question).",
+     "title": "Automated Measurements of Left Ventricular Ejection Fraction During Cardiac Surgery by Transesophageal Echocardiography: Auto-EF Study.",
+     "first_author": "Borde DP",
+     "journal": "J Cardiothorac Vasc Anesth",
+     "year": 2026,
+     "doi": "10.1053/j.jvca.2025.10.001",
+     "pmid": "41198440",
+     "url": "https://doi.org/10.1053/j.jvca.2025.10.001",
+     "relation": "external-validation",
+     "n_subjects": 180,
+     "key_result": "180 adult cardiac-surgery patients, 4 hospitals (India), retrospective TEE: Auto-EF in EchoPAC v206 vs manual biplane method of disks; ICC for EF 0.84 (95% CI 0.68-0.91); r 0.95 EDV, 0.94 ESV, 0.88 EF; mean difference 3.30%, LOA -8.03 to 14.64%; kappa for EF grade 0.72; 72.2% correctly classified. (Whether v206 Auto-EF is the AI Auto ROI version of K220940 is not stated.)",
      "verification": "doi_resolved"
     },
     {
-     "title": "Deep Learning for Improved Precision and Reproducibility of Left Ventricular Strain in Echocardiography: A Test-Retest Study",
-     "first_author": "Salte IM",
-     "journal": "J Am Soc Echocardiogr",
-     "year": 2023,
-     "doi": "10.1016/j.echo.2023.02.017",
-     "pmid": "36933849",
-     "url": "https://doi.org/10.1016/j.echo.2023.02.017",
-     "relation": "algorithm-development",
-     "n_subjects": 72,
-     "key_result": "Two test-retest datasets (n=40 and n=32): AI GLS minimal detectable change 3.7 and 3.9 vs 5.5 and 5.2 for inter-reader; no reader bias with AI; processing 7.9 +/- 2.8 s. Fully automated GLS method from the GE Vingmed/Oslo group; link to the cleared Easy AFI LV is not stated in the FDA summary.",
-     "verification": "doi_resolved"
-    },
-    {
-     "title": "Real-Time Global Longitudinal Strain During Echocardiography: A Deep Learning Platform for Improved Workflow",
-     "first_author": "Holmstrøm V",
-     "journal": "J Am Soc Echocardiogr",
-     "year": 2025,
-     "doi": "10.1016/j.echo.2025.08.015",
-     "pmid": "40876495",
-     "url": "https://pubmed.ncbi.nlm.nih.gov/40876495/",
-     "relation": "algorithm-development",
+     "title": "Reliability and feasibility of automated function imaging for quantification in patients with left ventricular dilation: comparison with cardiac magnetic resonance.",
+     "first_author": "Chen Y",
+     "journal": "Int J Cardiovasc Imaging",
+     "year": 2022,
+     "doi": "10.1007/s10554-021-02510-x",
+     "pmid": "34981208",
+     "url": "https://doi.org/10.1007/s10554-021-02510-x",
+     "relation": "external-validation",
      "n_subjects": 50,
-     "key_result": "Feasibility 94%; DL GLS bias -1.3 (LOA -3.5 to 0.8) vs manual, r=0.94; GLS acquisition time reduced 57%. Real-time platform (scanner-side), relation to EchoPAC offline tools not stated.",
-     "verification": "pmid_resolved"
+     "key_result": "50 patients with LV dilation: GE AFI (auto and semi-auto) vs CMR; EF correlation r=0.81 (auto-AFI) and 0.86 (semi-auto-AFI); AFI underestimated LV volumes vs CMR (P<0.01) but not vs Simpson biplane. (Abstract names AFI, GE Healthcare; platform - scanner vs EchoPAC - not stated.)",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Intervendor agreement for left atrial strain via speckle tracking echocardiography in pediatrics.",
+     "first_author": "Rao MY",
+     "journal": "Int J Cardiovasc Imaging",
+     "year": 2025,
+     "doi": "10.1007/s10554-025-03558-9",
+     "pmid": "41182535",
+     "url": "https://doi.org/10.1007/s10554-025-03558-9",
+     "relation": "inter-vendor-comparison",
+     "n_subjects": 89,
+     "key_result": "89 children (30 HCM, 59 normal): GE EchoPAC AFI LA vs TomTec AutoStrain LA; ICCs 0.85-0.92 (GE vs TomTec at acquired frame rate); GE absolute LAS lower by 3.99% (bias) vs TomTec.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Vendor and software based variation in left atrial strain measurements: implications for clinical practice.",
+     "first_author": "Danaila V",
+     "journal": "Int J Cardiovasc Imaging",
+     "year": 2025,
+     "doi": "10.1007/s10554-025-03499-3",
+     "pmid": "40900199",
+     "url": "https://doi.org/10.1007/s10554-025-03499-3",
+     "relation": "inter-vendor-comparison",
+     "n_subjects": 112,
+     "key_result": "112 subjects: GE AFI-LA vs GE EchoPAC LV-based strain (mid/endo) and TomTec-Arena feature tracking; r >= 0.7 for all; AFI-LA systematically underestimated LAS vs GE-endo and TomTec, smallest bias vs GE-mid; AFI-LA inter/intra-observer r > 0.85.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Normal ranges of right atrial strain by contemporary echocardiography software: a prospective comparative cohort study.",
+     "first_author": "Agrawal A",
+     "journal": "J Echocardiogr",
+     "year": 2025,
+     "doi": "10.1007/s12574-025-00689-9",
+     "pmid": "40268844",
+     "url": "https://doi.org/10.1007/s12574-025-00689-9",
+     "relation": "reference-ranges",
+     "n_subjects": 100,
+     "key_result": "100 healthy subjects (50% GE, 50% Philips scans): RA strain by TomTec 51.02 (AutoStrain LA), EchoPAC 206 (AFI-LA), VVI, Epsilon; RASr mean (LLN) 41.2% (29.6) TomTec vs 35.9% (27.0) EchoPAC; EchoPAC worked only on GE scans.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Reference Ranges of Left Ventricular Global Longitudinal Strain by Contemporary Vendor-Neutral Echocardiography Software in Healthy Subjects.",
+     "first_author": "Arockiam AD",
+     "journal": "Echocardiography",
+     "year": 2025,
+     "doi": "10.1111/echo.70102",
+     "pmid": "39950375",
+     "url": "https://doi.org/10.1111/echo.70102",
+     "relation": "reference-ranges",
+     "n_subjects": 100,
+     "key_result": "100 healthy subjects: LVGLS mean (LLN) -17.1% (-14.7%) TomTec 51.02 AutoStrain LV vs -17.8% (-14.4%) EchoPAC 206 AFI-LV; EchoPAC vs TomTec beta -0.62 (-1.2, 0.0); feasible on both GE and Philips scans.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Three-dimensional Versus Two-Dimensional Echocardiographic Assessment of Left Atrial Volume and Deformation in Children.",
+     "first_author": "Kiener AJ",
+     "journal": "Pediatr Cardiol",
+     "year": 2026,
+     "doi": "10.1007/s00246-026-04184-5",
+     "pmid": "41670640",
+     "url": "https://doi.org/10.1007/s00246-026-04184-5",
+     "relation": "inter-vendor-comparison",
+     "n_subjects": 50,
+     "key_result": "50 children: 3DE LA volume/strain by GE EchoPAC 4D Auto LAQ v206 (near fully automated) vs 2DE TomTec TTA2.51 CPA (manual); processing 0.6 vs 2.7 min; good agreement for LA volume, weak agreement for LA strain.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Reliability of left ventricular global longitudinal strain across acquisition and analysis techniques: a prospective comparative study.",
+     "first_author": "Gong F",
+     "journal": "Eur Heart J Imaging Methods Pract",
+     "year": 2025,
+     "doi": "10.1093/ehjimp/qyaf101",
+     "pmid": "40909131",
+     "url": "https://doi.org/10.1093/ehjimp/qyaf101",
+     "relation": "inter-vendor-comparison",
+     "n_subjects": 254,
+     "key_result": "254 patients: 2D GLS consistent between EchoPac and TomTec-Arena (ICC > 0.9 intra/interobserver); 3D GLS lower than 2D by 4.3% (mean difference).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Impact of inter-vendor variability on evaluation of left ventricular mechanical dispersion.",
+     "first_author": "Appadurai V",
+     "journal": "Echocardiography",
+     "year": 2022,
+     "doi": "10.1111/echo.15270",
+     "pmid": "34873750",
+     "url": "https://doi.org/10.1111/echo.15270",
+     "relation": "inter-vendor-comparison",
+     "n_subjects": 59,
+     "key_result": "59 subjects scanned on GE and Philips: LV mechanical dispersion by EchoPac, QLAB and TomTec Arena; bias between vendor-specific packages 17.6 ms (LOA -29.6 to 64.8, r 0.47); TomTec Arena across scanner vendors bias -3.1 ms (LOA -27.6 to 21.4, r 0.75).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Inter-vendor comparison of left atrial strain using layer specific strain analysis.",
+     "first_author": "Ferkh A",
+     "journal": "Int J Cardiovasc Imaging",
+     "year": 2021,
+     "doi": "10.1007/s10554-020-02114-x",
+     "pmid": "33389361",
+     "url": "https://doi.org/10.1007/s10554-020-02114-x",
+     "relation": "inter-vendor-comparison",
+     "n_subjects": 128,
+     "key_result": "128 individuals (88 no cardiac history, 40 PAF): GE EchoPAC mid-myocardial LAS systematically lower than TomTec-Arena v2.30.02 (reservoir MD -6.08%, LOA -12% to 0%); GE endocardial LAS no systematic bias (MD 0.41%, LOA -7% to 8%).",
+     "verification": "doi_resolved"
     }
    ],
    "clinical_trials": [],
    "open_questions": [
-    "K200852: extracted text for summary pages 4-8 is empty (scanned image); predicates, changes and any performance data for that clearance are unknown. FDA PDF re-download was blocked by FDA rate limiting during this session and no OCR tooling is available.",
+    "K200852: the 510(k) summary body (FDA PDF pages 4-8) has no text layer (vector-outlined text); content was read from the rendered pages. It reports no performance data for any feature, including AI Auto Measure 2D and Spectrum Recognition.",
     "K220940: training set size, number of training sites and patient demographics (sex, age) not stated; exact patient count in test set unknown due to anonymization (45 exams assumed 45 patients).",
     "K251342: numeric mean-percent-absolute-error results and the feasibility score achieved are not reported (only that thresholds were passed); the BMI-subgroup 'predefined metric' is not defined in the summary; number of test sites not stated; patient counts for development datasets not stated.",
     "K251342 lists the Vivid iq reference as both 'K2432260' (typo) and 'K243620'.",
     "Whether the published NTNU/GE Vingmed deep-learning EF and GLS algorithms (Smistad 2020; Salte 2023; Holmstrøm 2025) are the algorithms deployed in Easy AutoEF / Easy AFI LV is not confirmed by any FDA or company source read.",
     "No peer-reviewed validation of the AI Cardiac Auto Doppler feature was found in PubMed searches this session.",
-    "No clinicaltrials.gov record naming EchoPAC as the intervention was found; NCT07701369 uses an 'AutoEF-AI Assessment' arm but the device/vendor is not identified in the record."
+    "No clinicaltrials.gov record naming EchoPAC as the intervention was found; NCT07701369 uses an 'AutoEF-AI Assessment' arm but the device/vendor is not identified in the record.",
+    "Whether the Auto-EF in EchoPAC v206 evaluated by Borde 2026 and the AFI evaluated by Chen 2022 are the AI Auto ROI versions cleared in K220940 is not stated in those abstracts."
    ],
    "sources": [
     {
      "fact": "K220940 decision date 2022-07-22, product code QIH, applicant GE Medical Systems Ultrasound and Primary Care Diagnostics",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json (openFDA 510(k) endpoint)",
      "verification": "fda_database"
     },
     {
      "fact": "K200852 decision date 2020-09-18, product code LLZ; K251342 decision date 2025-07-16, product code QIH",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json (openFDA 510(k) endpoint)",
      "verification": "fda_database"
     },
     {
@@ -8234,7 +8349,7 @@ window.AIECHO_PRODUCTS = {
      "verification": "fda_summary"
     },
     {
-     "fact": "K200852 indications for use and product code",
+     "fact": "K200852 summary: predicate K170847, reference devices, feature additions (AI Auto Measure 2D, Spectrum Recognition, AFI/AutoEF 3.0, AFI RV/LA, 4D Auto TVQ), indications, no clinical study (read from rendered PDF pages 4-8; no text layer)",
      "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200852.pdf",
      "verification": "fda_summary"
     },
@@ -8249,8 +8364,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "peer_reviewed"
     }
    ],
-   "_source_file": "workstations.json",
-   "_verified": false,
+   "_source_file": "workstations.verified.json",
+   "_verified": true,
    "first_cleared": "2020-09-18",
    "latest_cleared": "2025-07-16",
    "n_clearances": 3,
@@ -8262,9 +8377,9 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 6,
-   "n_papers_resolved": 5,
-   "n_papers": 5,
-   "research_verified": false,
+   "n_papers_resolved": 12,
+   "n_papers": 12,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -9839,10 +9954,9 @@ window.AIECHO_PRODUCTS = {
      "device_name_fda": "BrightHeart View Classifier",
      "applicant_fda": "Brightheart",
      "predicates": [
-      "K230209",
-      "K223387"
+      "K230209"
      ],
-     "changes_summary": "Initial clearance. Predicate Sonix Health (Ontact Health, adult echo view classifier, K230209); reference device Samsung HeartAssist in V8/V7 (K223387). Includes PCCP covering (1) retraining/threshold updates with new data, (2) new ultrasound makes Canon, Fujifilm, SIUI, (3) addition of short-axis views at ventricles and AV valves, (4) new gestational ages.",
+     "changes_summary": "Initial clearance. Predicate Sonix Health (Ontact Health, adult echo view classifier, K230209); reference device (not predicate) Samsung HeartAssist in V8/V7 (K223387). Includes PCCP covering (1) retraining/threshold updates with new data, (2) new ultrasound makes Canon, Fujifilm, SIUI, (3) addition of short-axis views at ventricles and AV valves, (4) new gestational ages.",
      "notable_flags": [
       "PCCP",
       "cloud",
@@ -10010,8 +10124,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "peer_reviewed"
     }
    ],
-   "_source_file": "fetal-rv.json",
-   "_verified": false,
+   "_source_file": "fetal-rv.verified.json",
+   "_verified": true,
    "first_cleared": "2025-05-07",
    "latest_cleared": "2025-06-05",
    "n_clearances": 2,
@@ -10024,7 +10138,7 @@ window.AIECHO_PRODUCTS = {
    "n_performance_claims": 4,
    "n_papers_resolved": 0,
    "n_papers": 0,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -12970,7 +13084,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1186/s12947-026-00374-6",
      "relation": "review",
      "n_subjects": null,
-     "key_result": "Review that indexes 3D Auto CFQ among AI-based MR quantification methods (abstract not read in full).",
+     "key_result": "Narrative review; PMC full text (PMC13267601) states '3D Auto Color Flow Quantification (3D Auto CFQ, Philips) ... has been validated against cardiac MRI' citing a 2024 Philips Ultrasound white paper; one author affiliated with Philips (Cambridge, USA). No new performance data.",
      "verification": "doi_resolved"
     }
    ],
@@ -12981,12 +13095,13 @@ window.AIECHO_PRODUCTS = {
     "SWM ground truth was another vendor's cleared algorithm (LVivo SWM, DiA), not expert wall-motion reads; no comparison to expert visual scoring is reported.",
     "Point estimates of 3D Auto CFQ bias vs CMR and of Pearson r vs PISA are not given (only that acceptance criteria were met).",
     "No peer-reviewed validation of 3D Auto TV or of the SWM feature as deployed in UWS was found in PubMed searches this session.",
-    "No clinicaltrials.gov record naming Ultrasound Workspace was found."
+    "No clinicaltrials.gov record naming Ultrasound Workspace was found.",
+    "PubMed searches this session ('Ultrasound Workspace'; '3D Auto TV'/'3D Auto CFQ'/Philips segmental wall motion) returned no peer-reviewed validation of UWS 6.0 beyond Kim 2026 (3D Auto CFQ)."
    ],
    "sources": [
     {
      "fact": "K241659 decision date 2025-02-10, product code QIH, applicant Philips Ultrasound, LLC",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json (openFDA 510(k) endpoint)",
      "verification": "fda_database"
     },
     {
@@ -13010,8 +13125,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "peer_reviewed"
     }
    ],
-   "_source_file": "workstations.json",
-   "_verified": false,
+   "_source_file": "workstations.verified.json",
+   "_verified": true,
    "first_cleared": "2025-02-10",
    "latest_cleared": "2025-02-10",
    "n_clearances": 1,
@@ -13024,7 +13139,7 @@ window.AIECHO_PRODUCTS = {
    "n_performance_claims": 8,
    "n_papers_resolved": 2,
    "n_papers": 2,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -15894,7 +16009,7 @@ window.AIECHO_PRODUCTS = {
     "on-device (local software on a hardware device/tablet connected to the ultrasound machine by HDMI)",
     "vendor-neutral within validated GE, Samsung, Canon",
     "no cloud",
-    "Voluson Solution Store app (company/news, 2026)"
+    "Voluson Solution Store app (news report, unverified)"
    ],
    "summary": "FETOLY-HEART is an edge/on-device deep-learning application that receives the ultrasound video stream over HDMI and, in real time, detects the five ISUOG fetal cardiac screening views (abdomen, 4CH, LVOT, RVOT, 3VX) and 52 anatomical quality criteria within them, displaying exam completeness and an illustrative image set; users can override outputs. Cleared Sept 2024 (K241380) with Sonio Detect (K240406) predicate and GE SonoLystLive (K220358) reference, with a PCCP for retraining, hyperparameter changes and criteria addition/removal. Standalone testing used 2,288 images from 480 cases at 7 U.S./French sites; per-view sensitivity 0.976-0.987 and specificity ≥0.983.",
    "intended_use_quote": "FETOLY-HEART is intended to analyse fetal ultrasound images and clips using machine learning techniques to automatically detect heart views and quality criteria within the views. The device is intended for use as a concurrent reading aid during the acquisition and interpretation of fetal ultrasound images.",
@@ -15915,10 +16030,9 @@ window.AIECHO_PRODUCTS = {
      "device_name_fda": "FETOLY-HEART",
      "applicant_fda": "Diagnoly",
      "predicates": [
-      "K240406",
-      "K220358"
+      "K240406"
      ],
-     "changes_summary": "Initial clearance. Versus predicate Sonio Detect (cardiac features): 52 vs 28 quality criteria, local/edge platform vs cloud, adds automatic image extraction (covered by reference device SonoLystLive, K220358), GE/Samsung/Canon compatibility (predicate also Philips). PCCP: retraining with new data, hyperparameter changes, addition/removal of heart quality criteria within the 5 views.",
+     "changes_summary": "Initial clearance. Versus predicate Sonio Detect (cardiac features): 52 vs 28 quality criteria, local/edge platform vs cloud, adds automatic image extraction (covered by reference device, not predicate, SonoLystLive in Voluson Expert 22/20/18, K220358), GE/Samsung/Canon compatibility (predicate also Philips). PCCP: retraining with new data, hyperparameter changes, addition/removal of heart quality criteria within the 5 views.",
      "notable_flags": [
       "PCCP",
       "on-device / edge",
@@ -16089,9 +16203,9 @@ window.AIECHO_PRODUCTS = {
      "value": "κ = 0.768 for LVOT presence; sens 97.7%, spec 90.0%; ICC 0.902 for summary score; criteria κ 0.657-0.957",
      "comparator": "single expert file-level labels",
      "n_studies": 180,
-     "n_patients": 180,
+     "n_patients": null,
      "n_sites": null,
-     "dataset_description": "180 randomly selected low-risk screening report files (90 second-trimester 20-25 wk, 90 third-trimester 30-35 wk), 1,097 images (Turan 2026, J Ultrasound Med; PMID 41808587); relation to the cleared FETOLY-HEART device version not stated in abstract",
+     "dataset_description": "180 randomly selected low-risk screening report files (number of distinct patients not stated) (90 second-trimester 20-25 wk, 90 third-trimester 30-35 wk), 1,097 images (Turan 2026, J Ultrasound Med; PMID 41808587); Diagnoly affiliation confirmed for co-authors Voznyuk and Quarello; relation to the cleared FETOLY-HEART device version not stated in abstract",
      "subgroup_notes": null,
      "quote": "Agreement for LVOT presence was substantial (κ = 0.768). Agreement across criteria ranged from κ = 0.657 to 0.957, and agreement for the 0-7 summary score was excellent (ICC = 0.902). For LVOT presence, sensitivity was 97.7% and specificity was 90.0%.",
      "page": null,
@@ -16118,14 +16232,14 @@ window.AIECHO_PRODUCTS = {
    },
    "prior_validations": [
     {
-     "description": "Company product page: 'Connects via HDMI to major ultrasound systems', '100% Local AI Solution', 'No cloud, No internet required', '99.5% Mean Specificity', '96% Mean Sensitivity' for automated detection of key fetal views, '100+' anatomical structures, '20+ Countries'; 'CE 0197 Marked and FDA Cleared'; runs on iPad and Samsung Galaxy Tab models. Site cites K251368.pdf for performance data.",
+     "description": "Company product page (retrieved 2026-09-05): 'Connect via HDMI in seconds', AI 'embedded directly within a standard tablet. No cloud processing', 'CE 0197 Marked and FDA Cleared', 'Trusted by clinicians across 20+ countries', 'exam completeness based on 100+ anatomical structures'; supported tablets listed as iPad Air (5th gen+), iPad (10th gen+), iPad mini (7th gen+), iPad Pro (3rd gen+) and Samsung Galaxy Tab S8/S9/S11. Figures previously noted from this page ('99.5% Mean Specificity', '96% Mean Sensitivity') and a K251368.pdf citation were not present on the page at verification and are dropped.",
      "source_url": "https://www.diagnoly.com/fetoly-application/",
      "verification": "company"
     },
     {
-     "description": "GE HealthCare collaboration (Feb 2026): Fetoly to be integrated within Voluson women's health ultrasound systems; available as free trial on the Voluson Solution Store; 'Fetoly has 510(k) clearance ... and is CE marked.'",
+     "description": "GE HealthCare collaboration (Feb 2026): Fetoly to be integrated within Voluson women's health ultrasound systems; available as free trial on the Voluson Solution Store; 'Fetoly has 510(k) clearance ... and is CE marked.' (AuntMinnie page returned HTTP 403 in the verification session; not re-verified.)",
      "source_url": "https://www.auntminnie.com/clinical-news/ultrasound/news/15816441/ge-healthcare-gehc-collaborates-with-diagnoly-to-integrate-ai-into-prenatal-ultrasound",
-     "verification": "news"
+     "verification": "unverified"
     },
     {
      "description": "Later Diagnoly clearance K251368 'FETOLY' (2025-09-12, IYN, Traditional) exists in openFDA; summary not retrieved (FDA site rate-limited this session) and not in scope for this family.",
@@ -16180,14 +16294,14 @@ window.AIECHO_PRODUCTS = {
      "verification": "company"
     },
     {
-     "fact": "Product page deployment/performance claims",
+     "fact": "Product page deployment claims (HDMI, on-tablet/no cloud, CE 0197, tablet models)",
      "url_or_file": "https://www.diagnoly.com/fetoly-application/",
      "verification": "company"
     },
     {
      "fact": "GE HealthCare–Diagnoly Voluson integration (Feb 5, 2026)",
      "url_or_file": "https://www.auntminnie.com/clinical-news/ultrasound/news/15816441/ge-healthcare-gehc-collaborates-with-diagnoly-to-integrate-ai-into-prenatal-ultrasound",
-     "verification": "news"
+     "verification": "unverified"
     },
     {
      "fact": "Turan 2026 abstract, affiliation Diagnoly, DOI",
@@ -16195,8 +16309,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "peer_reviewed"
     }
    ],
-   "_source_file": "fetal-rv.json",
-   "_verified": false,
+   "_source_file": "fetal-rv.verified.json",
+   "_verified": true,
    "first_cleared": "2024-09-11",
    "latest_cleared": "2024-09-11",
    "n_clearances": 1,
@@ -16209,7 +16323,7 @@ window.AIECHO_PRODUCTS = {
    "n_performance_claims": 11,
    "n_papers_resolved": 1,
    "n_papers": 1,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -19324,7 +19438,7 @@ window.AIECHO_PRODUCTS = {
       "K150122",
       "K200974"
      ],
-     "changes_summary": "TTA2.40: 4D RV-Function v3.0 integrates QLAB HeartModel ML auto-segmentation for RV border placement, adds EDVI/ESVI and .stl/.obj export; 4D MV-Assessment v2.5 adds ML-based semi-automatic landmark proposals and new MV measurements; 4D LV-Analysis v3.2 adds LA option (LA volumes, LA trueEF, LA GLS) and 18-segment ASE2015 bullseye; AutoStrain LV/LA/RV released as a dedicated module with LA strain parameters; IMAGE-COM v5.5 adds measurements, pediatric and cath exam types, and browser-based zero-footprint deployment (TOMTEC ZERO); Fetal 2D CPA; new Reporting workspaces. Primary predicate TomTec-Arena TTA2 (K150122); secondary predicate QLAB (K200974). Summary lists product code QIH; FDA letter and openFDA list LLZ.",
+     "changes_summary": "TTA2.40: 4D RV-Function v3.0 integrates QLAB HeartModel ML auto-segmentation for RV border placement, adds EDVI/ESVI and .stl/.obj export; 4D MV-Assessment v2.5 adds ML-based semi-automatic landmark proposals and new MV measurements; 4D LV-Analysis v3.2 adds LA option (LA volumes, LA trueEF, LA GLS) and an ASE2015-adapted bullseye; AutoStrain bullseye changed from 16 to 18 segments; AutoStrain LV/LA/RV released as a dedicated module with LA strain parameters; IMAGE-COM v5.5 adds measurements, pediatric and cath exam types, and browser-based zero-footprint deployment (TOMTEC ZERO); Fetal 2D CPA; new Reporting workspaces. Primary predicate TomTec-Arena TTA2 (K150122); secondary predicate QLAB (K200974). Summary lists product code QIH; FDA letter and openFDA list LLZ.",
      "notable_flags": [
       "machine-learning contour generation (via QLAB HeartModel)",
       "no performance metrics reported",
@@ -19376,16 +19490,31 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "k_number": "K201632",
-     "endpoint": "4D RV-Function (new TomTec 3DE RV software) volumes and EF vs CMR",
+     "endpoint": "3DE RV volumes and EF by 'new software' vs CMR (draft attributed to TomTec 4D RV-Function; the PubMed abstract names no vendor or product and the full text is paywalled)",
      "metric": "bias +/- SD",
      "value": "EDV -15 +/- 24 mL; EF 1.4 +/- 4.9% with manual editing; fully automated option EF bias -17 +/- 10%",
      "comparator": "cardiac magnetic resonance",
      "n_studies": 47,
      "n_patients": 47,
      "n_sites": 1,
-     "dataset_description": "47 prospectively studied patients (14-82 years, 28 men) with RV EDV 82-354 mL and EF 34-81% at CMR; earlier version of the 4D RV-Function module",
+     "dataset_description": "47 prospectively studied patients (14-82 years, 28 men) with RV EDV 82-354 mL and EF 34-81% at CMR; attribution to the TomTec 4D RV-Function module is not confirmable from the abstract",
      "subgroup_notes": null,
      "quote": "RV volumes and EF measurements by the new software had an excellent accuracy (bias ± SD: -15 ± 24 mL for EDV; 1.4 ± 4.9% for EF) and reproducibility compared with CMR, provided that the RV borders automatically tracked by software were systematically edited by operator. The automated analysis option underestimated the EDV, overestimated the ESV, and largely underestimated the EF (bias ± SD: -17 ± 10%).",
+     "page": null,
+     "verification": "unverified"
+    },
+    {
+     "k_number": "K201632",
+     "endpoint": "AutoLV EF and AutoSTRAIN GLS (TomTec) vs manual analysis in healthy children and young adults",
+     "metric": "Pearson r",
+     "value": "EF r=0.8373 (AutoLV); GLS r=0.9766 (AutoSTRAIN)",
+     "comparator": "manual analysis by an experienced sonographer",
+     "n_studies": 50,
+     "n_patients": 50,
+     "n_sites": 1,
+     "dataset_description": "50 normal volunteers (22 female / 28 male), prospective research echocardiography; fully automated analyses run by 5 observer groups",
+     "subgroup_notes": "Border detection achievable in all subjects; analysis time shorter than manual (p<0.001)",
+     "quote": "Strong correlations were seen between conventional EF and AutoLV (r = 0.8373), and between conventional three view global longitudinal strain (GLS) and AutoSTRAIN (r = 0.9766).",
      "page": null,
      "verification": "peer_reviewed"
     }
@@ -19449,8 +19578,8 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1093/ehjci/jev309",
      "relation": "external-validation",
      "n_subjects": 47,
-     "key_result": "TomTec 4D RV-Function vs CMR: EDV bias -15 +/- 24 mL, EF bias 1.4 +/- 4.9% with manual editing; fully automated option underestimated EF (bias -17 +/- 10%); shorter analysis time (3-5 min) and lower inter-observer variability than previous software.",
-     "verification": "doi_resolved"
+     "key_result": "47 patients vs CMR: 'new software' EDV bias -15 +/- 24 mL, EF bias 1.4 +/- 4.9% with manual editing; fully automated option EF bias -17 +/- 10%; shorter analysis time (3-5 min) and lower inter-observer variability than previous software. The abstract does not name the vendor or software; attribution to TomTec 4D RV-Function is unconfirmed (full text paywalled).",
+     "verification": "doi_resolved; product attribution unverified"
     },
     {
      "title": "Measurement of Left Ventricular Dimensions and Ejection Fraction in Neonates by Three-Dimensional Echocardiography: A Comparative Study Between Philips QLAB and TOMTEC Software-Are the Values Interchangeable?",
@@ -19461,32 +19590,207 @@ window.AIECHO_PRODUCTS = {
      "pmid": "33787943",
      "url": "https://doi.org/10.1007/s00246-021-02588-z",
      "relation": "external-validation",
-     "n_subjects": null,
-     "key_result": "Neonatal 3DE LV volumes/EF compared between QLAB and TOMTEC software (abstract not read; n not extracted).",
+     "n_subjects": 38,
+     "key_result": "50 neonates recruited, 38 with full 3D datasets: LV dimensions, volumes and EF from the same 3DE datasets compared between Philips QLAB 9.0 and TomTec 4D LV-Analysis; PubMed abstract is truncated after the first result ('24.7 +/- 3.6 ml/m') so agreement statistics were not extracted.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Machine Learning-Enabled Fully Automated Assessment of Left Ventricular Volume, Ejection Fraction and Strain: Experience in Pediatric and Young Adult Echocardiography.",
+     "first_author": "Li L",
+     "journal": "Pediatr Cardiol",
+     "year": 2024,
+     "doi": "10.1007/s00246-022-03015-7",
+     "pmid": "36208311",
+     "url": "https://doi.org/10.1007/s00246-022-03015-7",
+     "relation": "external-validation",
+     "n_subjects": 50,
+     "key_result": "50 normal volunteers: TomTec AutoLV EF vs conventional EF r=0.8373; AutoSTRAIN GLS vs three-view manual GLS r=0.9766; border detection achievable in all; analysis time shorter than manual; results consistent across 5 observer groups of differing expertise.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Prediction of cardiac events using fully automated GLS and BNP titers in patients with known or suspected heart failure.",
+     "first_author": "Otani K",
+     "journal": "PLoS One",
+     "year": 2020,
+     "doi": "10.1371/journal.pone.0234294",
+     "pmid": "32542005",
+     "url": "https://doi.org/10.1371/journal.pone.0234294",
+     "relation": "prognostic",
+     "n_subjects": 3150,
+     "key_result": "3,150 subjects: fully automated GLS (AutoStrain, TomTec) plus BNP; derivation (n=1,514) and validation (n=1,636) cohorts; GLS cut-offs 7% and 14% stratified cardiac death and MACE.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Accuracy of fully automated right ventricular quantification software with 3D echocardiography: direct comparison with cardiac magnetic resonance and semi-automated quantification software.",
+     "first_author": "Otani K",
+     "journal": "Eur Heart J Cardiovasc Imaging",
+     "year": 2020,
+     "doi": "10.1093/ehjci/jez236",
+     "pmid": "31549722",
+     "url": "https://doi.org/10.1093/ehjci/jez236",
+     "relation": "external-validation",
+     "n_subjects": 100,
+     "key_result": "100 patients with same-day CMR: fully automated Philips 3DE RV software vs semi-automated TomTec software vs CMR; RVEF by the semi-automated (TomTec) software was significantly larger than CMR (P<0.001); analysis time 120 s (TomTec) vs 15 s (fully automated). (TomTec module name not given in abstract.)",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Prognostic value of automated longitudinal strain measurements in asymptomatic aortic stenosis.",
+     "first_author": "Kitano T",
+     "journal": "Heart",
+     "year": 2020,
+     "doi": "10.1136/heartjnl-2020-318256",
+     "pmid": "33318081",
+     "url": "https://doi.org/10.1136/heartjnl-2020-318256",
+     "relation": "prognostic",
+     "n_subjects": 340,
+     "key_result": "340 asymptomatic AS patients: fully automated LV/LA/RV LS by 'AutoStrain, Philips'; LVGLS independently associated with cardiac events (HR 0.873-0.888); 3-year event-free 89% vs 76% by median LVGLS 15.1%. (Abstract attributes AutoStrain to Philips; platform - TOMTEC-ARENA vs Philips on-cart - not stated.)",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Fully Automated Evaluation of Left Ventricular Global Longitudinal Strain in Normal Hearts: An Assessment of Accuracy in the Pediatric Population.",
+     "first_author": "Kauffman H",
+     "journal": "Pediatr Cardiol",
+     "year": 2025,
+     "doi": "10.1007/s00246-025-04074-2",
+     "pmid": "41243031",
+     "url": "https://doi.org/10.1007/s00246-025-04074-2",
+     "relation": "external-validation",
+     "n_subjects": 168,
+     "key_result": "168 pediatric patients: 'Philips AutoStrain' fully automated vs manual GLS R=0.71, semiautomated R=0.90; accuracy affected by image axis, age and apex visualization. (Abstract attributes AutoStrain to Philips; platform not stated.)",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Pediatric Normal Values and Z Score Equations for Left and Right Ventricular Strain by Two-Dimensional Speckle-Tracking Echocardiography Derived from a Large Cohort of Healthy Children.",
+     "first_author": "Romanowicz J",
+     "journal": "J Am Soc Echocardiogr",
+     "year": 2023,
+     "doi": "10.1016/j.echo.2022.11.006",
+     "pmid": "36414123",
+     "url": "https://doi.org/10.1016/j.echo.2022.11.006",
+     "relation": "reference-ranges",
+     "n_subjects": 1032,
+     "key_result": "1,032 healthy subjects <21 years (Philips EPIQ images): normal values and Z-score equations for TomTec AutoSTRAIN (LV and RV longitudinal strain) and QLAB 10.8; reliability greater for AutoSTRAIN than QLAB 10.8.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Intervendor agreement for left atrial strain via speckle tracking echocardiography in pediatrics.",
+     "first_author": "Rao MY",
+     "journal": "Int J Cardiovasc Imaging",
+     "year": 2025,
+     "doi": "10.1007/s10554-025-03558-9",
+     "pmid": "41182535",
+     "url": "https://doi.org/10.1007/s10554-025-03558-9",
+     "relation": "inter-vendor-comparison",
+     "n_subjects": 89,
+     "key_result": "89 children (30 HCM, 59 normal): GE EchoPAC AFI LA vs TomTec AutoStrain LA; ICCs 0.85-0.92 (GE vs TomTec at acquired frame rate); GE absolute LAS lower by 3.99% (bias) vs TomTec.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Vendor and software based variation in left atrial strain measurements: implications for clinical practice.",
+     "first_author": "Danaila V",
+     "journal": "Int J Cardiovasc Imaging",
+     "year": 2025,
+     "doi": "10.1007/s10554-025-03499-3",
+     "pmid": "40900199",
+     "url": "https://doi.org/10.1007/s10554-025-03499-3",
+     "relation": "inter-vendor-comparison",
+     "n_subjects": 112,
+     "key_result": "112 subjects: GE AFI-LA vs GE EchoPAC LV-based strain (mid/endo) and TomTec-Arena feature tracking; r >= 0.7 for all; AFI-LA systematically underestimated LAS vs GE-endo and TomTec, smallest bias vs GE-mid; AFI-LA inter/intra-observer r > 0.85.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Normal ranges of right atrial strain by contemporary echocardiography software: a prospective comparative cohort study.",
+     "first_author": "Agrawal A",
+     "journal": "J Echocardiogr",
+     "year": 2025,
+     "doi": "10.1007/s12574-025-00689-9",
+     "pmid": "40268844",
+     "url": "https://doi.org/10.1007/s12574-025-00689-9",
+     "relation": "reference-ranges",
+     "n_subjects": 100,
+     "key_result": "100 healthy subjects (50% GE, 50% Philips scans): RA strain by TomTec 51.02 (AutoStrain LA), EchoPAC 206 (AFI-LA), VVI, Epsilon; RASr mean (LLN) 41.2% (29.6) TomTec vs 35.9% (27.0) EchoPAC; EchoPAC worked only on GE scans.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Reference Ranges of Left Ventricular Global Longitudinal Strain by Contemporary Vendor-Neutral Echocardiography Software in Healthy Subjects.",
+     "first_author": "Arockiam AD",
+     "journal": "Echocardiography",
+     "year": 2025,
+     "doi": "10.1111/echo.70102",
+     "pmid": "39950375",
+     "url": "https://doi.org/10.1111/echo.70102",
+     "relation": "reference-ranges",
+     "n_subjects": 100,
+     "key_result": "100 healthy subjects: LVGLS mean (LLN) -17.1% (-14.7%) TomTec 51.02 AutoStrain LV vs -17.8% (-14.4%) EchoPAC 206 AFI-LV; EchoPAC vs TomTec beta -0.62 (-1.2, 0.0); feasible on both GE and Philips scans.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Reliability of left ventricular global longitudinal strain across acquisition and analysis techniques: a prospective comparative study.",
+     "first_author": "Gong F",
+     "journal": "Eur Heart J Imaging Methods Pract",
+     "year": 2025,
+     "doi": "10.1093/ehjimp/qyaf101",
+     "pmid": "40909131",
+     "url": "https://doi.org/10.1093/ehjimp/qyaf101",
+     "relation": "inter-vendor-comparison",
+     "n_subjects": 254,
+     "key_result": "254 patients: 2D GLS consistent between EchoPac and TomTec-Arena (ICC > 0.9 intra/interobserver); 3D GLS lower than 2D by 4.3% (mean difference).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Impact of inter-vendor variability on evaluation of left ventricular mechanical dispersion.",
+     "first_author": "Appadurai V",
+     "journal": "Echocardiography",
+     "year": 2022,
+     "doi": "10.1111/echo.15270",
+     "pmid": "34873750",
+     "url": "https://doi.org/10.1111/echo.15270",
+     "relation": "inter-vendor-comparison",
+     "n_subjects": 59,
+     "key_result": "59 subjects scanned on GE and Philips: LV mechanical dispersion by EchoPac, QLAB and TomTec Arena; bias between vendor-specific packages 17.6 ms (LOA -29.6 to 64.8, r 0.47); TomTec Arena across scanner vendors bias -3.1 ms (LOA -27.6 to 21.4, r 0.75).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Inter-vendor comparison of left atrial strain using layer specific strain analysis.",
+     "first_author": "Ferkh A",
+     "journal": "Int J Cardiovasc Imaging",
+     "year": 2021,
+     "doi": "10.1007/s10554-020-02114-x",
+     "pmid": "33389361",
+     "url": "https://doi.org/10.1007/s10554-020-02114-x",
+     "relation": "inter-vendor-comparison",
+     "n_subjects": 128,
+     "key_result": "128 individuals (88 no cardiac history, 40 PAF): GE EchoPAC mid-myocardial LAS systematically lower than TomTec-Arena v2.30.02 (reservoir MD -6.08%, LOA -12% to 0%); GE endocardial LAS no systematic bias (MD 0.41%, LOA -7% to 8%).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Three-dimensional Versus Two-Dimensional Echocardiographic Assessment of Left Atrial Volume and Deformation in Children.",
+     "first_author": "Kiener AJ",
+     "journal": "Pediatr Cardiol",
+     "year": 2026,
+     "doi": "10.1007/s00246-026-04184-5",
+     "pmid": "41670640",
+     "url": "https://doi.org/10.1007/s00246-026-04184-5",
+     "relation": "inter-vendor-comparison",
+     "n_subjects": 50,
+     "key_result": "50 children: 3DE LA volume/strain by GE EchoPAC 4D Auto LAQ v206 (near fully automated) vs 2DE TomTec TTA2.51 CPA (manual); processing 0.6 vs 2.7 min; good agreement for LA volume, weak agreement for LA strain.",
      "verification": "doi_resolved"
     }
    ],
-   "clinical_trials": [
-    {
-     "nct_id": "NCT07496424",
-     "title": "Manual- VS Auto-Strain",
-     "status": "RECRUITING",
-     "url": "https://clinicaltrials.gov/study/NCT07496424"
-    }
-   ],
+   "clinical_trials": [],
    "open_questions": [
     "K213544 reports no accuracy metrics for the CNN semi-automated measurements (only that verification passed); test-set patient count, sites, vendors and demographics are not stated, and training/test independence is by random split of one pool rather than separate sites.",
     "K201632 reports no performance data for the ML contour generation in 4D RV-Function and 4D MV-Assessment; it relies on equivalence to QLAB (K200974/K191647).",
     "Product code discrepancy for K201632: FDA letter and openFDA list LLZ, while the 510(k) summary body lists QIH.",
     "Predicate K150122 (TomTec-Arena TTA2, 2015) and earlier TomTec clearances are not covered in this batch.",
     "The Knackstedt 2015 and Muraru 2016 validations concern earlier module versions (TomTec-Arena 1.2 AutoLV; earlier 4D RV-Function), not the TTA2.40/2.50 releases cleared here.",
-    "NCT07496424 (Manual- VS Auto-Strain) record does not name the software vendor; its link to TOMTEC AutoStrain is unconfirmed.",
+    "NCT07496424 ('Manual- VS Auto-Strain'; sponsor-investigator Bruno Mora, Medical University of Vienna; recruiting) evaluates fully automated intraoperative TEE strain but the record names no software vendor; it was removed from clinical_trials because its link to TOMTEC AutoStrain is unsupported.",
     "No peer-reviewed validation of the TTA2.50 CNN semi-automated measurement feature was found in PubMed searches this session."
    ],
    "sources": [
     {
      "fact": "K201632 decision date 2020-08-14 product code LLZ; K213544 decision date 2022-01-06 product code QIH; applicant Tomtec Imaging Systems GmbH",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json (openFDA 510(k) endpoint)",
      "verification": "fda_database"
     },
     {
@@ -19510,13 +19814,13 @@ window.AIECHO_PRODUCTS = {
      "verification": "peer_reviewed"
     },
     {
-     "fact": "NCT07496424 status and sponsor",
+     "fact": "NCT07496424 status (RECRUITING), sponsor (Bruno Mora, Medical University of Vienna) and description; no vendor named - trial not attributed to TOMTEC",
      "url_or_file": "https://clinicaltrials.gov/api/v2/studies/NCT07496424",
      "verification": "unverified"
     }
    ],
-   "_source_file": "workstations.json",
-   "_verified": false,
+   "_source_file": "workstations.verified.json",
+   "_verified": true,
    "first_cleared": "2020-08-14",
    "latest_cleared": "2022-01-06",
    "n_clearances": 2,
@@ -19527,10 +19831,10 @@ window.AIECHO_PRODUCTS = {
     "LLZ",
     "QIH"
    ],
-   "n_performance_claims": 2,
-   "n_papers_resolved": 3,
-   "n_papers": 3,
-   "research_verified": false,
+   "n_performance_claims": 3,
+   "n_papers_resolved": 17,
+   "n_papers": 17,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -20466,7 +20770,7 @@ window.AIECHO_PRODUCTS = {
     "adjunct to existing ultrasound system",
     "vendor-neutral"
    ],
-   "summary": "VMS+ (K173810, 2018) is a Windows-based adjunct analysis system that reconstructs 3D chamber models from freehand 2D ultrasound images tracked by a pulsed-DC 6DOF magnetic tracker with ECG trigger, using a knowledge-based reconstruction (KBR) catalog of heart models. K173810 extended the predicate VMS (K150628, RV only) to LV, LA and RA volumes and ejection fractions by adding KBR catalogs; FDA clearance rested on bench testing of reconstruction accuracy with no clinical study. Later versions (VMS+ 3.0, K191493; VMS+ 4.0 per company) are outside this K-number and not extracted here.",
+   "summary": "VMS+ (K173810, 2018) is a Windows-based adjunct analysis system that reconstructs 3D chamber models from freehand 2D ultrasound images tracked by a pulsed-DC 6DOF magnetic tracker with ECG trigger, using a knowledge-based reconstruction (KBR) catalog of heart models. K173810 extended the predicate VMS (K150628, RV only) to LV, LA and RA volumes and ejection fractions by adding KBR catalogs; FDA clearance rested on bench testing of reconstruction accuracy with no clinical study. Later clearances (VMS+ 3.0, K191493, 2019-10-16; VMS+ 4.0, K241222, 2025-02-26, product code QIH) are outside this K-number and not extracted here.",
    "intended_use_quote": "The VMS+ system is an adjunct to existing ultrasound imaging systems and is intended to record, analyze, store and retrieve digital ultrasound images for computerized 3-dimensional image processing.",
    "indications_for_use_quote": "The VMS+ is an adjunct to existing ultrasound imaging systems and is intended to record, analyze, store and retrieve digital ultrasound images for computerized 3-dimensional image processing.\n\nThe VMS+ is indicated for use where Left Ventricle (LV), Right Ventricle (RV), Left Atrium (LA), and Right Atrium (RA) volumes and ejection fractions are warranted or desired.",
    "embedded_ai_features": [
@@ -20581,7 +20885,7 @@ window.AIECHO_PRODUCTS = {
      "n_patients": 98,
      "n_sites": null,
      "dataset_description": "98 healthy controls aged 0-18 y, prospective, 3D DICOM datasets; software labelled VMS3.0+ (Ahmad 2022, Echocardiography; PMID 36029116)",
-     "subgroup_notes": null,
+     "subgroup_notes": "Quote verified against the full abstract via Europe PMC/Crossref (PubMed abstract rendering is truncated).",
      "quote": "There was a very good correlation between Ventripoint Medical System (VMS) and Tomtec LV systolic (r2  = .88, ICC .89 [95% CI .81, .94]), and diastolic (r2  = .88, ICC .90 [95% CI .77, .95]) volumes, and between VMS and Tomtec LA diastolic (r2  = .75, ICC .89 [95% CI .81, .93]) and systolic (r2  = .88, ICC .91 [95% CI .78, .96]) volumes on linear regression models.",
      "page": null,
      "verification": "peer_reviewed"
@@ -20596,7 +20900,7 @@ window.AIECHO_PRODUCTS = {
      "n_patients": 122,
      "n_sites": null,
      "dataset_description": "122 pulmonary sarcoidosis patients with CMR within 90 days of TTE-KBR, of 281 scanned (Mathijssen 2022, Int J Cardiovasc Imaging; PMID 34586530)",
-     "subgroup_notes": null,
+     "subgroup_notes": "Quote verified against the full abstract via Europe PMC/Crossref (PubMed abstract rendering is truncated).",
      "quote": "Bland-Altman analyses (mean bias ± 95% limits of agreement), showed good agreement for RVEDV (ΔRVEDVKBR-CMR, 5.67 ± 55.4 mL), while RVESV, RVSV and RVEF showed poor agreement (ΔRVESVKBR-CMR, 21.6 ± 34.1 mL; ΔRVSVKBR-CMR, - 16.1 ± 42.9 mL; ΔRVEFKBR-CMR, - 12.9 ± 16.4%).",
      "page": null,
      "verification": "peer_reviewed"
@@ -20637,7 +20941,7 @@ window.AIECHO_PRODUCTS = {
     "n_studies": null,
     "n_patients": null,
     "n_sites": null,
-    "description": "K173810 summary describes KBR 'heart catalogs' of heart models but gives no catalog/training set size or source. Company site states the KBR uses 'a validated Magnetic resonance imaging (MRI) database of normal ventricular and atrial morphologies' (Ahmad 2022 abstract wording) without numbers.",
+    "description": "K173810 summary describes KBR 'heart catalogs' of heart models but gives no catalog/training set size or source. Company product page states the KBR algorithm 'leverages a MRI shape catalogue and anatomical landmarks from standard 2D echocardiography'; the Ahmad 2022 abstract (PMID 36029116) describes 'a validated Magnetic resonance imaging (MRI) database of normal ventricular and atrial morphologies'. Neither gives numbers.",
     "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf17/K173810.pdf",
     "verification": "unverified"
    },
@@ -20662,9 +20966,14 @@ window.AIECHO_PRODUCTS = {
      "verification": "fda_database"
     },
     {
-     "description": "Later clearance VMS+ 3.0 (K191493, 2019-10-16, product code LLZ) for whole-heart analysis; company site now markets VMS+ 4.0 (workstation software, subscription model; company press Aug 2026 cites a 2025 FDA clearance and a VMS+ 3.0 usability study with 13 sonographers, 98% task completion). Not extracted here.",
+     "description": "Later clearances per openFDA: VMS+ 3.0 (K191493, 2019-10-16, product code LLZ) and VMS+ 4.0 (K241222, 2025-02-26, product code QIH). An earlier VMS clearance K140153 (2014-03-06, IYN) also exists. Company site markets VMS+ 4.0 as software installable on a personal workstation that builds 3D chamber models from 3D echo or MRI images using KBR. Not extracted here.",
+     "source_url": "https://api.fda.gov/device/510k.json?search=applicant:ventripoint",
+     "verification": "fda_database"
+    },
+    {
+     "description": "Company press release (GlobeNewswire, 2026-08-12) reportedly describes a subscription model, a 2025 FDA clearance and a VMS+ 3.0 usability study (13 sonographers, 98% task completion). The release could not be retrieved in the verification session; the usability-study figures remain unconfirmed.",
      "source_url": "https://www.globenewswire.com/news-release/2026/08/12/3343713/0/en/ventripoint-expands-subscription-access-for-fda-cleared-ai-cardiac-imaging.html",
-     "verification": "news"
+     "verification": "unverified"
     }
    ],
    "papers": [
@@ -20782,7 +21091,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1016/j.echo.2014.11.016",
      "relation": "external-validation",
      "n_subjects": 17,
-     "key_result": "TTE-3DKBR with Ventripoint unit vs CMR in 17 adults with RV-PA conduits; feasibility/accuracy and 3D RV shape characterization (abstract truncated; numeric results not extracted).",
+     "key_result": "TTE-3DKBR (Ventripoint unit) vs CMR in 17 adults with RV-PA conduits: EDV R=0.77 (P=.0004), ESV R=0.93 (P<.0001), EF R=0.75 (P<.0005); CMR EDV slightly larger than 3DKBR, EF slightly higher by 3DKBR; RV shape diversity characterized on 43 separate CMR datasets.",
      "verification": "doi_resolved"
     },
     {
@@ -20875,8 +21184,7 @@ window.AIECHO_PRODUCTS = {
     "Size and provenance of the KBR heart-model catalogs (training data) are not disclosed in the FDA summary or company pages.",
     "The peer-reviewed validations listed mostly concern the RV-only predicate VMS (K150628) and 2D-KBR with magnetic tracking; only Ahmad 2022 (VMS3.0+, LV/LA) addresses the chambers added in K173810, and that version corresponds to K191493 (VMS+ 3.0), which was not in scope for extraction.",
     "Results of sponsor trials NCT01419756 (n=109) and NCT01557582 (n=103) were not located as publications in this session.",
-    "Ventripoint's Aug 2026 press release references a '2025' FDA clearance for VMS+ 4.0; the K-number was not identified in this session.",
-    "Wheeler 2015 numeric results were not extracted (abstract truncated in E-utilities output)."
+    "Ventripoint's Aug 2026 press release references a '2025' FDA clearance for VMS+ 4.0; openFDA lists K241222 (VMS+ 4.0, 2025-02-26, QIH); its summary was not extracted."
    ],
    "sources": [
     {
@@ -20890,7 +21198,7 @@ window.AIECHO_PRODUCTS = {
      "verification": "fda_database"
     },
     {
-     "fact": "K150628 (2015-05-22, IYN) and K191493 (2019-10-16, LLZ, VMS+ 3.0)",
+     "fact": "K150628 (2015-05-22, IYN), K191493 (2019-10-16, LLZ, VMS+ 3.0), K241222 (2025-02-26, QIH, VMS+ 4.0), K140153 (2014-03-06, IYN)",
      "url_or_file": "https://api.fda.gov/device/510k.json",
      "verification": "fda_database"
     },
@@ -20905,9 +21213,9 @@ window.AIECHO_PRODUCTS = {
      "verification": "news"
     },
     {
-     "fact": "Aug 2026 subscription press release; AIRES study; usability study",
+     "fact": "Aug 2026 subscription press release; AIRES study; usability study (page not retrievable in verification session)",
      "url_or_file": "https://www.globenewswire.com/news-release/2026/08/12/3343713/0/en/ventripoint-expands-subscription-access-for-fda-cleared-ai-cardiac-imaging.html",
-     "verification": "news"
+     "verification": "unverified"
     },
     {
      "fact": "PubMed abstracts and Crossref DOI resolution for listed papers",
@@ -20920,8 +21228,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "fda_database"
     }
    ],
-   "_source_file": "fetal-rv.json",
-   "_verified": false,
+   "_source_file": "fetal-rv.verified.json",
+   "_verified": true,
    "first_cleared": "2018-05-14",
    "latest_cleared": "2018-05-14",
    "n_clearances": 1,
@@ -20934,7 +21242,7 @@ window.AIECHO_PRODUCTS = {
    "n_performance_claims": 9,
    "n_papers_resolved": 13,
    "n_papers": 13,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   }
  ],

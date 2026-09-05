@@ -21,6 +21,744 @@ window.AIECHO_PRODUCTS = {
  },
  "families": [
   {
+   "id": "siemens-acuson-heart-ai",
+   "product_name": "ACUSON Sequoia / Sequoia Select / Origin / Origin ICE cardiac AI features (AI Assist, AI Measure, 2D HeartAI, 4D HeartAI, Trace AI, Valves AI)",
+   "company": "Siemens Medical Solutions USA, Inc. (Siemens Healthineers)",
+   "company_website": "https://www.siemens-healthineers.com",
+   "product_url": "https://www.siemens-healthineers.com/en-us/ultrasound/cardiovascular/acuson-origin",
+   "category": "system-embedded",
+   "tags": [
+    "AI Assist",
+    "AI Measure",
+    "2D HeartAI",
+    "4D HeartAI",
+    "Trace AI",
+    "Valves AI",
+    "view recognition",
+    "color box placement",
+    "Doppler gate placement",
+    "automated cardiac measurements",
+    "LV volumes",
+    "EF",
+    "GLS",
+    "4D chamber quantification",
+    "orifice contouring",
+    "mitral valve model",
+    "aortic valve model",
+    "eSie Valves",
+    "QIH"
+   ],
+   "modality_scope": [
+    "TTE",
+    "TEE",
+    "3D/4D TTE",
+    "3D/4D TEE",
+    "ICE (3D, Trace AI)",
+    "contrast echo (2D HeartAI)"
+   ],
+   "deployment": [
+    "ultrasound-system-embedded"
+   ],
+   "summary": "Siemens ACUSON Sequoia, Sequoia Select, Origin and Origin ICE carry an optional cardiac AI package cleared across four 510(k)s (K232145, K242523, K251481, K260844; openFDA product code IYN; the clearance letters also list QIH). AI Assist places color boxes and Doppler gates on 12 TTE views, AI Measure semi-automates B-mode/Doppler/M-mode measurements, 2D HeartAI and 4D HeartAI contour chambers on 2D and 3D/4D TTE/TEE, Trace AI contours orifice-type structures on MPRs from 3D ICE/TEE/TTE, and Valves AI models the mitral and aortic valves from 3D TEE. The FDA summaries report retrospective verification testing on per-feature test sets of 10-48 patients/exams/studies against 3-examiner references; training-set sizes are not disclosed and no peer-reviewed study of the Sequoia/Origin-cleared features was found.",
+   "intended_use_quote": "The ACUSON Sequoia, Sequoia Select, and Origin will offer an optional cardiac imaging and analysis package with new transducers and software applications with Artificial Intelligent algorithms. The  ACUSON Sequoia, Sequoia Select, and Origin will offer four (4) new software applications (AI Measure, AI Assist, 2D HeartAI, 4D HeartAI) containing Machine Learning that are specifically intended to support cardiac imaging for blood flow, valves and anatomical features and modifies the Indications for Use.",
+   "indications_for_use_quote": "The ACUSON Origin and Origin ICE ultrasound imaging systems are intended to provide images of, or signals from, inside the body by an appropriately trained healthcare professional in a clinical setting for the following applications: Fetal, Abdominal, Pediatric, OB/GYN (useful for visualization of the ovaries, follicles, uterus and other pelvic structures), Cardiac, Transesophageal, Intracardiac, Vascular, Adult Cephalic, and Peripheral Vascular applications. The catheter is intended for intracardiac and intra-luminal visualization of cardiac and great vessel anatomy and physiology as well as visualization of other devices in the heart of adult and pediatric patients. The catheter is intended for imaging guidance only, not treatment delivery, during cardiac interventional percutaneous procedures. The system also provides the ability to measure anatomical structures for fetal, abdominal, pediatric, cardiac, peripheral vessel, and calculation packages that provide information to the clinician that may be used adjunctively with other medical data obtained by a physician for clinical diagnosis purposes.",
+   "embedded_ai_features": [
+    {
+     "name": "AI Assist",
+     "function": "Cardiac view classification with automated color Doppler ROI (color box) and spectral Doppler gate placement for 12 standard adult TTE views (1-4 anatomy locations per view, 42 supported placements); in K251481 the view detected by AI Assist automatically launches the relevant AI Measure labels. ('Real-time' view recognition is a company press-release description, not FDA-summary text.)",
+     "first_k_number": "K232145",
+     "quote": "AI Assist provides Color Box and Doppler Gate placement for 12 Cardiac Views and 1-4 anatomy locations in each view, for a total of 42 supported placements."
+    },
+    {
+     "name": "AI Measure",
+     "function": "Semi-automated cardiac measurements on B-mode, Doppler and M-mode acquisitions (15 measurement views in testing); comparison table maps it to eSie Measure on the SC2000 reference device.",
+     "first_k_number": "K232145",
+     "quote": "AI Measure covers a set of semi-automated cardiac measurements for Doppler, BMode and M-mode acquisitions."
+    },
+    {
+     "name": "2D HeartAI",
+     "function": "Machine-learning application on apical 2/3/4-chamber 2D images with user-editable output; K232145 tested it against 3-examiner manual contours/measurements (contrast used in 12 of 45 test exams); K260844 describes automated contouring of all chambers plus A2C/A3C/A4C view classification and adds right-side tracking (previously left side only). Comparison table maps it to Velocity Variance Mapping / eSie LH on the SC2000. Company materials additionally describe LV volume, EF and strain outputs; those are not itemized in the FDA summaries.",
+     "first_k_number": "K232145",
+     "quote": "The  ACUSON Sequoia, Sequoia Select, and Origin will offer four (4) new software applications (AI Measure, AI Assist, 2D HeartAI, 4D HeartAI) containing Machine Learning that are specifically intended to support cardiac imaging for blood flow, valves and anatomical features and modifies the Indications for Use."
+    },
+    {
+     "name": "4D HeartAI",
+     "function": "Machine-learning application on 3D/4D TTE and TEE volumes (tested with 5Z1 TTE and 6ZT TEE) with user-editable output compared against 3-examiner manual contours/measurements; the FDA summary does not itemize its outputs. Origin only in K232145; extended to Sequoia / Sequoia Select with the 5Z1 transducer in K242523; comparison table maps it to eSie LH / eSie LVA / eSie RH + GLS on the SC2000.",
+     "first_k_number": "K232145",
+     "quote": "The image dataset was collected from 32 patients from 5 institutions including different transducers (5Z1 (17 TTE), 6ZT (15 TEE)), Volume rates were > 13.4vps."
+    },
+    {
+     "name": "Trace AI",
+     "function": "Semi-automated contouring/measurement of orifice-type structures (LV, RV, LVOT, LA, ascending aorta, MV annulus, STJ, LAA opening, sinus of Valsalva, TV annulus in testing) on MPRs generated from volumetric ICE, TEE and TTE transducers; the summary refers to algorithm training data, and describes it as an improvement of the generic eclipse measurement tool on K240704.",
+     "first_k_number": "K242523",
+     "quote": "Trace AI is a semi-automated measurement tool that provides an ability to measure orifice-type anatomic structures on MPRs generated from volumetric ICE, TEE and TTE transducers."
+    },
+    {
+     "name": "Valves AI",
+     "function": "AI-based mitral and aortic valve modeling from 3D TEE volumes: builds valve models, visualizes valvular motion and outputs valve measurements; previously cleared as eSie Valves on the ACUSON SC2000 (K233613).",
+     "first_k_number": "K260844",
+     "quote": "Introduction of the new Valves AI feature, an artificial intelligence based application for mitral, and aortic valve analysis. The feature creates models that illustrate valve anatomy and function and provides visualization and measurements of valvular motion for assessing valve health. This was previously cleared as eSie Valves on ACUSON SC2000 (K233613)."
+    }
+   ],
+   "clearances": [
+    {
+     "k_number": "K232145",
+     "decision_date": "2023-10-30",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "device_name_fda": "ACUSON Sequoia Diagnostic Ultrasound System, ACUSON Sequoia Select Diagnostic Ultrasound System, ACUSON Origin Diagnostic Ultrasound System",
+     "applicant_fda": "Siemens Medical Solutions USA, Inc.",
+     "predicates": [
+      "K223735",
+      "K211726"
+     ],
+     "changes_summary": "Introduced the optional cardiac AI package on Sequoia / Sequoia Select / Origin: AI Measure, AI Assist, 2D HeartAI and 4D HeartAI (4D HeartAI and AI Assist on Origin only), plus Z6T and 5Z1 transducers and the AcuNav Lumos 4D ICE catheter; added the QIH product code. Reference device SC2000 (K211726) carried eSie Measure / eSie LH / eSie LVA / eSie RH + GLS.",
+     "notable_flags": [
+      "Product codes on letter: IYN, IYO, ITX, OIJ, QIH",
+      "Separate AI test datasets reported per feature; training-set sizes not disclosed",
+      "Clinical studies not required"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K232145.pdf",
+     "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K232145",
+     "on_fda_ai_list": true
+    },
+    {
+     "k_number": "K242523",
+     "decision_date": "2024-11-19",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "device_name_fda": "ACUSON Sequoia Diagnostic Ultrasound System; ACUSON Sequoia Select Diagnostic Ultrasound System; ACUSON Origin Diagnostic Ultrasound System; ACUSON Origin ICE Diagnostic Ultrasound System",
+     "applicant_fda": "Siemens Medical Solutions USA, Inc.",
+     "predicates": [
+      "K240704",
+      "K230207"
+     ],
+     "changes_summary": "Added Trace AI (semi-automated 3D orifice contouring on ICE/TEE/TTE MPRs); extended 4D Heart AI, AI Assist and the 5Z1 transducer to Sequoia / Sequoia Select; also added the non-cardiac AI Abdomen, 11M2 and HLX transducers, needle enhancement and freehand 3D.",
+     "notable_flags": [
+      "Product codes on letter: IYN, IYO, ITX, OIJ, QIH, OBJ",
+      "Trace AI test set is small (10 patients, 24 volumes)",
+      "Intervening clearance K240704 (2024-07-22) carried the cardiac AI package unmodified and is not in this batch"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242523.pdf",
+     "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K242523",
+     "on_fda_ai_list": true
+    },
+    {
+     "k_number": "K251481",
+     "decision_date": "2025-08-20",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "device_name_fda": "ACUSON Sequoia Diagnostic Ultrasound System; ACUSON Sequoia Select Diagnostic Ultrasound System; ACUSON Origin Diagnostic Ultrasound System; ACUSON Origin ICE Diagnostic Ultrasound System",
+     "applicant_fda": "Siemens Medical Solutions USA, Inc.",
+     "predicates": [
+      "K242523"
+     ],
+     "changes_summary": "Software VC10: integrated AI Assist and AI Measure workflow so that the cardiac view classified by AI Assist automatically launches the relevant AI Measure labels; other changes are non-cardiac (liver SWE optimization, UDFF attenuation display, OB calcs, workflow items). No AI performance data reported.",
+     "notable_flags": [
+      "No AI performance metrics in summary",
+      "K260844 later cites K251481 as the clearance of 2D Heart AI, but 2D Heart AI is not mentioned in the K251481 summary"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251481.pdf",
+     "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K251481",
+     "on_fda_ai_list": true
+    },
+    {
+     "k_number": "K260844",
+     "decision_date": "2026-06-16",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "device_name_fda": "ACUSON Sequoia Diagnostic Ultrasound System;ACUSON Sequoia Select Diagnostic Ultrasound System;ACUSON Origin Diagnostic Ultrasound System;ACUSON Origin ICE Diagnostic Ultrasound System",
+     "applicant_fda": "Siemens Medical Solutions USA, Inc.",
+     "predicates": [
+      "K251481",
+      "K233613"
+     ],
+     "changes_summary": "Software VD10: introduced Valves AI (mitral and aortic valve modeling from 3D TEE; previously cleared as eSie Valves on SC2000 K233613) and enhanced 2D Heart AI with right-side tracking; also TrueFusion (shares real-time anatomical data with an angiography imaging system to detect transducer position; previously cleared on SC2000 K233613), UDFF QUS optimization on 5C1/9C2, CEUS on Crystal catheters/Z6T/5Z1, and rendering/workflow items.",
+     "notable_flags": [
+      "Product codes on letter: IYN, IYO, ITX, OIJ, OBJ, QIH",
+      "Valves AI reference standard is the algorithm's own auto-detection corrected by examiners, not independent manual tracing",
+      "2D Heart AI test set age range listed as 1-83 years while labelled 'Adults'; gender unknown for 63%"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf26/K260844.pdf",
+     "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K260844",
+     "on_fda_ai_list": true
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K232145",
+     "endpoint": "AI Assist color box / Doppler gate placement, all 12 views and 42 placements aggregated",
+     "metric": "success rate (no or minor adjustment)",
+     "value": "99.3%",
+     "comparator": "3 expert cardiac sonographers scoring each placement",
+     "n_studies": 14,
+     "n_patients": 12,
+     "n_sites": null,
+     "dataset_description": "AI Assist validation: 12 patients, 14 exams, 168 samples (72 5V1, 72 5Z1, 24 8V3); 12 standard adult echo views on the Origin platform; age 18-81, 17% female, US; BMI 17.7-30.9 (58% <=25). Truth: 3 expert cardiac sonographers scored each placement as success (no/minor adjustment) or failure (major adjustment). Test patients not associated with model-development training sites.",
+     "subgroup_notes": "Age 18-81; 17% female; BMI 17.7-30.9, 58% normal / 42% overweight-obese; US only",
+     "quote": "Aggregating test results over all cardiac views and placement locations, the algorithm is successful 99.3% of the time. Successful placement means that no adjustment or only minor adjustment needs to be made by the user.",
+     "page": 14,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232145",
+     "endpoint": "AI Assist placement, worst single placement location",
+     "metric": "success rate (no or minor adjustment)",
+     "value": ">=92%",
+     "comparator": "3 expert cardiac sonographers scoring each placement",
+     "n_studies": 14,
+     "n_patients": 12,
+     "n_sites": null,
+     "dataset_description": "AI Assist validation: 12 patients, 14 exams, 168 samples (72 5V1, 72 5Z1, 24 8V3); 12 standard adult echo views on the Origin platform; age 18-81, 17% female, US; BMI 17.7-30.9 (58% <=25). Truth: 3 expert cardiac sonographers scored each placement as success (no/minor adjustment) or failure (major adjustment). Test patients not associated with model-development training sites.",
+     "subgroup_notes": null,
+     "quote": "As tested on datasets from different scanning views, the algorithm success is 92% or higher for any placement location.",
+     "page": 14,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232145",
+     "endpoint": "2D HeartAI (with user edits) vs 3-examiner reference standard",
+     "metric": "Pearson correlation coefficient",
+     "value": ">=0.81",
+     "comparator": "mean of 3 examiners' manual contours/measurements",
+     "n_studies": 45,
+     "n_patients": null,
+     "n_sites": 5,
+     "dataset_description": "2D HeartAI: 45 exams / 90 images (patient count not stated) from 5 institutions (US, Mexico); transducers 5V1, 5Z1; apical 2/3/4-chamber views, frame rate >17 fps; contrast in 12 exams; adults 42-74 y, 24% female; BMI 18-36 (29% normal). Reference = mean of 3 examiners' manual contours/measurements. Test sites disjoint from training sites.",
+     "subgroup_notes": "Normal BMI >=0.84; BMI >25 >0.82",
+     "quote": "The accuracy of the 2D HeartAI as measured by comparison of 2D HeartAI with user edits compared to a reference standard ground truth on a dataset from five different institutions has a Pearson correlation coefficient of 0.81 or higher with a minimal bias by Bland Altman of less than 5.2.",
+     "page": 15,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232145",
+     "endpoint": "2D HeartAI (with user edits) vs 3-examiner reference standard",
+     "metric": "Bland-Altman bias",
+     "value": "<5.2 (units not stated)",
+     "comparator": "mean of 3 examiners' manual contours/measurements",
+     "n_studies": 45,
+     "n_patients": null,
+     "n_sites": 5,
+     "dataset_description": "2D HeartAI: 45 exams / 90 images (patient count not stated) from 5 institutions (US, Mexico); transducers 5V1, 5Z1; apical 2/3/4-chamber views, frame rate >17 fps; contrast in 12 exams; adults 42-74 y, 24% female; BMI 18-36 (29% normal). Reference = mean of 3 examiners' manual contours/measurements. Test sites disjoint from training sites.",
+     "subgroup_notes": null,
+     "quote": "The accuracy of the 2D HeartAI as measured by comparison of 2D HeartAI with user edits compared to a reference standard ground truth on a dataset from five different institutions has a Pearson correlation coefficient of 0.81 or higher with a minimal bias by Bland Altman of less than 5.2.",
+     "page": 15,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232145",
+     "endpoint": "2D HeartAI, BMI subgroups",
+     "metric": "Pearson correlation coefficient",
+     "value": "normal BMI >=0.84; BMI >25 >0.82",
+     "comparator": "mean of 3 examiners' manual contours/measurements",
+     "n_studies": 45,
+     "n_patients": null,
+     "n_sites": 5,
+     "dataset_description": "2D HeartAI: 45 exams / 90 images (patient count not stated) from 5 institutions (US, Mexico); transducers 5V1, 5Z1; apical 2/3/4-chamber views, frame rate >17 fps; contrast in 12 exams; adults 42-74 y, 24% female; BMI 18-36 (29% normal). Reference = mean of 3 examiners' manual contours/measurements. Test sites disjoint from training sites.",
+     "subgroup_notes": "29% normal BMI, 71% overweight/obese",
+     "quote": "For subjects with a Normal BMI the performance of the AI Algorithm was 0.84 or higher. For subjects with a BMI > 25 (Obese) performance was greater than 0.82.",
+     "page": 15,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232145",
+     "endpoint": "4D HeartAI (with user edits) vs 3-examiner reference standard, 3D TTE and TEE",
+     "metric": "Pearson correlation coefficient",
+     "value": ">=0.87",
+     "comparator": "mean of 3 examiners' manual contours/measurements",
+     "n_studies": 32,
+     "n_patients": 32,
+     "n_sites": 5,
+     "dataset_description": "4D HeartAI: 32 patients / 64 volumes from 5 institutions (US, Mexico); 5Z1 TTE (17) and 6ZT TEE (15); volume rate >13.4 vps; adults 28-77 y, 32% female; BMI 21-34 (15% normal). Reference = mean of 3 examiners' manual contours/measurements. Test sites disjoint from training sites.",
+     "subgroup_notes": "Normal BMI >=0.98; BMI >25 >0.81",
+     "quote": "from five different institutions has a Pearson correlation coefficient of 0.87 or higher with a minimal bias by Bland Altman of less than 13.3. For subjects with a Normal BMI the performance of the AI Algorithm was 0.98 or higher.  For subjects with a BMI > 25 (Obese) performance was greater than 0.81.",
+     "page": 17,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232145",
+     "endpoint": "4D HeartAI (with user edits) vs 3-examiner reference standard",
+     "metric": "Bland-Altman bias",
+     "value": "<13.3 (units not stated)",
+     "comparator": "mean of 3 examiners' manual contours/measurements",
+     "n_studies": 32,
+     "n_patients": 32,
+     "n_sites": 5,
+     "dataset_description": "4D HeartAI: 32 patients / 64 volumes from 5 institutions (US, Mexico); 5Z1 TTE (17) and 6ZT TEE (15); volume rate >13.4 vps; adults 28-77 y, 32% female; BMI 21-34 (15% normal). Reference = mean of 3 examiners' manual contours/measurements. Test sites disjoint from training sites.",
+     "subgroup_notes": null,
+     "quote": "from five different institutions has a Pearson correlation coefficient of 0.87 or higher with a minimal bias by Bland Altman of less than 13.3.",
+     "page": 17,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232145",
+     "endpoint": "AI Measure semi-automated cardiac measurements, all modes aggregated",
+     "metric": "success rate (Pass or Pass with edit)",
+     "value": "89.6%",
+     "comparator": "at least 3 expert cardiac sonographers scoring clinical acceptability",
+     "n_studies": 32,
+     "n_patients": 32,
+     "n_sites": 5,
+     "dataset_description": "AI Measure: 32 patients, 392 images, 1354 samples from 5 institutions (US, Mexico); 15 measurement views across B-mode, Doppler, M-mode; probes 5V1, 5Z1, 8V3, 10V4, Z6T; age 4-79 y, 44% female, 51% male, 5% unknown; BMI 14-41.2 (49% normal). Truth: at least 3 expert cardiac sonographers scored each measurement for clinical acceptability (Pass or Pass with edit). Test sites disjoint from training sites.",
+     "subgroup_notes": "Age 4-79 y (includes pediatric); BMI 14-41.2",
+     "quote": "Aggregating algorithm performance over all modes showed the AI algorithm was successful 89.6% based on acceptance of measurements as Pass or Pass with/Edit.",
+     "page": 18,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232145",
+     "endpoint": "AI Measure, worst acquisition mode (B-mode, Doppler, M-mode)",
+     "metric": "success rate (Pass or Pass with edit)",
+     "value": ">=88.1%",
+     "comparator": "at least 3 expert cardiac sonographers scoring clinical acceptability",
+     "n_studies": 32,
+     "n_patients": 32,
+     "n_sites": 5,
+     "dataset_description": "AI Measure: 32 patients, 392 images, 1354 samples from 5 institutions (US, Mexico); 15 measurement views across B-mode, Doppler, M-mode; probes 5V1, 5Z1, 8V3, 10V4, Z6T; age 4-79 y, 44% female, 51% male, 5% unknown; BMI 14-41.2 (49% normal). Truth: at least 3 expert cardiac sonographers scored each measurement for clinical acceptability (Pass or Pass with edit). Test sites disjoint from training sites.",
+     "subgroup_notes": null,
+     "quote": "As tested on datasets from different aquisition modes, the algorithm sucess is 88.1% or higher",
+     "page": 18,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242523",
+     "endpoint": "Trace AI orifice contour vs sonographer ground-truth contour",
+     "metric": "lower 90% confidence bound of the 90th-percentile DICE coefficient",
+     "value": "0.95 (acceptance criterion >=0.80)",
+     "comparator": "3 ARDMS sonographers' refined contours, blinded",
+     "n_studies": 10,
+     "n_patients": 10,
+     "n_sites": 3,
+     "dataset_description": "Trace AI: 10 adult patients, 24 volumes (10 exams) from 3 institutions (US, Germany, Mexico); acquired on ACUSON Origin with 5Z1 (3D TTE), Z6T (3D TEE), Lumos (3D ICE); structures LV, RV, LVOT, LA, ascending aorta, MV annulus, STJ, LAA opening, sinus of Valsalva, TV annulus; age 18-79, 25% female, 13% unknown; BMI 18.1-44.2 (60% unknown). Ground truth: 3 ARDMS sonographers independently refined the initial Trace AI circle, blinded to each other and to the algorithm contour. Test sites disjoint from training sites.",
+     "subgroup_notes": "3D TTE, 3D TEE and 3D ICE volumes; 60% BMI unknown",
+     "quote": "The lower 90% confidence bound for the 90th percentile is 0.95, which is greater than the requirement of 0.8, therefore, the test passes.",
+     "page": 15,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K260844",
+     "endpoint": "Valves AI (with user edits) aortic and mitral valve surface similarity and landmark distance error",
+     "metric": "lower bound of 95% CI, all metrics",
+     "value": ">80%",
+     "comparator": "reference auto-detection corrected by 3 examiners",
+     "n_studies": 42,
+     "n_patients": null,
+     "n_sites": 3,
+     "dataset_description": "Valves AI: 86 volumes from 42 TEE studies (Z6T; patient count not stated) at 3 institutions (USA, Mexico); age 35-93, 44% female; BMI 21-33 (35% normal). Reference: 3 examiners corrected the automatic valve detection using on-system editing tools; inter-user Pearson >=0.9, Bland-Altman bias <10%. Fresh data collected for verification, stated to be separate from training data.",
+     "subgroup_notes": "3D TEE (Z6T) only",
+     "quote": "Accuracy of Aortic and Mitral valve surface similarity and landmark distance errors meets acceptance criteria, with all metrics exceeding 80% at the lower bound of the 95% confidence interval.",
+     "page": 12,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K260844",
+     "endpoint": "Valves AI measurements derived from surfaces and landmarks",
+     "metric": "Pearson correlation coefficient",
+     "value": ">=0.9",
+     "comparator": "reference auto-detection corrected by 3 examiners",
+     "n_studies": 42,
+     "n_patients": null,
+     "n_sites": 3,
+     "dataset_description": "Valves AI: 86 volumes from 42 TEE studies (Z6T; patient count not stated) at 3 institutions (USA, Mexico); age 35-93, 44% female; BMI 21-33 (35% normal). Reference: 3 examiners corrected the automatic valve detection using on-system editing tools; inter-user Pearson >=0.9, Bland-Altman bias <10%. Fresh data collected for verification, stated to be separate from training data.",
+     "subgroup_notes": null,
+     "quote": "Pearson correlation coefficient of 0.9 or higher for measurements derived from surfaces and landmarks.",
+     "page": 12,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K260844",
+     "endpoint": "Valves AI, BMI subgroups",
+     "metric": "performance (metric not specified in summary)",
+     "value": "normal BMI >=0.97; BMI >25 >0.88",
+     "comparator": "reference auto-detection corrected by 3 examiners",
+     "n_studies": 42,
+     "n_patients": null,
+     "n_sites": 3,
+     "dataset_description": "Valves AI: 86 volumes from 42 TEE studies (Z6T; patient count not stated) at 3 institutions (USA, Mexico); age 35-93, 44% female; BMI 21-33 (35% normal). Reference: 3 examiners corrected the automatic valve detection using on-system editing tools; inter-user Pearson >=0.9, Bland-Altman bias <10%. Fresh data collected for verification, stated to be separate from training data.",
+     "subgroup_notes": "35% normal BMI, 65% overweight/obese",
+     "quote": "For subjects with a normal body mass index (BMI), the performance of the Valves AI algorithm  was 0.97 or higher. For subjects with a BMI of >25 kg/m² (obese), performance was greater  than 0.88.",
+     "page": 13,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K260844",
+     "endpoint": "2D Heart AI (with user edits) chamber contour vs 3-examiner manual contours",
+     "metric": "DICE, average",
+     "value": "88%",
+     "comparator": "3 examiners' manual contours",
+     "n_studies": 48,
+     "n_patients": 48,
+     "n_sites": 5,
+     "dataset_description": "2D Heart AI enhancement: 48 patients / 96 images from 5 institutions (USA, Mexico); transducers 5V1, 5Z1, 8V3, 10V4; apical 2/3/4-chamber views, frame rate >17 fps; contrast in 10 exams; age 1-83 (labelled 'Adults'), 39% female, 61% male (unknown 63%); known BMI 13-28 (73% normal). Reference: 3 examiners performed all manual contouring and measurements; inter-user variability of the reference standard reported as Pearson >=0.9 with Bland-Altman bias 'around 10%' (p.14). Fresh data collected for verification, stated to be separate from training data.",
+     "subgroup_notes": "Normal BMI 0.87 average; BMI >25 0.89 average",
+     "quote": "Contour DICE average of 88%",
+     "page": 13,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K260844",
+     "endpoint": "2D Heart AI view classification (A2C/A3C/A4C)",
+     "metric": "accuracy, average",
+     "value": "98%",
+     "comparator": "view label (truthing method not stated for view labels)",
+     "n_studies": 48,
+     "n_patients": 48,
+     "n_sites": 5,
+     "dataset_description": "2D Heart AI enhancement: 48 patients / 96 images from 5 institutions (USA, Mexico); transducers 5V1, 5Z1, 8V3, 10V4; apical 2/3/4-chamber views, frame rate >17 fps; contrast in 10 exams; age 1-83 (labelled 'Adults'), 39% female, 61% male (unknown 63%); known BMI 13-28 (73% normal). Reference: 3 examiners performed all manual contouring and measurements; inter-user variability of the reference standard reported as Pearson >=0.9 with Bland-Altman bias 'around 10%' (p.14). Fresh data collected for verification, stated to be separate from training data.",
+     "subgroup_notes": null,
+     "quote": "View classification performance with accuracy of 98% in average",
+     "page": 13,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K260844",
+     "endpoint": "2D Heart AI contouring, BMI subgroups",
+     "metric": "contour performance (DICE implied), average",
+     "value": "normal BMI 0.87; BMI >25 0.89",
+     "comparator": "3 examiners' manual contours",
+     "n_studies": 48,
+     "n_patients": 48,
+     "n_sites": 5,
+     "dataset_description": "2D Heart AI enhancement: 48 patients / 96 images from 5 institutions (USA, Mexico); transducers 5V1, 5Z1, 8V3, 10V4; apical 2/3/4-chamber views, frame rate >17 fps; contrast in 10 exams; age 1-83 (labelled 'Adults'), 39% female, 61% male (unknown 63%); known BMI 13-28 (73% normal). Reference: 3 examiners performed all manual contouring and measurements; inter-user variability of the reference standard reported as Pearson >=0.9 with Bland-Altman bias 'around 10%' (p.14). Fresh data collected for verification, stated to be separate from training data.",
+     "subgroup_notes": "73% normal BMI, 27% overweight/obese (known BMI only)",
+     "quote": "For subjects with a Normal BMI the performance of the contouring AI Algorithm was 0.87 in average. For subjects with a BMI > 25 (obese), performance was 0.89 in average.",
+     "page": 13,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": null,
+     "endpoint": "AI Assist color box placement",
+     "metric": "accuracy (no or minor adjustment)",
+     "value": "98%",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; no study details given",
+     "subgroup_notes": null,
+     "quote": "Color box placement 98% accurate (no or minor adjustment)",
+     "page": null,
+     "verification": "company"
+    },
+    {
+     "k_number": null,
+     "endpoint": "AI Assist PW Doppler gate placement",
+     "metric": "accuracy (no or minor adjustment)",
+     "value": "95%",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; no study details given",
+     "subgroup_notes": null,
+     "quote": "PW Gate Placement 95% accurate (no or minor adjustment)",
+     "page": null,
+     "verification": "company"
+    },
+    {
+     "k_number": null,
+     "endpoint": "AI Assist view classification and Doppler placement, 12 standard views, 23 targets",
+     "metric": "accuracy",
+     "value": "99%",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; no study details given",
+     "subgroup_notes": null,
+     "quote": "For 12 standard Echocardiogram views, AI Assist has a 99%* accuracy rate for proper view classification and Doppler placement on 23 anatomical and hemodynamic targets.",
+     "page": null,
+     "verification": "company"
+    },
+    {
+     "k_number": null,
+     "endpoint": "AI Measure (B-mode, Doppler, M-mode) judged accurate by user",
+     "metric": "user acceptance",
+     "value": "89%",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; consistent with the 89.6% in K232145",
+     "subgroup_notes": null,
+     "quote": "89% AI Measure (B-mode, Doppler and M-mode) was judged accurate by the user.",
+     "page": null,
+     "verification": "company"
+    },
+    {
+     "k_number": null,
+     "endpoint": "2D Heart AI LV EDV / ESV detection across users",
+     "metric": "accuracy",
+     "value": "99%",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; no study details given",
+     "subgroup_notes": null,
+     "quote": "99% accuracy for detecting LVEVD and LVESV (across different users).",
+     "page": null,
+     "verification": "company"
+    },
+    {
+     "k_number": null,
+     "endpoint": "2D Heart AI view classification A4C/A3C/A2C with and without contrast",
+     "metric": "accuracy",
+     "value": "100%",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; no study details given",
+     "subgroup_notes": null,
+     "quote": "100% accuracy on view classification for A4C, A3C, A2C (with and without contrast, across multiple sonographers).",
+     "page": null,
+     "verification": "company"
+    },
+    {
+     "k_number": null,
+     "endpoint": "2D Heart AI GLS estimate",
+     "metric": "correlation coefficient",
+     "value": "98%",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; comparator not stated",
+     "subgroup_notes": null,
+     "quote": "2D Heart AI automatically produces estimates of left ventricular volumes and GLS, both for contrast enhanced and non contrast enhanced acquisitions, achieving 98% correlation coefficient* with GLS estimates.",
+     "page": null,
+     "verification": "company"
+    },
+    {
+     "k_number": null,
+     "endpoint": "4D Heart AI LV ED and ES volumes, 3D TTE and TEE (page also states '96% accuracy for detecting LV ED and ES volumes using both TTE and TEE')",
+     "metric": "accuracy vs 3 experienced readers",
+     "value": "96%",
+     "comparator": "three experienced readers",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; no n given",
+     "subgroup_notes": null,
+     "quote": "4D Heart AI on both 3D TTE and TEE acquisitions achieves 96% accuracy when compared with estimates provided by three experienced readers.",
+     "page": null,
+     "verification": "company"
+    },
+    {
+     "k_number": null,
+     "endpoint": "4D Heart AI MPR identification and alignment",
+     "metric": "accuracy",
+     "value": "98%",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; no study details given",
+     "subgroup_notes": null,
+     "quote": "98% accuracy in MPR identification and alignment.",
+     "page": null,
+     "verification": "company"
+    },
+    {
+     "k_number": null,
+     "endpoint": "Trace AI automated orifice contour (annulus circumference, max/min diameter)",
+     "metric": "accuracy",
+     "value": ">95%",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; no study details given",
+     "subgroup_notes": null,
+     "quote": "Automated orifice assessment precisely contours the annulus, providing real-time circumference, maximum, and minimum diameter measurements with over 95% accuracy.",
+     "page": null,
+     "verification": "company"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "No FDA summary states training-set size, number of training sites or training demographics. Each summary states only that test data came from clinical sites different from the training sites (K232145, K242523) or that fresh data was collected for verification (K260844). The Siemens Origin press release refers to 'the world's largest cardiac image database' without a number.",
+    "source": "K232145 p.15-19; K242523 p.14,16; K260844 p.13-14; https://www.siemens-healthineers.com/press/releases/acusonorigin",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": 5,
+    "description": "Per-feature FDA verification sets: AI Assist 12 patients / 14 exams / 168 samples (K232145); 2D HeartAI 45 exams / 90 images (patients not stated), 5 institutions (K232145); 4D HeartAI 32 patients / 64 volumes, 5 institutions (K232145); AI Measure 32 patients / 392 images / 1354 samples, 5 institutions (K232145); Trace AI 10 patients / 24 volumes, 3 institutions (K242523); Valves AI 42 TEE studies / 86 volumes (patients not stated), 3 institutions (K260844); 2D Heart AI enhancement 48 patients / 96 images, 5 institutions (K260844). Countries: US, Mexico, Germany (Trace AI only). Patient totals are not summed because overlap across features is unknown; n_sites = the maximum per-feature site count.",
+    "independent_of_training": true,
+    "source": "K232145 p.14-19; K242523 p.15-16; K260844 p.12-14",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Valves AI was previously cleared as eSie Valves on the ACUSON SC2000 (K233613, reference device for K260844); AI Measure maps to eSie Measure and 2D/4D HeartAI to eSie LH / eSie LVA / eSie RH + GLS on the SC2000 (K211726, reference device for K232145). Peer-reviewed evaluations of the SC2000 eSie Valves tool exist (see papers) but none of the Sequoia/Origin-cleared features.",
+     "source_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf26/K260844.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "description": "Siemens ACUSON Origin product page (fetched 2026-09-05) lists accuracy figures for AI Assist (98% color box, 95% PW gate, 99% view classification/placement on 23 targets), AI Measure (89%), 2D Heart AI (99% LV EDV/ESV detection, 100% view classification, 98% GLS correlation), 4D Heart AI (96% LV ED/ES volumes vs 3 readers, 98% MPR alignment) and Trace AI (>95%). Footnotes cite internal Siemens reports; no n, comparator or study design is given, and the figures are not the same as the FDA-summary figures (e.g., FDA AI Assist 99.3% aggregated over all placements).",
+     "source_url": "https://www.siemens-healthineers.com/en-us/ultrasound/cardiovascular/acuson-origin",
+     "verification": "company"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Artificial Intelligence for the Measurement of the Aortic Valve Annulus",
+     "first_author": "Thalappillil R",
+     "journal": "Journal of Cardiothoracic and Vascular Anesthesia",
+     "year": 2020,
+     "doi": "10.1053/j.jvca.2019.06.017",
+     "pmid": "31351874",
+     "url": "https://doi.org/10.1053/j.jvca.2019.06.017",
+     "relation": "external-validation",
+     "n_subjects": 47,
+     "key_result": "Siemens eSie Valves automated aortic valve software (SC2000 predecessor of the K260844 Valves AI feature) vs MDCT in 47 TAVR patients (SAPIEN 3): r = 0.84 (area-derived) and 0.85 (perimeter-derived); Bland-Altman 95% LOA -4.62 to 1.26 mm (area) and -4.51 to 1.45 mm (perimeter). Single-center, retrospective. Not an evaluation of the Sequoia/Origin implementation.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Agreement between 4D transesophageal echocardiography and multi-detector computed tomography in measuring aortic root dimensions and coronary ostia heights",
+     "first_author": "Hassan M",
+     "journal": "The International Journal of Cardiovascular Imaging",
+     "year": 2023,
+     "doi": "10.1007/s10554-023-02873-3",
+     "pmid": "37269399",
+     "url": "https://doi.org/10.1007/s10554-023-02873-3",
+     "relation": "external-validation",
+     "n_subjects": 43,
+     "key_result": "eSie Valve semi-automatic 4D TEE aortic root measurements vs ECG-gated MDCT in 43 adults (prospective): strong correlation/good agreement for annular area, perimeter, derived diameters, left coronary ostial height, STJ and SoV minor diameters; moderate for right coronary ostial height. Predecessor tool on SC2000, not the Sequoia/Origin implementation.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial Intelligence in Mitral Valve Analysis",
+     "first_author": "Jeganathan J",
+     "journal": "Annals of Cardiac Anaesthesia",
+     "year": 2017,
+     "doi": "10.4103/aca.ACA_243_16",
+     "pmid": "28393769",
+     "url": "https://doi.org/10.4103/aca.ACA_243_16",
+     "relation": "other",
+     "n_subjects": 4,
+     "key_result": "Inter-observer reproducibility of eSie Valve mitral analysis on intraoperative 3D TEE: 4 patients with normal MV, 36 end-systolic frames, 3 examiners; examiner had no significant effect on any of 6 parameters (mixed-effects ANOVA, Bonferroni P = 0.0083). Predecessor tool on SC2000.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Dynamic Three-Dimensional Geometry of the Aortic Valve Apparatus - A Feasibility Study",
+     "first_author": "Khamooshian A",
+     "journal": "Journal of Cardiothoracic and Vascular Anesthesia",
+     "year": 2017,
+     "doi": "10.1053/j.jvca.2017.03.004",
+     "pmid": "28800987",
+     "url": "https://doi.org/10.1053/j.jvca.2017.03.004",
+     "relation": "other",
+     "n_subjects": 10,
+     "key_result": "Feasibility of semi-automated eSie Valve aortic apparatus analysis on SC2000 / Z6Ms intraoperative 3D TEE in 10 patients with non-stenotic, non-regurgitant aortic valves; 13 of 45 exported parameters analyzed across the cardiac cycle. No accuracy comparator. Predecessor tool on SC2000.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [],
+   "open_questions": [
+    "Training-set sizes, number of training sites and training demographics are not disclosed in any of the four FDA summaries.",
+    "K232145 2D HeartAI and 4D HeartAI: the Bland-Altman bias values (<5.2, <13.3) and the Pearson coefficients are not tied to named measurements (EF, volumes, GLS) or units in the summary.",
+    "K260844 Valves AI: the BMI-subgroup values (>=0.97, >0.88) are not attributed to a named metric; the reference standard is the algorithm's own auto-detection corrected by examiners.",
+    "K260844 2D Heart AI: the summary states the dataset was collected from 'Adults 1-83 years' and lists gender as 39% female / 61% male with 'unknown: 63%'; these internally inconsistent demographics are reproduced verbatim.",
+    "K251481 reports no performance data for the AI Assist view-classification-triggered AI Measure workflow; K260844 cites K251481 as the clearance of 2D Heart AI although K251481 does not mention it.",
+    "K240704 (2024-07-22), which carried the cardiac AI package unmodified, is the predicate of K242523 but is outside this batch.",
+    "Company accuracy figures on the ACUSON Origin product page (e.g., AI Assist 99% on 23 targets, 2D HeartAI 100% view classification) have no stated n, comparator or study; they are recorded with verification 'company' only.",
+    "Which product/version first shipped Valves AI outside the US and the SC2000 K233613 summary content were not reviewed this session.",
+    "No peer-reviewed publication evaluating AI Assist, AI Measure, 2D HeartAI, 4D HeartAI, Trace AI or Valves AI on Sequoia/Origin was found in PubMed (searches on each feature name, 'eSie Valve(s)', 'eSie LVA/LH/RH', 'eSie Measure', 'AcuNav Lumos', 'ACUSON Origin/Sequoia' + AI, 2026-09-05); the four listed papers evaluate the SC2000 eSie Valves tool that K260844 names as the prior clearance of Valves AI.",
+    "K232145 lists the 4D HeartAI TEE test transducer as '6ZT'; the Z6T transducer is what the same submission adds, so this is likely a typo in the summary but is reproduced as written.",
+    "Company product-page figures do not match FDA-summary figures for the same features (e.g., AI Assist color box 98% / PW gate 95% vs FDA 99.3% aggregated; 2D Heart AI view classification 100% vs FDA 98% average in K260844); the company figures cite internal reports that were not reviewed."
+   ],
+   "sources": [
+    {
+     "fact": "K232145 decision date 2023-10-30, product code IYN, applicant Siemens Medical Solutions USA, Inc.",
+     "url_or_file": "openfda_records.json",
+     "verification": "openfda"
+    },
+    {
+     "fact": "K242523 decision date 2024-11-19, product code IYN",
+     "url_or_file": "openfda_records.json",
+     "verification": "openfda"
+    },
+    {
+     "fact": "K251481 decision date 2025-08-20, product code IYN",
+     "url_or_file": "openfda_records.json",
+     "verification": "openfda"
+    },
+    {
+     "fact": "K260844 decision date 2026-06-16, product code IYN",
+     "url_or_file": "openfda_records.json",
+     "verification": "openfda"
+    },
+    {
+     "fact": "K232145 predicates K223735 (primary) and K211726 (reference); AI Assist/2D HeartAI/4D HeartAI/AI Measure test statistics and datasets",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K232145.pdf (pp. 6, 8, 13-19)",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K242523 predicates K240704 (primary) and K230207 (reference); Trace AI description, DICE result, dataset",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242523.pdf (pp. 8, 11, 14-16)",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K251481 predicate K242523; AI Assist / AI Measure integrated workflow; no AI performance data",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251481.pdf (pp. 8, 10-12)",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K260844 predicate K251481, reference K233613; Valves AI and 2D Heart AI enhancement results and datasets",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf26/K260844.pdf (pp. 8, 10, 12-14)",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "ACUSON Origin press release (2023-08-25, ESC): AI Assist described as 'real-time cardiac view recognition'; 2D HeartAI 'auto tracking on contrast images'; 4D HeartAI 'auto contouring of all four chambers in 4D TTE and both ventricles in 4D TEE'; 'More than 500 AI-powered measurements'; AI features 'trained on the world's largest cardiac image database' (no number)",
+     "url_or_file": "https://www.siemens-healthineers.com/press/releases/acusonorigin",
+     "verification": "company"
+    },
+    {
+     "fact": "ACUSON Sequoia cardiology press release (2024-05-21): AI Measure 'up to 120 AI-powered calculations'; 2D HeartAI 'auto view detection and auto contour placement with or without an electrocardiogram', with or without contrast, for ejection fraction and strain (company description)",
+     "url_or_file": "https://www.siemens-healthineers.com/press/releases/acusonsequoia-cardio",
+     "verification": "company"
+    },
+    {
+     "fact": "ACUSON Origin product page accuracy figures for AI Assist, AI Measure, 2D Heart AI, 4D Heart AI, Trace AI (quotes verified against page fetched 2026-09-05; footnotes cite internal Siemens reports)",
+     "url_or_file": "https://www.siemens-healthineers.com/en-us/ultrasound/cardiovascular/acuson-origin",
+     "verification": "company"
+    },
+    {
+     "fact": "Paper metadata and abstracts for PMIDs 31351874, 37269399, 28393769, 28800987 (efetch, 2026-09-05); PMIDs 27535041 and 26306693 resolved but removed as not evaluating a feature cleared in this family",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ (esearch/esummary/efetch)",
+     "verification": "pmid_resolved"
+    },
+    {
+     "fact": "DOIs for the four retained papers confirmed via Crossref (title, journal, year, first author match) on 2026-09-05",
+     "url_or_file": "https://api.crossref.org/works/<DOI>",
+     "verification": "doi_resolved"
+    }
+   ],
+   "_source_file": "system-siemens-acuson.verified.json",
+   "_verified": true,
+   "first_cleared": "2023-10-30",
+   "latest_cleared": "2026-06-16",
+   "n_clearances": 4,
+   "pathways": [
+    "510(k)"
+   ],
+   "product_codes": [
+    "IYN"
+   ],
+   "n_performance_claims": 26,
+   "n_papers_resolved": 4,
+   "n_papers": 4,
+   "research_verified": true,
+   "research_pending": false
+  },
+  {
    "id": "heartfocus",
    "product_name": "HeartFocus",
    "company": "DESKi",
@@ -80,7 +818,7 @@ window.AIECHO_PRODUCTS = {
       "PCCP",
       "on-device / offline",
       "handheld accessory",
-      "clinical MRMC study (n=240, 2 sites US + France)",
+      "prospective multicenter clinical study (n=240; 120 France + 120 USA; blinded 5-cardiologist reader panel)",
       "training set size disclosed"
      ],
      "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242807.pdf",
@@ -218,6 +956,36 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "k_number": "K242807",
+     "endpoint": "Clinical study: diagnostic-quality rate of recorded clips by recording mode (Auto record / Best-effort record / manual)",
+     "metric": "% of clips diagnostic quality",
+     "value": "Auto record 99.7%; Best-effort record 93.9%; manual record 40.5% (of 2,362 recorded clips: 67.4% Auto, 21.3% Best-effort, 11.3% manual; 38 of 2,400 targeted clips missed)",
+     "comparator": "Cardiologist panel, ACEP scale >= 3",
+     "n_studies": null,
+     "n_patients": 240,
+     "n_sites": 2,
+     "dataset_description": "2,362 clips recorded by 8 RNs across 240 patients",
+     "subgroup_notes": null,
+     "quote": "Novices recorded 2362 clips and missed 38 clips. Among the recorded clips, 67.4% of the clips were saved with the “Auto record” feature, 21.3% with the “Best-effort record” feature, and 11.3% with the “manual record” feature. 99.7% of the clips recorded with the “Auto record” feature were of diagnostic quality, demonstrating the high specificity of this feature. 93.9% of the clips recorded with the “best-effort record” feature were of diagnostic quality, and 40.5% of the clips recorded with the “manual record” feature were of diagnostic quality.",
+     "page": 20,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242807",
+     "endpoint": "Clinical study: novice acquisition time per limited (10-view) exam",
+     "metric": "Mean +/- SD minutes",
+     "value": "23.6 +/- 10.6 minutes",
+     "comparator": "N/A (no control-arm time reported)",
+     "n_studies": null,
+     "n_patients": 240,
+     "n_sites": 2,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "The average acquisition time per limited exam for novices in both centers was 23.6 ±10.6 minutes.",
+     "page": 20,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242807",
      "endpoint": "Human factors summative evaluation",
      "metric": "% task success",
      "value": "100% in 4 of 7 hazard-related scenarios; 97% in the remaining 3",
@@ -327,12 +1095,12 @@ window.AIECHO_PRODUCTS = {
    },
    "prior_validations": [
     {
-     "description": "Company/press coverage of the April 2025 FDA clearance describes HeartFocus as enabling novices to perform heart scans after a few hours of training and notes FDA approval of the PCCP; initial US availability on Butterfly Network handheld devices, US commercial launch announced Aug 27, 2025.",
+     "description": "Trade press (DAIC, Aug. 27/29, 2025) reports HeartFocus's U.S. commercial launch, initially on Butterfly Network handheld ultrasound devices, and describes the FDA-cleared software as enabling healthcare professionals to conduct diagnostic-quality heart ultrasounds after hours of training.",
      "source_url": "https://www.dicardiology.com/content/heartfocus-introduces-first-us-clinical-product-butterfly-network",
      "verification": "news"
     },
     {
-     "description": "Company website states HeartFocus is FDA cleared, now available on iPhone, supports DICOM/PACS integration, and cites the JACC: Advances trial ('100% nurses acquired diagnostic echo in 100% of patients', AI specificity 'greater than 99%'); a separate HeartFocus Link product for cart-based systems was announced May 28, 2026.",
+     "description": "Company website states HeartFocus is FDA cleared, available on iPad and iPhone with Butterfly iQ+ and iQ3 probes, supports DICOM/PACS integration, and cites the clinical trial ('100% nurses acquired diagnostic echo in 100% of patients', AI specificity 'greater than 99%'); it also lists a separate HeartFocus Link plug-in for cart-based systems and a randomized VCOM training study presented at ESC Congress 2026 (no data given).",
      "source_url": "https://heartfocus.ai/",
      "verification": "company"
     }
@@ -394,7 +1162,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "Decision dates 2025-04-04 and 2026-06-03, product code QJU, applicant DESKi, K260780 clearance_type Special",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json (openFDA 510(k) endpoint)",
      "verification": "fda_database"
     },
     {
@@ -418,8 +1186,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "news"
     }
    ],
-   "_source_file": "guidance.json",
-   "_verified": false,
+   "_source_file": "guidance.verified.json",
+   "_verified": true,
    "first_cleared": "2025-04-04",
    "latest_cleared": "2026-06-03",
    "n_clearances": 2,
@@ -429,10 +1197,10 @@ window.AIECHO_PRODUCTS = {
    "product_codes": [
     "QJU"
    ],
-   "n_performance_claims": 13,
+   "n_performance_claims": 15,
    "n_papers_resolved": 1,
    "n_papers": 1,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -470,7 +1238,7 @@ window.AIECHO_PRODUCTS = {
    "deployment": [
     "ultrasound-system-embedded"
    ],
-   "summary": "United Imaging's uSONIQUE cart-based ultrasound systems (Genesis/Pulse/Venus under K253716; Nova/Vita/Grace under K253720) embed machine-learning Auto EF / Fast EF (LV segmentation and ED/ES detection on A2C and A4C loops) and a uWorks Echo auto workflow (view recognition, quality assessment, automatic measurement across 14 echo views), plus Fast Strain / 2D Strain LV-RV-LA, Auto WMA, and (Genesis/Pulse) 4D MVQ and 4D LAAQ. Both 510(k)s were cleared in May 2026 with GE LOGIQ E10 (K231966) as predicate. Standalone validation reported Dice 90.8-92% and mean absolute EF error 4.2-4.7% on 45-50 cases per view (68-74 subjects) and uWorks Echo view-recognition accuracy 98.09-99.34% on 50-55 cases per view (93-111 subjects); no peer-reviewed publications or clinical trials for these features were found.",
+   "summary": "United Imaging's uSONIQUE console ultrasound systems (Genesis/Pulse/Venus under K253716; Nova/Vita/Grace under K253720) embed machine-learning Auto EF / Fast EF (LV segmentation and ED/ES detection on A2C and A4C loops) and a uWorks Echo auto workflow (view recognition, quality assessment, automatic measurement across 14 echo views), plus Fast Strain / 2D Strain LV-RV-LA, Auto WMA, and (Genesis/Pulse) 4D MVQ and 4D LAAQ. Both 510(k)s were cleared in May 2026 with GE LOGIQ E10 (K231966) as predicate. Standalone validation reported Dice 90.8-92% and mean absolute EF error 4.2-4.7% on 45-50 cases per view (68-74 subjects) and uWorks Echo view-recognition accuracy 98.09-99.34% on 50-55 cases per view (93-111 subjects); no peer-reviewed publications or clinical trials for these features were found.",
    "intended_use_quote": null,
    "indications_for_use_quote": "The Ultrasonic Pulsed Doppler Imaging System is used for ultrasound scanning of the whole body. It is intended for use by qualified and trained healthcare professionals in a hospital or medical clinic to perform ultrasound diagnostic examinations, supporting the following clinical applications: Abdominal (including Renal, Gynecological, and Obstetric), Pediatric, Small Parts, Cranial(Neonatal Cephalic, Adult Cephalic), Cardiac, Peripheral Vascular, Musculoskeletal, Urological. Modes of operation include: B Mode, M Mode, Color Mode, PW Mode, CW Mode, 3D/4D Mode, Strain Elastography Imaging, Shear Wave Elastography Imaging. Combined modes: B/M, B/Color, B/PW, B/Color/ PW.",
    "embedded_ai_features": [
@@ -488,7 +1256,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "name": "Fast Strain (real-time) / 2D Strain LV, 2D Strain RV, 2D Strain LA (non-real-time)",
-     "function": "Speckle-tracking strain analysis of the left ventricle, right ventricle and left atrium (equivalent to GE Vivid AFI / AFI RV / AFI LA, reference K200743). Fast Strain is the real-time mode. Performance testing is stated but no numeric results are reported, and the summary does not describe it as machine learning.",
+     "function": "Strain (AFI-equivalent) analysis of the left ventricle, right ventricle and left atrium (equivalent to GE Vivid AFI / AFI RV / AFI LA, reference K200743). Fast Strain is the real-time mode. Performance testing is stated but no numeric results are reported, and the summary does not describe it as machine learning.",
      "first_k_number": "K253716",
      "quote": "For the proposed device, 2D Strain(AFI) measurement is divided into two distinct functional modes based on workflow: non-real-time and real-time scenarios, corresponding to “2D Strain” and “Fast Strain,” respectively. In contrast, the predicate device is used primarily in non-real-time scenarios."
     },
@@ -500,13 +1268,13 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "name": "4D MVQ (4D Mitral Valve Quantification)",
-     "function": "Automated mitral valve quantification from 4D TEE volumes, compared to GE Vivid 4D Auto MVQ (reference K220882). Available on uSONIQUE Genesis and Pulse series only in K253716; not listed in the K253720 comparison tables. Performance testing stated; no numeric results.",
+     "function": "Mitral valve quantification listed alongside 4D TEE imaging in the Vivid comparison table (Table 3); the summary does not describe the method or data source. Compared to GE Vivid 4D Auto MVQ (reference K220882). Available on uSONIQUE Genesis and Pulse series only in K253716; not listed in the K253720 comparison tables. Performance testing stated; no numeric results.",
      "first_k_number": "K253716",
      "quote": "Various testing has been conducted (such as performance testing for SWE, SE, 4D TEE, CEUS, uNeedle, Fusion Navigation, uMFI, Biopsy Guide, Panoramic Imaging, 3D/4D mode, Auto OB, Auto EF, Fast EF, Auto Workflow(uWorks ABD, uWorks Echo, uWorks OB), Auto HRI, Auto Bladder, Auto IMT, Auto IVC, Fast Strain, 2D Strain LV, 2D Strain RV, 2D Strain LA, Auto WMA, 4D MVQ, 4D LAAQ, Auto NT, Auto Fetal HR, Auto ICV, Auto CNS, Auto Endo, Auto FLC, Auto Pelvic and Auto Hip."
     },
     {
      "name": "4D LAAQ (4D Left Atrial Appendage Quantification)",
-     "function": "Automated left atrial appendage quantification from 4D TEE volumes, compared to GE Vivid 4D Auto LAQ (reference K220882). Genesis and Pulse series only in K253716 (Venus does not support it); not listed in the K253720 comparison tables. Performance testing stated; no numeric results.",
+     "function": "Left atrial appendage quantification listed alongside 4D TEE imaging in the Vivid comparison table (Table 3); the summary does not describe the method or data source. Compared to GE Vivid 4D Auto LAQ (reference K220882). Genesis and Pulse series only in K253716 (Venus does not support it); not listed in the K253720 comparison tables. Performance testing stated; no numeric results.",
      "first_k_number": "K253716",
      "quote": "uSONIQUE Venus series do not support 4D LAAQ. The difference did not raise new safety and effectiveness concerns."
     }
@@ -533,7 +1301,8 @@ window.AIECHO_PRODUCTS = {
       "Summary lists product codes IYN, IYO, ITX, QIH; openFDA primary code IYN",
       "Machine-learning summary provided for Auto EF/Fast EF and uWorks Echo only; strain, Auto WMA, 4D MVQ/LAAQ have no reported numbers",
       "Auto EF subject-count text is internally inconsistent (74 subjects vs '30 ... in China and 20 in the USA' vs 'dataset of 50 patients')",
-      "Training set size not disclosed for cardiac algorithms"
+      "Training set size not disclosed for cardiac algorithms",
+      "uWorks Echo subject-count text is internally inconsistent: subgroup paragraph says 111 subjects (74 Chinese + 37 North American) while the equipment paragraph says 'The dataset was consisted of 55 patients' (p.24)"
      ],
      "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253716.pdf",
      "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K253716",
@@ -561,7 +1330,10 @@ window.AIECHO_PRODUCTS = {
       "Auto EF equipment paragraph says data were 'collected prospectively from 45 demographically diverse patients in China' while the subgroup paragraph reports 68 subjects with 60% US",
       "ED/ES deviation values reported without units",
       "Training set size not disclosed for cardiac algorithms",
-      "Vendor Vita product page lists 4D MVQ and 4D LAAQ although the K253720 summary does not list them"
+      "Vendor Vita product page lists 4D MVQ and 4D LAAQ although the K253720 summary does not list them",
+      "uWorks Echo subject-count text is internally inconsistent: subgroup paragraph says 93 subjects (61 Chinese + 32 North American) while the equipment paragraph says 'The test dataset was consisted of 50 patients' (p.18)",
+      "FDA decision letter header is dated May 20, 2026 but the digital signature (2026.05.21) and openFDA decision_date are 2026-05-21; openFDA date used",
+      "Auto EF truthing paragraph describes only EF-value ground truth by two reviewers plus arbitrator; no segmentation reference standard is described although a Dice score is reported (p.15)"
      ],
      "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253720.pdf",
      "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K253720",
@@ -587,7 +1359,7 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K253716",
      "endpoint": "Auto EF / Fast EF ejection fraction, A2C",
-     "metric": "mean absolute relative EF error",
+     "metric": "average absolute final measure error of EF (acceptance criterion framed as EF relative error <5%)",
      "value": "4.4%",
      "comparator": "Predefined acceptance criteria: Dice score >80%; relative EF measurement error <5%. Reference standard = expert-annotated LV segmentation / EF.",
      "n_studies": null,
@@ -617,7 +1389,7 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K253716",
      "endpoint": "Auto EF / Fast EF ejection fraction, A4C",
-     "metric": "mean absolute relative EF error",
+     "metric": "average absolute final measure error of EF (acceptance criterion framed as EF relative error <5%)",
      "value": "4.2%",
      "comparator": "Predefined acceptance criteria: Dice score >80%; relative EF measurement error <5%. Reference standard = expert-annotated LV segmentation / EF.",
      "n_studies": null,
@@ -694,7 +1466,7 @@ window.AIECHO_PRODUCTS = {
      "endpoint": "Auto EF / Fast EF LV segmentation, A2C",
      "metric": "mean Dice score",
      "value": "91.7%",
-     "comparator": "Predefined acceptance criteria: Dice score >80%; relative EF measurement error <5%. Reference standard = expert-annotated LV segmentation / EF.",
+     "comparator": "Predefined acceptance criteria: Dice score >80%; relative EF measurement error <5%. Reference standard = EF values ground-truthed by two reviewers (>=3 y medical imaging experience) with arbitration (>=5 y); no segmentation reference standard is described.",
      "n_studies": null,
      "n_patients": 68,
      "n_sites": null,
@@ -707,9 +1479,9 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K253720",
      "endpoint": "Auto EF / Fast EF ejection fraction, A2C",
-     "metric": "mean absolute relative EF error",
+     "metric": "average absolute final measure error of EF (acceptance criterion framed as EF relative error <5%)",
      "value": "4.4%",
-     "comparator": "Predefined acceptance criteria: Dice score >80%; relative EF measurement error <5%. Reference standard = expert-annotated LV segmentation / EF.",
+     "comparator": "Predefined acceptance criteria: Dice score >80%; relative EF measurement error <5%. Reference standard = EF values ground-truthed by two reviewers (>=3 y medical imaging experience) with arbitration (>=5 y); no segmentation reference standard is described.",
      "n_studies": null,
      "n_patients": 68,
      "n_sites": null,
@@ -724,7 +1496,7 @@ window.AIECHO_PRODUCTS = {
      "endpoint": "Auto EF / Fast EF LV segmentation, A4C",
      "metric": "mean Dice score",
      "value": "90.8%",
-     "comparator": "Predefined acceptance criteria: Dice score >80%; relative EF measurement error <5%. Reference standard = expert-annotated LV segmentation / EF.",
+     "comparator": "Predefined acceptance criteria: Dice score >80%; relative EF measurement error <5%. Reference standard = EF values ground-truthed by two reviewers (>=3 y medical imaging experience) with arbitration (>=5 y); no segmentation reference standard is described.",
      "n_studies": null,
      "n_patients": 68,
      "n_sites": null,
@@ -737,9 +1509,9 @@ window.AIECHO_PRODUCTS = {
     {
      "k_number": "K253720",
      "endpoint": "Auto EF / Fast EF ejection fraction, A4C",
-     "metric": "mean absolute relative EF error",
+     "metric": "average absolute final measure error of EF (acceptance criterion framed as EF relative error <5%)",
      "value": "4.7%",
-     "comparator": "Predefined acceptance criteria: Dice score >80%; relative EF measurement error <5%. Reference standard = expert-annotated LV segmentation / EF.",
+     "comparator": "Predefined acceptance criteria: Dice score >80%; relative EF measurement error <5%. Reference standard = EF values ground-truthed by two reviewers (>=3 y medical imaging experience) with arbitration (>=5 y); no segmentation reference standard is described.",
      "n_studies": null,
      "n_patients": 68,
      "n_sites": null,
@@ -754,7 +1526,7 @@ window.AIECHO_PRODUCTS = {
      "endpoint": "Auto EF / Fast EF ED/ES frame detection, A2C",
      "metric": "mean ES deviation / mean ED deviation (unit not stated)",
      "value": "ES 1.36; ED 1.24",
-     "comparator": "Expert-labeled ED/ES frames (unit of deviation not stated in summary; presumably frames)",
+     "comparator": "Expert-labeled ED/ES frames; unit of deviation and acceptance criterion not stated in the summary.",
      "n_studies": null,
      "n_patients": 68,
      "n_sites": null,
@@ -769,7 +1541,7 @@ window.AIECHO_PRODUCTS = {
      "endpoint": "Auto EF / Fast EF ED/ES frame detection, A4C",
      "metric": "mean ES deviation / mean ED deviation (unit not stated)",
      "value": "ES 1.29; ED 1.44",
-     "comparator": "Expert-labeled ED/ES frames (unit of deviation not stated in summary; presumably frames)",
+     "comparator": "Expert-labeled ED/ES frames; unit of deviation and acceptance criterion not stated in the summary.",
      "n_studies": null,
      "n_patients": 68,
      "n_sites": null,
@@ -853,7 +1625,7 @@ window.AIECHO_PRODUCTS = {
     "n_studies": null,
     "n_patients": 74,
     "n_sites": null,
-    "description": "Per-K standalone validation sets, as stated. K253716 (uSONIQUE Genesis): Auto EF/Fast EF 50 cases each for A2C and A4C from 74 subjects (47 Chinese, 27 North American; age 18-77; 47.3% female; 63.5% China / 36.5% US; BMI 15.0-34.75); uWorks Echo 55 cases per view x 14 views from 111 subjects (74 Chinese, 37 North American; age 18-79; 44% female; 67% China / 33% US). K253720 (uSONIQUE Nova): Auto EF/Fast EF 45 cases each for A2C and A4C from 68 subjects (27 Chinese, 41 North American; age 17-80; 53% female; 40% China / 60% US; BMI 15.57-38.27); uWorks Echo 50 cases per view (45 for PSAX_PA) x 14 views from 93 subjects (61 Chinese, 32 North American; age 17-80; 49% female; 66% China / 34% US). All sets prospectively collected on the proposed device by clinicians following the scanning assistant; reference standard by annotators/reviewers with >=3 y experience and >=5 y arbitrator. n_patients field carries the K253716 Auto EF cohort (74); see description for the others.",
+    "description": "Per-K standalone validation sets, as stated. K253716 (uSONIQUE Genesis): Auto EF/Fast EF 50 cases each for A2C and A4C from 74 subjects (47 Chinese, 27 North American; age 18-77; 47.3% female; 63.5% China / 36.5% US; BMI 15.0-34.75); uWorks Echo 55 cases per view x 14 views from 111 subjects (74 Chinese, 37 North American; age 18-79; 44% female; 67% China / 33% US). K253720 (uSONIQUE Nova): Auto EF/Fast EF 45 cases each for A2C and A4C from 68 subjects (27 Chinese, 41 North American; age 17-80; 53% female; 40% China / 60% US; BMI 15.57-38.27); uWorks Echo 50 cases per view (45 for PSAX_PA) x 14 views from 93 subjects (61 Chinese, 32 North American; age 17-80; 49% female; 66% China / 34% US). Auto EF/Fast EF sets are described as prospectively collected on the proposed device; uWorks Echo sets are described as collected on the proposed device with the clinician following the scanning assistant (prospective collection not explicitly stated). Equipment paragraphs give different patient counts from the subgroup paragraphs (K253716 uWorks Echo: 55 patients vs 111 subjects; K253720 uWorks Echo: 50 patients vs 93 subjects); reference standard by annotators/reviewers with >=3 y experience and >=5 y arbitrator. n_patients field carries the K253716 Auto EF cohort (74); see description for the others.",
     "independent_of_training": true,
     "source": "K253716 pp. 17-18, 24-25; K253720 pp. 14-15, 17-19",
     "verification": "fda_summary"
@@ -865,23 +1637,26 @@ window.AIECHO_PRODUCTS = {
     "Training data: size, sites, vendors and composition of the training sets for Auto EF/Fast EF and uWorks Echo are not disclosed in either summary.",
     "K253716 Auto EF subject count is internally inconsistent: subgroup paragraph says 74 subjects (47 Chinese + 27 North American), equipment paragraph says 30 patients in China and 20 in the USA, truthing paragraph says 'dataset of 50 patients'.",
     "K253720 Auto EF equipment paragraph says data were collected from 45 patients in China only, but the subgroup paragraph reports 68 subjects with 60% US; which is correct is unclear.",
-    "K253720 ED/ES deviation values (1.24-1.44) are reported without units (presumably frames) and without an acceptance criterion.",
+    "K253720 ED/ES deviation values (1.24-1.44) are reported without units and without an acceptance criterion.",
     "Fast Strain / 2D Strain LV-RV-LA, Auto WMA, 4D MVQ and 4D LAAQ: 'performance testing' is stated but no metrics, n, or comparator are given, and the summaries do not say whether these use ML.",
     "uWorks Echo 'automatic measurement' outputs are not enumerated (which cardiac measurements are produced per view is not stated); 'measurement error' metric definition is not stated.",
     "Number of clinical sites in China and the US contributing validation data is not stated.",
     "The uSONIQUE Vita vendor page lists 4D MVQ and 4D LAAQ, but the K253720 summary comparison tables do not include them; whether these are cleared on Nova/Vita/Grace is unclear.",
     "No peer-reviewed publication, preprint, or ClinicalTrials.gov registration describing these cardiac algorithms was found (PubMed queries on 'United Imaging'/'uSONIQUE'/'uWorks Echo'/'Auto EF' returned no relevant hits; the only United Imaging ultrasound trial, NCT07590063, is obstetric).",
-    "Product code: summaries list IYN, IYO, ITX and QIH; openFDA lists IYN as the primary code and the file used IYN."
+    "Product code: summaries list IYN, IYO, ITX and QIH; openFDA lists IYN as the primary code and the file used IYN.",
+    "uWorks Echo subject counts are internally inconsistent in both summaries (K253716: 111 subjects vs 'consisted of 55 patients', p.24; K253720: 93 subjects vs 'consisted of 50 patients', p.18).",
+    "K253720 Auto EF/Fast EF: Dice scores are reported but the truthing paragraph (p.15) describes only EF-value ground truth by two reviewers and an arbitrator; how the segmentation reference was derived is not stated.",
+    "Fact-check re-ran PubMed (\"uSONIQUE\", \"uWorks\", \"United Imaging\" AND echocardiography, \"United Imaging\" AND ultrasound AND cardiac/ejection fraction/strain) on 2026-09-05: no publication about these ultrasound features; hits are United Imaging CT/MR/PET papers."
    ],
    "sources": [
     {
      "fact": "K253716 decision date 2026-05-15, product code IYN, applicant Wuhan United Imaging Healthcare Co.,Ltd, device names",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K253716",
      "verification": "fda_summary"
     },
     {
      "fact": "K253720 decision date 2026-05-21, product code IYN, applicant, device names",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K253720",
      "verification": "fda_summary"
     },
     {
@@ -940,8 +1715,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "unverified"
     }
    ],
-   "_source_file": "system-united-imaging.json",
-   "_verified": false,
+   "_source_file": "system-united-imaging.verified.json",
+   "_verified": true,
    "first_cleared": "2026-05-15",
    "latest_cleared": "2026-05-21",
    "n_clearances": 2,
@@ -954,7 +1729,7 @@ window.AIECHO_PRODUCTS = {
    "n_performance_claims": 18,
    "n_papers_resolved": 0,
    "n_papers": 0,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -1138,6 +1913,21 @@ window.AIECHO_PRODUCTS = {
      "quote": "Testing demonstrated a statistically monotonically increasing relationship between the confidence value and the probability of accurately detecting whether moderate / severe aortic stenosis was present.",
      "page": 8,
      "verification": "fda_summary"
+    },
+    {
+     "k_number": "K254161",
+     "endpoint": "Internal heart-rate estimation from video (not user-facing)",
+     "metric": "MAD / MAE vs benchmark (qualitative)",
+     "value": "Statistically significantly lower MAD/MAE than the established benchmark for AP5, PLAX and PSAX; no numeric values given",
+     "comparator": "Reference heart-rate measurements (benchmark not further described)",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "The verification testing demonstrated a statistically significantly lesser MAD / MAE than the established benchmark for all views (AP5, PLAX, and PSAX). Based on these results, there were no clinically significant differences between the estimated heart rates by the software and the reference measurements.",
+     "page": 8,
+     "verification": "fda_summary"
     }
    ],
    "training_data": {
@@ -1160,7 +1950,7 @@ window.AIECHO_PRODUCTS = {
    },
    "prior_validations": [
     {
-     "description": "Prospective Caption Health (GE HealthCare) study NCT06717373 at Northwestern University (Feb-May 2025, n=63 actual): sonographer-acquired PLAX, PSAX-AV, AP4, AP2, AP3, AP5 views on Vscan Air and Venue point-of-care devices in patients with known/suspected AS, with the clinical echo as gold standard, to test and validate the AutoAS algorithm. Results not posted.",
+     "description": "Prospective Caption Health (GE HealthCare) study NCT06717373 at Northwestern University (start 2025-02-07, completion 2025-05-16; n=63 actual; status COMPLETED as of 2026-07 verification): sonographer-acquired PLAX, PSAX-AV, AP4, AP2, AP3, AP5 views on Vscan Air and Venue point-of-care devices in patients with known/suspected AS, with the clinical echo as gold standard, to test and validate the AutoAS algorithm. Results not posted. Re-verified via ClinicalTrials.gov API 2026-09-05.",
      "source_url": "https://clinicaltrials.gov/study/NCT06717373",
      "verification": "fda_database"
     }
@@ -1181,7 +1971,8 @@ window.AIECHO_PRODUCTS = {
     "Subgroup sample sizes (Table 1) sum to 382 for AUC, 238 for sensitivity and 144 for specificity, not the 401 studies stated; the summary does not explain the difference.",
     "The predefined standalone performance target value is not stated.",
     "Breakthrough Device designation is stated in a footnote (p.6) but the designation request number/date is not given.",
-    "Whether the 401-patient validation set was independent of training data is not stated."
+    "Whether the 401-patient validation set was independent of training data is not stated.",
+    "PubMed searches on 2026-09-05 for 'AutoAS', 'Automated Aortic Stenosis', 'Caption Health' + aortic stenosis, and GE HealthCare + aortic stenosis + AI returned no publication about this product."
    ],
    "sources": [
     {
@@ -1191,7 +1982,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "decision_date 2026-03-27, product code POK, applicant GE Medical Systems Ultrasound & Primary Care Diagnostics, LLC",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K254161",
      "verification": "fda_database"
     },
     {
@@ -1200,7 +1991,7 @@ window.AIECHO_PRODUCTS = {
      "verification": "fda_database"
     },
     {
-     "fact": "Trial listing describing AutoAS as Caption Health AI algorithm using Vscan Air and Venue",
+     "fact": "Third-party trial listing (verified 2026-09-05) describing 'AutoAS for Aortic Valve Stenosis (POC Trial)', sponsor Caption Health, Inc., using Vscan Air and Venue ultrasound systems",
      "url_or_file": "https://www.withpower.com/trial/phase-heart-diseases-2025-9d642",
      "verification": "news"
     },
@@ -1210,8 +2001,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "company"
     }
    ],
-   "_source_file": "as-detection.json",
-   "_verified": false,
+   "_source_file": "as-detection.verified.json",
+   "_verified": true,
    "first_cleared": "2026-03-27",
    "latest_cleared": "2026-03-27",
    "n_clearances": 1,
@@ -1221,10 +2012,10 @@ window.AIECHO_PRODUCTS = {
    "product_codes": [
     "POK"
    ],
-   "n_performance_claims": 8,
+   "n_performance_claims": 9,
    "n_papers_resolved": 0,
    "n_papers": 0,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -1232,7 +2023,7 @@ window.AIECHO_PRODUCTS = {
    "product_name": "EchoNavigator interventional echo/X-ray fusion AI features (Automatic Annotations, AutoViews, DeviceGuide)",
    "company": "Philips Medical Systems Nederland B.V.",
    "company_website": "https://www.philips.com",
-   "product_url": "https://www.usa.philips.com/healthcare/product/HCOPT08/echonavigator-live-echo-and-live-x-ray-fusion-tool",
+   "product_url": "https://www.usa.philips.com/healthcare/image-guided-therapy/shd-suite",
    "category": "interventional-guidance",
    "tags": [
     "Automatic Annotations",
@@ -1256,7 +2047,7 @@ window.AIECHO_PRODUCTS = {
     "ultrasound-system-embedded",
     "interventional X-ray system software"
    ],
-   "summary": "EchoNavigator is Philips software that registers live 3D TEE to live X-ray from Philips interventional X-ray systems (Azurion) for structural heart procedures. R3.0.3 (K200713) added Automatic Annotations, which propose annotations and tissue contours of cardiac anatomical structures in the echo volume; R4.0 (K221270) added AutoViews, which uses those automatic annotations to align the 3D echo volume and MPR planes; R5.0 (K253614) added DeviceGuide, a deep-learning function that detects, tracks and estimates the 3D pose of the Edwards PASCAL Ace M-TEER device in live 3D echo and X-ray. Only K253614 reports quantitative algorithm performance in its 510(k) summary.",
+   "summary": "EchoNavigator is Philips software that registers live 3D TEE to live X-ray from compatible Philips interventional X-ray systems (Azurion, per Philips press releases) for structural heart procedures. R3.0.3 (K200713) added Automatic Annotations, which propose annotations and tissue contours of cardiac anatomical structures in the echo volume; R4.0 (K221270) added AutoViews, which uses those automatic annotations to align the 3D echo volume and MPR planes; R5.0 (K253614) added DeviceGuide, a deep-learning function that detects, tracks and estimates the 3D pose of the Edwards PASCAL Ace M-TEER device in live 3D echo and X-ray. Only K253614 reports quantitative algorithm performance in its 510(k) summary.",
    "intended_use_quote": "EchoNavigator is a tool that assists the interventionalist and surgeon with image guidance during treatment of cardiovascular disease for which the procedure uses both live X-ray and live Echo guidance. EchoNavigator can be used with compatible Echo- probes and Echo units in combination with compatible Philips interventional X-ray systems.",
    "indications_for_use_quote": "EchoNavigator supports the interventionalist and surgeon in treatments where both live X-ray and live Echo guidance are used. The targeted patient population consists of patients with cardiovascular diseases requiring such a treatment.",
    "embedded_ai_features": [
@@ -1497,7 +2288,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.4330/wjc.v7.i9.562",
      "relation": "other",
      "n_subjects": null,
-     "key_result": "Single-centre initial experience with the base EchoNavigator fusion system (pre-AI release) across LAA, ASD, PVL, TAVR and MitraClip procedures; reported as feasible and safe.",
+     "key_result": "Single-centre initial experience with the base EchoNavigator fusion system (pre-AI release) across LAA, ASD, PVL closure, transaortic valve repair and MitraClip procedures; reported as feasible and safe; no quantitative endpoints in abstract.",
      "verification": "doi_resolved"
     },
     {
@@ -1509,8 +2300,34 @@ window.AIECHO_PRODUCTS = {
      "pmid": "30219347",
      "url": "https://doi.org/10.1016/j.echo.2018.07.012",
      "relation": "other",
-     "n_subjects": null,
-     "key_result": "Feasibility/safety/accuracy study of base EchoNavigator fusion during pediatric ASD closure (pre-AI release); abstract not extracted this session.",
+     "n_subjects": 31,
+     "key_result": "Prospective study of 31 children (median weight 26 kg) undergoing percutaneous ASD closure with base EchoNavigator fusion (pre-AI release): fusion and marker positioning feasible in real time in all cases; median echo-to-fluoroscopy registration distance on the occluder screw 0.5 mm in systole vs 2 mm in diastole (P<.0001) for both marker-based and 3D-echo-based measurements; feasible, safe and accurate in children >20 kg.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Left Atrial Appendage Closure Guided by Integrated Echocardiography and Fluoroscopy Imaging Reduces Radiation Exposure",
+     "first_author": "Jungen C",
+     "journal": "PLoS One",
+     "year": 2015,
+     "doi": "10.1371/journal.pone.0140386",
+     "pmid": "26465747",
+     "url": "https://doi.org/10.1371/journal.pone.0140386",
+     "relation": "other",
+     "n_subjects": 34,
+     "key_result": "Base EchoNavigator fusion (pre-AI release), single-centre open-label LAA closure (Amplatzer Cardiac Plug): 17 EchoNavigator vs 17 without; radiation dose 48.5±30.7 vs 93.9±64.4 Gy/cm2 (p=0.01, about 52% reduction), fluoroscopy time 16.7±7 vs 24.0±11.4 min (p=0.035), procedure time 89.6±28.8 vs 90.1±30.2 min (p=0.96). NCT01262508.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Safety and efficacy of transseptal puncture guided by real-time fusion of echocardiography and fluoroscopy",
+     "first_author": "Afzal S",
+     "journal": "Netherlands Heart Journal",
+     "year": 2017,
+     "doi": "10.1007/s12471-016-0937-0",
+     "pmid": "27966185",
+     "url": "https://doi.org/10.1007/s12471-016-0937-0",
+     "relation": "other",
+     "n_subjects": 88,
+     "key_result": "EchoNavigator Release II (pre-AI release), retrospective single-centre: 44 patients before vs 44 after introduction of fusion for transseptal puncture during MitraClip and LAA closure; no TSP adverse events in either group; time to TSP 18.48±5.62 vs 23.20±9.61 min (p=0.006).",
      "verification": "doi_resolved"
     }
    ],
@@ -1535,22 +2352,23 @@ window.AIECHO_PRODUCTS = {
     "K253614 lists product codes 'QIH, LLZ' (primary QIH); openFDA record lists QIH only. Recorded as QIH.",
     "The two registered ClinicalTrials.gov studies (NCT02529111, NCT02608008) concern earlier EchoNavigator releases (pre-Automatic Annotations); no registered trial for DeviceGuide, AutoViews or Automatic Annotations was found (ClinicalTrials.gov API searches for 'DeviceGuide' returned nothing).",
     "Biaggi 2026 refers to the product as 'DeviceGuide EchoNavigator SmartVue'; the relationship between the 'SmartVue' name and the cleared EchoNavigator R5.0 was not verified.",
-    "Product page URL was taken from a web search result listing and not fetched this session."
+    "The EchoNavigator product page URL found by web search (usa.philips.com/healthcare/product/HCOPT08/...) redirects to the generic Azurion structural heart disease suite page; no dedicated public EchoNavigator R5.0 product page was located, so product_url points to the resolved SHD suite page.",
+    "PubMed queries 'EchoNavigator' (33 hits) and 'Philips echocardiography fluoroscopy fusion' (18 hits) returned no additional publications on Automatic Annotations, AutoViews or DeviceGuide beyond Biaggi 2026 and Hahn 2025; other hits concern the base fusion product or are case reports."
    ],
    "sources": [
     {
      "fact": "K200713 decision date 2020-04-09, product code LLZ, applicant Philips Medical Systems Nederland B.V., Special 510(k)",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K200713",
      "verification": "openfda"
     },
     {
      "fact": "K221270 decision date 2022-05-31, product code LLZ, Special 510(k)",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K221270",
      "verification": "openfda"
     },
     {
      "fact": "K253614 decision date 2026-03-17, product code QIH, Traditional 510(k)",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K253614",
      "verification": "openfda"
     },
     {
@@ -1602,10 +2420,25 @@ window.AIECHO_PRODUCTS = {
      "fact": "NCT02529111 and NCT02608008 located via ClinicalTrials.gov API v2 search for 'EchoNavigator'",
      "url_or_file": "https://clinicaltrials.gov/api/v2/studies?query.term=EchoNavigator",
      "verification": "clinicaltrials_gov"
+    },
+    {
+     "fact": "Verified this session: Philips product URL https://www.usa.philips.com/healthcare/product/HCOPT08/echonavigator-live-echo-and-live-x-ray-fusion-tool redirects (HTTP 200 after redirect) to the Azurion SHD suite page",
+     "url_or_file": "https://www.usa.philips.com/healthcare/image-guided-therapy/shd-suite",
+     "verification": "company"
+    },
+    {
+     "fact": "Jungen 2015 (PMID 26465747) and Afzal 2017 (PMID 27966185) DOIs and abstracts confirmed via Crossref and PubMed efetch; Hascoet 2018 n=31 and registration-distance results confirmed via PubMed efetch",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&retmode=xml&id=26465747,27966185,30219347",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "NCT02529111 (Toulouse, 'Echonavigator' software, enrollment 20, completed) and NCT02608008 (Duesseldorf, EchoNavigator Release II, enrollment 500, status unknown) confirmed via ClinicalTrials.gov API v2",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies/NCT02529111",
+     "verification": "clinicaltrials_gov"
     }
    ],
-   "_source_file": "system-philips-echonavigator.json",
-   "_verified": false,
+   "_source_file": "system-philips-echonavigator.verified.json",
+   "_verified": true,
    "first_cleared": "2020-04-09",
    "latest_cleared": "2026-03-17",
    "n_clearances": 3,
@@ -1617,9 +2450,9 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 4,
-   "n_papers_resolved": 5,
-   "n_papers": 5,
-   "research_verified": false,
+   "n_papers_resolved": 7,
+   "n_papers": 7,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -2182,7 +3015,7 @@ window.AIECHO_PRODUCTS = {
     "abdominal (quality only)"
    ],
    "deployment": [
-    "on-device (Exo Iris handheld, 'on-edge, no Wi-Fi required')",
+    "on-device (Exo Iris handheld; company states the AI runs on the device without internet connectivity)",
     "software module / API integrated into a legally marketed ultrasound system",
     "DICOM-input SaMD",
     "Exo Works cloud/PACS for storage"
@@ -2531,7 +3364,7 @@ window.AIECHO_PRODUCTS = {
      "verification": "fda_summary"
     },
     {
-     "k_number": "K232501",
+     "k_number": null,
      "endpoint": "ExoAI LVEF vs clinical-report LVEF, by view (retrospective)",
      "metric": "RMSE / correlation / accuracy for EF<50%",
      "value": "RMSE 7.58% (A2C), 7.45% (A4C), 7.29% (PLAX); r 0.79, 0.75, 0.89; low-EF accuracy 83%, 80%, 91%",
@@ -2540,37 +3373,37 @@ window.AIECHO_PRODUCTS = {
      "n_patients": 441,
      "n_sites": null,
      "dataset_description": "441 patients (70% male, age 67.3 +/- 15.3, BMI 29.5 +/- 7.4), retrospective",
-     "subgroup_notes": null,
+     "subgroup_notes": "Source: peer-reviewed abstract, Vega 2024 (doi 10.3390/diagnostics14161719); not from an FDA submission. Whether the evaluated algorithm version is the one cleared under K232501 is not stated.",
      "quote": "ExoAI achieved a root mean squared error of 7.58% in A2C, 7.45% in A4C, and 7.29% in PLAX, and correlations of 0.79, 0.75, and 0.89, respectively. As for the detection of low EF values (EF < 50%), ExoAI achieved an accuracy of 83% in A2C, 80% in A4C, and 91% in PLAX.",
      "page": null,
      "verification": "peer_reviewed"
     },
     {
-     "k_number": "K232501",
+     "k_number": null,
      "endpoint": "ExoLungAI A-line and B-line detection/quantification (ICU COVID-19 cohort)",
      "metric": "sensitivity / specificity / weighted kappa / ICC",
      "value": "A-line sens 91%, spec 81%; B-line sens 84%, spec 86%; B-line count weighted kappa 0.77 (95% CI 0.74-0.80), ICC 0.87 (0.85-0.89)",
      "comparator": "expert ground truth",
      "n_studies": 692,
      "n_patients": 48,
-     "n_sites": 1,
+     "n_sites": null,
      "dataset_description": "692 lung ultrasound scans from 48 ICU patients admitted for COVID-19 symptoms",
-     "subgroup_notes": null,
+     "subgroup_notes": "Source: peer-reviewed abstract, Nekoui 2024 (doi 10.3390/diagnostics14222526); not from an FDA submission. Whether the evaluated algorithm version is the one cleared under K232501 is not stated.",
      "quote": "ExoLungAI achieved a sensitivity of 91% and specificity of 81% for A-line detection. For B-line detection, it attained a sensitivity of 84% and specificity of 86%. In quantifying B-lines, the algorithm achieved a weighted kappa score of 0.77 (95% CI 0.74 to 0.80) and an ICC of 0.87 (95% CI 0.85 to 0.89)",
      "page": null,
      "verification": "peer_reviewed"
     },
     {
-     "k_number": "K240953",
+     "k_number": null,
      "endpoint": "Novice-acquired Exo Iris POCUS-AI LVEF in ICU: reliability and detection of LVEF <= 40%",
      "metric": "ICC / sensitivity / specificity",
      "value": "inter-rater ICC 0.88-0.94; specificity 90% (PLAX) for LVEF <= 40%; sensitivity 56-70%; images sufficient in 96% of patients within 5 min",
      "comparator": "expert echo sonographer LVEF",
      "n_studies": 80,
      "n_patients": 75,
-     "n_sites": 1,
+     "n_sites": null,
      "dataset_description": "30 novices scanned 10 ICU patients (80 scans) with Exo Iris AI guidance; sonographer scanned 65 further patients with POCUS-AI vs conventional protocol",
-     "subgroup_notes": "PLAX views acquired faster than A4C (1.5 vs 2.3 min)",
+     "subgroup_notes": "Source: peer-reviewed abstract, Gallant 2025 (doi 10.3390/jcm14092899); not from an FDA submission. Whether the evaluated algorithm version is the one cleared under K240953 is not stated. PLAX views acquired faster than A4C (1.5 vs 2.3 min)",
      "quote": "Inter-rater reliability of LVEF estimation was very high (ICC 0.88-0.94) whether images were obtained by novices or experts. In n = 65 patients, POCUS-AI LVEF was highly specific for a decreased LVEF ≤ 40% (SP = 90% for PLAX) but only moderately sensitive (SN = 56-70%).",
      "page": null,
      "verification": "peer_reviewed"
@@ -2591,7 +3424,7 @@ window.AIECHO_PRODUCTS = {
     "n_sites": null,
     "description": "K232501: LVEF tested on 151 subjects and lung on 125 subjects from 'multiple clinical sites in metropolitan cities with diverse racial patient populations', gender, age 20-96, BMI 15.3-52.8, cart-based and portable scanners; ground truth = mean of three experts. K240953: wall thickness and IVC on 100 subjects each; Quality AI on 184 patients/226 clips retrospective plus 396 prospective scans by 26 users. K242359: GLS subject count not legible in summary; ground truth = Us2.v2. K260217: abdominal Quality AI on 184 patients/200 clips plus 186 prospective scans by 12 users.",
     "independent_of_training": true,
-    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K232501.pdf (p. 7); K240953.txt (p. 9-10); K242359.txt (p. 7); K260217.txt (p. 9-10)",
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K232501.pdf (p. 7); https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240953.pdf (p. 9-10); https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242359.pdf (p. 7); https://www.accessdata.fda.gov/cdrh_docs/pdf26/K260217.pdf (p. 9-10)",
     "verification": "fda_summary"
    },
    "prior_validations": [
@@ -2611,7 +3444,7 @@ window.AIECHO_PRODUCTS = {
      "verification": "company"
     },
     {
-     "description": "Press release April 2, 2025: 510(k)-cleared GLS on Exo Iris described as the company's 10th FDA-cleared AI application and 'first and only handheld ultrasound to have real-time, on-device GLS'; no performance data.",
+     "description": "Press release April 2, 2025: 510(k)-cleared GLS on Exo Iris described by the company as its 10th FDA-cleared AI application; no performance data.",
      "source_url": "https://www.exo.inc/article/breakthrough-ai-indicator-for-hfpef-and-cardiotoxicity-added-to-exo-iris",
      "verification": "company"
     }
@@ -2718,7 +3551,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "Decision dates, product codes, applicants, clearance type (Special for K260217)",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json",
      "verification": "fda_database"
     },
     {
@@ -2757,8 +3590,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "fda_database"
     }
    ],
-   "_source_file": "kosmos-exo.json",
-   "_verified": false,
+   "_source_file": "kosmos-exo.verified.json",
+   "_verified": true,
    "first_cleared": "2023-11-17",
    "latest_cleared": "2026-02-24",
    "n_clearances": 4,
@@ -2772,7 +3605,7 @@ window.AIECHO_PRODUCTS = {
    "n_performance_claims": 19,
    "n_papers_resolved": 5,
    "n_papers": 5,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -2921,9 +3754,9 @@ window.AIECHO_PRODUCTS = {
      "verification": "news"
     },
     {
-     "description": "Company critical-care page cites MAE 0.42 cm, 'comparable to expert cardiologists' with 'lower variability than the inter-observer variability typically seen between cardiologists', attributed to a Baldetti L. presentation at THT 2026 (March 2026).",
+     "description": "Company critical-care page reportedly cites the 0.42 cm MAE and attributes a comparison against cardiologist inter-observer variability to a Baldetti L. presentation at THT 2026 (March 2026). The page returned HTTP 403 at verification, so these statements are not confirmed; the only FDA-documented figure is the 0.42 cm MAE in K252235.",
      "source_url": "https://ultrasight.com/critical-care/",
-     "verification": "company"
+     "verification": "unverified"
     }
    ],
    "papers": [],
@@ -2932,7 +3765,8 @@ window.AIECHO_PRODUCTS = {
     "No peer-reviewed publication of PVAD IQ found on PubMed (searches: Impella/microaxial + AI/echo; Baldetti L); the THT 2026 presentation cited by the company was not located as an indexed abstract.",
     "Training dataset size, number of sites, ultrasound vendors, and which PVAD models (Impella variants) were in the test set are not stated.",
     "Number of test sites and which echo views are supported in the cleared version are not stated.",
-    "No clinicaltrials.gov registration found for PVAD IQ or the Shamir Medical Center feasibility study under 'PVAD IQ' or 'UltraSight Impella'."
+    "No clinicaltrials.gov registration found for PVAD IQ or the Shamir Medical Center feasibility study under 'PVAD IQ' or 'UltraSight Impella'.",
+    "Company product page (ultrasight.com/critical-care) could not be fetched at verification (HTTP 403); the Feb 25, 2026 press release (natlawreview) confirms the clearance, the Echo Stewardship Platform integration claim, and the Shamir Medical Center ICU FoCUS feasibility study, but gives no performance data."
    ],
    "sources": [
     {
@@ -2942,7 +3776,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "Decision date 2025-12-18, product code QIH, applicant",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json (openFDA 510(k) endpoint)",
      "verification": "fda_database"
     },
     {
@@ -2956,8 +3790,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "news"
     }
    ],
-   "_source_file": "guidance.json",
-   "_verified": false,
+   "_source_file": "guidance.verified.json",
+   "_verified": true,
    "first_cleared": "2025-12-18",
    "latest_cleared": "2025-12-18",
    "n_clearances": 1,
@@ -2970,7 +3804,7 @@ window.AIECHO_PRODUCTS = {
    "n_performance_claims": 4,
    "n_papers_resolved": 0,
    "n_papers": 0,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -3162,6 +3996,21 @@ window.AIECHO_PRODUCTS = {
      "verification": "fda_summary"
     },
     {
+     "k_number": "K223347",
+     "endpoint": "Human factors summative usability validation (critical task)",
+     "metric": "Use errors / task completion",
+     "value": "All participants completed all tasks including the critical task; 0 use errors, 0 close calls (number of participants not stated)",
+     "comparator": "N/A",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Summative usability validation per FDA 2016 human factors guidance; participant count not given in summary",
+     "subgroup_notes": null,
+     "quote": "All participants successfully completed the testing sessions and performed the critical task identified in the study without any use errors, close calls, or other issues.",
+     "page": 12,
+     "verification": "fda_summary"
+    },
+    {
      "k_number": "K251416",
      "endpoint": "Quality bar: diagnosable vs non-diagnosable clip classification (updated test set)",
      "metric": "AUC and FPR (point estimates not reported)",
@@ -3170,7 +4019,7 @@ window.AIECHO_PRODUCTS = {
      "n_studies": null,
      "n_patients": 134,
      "n_sites": null,
-     "dataset_description": "134 patients (111 USA, 23 Israel), 26,362 clips; BMI 18-39.3; age 18-91 years; 50.7% female / 49.3% male",
+     "dataset_description": "134 patients (111 USA, 23 Israel), 26,362 clips; BMI 18-39.3; age 18-91 years; 50.7% female / 49.3% male. Quote spans PDF pages 9-10 (510(k) Summary pages 5-6 of 8); the AUC/FPR results sentence is on PDF page 10.",
      "subgroup_notes": "Subgroup analyses across BMI (<25, >=25 and <30, >=30), age (<50, >=50 and <65, >=65), sex, and US vs non-US; results not reported numerically.",
      "quote": "The test dataset was collected from clinical sites geographically distinct from those used for the development dataset. It included a total of 134 patients - 111 from the USA and 23 from Israel - comprising 26,362 ultrasound clips. ... The mean area under the receiver operating characteristic curve (AUC) was within the pre-defined acceptance criteria (AUC > 0.8) with 95% CI showing good classification performance, relative to the success criteria. The mean false positive rate (FPR) met the acceptance criteria of FPR <0.2 with 95% CI showing good classification performance.",
      "page": 9,
@@ -3227,19 +4076,19 @@ window.AIECHO_PRODUCTS = {
    },
    "prior_validations": [
     {
-     "description": "CE Marking in the EU and UKCA Marking in the UK for the real-time cardiac ultrasound guidance software, announced around ESC 2022 (per trade press).",
-     "source_url": "https://www.fiercebiotech.com/medtech/esc-2022-ultrasight-claims-european-approval-ai-guided-heart-ultrasound",
-     "verification": "news"
-    },
-    {
-     "description": "Company press release for K223347 clearance (July 27, 2023) states compatibility with Philips Lumify and cites the 2022 multicenter study (LV function 99.6%, RV size 93%, pericardial effusion 100%).",
+     "description": "Company press release for the K223347 clearance (July 27, 2023) states UltraSight achieved CE Marking in the EU and UKCA Marking in the UK for its real-time guidance software for cardiac ultrasound (no date of marking given).",
      "source_url": "https://www.prnewswire.com/news-releases/fda-grants-clearance-for-ultrasights-ai-powered-cardiac-ultrasound-technology-301886516.html",
      "verification": "news"
     },
     {
-     "description": "Company announcement (Jan 6, 2026) of FDA clearance to expand the Echo Stewardship Platform to handheld, laptop and cart-based ultrasound systems (corresponds to K251416 and its PCCP); no performance numbers given.",
+     "description": "Company press release for K223347 clearance (July 27, 2023) states the software is compatible with the Philips Lumify ultrasound system; the release does not report study performance numbers.",
+     "source_url": "https://www.prnewswire.com/news-releases/fda-grants-clearance-for-ultrasights-ai-powered-cardiac-ultrasound-technology-301886516.html",
+     "verification": "news"
+    },
+    {
+     "description": "Company announcement (Jan 6, 2026) of FDA clearance to expand the Echo Stewardship Platform to handheld, laptop and cart-based ultrasound systems (corresponds to K251416 and its PCCP); no performance numbers given. Page returned HTTP 403 at verification; content not independently confirmed.",
      "source_url": "https://ultrasight.com/fda-clearance-across-ultrasound-systems/",
-     "verification": "company"
+     "verification": "unverified"
     }
    ],
    "papers": [
@@ -3307,19 +4156,6 @@ window.AIECHO_PRODUCTS = {
      "n_subjects": 100,
      "key_result": "Protocol only (NCT06486467): minimally trained operator vs expert LVOT VTI measurement, both guided by UltraSight AI to obtain the five-chamber view, before/after 250 mL fluid challenge in ICU patients; planned n=100.",
      "verification": "doi_resolved"
-    },
-    {
-     "title": "National Cost Savings From Use of Artificial Intelligence Guided Echocardiography in the Assessment of Intermediate-Risk Patients With Syncope in the Emergency Department",
-     "first_author": "Goldsmith A",
-     "journal": "JACEP Open",
-     "year": 2025,
-     "doi": "10.1016/j.acepjo.2025.100139",
-     "pmid": "40297198",
-     "url": "https://doi.org/10.1016/j.acepjo.2025.100139",
-     "relation": "other",
-     "n_subjects": null,
-     "key_result": "Monte Carlo cost model (returned by PubMed 'UltraSight' query): AI-assisted TTE-first strategy estimated to save $815M +/- $260M annually; not a validation of the device.",
-     "verification": "doi_resolved"
     }
    ],
    "clinical_trials": [
@@ -3373,7 +4209,8 @@ window.AIECHO_PRODUCTS = {
     "K251416 development (training) dataset size is not stated; the 580-subject / 5-million-frame figure comes from K223347 and may have grown.",
     "K251416 PDF pages 5-12 have non-standard font encoding so the pypdf text is garbled; values were read from rendered page images (PDF pages 9-12) - page numbers refer to PDF page order.",
     "Whether the pilot study (61 subjects) was published in a peer-reviewed journal could not be determined.",
-    "Which additional ultrasound systems have been added under the K251416 PCCP (company Jan-2026 release mentions handheld, laptop and cart-based systems) is not disclosed in the FDA summary."
+    "Which additional ultrasound systems have been added under the K251416 PCCP (company Jan-2026 release mentions handheld, laptop and cart-based systems) is not disclosed in the FDA summary.",
+    "Schissel 2026 (EHJ Digital Health) has four UltraSight-affiliated co-authors; it is a company-co-authored secondary analysis rather than an independent external validation."
    ],
    "sources": [
     {
@@ -3388,7 +4225,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "Decision dates, product code QJU, applicant names",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json (openFDA 510(k) endpoint)",
      "verification": "fda_database"
     },
     {
@@ -3407,13 +4244,13 @@ window.AIECHO_PRODUCTS = {
      "verification": "company"
     },
     {
-     "fact": "CE/UKCA marking and July 2023 clearance press coverage",
-     "url_or_file": "https://www.diagnosticimaging.com/view/ultrasight-ai-powered-cardiac-ultrasound-guidance-fda-nod",
+     "fact": "CE/UKCA marking statement and July 2023 clearance press release",
+     "url_or_file": "https://www.prnewswire.com/news-releases/fda-grants-clearance-for-ultrasights-ai-powered-cardiac-ultrasound-technology-301886516.html",
      "verification": "news"
     }
    ],
-   "_source_file": "guidance.json",
-   "_verified": false,
+   "_source_file": "guidance.verified.json",
+   "_verified": true,
    "first_cleared": "2023-07-24",
    "latest_cleared": "2025-12-17",
    "n_clearances": 2,
@@ -3424,10 +4261,10 @@ window.AIECHO_PRODUCTS = {
    "product_codes": [
     "QJU"
    ],
-   "n_performance_claims": 10,
-   "n_papers_resolved": 6,
-   "n_papers": 6,
-   "research_verified": false,
+   "n_performance_claims": 11,
+   "n_papers_resolved": 5,
+   "n_papers": 5,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -4380,7 +5217,7 @@ window.AIECHO_PRODUCTS = {
    "deployment": [
     "ultrasound-system-embedded"
    ],
-   "summary": "Series of ten 510(k) clearances (2021-2025) adding AI/ML cardiac features to the Philips EPIQ and Affiniti cart-based ultrasound systems (software VM9-VM13) and the 5000 Compact Series: semi-automated 2D/Doppler/M-mode adult TTE measurements (Auto Measure V1-V3), Doppler-spectrum classification for calculation-package navigation (Smart Doppler View ID), deep-learning apical view selection for AutoStrain LV / 2D Auto LV / contrast EF (Smart View Select v1, v2, v2 Contrast), ML segmental wall-motion scoring (SWM, SWM v2), ML model-based 3D tricuspid annulus quantification (3D Auto TV), fluid-dynamic 3D color-flow MR quantification using an ML-generated mitral model (3D Auto CFQ), AI contrast-enhanced biplane LVEF (Auto EF with contrast), and an AI R-wave timing backup for clips without ECG (R-Trigger). Several features integrate DiA Imaging Analysis LVivo algorithms (K212466, K161382, K243862, K243235). All clearances relied on retrospective standalone performance studies; no clinical investigation was required for any of them.",
+   "summary": "Series of ten 510(k) clearances (2021-2025) adding AI/ML cardiac features to the Philips EPIQ and Affiniti cart-based ultrasound systems (software VM9-VM13) and the 5000 Compact Series: semi-automated 2D/Doppler/M-mode adult TTE measurements (Auto Measure V1-V3), Doppler-spectrum classification for calculation-package navigation (Smart Doppler View ID), deep-learning apical view selection for AutoStrain LV / 2D Auto LV / contrast EF (Smart View Select v1, v2, v2 Contrast), ML segmental wall-motion scoring (SWM, SWM v2), ML model-based 3D tricuspid annulus quantification (3D Auto TV), fluid-dynamic 3D color-flow MR quantification using an ML-generated mitral model (3D Auto CFQ), AI contrast-enhanced biplane LVEF (Auto EF with contrast), and an AI R-wave timing backup for clips without ECG (R-Trigger). Several features integrate DiA Imaging Analysis LVivo algorithms (K212466, K161382, K243862, K243235). All clearances relied on retrospective standalone performance studies; nine of the ten summaries state that no clinical investigation was needed, and K211597 reports only a non-clinical Performance Validation Study without results.",
    "intended_use_quote": "The intended use of EPIQ Ultrasound Diagnostic System is diagnostic ultrasound imaging and fluid flow analysis of the human body.",
    "indications_for_use_quote": "The intended use of EPIQ Ultrasound Diagnostic System is diagnostic ultrasound imaging and fluid flow analysis of the human body, with the following indications for use: Abdominal, Cardiac Adult, Cardiac other (Fetal), Cardiac Pediatric, Cerebral Vascular, Cephalic (Adult), Cephalic (Neonatal), Fetal/Obstetric, Gynecological, Intraoperative (Vascular), Intraoperative (Cardiac), intra-luminal, intra-cardiac echo, Musculoskeletal (Conventional), Musculoskeletal (Superficial), Ophthalmic, Other: Urology, Pediatric, Peripheral Vessel, Small Organ (Breast, Thyroid, Testicle), Transesophageal (Cardiac), Transrectal, Transvaginal, Lung.",
    "embedded_ai_features": [
@@ -4410,7 +5247,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "name": "3D Auto TV (Tricuspid Valve)",
-     "function": "Semi-automated 3D TTE/TEE tricuspid annulus quantification via machine-learning model-based segmentation (same method as QLAB 3D Auto MV, K200974, retrained on tricuspid images); outputs TV annulus perimeter (2D/3D), max/min diameter, perimeter-derived diameter, height and area; user edits/accepts/rejects landmark proposals.",
+     "function": "Semi-automated 3D TTE/TEE tricuspid annulus quantification via machine-learning model-based segmentation (same method as QLAB 3D Auto MV, K200974, retrained on tricuspid images); outputs TV annulus perimeter (2D/3D), max/min diameter, perimeter-derived diameter, height and area; user edits/accepts/rejects landmark proposals. Note: the contour-generation text for 3D Auto TV in K240980 (pp. 8-9) reads 'mitral valve anatomical locations' verbatim, apparently carried over from the 3D Auto MV reference device; the comparison column states the TV algorithm is 'trained on tricuspid valve images'.",
      "first_k_number": "K240980",
      "quote": "3D surface model is created semi-automatically using machine learning algorithm without user interaction. User is able to edit, accept, or reject the initial landmark proposals of the mitral valve anatomical locations."
     },
@@ -5002,10 +5839,10 @@ window.AIECHO_PRODUCTS = {
      "metric": "Bland-Altman LoA (ms)",
      "value": "lower LoA -58.06 ms (95% CI -59.34, -56.78); upper LoA 69.69 ms (95% CI 68.41, 70.97); acceptance [-99.5, 99.5] ms",
      "comparator": "ECG-derived R-trigger from the on-cart physio board",
-     "n_studies": 7309,
-     "n_patients": 3964,
+     "n_studies": null,
+     "n_patients": 1894,
      "n_sites": null,
-     "dataset_description": "7309 cardiac TTE clips from 3964 subjects acquired on Philips systems; R-trigger timestamp cohort n=1894 (age 58.5 +/- 17.0; 47.3% male; 42.8% Black, 31.4% White, 3.3% Asian)",
+     "dataset_description": "R-trigger time-stamp cohort (Table 3): 1894 subjects (age 58.5 +/- 17.0; 47.3% male; 42.8% Black, 31.4% White, 3.3% Asian, 22.6% Other/Mixed; BMI 28.5 +/- 6.8). The summary states 7309 cardiac TTE clips from 3964 subjects were used across all three endpoints; the clip count for endpoint 1 alone is not stated.",
      "subgroup_notes": "Bias and LoA reported by ethnicity (black/other/white), cardiac health status, region (North America vs rest of world), age band and BMI band per imaging mode (Tables 6-7, pp. 18-19)",
      "quote": "Endpoint 1: R-trigger 1 R-wave peak time stamp -58.06ms (-59.34, -56.78) 69.69ms (68.41, 70.97) Time Stamp [-99.5ms, 99.5ms]",
      "page": 16,
@@ -5047,10 +5884,10 @@ window.AIECHO_PRODUCTS = {
      "metric": "Bland-Altman LoA (relative)",
      "value": "LVIDd -9.33% (-9.84, -8.81) to 9.33% (8.82, 9.85), acceptance +/-30%; MV E Vel -12.00% to 12.98%, acceptance +/-25%; TAPSE -19.65% to 18.23%, acceptance +/-34%; RA Volume (A4C) -27.08% to 32.89%, acceptance +/-46%; all 32 met",
      "comparator": "AutoMeasure with ECG-based R-trigger",
-     "n_studies": 7309,
+     "n_studies": null,
      "n_patients": 3964,
      "n_sites": null,
-     "dataset_description": "AutoMeasure cohort: 3964 subjects (age 59.0 +/- 16.7; 48.6% male; 45.2% Black, 30.3% White, 2.7% Asian, 21.9% Other/Mixed; BMI 28.9 +/- 7.1)",
+     "dataset_description": "AutoMeasure cohort (Table 1): 3964 subjects (age 59.0 +/- 16.7; 48.6% male; 45.2% Black, 30.3% White, 2.7% Asian, 21.9% Other/Mixed; BMI 28.9 +/- 7.1). 7309 clips were used across all three endpoints; clips for endpoint 2 alone are not stated.",
      "subgroup_notes": "Full table of 32 AutoMeasure parameters on pp. 16-18",
      "quote": "5 LVIDd -9.33 % (-9.84%, -8.81 %) 9.33 % (8.82 %, 9.85%) Distance [-30%, 30%]",
      "page": 16,
@@ -5140,11 +5977,26 @@ window.AIECHO_PRODUCTS = {
      "n_studies": null,
      "n_patients": null,
      "n_sites": null,
-     "dataset_description": "Not described in press release (footnote [2] not accessible via fetch)",
+     "dataset_description": "Press-release footnote [2]: 'Based on Philips external testing as compared to manual measurement methods.' No sample size, sites, or study design given; not traceable to a citable study.",
      "subgroup_notes": null,
      "quote": "Using Auto Measure on Philips EPIQ CVx and Affiniti CVx ultrasound systems can reduce the time for standard 2D echo measurements by 51%",
      "page": null,
      "verification": "company"
+    },
+    {
+     "k_number": "K243793",
+     "endpoint": "R-Trigger study: all 35 pre-specified hypotheses across 3 endpoints vs acceptance criteria",
+     "metric": "pass/fail",
+     "value": "All 35 hypotheses (1 R-wave timestamp, 32 AutoMeasure parameters, EF and GLS) met pre-defined acceptance criteria",
+     "comparator": "ECG-based R-trigger workflow (ground truth)",
+     "n_studies": null,
+     "n_patients": 3964,
+     "n_sites": null,
+     "dataset_description": "7309 cardiac TTE clips from 3964 subjects across the three endpoints",
+     "subgroup_notes": null,
+     "quote": "Total of 35 hypotheses covering 3 endpoints were tested in this study in a pre- defined order with pre-defined acceptance criteria.  Study produced confidence intervals for the limits of agreement and correlation, for each parameter (hypothesis) tested, meeting the pre- defined acceptance criteria for the study.",
+     "page": 20,
+     "verification": "fda_summary"
     }
    ],
    "training_data": {
@@ -5160,9 +6012,9 @@ window.AIECHO_PRODUCTS = {
     "n_studies": 7127,
     "n_patients": 3964,
     "n_sites": null,
-    "description": "Largest validation set in the batch: AutoMeasure V3 (K243794) 7127 TTE clips from 3964 adult subjects, multi-institution (USA, Asia, Europe), enrolled 2015-June 2024; the same 3964-subject cohort (7309 clips) was used for R-Trigger (K243793). Other feature validations: Smart Doppler View ID 1100 clips / 400 subjects, one US hospital (K233788); Auto Measure V2 detectors 500 studies (K242800); SVS v2 Contrast 46 evaluable subjects from 2 sites (K251455); SVS v1/v2, SWM, SWM v2, 3D Auto TV, 3D Auto CFQ and Auto EF with contrast sample sizes not stated (K240850, K240980, K250886, K251110).",
+    "description": "Largest validation set in the batch: AutoMeasure V3 (K243794) 7127 TTE clips from 3964 adult subjects, multi-institution (USA, Asia, Europe), enrolled 2015-June 2024; the R-Trigger study (K243793) reports 7309 clips from 3964 subjects with a demographic table identical to K243794 (AutoMeasure cohort), plus an 82-subject AutoStrain cohort and an 1894-subject R-wave time-stamp cohort. Other feature validations: Smart Doppler View ID 1100 clips / 400 subjects, one US hospital (K233788); Auto Measure V2 detectors 500 studies (K242800); SVS v2 Contrast 46 evaluable subjects from 2 sites (K251455); SVS v1/v2, SWM, SWM v2, 3D Auto TV, 3D Auto CFQ and Auto EF with contrast sample sizes not stated (K240850, K240980, K250886, K251110).",
     "independent_of_training": true,
-    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243794.pdf (pp. 15-16); K233788.txt (p. 10: 'completely distinct from that used during training'); K242800.txt (p. 20); K251455.txt (p. 12)",
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243794.pdf (pp. 15-16); https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233788.pdf (p. 10: 'completely distinct from that used during training'); https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242800.pdf (p. 20); https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251455.pdf (p. 12)",
     "verification": "fda_summary"
    },
    "prior_validations": [
@@ -5193,7 +6045,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1016/j.echo.2026.05.042",
      "relation": "external-validation",
      "n_subjects": 185,
-     "key_result": "3D Auto CFQ on 185 consecutive TEE MR patients: feasibility 97.3%; intra/inter-observer ICC 0.96/0.91; RVol lower than 2D PISA (36.3 vs 65.9 mL) with fewer severe classifications (16.2% vs 53.3%); in a 29-patient CMR subgroup, agreement with CMR r=0.860 (ICC 0.92) vs 2D PISA r=0.694 (ICC 0.64).",
+     "key_result": "3D Auto CFQ on 185 consecutive TEE MR patients: feasibility 97.3%; intra/inter-observer ICC 0.96/0.91; RVol lower than 2D PISA (36.3 vs 65.9 mL) with fewer severe classifications (16.2% vs 53.3%); in a 29-patient CMR subgroup, agreement with CMR r=0.860 (ICC 0.92) vs 2D PISA r=0.694 (ICC 0.64). Abstract names the tool as '3D Auto CFQ'.",
      "verification": "doi_resolved"
     },
     {
@@ -5218,8 +6070,8 @@ window.AIECHO_PRODUCTS = {
      "pmid": "35605896",
      "url": "https://doi.org/10.1016/j.echo.2022.05.005",
      "relation": "algorithm-development",
-     "n_subjects": null,
-     "key_result": "Semiautomated 3D color-flow RVol with dynamic flow curves compared with 2D PISA (r=0.60); 3D RVol significantly lower than 2D PISA. Abstract does not name the vendor; relation to 3D Auto CFQ inferred from method description only (see open_questions).",
+     "n_subjects": 50,
+     "key_result": "50 TEE patients (25 primary, 25 secondary MR): semiautomated 3D color-flow RVol with dynamic flow curves vs 2D PISA, r=0.60; 3D RVol significantly lower than 2D PISA. Abstract does not name the vendor; relation to 3D Auto CFQ inferred from method description only (see open_questions).",
      "verification": "doi_resolved"
     },
     {
@@ -5247,6 +6099,19 @@ window.AIECHO_PRODUCTS = {
      "n_subjects": 561,
      "key_result": "Fully automated AutoStrain GLS feasible in 99.5% of 561 community subjects; 0.5 min/patient vs 4.5 min manual; about 40% of automated traces judged to need manual correction; automated GLS predictive value inferior to semi-automated GLS. Applies to AutoStrain LV (K190913), the downstream application for Smart View Select and R-Trigger.",
      "verification": "doi_resolved"
+    },
+    {
+     "title": "Reference change value of global longitudinal strain in clinical practice: A test-retest quality implementation project",
+     "first_author": "Tuzovic M",
+     "journal": "Echocardiography",
+     "year": 2022,
+     "doi": "10.1111/echo.15482",
+     "pmid": "36376263",
+     "url": "https://doi.org/10.1111/echo.15482",
+     "relation": "other",
+     "n_subjects": 41,
+     "key_result": "Test-retest study of Philips AutoStrain vs aCMQ GLS in 41 of 44 screened subjects: AutoStrain median total CV 7.4% vs 17.6% for aCMQ (p<.001) with 80% less analysis time; reference change value for GLS about 15% (17-21% in all comers). Applies to AutoStrain LV (K190913), the downstream application for Smart View Select and R-Trigger; not a study of the SVS/R-Trigger features themselves.",
+     "verification": "doi_resolved"
     }
    ],
    "clinical_trials": [],
@@ -5255,11 +6120,12 @@ window.AIECHO_PRODUCTS = {
     "K240850, K240980, K250886 (total N) and K251110 do not state validation sample sizes; K243794 does not report per-parameter numeric results despite 32 hypotheses.",
     "Training-set sizes are disclosed only for Auto Measure V2 (K242800, >6000 studies); none disclosed for Smart Doppler View ID, SVS, SWM, 3D Auto TV, 3D Auto CFQ, Auto EF with contrast, or R-Trigger.",
     "Number of validation sites for AutoMeasure V3 / R-Trigger is described only as 'multiple institutions, including USA, Asia and Europe'; exact count not stated.",
-    "No PubMed-indexed peer-reviewed validation of Philips Auto Measure / AutoMeasure, Smart Doppler View ID, Smart View Select, R-Trigger, or the on-cart Auto EF with contrast was found by feature-name search this session; the vendor 51% time-savings claim (press release footnote [2]) could not be traced to a citable study.",
+    "No PubMed-indexed peer-reviewed validation of Philips Auto Measure / AutoMeasure, Smart Doppler View ID, Smart View Select, R-Trigger, or the on-cart Auto EF with contrast was found by feature-name search (researcher pass and verification pass, 2026-09-05); the vendor 51% time-savings claim rests on press-release footnote 'Philips external testing' with no citable study.",
     "Cotella 2025 (tricuspid annulus) and Singh 2022 (3D MR volume) abstracts do not name the software vendor; their mapping to 3D Auto TV / 3D Auto CFQ is inferred and unconfirmed.",
     "AutoStrain LV / 2D Auto LV (K190913) and QLAB 3D Auto MV (K200974) are referenced as previously cleared but are outside this batch; their own summaries were not reviewed here.",
     "openFDA lists the K211597 applicant as 'Philips Medical Systems' while the summary names Philips Ultrasound, Inc.; later clearances list Philips Ultrasound, LLC.",
-    "K242800 training-pool figure is stated as 'more than 6000 studies'; n_studies=6000 is recorded as a lower bound, not an exact count."
+    "K242800 training-pool figure is stated as 'more than 6000 studies'; n_studies=6000 is recorded as a lower bound, not an exact count.",
+    "K243793 reports a single pooled clip count (7309 clips / 3964 subjects) across three endpoints; per-endpoint clip counts are not stated, and the R-wave time-stamp endpoint cohort is 1894 subjects (Table 3)."
    ],
    "sources": [
     {
@@ -5314,27 +6180,27 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "Decision dates, product codes, applicants for all clearances",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json (openFDA 510(k) endpoint)",
      "verification": "fda_summary"
     },
     {
-     "fact": "Vendor claim: Auto Measure reduces time for standard 2D echo measurements by 51%; Auto Measure AI, AutoStrain LA/RV available across CVx portfolio (press release 2021-12-09)",
+     "fact": "Vendor claim: Auto Measure reduces time for standard 2D echo measurements by 51% (footnote [2]: 'Based on Philips external testing as compared to manual measurement methods'); Auto Measure AI, AutoStrain LA/RV available across CVx portfolio (press release 2021-12-09, fetched 2026-09-05)",
      "url_or_file": "https://www.usa.philips.com/a-w/about/news/archive/standard/news/press/2021/20211209-philips-introduces-fully-integrated-echocardiography-experience-bringing-together-new-transducer-technology-ai-driven-automated-measurements-and-remote-access-at-euroecho-2021.html",
      "verification": "company"
     },
     {
-     "fact": "EPIQ CVx product page names AutoStrain LV, Smart View Select, 2D Auto EF, 2D Auto EF Advanced (contrast and non-contrast), Auto Segmental Wall Motion Scoring, 3D Auto RV/TV/CFQ, Auto Measure RV / MV Inflow",
+     "fact": "EPIQ CVx product page names AutoStrain LV, Smart View Select, 2D Auto EF, 2D Auto EF Advanced (contrast and non-contrast), Segmental Wall Motion Scoring, 3D Auto RV/TV/CFQ, Auto LAA, Auto Measure RV / MV Inflow (fetched 2026-09-05)",
      "url_or_file": "https://www.usa.philips.com/healthcare/product/HC795231/epiq-cvx-premium-cardiology-ultrasound-system",
      "verification": "company"
     },
     {
-     "fact": "PubMed E-utilities esearch/esummary/efetch and Crossref works API used to identify and confirm papers (queries: AutoStrain, 3D Auto CFQ, tricuspid annulus semiautomated, Auto Measure, Smart View Select, LVivo)",
+     "fact": "PubMed E-utilities esearch/esummary/efetch and Crossref works API used to identify and confirm papers (researcher queries: AutoStrain, 3D Auto CFQ, tricuspid annulus semiautomated, Auto Measure, Smart View Select, LVivo; verification queries: feature names + Philips; Philips + EPIQ/Affiniti + automated/AI echocardiography 2019-2026)",
      "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ ; https://api.crossref.org/works/",
      "verification": "peer_reviewed"
     }
    ],
-   "_source_file": "system-philips-systems.json",
-   "_verified": false,
+   "_source_file": "system-philips-systems.verified.json",
+   "_verified": true,
    "first_cleared": "2021-09-08",
    "latest_cleared": "2025-07-24",
    "n_clearances": 10,
@@ -5344,10 +6210,10 @@ window.AIECHO_PRODUCTS = {
    "product_codes": [
     "IYN"
    ],
-   "n_performance_claims": 33,
-   "n_papers_resolved": 5,
-   "n_papers": 5,
-   "research_verified": false,
+   "n_performance_claims": 34,
+   "n_papers_resolved": 6,
+   "n_papers": 6,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -5557,7 +6423,8 @@ window.AIECHO_PRODUCTS = {
      "notable_flags": [
       "Product codes IYN, IYO, ITX, LLZ, QIH",
       "Adult PCC values not reported, only pass criterion",
-      "Clinical studies not required"
+      "Clinical studies not required",
+      "Reported fetal and adult values (93.21%, 98.31%, Dice 0.88/0.93, identical error-rate bounds) are the same as in K223387 even though the stated image counts differ (280+540 here vs 888 combined in K223387); the summary says HeartAssist was included 'without changes' from K240631"
      ],
      "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242511.pdf",
      "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K242511",
@@ -5609,11 +6476,11 @@ window.AIECHO_PRODUCTS = {
      "metric": "average recognition accuracy",
      "value": "93.21% (threshold 89%)",
      "comparator": "expert view classification (obstetrician >20 y, two sonographers >10 y, supervised by obstetrician >25 y)",
-     "n_studies": 888,
+     "n_studies": null,
      "n_patients": null,
      "n_sites": 5,
      "dataset_description": "888 fetal heart and adult heart static images collected at five hospitals; acquired on Samsung W10, W9 and V8 systems, only V8 images used for the performance test; 7 fetal heart views and 16 adult heart views per ASE/AIUM; male and female; Americans and Koreans",
-     "subgroup_notes": "7 fetal heart views",
+     "subgroup_notes": "7 fetal heart views; n=888 is the combined fetal + adult image count stated on p.11; the fetal/adult split is not given",
      "quote": "A deep learning based view recognition algorithm was validated using 888 fetal heart and adult heart images collected at five hospitals. \n◌ (Fetus) The average recognition accuracy is 93.21% (threshold 89%)",
      "page": 11,
      "verification": "fda_summary"
@@ -5624,11 +6491,11 @@ window.AIECHO_PRODUCTS = {
      "metric": "average recognition accuracy",
      "value": "98.31% (threshold 84%)",
      "comparator": "expert view classification",
-     "n_studies": 888,
+     "n_studies": null,
      "n_patients": null,
      "n_sites": 5,
      "dataset_description": "888 fetal heart and adult heart static images collected at five hospitals; acquired on Samsung W10, W9 and V8 systems, only V8 images used for the performance test; 7 fetal heart views and 16 adult heart views per ASE/AIUM; male and female; Americans and Koreans",
-     "subgroup_notes": "16 adult heart views",
+     "subgroup_notes": "16 adult heart views; n=888 is the combined fetal + adult image count stated on p.11; the fetal/adult split is not given",
      "quote": "(Adult) The average recognition accuracy is 98.31% (threshold 84%)",
      "page": 11,
      "verification": "fda_summary"
@@ -5639,11 +6506,11 @@ window.AIECHO_PRODUCTS = {
      "metric": "average Dice score",
      "value": "0.88 (threshold 0.8)",
      "comparator": "manual expert anatomy tracing",
-     "n_studies": 888,
+     "n_studies": null,
      "n_patients": null,
      "n_sites": 5,
      "dataset_description": "888 fetal heart and adult heart static images collected at five hospitals; acquired on Samsung W10, W9 and V8 systems, only V8 images used for the performance test; 7 fetal heart views and 16 adult heart views per ASE/AIUM; male and female; Americans and Koreans",
-     "subgroup_notes": null,
+     "subgroup_notes": "n=888 is the combined fetal + adult image count stated on p.11; the fetal/adult split is not given",
      "quote": "(Fetus) The average dice-score is 0.88 (threshold 0.8).",
      "page": 11,
      "verification": "fda_summary"
@@ -5654,11 +6521,11 @@ window.AIECHO_PRODUCTS = {
      "metric": "average Dice score",
      "value": "0.93 (threshold 0.9)",
      "comparator": "two cardiologists and two sonographers (>=10 y) manually traced heart contours and signal outline",
-     "n_studies": 888,
+     "n_studies": null,
      "n_patients": null,
      "n_sites": 5,
      "dataset_description": "888 fetal heart and adult heart static images collected at five hospitals; acquired on Samsung W10, W9 and V8 systems, only V8 images used for the performance test; 7 fetal heart views and 16 adult heart views per ASE/AIUM; male and female; Americans and Koreans",
-     "subgroup_notes": null,
+     "subgroup_notes": "n=888 is the combined fetal + adult image count stated on p.11; the fetal/adult split is not given",
      "quote": "(Adult) The average dice-score is 0.93 (threshold 0.9).",
      "page": 11,
      "verification": "fda_summary"
@@ -5669,11 +6536,11 @@ window.AIECHO_PRODUCTS = {
      "metric": "error rate",
      "value": "area <=8%; angle <=4%; circumference <=11%; diameter <=11%",
      "comparator": "expert manual measurements",
-     "n_studies": 888,
+     "n_studies": null,
      "n_patients": null,
      "n_sites": 5,
      "dataset_description": "888 fetal heart and adult heart static images collected at five hospitals; acquired on Samsung W10, W9 and V8 systems, only V8 images used for the performance test; 7 fetal heart views and 16 adult heart views per ASE/AIUM; male and female; Americans and Koreans",
-     "subgroup_notes": null,
+     "subgroup_notes": "n=888 is the combined fetal + adult image count stated on p.11; the fetal/adult split is not given",
      "quote": "(Fetus) The error rate of area measured value is 8% or less. \n◌ (Fetus) The error rate of angle measured value is 4% or less. \n◌ (Fetus) The error rate of circumference measured value is 11% or less. \n           ◌ (Fetus) The error rate of diameter measured value is 11% or less.",
      "page": 11,
      "verification": "fda_summary"
@@ -5684,11 +6551,11 @@ window.AIECHO_PRODUCTS = {
      "metric": "Pearson correlation coefficient vs cardiologist measurements",
      "value": "pass criterion PCC >= 0.8; actual values not reported",
      "comparator": "cardiologist measurements (ground truth)",
-     "n_studies": 888,
+     "n_studies": null,
      "n_patients": null,
      "n_sites": 5,
      "dataset_description": "888 fetal heart and adult heart static images collected at five hospitals; acquired on Samsung W10, W9 and V8 systems, only V8 images used for the performance test; 7 fetal heart views and 16 adult heart views per ASE/AIUM; male and female; Americans and Koreans",
-     "subgroup_notes": null,
+     "subgroup_notes": "n=888 is the combined fetal + adult image count stated on p.11; the fetal/adult split is not given",
      "quote": "(Adult, B-mode) Pass if the *PCC value is 0.8 or greater than the specification. \n◌ (Adult, M-mode) Pass if the *PCC value is 0.8 or greater than the specification. \n◌ (Adult, Doppler-mode) Pass if the *PCC value is 0.8 or greater than the specification. \n* The Pearson correlation coefficient(PCC) that is a representative way to measure similarity is a measure of linear correlation between two sets of data. The HeartAssist’s PCC was   calculated to evaluate the auto measurement using the ground truth, defined as the cardiologist’s measurements.",
      "page": 11,
      "verification": "fda_summary"
@@ -6065,7 +6932,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1038/s41598-025-97934-z",
      "relation": "algorithm-development",
      "n_subjects": 2985,
-     "key_result": "65,324 images from 2,985 fetuses (GA 20-40 weeks, Asan Medical Center, 2016-2018); CNN classifies 10 views, annotates 26 structures, measures 43 parameters; classification accuracy 99.4% (recall 0.93, precision 0.95, F1 0.94); annotation accuracy 98.4%; automatic measurement success rate 97.6% with error rate 7.62% and caliper similarity 0.613 vs one expert. Two authors affiliated with Samsung Medison AI & Informatics Group; authors declare no competing interests.",
+     "key_result": "65,324 images from 2,985 fetuses (GA 20-40 weeks, Asan Medical Center, 2016-2018); CNN classifies 10 views, annotates 26 structures, measures 43 parameters; classification accuracy 99.4% (recall 0.93, precision 0.95, F1 0.94); annotation accuracy 98.4%; automatic measurement success rate 97.6% with error rate 7.62% and caliper similarity 0.613 vs one expert. Three authors (Park J, Lee J, Choi K) affiliated with Samsung Medison AI & Informatics Group per PubMed; authors declare no competing interests.",
      "verification": "pmid_resolved"
     },
     {
@@ -6093,19 +6960,6 @@ window.AIECHO_PRODUCTS = {
      "n_subjects": null,
      "key_result": "ISUOG 2023 congress abstract (electronic poster) establishing Korean-population reference ranges for HeartAssist fetal cardiac measurements; abstract content not retrieved this session.",
      "verification": "doi_resolved"
-    },
-    {
-     "title": "An Artificial Intelligence-Based Automated Echocardiographic Analysis: Enhancing Efficiency and Prognostic Evaluation in Patients With Revascularized STEMI",
-     "first_author": "Jang Y",
-     "journal": "Korean Circulation Journal",
-     "year": 2024,
-     "doi": "10.4070/kcj.2024.0060",
-     "pmid": "39434367",
-     "url": "https://doi.org/10.4070/kcj.2024.0060",
-     "relation": "other",
-     "n_subjects": 632,
-     "key_result": "Ontact Health Inc. AI system (the developer of the adult HeartAssist algorithm per Samsung's white paper) developed on a five-hospital dataset; in 632 STEMI patients view identification accuracy 98.5%, Pearson r 0.81-0.92 and ICC 0.74-0.90 vs manual LVEF, GLS, LAVI and LA reservoir strain; AI measurements prognostic independent of clinical risk factors. The paper does not name HeartAssist or Samsung; link to the cleared feature is inferred only from the vendor white paper.",
-     "verification": "pmid_resolved"
     }
    ],
    "clinical_trials": [],
@@ -6122,7 +6976,11 @@ window.AIECHO_PRODUCTS = {
     "The Samsung course page claims ('up to 98%' view classification, '95-100%' measurement accuracy, 4,000 fetal echocardiograms with 95.5% classification accuracy) carry no sample sizes or methods and are unverified beyond the vendor pages.",
     "Whether the peer-reviewed fetal model (Kim R, Sci Rep 2025; 10 views, 43 parameters) is the same version as the cleared 7-view / 11-view device configuration is not stated.",
     "ClinicalTrials.gov API query for 'HeartAssist' returned no matching studies this session; no registered trial identified.",
-    "openFDA lists product code IYN; the FDA summaries also list IYO, ITX and (from K241971 onward) QIH and LLZ."
+    "openFDA lists product code IYN; the FDA summaries also list IYO, ITX and (from K241971 onward) QIH and LLZ.",
+    "Jang Y et al., Korean Circ J 2024 (PMID 39434367, DOI 10.4070/kcj.2024.0060) reports an Ontact Health adult echo AI system (632 STEMI patients; view accuracy 98.5%; Pearson r 0.81-0.92 vs manual LVEF/GLS/LAVI/LA strain). Samsung's 2022 white paper states adult HeartAssist is 'based on a SONIX HEALTH algorithm developed by ON:TACT HEALTH', but the paper itself does not name HeartAssist or Samsung, so it is not recorded as a HeartAssist paper; whether the evaluated software is the cleared feature is unverified.",
+    "K242444 states the HeartAssist view-recognition algorithm 'was validated using 280 fetal heart images' but also that the 'Validation dataset included 315 static images of 2D sequences' from 69 individuals (both p.8); the relationship between 280 and 315 is not explained.",
+    "intended_use_quote and indications_for_use_quote reproduce the V-series wording (K223387 p.5; K250999 IFU form, V8/cV8-V6/cV6). HERA W9/W10 summaries (K211824, K220043, K230084, K242444) instead read 'intended for diagnostic ultrasound imaging and fluid analysis of the human body' and omit Intra-operative, Thoracic and Trans-esophageal; K242511 (V5/V4) adds Dermatology and omits Trans-esophageal.",
+    "Verification-pass PubMed searches ('HeartAssist' with fetal/echocardiography/ultrasound, 'Heartassist AND Samsung', 'Samsung Medison AND echocardiography', 'Samsung Medison AND fetal heart/cardiac', 'Ontact Health AND echocardiography') found no additional peer-reviewed HeartAssist evaluations beyond PMIDs 40240835 and 37097825 and the UOG 2023 abstract; one Ontact Health paper (PMID 38975004, diastolic assessment) cites the Samsung adult HeartAssist white paper in its reference list only."
    ],
    "sources": [
     {
@@ -6132,7 +6990,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "K211824 decision date, product code IYN, applicant Samsung Medison Co., Ltd., device name",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K211824",
      "verification": "fda_summary"
     },
     {
@@ -6142,7 +7000,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "K220043 decision date, product code IYN, applicant Samsung Medison Co., Ltd., device name",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K220043",
      "verification": "fda_summary"
     },
     {
@@ -6152,7 +7010,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "K223387 decision date, product code IYN, applicant Samsung Medison Co., Ltd., device name",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K223387",
      "verification": "fda_summary"
     },
     {
@@ -6162,7 +7020,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "K230084 decision date, product code IYN, applicant Samsung Medison Co., Ltd., device name",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K230084",
      "verification": "fda_summary"
     },
     {
@@ -6172,7 +7030,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "K241971 decision date, product code IYN, applicant Samsung Medison Co., Ltd., device name",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K241971",
      "verification": "fda_summary"
     },
     {
@@ -6182,7 +7040,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "K242444 decision date, product code IYN, applicant Samsung Medison Co., Ltd., device name",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K242444",
      "verification": "fda_summary"
     },
     {
@@ -6192,7 +7050,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "K242511 decision date, product code IYN, applicant Samsung Medison Co., Ltd., device name",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K242511",
      "verification": "fda_summary"
     },
     {
@@ -6202,7 +7060,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "K250999 decision date, product code IYN, applicant Samsung Medison Co., Ltd., device name",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K250999",
      "verification": "fda_summary"
     },
     {
@@ -6221,7 +7079,7 @@ window.AIECHO_PRODUCTS = {
      "verification": "peer_reviewed"
     },
     {
-     "fact": "Jang Y et al. Korean Circ J 2024 PMID 39434367 abstract and Ontact Health affiliations/COI (PubMed efetch); DOI 10.4070/kcj.2024.0060 (Crossref)",
+     "fact": "Jang Y et al. Korean Circ J 2024 PMID 39434367 abstract and Ontact Health affiliations/COI (PubMed efetch); DOI 10.4070/kcj.2024.0060 (Crossref) - paper does not name HeartAssist; retained only as the source for the Ontact Health open question",
      "url_or_file": "https://pubmed.ncbi.nlm.nih.gov/39434367/",
      "verification": "peer_reviewed"
     },
@@ -6256,13 +7114,13 @@ window.AIECHO_PRODUCTS = {
      "verification": "news"
     },
     {
-     "fact": "Triage records for included and excluded Samsung K-numbers",
-     "url_or_file": "triage-samsung-a.json; triage-samsung-b.json",
+     "fact": "Samsung Medison 510(k) inventory used for triage of included and excluded K-numbers (openFDA 510(k) endpoint; internal triage records not distributed)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=applicant:\"Samsung+Medison\"",
      "verification": "fda_summary"
     }
    ],
-   "_source_file": "system-samsung.json",
-   "_verified": false,
+   "_source_file": "system-samsung.verified.json",
+   "_verified": true,
    "first_cleared": "2021-09-09",
    "latest_cleared": "2025-07-18",
    "n_clearances": 8,
@@ -6273,9 +7131,9 @@ window.AIECHO_PRODUCTS = {
     "IYN"
    ],
    "n_performance_claims": 28,
-   "n_papers_resolved": 4,
-   "n_papers": 4,
-   "research_verified": false,
+   "n_papers_resolved": 3,
+   "n_papers": 3,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -6676,7 +7534,7 @@ window.AIECHO_PRODUCTS = {
     "TTE",
     "TEE (AI FlexiViews LAA, 6VT probe)",
     "3D/4D (4D Auto LAQ/TVQ/LHQ)",
-    "compact and portable carts (Vivid iq, Vivid T8/T9)",
+    "Vivid iq and Vivid T8/T9 systems (K200708, K200851, K221148, K221147)",
     "adult and pediatric cardiac"
    ],
    "deployment": [
@@ -6712,7 +7570,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "name": "AI Auto Measure - 2D",
-     "function": "AI-based Cardiac Auto 2D feature performing (semi-)automated linear measurements on parasternal long-axis (PLAX) images. Introduced in K200497 (Vivid S60N/S70N); K200497 text layer is font-shifted, so the verbatim quote is taken from K200708, which attributes the feature to K200497.",
+     "function": "AI-based Cardiac Auto 2D feature performing semi-automated linear measurements on parasternal long-axis (PLAX) images. Introduced in K200497 (Vivid S60N/S70N); the K200497 text layer is glyph-shifted (+3 code points, digits absent) but decodes to 'AI Auto Measure - 2D: AI (Artificial Intelligence) based Cardiac Auto 2D feature that enables semi-automated measurements on a PLAX images using similar process as IMT feature first released on Vivid 7'; the verbatim quote below is from K200708, which attributes the feature to K200497.",
      "first_k_number": "K200497",
      "quote": "AI Auto Measure – 2D: same feature as cleared on Vivid S70N(K200497). It is AI (Artificial Intelligence) based Cardiac Auto 2D feature that enables automated measurements on a PLAX image."
     },
@@ -6778,7 +7636,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "name": "AI FlexiViews LAA",
-     "function": "AI workflow tool that localizes the left atrial appendage and extracts landmarks (LAA contour, circumflex, ridge point) in real-time 2D or biplane TEE images (6VT probe) with one button press, to support LAA visualization and device sizing.",
+     "function": "AI workflow tool that localizes the left atrial appendage in real-time 2D or biplane TEE images (6VT probe) with a single button press; the verification section describes the task as LAA region localization and landmark extraction, with ground truth annotated as the LAA contour, circumflex and ridge point (K251169 pages 14-15).",
      "first_k_number": "K251169",
      "quote": "AI FlexiViews LAA: AI based workflow tool to help localize the LAA (Left Atrial Appendage) anatomical structure in real-time 2D or Biplane images with a single button press."
     }
@@ -6797,8 +7655,9 @@ window.AIECHO_PRODUCTS = {
      ],
      "changes_summary": "Added Automatic View Recognition (deep neural network view classifier feeding AFI 2.0 and Auto EF 2.0), 4D Auto LAQ (LA volumes, emptying fraction, strain in 4D), and workflow updates to AutoEF 2.0 and AFI 2.0 (AFI 2.0 expanded to pediatric use). No performance data for any AI feature; no clinical studies.",
      "notable_flags": [
-      "First deep-neural-network feature in the Vivid line (Automatic View Recognition); summary gives no accuracy or dataset figures",
-      "No clinical studies required"
+      "Only feature among these ten summaries described as based on a deep neural network (Automatic View Recognition); summary gives no accuracy or dataset figures",
+      "No clinical studies required",
+      "Primary predicate K173341 (Vivid E80/E90/E95); K082185 (LOGIQ E9) is listed as secondary predicate"
      ],
      "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf18/K181685.pdf",
      "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K181685",
@@ -6814,7 +7673,7 @@ window.AIECHO_PRODUCTS = {
      "predicates": [],
      "changes_summary": "Vivid S60N/S70N: introduced AI Auto Measure - 2D (AI-based semi-automated PLAX measurements), AI Auto Measure - Spectrum Recognition (AI recognition of Doppler spectra that launches Auto Doppler), AFI 3.0, Auto EF 3.0, AFI RV, AFI LA. No performance data; no clinical studies.",
      "notable_flags": [
-      "Summary PDF uses a font-shifted encoding; digits (including all predicate K-numbers) are not recoverable from the text layer",
+      "Summary PDF text layer is glyph-shifted (+3 code points) and drops all digits (confirmed with pypdf this session); predicate K-numbers are not recoverable. Decoded text names 'Vivid S60N/Vivid S70N (K...)' as primary predicate and Vivid E95, LOGIQ E9, Vivid S60N/S70N and Vivid 7 as reference devices; decoded page 8 states the submission 'did not require clinical studies'",
       "No performance data for AI features",
       "No clinical studies required"
      ],
@@ -6839,7 +7698,8 @@ window.AIECHO_PRODUCTS = {
      "changes_summary": "Vivid E80/E90/E95: added AI Auto Measure - 2D (with a 79% click-reduction claim, 4 vs 19), AI Auto Measure - Spectrum Recognition, AFI 3.0, Auto EF 3.0, AFI RV, AFI LA, and 4D Auto TVQ (tricuspid annulus/valve quantification). No accuracy data; no clinical studies.",
      "notable_flags": [
       "Only performance figure is a workflow click count (79%, 4 vs 19) with no dataset or method described",
-      "No clinical studies required"
+      "No clinical studies required",
+      "Primary predicate K181685; K163077, K170823, K150087 and K051449 are listed as reference devices"
      ],
      "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200743.pdf",
      "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K200743",
@@ -6907,7 +7767,7 @@ window.AIECHO_PRODUCTS = {
       "K200179",
       "K150193"
      ],
-     "changes_summary": "Vivid S60N/S70N: added Easy Auto EF (Auto EF 3.0 plus AI Auto ROI algorithm) and Easy AFI LV (AFI 3.0 plus AI Auto ROI algorithm). First GE Vivid summary with an AI test section: average Dice >=92% (countries), >=91% (views), >=92% (LV volumes) on 45 exams / 135 images.",
+     "changes_summary": "Vivid S60N/S70N: added Easy Auto EF (Auto EF 3.0 plus AI Auto ROI algorithm) and Easy AFI LV (AFI 3.0 plus AI Auto ROI algorithm). First summary in this batch with an AI test section: average Dice >=92% (countries), >=91% (views), >=92% (LV volumes) on 45 exams / 135 images.",
      "notable_flags": [
       "AI test set is small (45 exams, 135 images); patient count 'assumed' because of anonymization; gender unknown",
       "Training-set size not disclosed",
@@ -7002,11 +7862,12 @@ window.AIECHO_PRODUCTS = {
       "K170823",
       "K200743"
      ],
-     "changes_summary": "Vivid Pioneer (new console): added AI Cardiac Auto Doppler (two AI algorithms, Tissue Doppler and Doppler Trace, auto-tracing additional Doppler spectra and adding valve-related measurements) and AI FlexiViews LAA (AI localization of the left atrial appendage and landmarks in real-time 2D/biplane TEE, 6VT probe). Also 4D Auto LHQ (merging 4D Auto LAQ and LVQ), 4D ColorFlow in 4D Auto MVQ/TVQ, cSound Pioneer reconstruction. Largest AI test sets in the batch: 4106 recordings/805 individuals (Tissue Doppler), 3390/1369 (Doppler Trace), 342/84 (LAA).",
+     "changes_summary": "Vivid Pioneer (new console): added AI Cardiac Auto Doppler (two AI algorithms, Tissue Doppler and Doppler Trace, auto-tracing additional Doppler spectra and adding valve-related measurements) and AI FlexiViews LAA (AI localization of the left atrial appendage in real-time 2D/biplane images with a single button press; verified on 6VT TEE recordings). Also 4D Auto LHQ (merging 4D Auto LAQ and LVQ), 4D ColorFlow in 4D Auto MVQ/TVQ, cSound Pioneer reconstruction. Largest AI test sets in the batch: 4106 recordings/805 individuals (Tissue Doppler), 3390/1369 (Doppler Trace), 342/84 (LAA).",
      "notable_flags": [
       "Auto Doppler acceptance thresholds (feasibility >95%, mean absolute percent error) are stated as passed but numeric error values are not disclosed except for a BMI subgroup (41 patients)",
       "BMI-subgroup agreement metric is 'predefined' but not defined in the summary",
-      "No clinical studies required"
+      "No clinical studies required",
+      "Primary predicate K220882 (Vivid E95); the other seven K-numbers are listed as reference devices"
      ],
      "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251169.pdf",
      "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K251169",
@@ -7128,7 +7989,7 @@ window.AIECHO_PRODUCTS = {
      "n_studies": 7496,
      "n_patients": 2174,
      "n_sites": null,
-     "dataset_description": "Tissue Doppler testing dataset: 4106 recordings from 805 individuals; Doppler Trace testing dataset: 3390 recordings from 1369 individuals. Male and female; adult and pediatric; USA (several locations), Australia, France, Spain, Norway, Italy, Germany, Thailand, Philippines; consoles Vivid E80, E95, E9, iq, S70, T9, Q, Pioneer; 14 probes. Test sites independent of training/validation sites.",
+     "dataset_description": "Tissue Doppler testing dataset: 4106 recordings from 805 individuals; Doppler Trace testing dataset: 3390 recordings from 1369 individuals. Male and female; adult and pediatric; USA (several locations), Australia, France, Spain, Norway, Italy, Germany, Thailand, Philippines; consoles Vivid E80, E95, E9, iq, S70, T9, Q, Pioneer; 13 unique probes listed (6Sc, 6Vc, 3Sc, 4Vc, 4V, M5S, 6S, M4S, M5Sc, 12S, 9VT, 6VT, 10T; M5S appears twice in the 14-entry list). Test sites independent of training/validation sites.",
      "subgroup_notes": "n_studies here = 4106 + 3390 recordings; n_patients = 805 + 1369 individuals (the two datasets may overlap; summary does not say). Accuracy thresholds and achieved error values are not reported numerically. Preceding bullet (same page): 'The verification requirement included a step to check for a feasibility score of more than 95%, as well as an expected accuracy threshold calculated as the mean absolute difference in percentage for each measured parameter.'",
      "quote": "The verification requirement included a step to check mean percent absolute error across all cardiac cycles against a threshold. All clinical parameters, as performed by AI Cardiac Auto Doppler without user edits passed this check",
      "page": 12,
@@ -7210,8 +8071,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "fda_summary"
     },
     {
-     "k_number": "K220619",
-     "endpoint": "AI Auto Measure 2D (company marketing claim)",
+     "k_number": "K200497",
+     "endpoint": "AI Auto Measure 2D (company marketing claim; page footnotes attribute the figures to other algorithms)",
      "metric": "detectability / reproducibility",
      "value": "98% detectability and 100% reproducibility",
      "comparator": null,
@@ -7219,7 +8080,7 @@ window.AIECHO_PRODUCTS = {
      "n_patients": null,
      "n_sites": null,
      "dataset_description": null,
-     "subgroup_notes": "Source: GE HealthCare 'Vivid AI and Automation' page (https://gehealthcare-ultrasound.com/en/vivid-family/vivid-ai-and-automation/); no dataset or method given; k_number is the nearest clearance, not the source of the number",
+     "subgroup_notes": "Source: GE HealthCare 'Vivid AI and Automation' page (https://gehealthcare-ultrasound.com/en/vivid-family/vivid-ai-and-automation/), fetched this session. The sentence reads 'AI Auto Measure 2D achieves 98% detectability[3] and 100% reproducibility.[4]'; the page's own footnote 3 says 'Applicable to the AI-based View Recognition algorithm, results based on GE HealthCare internal data (DOC2292732)' and footnote 4 says 'Applicable to AI Auto Measure - Spectrum Recognition, results based on GE HealthCare internal data (DOC2292732)'. No dataset or method given. k_number is the clearance that introduced AI Auto Measure 2D, not the source of the number.",
      "quote": "achieves 98% detectability and 100% reproducibility.",
      "page": null,
      "verification": "company"
@@ -7234,7 +8095,7 @@ window.AIECHO_PRODUCTS = {
      "n_patients": null,
      "n_sites": null,
      "dataset_description": null,
-     "subgroup_notes": "Source: GE HealthCare 'Vivid AI and Automation' page; no dataset or method given",
+     "subgroup_notes": "Source: GE HealthCare 'Vivid AI and Automation' page, fetched this session. Page text: 'With up to 99% classification accuracy and 98% detectability, Ultra Edition* AI algorithms provide consistent and repeatable measurements regardless of operator experience.[3]'; footnote 3: 'Applicable to the AI-based View Recognition algorithm, results based on GE HealthCare internal data (DOC2292732)'. No dataset or method given.",
      "quote": "up to 99% classification accuracy and 98% detectability",
      "page": null,
      "verification": "company"
@@ -7249,7 +8110,7 @@ window.AIECHO_PRODUCTS = {
      "n_patients": null,
      "n_sites": null,
      "dataset_description": null,
-     "subgroup_notes": "Source: GE HealthCare 'Vivid AI and Automation' page",
+     "subgroup_notes": "Source: GE HealthCare 'Vivid AI and Automation' page, fetched this session; footnote 2: 'Time to strain measurement results may vary with heart rate, frame rate and Vivid system. Verification of performance done by GE HealthCare clinical application specialists using the Vivid system (DOC2739637).'",
      "quote": "EF and strain results in 15 seconds (on average).",
      "page": null,
      "verification": "company"
@@ -7264,14 +8125,14 @@ window.AIECHO_PRODUCTS = {
      "n_patients": null,
      "n_sites": null,
      "dataset_description": null,
-     "subgroup_notes": "Source: GE HealthCare Vivid E95 product page (https://gehealthcare-ultrasound.com/en/vivid-family/vivid-e95/); FDA summary K200743 states 79% (4 vs 19)",
+     "subgroup_notes": "Source: GE HealthCare Vivid E95 product page, fetched this session ('Up to 80% fewer klicks[1] thanks to AI Auto Measure 2D'); FDA summary K200743 page 6 states 79% (4 vs 19)",
      "quote": "Up to 80% fewer klicks thanks to AI Auto Measure 2D",
      "page": null,
      "verification": "company"
     },
     {
-     "k_number": "K251169",
-     "endpoint": "Cardiac Auto Doppler with AI keystroke reduction (company marketing claim)",
+     "k_number": "K200743",
+     "endpoint": "Cardiac Auto Doppler with AI Auto Measure Spectrum Recognition keystroke reduction (company marketing claim)",
      "metric": "fewer keystrokes",
      "value": "up to 93%",
      "comparator": null,
@@ -7279,7 +8140,7 @@ window.AIECHO_PRODUCTS = {
      "n_patients": null,
      "n_sites": null,
      "dataset_description": null,
-     "subgroup_notes": "Source: GE HealthCare Vivid E95 product page; no method given",
+     "subgroup_notes": "Source: GE HealthCare Vivid E95 product page (https://gehealthcare-ultrasound.com/en/vivid-family/vivid-e95/), fetched this session; the claim is made for 'Cardiac Auto Doppler with AI Auto Measure Spectrum Recognition' (the Vivid E95 feature cleared in K200743), not for the K251169 AI Cardiac Auto Doppler; no method given",
      "quote": "you will need up to 93% fewer keystrokes.",
      "page": null,
      "verification": "company"
@@ -7309,7 +8170,7 @@ window.AIECHO_PRODUCTS = {
      "n_patients": 200,
      "n_sites": null,
      "dataset_description": "200 patients with a wide range of LV function; three standard apical cine-loops",
-     "subgroup_notes": "Salte et al., JACC Cardiovasc Imaging 2021 (PMID 34147442). NTNU/CIUS academic pipeline with GE licensing priority; the paper does not state that it is the commercial Easy AFI product.",
+     "subgroup_notes": "Salte et al., JACC Cardiovasc Imaging 2021 (PMID 34147442). NTNU/CIUS academic pipeline with GE licensing priority; the paper does not state that it is the commercial Easy AFI product. Numbers confirmed against the PubMed abstract this session; the k_number is a topical link only.",
      "quote": "GLS was -12.0 ± 4.1% for the AI method and -13.5 ± 5.3% for the reference method. Bias was -1.4 ± 0.3% (95% limits of agreement: 2.3 to -5.1), which is comparable with intervendor studies. The AI method eliminated measurement variability and a complete GLS analysis was processed within 15 s.",
      "page": null,
      "verification": "peer_reviewed"
@@ -7324,7 +8185,7 @@ window.AIECHO_PRODUCTS = {
      "n_patients": 2820,
      "n_sites": null,
      "dataset_description": "50 consecutive patients (real time), 40 test-retest subjects, internal and external research databases of 1881 and 849 subjects",
-     "subgroup_notes": "Olaisen et al., Eur Heart J Cardiovasc Imaging 2024 (PMID 37883712). n_patients = 50+40+1881+849. Authors state GE Healthcare has licensing priority; not confirmed as the shipped Easy Auto EF.",
+     "subgroup_notes": "Olaisen et al., Eur Heart J Cardiovasc Imaging 2024 (PMID 37883712). n_patients = 50+40+1881+849. Authors state GE Healthcare has licensing priority; not confirmed as the shipped Easy Auto EF. Numbers confirmed against the PubMed abstract this session; the k_number is a topical link only.",
      "quote": "Real-time AI measurements significantly reduced the total acquisition and processing time by 77% (median 5.3 min, P < 0.001) compared with standard clinical workflow. Test-retest reproducibility of AI measurements was superior in inter-observer scenarios and non-inferior in intra-observer scenarios.",
      "page": null,
      "verification": "peer_reviewed"
@@ -7339,7 +8200,7 @@ window.AIECHO_PRODUCTS = {
      "n_patients": 500,
      "n_sites": null,
      "dataset_description": "more than 500 patients and 7000 videos; up to seven cardiac views",
-     "subgroup_notes": "Østvik et al., Ultrasound Med Biol 2019 (PMID 30470606); co-author affiliated with GE Vingmed Ultrasound AS. Not stated to be the Automatic View Recognition product.",
+     "subgroup_notes": "Østvik et al., Ultrasound Med Biol 2019 (PMID 30470606); co-author affiliated with GE Vingmed Ultrasound AS. Not stated to be the Automatic View Recognition product. Numbers confirmed against the PubMed abstract this session; the k_number is a topical link only.",
      "quote": "Data sets of 2-D ultrasound acquired from studies totaling more than 500 patients and 7000 videos were included. State-of-the-art accuracies of 98.3% ± 0.6% and 98.9% ± 0.6% on single frames and sequences, respectively, and real-time performance with 4.4 ± 0.3 ms per frame were achieved.",
      "page": null,
      "verification": "peer_reviewed"
@@ -7354,7 +8215,7 @@ window.AIECHO_PRODUCTS = {
      "n_patients": 100,
      "n_sites": null,
      "dataset_description": "training: 500 patients from an outpatient clinic; evaluation: separate 100 patients from another clinic",
-     "subgroup_notes": "Smistad et al., IEEE TUFFC 2020 (PMID 32175861). Academic pipeline; not stated to be the shipped Easy Auto EF.",
+     "subgroup_notes": "Smistad et al., IEEE TUFFC 2020 (PMID 32175861). Academic pipeline; not stated to be the shipped Easy Auto EF. Numbers confirmed against the PubMed abstract this session; the k_number is a topical link only.",
      "quote": "The bias and standard deviation of the automatic EF measurements were -3.6 ± 8.1%, while the mean absolute difference was measured at 7.2% which are all within the interobserver variability and comparable with related studies.",
      "page": null,
      "verification": "peer_reviewed"
@@ -7373,24 +8234,24 @@ window.AIECHO_PRODUCTS = {
     "n_studies": null,
     "n_patients": null,
     "n_sites": null,
-    "description": "K220619/K221148/K221147/K220882 (AI Auto ROI): 45 exams from assumed 45 patients, 135 images; adult; gender unknown; Europe, Asia, US; 5 probes, 4 console variants. K251169: Tissue Doppler 4106 recordings / 805 individuals; Doppler Trace 3390 recordings / 1369 individuals (adult and pediatric, 9 countries, 8 consoles, 14 probes; BMI subset 41 patients / 433 measurements); AI FlexiViews LAA 342 recordings / 84 adults (5 countries, 4 consoles, 6VT probe). K181685, K200497, K200743, K200708, K200851: no validation data reported.",
+    "description": "K220619/K221148/K221147/K220882 (AI Auto ROI): 45 exams from assumed 45 patients, 135 images; adult; gender unknown; Europe, Asia, US; 5 probes, 4 console variants. K251169: Tissue Doppler 4106 recordings / 805 individuals; Doppler Trace 3390 recordings / 1369 individuals (adult and pediatric, 9 countries, 8 consoles, 13 unique probes listed (6Sc, 6Vc, 3Sc, 4Vc, 4V, M5S, 6S, M4S, M5Sc, 12S, 9VT, 6VT, 10T; M5S appears twice in the 14-entry list); BMI subset 41 patients / 433 measurements); AI FlexiViews LAA 342 recordings / 84 adults (5 countries, 4 consoles, 6VT probe). K181685, K200497, K200743, K200708, K200851: no validation data reported.",
     "independent_of_training": true,
     "source": "FDA 510(k) summaries K220619 (pages 8-9), K251169 (pages 11-15)",
     "verification": "fda_summary"
    },
    "prior_validations": [
     {
-     "description": "GE HealthCare marketing page 'Vivid AI and Automation' claims AI Auto Measure 2D '98% detectability and 100% reproducibility', AI-based View Recognition 'up to 99% classification accuracy and 98% detectability', and Easy AFI LV results in '15 seconds (on average)'; no methods or datasets given.",
+     "description": "GE HealthCare marketing page 'Vivid AI and Automation' (fetched this session) states 'AI Auto Measure 2D achieves 98% detectability[3] and 100% reproducibility[4]', 'up to 99% classification accuracy and 98% detectability' for 'Ultra Edition AI algorithms'[3], and Easy AFI LV results in '15 seconds on average'[2]. Footnote 3 attributes its figures to the AI-based View Recognition algorithm and footnote 4 to AI Auto Measure - Spectrum Recognition, both citing GE internal data (DOC2292732); footnote 2 cites verification by GE clinical application specialists (DOC2739637). No methods or datasets given.",
      "source_url": "https://gehealthcare-ultrasound.com/en/vivid-family/vivid-ai-and-automation/",
      "verification": "company"
     },
     {
-     "description": "GE HealthCare Vivid E95 product page claims 'Up to 80% fewer klicks thanks to AI Auto Measure 2D' and 'up to 93% fewer keystrokes' for Cardiac Auto Doppler with AI.",
+     "description": "GE HealthCare Vivid E95 product page (fetched this session) states 'Up to 80% fewer klicks thanks to AI Auto Measure 2D' and 'up to 93% fewer keystrokes' for Cardiac Auto Doppler with AI Auto Measure Spectrum Recognition, and 'results in only 15 seconds' for Easy AFI; no methods given.",
      "source_url": "https://gehealthcare-ultrasound.com/en/vivid-family/vivid-e95/",
      "verification": "company"
     },
     {
-     "description": "Vivid Pioneer launch coverage (ITN, Aug 29 2025) states the system received CE Mark and FDA 510(k) clearance and that Easy AFI provides strain and EF in under nine seconds.",
+     "description": "Vivid Pioneer launch coverage (ITN, Aug 29 2025; fetched this session) states the system received CE Mark and U.S. FDA 510(k) clearance and that Easy AFI provides strain and EF analyses in less than nine seconds.",
      "source_url": "https://www.itnonline.com/content/ge-healthcare-launches-ai-powered-cardiovascular-ultrasound-system",
      "verification": "news"
     }
@@ -7406,7 +8267,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1016/j.ultrasmedbio.2018.07.024",
      "relation": "algorithm-development",
      "n_subjects": 500,
-     "key_result": "CNN view classifier (up to 7 views) trained/tested on >500 patients and 7000 videos: 98.3% ± 0.6% (frames) and 98.9% ± 0.6% (sequences) accuracy, 4.4 ms per frame. Co-author from GE Vingmed Ultrasound AS. Not stated to be the Automatic View Recognition product.",
+     "key_result": "CNN view classifier (up to 7 views) trained/tested on >500 patients and 7000 videos: 98.3% ± 0.6% (frames) and 98.9% ± 0.6% (sequences) accuracy, 4.4 ms per frame. Co-author from GE Vingmed Ultrasound AS. Not stated to be the Automatic View Recognition product. Abstract and GE Vingmed Ultrasound AS affiliation confirmed via PubMed efetch this session.",
      "verification": "doi_resolved"
     },
     {
@@ -7431,8 +8292,8 @@ window.AIECHO_PRODUCTS = {
      "pmid": "33493114",
      "url": "https://doi.org/10.1109/TMI.2021.3054566",
      "relation": "algorithm-development",
-     "n_subjects": null,
-     "key_result": "Deep-learning motion estimation / strain pipeline underlying the Salte et al. clinical studies (abstract not retrieved this session; details from Crossref/PubMed metadata only).",
+     "n_subjects": 30,
+     "key_result": "PWC-Net-based deep-learning motion estimator (average end-point error 0.06±0.04 mm/frame on simulated data) in a fully automatic pipeline (view classification, event detection, myocardial segmentation, motion estimation) for LV longitudinal strain; mean deviation -0.7±1.6% vs a semi-automatic commercial solution in N=30 patients. NTNU/CIUS academic work; not stated to be a Vivid feature. Abstract confirmed via PubMed efetch this session.",
      "verification": "doi_resolved"
     },
     {
@@ -7484,7 +8345,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1186/s12880-024-01470-7",
      "relation": "algorithm-development",
      "n_subjects": 672,
-     "key_result": "EfficientNetB1 model trained on cardiologist-defined ROIs from 672 exams; DL ROIs fed to commercial analysis software gave average absolute GLS difference 0.75 (95% CI 0.58-0.92) vs operators. Co-author affiliated with GE Healthcare, Oslo. Not stated to be the shipped AI Auto ROI.",
+     "key_result": "EfficientNetB1 model trained on cardiologist-defined ROIs from 672 exams; DL ROIs fed to commercial analysis software gave average absolute GLS difference 0.75 (95% CI 0.58-0.92) vs operators. Co-author affiliated with GE Healthcare, Oslo. Not stated to be the shipped AI Auto ROI. GE Healthcare, Oslo affiliation confirmed via PubMed efetch this session.",
      "verification": "doi_resolved"
     },
     {
@@ -7494,28 +8355,67 @@ window.AIECHO_PRODUCTS = {
      "year": 2024,
      "doi": "10.1093/ehjimp/qyae092",
      "pmid": "39449961",
-     "url": "https://pubmed.ncbi.nlm.nih.gov/39449961/",
+     "url": "https://doi.org/10.1093/ehjimp/qyae092",
      "relation": "external-validation",
+     "n_subjects": 80,
+     "key_result": "Dual-centre test-retest data set of 40 controls and 40 patients with suspected NSTE-ACS, two consecutive echocardiograms per subject by different operators; the fully automated deep-learning method improved test-retest reproducibility of regional longitudinal strain compared with semi-automatic measurements by experienced observers (numeric values not in the PubMed abstract). NTNU/CIUS pipeline; not stated to be a Vivid feature. DOI resolved via Crossref this session.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Real-Time Echocardiography Guidance for Optimized Apical Standard Views.",
+     "first_author": "Pasdeloup D",
+     "journal": "Ultrasound in Medicine & Biology",
+     "year": 2023,
+     "doi": "10.1016/j.ultrasmedbio.2022.09.006",
+     "pmid": "36280443",
+     "url": "https://doi.org/10.1016/j.ultrasmedbio.2022.09.006",
+     "relation": "algorithm-development",
      "n_subjects": null,
-     "key_result": "Test-retest reproducibility of regional strain with the NTNU/CIUS deep-learning strain pipeline (abstract not retrieved this session; PMID confirmed via esummary).",
-     "verification": "pmid_resolved"
+     "key_result": "Deep-learning tool that suggests transducer movements toward apical standard views, trained on slices of 3-D volumes; proposed the adequate transducer movement 75% of the time across all degrees of freedom and 95% of the time for rotation alone. Co-author affiliated with GE Vingmed Ultrasound AS (PubMed affiliation). Found via extra PubMed search this session; not stated to be the Scan Coach or any Vivid feature.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Deep learning for automated left ventricular outflow tract diameter measurements in 2D echocardiography.",
+     "first_author": "Zha SZ",
+     "journal": "Cardiovascular Ultrasound",
+     "year": 2023,
+     "doi": "10.1186/s12947-023-00317-5",
+     "pmid": "37833731",
+     "url": "https://doi.org/10.1186/s12947-023-00317-5",
+     "relation": "algorithm-development",
+     "n_subjects": 649,
+     "key_result": "U-Net model for automatic LVOT diameter in PLAX/zoomed PLAX views trained on 649 consecutive exams (1304 measurements): mean absolute error 1.04 mm (95% CI 0.90-1.19) on the test set; mean relative error 3.8-5.1% across subgroups. Co-author affiliated with GE HealthCare, Oslo (PubMed affiliation). Found via extra PubMed search this session; not stated to be the AI Auto Measure 2D feature.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Automated Segmentation and Quantification of the Right Ventricle in 2-D Echocardiography.",
+     "first_author": "Chernyshov A",
+     "journal": "Ultrasound in Medicine & Biology",
+     "year": 2024,
+     "doi": "10.1016/j.ultrasmedbio.2023.12.018",
+     "pmid": "38290912",
+     "url": "https://doi.org/10.1016/j.ultrasmedbio.2023.12.018",
+     "relation": "algorithm-development",
+     "n_subjects": 250,
+     "key_result": "Deep-learning RV segmentation / keypoint detection (U-Net KP) trained and evaluated on RV-focused images from 250 participants; bias and 95% LoA vs reference 0.8 ± 10.8% for RV fractional area change, -0.04 ± 0.54 cm for TAPSE, 0.2 ± 6.6% for RV free-wall strain, comparable to inter-observer discrepancies. Co-author affiliated with GE Vingmed Ultrasound AS (PubMed affiliation). Found via extra PubMed search this session; not stated to be the AFI RV feature.",
+     "verification": "doi_resolved"
     }
    ],
    "clinical_trials": [],
    "open_questions": [
-    "K200497 predicate and reference K-numbers cannot be read: the 510(k) summary PDF text layer is font-shifted and drops all digits (pdftotext, PyMuPDF and the probe extractor all fail). Predicates left empty; the decoded text names 'Vivid S60N/Vivid S70N (K...)' as primary predicate and Vivid E95, LOGIQ E9, Vivid S60N/S70N and Vivid 7 as reference devices.",
-    "No accuracy data exist in any FDA summary for Automatic View Recognition (K181685), AI Auto Measure 2D, or Spectrum Recognition; the only figure is a click count (79%, 4 vs 19) in K200743. Company pages claim 98-99% detectability/accuracy without methods.",
+    "K200497 predicate and reference K-numbers cannot be read: the 510(k) summary PDF text layer is glyph-shifted (+3 code points) and drops all digits (pdftotext, PyMuPDF, the probe extractor and pypdf all give the same result). Predicates left empty; the decoded text names 'Vivid S60N/Vivid S70N (K...)' as primary predicate and Vivid E95, LOGIQ E9, Vivid S60N/S70N and Vivid 7 as reference devices.",
+    "No accuracy data exist in any FDA summary for Automatic View Recognition (K181685), AI Auto Measure 2D, or Spectrum Recognition; the only figure is a click count (79%, 4 vs 19) in K200743. Company pages claim 98-99% detectability/accuracy and 100% reproducibility citing GE internal data documents (DOC2292732) without methods, and the page's footnotes attribute those figures to the View Recognition and Spectrum Recognition algorithms rather than to AI Auto Measure 2D as the headline sentence implies.",
     "AI Auto ROI (Easy Auto EF / Easy AFI LV) training-set size, number of training sites, and patient demographics are undisclosed; the test set is 45 exams with patient count 'assumed'.",
     "K251169 AI Cardiac Auto Doppler: the numeric accuracy thresholds and achieved mean absolute percent errors per parameter are not reported (only 'passed'); the BMI-subgroup 'predefined metric' is not defined and has no units; overlap between the Tissue Doppler (805) and Doppler Trace (1369) cohorts is not stated.",
     "K251169 AI FlexiViews LAA: size of the BMI>25 subset is not stated; sensitivity/specificity definitions (per recording vs per landmark) are not given.",
-    "The peer-reviewed papers listed are NTNU/CIUS (and one Oslo/GE Healthcare co-authored) research pipelines with GE licensing priority; none names the commercial Vivid feature it corresponds to, so they are labeled algorithm-development/external-validation of a related pipeline rather than pivotal validation of the cleared product.",
+    "No peer-reviewed validation was found for AI Cardiac Auto Doppler, AI FlexiViews LAA, AI Auto Measure 2D, or Spectrum Recognition. Extra PubMed searches this session (feature names; GE Vingmed/GE HealthCare affiliation + echocardiography + deep learning; 'Vivid E95' + AI) returned only GE-affiliated research papers on view guidance, LVOT diameter and RV segmentation, none of which names a Vivid feature.",
     "No peer-reviewed validation was found for AI Cardiac Auto Doppler, AI FlexiViews LAA, AI Auto Measure 2D, or Spectrum Recognition (PubMed searches returned no relevant hits).",
     "No registered clinical trials were searched on ClinicalTrials.gov this session; clinical_trials left empty."
    ],
    "sources": [
     {
      "fact": "Decision dates, product code IYN, applicant names for all ten clearances",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json",
      "verification": "fda_summary"
     },
     {
@@ -7584,13 +8484,13 @@ window.AIECHO_PRODUCTS = {
      "verification": "news"
     },
     {
-     "fact": "Paper metadata and abstracts (PubMed esearch/esummary/efetch); DOIs confirmed via Crossref for 7 papers",
+     "fact": "Paper metadata and abstracts (PubMed esearch/esummary/efetch); DOIs confirmed via Crossref for all 11 papers",
      "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ ; https://api.crossref.org/works/",
      "verification": "peer_reviewed"
     }
    ],
-   "_source_file": "system-ge-vivid.json",
-   "_verified": false,
+   "_source_file": "system-ge-vivid.verified.json",
+   "_verified": true,
    "first_cleared": "2018-10-25",
    "latest_cleared": "2025-07-10",
    "n_clearances": 10,
@@ -7601,9 +8501,9 @@ window.AIECHO_PRODUCTS = {
     "IYN"
    ],
    "n_performance_claims": 23,
-   "n_papers_resolved": 8,
-   "n_papers": 8,
-   "research_verified": false,
+   "n_papers_resolved": 11,
+   "n_papers": 11,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -7812,7 +8712,7 @@ window.AIECHO_PRODUCTS = {
    "embedded_ai_features": [
     "Video-based convolutional deep-learning classifier on A4C clips for cardiac amyloidosis presence",
     "Confidence thresholding on image quality and prediction (no output for ~13% of patients)",
-    "Automated wall-thickness gating (IVSd/LVPWd >=12 mm) via Us2.v2 measurements",
+    "Intended only for adults with IVSd or LVPWd >=12 mm (the summary does not describe how wall thickness is determined or gated)",
     "Guideline-based automated report text with disease indications"
    ],
    "clearances": [
@@ -7974,6 +8874,21 @@ window.AIECHO_PRODUCTS = {
      "quote": "External validation of the deep-learning model showed accuracies of 87.5% (sensitivity, 86.6%; specificity, 87.9%) in the United States and 88.4% (sensitivity, 92.3%; specificity, 85.3%) in the Japanese cohort.",
      "page": null,
      "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K250151",
+     "endpoint": "Us2.Ca stand-alone CA detection in a global multiethnic registry (published, independent of FDA test set)",
+     "metric": "AUC / accuracy / sensitivity / specificity",
+     "value": "AUC 0.89; accuracy 80%; sensitivity 76%; specificity 91%; indeterminate classification in 9% of cases",
+     "comparator": "Consensus-criteria adjudicated CA diagnosis; controls = 202 suspected ATTR-CA with negative diagnostic evaluation + 114 biopsy-proven extracardiac AL without cardiac involvement",
+     "n_studies": null,
+     "n_patients": 1043,
+     "n_sites": null,
+     "dataset_description": "Slivnick JA et al., Circ Cardiovasc Imaging 2026 (doi 10.1161/CIRCIMAGING.126.019610): Amyloidosis Imaging International Consortium registry, 727 CA and 316 controls; used for training/internal validation of the combined AI echo-clinical model and to benchmark the existing Us2.Ca model.",
+     "subgroup_notes": "Combined AI echo-clinical model (not a cleared function): AUC 0.94, accuracy 90%, sensitivity 93%, specificity 85%, no indeterminate cases.",
+     "quote": "The AI-ECM demonstrated superior performance (area under the curve, 0.94; accuracy, 90%; sensitivity, 93%; specificity, 85%) compared with the Us2.Ca (area under the curve, 0.89; accuracy, 80%; sensitivity, 76%; specificity, 91%; P=0.006). While the Us2.Ca model classification was indeterminate in 9% of the cases, the AI-ECM allowed classification of all cases.",
+     "page": null,
+     "verification": "peer_reviewed"
     }
    ],
    "training_data": {
@@ -7991,7 +8906,7 @@ window.AIECHO_PRODUCTS = {
     "n_sites": 6,
     "description": "Independent pooled external validation dataset of 1,647 patients (664 CA, 983 controls) from six clinical sites across the United States and Japan; retrospective routine clinical DICOM; GE and Philips systems only; patient-level analysis (one sample per patient). Confident predictions in 1,434 (87.1%). 'The training and external validation datasets were sourced from entirely separate data providers, ensuring no overlap.'",
     "independent_of_training": true,
-    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K250151.pdf (pp.11-13)",
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K250151.pdf (pp.11-14)",
     "verification": "fda_summary"
    },
    "prior_validations": [
@@ -8024,6 +8939,19 @@ window.AIECHO_PRODUCTS = {
      "n_subjects": 5776,
      "key_result": "Video-based DL model trained on UK NAC + Taiwan MacKay (CA 2241; controls 2130, matching the K250151 training set); external accuracy 87.5% (US, Duke) and 88.4% (Japan, NCVC); AUC 0.93 vs 0.88 for AI-measurement multiparametric score. Us2.ai employees co-authors.",
      "verification": "doi_resolved"
+    },
+    {
+     "title": "Multimodal Artificial Intelligence for Cardiac Amyloidosis Diagnosis: Integrating Echocardiography With Clinical and Laboratory Data for Improved Detection",
+     "first_author": "Slivnick JA",
+     "journal": "Circulation: Cardiovascular Imaging",
+     "year": 2026,
+     "doi": "10.1161/CIRCIMAGING.126.019610",
+     "pmid": "42200278",
+     "url": "https://doi.org/10.1161/CIRCIMAGING.126.019610",
+     "relation": "external-validation",
+     "n_subjects": 1043,
+     "key_result": "Amyloidosis Imaging International Consortium registry (727 CA, 316 controls incl. 202 suspected ATTR-CA with negative work-up and 114 extracardiac AL): the TTE-only Us2.Ca model alone gave AUC 0.89, accuracy 80%, sensitivity 76%, specificity 91%, indeterminate in 9%; adding clinical/laboratory data (AI-ECM) gave AUC 0.94, accuracy 90%, sensitivity 93%, specificity 85% (P=0.006). Us2.ai-affiliated co-authors.",
+     "verification": "doi_resolved"
     }
    ],
    "clinical_trials": [
@@ -8039,7 +8967,7 @@ window.AIECHO_PRODUCTS = {
     "The narrative states six clinical sites but the data-source subgroup table lists four centers; the site-to-center mapping is not given.",
     "Wall-thickness threshold discrepancy: Form FDA 3881 says IVSd or LVPWd '> 12mm', the 510(k) summary says '≥ 12mm'.",
     "The FDA test set (1,647; 664 CA/983 controls) is larger than the published external test sets in Ioannou 2026 (1,405; 515 CA/890 controls); the additional sites are unidentified.",
-    "Company pages cite a 2026 Circ Cardiovasc Imaging multimodal paper ('93% sensitivity and 90% accuracy') and the AI-SCREEN-CA AHA 2025 results; neither was resolved to a PMID/DOI in this session.",
+    "The company-cited 2026 Circ Cardiovasc Imaging multimodal paper resolves to Slivnick JA et al. (doi 10.1161/CIRCIMAGING.126.019610); its '93% sensitivity and 90% accuracy' describe the combined AI echo-clinical model, not Us2.Ca alone (AUC 0.89, sensitivity 76%, specificity 91%, accuracy 80%). The AI-SCREEN-CA AHA 2025 results remain unresolved to a PMID/DOI.",
     "The 'Others' race subgroup CI (53.51-113.15) and the Hispanic/Latino subgroup (n=5, no controls) indicate very small strata; exact n per subgroup not reported.",
     "Whether Us2.ca is sold as a separately licensed module or bundled in the Us2.v2 platform is not stated."
    ],
@@ -8051,7 +8979,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "Decision date 2025-06-20, product code SDJ, regulation 870.2200, advisory committee CV, applicant Eko.Ai Pte Ltd. D/B/A Us2.Ai",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K250151",
      "verification": "fda_database"
     },
     {
@@ -8075,8 +9003,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "fda_database"
     }
    ],
-   "_source_file": "us2.json",
-   "_verified": false,
+   "_source_file": "us2.verified.json",
+   "_verified": true,
    "first_cleared": "2025-06-20",
    "latest_cleared": "2025-06-20",
    "n_clearances": 1,
@@ -8086,10 +9014,10 @@ window.AIECHO_PRODUCTS = {
    "product_codes": [
     "SDJ"
    ],
-   "n_performance_claims": 9,
-   "n_papers_resolved": 1,
-   "n_papers": 1,
-   "research_verified": false,
+   "n_performance_claims": 10,
+   "n_papers_resolved": 2,
+   "n_papers": 2,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -8815,7 +9743,7 @@ window.AIECHO_PRODUCTS = {
    ],
    "performance_claims": [
     {
-     "k_number": "K233826",
+     "k_number": null,
      "endpoint": "Kosmos autoEF vs cardiac MRI LVEF",
      "metric": "Pearson r / bias",
      "value": "r = 0.99; bias 1.1%; median LVEF 57% (CMR) vs 55% (AI-Echo), p = 0.51",
@@ -8824,53 +9752,68 @@ window.AIECHO_PRODUCTS = {
      "n_patients": 49,
      "n_sites": 1,
      "dataset_description": "49 adult patients undergoing clinically indicated CMR, single Italian center, prospective",
-     "subgroup_notes": null,
+     "subgroup_notes": "Source: peer-reviewed abstract, Bisignani 2025 (doi 10.3390/jcm14134708); not from an FDA submission. Software version relative to K233826 is not stated in the paper.",
      "quote": "Median LVEF was 57% (CMR) vs. 55% (AI-Echo), with no significant difference (p = 0.51). Strong correlation (r = 0.99) and minimal bias (1.1%) were observed.",
      "page": null,
      "verification": "peer_reviewed"
     },
     {
-     "k_number": "K233826",
+     "k_number": null,
      "endpoint": "Kosmos autoEF (TRIO AI + KOSMOS EF) vs standard echo biplane Simpson's LVEF, by operator",
      "metric": "Pearson r",
      "value": "cardiologist r = 0.90; junior oncologist r = 0.82; nurse r = 0.84; senior oncologist r = 0.79",
      "comparator": "biplane Simpson's LVEF on standard echocardiography by cardiologist",
      "n_studies": 115,
      "n_patients": 115,
-     "n_sites": 1,
+     "n_sites": null,
      "dataset_description": "115 patients referred for echocardiographic LVEF estimation (chemotherapy/oncology setting); each scanned by cardiologist, senior oncologist, oncology resident and nurse with Kosmos HUD",
-     "subgroup_notes": "Bland-Altman showed small underestimation by autoEF vs SE-EF",
+     "subgroup_notes": "Source: peer-reviewed abstract, Papadopoulou 2024 (doi 10.1093/ehjdh/ztae017); not from an FDA submission. Software version relative to K233826 is not stated in the paper. Bland-Altman showed small underestimation by autoEF vs SE-EF",
      "quote": "The correlation between autoEF and SE-ejection fraction (EF) was excellent for the cardiologist (r = 0.90), the junior oncologist (r = 0.82), and the nurse (r = 0.84), and good for the senior oncologist (r = 0.79).",
      "page": null,
      "verification": "peer_reviewed"
     },
     {
-     "k_number": "K233826",
+     "k_number": null,
      "endpoint": "Detection of LVEF < 50% with Kosmos autoEF, by operator",
      "metric": "sensitivity / specificity",
      "value": "cardiologist 95%/94%; senior oncologist 86%/93%; junior oncologist 95%/91%; nurse 94%/87%",
      "comparator": "biplane Simpson's LVEF on standard echocardiography",
      "n_studies": 115,
      "n_patients": 115,
-     "n_sites": 1,
+     "n_sites": null,
      "dataset_description": "same cohort as above",
-     "subgroup_notes": null,
+     "subgroup_notes": "Source: peer-reviewed abstract, Papadopoulou 2024 (doi 10.1093/ehjdh/ztae017); not from an FDA submission. Software version relative to K233826 is not stated in the paper.",
      "quote": "Detection of impaired LVEF < 50% was feasible with a sensitivity of 95% and specificity of 94% for the cardiologist; sensitivity of 86% and specificity of 93% for the senior oncologist; sensitivity of 95% and specificity of 91% for the junior oncologist; and sensitivity of 94% and specificity of 87% for the nurse.",
      "page": null,
      "verification": "peer_reviewed"
     },
     {
-     "k_number": "K233826",
+     "k_number": null,
      "endpoint": "AI-enhanced novice pathway (Kosmos AI-guided acquisition by novices + Us2.ai automated reporting) for detecting LVEF < 50%",
      "metric": "AUC / sensitivity / specificity",
      "value": "AUC 0.880 (95% CI 0.802-0.958); sensitivity 84.6%, specificity 91.4%, PPV 78.5%, NPV 94.1%; median absolute LVEF deviation 6.03%",
      "comparator": "standard echo by trained sonographers interpreted by cardiologists",
      "n_studies": 100,
      "n_patients": 100,
-     "n_sites": 1,
+     "n_sites": null,
      "dataset_description": "100 symptomatic patients with suspected HF (mean age 61 +/- 15, 56% men); novices with 2 weeks' training; interpretable in 96 patients",
-     "subgroup_notes": "LVEF reported by Us2.ai software, not Kosmos Auto EF; Kosmos supplied AI acquisition guidance",
+     "subgroup_notes": "Source: peer-reviewed abstract, Huang 2024 (doi 10.1038/s41598-024-62467-4); not from an FDA submission. Software version relative to K233826 is not stated in the paper. LVEF reported by Us2.ai software, not Kosmos Auto EF; Kosmos supplied AI acquisition guidance",
      "quote": "The area under the curve (AUC) of the AI novice pathway was 0.880 (95% CI 0.802, 0.958). The sensitivity, specificity, positive predictive and negative predictive values of the AI-enhanced novice pathway in detecting LVEF < 50% were 84.6%, 91.4%, 78.5% and 94.1% respectively.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": null,
+     "endpoint": "Kosmos automatic LVEF (AI-POCUS) vs biplane disk-method LVEF on high-end echo, two Japanese hospitals",
+     "metric": "ICC / bias / sensitivity-specificity for LVEF < 50%",
+     "value": "ICC 0.81; mean bias -1.5% (limits of agreement +/- 15.0%); LVEF < 50% sensitivity 85% (95% CI 76-91%), specificity 81% (71-89%)",
+     "comparator": "standard biplane disk method on high-end ultrasound machines",
+     "n_studies": 200,
+     "n_patients": 182,
+     "n_sites": 2,
+     "dataset_description": "200 patients prospectively scanned at two Japanese hospitals; 18 excluded for infeasible AI images; 182 analysed (63 +/- 15 years, 21% female). Device identified in full text as KOSMOS (EchoNous Inc.) with company-developed automatic LVEF program; study partially funded by EchoNous.",
+     "subgroup_notes": "Source: peer-reviewed abstract, Kagiyama 2024 (doi 10.1038/s41598-024-65557-5); not from an FDA submission. LV volumes underestimated for larger LVs (EDV bias 42.1 mL); a newer software version showed ICC > 0.85 for volumes. Software version relative to K233826 not stated.",
+     "quote": "The intraclass correlation coefficient (ICC) between the LVEF by AI-POCUS and the standard methods was good (0.81, p < 0.001) without clinically meaningful systematic bias (mean bias -1.5%, p = 0.008, limits of agreement ± 15.0%). Reduced LVEF < 50% was detected with a sensitivity of 85% (95% confidence interval 76%-91%) and specificity of 81% (71%-89%).",
      "page": null,
      "verification": "peer_reviewed"
     }
@@ -8895,14 +9838,14 @@ window.AIECHO_PRODUCTS = {
    },
    "prior_validations": [
     {
-     "description": "Company 'Kosmos AI EF clinical validation' landing page: prospective study of 78 patients at Mercy Med Clinic (Columbus, GA), four echocardiographers, reference = average of two independent echo core labs (Massachusetts General Hospital and UCSF); results gated behind a download form and not read.",
+     "description": "Company 'Kosmos AI EF clinical validation' landing page: prospective study of 78 patients at Mercy Med Clinic (Columbus, GA), four echocardiographers, reference = average of two independent echo core labs (Massachusetts General Hospital and UCSF); results gated behind a download form and not read. (echonous.com returned HTTP 403 at fact-check on 2026-09-05; figures could not be re-confirmed.)",
      "source_url": "https://echonous.com/ai_ef_lp/",
-     "verification": "company"
+     "verification": "unverified"
     },
     {
-     "description": "Company clinical-benchmarking page: AI-based EF in n=100 (mean age 57+/-15, BMI 28+/-4, 61% male) vs cart-based Simpson's biplane: correlation 0.87 (p<0.0001), bias 1.42%, RMSD 7.51%; CW Doppler velocities in n=50 vs high-end cart: correlation 0.98, bias 0.15 m/s, RMSD 0.26 m/s. Unpublished company data.",
+     "description": "Company clinical-benchmarking page: AI-based EF in n=100 (mean age 57+/-15, BMI 28+/-4, 61% male) vs cart-based Simpson's biplane: correlation 0.87 (p<0.0001), bias 1.42%, RMSD 7.51%; CW Doppler velocities in n=50 vs high-end cart: correlation 0.98, bias 0.15 m/s, RMSD 0.26 m/s. Unpublished company data. (echonous.com returned HTTP 403 at fact-check on 2026-09-05; figures could not be re-confirmed.)",
      "source_url": "https://echonous.com/clinical-benchmarking-kosmos-platform/",
-     "verification": "company"
+     "verification": "unverified"
     },
     {
      "description": "Hardware (non-AI) validation of Kosmos CW Doppler for aortic stenosis: 101 patients, mean gradient ICC 0.87, r = 0.89, kappa 0.81 for severe AS (Zubiaur 2024); TAVI prosthesis assessment in 64 patients, mean gradient ICC 0.76, Vmax ICC 0.83 (Margarida de Castro 2026).",
@@ -9014,6 +9957,58 @@ window.AIECHO_PRODUCTS = {
      "n_subjects": 42,
      "key_result": "Resident with Kosmos Torso-One vs expert on high-end system: measurement differences <=0.4 mm (n.s.); mitral regurgitation agreement kappa 0.53 (non-AI)",
      "verification": "doi_resolved"
+    },
+    {
+     "title": "Multicenter validation study for automated left ventricular ejection fraction assessment using a handheld ultrasound with artificial intelligence",
+     "first_author": "Kagiyama N",
+     "journal": "Sci Rep",
+     "year": 2024,
+     "doi": "10.1038/s41598-024-65557-5",
+     "pmid": "38965290",
+     "url": "https://doi.org/10.1038/s41598-024-65557-5",
+     "relation": "external-validation",
+     "n_subjects": 182,
+     "key_result": "Kosmos automatic LVEF vs biplane disk method in 182 of 200 patients at two Japanese hospitals: ICC 0.81, bias -1.5%, LoA +/-15%; LVEF<50% sens 85%, spec 81%; LV volumes underestimated for larger LVs; EchoNous-funded",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Nurse-led home-based detection of cardiac dysfunction by ultrasound: results of the CUMIN pilot study",
+     "first_author": "Tromp J",
+     "journal": "Eur Heart J Digit Health",
+     "year": 2024,
+     "doi": "10.1093/ehjdh/ztad079",
+     "pmid": "38505488",
+     "url": "https://doi.org/10.1093/ehjdh/ztad079",
+     "relation": "real-world",
+     "n_subjects": 94,
+     "key_result": "Novice nurses in Tunisia using Kosmos Torso-One + AI Trio guidance with Us2.ai automated measurements: interpretable LVEF in 80% of 94 patients; sensitivity 92% (95% CI 62-99) for LVEF<50% or LAVI>34 mL/m2; measurements by Us2.ai, not Kosmos Auto EF; Us2.ai-funded",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Diagnostic accuracy and cost-effectiveness of a handheld ultrasound device for cardiac evaluation in noncardiology settings",
+     "first_author": "Papadopoulou SL",
+     "journal": "Eur Heart J Imaging Methods Pract",
+     "year": 2026,
+     "doi": "10.1093/ehjimp/qyag047",
+     "pmid": "41908621",
+     "url": "https://doi.org/10.1093/ehjimp/qyag047",
+     "relation": "real-world",
+     "n_subjects": 139,
+     "key_result": "Kosmos HUD used by consulting cardiologists in 139 inpatients: clinical question answered in 85%; kappa 0.964 for abnormal LV size/function, 0.943 RV, 0.953 pericardial effusion, 0.706 significant VHD; 74% echo-cost reduction; AI features not separately evaluated; EchoNous supplied equipment",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Experience with the Kosmos ultrasonographic tool in the approach and treatment of ambulatory patients of a heart failure clinic: a single-center cross-sectional study",
+     "first_author": "Gomez-Alvarez U",
+     "journal": "Arch Cardiol Mex",
+     "year": 2024,
+     "doi": "10.24875/ACM.22000250",
+     "pmid": "38507324",
+     "url": "https://doi.org/10.24875/ACM.22000250",
+     "relation": "real-world",
+     "n_subjects": 100,
+     "key_result": "Descriptive single-center use of Kosmos in 100 heart-failure clinic patients (median LVEF 34%; B-pattern lung congestion 22%; VExUS grade 0 in 92%); no accuracy comparison and no AI-specific result",
+     "verification": "doi_resolved"
     }
    ],
    "clinical_trials": [
@@ -9056,7 +10051,7 @@ window.AIECHO_PRODUCTS = {
     "AI Trio guidance/grading clearance status is unclear: K212100 says 'not yet cleared' (COVID-19 enforcement policy); the K233826 IFU names Auto EF and AI FAST but not Trio guidance; company lists Trio under Kosmos EDU. NCT07771270 (2026) is still evaluating Trio guidance.",
     "K242321 IFU (Kosmos on Android) omits the Auto EF and AI FAST language and the ECG/DA text; whether the Android configuration carries the AI features under K233826 is not stated.",
     "Kosmos PLAX EF (Teichholz) is under pivotal study in 2026 (NCT07771231) and is not covered by any K-number in this batch.",
-    "No peer-reviewed paper reports Kosmos Auto EF performance against the FDA reference standard; published validations are single-center (n=49 vs CMR; n=115 vs biplane Simpson's)."
+    "No peer-reviewed paper reports Kosmos Auto EF performance against the FDA reference standard; published validations are single-center (n=49 vs CMR; n=115 vs biplane Simpson's) or two-center (n=182 vs biplane disk method, Kagiyama 2024, with 9% of patients excluded for infeasible AI images)."
    ],
    "sources": [
     {
@@ -9081,7 +10076,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "Decision dates, product codes, applicant, third-party flag, statement/summary type",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json",
      "verification": "fda_database"
     },
     {
@@ -9090,19 +10085,19 @@ window.AIECHO_PRODUCTS = {
      "verification": "fda_database"
     },
     {
-     "fact": "Company AI feature list (Auto EF, AI FAST, Auto Doppler, Auto Preset, Bladder AI, Trio under Kosmos EDU) and 'AI tools running in real-time' on device",
+     "fact": "Company AI feature list (Auto EF, AI FAST, Auto Doppler, Auto Preset, Bladder AI, Trio under Kosmos EDU) and 'AI tools running in real-time' on device (page returned HTTP 403 at fact-check; not re-confirmed)",
      "url_or_file": "https://echonous.com/product/kosmos-ultraportable-ultrasound/",
-     "verification": "company"
+     "verification": "unverified"
     },
     {
-     "fact": "Company benchmarking numbers (n=100 EF correlation 0.87, RMSD 7.51%)",
+     "fact": "Company benchmarking numbers (n=100 EF correlation 0.87, RMSD 7.51%) (page returned HTTP 403 at fact-check; not re-confirmed)",
      "url_or_file": "https://echonous.com/clinical-benchmarking-kosmos-platform/",
-     "verification": "company"
+     "verification": "unverified"
     },
     {
-     "fact": "Company AI EF validation design (n=78, MGH/UCSF core labs)",
+     "fact": "Company AI EF validation design (n=78, MGH/UCSF core labs) (page returned HTTP 403 at fact-check; not re-confirmed)",
      "url_or_file": "https://echonous.com/ai_ef_lp/",
-     "verification": "company"
+     "verification": "unverified"
     },
     {
      "fact": "Kosmos 2.2 iOS release with Auto Doppler / Auto Preset (April 2024)",
@@ -9110,9 +10105,9 @@ window.AIECHO_PRODUCTS = {
      "verification": "news"
     },
     {
-     "fact": "Feb 2026 OB/GYN and vascular expansion press release",
+     "fact": "Feb 2026 OB/GYN and vascular expansion press release (page returned HTTP 403 at fact-check; not re-confirmed)",
      "url_or_file": "https://echonous.com/kosmos-ob-gyn-vascular-expansion/",
-     "verification": "company"
+     "verification": "unverified"
     },
     {
      "fact": "Paper metadata and abstracts (PubMed E-utilities) and DOI resolution (Crossref) for all listed papers",
@@ -9120,8 +10115,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "peer_reviewed"
     }
    ],
-   "_source_file": "kosmos-exo.json",
-   "_verified": false,
+   "_source_file": "kosmos-exo.verified.json",
+   "_verified": true,
    "first_cleared": "2020-03-26",
    "latest_cleared": "2025-04-25",
    "n_clearances": 4,
@@ -9131,10 +10126,10 @@ window.AIECHO_PRODUCTS = {
    "product_codes": [
     "IYN"
    ],
-   "n_performance_claims": 4,
-   "n_papers_resolved": 8,
-   "n_papers": 8,
-   "research_verified": false,
+   "n_performance_claims": 5,
+   "n_papers_resolved": 12,
+   "n_papers": 12,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -10422,7 +11417,7 @@ window.AIECHO_PRODUCTS = {
     "GE Venue family",
     "Terason uSmart 3200t Plus (original platform)"
    ],
-   "summary": "Software accessory that gives real-time prescriptive probe-movement guidance, a quality meter, auto-capture and save-best-clip for 10 standard 2D-TTE views on a compatible ultrasound system. First AI acquisition-guidance device authorized by FDA (De Novo DEN190040, 2020-02-07, Breakthrough-designated, product code QJU) with an authorized PCCP that was revised in K201992 and K243065; pivotal prospective study of 8 nurses scanning 240 patients at 2 US sites met all 4 primary endpoints (LV size/function and pericardial effusion 98.8%, RV size 92.5%). Renamed Cardiac Guidance in K243065 after GE HealthCare acquired Caption Health in 2023.",
+   "summary": "Software accessory that gives real-time prescriptive probe-movement guidance, a quality meter, auto-capture and save-best-clip for 10 standard 2D-TTE views on a compatible ultrasound system. De Novo DEN190040 (2020-02-07, Breakthrough-designated, product code QJU) created 21 CFR 892.2100 and included a PCCP that was revised in K201992 and K243065; pivotal prospective study of 8 nurses scanning 240 patients met all 4 primary endpoints (LV size, global LV function and non-trivial pericardial effusion 98.8%; RV size 92.5%; 2 sites per the JAMA Cardiology report). Renamed Cardiac Guidance in K243065; GE HealthCare announced its acquisition of Caption Health in 2023.",
    "intended_use_quote": "The Caption Guidance software is intended to assist medical professionals in the acquisition of cardiac ultrasound images. Caption Guidance software is an accessory to compatible general purpose diagnostic ultrasound systems.",
    "indications_for_use_quote": "The Caption Guidance software is intended to assist medical professionals in the acquisition of cardiac ultrasound images. Caption Guidance software is an accessory to compatible general purpose diagnostic ultrasound systems. The Caption Guidance software is indicated for use in two-dimensional transthoracic echocardiography (2D-TTE) for adult patients, specifically in the acquisition of the following standard views: Parasternal Long-Axis (PLAX), Parasternal Short-Axis at the Aortic Valve (PSAX-AV), Parasternal Short-Axis at the Mitral Valve (PSAX-MV), Parasternal Short-Axis at the Papillary Muscle (PSAX-PM), Apical 4-Chamber (AP4), Apical 5-Chamber (AP5), Apical 2-Chamber (AP2), Apical 3-Chamber (AP3), Subcostal 4-Chamber (SubC4), and Subcostal Inferior Vena Cava (SC-IVC).",
    "embedded_ai_features": [
@@ -10464,7 +11459,7 @@ window.AIECHO_PRODUCTS = {
      "predicates": [
       "DEN190040"
      ],
-     "changes_summary": "Updated version with device enhancements: additional prescriptive guidance for the users, information for users via the UI, optimized quality meter and automated image capture, ability to set the scanning convention to that of the user's facility, ability to set custom protocols and skip portions of protocols. Summative human-factors testing with 16 users. Company press release describes the review as completed in 25 days during the COVID-19 pandemic.",
+     "changes_summary": "Updated version with device enhancements: additional prescriptive guidance for the users, information for users via the UI, optimized quality meter and automated image capture, ability to set the scanning convention to that of the user's facility, ability to set custom protocols and skip portions of protocols. Summative human-factors testing with 16 users. A company press release describes the review as completed in 25 days during the COVID-19 pandemic; openFDA lists date_received 2020-03-23 and decision 2020-04-16 (24 days) with no expedited_review_flag set.",
      "notable_flags": [
       "expedited review during COVID-19 (news)",
       "on-device"
@@ -10502,7 +11497,7 @@ window.AIECHO_PRODUCTS = {
      "predicates": [
       "K201992"
      ],
-     "changes_summary": "Trade name changed to Cardiac Guidance. Focused review of an updated PCCP expanding on K201992: additional standard cardiac subset views, compatibility with additional ultrasound systems and screen sizes including mobile platforms, new prescriptive-guidance types (patient positioning, breathing, combined probe movements, pressure, audio guidance), plus two new validation tests (non-expert validation protocol and human factors testing). Intended use and indications unchanged.",
+     "changes_summary": "Trade name changed to Cardiac Guidance (510(k) summary names the predicate only as 'Caption Guidance'; the text identifies K201992 as the most recent clearance whose PCCP is being expanded). Focused review of an updated PCCP expanding on K201992: additional standard cardiac subset views, compatibility with additional ultrasound systems and screen sizes including mobile platforms, new prescriptive-guidance types (patient positioning, breathing, combined probe movements, pressure, audio guidance), plus two new validation tests (non-expert validation protocol and human factors testing). Intended use and indications unchanged.",
      "notable_flags": [
       "PCCP",
       "renamed Cardiac Guidance",
@@ -10527,6 +11522,21 @@ window.AIECHO_PRODUCTS = {
      "subgroup_notes": null,
      "quote": "Importantly, the high specificity of the auto-capture feature (97.85% of auto-captured clips were diagnostic) demonstrated that a registered sonographer can rely on the auto-capture feature when using Caption Guidance.",
      "page": 5,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "DEN190040",
+     "endpoint": "Non-clinical algorithm performance testing (Quality Meter, Auto-Capture, Save Best Clip, Prescriptive Guidance)",
+     "metric": "qualitative (no numeric results printed); FDA notes limited statistical power",
+     "value": "Frame-level probe-pose prediction, relative image-quality prediction, auto-capture of clinically acceptable clips, and frame-/clip-level PG prediction were tested; FDA characterized this as low-level verification not powered for p-value significance across all PG actions",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "Caption Health demonstrated a low-level verification of the algorithms, which was not powered with a p-value significance for all tested PG actions. Importantly, the effectiveness of the subject device was assessed by taking into consideration the evidence from both bench testing and clinical testing.",
+     "page": 4,
      "verification": "fda_summary"
     },
     {
@@ -10738,6 +11748,36 @@ window.AIECHO_PRODUCTS = {
      "quote": "Three certified echocardiographers deemed 63.4% of scans as interpretable for a qualitative assessment of left ventricular size and function, 52.6% of scans as interpretable for right ventricular size and function, 34.8% of scans as interpretable for inferior vena cava size and variability, and 47.2% of scans as interpretable for the presence of pericardial effusion.",
      "page": null,
      "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "DEN190040",
+     "endpoint": "External: AI-guided RHD screening by novices with color Doppler (Uganda)",
+     "metric": "% of novice studies enabling diagnostic interpretation",
+     "value": ">90% for presence/absence of RHD, abnormal MV morphology and mitral regurgitation (experts 99%); aortic regurgitation 79% and aortic stenosis 50% (experts 99% and 91%); ACEP score >=3 in 81% of PLAX, 74% of AP4, 38% of AP5 images",
+     "comparator": "2 expert sonographers scanning without AI guidance; blinded expert cardiologist readers",
+     "n_studies": 362,
+     "n_patients": 50,
+     "n_sites": 1,
+     "dataset_description": "Peck et al., JASE 2023 (PMID 36906047): 36 novices after 1-day training, 7-view protocol with color Doppler, 50 patients (half RHD), 362 AI-guided studies vs 100 expert studies, Kampala, Uganda. Product not named in the abstract; attribution rests on a Caption Health (San Mateo) author affiliation and the color-Doppler guidance views matching Caption AI",
+     "subgroup_notes": null,
+     "quote": "Novice images enabled diagnostic interpretation in >90% of studies for presence/absence of RHD, abnormal MV morphology, and mitral regurgitation (vs 99% by experts, P <= .001). Images were less diagnostic for aortic valve disease (79% for aortic regurgitation, 50% for aortic stenosis, vs 99% and 91% by experts, P < .001).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "DEN190040",
+     "endpoint": "Real-world: AI-guided POCUS by nonexperts in rural and remote Australia (AGILE-Echo substudy)",
+     "metric": "% of images of diagnostic quality by window",
+     "value": "72% of parasternal and 55% of apical images diagnostic quality (p<0.001); users with >=20 scans more likely to complete studies (OR 3.58 [1.79, 7.14])",
+     "comparator": "Single off-site expert reader (ACEP score >=3)",
+     "n_studies": null,
+     "n_patients": 181,
+     "n_sites": 6,
+     "dataset_description": "Wright et al., Eur Heart J Imaging Methods Pract 2026 (PMID 42441084): 181 participants (65 +/- 15 y, 47% female) in two rural towns and four remote communities; Terason uSmart 3300 desktop system with Caption Health AI-guided software; substudy of NCT05558605",
+     "subgroup_notes": "Body surface area and hypertension associated with lower diagnostic quality in the apical window",
+     "quote": "AI-guided image acquisition on point-of-care ultrasound was performed using AI software integrated with a desktop ultrasound system in 181 participants (65 +/- 15 years, 47% female). ... Diagnostic-quality images were obtained from 72% of parasternal and 55% of apical images (P < 0.001).",
+     "page": null,
+     "verification": "peer_reviewed"
     }
    ],
    "training_data": {
@@ -10847,6 +11887,32 @@ window.AIECHO_PRODUCTS = {
      "n_subjects": 153,
      "key_result": "184 Caption AI-guided scans in 153 neuro-ICU patients; 63.4% interpretable for LV size/function, 52.6% RV, 34.8% IVC, 47.2% pericardial effusion; 37% of screening scans changed management; time to first adequate cardiac imaging fell from 3.1 to 1.7 days.",
      "verification": "doi_resolved"
+    },
+    {
+     "title": "The Use of Artificial Intelligence Guidance for Rheumatic Heart Disease Screening by Novices",
+     "first_author": "Peck D",
+     "journal": "Journal of the American Society of Echocardiography",
+     "year": 2023,
+     "doi": "10.1016/j.echo.2023.03.001",
+     "pmid": "36906047",
+     "url": "https://doi.org/10.1016/j.echo.2023.03.001",
+     "relation": "external-validation",
+     "n_subjects": 50,
+     "key_result": "36 novices in Uganda using AI guidance with color Doppler: >90% of studies diagnostic for RHD presence, MV morphology and MR; 79% for AR and 50% for AS. Product not named in abstract; one author affiliated with Caption Health (San Mateo).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Task-shifting to nonexperts using artificial intelligence-guided point-of-care ultrasound: a cohort study of patient selection, image quality, and learning curves",
+     "first_author": "Wright L",
+     "journal": "European Heart Journal - Imaging Methods and Practice",
+     "year": 2026,
+     "doi": "10.1093/ehjimp/qyag101",
+     "pmid": "42441084",
+     "url": "https://doi.org/10.1093/ehjimp/qyag101",
+     "relation": "real-world",
+     "n_subjects": 181,
+     "key_result": "Rural/remote Australia, Terason uSmart 3300 with Caption Health AI guidance: 72% of parasternal and 55% of apical images diagnostic quality; learning curve longer than inpatient studies; substudy of AGILE-Echo NCT05558605.",
+     "verification": "doi_resolved"
     }
    ],
    "clinical_trials": [
@@ -10885,6 +11951,12 @@ window.AIECHO_PRODUCTS = {
      "title": "Point-of-Care Echocardiography in Patients With Known or Suspected Aortic Stenosis (Caption Health, Inc.; data collection to test an AI aortic stenosis algorithm; enrollment 63)",
      "status": "COMPLETED",
      "url": "https://clinicaltrials.gov/study/NCT06717373"
+    },
+    {
+     "nct_id": "NCT05558605",
+     "title": "AGILE-Echo: Use of Artificial Intelligence-Guided Echocardiography to Assist Cardiovascular Patient Management (Baker Heart and Diabetes Institute; enrollment 612; device identified as Caption Health software on Terason uSmart 3300 in the Wright 2026 substudy, not in the registry record)",
+     "status": "RECRUITING",
+     "url": "https://clinicaltrials.gov/study/NCT05558605"
     }
    ],
    "open_questions": [
@@ -10894,40 +11966,41 @@ window.AIECHO_PRODUCTS = {
     "K200755, K201992 and K243065 report no quantitative algorithm performance metrics; PCCP acceptance criteria are not enumerated in the public summaries.",
     "Which ultrasound systems are currently labeled as compatible (GE Venue models, Vscan Air SL, Butterfly iQ+) is drawn from company/news pages, not from the FDA summaries; whether Caption AI on Butterfly iQ+ was ever commercially released is not confirmed.",
     "Whether guidance inference runs fully on the handheld/mobile device or a paired device for Vscan Air SL is not stated on the product page.",
-    "Peck et al. 2023 (JASE, PMID 36906047; AI-guided RHD screening by novices in Uganda) and Baloescu et al. 2025 (JAMA Cardiol, AI-guided lung ultrasound) are plausibly Caption AI studies but the vendor could not be confirmed from accessible text, so they are not listed.",
-    "NCT05558605 (Baker Heart and Diabetes Institute, AI-guided echocardiography in rural Australia) may use Caption AI but the device is not named in the registry record; not listed.",
     "Trost et al. 2025 (JACC Adv) was initially a candidate but its COI statement identifies DESKi HeartFocus, not Caption; excluded.",
-    "Date GE HealthCare completed (vs announced) the Caption Health acquisition was not confirmed."
+    "Date GE HealthCare completed (vs announced) the Caption Health acquisition was not confirmed.",
+    "Peck et al. 2023 (JASE, PMID 36906047) does not name the product in its abstract; it is listed on the strength of a Caption Health author affiliation and the color-Doppler guided-view protocol, so attribution is indirect.",
+    "Baloescu et al. 2025 (JAMA Cardiol, PMID 39813064) is a Caption Health/GE HealthCare study (author affiliation and COI statements) but evaluates 'Lung Guidance AI', a lung-ultrasound product outside this cardiac family; not listed.",
+    "openFDA shows no expedited_review_flag for K200755; the 'expedited' characterization comes from a company press release (review time by openFDA dates: 24 days)."
    ],
    "sources": [
     {
      "fact": "Indications for use, special controls, Breakthrough designation statement, PCCP, pivotal and specialist study results",
-     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/reviews/DEN190040.pdf (local: https://www.accessdata.fda.gov/cdrh_docs/reviews/DEN190040.pdf)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/reviews/DEN190040.pdf",
      "verification": "fda_summary"
     },
     {
      "fact": "DEN190040 order letter: classification, special controls",
-     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf19/DEN190040.pdf (local: https://www.accessdata.fda.gov/cdrh_docs/pdf19/DEN190040.pdf)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf19/DEN190040.pdf",
      "verification": "fda_summary"
     },
     {
      "fact": "K200755 changes and human factors testing",
-     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200755.pdf (local: https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200755.pdf)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200755.pdf",
      "verification": "fda_summary"
     },
     {
      "fact": "K201992 PCCP modification, locked algorithms",
-     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K201992.pdf (local: https://www.accessdata.fda.gov/cdrh_docs/pdf20/K201992.pdf)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K201992.pdf",
      "verification": "fda_summary"
     },
     {
      "fact": "K243065 renamed Cardiac Guidance; updated PCCP contents",
-     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243065.pdf (local: https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243065.pdf)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243065.pdf",
      "verification": "fda_summary"
     },
     {
      "fact": "Decision dates, product codes, applicants",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:(DEN190040+K200755+K201992+K243065+K173780+K200621+K210747+DEN220063)",
      "verification": "fda_database"
     },
     {
@@ -10971,8 +12044,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "fda_database"
     }
    ],
-   "_source_file": "caption.json",
-   "_verified": false,
+   "_source_file": "caption.verified.json",
+   "_verified": true,
    "first_cleared": "2020-02-07",
    "latest_cleared": "2025-01-15",
    "n_clearances": 4,
@@ -10984,10 +12057,10 @@ window.AIECHO_PRODUCTS = {
    "product_codes": [
     "QJU"
    ],
-   "n_performance_claims": 15,
-   "n_papers_resolved": 4,
-   "n_papers": 4,
-   "research_verified": false,
+   "n_performance_claims": 18,
+   "n_papers_resolved": 6,
+   "n_papers": 6,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -11424,7 +12497,7 @@ window.AIECHO_PRODUCTS = {
     "fully automated (no user interface)",
     "hosted on Ultromics platform or third-party infrastructure"
    ],
-   "summary": "EchoGo Amyloidosis 1.0 is a fully automated CNN classifier that takes a single non-contrast apical 4-chamber DICOM clip and outputs suggestive / not suggestive of cardiac amyloidosis (or no classification) as a screening alert for patients aged 65+ with heart failure. Cleared under new product code SDJ with EchoGo Heart Failure (K222463) as predicate; tested on 1,164 patients from 12 US and 3 international sites (sensitivity 84.5%, specificity 89.7%, 14.0% no-classification). The FDA summary discloses training-set demographics (approximately 1,262 controls and 1,302 cases by summing the table) and extensive subgroup performance by sex, BMI, race, vendor, LVEF and wall thickness.",
+   "summary": "EchoGo Amyloidosis 1.0 is a fully automated CNN classifier that takes a single non-contrast apical 4-chamber DICOM clip and outputs suggestive / not suggestive of cardiac amyloidosis (or no classification) as a screening alert for patients aged 65+ with heart failure. Cleared under new product code SDJ with EchoGo Heart Failure (K222463) as predicate; tested on 1,164 patients from 12 US and 3 international sites (sensitivity 84.5%, specificity 89.7%, 14.0% no-classification). The FDA summary discloses training-set demographics (approximately 1,262 controls and 1,302 cases by summing the table) and subgroup performance by data origin, age, sex, BMI, race, comorbidities, vendor, LVEF, wall thickness, LV mass index and image zoom.",
    "intended_use_quote": "providing adjunctive information on the cardiovascular condition of a patient",
    "indications_for_use_quote": "EchoGo Amyloidosis 1.0 is an automated machine learning-based decision support system, indicated as a screening tool for adult patients aged 65 years and over with heart failure undergoing cardiovascular assessment using echocardiography. When utilised by an interpreting physician, this device provides information alerting the physician for referral to confirmatory investigations. EchoGo Amyloidosis 1.0 is indicated in adult patients aged 65 years and over with heart failure. Patient management decisions should not be made solely on the results of the EchoGo Amyloidosis 1.0 analysis.",
    "embedded_ai_features": [
@@ -11450,7 +12523,7 @@ window.AIECHO_PRODUCTS = {
       "special controls 21 CFR 870.2200",
       "cloud",
       "fully automated, no user interface",
-      "first SDJ product code",
+      "first SDJ product code (earliest decision date among SDJ 510(k)s in openFDA, checked 2026-09-05)",
       "not evaluated in prior heart transplantation"
      ],
      "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240860.pdf",
@@ -11499,8 +12572,8 @@ window.AIECHO_PRODUCTS = {
      "n_patients": 1164,
      "n_sites": 15,
      "dataset_description": "Same cohort",
-     "subgroup_notes": null,
-     "quote": "Positive Predictive Value at 36.7% prevalence** 82.7% (78.8%, 86.5%) [...] Negative Predictive Value at 36.7% prevalence** 90.9% (88.8%, 93.2%) [...] **Estimate based on native disease proportion within the collected testing dataset (36.7% prevalence).",
+     "subgroup_notes": "Table rows 'Positive Predictive Value at 36.7% prevalence**' (p17) and 'Negative Predictive Value at 36.7% prevalence**' (p18); footnote on p18: '**Estimate based on native disease proportion within the collected testing dataset (36.7% prevalence).'",
+     "quote": "This equates to a sensitivity of 84.5% (95% CI: 80.3%, 88.5%), a specificity of 89.7% (95% CI: 87.0%, 92.4%), a PPV of 82.7% (95% CI: 78.8%, 86.5%) and NPV of 90.9% (95% CI: 88.8%, 93.2%).",
      "page": 17,
      "verification": "fda_summary"
     },
@@ -11514,8 +12587,8 @@ window.AIECHO_PRODUCTS = {
      "n_patients": 1164,
      "n_sites": 15,
      "dataset_description": "Same cohort, data re-sampling",
-     "subgroup_notes": null,
-     "quote": "Positive Predictive Value at 2.2% prevalence* 15.6% (11.0%, 20.8%) Negative Predictive Value at 2.2% prevalence* 99.6% (99.5%, 99.7%) [...] *Estimate based on inferred disease prevalence of 2.2% using data re-sampling.",
+     "subgroup_notes": "Footnote on p18: '*Estimate based on inferred disease prevalence of 2.2% using data re-sampling.'",
+     "quote": "Positive Predictive Value at 2.2% prevalence* 15.6% (11.0%, 20.8%) Negative Predictive Value at 2.2% prevalence* 99.6% (99.5%, 99.7%)",
      "page": 17,
      "verification": "fda_summary"
     },
@@ -11583,14 +12656,14 @@ window.AIECHO_PRODUCTS = {
      "k_number": "K240860",
      "endpoint": "Subgroup: BMI",
      "metric": "sensitivity / specificity",
-     "value": "BMI >35: sensitivity 68.8% (38.5%, 92.3%), specificity 93.3%; BMI 30-35: 69.4% (52.0%, 84.6%) / 92.7%; 25-30: 84.7% / 91.9%; 18.5-25: 88.7% / 83.3%",
+     "value": "BMI >35: sensitivity 68.8% (38.5%, 92.3%), specificity 93.3%; BMI 30-35: 69.4% (52.0%, 84.6%) / 92.7%; 25-30: 84.7% / 91.9%; 18.5-25: 88.7% / 83.3%; <18.5: 100.0% (100.0%, 100.0%) / 66.7% (28.6%, 100.0%)",
      "comparator": "Case-control ground truth",
      "n_studies": null,
      "n_patients": null,
      "n_sites": null,
      "dataset_description": null,
      "subgroup_notes": "Lower sensitivity at BMI >30",
-     "quote": ">35 68.8% (38.5%, 92.3%) 93.3% (87.9%, 97.9%) 18.8% (9.5%, 42.1%) 30-35 69.4% (52.0%, 84.6%) 92.7% (87.2%, 97.3%) 17.6% (10.2%, 36.3%) 25-30 84.7% (76.9%, 92.3%) 91.9% (87.5%, 95.8%) 19.0% (13.1%, 30.2%) 18.5-25 88.7% (81.3%, 95.0%) 83.3% (76.1%, 89.6%) 10.7% (7.7%, 16.4%)",
+     "quote": ">35 68.8% (38.5%, 92.3%) 93.3% (87.9%, 97.9%) 18.8% (9.5%, 42.1%) 30-35 69.4% (52.0%, 84.6%) 92.7% (87.2%, 97.3%) 17.6% (10.2%, 36.3%) 25-30 84.7% (76.9%, 92.3%) 91.9% (87.5%, 95.8%) 19.0% (13.1%, 30.2%) 18.5-25 88.7% (81.3%, 95.0%) 83.3% (76.1%, 89.6%) 10.7% (7.7%, 16.4%) <18.5 100.0% (100.0%, 100.0%) 66.7% (28.6%, 100.0%) 6.3% (3.1%, 100.0%)",
      "page": 19,
      "verification": "fda_summary"
     },
@@ -11619,7 +12692,7 @@ window.AIECHO_PRODUCTS = {
      "n_patients": null,
      "n_sites": null,
      "dataset_description": null,
-     "subgroup_notes": "Specificity not available for Siemens/ACUSON (no controls)",
+     "subgroup_notes": "Specificity reported as 'N/A' for Siemens and ACUSON in the table (reason not stated); Siemens sensitivity CI is printed as (0.0%, 94.7%).",
      "quote": "Philips 81.9% (76.2%, 87.5%) 86.5% (81.3%, 91.0%) 12.0% (9.0%, 16.9%) GE 88.8% (82.0%, 95.5%) 90.4% (85.6%, 95.2%) 17.2% (12.1%, 29.6%) Siemens 83.3% (0.0%, 94.7%) N/A 18.1% (12.2%, 29.2%) ACUSON 100.0% (100.0%, 100.0%) N/A 15.4% (11.5%, 21.5%)",
      "page": 20,
      "verification": "fda_summary"
@@ -11634,7 +12707,7 @@ window.AIECHO_PRODUCTS = {
      "n_patients": null,
      "n_sites": null,
      "dataset_description": null,
-     "subgroup_notes": "Non-US sites contributed cases only (no specificity)",
+     "subgroup_notes": "Specificity and PPV reported as 'N/A' for Non-USA in the table (reason not stated); non-US sites contributed 3 of the 15 validation sites (p10).",
      "quote": "USA 83.3% (78.3%, 87.8%) 89.7% (87.0%, 92.4%) 15.4% (12.4%, 19.7%) Non-USA 90.3% (83.0%, 97.7%) N/A N/A",
      "page": 18,
      "verification": "fda_summary"
@@ -11643,14 +12716,14 @@ window.AIECHO_PRODUCTS = {
      "k_number": "K240860",
      "endpoint": "Subgroup: LV posterior wall thickness",
      "metric": "sensitivity / specificity",
-     "value": ">16 mm 94.2% (89.0%, 98.0%) / 84.2%; 14-16 mm 88.5% / 86.4%; 12-14 mm 79.5% / 86.8%; 10-12 mm 80.0% / 96.7%; 8-10 mm 50.0% (27.8%, 73.7%) / 94.2%",
+     "value": ">16 mm 94.2% (89.0%, 98.0%) / 84.2%; 14-16 mm 88.5% / 86.4%; 12-14 mm 79.5% / 86.8%; 10-12 mm 80.0% / 96.7%; 8-10 mm 50.0% (27.8%, 73.7%) / 94.2%; 6-8 mm 60.0% (0.0%, 100.0%) / 100.0% (0.0%, 100.0%)",
      "comparator": "Case-control ground truth",
      "n_studies": null,
      "n_patients": null,
      "n_sites": null,
      "dataset_description": null,
      "subgroup_notes": "Sensitivity falls with thinner walls",
-     "quote": ">16 94.2% (89.0%, 98.0%) 84.2% (75.0%, 92.9%) 11.8% (7.7%, 22.6%) 14-16 88.5% (80.8%, 95.1%) 86.4% (79.3%, 93.4%) 12.7% (8.7%, 23.0%)  12-14 79.5% (68.5%, 89.5%) 86.8% (80.5%, 92.8%) 11.9% (8.2%, 19.9%)  10-12 80.0% (66.7%, 92.1%) 96.7% (93.2%, 99.3%) 35.2% (20.9%, 71.7%)  8-10 50.0% (27.8%, 73.7%) 94.2% (86.0%, 100.0%) 16.3% (6.1%, 100.0%)",
+     "quote": ">16 94.2% (89.0%, 98.0%) 84.2% (75.0%, 92.9%) 11.8% (7.7%, 22.6%) 14-16 88.5% (80.8%, 95.1%) 86.4% (79.3%, 93.4%) 12.7% (8.7%, 23.0%)  12-14 79.5% (68.5%, 89.5%) 86.8% (80.5%, 92.8%) 11.9% (8.2%, 19.9%)  10-12 80.0% (66.7%, 92.1%) 96.7% (93.2%, 99.3%) 35.2% (20.9%, 71.7%)  8-10 50.0% (27.8%, 73.7%) 94.2% (86.0%, 100.0%) 16.3% (6.1%, 100.0%)  6-8 60.0% (0.0%, 100.0%) 100.0% (0.0%, 100.0%) 100.0% (0.0%, 100.0%)",
      "page": 21,
      "verification": "fda_summary"
     },
@@ -11664,9 +12737,9 @@ window.AIECHO_PRODUCTS = {
      "n_patients": null,
      "n_sites": null,
      "dataset_description": null,
-     "subgroup_notes": null,
+     "subgroup_notes": "'>65' row is on p20; the 50-65, 40-50 and <40 rows are on p21.",
      "quote": ">65 82.5% (70.5%, 93.0%) 91.6% (86.8%, 95.5%) 18.1% (12.2%, 29.2%) [...] 50-65 86.1% (79.6%, 91.5%) 89.3% (85.3%, 92.9%) 15.4% (11.5%, 21.5%) 40-50 86.2% (76.0%, 94.5%) 90.0% (78.6%, 100.0%) 16.2% (8.1%, 100.0%) <40 82.0% (69.4%, 91.8%) 89.7% (76.0%, 100.0%) 15.1% (6.9%, 100.0%)",
-     "page": 20,
+     "page": 21,
      "verification": "fda_summary"
     },
     {
@@ -11679,10 +12752,85 @@ window.AIECHO_PRODUCTS = {
      "n_patients": null,
      "n_sites": null,
      "dataset_description": null,
-     "subgroup_notes": null,
+     "subgroup_notes": "AFib/SR rows are on p19; HFpEF Y/N rows are on p20.",
      "quote": "AFib 83.2% (75.3%, 90.5%) 91.8% (87.4%, 95.6%) 18.6% (12.8%, 30.3%) SR 83.5% (74.7%, 91.8%) 90.8% (87.1%, 94.2%) 17.0% (12.4%, 24.8%) [...] HFpEF Y 85.4% (80.8%, 90.1%) 92.2% (89.1%, 95.0%) 19.7% (14.8%, 27.3%) N 82.0% (69.4%, 91.8%) 89.7% (76.0%, 100.0%) 15.1% (6.9%, 100.0%)",
      "page": 19,
      "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240860",
+     "comparator": "Case-control ground truth",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "verification": "fda_summary",
+     "endpoint": "Subgroup: age category",
+     "metric": "sensitivity / specificity",
+     "value": ">80 y: 80.6% (72.1%, 88.9%) / 89.2% (85.2%, 92.9%); 71-80 y: 88.3% (83.2%, 92.9%) / 91.5% (87.6%, 95.1%); 61-70 y: 79.4% (66.7%, 89.8%) / 86.7% (78.3%, 94.5%)",
+     "subgroup_notes": "'>80' row on p18; 71-80 and 61-70 rows on p19. Added during verification (missed by draft).",
+     "quote": ">80 80.6% (72.1%, 88.9%) 89.2% (85.2%, 92.9%) 14.4% (10.8%, 20.7%) [...] 71-80 88.3% (83.2%, 92.9%) 91.5% (87.6%, 95.1%) 19.0% (13.7%, 29.4%) 61-70 79.4% (66.7%, 89.8%) 86.7% (78.3%, 94.5%) 11.8% (7.6%, 25.2%)",
+     "page": 19
+    },
+    {
+     "k_number": "K240860",
+     "comparator": "Case-control ground truth",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "verification": "fda_summary",
+     "endpoint": "Subgroup: hypertension, diabetes, coronary artery disease, aortic stenosis",
+     "metric": "sensitivity / specificity",
+     "value": "Hypertension Y 82.2% / 91.2%, N 86.3% / 90.4%; Diabetes Y 79.2% (63.9%, 91.7%) / 93.9%, N 84.7% / 89.3%; CAD Y 84.7% / 91.1%, N 87.8% / 91.9%; Aortic stenosis Y 85.7% (50.0%, 100.0%) / 88.6%, N 83.3% / 90.5%",
+     "subgroup_notes": "Hypertension rows on p19; diabetes, CAD and aortic stenosis rows on p20. Added during verification (missed by draft).",
+     "quote": "Hypertension Y 82.2% (75.6%, 88.9%) 91.2% (88.4%, 94.0%) 17.3% (13.5%, 23.5%) N 86.3% (73.2%, 95.0%) 90.4% (81.0%, 97.6%) 16.8% (8.9%, 45.9%) [...] Diabetes Mellitus Y 79.2% (63.9%, 91.7%) 93.9% (90.2%, 97.2%) 22.6% (14.7%, 39.8%) N 84.7% (78.1%, 90.8%) 89.3% (85.4%, 92.8%) 15.1% (11.5%, 21.2%) Coronary Artery Disease Y 84.7% (73.9%, 93.8%) 91.1% (85.9%, 95.6%) 17.7% (11.8%, 30.0%) N 87.8% (79.7%, 95.3%) 91.9% (88.0%, 95.3%) 19.6% (14.1%, 29.5%) Aortic Stenosis Y 85.7% (50.0%, 100.0%) 88.6% (79.7%, 95.5%) 14.5% (7.5%, 32.4%) N 83.3% (72.7%, 92.7%) 90.5% (85.6%, 94.6%) 16.4% (11.2%, 25.6%)",
+     "page": 20
+    },
+    {
+     "k_number": "K240860",
+     "comparator": "Case-control ground truth",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "verification": "fda_summary",
+     "endpoint": "Subgroup: interventricular septum thickness",
+     "metric": "sensitivity / specificity",
+     "value": ">16 mm 93.7% (89.1%, 97.6%) / 87.1%; 14-16 mm 81.6% / 88.4%; 12-14 mm 85.9% / 90.2%; 10-12 mm 52.2% (29.4%, 75.0%) / 92.9%; 8-10 mm 60.0% (25.0%, 100.0%) / 95.0%; 6-8 mm 60.0% (0.0%, 100.0%) / 100.0%",
+     "subgroup_notes": "Sensitivity falls at IVS <=12 mm. Added during verification (missed by draft).",
+     "quote": ">16 93.7% (89.1%, 97.6%) 87.1% (80.0%, 93.5%) 14.0% (9.6%, 24.3%) 14-16 81.6% (72.7%, 90.1%) 88.4% (81.8%, 94.3%) 13.7% (9.1%, 24.4%)  12-14 85.9% (75.5%, 95.6%) 90.2% (84.2%, 95.4%) 16.4% (10.5%, 30.1%)  10-12 52.2% (29.4%, 75.0%) 92.9% (85.7%, 98.5%) 14.3% (5.9%, 45.0%)  8-10 60.0% (25.0%, 100.0%) 95.0% (81.2%, 100.0%) 21.3% (5.3%, 100.0%)  6-8 60.0% (0.0%, 100.0%) 100.0% (0.0%, 100.0%) 100.0% (0.0%, 100.0%)",
+     "page": 21
+    },
+    {
+     "k_number": "K240860",
+     "comparator": "Case-control ground truth",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "verification": "fda_summary",
+     "endpoint": "Subgroup: indexed LV mass and image zoom",
+     "metric": "sensitivity / specificity",
+     "value": "LV mass index >95 g/m2: 85.0% (79.8%, 90.4%) / 89.2% (85.3%, 92.9%); <95: 78.3% (64.5%, 90.9%) / 95.0% (89.1%, 100.0%); Zoomed yes: 86.7% (76.6%, 95.7%) / 83.3% (70.0%, 94.4%); Zoomed no: 84.3% (79.8%, 88.7%) / 86.2% (80.6%, 91.7%)",
+     "subgroup_notes": "Added during verification (missed by draft).",
+     "quote": ">95 85.0% (79.8%, 90.4%) 89.2% (85.3%, 92.9%) 15.0% (11.4%, 21.2%) <95 78.3% (64.5%, 90.9%) 95.0% (89.1%, 100.0%) 26.0% (13.5%, 100.0%) Image Zoom Zoomed - Yes 86.7% (76.6%, 95.7%) 83.3% (70.0%, 94.4%) 10.5% (6.1%, 25.6%) Zoomed - No 84.3% (79.8%, 88.7%) 86.2% (80.6%, 91.7%) 12.1% (8.9%, 18.5%)",
+     "page": 22
+    },
+    {
+     "k_number": "K240860",
+     "comparator": "Case-control ground truth",
+     "n_studies": 1164,
+     "n_patients": 1164,
+     "n_sites": null,
+     "dataset_description": "Same 1,164-patient test cohort; predictions above the uncertainty threshold incrementally included (20/40/60/80/100%)",
+     "verification": "fda_summary",
+     "endpoint": "Uncertain predictions added back (uncertainty metrics disregarded)",
+     "metric": "sensitivity / specificity / PPV / NPV",
+     "value": "100% of uncertain data added back: sensitivity 86.4 (82.6, 89.9), specificity 76.4 (73.3, 79.9), PPV 66.9 (62.6, 71.7), NPV 91.0 (88.4, 93.5); at 20% added back: 85.0 / 86.7 / 78.4 / 91.0",
+     "subgroup_notes": "Table spans p22 (20-80% rows) and p23 (100% row). Added during verification (missed by draft).",
+     "quote": "20 85.0 (80.7, 88.9) 86.7 (83.6, 89.7) 78.4 (73.8, 83.3) 91.0 (88.4, 93.5) [...] 100 86.4 (82.6, 89.9) 76.4 (73.3, 79.9) 66.9 (62.6, 71.7) 91.0 (88.4, 93.5)",
+     "page": 23
     },
     {
      "k_number": "K240860",
@@ -11694,7 +12842,7 @@ window.AIECHO_PRODUCTS = {
      "n_patients": 2719,
      "n_sites": 18,
      "dataset_description": "External validation across 18 global sites: 597 CA cases and 2,122 controls; training set n=2,612 (52% CA), multisite multiethnic",
-     "subgroup_notes": null,
+     "subgroup_notes": "The EHJ paper does not name EchoGo Amyloidosis in abstract or PMC full text; attribution rests on Ultromics authorship and the Ultromics press release (Jul 9, 2025) presenting this study as EchoGo Amyloidosis validation.",
      "quote": "External validation was conducted globally across 18 sites including 597 CA cases and 2122 controls. [...] After the removal of uncertain AI predictions (13%), model discrimination and classification were excellent for the entire external validation dataset [area under the receiver operating characteristic curve (AUROC) 0.93, sensitivity 85%, specificity 93%]",
      "page": null,
      "verification": "peer_reviewed"
@@ -11724,7 +12872,7 @@ window.AIECHO_PRODUCTS = {
      "n_patients": 598,
      "n_sites": 1,
      "dataset_description": "598 patients referred for scintigraphy at a tertiary center; 181 (30%) ATTR-CA; AL excluded",
-     "subgroup_notes": "Abstract names 'AI-Echo' without naming EchoGo; Ultromics-affiliated authorship",
+     "subgroup_notes": "Abstract names 'AI-Echo' only; PMC full text (Methods) identifies it as 'EchoGo Amyloidosis, Ultromics, Ltd.'",
      "quote": "AI-Echo identified ATTR-CA with 86% sensitivity and 85% specificity, compared with 80% and 64% for AI-ECG and 86% and 69% for the ATTR-CM score. The area under the receiver operating characteristic curve was 0.93 (95% CI, 0.91-0.95) for AI-Echo",
      "page": null,
      "verification": "peer_reviewed"
@@ -11735,8 +12883,8 @@ window.AIECHO_PRODUCTS = {
     "n_studies": null,
     "n_patients": 2564,
     "n_sites": null,
-    "description": "FDA summary: 'Algorithm training data was collected from collaborating academic centres'; training table lists 1,262 controls and 1,302 cases (totals derived by summing the age-band and sex rows on p16; the summary does not print a total), 73% male, 79.7-80.6% White, 13.3% Black, 2.3-3.0% Asian, most aged 61-80; median LVEF 63% controls / 55% cases. 'Independent training, tune and test datasets were used.' Peer-reviewed development paper (Slivnick 2025) reports a multisite multiethnic training set of n=2,612 (52% CA); company press release cites 1,349 biopsy-confirmed cases and 1,263 controls.",
-    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240860.pdf (p6, p15-17); https://doi.org/10.1093/eurheartj/ehaf387",
+    "description": "FDA summary: 'Algorithm training data was collected from collaborating academic centres'; training table lists 1,262 controls and 1,302 cases (totals derived by summing the age-band and sex rows on p16; the summary does not print a total), 73% male, 79.7-80.6% White, 13.3% Black, 2.3-3.0% Asian, most aged 61-80; median LVEF 63% controls / 55% cases. 'Independent training, tune and test datasets were used.' Peer-reviewed development paper (Slivnick 2025) reports a multisite multiethnic training set of n=2,612 (52% CA); company press release (Jul 9, 2025) states development at Mayo Clinic 'using 9,786 patients, including 1,349 biopsy-confirmed cardiac amyloidosis (CA) cases and 1,263 matched controls'.",
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240860.pdf (p6, p15-17); https://doi.org/10.1093/eurheartj/ehaf387 ; https://www.ultromics.com/press-releases/landmark-study-shows-ultromics-echogo-amyloidosis-significantly-improves-detection-of-cardiac-amyloidosis-with-echocardiography",
     "verification": "fda_summary"
    },
    "validation_data": {
@@ -11781,7 +12929,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1093/eurheartj/ehaf387",
      "relation": "pivotal-validation",
      "n_subjects": 5331,
-     "key_result": "CNN trained on 2,612 patients (52% CA); external validation at 18 sites (597 CA, 2,122 controls): AUROC 0.93, sensitivity 85%, specificity 93% after excluding 13% uncertain; outperformed TCA (0.73) and IWT (0.80) scores.",
+     "key_result": "CNN trained on 2,612 patients (52% CA); external validation at 18 sites (597 CA, 2,122 controls): AUROC 0.93, sensitivity 85%, specificity 93% after excluding 13% uncertain; outperformed TCA (0.73) and IWT (0.80) scores. The paper does not name EchoGo Amyloidosis; attribution rests on Ultromics authorship and the company press release (Jul 9, 2025) describing this study as EchoGo Amyloidosis validation.",
      "verification": "doi_resolved"
     },
     {
@@ -11807,7 +12955,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1016/j.echo.2026.05.007",
      "relation": "external-validation",
      "n_subjects": 598,
-     "key_result": "In 598 scintigraphy referrals, AI-Echo AUC 0.93 (sens 86%, spec 85%) vs AI-ECG 0.79 and ATTR-CM score 0.87; could avoid 45 unnecessary scintigraphies per 100. Product not named in abstract.",
+     "key_result": "In 598 scintigraphy referrals, AI-Echo AUC 0.93 (sens 86%, spec 85%) vs AI-ECG 0.79 and ATTR-CM score 0.87; could avoid 45 unnecessary scintigraphies per 100. Abstract says 'AI-Echo'; PMC full text identifies the model as EchoGo Amyloidosis (Ultromics, Ltd.).",
      "verification": "doi_resolved"
     }
    ],
@@ -11817,7 +12965,8 @@ window.AIECHO_PRODUCTS = {
     "Training-set totals (1,262 controls / 1,302 cases) are derived by summing table rows; the FDA summary does not print totals and the peer-reviewed training n (2,612) and press-release n (1,349 cases / 1,263 controls) differ slightly from the FDA table.",
     "Number of sites contributing training data and the reference standard used to define cardiac amyloidosis in the FDA test set are not stated in the summary.",
     "The FDA summary gives 'nine states in the USA' for the test cohort while the comparison table says 12 US and 3 international sites; n_sites=15 uses the latter.",
-    "Garmany 2026 abstract refers to 'AI-Echo' without naming EchoGo Amyloidosis; attribution based on Ultromics author affiliation."
+    "Garmany 2026 abstract refers to 'AI-Echo'; the full text names EchoGo Amyloidosis (Ultromics). Slivnick 2025 (EHJ) never names the product in text; attribution is via Ultromics authorship and the company press release.",
+    "Company press release (Nov 20, 2024) attributes AL 84.4% / ATTRwt 85.8% / ATTRv 86.3% subtype sensitivities to the FDA submission, but the public K240860 summary does not report subtype-level performance."
    ],
    "sources": [
     {
@@ -11827,7 +12976,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "Decision date, product code SDJ, applicant",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=applicant:Ultromics",
      "verification": "fda_database"
     },
     {
@@ -11849,10 +12998,15 @@ window.AIECHO_PRODUCTS = {
      "fact": "Papers resolved via PubMed E-utilities and Crossref",
      "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ ; https://api.crossref.org/works/",
      "verification": "peer_reviewed"
+    },
+    {
+     "fact": "SDJ product-code listing (K240860 is the earliest SDJ clearance; later: K243866 InVision 2025-05-21, K250151 Us2.ai 2025-06-20)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=product_code:SDJ",
+     "verification": "fda_database"
     }
    ],
-   "_source_file": "ultromics.json",
-   "_verified": false,
+   "_source_file": "ultromics.verified.json",
+   "_verified": true,
    "first_cleared": "2024-11-15",
    "latest_cleared": "2024-11-15",
    "n_clearances": 1,
@@ -11862,10 +13016,10 @@ window.AIECHO_PRODUCTS = {
    "product_codes": [
     "SDJ"
    ],
-   "n_performance_claims": 18,
+   "n_performance_claims": 23,
    "n_papers_resolved": 3,
    "n_papers": 3,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -12352,7 +13506,7 @@ window.AIECHO_PRODUCTS = {
      "n_patients": null,
      "n_sites": null,
      "dataset_description": "Independent retrospective cohort of 6,268 TTE studies (mean age 74.95±13.98 y; 3,172 men 50.61%, 3,095 women 49.38%; 78.61% Caucasian, 5.47% African American, 2.49% Hispanic, 1.82% Asian, 11.60% Other); 2,483 (39.6%) with AVA <=1.0 cm2. Inputs are echo measurements plus age/BSA, not images. Site count not stated.",
-     "subgroup_notes": "AUROC by subgroup (p.8-9): age 18-65 0.954, >=65 0.942; male 0.945, female 0.954; White 0.949, Black 0.953, Asian 0.970, Hispanic 0.965, Other 0.921; LVEF <30% 0.914, 30-<50% 0.939, >=50% 0.950; BMI 18-25 0.952, >25-30 0.951, >30-35 0.936, >35 0.947; minimum inputs 0.931 (0.925-0.937) vs all available inputs 0.948.",
+     "subgroup_notes": "AUROC by subgroup (p.8-9): age 18-65 0.954, >=65 0.942; male 0.945, female 0.954; White 0.949, Black 0.953, Asian 0.970, Hispanic 0.965, Other 0.921; LVEF <30% 0.914, 30-<50% 0.939, >=50% 0.950; BMI 18-25 0.952, >25-30 0.951, >30-35 0.936, >35 0.947; minimum inputs 0.931 (0.925-0.937) vs all available inputs 0.948. Note: the prose (p.8) gives the overall CI as 0.943-0.952 while the inputs table (p.9) gives 0.942-0.952 for 'all available inputs'; both appear in the summary.",
      "quote": "The EchoSolv AS model achieved a native system performance of 0.948 (95% CI: 0.943-0.952) AUROC.",
      "page": 8,
      "verification": "fda_summary"
@@ -12397,7 +13551,7 @@ window.AIECHO_PRODUCTS = {
      "n_patients": null,
      "n_sites": null,
      "dataset_description": "Independent retrospective cohort of 6,268 TTE studies (mean age 74.95±13.98 y; 3,172 men 50.61%, 3,095 women 49.38%; 78.61% Caucasian, 5.47% African American, 2.49% Hispanic, 1.82% Asian, 11.60% Other); 2,483 (39.6%) with AVA <=1.0 cm2. Inputs are echo measurements plus age/BSA, not images. Site count not stated.",
-     "subgroup_notes": null,
+     "subgroup_notes": "Summary also states (p.9): 'The predicate device achieved a native system performance of 0.927 AUROC' (EchoGo Pro, K201555) as a comparison; this is not an EchoSolv AS result.",
      "quote": "Inputs Minimum inputs 6,268 0.931 (0.925 - 0.937) All available inputs 6,268 0.948 (0.942 - 0.952)",
      "page": 9,
      "verification": "fda_summary"
@@ -12412,7 +13566,7 @@ window.AIECHO_PRODUCTS = {
      "n_patients": null,
      "n_sites": 1,
      "dataset_description": "Fully crossed MRMC, 5 board-certified cardiologist readers, 200 retrospective TTE studies (100 confirmed severe AS, 100 controls) from one US investigational site; 101 women (50.5%), 99 men; mean age 73.55±12.5 y; 86.5% Caucasian, 10.5% African American, 2.5% Hispanic or Latino.",
-     "subgroup_notes": null,
+     "subgroup_notes": "Summary also states (p.9): 'The predicate device showed a mean improvement of 0.054' in reader AUROC, versus 0.018 for EchoSolv AS. The reported 95% CI for the 0.018 improvement is written '0.037-0.001' and p=0.064.",
      "quote": "AUROC for unassisted and assisted reads were 0.865 (95%CI: 0.837-0.893) and 0.883 (95%CI: 0.857-0.909), respectively. When cardiologist readers were provided with EchoSolv AS to assist with their interpretation of a TTE, there was an improvement in all study endpoints: mean AUROC (0.018±0.010, 95%CI: 0.037-0.001; p=0.064).",
      "page": 9,
      "verification": "fda_summary"
@@ -12438,7 +13592,7 @@ window.AIECHO_PRODUCTS = {
     "n_studies": null,
     "n_patients": 442276,
     "n_sites": null,
-    "description": "'The EchoSolv AS AI Model was developed on a dataset consisting of 631,824 individuals with 1,077,145 transthoracic echocardiograms (TTE). The dataset was randomly split (ratio 70:30 based on individuals) into two separate groups, training and test set. Data from 442,276 individuals (70%) were entered into the AI model to train the device to detect severe AS cases. The remaining 189,548 individuals (30%) were reserved for internal testing. Individual patients appeared only once in either the training or test dataset but not both.' (p.6). Number of TTEs in the training partition alone is not stated. Peer-reviewed papers (Strange 2023 Open Heart) identify the source as the National Echocardiography Database of Australia (NEDA).",
+    "description": "'The EchoSolv AS AI Model was developed on a dataset consisting of 631,824 individuals with 1,077,145 transthoracic echocardiograms (TTE). The dataset was randomly split (ratio 70:30 based on individuals) into two separate groups, training and test set. Data from 442,276 individuals (70%) were entered into the AI model to train the device to detect severe AS cases. The remaining 189,548 individuals (30%) were reserved for internal testing. Individual patients appeared only once in either the training or test dataset but not both.' (p.6). Number of TTEs in the training partition alone is not stated. The FDA summary does not name the data source. The same 631,824-individual / 442,276-training cohort is described in Strange 2023 (Open Heart, PMID 37491129), whose abstract does not name the database; the NEDA methodology paper by the same group (Strange 2018, PMID 30098706) states NEDA data will inform AI-based aortic stenosis analyses.",
     "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K241245.pdf",
     "verification": "fda_summary"
    },
@@ -12473,9 +13627,9 @@ window.AIECHO_PRODUCTS = {
      "verification": "peer_reviewed"
     },
     {
-     "description": "Company/press: EchoSolv AS deployed at Mount Sinai Health System (Apr 2026); company claims training on '200M+ measurements' and validation against ~1 million studies; earlier press claims a trial identified 72% more severe-AS patients than human diagnosis alone.",
+     "description": "Company/press: EchoSolv AS deployed at Mount Sinai Health System (Apr 2026); company claims training on '200M+ measurements' and validation against ~1 million studies; earlier press claims a trial identified 72% more severe-AS patients than human diagnosis alone. (GlobeNewswire URL could not be fetched on 2026-09-05 and MobiHealthNews returned HTTP 403; these figures are unverified. The company's own aortic-stenosis page states '200M+ Measurements', '24.1% Reduction Review Time', '82.2% Sensitivity Detection Rate', '99.2% NPV Rules Out Severe AS' and 'EchoSolv AS is cleared for use in the United States (FDA) only'.)",
      "source_url": "https://www.globenewswire.com/news-release/2026/04/30/3285449/0/en/Echo-IQ-Announces-EchoSolv-AS-Deployed-into-Mount-Sinai-Health-System.html",
-     "verification": "news"
+     "verification": "unverified"
     }
    ],
    "papers": [
@@ -12489,7 +13643,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1016/j.jcmg.2019.10.013",
      "relation": "algorithm-development",
      "n_subjects": null,
-     "key_result": "Proof-of-concept AI detection of severe AS phenotype on 530,871 echocardiograms (per title); abstract not retrievable via PubMed/Crossref in this session, so metrics not recorded.",
+     "key_result": "Proof-of-concept AI detection of severe AS phenotype on 530,871 echocardiograms (per title); abstract not available via PubMed, Crossref or Europe PMC on 2026-09-05, so metrics not recorded.",
      "verification": "doi_resolved"
     },
     {
@@ -12502,7 +13656,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1136/openhrt-2023-002265",
      "relation": "algorithm-development",
      "n_subjects": 631824,
-     "key_result": "631,824 individuals / 1.08 million echos split 70:30; MDN model trained on 442,276 individuals to predict AVA<1 cm2; AUROC 0.986 (0.985-0.987); 4,622/88,199 (5.2%) high-probability severe AS of whom 77.2% met guideline severe AS; 5-year mortality 67.9% high vs 19.2% low probability (adjusted OR 2.41). Dataset matches the development set described in the FDA summary.",
+     "key_result": "631,824 individuals / 1.08 million echos split 70:30; MDN model trained on 442,276 individuals to predict AVA<1 cm2; AUROC 0.986 (0.985-0.987); 4,622/88,199 (5.2%) high-probability severe AS of whom 77.2% met guideline severe AS; 5-year mortality 67.9% high vs 19.2% low probability (adjusted OR 2.41). The 631,824 / 442,276 figures match the FDA summary's development set, but the paper's independent evaluation cohort is 184,301 (30%) individuals versus 189,548 stated in the FDA summary (PubMed abstract, verified 2026-09-05).",
      "verification": "doi_resolved"
     },
     {
@@ -12541,7 +13695,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1016/j.ahj.2018.07.001",
      "relation": "other",
      "n_subjects": null,
-     "key_result": "Describes the NEDA registry that is the development data source for the EchoSolv AS algorithm per the peer-reviewed development papers.",
+     "key_result": "NEDA registry methodology paper by the EchoSolv development group (435,133 individuals at time of writing); abstract states the data will inform analyses including 'the role of artificial intelligence to facilitate accurate diagnoses'. A direct statement that NEDA is the EchoSolv AS training source was not confirmed from abstracts in this session.",
      "verification": "doi_resolved"
     }
    ],
@@ -12552,7 +13706,8 @@ window.AIECHO_PRODUCTS = {
     "The summary reports 6,268 studies included but then '6,262 studies' when giving AVA distribution; discrepancy unexplained.",
     "Training set size in TTEs (vs individuals) is not stated; 442,276 individuals is the training partition.",
     "No clinicaltrials.gov registrations for EchoSolv were found in this session; company press mentions a 'flagship clinical trial' (72% more severe AS identified) without an identifier or peer-reviewed reference located here.",
-    "Playford 2020 abstract not retrievable via E-utilities/Crossref in this session; performance figures from that paper were not recorded."
+    "Playford 2020 abstract not retrievable via E-utilities/Crossref in this session; performance figures from that paper were not recorded.",
+    "Overall standalone AUROC 95% CI is given as 0.943-0.952 in the text (p.8) but 0.942-0.952 in the inputs table (p.9)."
    ],
    "sources": [
     {
@@ -12562,23 +13717,23 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "decision_date 2024-10-04, product code POK, applicant Echo IQ, Ltd.",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K241245",
      "verification": "fda_database"
     },
     {
-     "fact": "Company website, product page, '200M+ measurements' training claim, FDA-only clearance statement",
+     "fact": "Company website (verified 2026-09-05): '200M+ Measurements - developed using one of the world's largest echocardiographic measurement datasets'; 'measurement-based decision support without image analysis'; 'EchoSolv AS is cleared for use in the United States (FDA) only'; AS page claims '24.1% Reduction Review Time', '82.2% Sensitivity Detection Rate', '99.2% NPV Rules Out Severe AS' (footnoted, company-sourced)",
      "url_or_file": "https://echoiq.ai/",
      "verification": "company"
     },
     {
-     "fact": "Mount Sinai Health System deployment (Apr 2026)",
+     "fact": "Mount Sinai Health System deployment (Apr 2026) (URL not retrievable on 2026-09-05; unverified)",
      "url_or_file": "https://www.globenewswire.com/news-release/2026/04/30/3285449/0/en/Echo-IQ-Announces-EchoSolv-AS-Deployed-into-Mount-Sinai-Health-System.html",
-     "verification": "news"
+     "verification": "unverified"
     },
     {
-     "fact": "Cloud platform features (role-based access, alerts, web API), '72% more severe AS' trial claim",
+     "fact": "Cloud platform features (role-based access, alerts, web API), '72% more severe AS' trial claim (URL not retrievable on 2026-09-05; unverified)",
      "url_or_file": "https://www.mobihealthnews.com/news/anz/sydney-based-medtech-echo-iq-brings-ai-heart-screening-platform-us",
-     "verification": "news"
+     "verification": "unverified"
     },
     {
      "fact": "Papers and PMIDs/DOIs",
@@ -12586,8 +13741,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "peer_reviewed"
     }
    ],
-   "_source_file": "as-detection.json",
-   "_verified": false,
+   "_source_file": "as-detection.verified.json",
+   "_verified": true,
    "first_cleared": "2024-10-04",
    "latest_cleared": "2024-10-04",
    "n_clearances": 1,
@@ -12600,7 +13755,7 @@ window.AIECHO_PRODUCTS = {
    "n_performance_claims": 6,
    "n_papers_resolved": 5,
    "n_papers": 5,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -12655,7 +13810,7 @@ window.AIECHO_PRODUCTS = {
       "special controls 21 CFR 870.2200",
       "cloud",
       "fully automated, no user interface",
-      "first QUO product code"
+      "first QUO product code (earliest decision date among QUO 510(k)s in openFDA, checked 2026-09-05)"
      ],
      "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K222463.pdf",
      "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K222463",
@@ -12889,7 +14044,7 @@ window.AIECHO_PRODUCTS = {
      "n_patients": 47,
      "n_sites": 1,
      "dataset_description": "47 patients with TTE and right heart catheterization for unexplained dyspnoea (28 with exercise haemodynamics)",
-     "subgroup_notes": null,
+     "subgroup_notes": "Paper does not name the product or version ('FDA-approved AI tool'); assignment to K240013 (v2.0) is an assumption.",
      "quote": "Among patients with exercise RHC (n = 28), 71% met haemodynamic HFpEF criteria. The AI tool demonstrated sensitivity of 30%, specificity of 88%, PPV of 86%, and NPV of 33%.",
      "page": null,
      "verification": "peer_reviewed"
@@ -12901,7 +14056,7 @@ window.AIECHO_PRODUCTS = {
     "n_patients": 6756,
     "n_sites": null,
     "description": "FDA summaries state independent training, validation and test datasets were used and that v2.0 was 'trained on more data and with additional pre-processing steps and data augmentations' but give no sizes. Peer-reviewed pivotal paper (Akerman 2023, v1.0 development) reports training and validation of 2,971 cases and 3,785 controls (6,756 patients; 16.8% validation holdout). v2.0 training size not disclosed.",
-    "source": "https://doi.org/10.1016/j.jacadv.2023.100452 ; https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240013.pdf (p4)",
+    "source": "https://doi.org/10.1016/j.jacadv.2023.100452 ; https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240013.pdf (p8)",
     "verification": "peer_reviewed"
    },
    "validation_data": {
@@ -12915,7 +14070,7 @@ window.AIECHO_PRODUCTS = {
    },
    "prior_validations": [
     {
-     "description": "Company press release (Dec 6, 2022): FDA clearance as a Breakthrough device; developed with Mayo Clinic (which has a financial interest); '87.8 Sensitivity and 83% Specificity in the independent testing dataset'; '68% more HFpEF patients correctly identified vs. clinical algorithms'.",
+     "description": "Company press release (Dec 6, 2022): FDA clearance as a breakthrough device; developed with Mayo Clinic (which has a financial interest); claims '90% accuracy in detecting HFpEF in the validation dataset', '87.8 Sensitivity and 83% Specificity in the independent testing dataset' (FDA summary K222463 reports specificity 82.0%) and '68% more HFpEF patients correctly identified vs. clinical algorithms'.",
      "source_url": "https://www.ultromics.com/press-releases/ultromics-receives-fda-clearance-for-its-breakthrough-device-echogo-heart-failure",
      "verification": "company"
     },
@@ -12925,7 +14080,7 @@ window.AIECHO_PRODUCTS = {
      "verification": "company"
     },
     {
-     "description": "CMS HCPCS code established for EchoGo Heart Failure (2023 press release).",
+     "description": "CMS established HCPCS code C9786 for EchoGo Heart Failure (OPPS), per company press release dated Jul 5, 2023 on PR Newswire.",
      "source_url": "https://www.prnewswire.com/news-releases/cms-establishes-hcpcs-code-for-ultromics-echogo-heart-failure-accelerating-access-to-precision-hfpef-detection-301869759.html",
      "verification": "news"
     }
@@ -12941,7 +14096,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1016/j.jacadv.2023.100452",
      "relation": "pivotal-validation",
      "n_subjects": 8040,
-     "key_result": "3D CNN on single A4C clip; training/validation 2,971 cases + 3,785 controls; independent test 646 cases/638 controls: sensitivity 87.8%, specificity 81.9%, 7.3% nondiagnostic; AI-positive mortality HR 1.9.",
+     "key_result": "3D CNN on single A4C clip; training/validation 2,971 cases + 3,785 controls; independent test 646 cases/638 controls: sensitivity 87.8%, specificity 81.9%, 7.3% nondiagnostic; AI-positive mortality HR 1.9. The paper does not name EchoGo; attribution rests on Ultromics authorship and the exact match of test-set figures (646 cases, 94 nondiagnostic, 87.8% sensitivity) to the K222463 summary.",
      "verification": "doi_resolved"
     },
     {
@@ -12954,7 +14109,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1016/j.echo.2024.06.016",
      "relation": "real-world",
      "n_subjects": null,
-     "key_result": "Outcome association study of the AI HFpEF classification (abstract not retrievable via E-utilities/Crossref in this session).",
+     "key_result": "Research letter (JASE 2024;37(9):914-916) on association of the AI HFpEF classification with cardiac mortality and HF hospitalization; no abstract is indexed in PubMed or Crossref and full text was not retrieved, so results are not captured.",
      "verification": "doi_resolved"
     },
     {
@@ -12980,7 +14135,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1016/j.echo.2025.03.016",
      "relation": "external-validation",
      "n_subjects": null,
-     "key_result": "Application of the HFpEF model to handheld ultrasound clips (abstract not retrievable in this session).",
+     "key_result": "Research letter (JASE 2025;38(7):633-635) applying the HFpEF model to handheld ultrasound clips; no abstract is indexed in PubMed or Crossref and full text was not retrieved, so results are not captured.",
      "verification": "doi_resolved"
     },
     {
@@ -12993,7 +14148,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1093/eschf/xvag052",
      "relation": "external-validation",
      "n_subjects": 47,
-     "key_result": "Against invasive PCWP criteria (n=28 exercise RHC): sensitivity 30%, specificity 88%, PPV 86%, NPV 33%; AI-positive patients had higher PCWP, mPAP, PVR.",
+     "key_result": "Against invasive PCWP criteria (n=28 exercise RHC): sensitivity 30%, specificity 88%, PPV 86%, NPV 33%; AI-positive patients had higher PCWP, mPAP, PVR. Paper refers to 'an FDA-approved AI tool' and cites Akerman 2023/2025 without naming EchoGo Heart Failure or a version; Ultromics-affiliated co-authors.",
      "verification": "doi_resolved"
     }
    ],
@@ -13008,7 +14163,7 @@ window.AIECHO_PRODUCTS = {
    "open_questions": [
     "Training set size for v2.0 (K240013) not disclosed; only that it was 'trained on more data' than v1.0.",
     "FDA summaries do not report age/sex/race, ultrasound vendor, or image-quality subgroup performance for the HFpEF test cohorts (only the SGLT2i subgroup in K222463).",
-    "Abstracts for Cassianni 2024 (JASE) and James 2025 (JASE) could not be retrieved via E-utilities or Crossref; key results not captured.",
+    "Cassianni 2024 (JASE 37:914-916) and James 2025 (JASE 38:633-635) are research letters with no indexed abstract; full texts were not retrieved, so their results are not captured.",
     "Definition of the HFpEF ground truth in the FDA test set is not spelled out in the summary (peer-reviewed paper: HF diagnosis + EF>=50% + echocardiographic evidence of elevated filling pressure).",
     "Company press release accuracy figure ('90% accuracy in the validation dataset') is not in the FDA summary."
    ],
@@ -13025,7 +14180,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "Decision dates, product code QUO, applicant",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=applicant:Ultromics",
      "verification": "fda_database"
     },
     {
@@ -13047,10 +14202,15 @@ window.AIECHO_PRODUCTS = {
      "fact": "NCT06593314 (UT Southwestern, 800 planned, start 2025-08-06)",
      "url_or_file": "https://clinicaltrials.gov/api/v2/studies/NCT06593314",
      "verification": "fda_database"
+    },
+    {
+     "fact": "QUO product-code listing (K222463 is the earliest QUO clearance; later: K223905 Avicena 2023-10-06, K240013, K251293 Icardio.Ai 2025-11-21)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=product_code:QUO",
+     "verification": "fda_database"
     }
    ],
-   "_source_file": "ultromics.json",
-   "_verified": false,
+   "_source_file": "ultromics.verified.json",
+   "_verified": true,
    "first_cleared": "2022-11-23",
    "latest_cleared": "2024-09-23",
    "n_clearances": 2,
@@ -13063,7 +14223,7 @@ window.AIECHO_PRODUCTS = {
    "n_performance_claims": 14,
    "n_papers_resolved": 5,
    "n_papers": 5,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -13416,7 +14576,7 @@ window.AIECHO_PRODUCTS = {
    "product_name": "AISAP CARDIO V1.0",
    "company": "AISAP Ltd",
    "company_website": "https://www.aisap.ai/",
-   "product_url": "https://www.aisap.ai/product",
+   "product_url": null,
    "category": "disease-detection",
    "tags": [
     "aortic stenosis",
@@ -13593,7 +14753,7 @@ window.AIECHO_PRODUCTS = {
      "endpoint": "Mitral regurgitation > mild, standalone detection",
      "metric": "AUC / sensitivity / specificity / kappa",
      "value": "AUC 0.975 (0.960-0.987); sensitivity 95.3% (90.5-98.9); specificity 90.2% (86.3-93.9); kappa 0.879 (0.852-0.906)",
-     "comparator": "Cardiologist interpretation (ground truth by 2+1 US board-certified cardiologists)",
+     "comparator": "Cardiologist interpretations (summary p.10: 'device outputs compared to cardiologist interpretations'; the 2+1 US board-certified adjudication is described only for the 260-case reader study, not for this 329-case standalone study)",
      "n_studies": null,
      "n_patients": 310,
      "n_sites": 4,
@@ -13717,7 +14877,7 @@ window.AIECHO_PRODUCTS = {
      "n_studies": 2000,
      "n_patients": null,
      "n_sites": null,
-     "dataset_description": "500 sampled loops per cardiac view from the clinical study dataset, classified by the view-classification phase as a valid view.",
+     "dataset_description": "500 sampled loops per cardiac view (4 views; 2,000 loops in total, derived) from the clinical study dataset, classified by the view-classification phase as a valid view. n_studies counts loops, not exams.",
      "subgroup_notes": null,
      "quote": "Correct identification of the video clip view classification: i. PLAX - 500/500 ii. PSAX - 496/500 iii. A4C - 495/500 iv. SC IVC - 494/500 e. Conclusion - Accuracy greater than 98% for all the relevant echocardiographic views.",
      "page": 12,
@@ -13783,7 +14943,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.3389/fdgth.2025.1684933",
      "relation": "algorithm-development",
      "n_subjects": 120127,
-     "key_result": "Single A4C-view deep-learning model trained/validated on 120,127 studies from a tertiary center; retrospective AUCs 0.883 (MR), 0.913 (TR), 0.940 (RV dysfunction), 0.982 (LVEF<=40%); prospective handheld POCUS cohort of 209 patients (NCT05455541) AUCs 0.72, 0.87, 0.95, 0.97. Relationship to the cleared V1.0 multi-view pipeline is not stated.",
+     "key_result": "Single A4C-view deep-learning model trained/validated on 120,127 studies from a tertiary center; retrospective AUCs 0.883 (MR), 0.913 (TR), 0.940 (RV dysfunction), 0.982 (LVEF<=40%); prospective handheld POCUS cohort of 209 patients (NCT05455541) AUCs 0.72, 0.87, 0.95, 0.97. Relationship to the cleared V1.0 multi-view pipeline is not stated. A Correction to this article was published (Front Digit Health 2026, doi 10.3389/fdgth.2026.1815054, PMID 41878373); content of the correction not reviewed here.",
      "verification": "doi_resolved"
     },
     {
@@ -13834,7 +14994,8 @@ window.AIECHO_PRODUCTS = {
     "Training set: 'over 140,000 individual exams' at 2 academic institutions; number of patients not stated. Company press coverage cites 'hundreds of thousands of studies / 24 million clips' and six MRMC institutions, which does not match the FDA summary (4 reader sites).",
     "Sensitivity/specificity operating points for the standalone valve study are given without the threshold definition.",
     "No peer-reviewed publication of the FDA pivotal standalone/MRMC dataset was found on PubMed in this session.",
-    "Training cohort BMI row reads 'BMI 15 to 49 (mean 6±18)' in the summary, which appears to be a typographical error in the source."
+    "Training cohort BMI row reads 'BMI 15 to 49 (mean 6±18)' in the summary, which appears to be a typographical error in the source.",
+    "Company product page (https://www.aisap.ai/product, linked from the site navigation) returned HTTP 404 on 2026-09-05; product_url left null."
    ],
    "sources": [
     {
@@ -13844,16 +15005,16 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "decision_date 2024-08-01, product code POK, applicant Aisap",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K234141",
      "verification": "fda_database"
     },
     {
-     "fact": "Company website, cloud/on-premise architecture, supported vendors (Wisonic, Mindray, Siemens, Clarius, SonoSite, Samsung, Philips, GE, Butterfly)",
+     "fact": "Company website: 'on-premise to cloud' architecture, 'works with any ultrasound device, PACS and EMR'; vendor logos present on homepage on 2026-09-05: Clarius, Mindray, Butterfly, Philips, Samsung, SonoSite, Wisonic (GE and Siemens not found in page text)",
      "url_or_file": "https://www.aisap.ai/",
      "verification": "company"
     },
     {
-     "fact": "Press coverage of clearance: six MRMC institutions, training on 'hundreds of thousands of studies', 93%/93% sensitivity/specificity, cloud-based vendor-agnostic",
+     "fact": "Press coverage of clearance (DAIC, 2024-08-27, verified 2026-09-05): six MRMC institutions named (Mass General Brigham, Thomas Jefferson University Hospital, Mayo Clinic, Inova Fairfax, Crozer-Chester, Stony Brook), 'trained on hundreds of thousands of studies comprising over 24 million echo video clips', '93 percent sensitivity and 93 percent specificity', cloud-based vendor-agnostic",
      "url_or_file": "https://www.dicardiology.com/content/aisaps-cardio-ai-powered-diagnostic-assessment-software-receives-fda-clearance",
      "verification": "news"
     },
@@ -13863,13 +15024,13 @@ window.AIECHO_PRODUCTS = {
      "verification": "peer_reviewed"
     },
     {
-     "fact": "Clinical trials NCT05455541 (Sheba, AISAP CARDIO V0.7) and NCT05631977 (Aisap LTD, n=300)",
+     "fact": "Clinical trials NCT05455541 (Sheba Medical Center sponsor; 'AISAP CARDIO V0.7'; status UNKNOWN; estimated n=300) and NCT05631977 (Aisap LTD; COMPLETED; n=300 actual; sites Thomas Jefferson University Hospital, Inova Health, Sheba Medical Center) - re-verified 2026-09-05",
      "url_or_file": "https://clinicaltrials.gov/api/v2/studies",
      "verification": "fda_database"
     }
    ],
-   "_source_file": "as-detection.json",
-   "_verified": false,
+   "_source_file": "as-detection.verified.json",
+   "_verified": true,
    "first_cleared": "2024-08-01",
    "latest_cleared": "2024-08-01",
    "n_clearances": 1,
@@ -13882,7 +15043,7 @@ window.AIECHO_PRODUCTS = {
    "n_performance_claims": 16,
    "n_papers_resolved": 4,
    "n_papers": 4,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -14512,6 +15673,7 @@ window.AIECHO_PRODUCTS = {
      "changes_summary": "Us2.v2 (model V2.0.0) uses Us2.v1 as predicate. Automated calculations are 'Same as the predicate plus': LV GLS, A4C/A3C/A2C LV GLS, LV regional strain, TAPSE, RV E'/A'/S', aortic sinotubular junction and sinus of Valsalva, LVOT diameter, PW LVOT Vmax/VTI/Pmax/Pmean, CW AoV Vmax/VTI/Pmax/Pmean, AVA and VR (p.7 table). Indications broadened to list B-mode, M-mode and Doppler modalities and to support 'sonographers, or other licensed professional healthcare practitioners' in addition to cardiologists; the v1 statement that the device 'has not been validated for ... valve disease' is no longer in the IFU. Validation switched from IEC to RMSE (strain vs GE EchoPAC) and ICC.",
      "notable_flags": [
       "Regulation 21 CFR 892.2050",
+      "Reviewed by DHT 8B, OHT 8: Office of Radiological Health (letter p.2)",
       "Strain (GLS/regional) added",
       "Tested on data from 8 ultrasound vendors",
       "Pages 7 and 9 of the FDA PDF are image-only (tables transcribed from rendered page)"
@@ -14541,7 +15703,7 @@ window.AIECHO_PRODUCTS = {
      "k_number": "K233676",
      "endpoint": "LV global longitudinal strain vs GE EchoPAC",
      "metric": "RMSE",
-     "value": "2.6 - 4.12 (range across views/comparisons; units not stated, presumed % strain)",
+     "value": "2.6 - 4.12 (reported as a range; units and basis of the range not stated)",
      "comparator": "GE EchoPAC (FDA-cleared strain software)",
      "n_studies": null,
      "n_patients": 3029,
@@ -14556,7 +15718,7 @@ window.AIECHO_PRODUCTS = {
      "k_number": "K233676",
      "endpoint": "LV regional longitudinal strain vs GE EchoPAC",
      "metric": "RMSE",
-     "value": "4.84 - 9.54",
+     "value": "4.84 - 9.54 (reported as a range; units and basis of the range not stated)",
      "comparator": "GE EchoPAC",
      "n_studies": null,
      "n_patients": 3029,
@@ -14876,7 +16038,7 @@ window.AIECHO_PRODUCTS = {
      "n_studies": null,
      "n_patients": 867,
      "n_sites": null,
-     "dataset_description": "Campbell RT et al., Eur J Heart Fail 2025 (doi 10.1002/ejhf.3783); multicentre prospective observational study, suspected HF; AI produced an LVEF in 61% of handheld and 77% of cart-based scans.",
+     "dataset_description": "Campbell RT et al., Eur J Heart Fail 2025 (doi 10.1002/ejhf.3783); multicentre prospective observational study, suspected HF; AI produced an LVEF in 61% of handheld and 77% of cart-based scans. Full text (PMC12803686) states handheld and cart scans were reported by Us2.ai software version 1.4.1 (Philips Lumify handheld; GE Vivid E95 cart).",
      "subgroup_notes": null,
      "quote": "The AI-automated analysis of handheld echocardiography had a diagnostic accuracy of 0.93 (95% confidence interval [CI] 0.90, 0.95) for identifying LVEF ≤40% (compared to the human analysis of cart-based transthoracic echocardiography scans). AI-automated analysis of LVEF on handheld devices was interchangeable with cart-based LVEF reported by two expert humans (IEC -0.40, 95% CI -0.60, -0.16).",
      "page": null,
@@ -14921,20 +16083,110 @@ window.AIECHO_PRODUCTS = {
      "n_studies": null,
      "n_patients": 585,
      "n_sites": 1,
-     "dataset_description": "Sakamoto A et al., J Am Heart Assoc 2026 (doi 10.1161/JAHA.125.045637), AI-Echo RCT, single-center Japan, 4 sonographers, 585 patients over 38 days. The abstract does not name the AI vendor; attribution to Us2.ai comes from the Us2.ai clinical-evidence page (company source).",
+     "dataset_description": "Sakamoto A et al., J Am Heart Assoc 2026 (doi 10.1161/JAHA.125.045637), AI-Echo RCT, single-center Japan, 4 sonographers, 585 patients over 38 days (AI days 317; non-AI days 268). The abstract does not name the vendor; the full text (PMC12909003) states the AI tool was the US2.ai platform (Us2.ai, Singapore) and that M3AI, its Japanese distributor, provided software and two co-authors.",
      "subgroup_notes": null,
      "quote": "AI assistance significantly reduced examination time (13.0±3.5 minutes versus 14.3±4.2 minutes, P<0.001) and increased the number of daily examinations (16.7±2.5 versus 14.1±2.5, P=0.003). The number of echocardiographic parameters per examination increased 3.4-fold on AI days (85±12 versus 25±1, P<0.001).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "LVOT, sinotubular junction and sinus of Valsalva diameters vs cardiac MRI (independent validation)",
+     "metric": "ICC",
+     "value": "AI vs CMR: LVOT 0.70 (95% CI 0.61-0.77), STJ 0.77 (0.70-0.83), SoV 0.77 (0.70-0.83); experts vs CMR: LVOT 0.63/0.51, STJ 0.71/0.82, SoV 0.85/0.85",
+     "comparator": "Cardiac magnetic resonance (gold standard) and two expert echocardiographers",
+     "n_studies": null,
+     "n_patients": 169,
+     "n_sites": null,
+     "dataset_description": "Mołek-Dziadosz P et al., Eur Heart J Digit Health 2026 (doi 10.1093/ehjdh/ztag126): 183 patients with TTE and CMR within 7 days; 169 with complete AI measurements of LVOT, STJ and SoV on the US2.ai platform.",
+     "subgroup_notes": "Clinically significant AI-CMR differences (>=2 mm LVOT; >=4 mm STJ/SoV) in 36.7% of LVOT, 20% of STJ and 11.8% of SoV measurements.",
+     "quote": "Artificial intelligence-derived measurements demonstrated comparable agreement with CMR: ICC 0.70 (95% CI: 0.61-0.77) for LVOT, 0.77 (95% 0.70-0.83) for STJ, and 0.77 (95% 0.70-0.83) for SoV.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "LV GLS and LA reservoir strain vs expert sonographer (independent validation)",
+     "metric": "ICC",
+     "value": "LV GLS ICC 0.83 (95% CI 0.77-0.88); LASr ICC 0.77 (95% CI 0.67-0.84)",
+     "comparator": "Expert sonographer measurements",
+     "n_studies": null,
+     "n_patients": 150,
+     "n_sites": null,
+     "dataset_description": "Nomura Y et al., J Echocardiogr 2026 (doi 10.1007/s12574-026-00736-z): 150 patients regardless of underlying disease, analysed by the fully automated Us2.ai software.",
+     "subgroup_notes": "Accuracy reported as maintained across LVEF and LAVi subcategories.",
+     "quote": "For LVGLS, the ICC was 0.83 (95% CI: 0.77-0.88) and 0.77 (95% CI: 0.67-0.84) for LASr.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K210791",
+     "endpoint": "TR jet velocity vs manual measurement and PH detection (independent validation)",
+     "metric": "ICC / AUC",
+     "value": "TRJV measured in 87% of echocardiograms; ICC 0.94 (95% CI 0.94-0.95); AUC for PH 0.88 (95% CI 0.84-0.90) automated vs 0.88 (0.86-0.91) manual",
+     "comparator": "Manual TRJV; right heart catheterisation (mPAP >20 mmHg) as PH reference",
+     "n_studies": null,
+     "n_patients": 1031,
+     "n_sites": 1,
+     "dataset_description": "Salehi M et al., ERJ Open Res 2025 (doi 10.1183/23120541.00592-2024): ASPIRE registry, 1031 consecutive patients investigated for suspected PH 2009-2021 with echo and RHC; 771 (75%) had PH.",
+     "subgroup_notes": null,
+     "quote": "The AI tool demonstrated high interpretation yield, successfully measuring TRJV in 87% of echocardiograms. Manually and automatically derived TRJV values showed excellent agreement (intraclass correlation coefficient 0.94, 95% CI 0.94-0.95) with minimal bias (Bland-Altman analysis). Automated TRJV measurements showed equally high diagnostic accuracy for PH as manual measurements (area under the curve 0.88, 95% CI 0.84-0.90 versus 0.88, 95% CI 0.86-0.91).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "Peri-operative anaesthetist-acquired echo analysed by US2.AI vs clinician measurements (multicentre)",
+     "metric": "ICC / correlation / classification accuracy",
+     "value": "ICC 0.605-0.956 across 10 parameters; LVEF r=0.845, mean difference -1.9%; LV systolic function classified correctly in 180/201 (91%), diastolic dysfunction in 193/201 (96%)",
+     "comparator": "Manual measurements by echocardiography-certified anaesthetists",
+     "n_studies": null,
+     "n_patients": 206,
+     "n_sites": null,
+     "dataset_description": "Borde DP et al., Anaesthesia 2026 (doi 10.1111/anae.70235): prospective multicentre observational study; 12-view protocol; 202/206 (98%) analysable.",
+     "subgroup_notes": "All 10 pulmonary hypertension and 6 severe aortic stenosis cases identified; IVC collapsibility (r=0.641) and cardiac output (r=0.675) agreement moderate.",
+     "quote": "Agreement between artificial intelligence- and clinician-derived continuous measurements was good to excellent for most parameters, with intraclass correlation coefficient values 0.605-0.956 (p < 0.001). Left ventricular ejection fraction was strongly correlated (r = 0.845, p < 0.001) with a mean difference of -1.9%. The US2.AI software classified left ventricular systolic function correctly in 180/201 (91%) patients and left ventricular diastolic dysfunction in 193/201 (96%) patients.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "Real-world hospital cohort: AI vs human measurements and 1-year mortality prediction",
+     "metric": "Mean difference / AUC",
+     "value": "AI LVEF higher than human by 5.8% (P<0.001); mortality AUC 0.67 (AI) vs 0.66 (human), P=0.86; 0.73 vs 0.66 (P=0.048) with AI strain included",
+     "comparator": "Human expert echocardiographic reads",
+     "n_studies": null,
+     "n_patients": 889,
+     "n_sites": 1,
+     "dataset_description": "Merin R et al., Eur Heart J Digit Health 2026 (doi 10.1093/ehjdh/ztaf148): 889 consecutive hospitalized patients, 731 (82%) with sufficient data; commercially available Us2.ai software.",
+     "subgroup_notes": null,
+     "quote": "AI-derived LVEF values were significantly higher than human estimates (mean difference 5.8%, P < 0.001). In a multivariable model, AI- and human-based mortality prediction were comparable (AUC 0.67 vs. 0.66, P = 0.86). When including AI-obtained automated left ventricular strain analysis, the AI-based model was superior to humans in predicting 1-year mortality (AUC 0.73 vs. 0.66, P = 0.048).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K210791",
+     "endpoint": "Measurement and report-creation time, AI vs manual",
+     "metric": "Time (seconds)",
+     "value": "Measurement 159+/-66 vs 325+/-94 s (p<0.01); report creation 71+/-39 vs 429+/-128 s (p<0.01); 70% overall reduction",
+     "comparator": "Manual measurement and reporting by a human expert",
+     "n_studies": 23,
+     "n_patients": 23,
+     "n_sites": 1,
+     "dataset_description": "Hirata Y et al., J Echocardiogr 2024 (doi 10.1007/s12574-023-00636-6): 23 consecutive patients examined by a single operator with varying image quality; US2.ai fully automated software vs manual method.",
+     "subgroup_notes": "Fair/poor image quality required more corrections and longer measurement time; report time longer with more complex reports.",
+     "quote": "The AI significantly reduced the measurement time compared to the manual method (159 ± 66 vs. 325 ± 94 s, p < 0.01). In the report creation step, AI was also significantly faster compared to the manual method (71 ± 39 vs. 429 ± 128 s, p < 0.01). The incorporation of AI into echocardiographic analysis led to a 70% reduction in measurement and report creation time compared to manual methods.",
      "page": null,
      "verification": "peer_reviewed"
     }
    ],
    "training_data": {
-    "disclosed": true,
-    "n_studies": 1145,
+    "disclosed": false,
+    "n_studies": null,
     "n_patients": null,
     "n_sites": null,
-    "description": "Neither FDA summary states a training set size; both state test data were strictly segregated from training data. The algorithm-development paper (Tromp J et al., Lancet Digit Health 2022) reports the workflow was developed on 1145 training echocardiograms and 406 internal-test echocardiograms from the ATTRaCT platform (Asia), with manual tracings by expert sonographers. The strain algorithm (Myhre 2024) was 'trained in an internal dataset' of unstated size. The training data used for the specific FDA-cleared versions (v1.0.0, v2.0.0) are not disclosed.",
-    "source": "Tromp J et al., Lancet Digit Health 2022, doi 10.1016/S2589-7500(21)00235-1 (Methods); FDA summaries K210791 p.8 and K233676 p.8 (segregation statements only)",
+    "description": "Neither FDA summary states a training set size; both state only that test data were strictly segregated from training data (K210791 p.8; K233676 p.8). The algorithm-development paper (Tromp J et al., Lancet Digit Health 2022) reports that the workflow was developed on 1145 training echocardiograms and 406 internal-test echocardiograms from the ATTRaCT platform (Asia) with manual tracings by expert sonographers; the strain algorithm (Myhre 2024) was 'trained in an internal dataset' of unstated size. Whether these figures correspond to the training data of the cleared versions (V1.0.0, V2.0.0) is not stated anywhere, so no training-set size is recorded here.",
+    "source": "FDA summaries K210791 p.8 and K233676 p.8 (segregation statements only); Tromp J et al., Lancet Digit Health 2022, doi 10.1016/S2589-7500(21)00235-1 (Methods)",
     "verification": "peer_reviewed"
    },
    "validation_data": {
@@ -14943,7 +16195,7 @@ window.AIECHO_PRODUCTS = {
     "n_sites": null,
     "description": "K210791: 600 retrospective studies (421 HFrEF, 179 normal), balanced gender/BMI, reference = BWH core lab triplicate reads. K233676: three US-based clinical datasets, Dataset 1 n=3029 (age 73.7+/-8.4, 47.1% male, 25% African American/39.9% White/21.7% Hispanic), Dataset 2 n=260 (46.5% African American), Dataset 3 n=192 (87.9% White); data from 8 ultrasound vendors; comparators = GE EchoPAC (strain) and manual reads by technicians/cardiologists in core-lab and real-world settings. n_studies/n_patients here = K233676 total (3029+260+192). Number of sites not stated.",
     "independent_of_training": true,
-    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K210791.pdf (pp.7-8); https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233676.pdf (p.8)",
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K210791.pdf (pp.7-8); https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233676.pdf (p.8; results table p.9 image-only)",
     "verification": "fda_summary"
    },
    "prior_validations": [
@@ -14958,7 +16210,7 @@ window.AIECHO_PRODUCTS = {
      "verification": "company"
     },
     {
-     "description": "Company platform page: cloud or on-premise deployment, DICOM routing, DICOM-SR/HL7/PDF output to PACS/CVIS/EMR, compatible with GE, Philips, Siemens and handheld POCUS devices; claims 70% reduction in combined measurement and report-creation time (unverified).",
+     "description": "Company platform page: cloud or on-premise deployment, DICOM routing, DICOM-SR/HL7/PDF output to PACS/CVIS/EMR, compatible with GE, Philips, Siemens and handheld POCUS devices; claims a 70% reduction in combined measurement and report-creation time. The 70% figure matches Hirata Y et al., J Echocardiogr 2024 (doi 10.1007/s12574-023-00636-6; 23 patients, single operator).",
      "source_url": "https://us2.ai/platform-overview/",
      "verification": "company"
     },
@@ -15018,7 +16270,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1002/ejhf.3783",
      "relation": "external-validation",
      "n_subjects": 867,
-     "key_result": "Multicentre prospective study; AI analysis of handheld echo had accuracy 0.93 (95% CI 0.90-0.95) for LVEF<=40% vs expert cart-based echo; IEC -0.40 (95% CI -0.60, -0.16). Vendor not named in abstract; Us2.ai evidence page lists this study (867 patients).",
+     "key_result": "Multicentre prospective study (n=867); AI analysis of handheld echo had accuracy 0.93 (95% CI 0.90-0.95) for LVEF<=40% vs expert cart-based echo; IEC -0.40 (95% CI -0.60, -0.16). Vendor not named in abstract; full text (PMC12803686) identifies Us2.ai software version 1.4.1.",
      "verification": "doi_resolved"
     },
     {
@@ -15044,7 +16296,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1093/ehjdh/ztad079",
      "relation": "real-world",
      "n_subjects": 94,
-     "key_result": "Feasibility pilot in Tunisia: 7 novice nurses, 94 patients, home AI-POCUS vs clinic TTE for LVEF<50% or LAVI>34 mL/m2 (sensitivity value not captured from abstract).",
+     "key_result": "Feasibility pilot in Tunisia: 7 novice nurses (5 met the standard), 94 patients, home AI-POCUS vs clinic TTE; AI-POCUS gave an interpretable LVEF in 80% and LAVI in 68%; sensitivity 92% (95% CI 62-99) for LVEF<50% or LAVI>34 mL/m2 vs 87% for NT-proBNP>125 pg/mL (AUC higher for AI-POCUS, P=0.040).",
      "verification": "doi_resolved"
     },
     {
@@ -15122,7 +16374,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1161/JAHA.125.045637",
      "relation": "clinical-trial",
      "n_subjects": 585,
-     "key_result": "Single-center randomized crossover (UMIN000053259): AI days reduced exam time (13.0 vs 14.3 min, P<0.001) and increased exams/day (16.7 vs 14.1); AI values within clinical limits for 90% of parameters. Vendor not named in abstract; attributed to Us2.ai via the company evidence page.",
+     "key_result": "Single-center randomized crossover (UMIN000053259): AI days reduced exam time (13.0 vs 14.3 min, P<0.001) and increased exams/day (16.7 vs 14.1); AI values within clinical limits for 90% of parameters. Vendor not named in abstract; full text (PMC12909003) identifies the US2.ai platform.",
      "verification": "doi_resolved"
     },
     {
@@ -15135,7 +16387,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1093/eschf/xvag069",
      "relation": "other",
      "n_subjects": 100,
-     "key_result": "Economic evaluation of the AI-enhanced novice pathway (PANES-HF cohort); company page reports average saving of S$1,185 per patient (not verified from the abstract).",
+     "key_result": "Cost-minimization decision-tree model (PANES-HF pathway): novice-operated AI-POC pathway cost S$1185 (US$1422) per patient vs S$1403 (US$1684) for sonographer TTE, i.e. S$21,669 saved per 100 patients; 99.9% probability of cost saving in probabilistic sensitivity analysis.",
      "verification": "doi_resolved"
     },
     {
@@ -15161,7 +16413,150 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1038/s41440-023-01559-6",
      "relation": "real-world",
      "n_subjects": null,
-     "key_result": "Population-based survey in Lesotho with focused echo and AI-supported analysis (756 echocardiograms per abstract). Listed on the Us2.ai evidence page; the abstract does not name the vendor.",
+     "key_result": "Population-based survey in Lesotho: 16 nurses/nurse-assistants after 2-day training obtained 756 PLAX echocardiograms on a handheld device; 628/754 (83.3%) uploaded files evaluable by the deep-learning algorithm and 514/628 (81.9%) confirmed by a cardiologist. Vendor not named in abstract; full text (PMC10912015) states analysis used Us2.ai software (Singapore) at University Hospital Basel.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Real-life clinical validation of artificial intelligence-assisted echocardiography for aortic root and left ventricular outflow tract measurements against human readers and cardiac magnetic resonance",
+     "first_author": "Mołek-Dziadosz P",
+     "journal": "European Heart Journal - Digital Health",
+     "year": 2026,
+     "doi": "10.1093/ehjdh/ztag126",
+     "pmid": "42644151",
+     "url": "https://doi.org/10.1093/ehjdh/ztag126",
+     "relation": "external-validation",
+     "n_subjects": 169,
+     "key_result": "Us2.ai LVOT, sinotubular junction and sinus of Valsalva diameters vs CMR (169 patients with complete AI measurements): ICC 0.70 (LVOT), 0.77 (STJ), 0.77 (SoV), comparable to two expert readers (LVOT ICC 0.63/0.51; STJ 0.71/0.82; SoV 0.85/0.85); clinically significant AI-CMR differences in 36.7% of LVOT, 20% of STJ and 11.8% of SoV measurements.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Validation of a fully automated workflow for longitudinal strain using artificial intelligence",
+     "first_author": "Nomura Y",
+     "journal": "Journal of Echocardiography",
+     "year": 2026,
+     "doi": "10.1007/s12574-026-00736-z",
+     "pmid": "42166090",
+     "url": "https://doi.org/10.1007/s12574-026-00736-z",
+     "relation": "external-validation",
+     "n_subjects": 150,
+     "key_result": "Us2.ai vs expert sonographer in 150 patients: ICC 0.83 (95% CI 0.77-0.88) for LV GLS and 0.77 (95% CI 0.67-0.84) for LA reservoir strain; accuracy maintained across LVEF and LAVi subgroups.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial intelligence-assisted peri-operative echocardiography: a multicentre observational study",
+     "first_author": "Borde DP",
+     "journal": "Anaesthesia",
+     "year": 2026,
+     "doi": "10.1111/anae.70235",
+     "pmid": "42086509",
+     "url": "https://doi.org/10.1111/anae.70235",
+     "relation": "real-world",
+     "n_subjects": 206,
+     "key_result": "Anaesthetist-acquired 12-view protocol analysed on the US2.AI cloud platform (202/206 analysable): ICC 0.605-0.956 across 10 parameters; LVEF r=0.845, mean difference -1.9%; LV systolic function classified correctly in 180/201 (91%) and diastolic dysfunction in 193/201 (96%); all 10 PH and 6 severe AS cases identified.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Association of echocardiographic findings with mortality: human assessment vs. automated deep learning analysis",
+     "first_author": "Merin R",
+     "journal": "European Heart Journal - Digital Health",
+     "year": 2026,
+     "doi": "10.1093/ehjdh/ztaf148",
+     "pmid": "41640420",
+     "url": "https://doi.org/10.1093/ehjdh/ztaf148",
+     "relation": "real-world",
+     "n_subjects": 889,
+     "key_result": "889 consecutive hospitalized patients (731 analysable) read by experts and by Us2.ai: strong correlation for most parameters; AI LVEF higher than human by 5.8% on average (P<0.001); 1-year mortality AUC 0.67 (AI) vs 0.66 (human), rising to 0.73 when AI strain was included (P=0.048).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Automated analysis of echocardiographic images: do different artificial intelligence tools provide concordant measurements?",
+     "first_author": "Szasz T",
+     "journal": "The International Journal of Cardiovascular Imaging",
+     "year": 2026,
+     "doi": "10.1007/s10554-025-03539-y",
+     "pmid": "41486249",
+     "url": "https://doi.org/10.1007/s10554-025-03539-y",
+     "relation": "external-validation",
+     "n_subjects": 116,
+     "key_result": "Us2.AI vs Philips automated tools vs two expert readers in 116 subjects (10 linear, Doppler and volumetric parameters): the two AI tools differed significantly for 6/10 parameters (experts 3/10), but inter-software variability was overall similar to inter-observer variability.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial intelligence-based echocardiography assessment to detect pulmonary hypertension",
+     "first_author": "Salehi M",
+     "journal": "ERJ Open Research",
+     "year": 2025,
+     "doi": "10.1183/23120541.00592-2024",
+     "pmid": "40356796",
+     "url": "https://doi.org/10.1183/23120541.00592-2024",
+     "relation": "external-validation",
+     "n_subjects": 1031,
+     "key_result": "ASPIRE registry, 1031 patients with RHC: US2.AI measured TRJV in 87% of echocardiograms; ICC vs manual 0.94 (95% CI 0.94-0.95); AUC for PH (mPAP >20 mmHg) 0.88 automated vs 0.88 manual.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Concordance of left ventricular volumes and function measurements between two human readers, a fully automated AI algorithm, and the 3D heart model",
+     "first_author": "Myhre PL",
+     "journal": "Frontiers in Cardiovascular Medicine",
+     "year": 2024,
+     "doi": "10.3389/fcvm.2024.1400333",
+     "pmid": "39081366",
+     "url": "https://doi.org/10.3389/fcvm.2024.1400333",
+     "relation": "external-validation",
+     "n_subjects": 109,
+     "key_result": "109 patients with 2D and 3D TTE: US2ai LV volumes correlated with the mean of two human readers (r=0.89 LVEDV, 0.92 LVESV) more strongly than the readers with each other (r=0.74, 0.84); LVEF comparable to human readers; GLS correlation with human only moderate.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Reducing echocardiographic examination time through routine use of fully automated software: a comparative study of measurement and report creation time",
+     "first_author": "Hirata Y",
+     "journal": "Journal of Echocardiography",
+     "year": 2024,
+     "doi": "10.1007/s12574-023-00636-6",
+     "pmid": "38308797",
+     "url": "https://doi.org/10.1007/s12574-023-00636-6",
+     "relation": "real-world",
+     "n_subjects": 23,
+     "key_result": "23 consecutive patients, single operator: US2.ai measurement time 159+/-66 vs 325+/-94 s manual (p<0.01); report creation 71+/-39 vs 429+/-128 s (p<0.01); 70% reduction in combined time. Fair/poor image quality required more corrections.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Application of Machine Learning Technology to Automate Thoracic Aorta Dimensions by Echocardiography",
+     "first_author": "Krishna H",
+     "journal": "Journal of the American Society of Echocardiography",
+     "year": 2025,
+     "doi": "10.1016/j.echo.2024.10.017",
+     "pmid": "39515397",
+     "url": "https://doi.org/10.1016/j.echo.2024.10.017",
+     "relation": "external-validation",
+     "n_subjects": null,
+     "key_result": "Us2.ai-affiliated co-authors; relevant to the aortic root measurements (sinotubular junction, sinus of Valsalva) added in K233676. No abstract is available via PubMed or Crossref, so results are not recorded here.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Vendor differences in 2D-speckle tracking global longitudinal strain: an update on a 10-year standardization effort",
+     "first_author": "Balinisteanu A",
+     "journal": "European Heart Journal - Cardiovascular Imaging",
+     "year": 2025,
+     "doi": "10.1093/ehjci/jeaf155",
+     "pmid": "40418621",
+     "url": "https://doi.org/10.1093/ehjci/jeaf155",
+     "relation": "other",
+     "n_subjects": 62,
+     "key_result": "62 subjects scanned on six ultrasound systems; GLS measured on three vendor-specific and six vendor-agnostic software packages including US2.AI. Abstract reports aggregate inter-vendor bias (average maximum 0.6% strain units among contemporary semi-automated software) and does not give Us2.ai-specific values.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Fully automated artificial intelligence-based echocardiographic analysis for global longitudinal strain monitoring and cancer therapy-related cardiac dysfunction detection in breast cancer patients",
+     "first_author": "Saijo Y",
+     "journal": "European Heart Journal - Digital Health",
+     "year": 2026,
+     "doi": "10.1093/ehjdh/ztag097",
+     "pmid": "42388419",
+     "url": "https://doi.org/10.1093/ehjdh/ztag097",
+     "relation": "real-world",
+     "n_subjects": 92,
+     "key_result": "92 breast-cancer patients, 456 studies: AI GLS lower than expert (17.7+/-2.9% vs 18.4+/-2.8%, P=0.007), R=0.64, ICC 0.63; CTRCD detected in 34.8% by AI vs 31.5% by experts (kappa 0.68). Vendor not named in abstract; full text (PMC13322393) states Us2.ai software version 1.4.1.",
      "verification": "doi_resolved"
     }
    ],
@@ -15205,8 +16600,9 @@ window.AIECHO_PRODUCTS = {
     "Training set size for the FDA-cleared software versions is not disclosed in either summary; the 1145-echo training figure is from the 2022 Lancet Digital Health development paper and may not reflect the cleared versions.",
     "Company press coverage dates the Us2.v1 clearance announcement to Sept 14, 2021; openFDA decision date is 2021-07-27 (used here).",
     "NCT05705869 (TARGET-HF-DM, Glasgow) was returned by a clinicaltrials.gov search for 'Us2.ai' but the record text fetched did not contain a Us2.ai mention; excluded pending confirmation.",
-    "Several company-listed 2025-2026 publications (JASE study-time, EHJ-DH mortality, Heart2Miss, PANACEA-HF, JACC contrast-echo, PCWP estimation) were not resolved to PMIDs/DOIs in this session and are omitted.",
-    "The Sakamoto 2026 JAHA RCT, Campbell 2025 EJHF and Firima 2024 abstracts do not name the software vendor; attribution to Us2.ai rests on the company evidence page."
+    "Some company-listed 2025-2026 publications (Heart2Miss, PANACEA-HF, JACC contrast-echo, PCWP estimation) were not resolved to PMIDs/DOIs and are omitted; the 'EHJ-DH mortality' item resolves to Merin 2026 (doi 10.1093/ehjdh/ztaf148) and the 'study-time' item to Hirata 2024 (J Echocardiogr), both now listed.",
+    "The Sakamoto 2026 JAHA RCT, Campbell 2025 EJHF, Firima 2024 and Saijo 2026 abstracts do not name the software vendor; attribution to Us2.ai was confirmed from the open-access full texts (Europe PMC PMC12909003, PMC12803686, PMC10912015, PMC13322393), which name Us2.ai (Campbell and Saijo: version 1.4.1).",
+    "Peer-reviewed studies report the Us2.ai software version only occasionally (e.g. 1.4.1 in Campbell 2025 and Saijo 2026; 1.4.5 in Celestin 2026); mapping of these versions to the FDA-cleared models V1.0.0 (K210791) and V2.0.0 (K233676) is not published."
    ],
    "sources": [
     {
@@ -15216,7 +16612,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "K210791 Form FDA 3881 (page 3, image-only): IFU text reads 'Us2.v1 is a fully automated software platform that processes, analyses and makes measurements on acquired transthoracic cardiac ultrasound images, automatically producing a full report...'; Prescription Use",
-     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K210791.pdf (p3) (rendered from probe/pdf/K210791.pdf)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K210791.pdf (p.3, Form FDA 3881; image-only page transcribed from the rendered PDF)",
      "verification": "fda_summary"
     },
     {
@@ -15226,12 +16622,12 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "K233676 p.7 technological comparison table (measurements added in v2) and p.9 RMSE/ICC results and SE conclusion (image-only pages, transcribed from render)",
-     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233676.pdf (p7) and K233676_p9.png (rendered from probe/pdf/K233676.pdf)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233676.pdf (pp.7 and 9; image-only pages transcribed from the rendered PDF)",
      "verification": "fda_summary"
     },
     {
      "fact": "Decision dates 2021-07-27 and 2024-04-01, product code QIH, applicant Eko.Ai Pte Ltd. D/B/A Us2.Ai, device names Us2.v1/Us2.v2",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K210791; https://api.fda.gov/device/510k.json?search=k_number:K233676",
      "verification": "fda_database"
     },
     {
@@ -15253,10 +16649,15 @@ window.AIECHO_PRODUCTS = {
      "fact": "Company regulatory status, deployment and product claims",
      "url_or_file": "https://us2.ai/resources/regulatory-status/ ; https://us2.ai/platform-overview/ ; https://us2.ai/clinical-evidence/",
      "verification": "company"
+    },
+    {
+     "fact": "Vendor attribution for Campbell 2025, Sakamoto 2026, Firima 2024 and Saijo 2026 (full text names Us2.ai)",
+     "url_or_file": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12803686/fullTextXML ; .../PMC12909003/fullTextXML ; .../PMC10912015/fullTextXML ; .../PMC13322393/fullTextXML",
+     "verification": "peer_reviewed"
     }
    ],
-   "_source_file": "us2.json",
-   "_verified": false,
+   "_source_file": "us2.verified.json",
+   "_verified": true,
    "first_cleared": "2021-07-27",
    "latest_cleared": "2024-04-01",
    "n_clearances": 2,
@@ -15266,10 +16667,10 @@ window.AIECHO_PRODUCTS = {
    "product_codes": [
     "QIH"
    ],
-   "n_performance_claims": 27,
-   "n_papers_resolved": 15,
-   "n_papers": 15,
-   "research_verified": false,
+   "n_performance_claims": 33,
+   "n_papers_resolved": 26,
+   "n_papers": 26,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -15466,7 +16867,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1007/s11739-023-03414-5",
      "relation": "other",
      "n_subjects": 59,
-     "key_result": "Bedside FoCUS in 59 emergency-medicine patients: LVEF by the LVivo app 39.5 +/- 12.0% vs 53.7 +/- 11.1% by standard echocardiography; correlation r=0.694. Handheld device not named in abstract.",
+     "key_result": "Bedside FoCUS in 59 emergency-medicine patients: LVEF 50.2 +/- 15.1% (Quinones), 39.5 +/- 12.0% (LVivo app) vs 53.7 +/- 11.1% by standard echocardiography; abstract reports r=0.694 for FoCUS vs standard echo but the available abstract text is truncated and does not make clear whether this applies to the LVivo or Quinones estimate. Handheld device not named in abstract.",
      "verification": "doi_resolved"
     }
    ],
@@ -15477,7 +16878,8 @@ window.AIECHO_PRODUCTS = {
     "Bland-Altman bias / limits of agreement for EF are not reported in the K232500 summary (only Pearson r).",
     "Kagiyama 2024 (Sci Rep, PMID 38965290) multicenter handheld AI-EF study used the EchoNous KOSMOS, not Lumify, and was therefore excluded.",
     "Filipiak-Strzecka 2021 and Martocchia 2023 use LVivo software on unnamed handheld devices; whether the device was Lumify could not be confirmed from abstracts (full text not accessible this session).",
-    "iOS availability: vendor page states Auto EF is available only on Lumify for Android; no later clearance for iOS was reviewed in this batch."
+    "iOS availability: vendor page states Auto EF is available only on Lumify for Android; no later clearance for iOS was reviewed in this batch.",
+    "Martocchia 2023 abstract (as indexed) is truncated; the r=0.694 correlation cannot be confidently attributed to the LVivo estimate rather than the Quinones estimate."
    ],
    "sources": [
     {
@@ -15487,7 +16889,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "Decision date 2023-10-26, product code IYN, applicant Philips Ultrasound",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json (openFDA 510(k) endpoint)",
      "verification": "fda_summary"
     },
     {
@@ -15501,13 +16903,13 @@ window.AIECHO_PRODUCTS = {
      "verification": "peer_reviewed"
     },
     {
-     "fact": "PubMed E-utilities and Crossref used to confirm MacKay 2024, Filipiak-Strzecka 2021, Martocchia 2023",
+     "fact": "PubMed E-utilities and Crossref used to confirm MacKay 2024, Filipiak-Strzecka 2021, Martocchia 2023; verification queries (Lumify + ejection fraction/Auto EF; Philips + Lumify + echocardiography) returned no additional Auto EF validation studies (other hits used UltraSight guidance or telemedicine, not Auto EF)",
      "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ ; https://api.crossref.org/works/",
      "verification": "peer_reviewed"
     }
    ],
-   "_source_file": "system-philips-systems.json",
-   "_verified": false,
+   "_source_file": "system-philips-systems.verified.json",
+   "_verified": true,
    "first_cleared": "2023-10-26",
    "latest_cleared": "2023-10-26",
    "n_clearances": 1,
@@ -15520,7 +16922,7 @@ window.AIECHO_PRODUCTS = {
    "n_performance_claims": 4,
    "n_papers_resolved": 3,
    "n_papers": 3,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -15540,7 +16942,7 @@ window.AIECHO_PRODUCTS = {
     "De Novo",
     "PCCP",
     "QVD",
-    "first PCCP-based device type (21 CFR 892.2055)"
+    "created 21 CFR 892.2055 (ML quantitative imaging software with PCCP)"
    ],
    "modality_scope": [
     "TTE",
@@ -15594,7 +16996,7 @@ window.AIECHO_PRODUCTS = {
      "predicates": [
       "K173780"
      ],
-     "changes_summary": "Renamed Caption Interpretation AutoEF (AutoEF 2.0). IFU updated to allow the software to be located on an ultrasound device. EF can be estimated from AP4, AP2 or PLAX views or combinations; modified clip selection; algorithms further optimized through additional training; output includes an indication of confidence. Pivotal retrospective validation with RMSD primary endpoint plus Clip Annotator study.",
+     "changes_summary": "Renamed Caption Interpretation AutoEF (AutoEF 2.0). IFU updated to allow the software to be located on an ultrasound device. EF can be estimated from AP4, AP2 or PLAX views or combinations; modified clip selection; algorithms further optimized through additional training; output includes an indication of confidence. Pivotal clinical investigation with RMSD primary endpoint (pass/fail only; no numeric RMSD printed) plus Clip Annotator study; the 510(k) summary does not state the study design (DEN220063 later describes the K210747 dataset as retrospective).",
      "notable_flags": [
       "product code changed LLZ to QIH",
       "ultrasound-system-embedded"
@@ -15853,6 +17255,21 @@ window.AIECHO_PRODUCTS = {
      "quote": "We found an excellent agreement between the machine's LVEF calculations from images acquired by the novices with the GT-EF (bias of 3.5% +/- 5.6 and r = 0.92, p < 0.001 in the \"best-LVEF\" algorithm).",
      "page": null,
      "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K200621",
+     "endpoint": "Confidence metric verification",
+     "metric": "error-range estimation; normality of EF error (no numbers printed)",
+     "value": "Confidence Metric verified to estimate the error range of EF estimates around the reference EF; EF-minus-reference difference reported as normally distributed",
+     "comparator": "Reference EF",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "Finally, testing of the confidence metric functionality verified successful performance of the Confidence Metric in estimating the error range of the EF estimates around the reference EF with evidence that the difference between the estimated EF and the reference EF is normally distributed.",
+     "page": 6,
+     "verification": "fda_summary"
     }
    ],
    "training_data": {
@@ -15919,7 +17336,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1161/CIRCIMAGING.120.012293",
      "relation": "external-validation",
      "n_subjects": 166,
-     "key_result": "Algorithm adapted to AP4, AP2, PLAX or any combination: ICC 0.86-0.95 and bias <2% in 166 exams; ICC 0.84, bias 2.5 +/- 6.4% on nurse-acquired portable images; LV-function classification accuracy similar to 10 physicians.",
+     "key_result": "Algorithm adapted to AP4, AP2, PLAX or any combination: ICC 0.86-0.95 and bias <2% in 166 exams; ICC 0.84, bias 2.5 +/- 6.4% on nurse-acquired portable images; LV-function classification accuracy similar to 10 physicians. Caption attribution: five authors affiliated with Caption Health Inc (abstract does not name the product).",
      "verification": "doi_resolved"
     },
     {
@@ -15945,37 +17362,38 @@ window.AIECHO_PRODUCTS = {
     "DEN220063: subgroup RMSD values by sex, BMI, EF range, institution and scanner are referred to the labeling and not printed in the decision summary.",
     "Whether any PCCP-authorized modification (e.g., new views) has been implemented since 2023, and the current software version on GE Venue / Vscan Air SL, is not publicly documented in sources reviewed.",
     "WASE-COVID papers (Karagodin 2021, Asch 2022) were candidates but their methods identify Ultromics EchoGo Core for automated LVEF; excluded.",
-    "No registered clinical trial specific to AutoEF was found on ClinicalTrials.gov; the DEN190040 review reports AutoEF applied to NCT03897140 data."
+    "No registered clinical trial specific to AutoEF was found on ClinicalTrials.gov; the DEN190040 review reports AutoEF applied to NCT03897140 data.",
+    "Asch 2021 (PMID 34126754) does not name Caption/AutoEF in its abstract; attribution rests on Caption Health Inc author affiliations and its description as an adaptation of the 2019 BayLabs AutoEF algorithm."
    ],
    "sources": [
     {
      "fact": "K173780 predicate, device description, >300-study validation, RMSD 8.290%",
-     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf17/K173780.pdf (local: https://www.accessdata.fda.gov/cdrh_docs/pdf17/K173780.pdf)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf17/K173780.pdf",
      "verification": "fda_summary"
     },
     {
      "fact": "K200621 changes (PLAX, on-ultrasound), Clip Annotator PPV/sensitivity, endpoint pass/fail",
-     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200621.pdf (local: https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200621.pdf)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200621.pdf",
      "verification": "fda_summary"
     },
     {
      "fact": "K210747 changes (30% more training data, architecture), RMSD 7.21 vs 7.94, outlier rates",
-     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K210747.pdf (local: https://www.accessdata.fda.gov/cdrh_docs/pdf21/K210747.pdf)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K210747.pdf",
      "verification": "fda_summary"
     },
     {
      "fact": "DEN220063 order: new regulation 892.2055, special controls, PCCP title",
-     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/DEN220063.pdf (local: https://www.accessdata.fda.gov/cdrh_docs/pdf22/DEN220063.pdf)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/DEN220063.pdf",
      "verification": "fda_summary"
     },
     {
      "fact": "DEN220063 decision summary: dataset demographics, scanners, RMSD by view with CIs, PCCP acceptance criteria",
-     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/reviews/DEN220063.pdf (local: https://www.accessdata.fda.gov/cdrh_docs/reviews/DEN220063.pdf)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/reviews/DEN220063.pdf",
      "verification": "fda_summary"
     },
     {
      "fact": "Decision dates, product codes, applicants",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:(DEN190040+K200755+K201992+K243065+K173780+K200621+K210747+DEN220063)",
      "verification": "fda_database"
     },
     {
@@ -15999,8 +17417,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "company"
     }
    ],
-   "_source_file": "caption.json",
-   "_verified": false,
+   "_source_file": "caption.verified.json",
+   "_verified": true,
    "first_cleared": "2018-06-14",
    "latest_cleared": "2023-02-24",
    "n_clearances": 4,
@@ -16013,10 +17431,10 @@ window.AIECHO_PRODUCTS = {
     "QIH",
     "QVD"
    ],
-   "n_performance_claims": 14,
+   "n_performance_claims": 15,
    "n_papers_resolved": 3,
    "n_papers": 3,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -16524,7 +17942,7 @@ window.AIECHO_PRODUCTS = {
      ],
      "changes_summary": "Initial clearance. Predicate TomTec Arena TTA2 (K150122); reference device Bay Labs EchoMD Automated EF Software (K173780). Differences vs predicate: machine-learning algorithms; no manual contour editing (operator accepts or rejects contour).",
      "notable_flags": [
-      "cloud/service model (studies transferred to Ultromics)",
+      "service model (anonymized studies transferred to Ultromics for processing, per FDA summary p4)",
       "no manual contour editing",
       "operator review of contours"
      ],
@@ -16821,12 +18239,12 @@ window.AIECHO_PRODUCTS = {
      "verification": "company"
     },
     {
-     "description": "WASE-COVID multicenter analysis (13 hospitals, 870 patients) comparing AI-derived vs manual LVEF/LV longitudinal strain as mortality predictors; Ultromics-affiliated authors (software vendor not named in abstract).",
+     "description": "WASE-COVID multicenter analysis (13 hospitals, 870 patients) comparing AI-derived vs manual LVEF/LV longitudinal strain as mortality predictors; full text names the software as EchoGo Core (Ultromics).",
      "source_url": "https://doi.org/10.1016/j.echo.2022.07.004",
      "verification": "peer_reviewed"
     },
     {
-     "description": "Multisite US feasibility study of automated AI analysis on 558 limited echocardiograms in COVID-19 (feasibility 87.5%; LVEF RMSE 11.3%, ICC 0.72; LS RMSE 3.9%, ICC 0.74 vs clinical values); Ultromics-affiliated authors.",
+     "description": "Multisite US feasibility study of automated AI analysis on 558 limited echocardiograms in COVID-19 (feasibility 87.5%; LVEF RMSE 11.3%, ICC 0.72; LS RMSE 3.9%, ICC 0.74 vs clinical values); full text names EchoGo Core v1.3.2 (Ultromics Ltd).",
      "source_url": "https://doi.org/10.3389/fcvm.2022.937068",
      "verification": "peer_reviewed"
     }
@@ -16881,7 +18299,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.3390/life12091413",
      "relation": "real-world",
      "n_subjects": 50,
-     "key_result": "EchoGo outputs correlated with standard measures (r 0.53-0.87); EchoGo LVEF and GLS associated with adverse outcomes after APACHE-4 adjustment.",
+     "key_result": "EchoGo outputs correlated with standard measures (Pearson r 0.528-0.873); EchoGo LVEF and GLS associated with the primary endpoint after APACHE-4 adjustment. Paper names 'EchoGo' without a version number.",
      "verification": "doi_resolved"
     },
     {
@@ -16894,7 +18312,7 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.1016/j.echo.2022.07.004",
      "relation": "real-world",
      "n_subjects": 870,
-     "key_result": "AI-derived LVEF and LV longitudinal strain (lower variability than manual) predicted mortality in 870 COVID-19 patients from 13 hospitals; manual measurements did not. Software vendor not named in abstract; Ultromics-affiliated authors.",
+     "key_result": "AI-derived LVEF and LV longitudinal strain (lower variability than manual) predicted mortality in 870 COVID-19 patients from 13 hospitals; manual measurements did not. Abstract does not name the vendor, but the PMC full text (Methods) states the automated analysis was 'EchoGo Core; Ultromics'.",
      "verification": "doi_resolved"
     },
     {
@@ -16907,34 +18325,34 @@ window.AIECHO_PRODUCTS = {
      "url": "https://doi.org/10.3389/fcvm.2022.937068",
      "relation": "real-world",
      "n_subjects": 558,
-     "key_result": "Automated analysis feasible in 87.5% of 558 limited echoes; vs clinical values LVEF RMSE 11.3% (ICC 0.72), LS RMSE 3.9% (ICC 0.74), EDV RMSE 24.4 ml (ICC 0.87), ESV RMSE 12.8 ml (ICC 0.91). Vendor not named in abstract; Ultromics-affiliated authors.",
+     "key_result": "Automated analysis feasible in 87.5% of 558 limited echoes; vs clinical values LVEF RMSE 11.3% (ICC 0.72), LS RMSE 3.9% (ICC 0.74), EDV RMSE 24.4 ml (ICC 0.87), ESV RMSE 12.8 ml (ICC 0.91). Abstract does not name the vendor; PMC full text (Methods) names 'EchoGo Core v1.3.2, Ultromics Ltd'.",
      "verification": "doi_resolved"
     },
     {
-     "title": "Beyond Simpson's Rule: Accounting for Orientation and Ellipticity Assumptions",
-     "first_author": "Kim WC",
-     "journal": "Ultrasound in Medicine & Biology",
-     "year": 2022,
-     "doi": "10.1016/j.ultrasmedbio.2022.07.013",
-     "pmid": "36137846",
-     "url": "https://doi.org/10.1016/j.ultrasmedbio.2022.07.013",
-     "relation": "algorithm-development",
-     "n_subjects": null,
-     "key_result": "Ultromics-affiliated methodological work on LV volume estimation assumptions (abstract not retrieved).",
-     "verification": "pmid_resolved"
+     "title": "Global Longitudinal Strain Is Associated with Mortality in Patients with Multiple Myeloma",
+     "first_author": "Cui Z",
+     "journal": "Journal of Clinical Medicine",
+     "year": 2023,
+     "doi": "10.3390/jcm12072595",
+     "pmid": "37048679",
+     "url": "https://doi.org/10.3390/jcm12072595",
+     "relation": "real-world",
+     "n_subjects": 242,
+     "key_result": "Retrospective single-institution cohort of 242 multiple myeloma patients; GLS measured with EchoGo Core (v2.0, Ultromics per full text); reduced GLS (<18% absolute) in 21.5% and associated with overall survival. Found via PubMed query 'EchoGo Core' during verification.",
+     "verification": "doi_resolved"
     },
     {
-     "title": "Automated Detection of Apical Foreshortening in Echocardiography Using Statistical Shape Modelling",
-     "first_author": "Kim WC",
-     "journal": "Ultrasound in Medicine & Biology",
-     "year": 2023,
-     "doi": "10.1016/j.ultrasmedbio.2023.05.003",
-     "pmid": "37328385",
-     "url": "https://doi.org/10.1016/j.ultrasmedbio.2023.05.003",
-     "relation": "algorithm-development",
-     "n_subjects": null,
-     "key_result": "Ultromics-affiliated methodological work on foreshortening detection (abstract not retrieved).",
-     "verification": "pmid_resolved"
+     "title": "Ventricular Changes in Patients with Acute COVID-19 Infection: Follow-up of the World Alliance Societies of Echocardiography (WASE-COVID) Study",
+     "first_author": "Karagodin I",
+     "journal": "Journal of the American Society of Echocardiography",
+     "year": 2022,
+     "doi": "10.1016/j.echo.2021.10.015",
+     "pmid": "34752928",
+     "url": "https://doi.org/10.1016/j.echo.2021.10.015",
+     "relation": "real-world",
+     "n_subjects": 153,
+     "key_result": "WASE-COVID follow-up: 153 patients with paired baseline/follow-up echoes analysed with 'EchoGo, Ultromics' automated LV volumes, EF and longitudinal strain (per full text); no significant change in LV/RV function at mean 129 days. Found via PubMed Ultromics-affiliation query during verification.",
+     "verification": "doi_resolved"
     }
    ],
    "clinical_trials": [
@@ -16950,7 +18368,9 @@ window.AIECHO_PRODUCTS = {
     "Number of sites, patients and ultrasound vendors in the 378-study (K191171) and 214-study (K213275) validation sets are not stated.",
     "K191171 summary does not report the pre-specified RMSE acceptance thresholds, only that they were met.",
     "The Ultromics website no longer has dedicated EchoGo Core or EchoGo Pro product pages (both URLs redirect to a page listing only EchoGo Heart Failure and EchoGo Amyloidosis); current commercial status of EchoGo Core in the US is unclear.",
-    "Whether the WASE-COVID (Asch 2022) and Pellikka 2022 analyses used EchoGo Core specifically is inferred from Ultromics author affiliation; the abstracts do not name the product."
+    "Asch 2022 and Pellikka 2022 abstracts do not name the product, but their full texts name EchoGo Core (v1.3.2 in Pellikka). The earlier WASE-COVID paper (Karagodin 2021, PMID 34023454) describes 'automated, machine learning-derived algorithms' without naming a vendor and is not listed.",
+    "Wang 2022 (Life) names 'EchoGo' without a version; its attribution to K191171 (v1.0) rather than K213275 (v2.0) is an assumption based on the 2020 study dates.",
+    "product_url https://www.ultromics.com/echogo now redirects to https://www.ultromics.com/about-ultromics-the-platform (checked 2026-09-05)."
    ],
    "sources": [
     {
@@ -16965,7 +18385,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "Decision dates, product code, applicant",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=applicant:Ultromics",
      "verification": "fda_database"
     },
     {
@@ -16984,8 +18404,8 @@ window.AIECHO_PRODUCTS = {
      "verification": "fda_database"
     }
    ],
-   "_source_file": "ultromics.json",
-   "_verified": false,
+   "_source_file": "ultromics.verified.json",
+   "_verified": true,
    "first_cleared": "2019-11-13",
    "latest_cleared": "2021-12-20",
    "n_clearances": 2,
@@ -16998,7 +18418,7 @@ window.AIECHO_PRODUCTS = {
    "n_performance_claims": 16,
    "n_papers_resolved": 8,
    "n_papers": 8,
-   "research_verified": false,
+   "research_verified": true,
    "research_pending": false
   },
   {
@@ -17024,7 +18444,7 @@ window.AIECHO_PRODUCTS = {
     "vendor-neutral",
     "Ultromics-operated analysis service (trained operators approve contours)"
    ],
-   "summary": "EchoGo Pro v1.0.2 is standalone machine-learning software that auto-contours the LV on A2C, A4C and mid-ventricular SAX views at rest and peak stress from DICOM stress-echo studies, derives geometric/kinematic features and outputs a two-level categorical assessment of higher vs lower possibility of significant CAD (>=70% stenosis on invasive angiography). Cleared under product code POK using Koios DS for Breast as predicate; a UK 20-hospital RCT (PROTEUS, n approximately 2,200-2,300) did not meet its primary endpoint per ESC 2024 presentation.",
+   "summary": "EchoGo Pro v1.0.2 is standalone machine-learning software that auto-contours the LV on A2C, A4C and mid-ventricular SAX views at rest and peak stress from DICOM stress-echo studies, derives geometric/kinematic features and outputs a two-level categorical assessment of higher vs lower possibility of significant CAD (>=70% stenosis on invasive angiography). Cleared under product code POK using Koios DS for Breast as predicate; a UK 20-hospital NHS RCT (PROTEUS; 2,338 enrolled per ClinicalTrials.gov, 2,213 analysed in the embedded economic evaluation) did not demonstrate non-inferiority on its primary endpoint per the ESC Congress 2024 Hot Line presentation as reported by trade press (no primary-results paper indexed as of 2026-09-05).",
    "intended_use_quote": "to act as a diagnostic aid using machine learning to assist trained interpreting physicians in analyzing ultrasound images and characterize ultrasound image features for given regions of interest (ROIs) to generate a categorical output",
    "indications_for_use_quote": "EchoGo Pro v1.0.2 is a machine learning-based decision support system, indicated as an adjunct to diagnostic stress echocardiography for patients undergoing assessment for coronary artery disease (CAD). When utilized by an interpreting physician, this device provides information that may be useful in rendering an accurate diagnosis. Patient management decisions should not be made solely on the results of the EchoGo Pro v1.0.2 analysis. EchoGo Pro v1.0.2 is to be used with stress echo exam protocols that contain A2C, A4C and mid-ventricular short-axis views at rest and at peak stress. EchoGo Pro vl.0.2 is not intended for the assessment of mild or moderate myocardial ischemia, or localization of coronary artery disease, or for the assessment of myocardial perfusion, myocardial viability or valve disease. Limitations: EchoGo Pro v1.0.2 has not been validated on patients who underwent previous coronary artery bypass graft (CABG) surgery.",
    "embedded_ai_features": [
@@ -17155,8 +18575,8 @@ window.AIECHO_PRODUCTS = {
      "n_studies": null,
      "n_patients": null,
      "n_sites": 20,
-     "dataset_description": "UK NHS multicentre RCT, just over 2,300 patients enrolled per ESC press release (2,213 analysed per economic evaluation)",
-     "subgroup_notes": null,
+     "dataset_description": "UK NHS multicentre RCT; 'just over 2,300 patients' per Clinical Trials Arena report of the ESC Congress 2024 Hot Line presentation (2,338 actual enrollment on ClinicalTrials.gov; 2,213 analysed in Chauhan 2026 economic evaluation)",
+     "subgroup_notes": "Trade-press report states secondary analyses suggested possible benefit for less-experienced clinicians and for harder-to-interpret scans. ESC press-release URL returned 404 on 2026-09-05; figures verified on the Clinical Trials Arena article.",
      "quote": "While standard clinical decision-making correctly sent 27 out of 36 patients for invasive coronary angiograms, the AI-augmented arm correctly triaged 34 out of 49 referrals.",
      "page": null,
      "verification": "news"
@@ -17217,12 +18637,12 @@ window.AIECHO_PRODUCTS = {
      "verification": "company"
     },
     {
-     "description": "ESC Congress 2024 press release on PROTEUS: just over 2,300 UK patients; primary endpoint non-inferiority not demonstrated (27/36 vs 34/49 appropriate angiography referrals); possible benefit for less-experienced readers in secondary analyses.",
+     "description": "ESC Congress 2024 press release on PROTEUS (URL returned 404 on 2026-09-05): just over 2,300 UK patients; primary endpoint non-inferiority not demonstrated (27/36 vs 34/49 appropriate angiography referrals); possible benefit for less-experienced readers in secondary analyses. Content corroborated by the Clinical Trials Arena article below.",
      "source_url": "https://www.escardio.org/The-ESC/Press-Office/Press-releases/PROTEUS-Trial-suggests-AI-for-heart-scans-may-benefit-decision-making-for-less-experienced-clinicians",
      "verification": "news"
     },
     {
-     "description": "Trade press: 'Ultromics's EchoGo misses primary endpoint in heart disease trial' (Clinical Trials Arena) - page returned 404 at fetch time; headline only.",
+     "description": "Trade press: 'Ultromics's EchoGo misses primary endpoint in heart disease trial' (Clinical Trials Arena; fetched successfully 2026-09-05). Reports ESC 2024 Hot Line presentation: standard care correctly sent 27/36 patients for angiography vs 34/49 in the AI arm; just over 2,300 patients; no significant difference in non-inferiority (primary endpoint); possible benefit for less-experienced clinicians.",
      "source_url": "https://www.clinicaltrialsarena.com/news/ultromicss-echogo-misses-primary-endpoint-in-heart-disease-trial/",
      "verification": "news"
     }
@@ -17250,8 +18670,8 @@ window.AIECHO_PRODUCTS = {
      "pmid": "37192698",
      "url": "https://doi.org/10.1016/j.ahj.2023.05.003",
      "relation": "clinical-trial",
-     "n_subjects": 2500,
-     "key_result": "Protocol: multicenter UK NHS 1:1 RCT (target 2,500) of EchoGo Pro report vs standard care; primary outcome appropriateness of angiography referral (NCT05028179).",
+     "n_subjects": null,
+     "key_result": "Protocol: multicenter UK NHS 1:1 non-inferiority RCT (target recruitment 2,500) of EchoGo Pro report vs standard care; primary outcome appropriateness of angiography referral (NCT05028179; ISRCTN15113915).",
      "verification": "doi_resolved"
     },
     {
@@ -17294,30 +18714,17 @@ window.AIECHO_PRODUCTS = {
      "verification": "doi_resolved"
     },
     {
-     "title": "Real-world performance and accuracy of stress echocardiography: the EVAREST observational multi-centre study",
-     "first_author": "Woodward W",
-     "journal": "European Heart Journal - Cardiovascular Imaging",
-     "year": 2022,
-     "doi": "10.1093/ehjci/jeab092",
-     "pmid": "34148078",
-     "url": "https://doi.org/10.1093/ehjci/jeab092",
+     "title": "Experiences of using artificial intelligence in healthcare: a qualitative study of UK clinician and key stakeholder perspectives",
+     "first_author": "Fazakarley CA",
+     "journal": "BMJ Open",
+     "year": 2023,
+     "doi": "10.1136/bmjopen-2023-076950",
+     "pmid": "38081671",
+     "url": "https://doi.org/10.1136/bmjopen-2023-076950",
      "relation": "other",
-     "n_subjects": 5131,
-     "key_result": "UK 31-hospital stress-echo registry (5,131 patients; sensitivity 95.4%, specificity 96.0% for 6-month cardiac outcome). Ultromics-affiliated; widely understood as the UK development cohort but the linkage to EchoGo Pro training is not stated in the abstract.",
+     "n_subjects": 13,
+     "key_result": "Qualitative interview study (13 participants) nested in PROTEUS on experiences with the EchoGo Pro AI tool; no performance data. Found via PubMed query 'EchoGo Pro' during verification.",
      "verification": "doi_resolved"
-    },
-    {
-     "title": "Artificial intelligence: a new clinical support tool for stress echocardiography",
-     "first_author": "Alsharqi M",
-     "journal": "Expert Review of Medical Devices",
-     "year": 2018,
-     "doi": "10.1080/17434440.2018.1497482",
-     "pmid": "29992841",
-     "url": "https://doi.org/10.1080/17434440.2018.1497482",
-     "relation": "review",
-     "n_subjects": null,
-     "key_result": "Early review from the Oxford/Ultromics group on AI for stress echo.",
-     "verification": "pmid_resolved"
     }
    ],
    "clinical_trials": [
@@ -17331,9 +18738,10 @@ window.AIECHO_PRODUCTS = {
    "open_questions": [
     "FDA summary does not state number of readers, cases, sites or vendors in the reader study, nor the source of the 0.927 standalone AUROC test set.",
     "Training and independent-validation set sizes for the classifier are not in the FDA summary or the Upton 2022 abstract (full text not retrieved).",
-    "PROTEUS primary-results manuscript was not found on PubMed as of this session; primary endpoint figures come from the ESC 2024 press release (27/36 vs 34/49), enrollment 'just over 2,300' (ESC) vs 2,213 analysed (Chauhan 2026) vs 2,338 (clinicaltrials.gov).",
+    "PROTEUS primary-results manuscript was not found on PubMed as of 2026-09-05 (queries returned only the protocol, economic-evaluation and concordance papers); primary endpoint figures (27/36 vs 34/49) come from trade-press reporting of the ESC 2024 Hot Line presentation, since the ESC press-release URL now returns 404. Enrollment: 'just over 2,300' (press) vs 2,213 analysed (Chauhan 2026) vs 2,338 actual (ClinicalTrials.gov).",
     "The company website currently lists only EchoGo Heart Failure and EchoGo Amyloidosis; whether EchoGo Pro is still commercially offered in the US is unclear.",
-    "Press coverage dates the clearance announcement to Jan 6, 2021 while openFDA decision date is 2020-12-18; the openFDA date is used."
+    "Press coverage dates the clearance announcement to Jan 6, 2021 while openFDA decision date is 2020-12-18; the openFDA date is used.",
+    "EVAREST (Woodward W 2022, 5,131 patients, 31 UK hospitals) is Ultromics-affiliated and may be the UK development cohort referenced in Upton 2022, but neither paper names the other; it is therefore not listed under papers."
    ],
    "sources": [
     {
@@ -17343,7 +18751,7 @@ window.AIECHO_PRODUCTS = {
     },
     {
      "fact": "Decision date, product code, applicant",
-     "url_or_file": "data/research/openfda_records.json (openFDA)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=applicant:Ultromics",
      "verification": "fda_database"
     },
     {
@@ -17352,7 +18760,7 @@ window.AIECHO_PRODUCTS = {
      "verification": "company"
     },
     {
-     "fact": "PROTEUS results (ESC 2024)",
+     "fact": "PROTEUS results (ESC 2024) - URL returned 404 on 2026-09-05",
      "url_or_file": "https://www.escardio.org/The-ESC/Press-Office/Press-releases/PROTEUS-Trial-suggests-AI-for-heart-scans-may-benefit-decision-making-for-less-experienced-clinicians",
      "verification": "news"
     },
@@ -17365,10 +18773,15 @@ window.AIECHO_PRODUCTS = {
      "fact": "Papers resolved via PubMed E-utilities and Crossref",
      "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ ; https://api.crossref.org/works/",
      "verification": "peer_reviewed"
+    },
+    {
+     "fact": "PROTEUS ESC 2024 results as reported by trade press (27/36 vs 34/49; just over 2,300 patients; non-inferiority not shown)",
+     "url_or_file": "https://www.clinicaltrialsarena.com/news/ultromicss-echogo-misses-primary-endpoint-in-heart-disease-trial/",
+     "verification": "news"
     }
    ],
-   "_source_file": "ultromics.json",
-   "_verified": false,
+   "_source_file": "ultromics.verified.json",
+   "_verified": true,
    "first_cleared": "2020-12-18",
    "latest_cleared": "2020-12-18",
    "n_clearances": 1,
@@ -17379,9 +18792,9 @@ window.AIECHO_PRODUCTS = {
     "POK"
    ],
    "n_performance_claims": 9,
-   "n_papers_resolved": 7,
-   "n_papers": 7,
-   "research_verified": false,
+   "n_papers_resolved": 6,
+   "n_papers": 6,
+   "research_verified": true,
    "research_pending": false
   },
   {

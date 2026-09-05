@@ -1,0 +1,712 @@
+{
+  "batch_id": "siemens-acuson",
+  "families": [
+    {
+      "id": "siemens-acuson-heart-ai",
+      "product_name": "ACUSON Sequoia / Sequoia Select / Origin / Origin ICE cardiac AI features (AI Assist, AI Measure, 2D HeartAI, 4D HeartAI, Trace AI, Valves AI)",
+      "company": "Siemens Medical Solutions USA, Inc. (Siemens Healthineers)",
+      "company_website": "https://www.siemens-healthineers.com",
+      "product_url": "https://www.siemens-healthineers.com/en-us/ultrasound/cardiovascular/acuson-origin",
+      "category": "system-embedded",
+      "tags": [
+        "AI Assist",
+        "AI Measure",
+        "2D HeartAI",
+        "4D HeartAI",
+        "Trace AI",
+        "Valves AI",
+        "view recognition",
+        "color box placement",
+        "Doppler gate placement",
+        "automated cardiac measurements",
+        "LV volumes",
+        "EF",
+        "GLS",
+        "4D chamber quantification",
+        "orifice contouring",
+        "mitral valve model",
+        "aortic valve model",
+        "eSie Valves",
+        "QIH"
+      ],
+      "modality_scope": [
+        "TTE",
+        "TEE",
+        "3D/4D TTE",
+        "3D/4D TEE",
+        "ICE (3D, Trace AI)",
+        "contrast echo (2D HeartAI)"
+      ],
+      "deployment": [
+        "ultrasound-system-embedded"
+      ],
+      "summary": "Siemens ACUSON Sequoia, Sequoia Select, Origin and Origin ICE carry an optional cardiac AI package cleared across four 510(k)s (K232145, K242523, K251481, K260844; openFDA product code IYN; the clearance letters also list QIH). AI Assist places color boxes and Doppler gates on 12 TTE views, AI Measure semi-automates B-mode/Doppler/M-mode measurements, 2D HeartAI and 4D HeartAI contour chambers on 2D and 3D/4D TTE/TEE, Trace AI contours orifice-type structures on MPRs from 3D ICE/TEE/TTE, and Valves AI models the mitral and aortic valves from 3D TEE. The FDA summaries report retrospective verification testing on per-feature test sets of 10-48 patients/exams/studies against 3-examiner references; training-set sizes are not disclosed and no peer-reviewed study of the Sequoia/Origin-cleared features was found.",
+      "intended_use_quote": "The ACUSON Sequoia, Sequoia Select, and Origin will offer an optional cardiac imaging and analysis package with new transducers and software applications with Artificial Intelligent algorithms. The  ACUSON Sequoia, Sequoia Select, and Origin will offer four (4) new software applications (AI Measure, AI Assist, 2D HeartAI, 4D HeartAI) containing Machine Learning that are specifically intended to support cardiac imaging for blood flow, valves and anatomical features and modifies the Indications for Use.",
+      "indications_for_use_quote": "The ACUSON Origin and Origin ICE ultrasound imaging systems are intended to provide images of, or signals from, inside the body by an appropriately trained healthcare professional in a clinical setting for the following applications: Fetal, Abdominal, Pediatric, OB/GYN (useful for visualization of the ovaries, follicles, uterus and other pelvic structures), Cardiac, Transesophageal, Intracardiac, Vascular, Adult Cephalic, and Peripheral Vascular applications. The catheter is intended for intracardiac and intra-luminal visualization of cardiac and great vessel anatomy and physiology as well as visualization of other devices in the heart of adult and pediatric patients. The catheter is intended for imaging guidance only, not treatment delivery, during cardiac interventional percutaneous procedures. The system also provides the ability to measure anatomical structures for fetal, abdominal, pediatric, cardiac, peripheral vessel, and calculation packages that provide information to the clinician that may be used adjunctively with other medical data obtained by a physician for clinical diagnosis purposes.",
+      "embedded_ai_features": [
+        {
+          "name": "AI Assist",
+          "function": "Cardiac view classification with automated color Doppler ROI (color box) and spectral Doppler gate placement for 12 standard adult TTE views (1-4 anatomy locations per view, 42 supported placements); in K251481 the view detected by AI Assist automatically launches the relevant AI Measure labels. ('Real-time' view recognition is a company press-release description, not FDA-summary text.)",
+          "first_k_number": "K232145",
+          "quote": "AI Assist provides Color Box and Doppler Gate placement for 12 Cardiac Views and 1-4 anatomy locations in each view, for a total of 42 supported placements."
+        },
+        {
+          "name": "AI Measure",
+          "function": "Semi-automated cardiac measurements on B-mode, Doppler and M-mode acquisitions (15 measurement views in testing); comparison table maps it to eSie Measure on the SC2000 reference device.",
+          "first_k_number": "K232145",
+          "quote": "AI Measure covers a set of semi-automated cardiac measurements for Doppler, BMode and M-mode acquisitions."
+        },
+        {
+          "name": "2D HeartAI",
+          "function": "Machine-learning application on apical 2/3/4-chamber 2D images with user-editable output; K232145 tested it against 3-examiner manual contours/measurements (contrast used in 12 of 45 test exams); K260844 describes automated contouring of all chambers plus A2C/A3C/A4C view classification and adds right-side tracking (previously left side only). Comparison table maps it to Velocity Variance Mapping / eSie LH on the SC2000. Company materials additionally describe LV volume, EF and strain outputs; those are not itemized in the FDA summaries.",
+          "first_k_number": "K232145",
+          "quote": "The  ACUSON Sequoia, Sequoia Select, and Origin will offer four (4) new software applications (AI Measure, AI Assist, 2D HeartAI, 4D HeartAI) containing Machine Learning that are specifically intended to support cardiac imaging for blood flow, valves and anatomical features and modifies the Indications for Use."
+        },
+        {
+          "name": "4D HeartAI",
+          "function": "Machine-learning application on 3D/4D TTE and TEE volumes (tested with 5Z1 TTE and 6ZT TEE) with user-editable output compared against 3-examiner manual contours/measurements; the FDA summary does not itemize its outputs. Origin only in K232145; extended to Sequoia / Sequoia Select with the 5Z1 transducer in K242523; comparison table maps it to eSie LH / eSie LVA / eSie RH + GLS on the SC2000.",
+          "first_k_number": "K232145",
+          "quote": "The image dataset was collected from 32 patients from 5 institutions including different transducers (5Z1 (17 TTE), 6ZT (15 TEE)), Volume rates were > 13.4vps."
+        },
+        {
+          "name": "Trace AI",
+          "function": "Semi-automated contouring/measurement of orifice-type structures (LV, RV, LVOT, LA, ascending aorta, MV annulus, STJ, LAA opening, sinus of Valsalva, TV annulus in testing) on MPRs generated from volumetric ICE, TEE and TTE transducers; the summary refers to algorithm training data, and describes it as an improvement of the generic eclipse measurement tool on K240704.",
+          "first_k_number": "K242523",
+          "quote": "Trace AI is a semi-automated measurement tool that provides an ability to measure orifice-type anatomic structures on MPRs generated from volumetric ICE, TEE and TTE transducers."
+        },
+        {
+          "name": "Valves AI",
+          "function": "AI-based mitral and aortic valve modeling from 3D TEE volumes: builds valve models, visualizes valvular motion and outputs valve measurements; previously cleared as eSie Valves on the ACUSON SC2000 (K233613).",
+          "first_k_number": "K260844",
+          "quote": "Introduction of the new Valves AI feature, an artificial intelligence based application for mitral, and aortic valve analysis. The feature creates models that illustrate valve anatomy and function and provides visualization and measurements of valvular motion for assessing valve health. This was previously cleared as eSie Valves on ACUSON SC2000 (K233613)."
+        }
+      ],
+      "clearances": [
+        {
+          "k_number": "K232145",
+          "decision_date": "2023-10-30",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K223735",
+            "K211726"
+          ],
+          "changes_summary": "Introduced the optional cardiac AI package on Sequoia / Sequoia Select / Origin: AI Measure, AI Assist, 2D HeartAI and 4D HeartAI (4D HeartAI and AI Assist on Origin only), plus Z6T and 5Z1 transducers and the AcuNav Lumos 4D ICE catheter; added the QIH product code. Reference device SC2000 (K211726) carried eSie Measure / eSie LH / eSie LVA / eSie RH + GLS.",
+          "notable_flags": [
+            "Product codes on letter: IYN, IYO, ITX, OIJ, QIH",
+            "Separate AI test datasets reported per feature; training-set sizes not disclosed",
+            "Clinical studies not required"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K232145.pdf"
+        },
+        {
+          "k_number": "K242523",
+          "decision_date": "2024-11-19",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K240704",
+            "K230207"
+          ],
+          "changes_summary": "Added Trace AI (semi-automated 3D orifice contouring on ICE/TEE/TTE MPRs); extended 4D Heart AI, AI Assist and the 5Z1 transducer to Sequoia / Sequoia Select; also added the non-cardiac AI Abdomen, 11M2 and HLX transducers, needle enhancement and freehand 3D.",
+          "notable_flags": [
+            "Product codes on letter: IYN, IYO, ITX, OIJ, QIH, OBJ",
+            "Trace AI test set is small (10 patients, 24 volumes)",
+            "Intervening clearance K240704 (2024-07-22) carried the cardiac AI package unmodified and is not in this batch"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242523.pdf"
+        },
+        {
+          "k_number": "K251481",
+          "decision_date": "2025-08-20",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K242523"
+          ],
+          "changes_summary": "Software VC10: integrated AI Assist and AI Measure workflow so that the cardiac view classified by AI Assist automatically launches the relevant AI Measure labels; other changes are non-cardiac (liver SWE optimization, UDFF attenuation display, OB calcs, workflow items). No AI performance data reported.",
+          "notable_flags": [
+            "No AI performance metrics in summary",
+            "K260844 later cites K251481 as the clearance of 2D Heart AI, but 2D Heart AI is not mentioned in the K251481 summary"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251481.pdf"
+        },
+        {
+          "k_number": "K260844",
+          "decision_date": "2026-06-16",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K251481",
+            "K233613"
+          ],
+          "changes_summary": "Software VD10: introduced Valves AI (mitral and aortic valve modeling from 3D TEE; previously cleared as eSie Valves on SC2000 K233613) and enhanced 2D Heart AI with right-side tracking; also TrueFusion (shares real-time anatomical data with an angiography imaging system to detect transducer position; previously cleared on SC2000 K233613), UDFF QUS optimization on 5C1/9C2, CEUS on Crystal catheters/Z6T/5Z1, and rendering/workflow items.",
+          "notable_flags": [
+            "Product codes on letter: IYN, IYO, ITX, OIJ, OBJ, QIH",
+            "Valves AI reference standard is the algorithm's own auto-detection corrected by examiners, not independent manual tracing",
+            "2D Heart AI test set age range listed as 1-83 years while labelled 'Adults'; gender unknown for 63%"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf26/K260844.pdf"
+        }
+      ],
+      "performance_claims": [
+        {
+          "k_number": "K232145",
+          "endpoint": "AI Assist color box / Doppler gate placement, all 12 views and 42 placements aggregated",
+          "metric": "success rate (no or minor adjustment)",
+          "value": "99.3%",
+          "comparator": "3 expert cardiac sonographers scoring each placement",
+          "n_studies": 14,
+          "n_patients": 12,
+          "n_sites": null,
+          "dataset_description": "AI Assist validation: 12 patients, 14 exams, 168 samples (72 5V1, 72 5Z1, 24 8V3); 12 standard adult echo views on the Origin platform; age 18-81, 17% female, US; BMI 17.7-30.9 (58% <=25). Truth: 3 expert cardiac sonographers scored each placement as success (no/minor adjustment) or failure (major adjustment). Test patients not associated with model-development training sites.",
+          "subgroup_notes": "Age 18-81; 17% female; BMI 17.7-30.9, 58% normal / 42% overweight-obese; US only",
+          "quote": "Aggregating test results over all cardiac views and placement locations, the algorithm is successful 99.3% of the time. Successful placement means that no adjustment or only minor adjustment needs to be made by the user.",
+          "page": 14,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K232145",
+          "endpoint": "AI Assist placement, worst single placement location",
+          "metric": "success rate (no or minor adjustment)",
+          "value": ">=92%",
+          "comparator": "3 expert cardiac sonographers scoring each placement",
+          "n_studies": 14,
+          "n_patients": 12,
+          "n_sites": null,
+          "dataset_description": "AI Assist validation: 12 patients, 14 exams, 168 samples (72 5V1, 72 5Z1, 24 8V3); 12 standard adult echo views on the Origin platform; age 18-81, 17% female, US; BMI 17.7-30.9 (58% <=25). Truth: 3 expert cardiac sonographers scored each placement as success (no/minor adjustment) or failure (major adjustment). Test patients not associated with model-development training sites.",
+          "subgroup_notes": null,
+          "quote": "As tested on datasets from different scanning views, the algorithm success is 92% or higher for any placement location.",
+          "page": 14,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K232145",
+          "endpoint": "2D HeartAI (with user edits) vs 3-examiner reference standard",
+          "metric": "Pearson correlation coefficient",
+          "value": ">=0.81",
+          "comparator": "mean of 3 examiners' manual contours/measurements",
+          "n_studies": 45,
+          "n_patients": null,
+          "n_sites": 5,
+          "dataset_description": "2D HeartAI: 45 exams / 90 images (patient count not stated) from 5 institutions (US, Mexico); transducers 5V1, 5Z1; apical 2/3/4-chamber views, frame rate >17 fps; contrast in 12 exams; adults 42-74 y, 24% female; BMI 18-36 (29% normal). Reference = mean of 3 examiners' manual contours/measurements. Test sites disjoint from training sites.",
+          "subgroup_notes": "Normal BMI >=0.84; BMI >25 >0.82",
+          "quote": "The accuracy of the 2D HeartAI as measured by comparison of 2D HeartAI with user edits compared to a reference standard ground truth on a dataset from five different institutions has a Pearson correlation coefficient of 0.81 or higher with a minimal bias by Bland Altman of less than 5.2.",
+          "page": 15,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K232145",
+          "endpoint": "2D HeartAI (with user edits) vs 3-examiner reference standard",
+          "metric": "Bland-Altman bias",
+          "value": "<5.2 (units not stated)",
+          "comparator": "mean of 3 examiners' manual contours/measurements",
+          "n_studies": 45,
+          "n_patients": null,
+          "n_sites": 5,
+          "dataset_description": "2D HeartAI: 45 exams / 90 images (patient count not stated) from 5 institutions (US, Mexico); transducers 5V1, 5Z1; apical 2/3/4-chamber views, frame rate >17 fps; contrast in 12 exams; adults 42-74 y, 24% female; BMI 18-36 (29% normal). Reference = mean of 3 examiners' manual contours/measurements. Test sites disjoint from training sites.",
+          "subgroup_notes": null,
+          "quote": "The accuracy of the 2D HeartAI as measured by comparison of 2D HeartAI with user edits compared to a reference standard ground truth on a dataset from five different institutions has a Pearson correlation coefficient of 0.81 or higher with a minimal bias by Bland Altman of less than 5.2.",
+          "page": 15,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K232145",
+          "endpoint": "2D HeartAI, BMI subgroups",
+          "metric": "Pearson correlation coefficient",
+          "value": "normal BMI >=0.84; BMI >25 >0.82",
+          "comparator": "mean of 3 examiners' manual contours/measurements",
+          "n_studies": 45,
+          "n_patients": null,
+          "n_sites": 5,
+          "dataset_description": "2D HeartAI: 45 exams / 90 images (patient count not stated) from 5 institutions (US, Mexico); transducers 5V1, 5Z1; apical 2/3/4-chamber views, frame rate >17 fps; contrast in 12 exams; adults 42-74 y, 24% female; BMI 18-36 (29% normal). Reference = mean of 3 examiners' manual contours/measurements. Test sites disjoint from training sites.",
+          "subgroup_notes": "29% normal BMI, 71% overweight/obese",
+          "quote": "For subjects with a Normal BMI the performance of the AI Algorithm was 0.84 or higher. For subjects with a BMI > 25 (Obese) performance was greater than 0.82.",
+          "page": 15,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K232145",
+          "endpoint": "4D HeartAI (with user edits) vs 3-examiner reference standard, 3D TTE and TEE",
+          "metric": "Pearson correlation coefficient",
+          "value": ">=0.87",
+          "comparator": "mean of 3 examiners' manual contours/measurements",
+          "n_studies": 32,
+          "n_patients": 32,
+          "n_sites": 5,
+          "dataset_description": "4D HeartAI: 32 patients / 64 volumes from 5 institutions (US, Mexico); 5Z1 TTE (17) and 6ZT TEE (15); volume rate >13.4 vps; adults 28-77 y, 32% female; BMI 21-34 (15% normal). Reference = mean of 3 examiners' manual contours/measurements. Test sites disjoint from training sites.",
+          "subgroup_notes": "Normal BMI >=0.98; BMI >25 >0.81",
+          "quote": "from five different institutions has a Pearson correlation coefficient of 0.87 or higher with a minimal bias by Bland Altman of less than 13.3. For subjects with a Normal BMI the performance of the AI Algorithm was 0.98 or higher.  For subjects with a BMI > 25 (Obese) performance was greater than 0.81.",
+          "page": 17,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K232145",
+          "endpoint": "4D HeartAI (with user edits) vs 3-examiner reference standard",
+          "metric": "Bland-Altman bias",
+          "value": "<13.3 (units not stated)",
+          "comparator": "mean of 3 examiners' manual contours/measurements",
+          "n_studies": 32,
+          "n_patients": 32,
+          "n_sites": 5,
+          "dataset_description": "4D HeartAI: 32 patients / 64 volumes from 5 institutions (US, Mexico); 5Z1 TTE (17) and 6ZT TEE (15); volume rate >13.4 vps; adults 28-77 y, 32% female; BMI 21-34 (15% normal). Reference = mean of 3 examiners' manual contours/measurements. Test sites disjoint from training sites.",
+          "subgroup_notes": null,
+          "quote": "from five different institutions has a Pearson correlation coefficient of 0.87 or higher with a minimal bias by Bland Altman of less than 13.3.",
+          "page": 17,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K232145",
+          "endpoint": "AI Measure semi-automated cardiac measurements, all modes aggregated",
+          "metric": "success rate (Pass or Pass with edit)",
+          "value": "89.6%",
+          "comparator": "at least 3 expert cardiac sonographers scoring clinical acceptability",
+          "n_studies": 32,
+          "n_patients": 32,
+          "n_sites": 5,
+          "dataset_description": "AI Measure: 32 patients, 392 images, 1354 samples from 5 institutions (US, Mexico); 15 measurement views across B-mode, Doppler, M-mode; probes 5V1, 5Z1, 8V3, 10V4, Z6T; age 4-79 y, 44% female, 51% male, 5% unknown; BMI 14-41.2 (49% normal). Truth: at least 3 expert cardiac sonographers scored each measurement for clinical acceptability (Pass or Pass with edit). Test sites disjoint from training sites.",
+          "subgroup_notes": "Age 4-79 y (includes pediatric); BMI 14-41.2",
+          "quote": "Aggregating algorithm performance over all modes showed the AI algorithm was successful 89.6% based on acceptance of measurements as Pass or Pass with/Edit.",
+          "page": 18,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K232145",
+          "endpoint": "AI Measure, worst acquisition mode (B-mode, Doppler, M-mode)",
+          "metric": "success rate (Pass or Pass with edit)",
+          "value": ">=88.1%",
+          "comparator": "at least 3 expert cardiac sonographers scoring clinical acceptability",
+          "n_studies": 32,
+          "n_patients": 32,
+          "n_sites": 5,
+          "dataset_description": "AI Measure: 32 patients, 392 images, 1354 samples from 5 institutions (US, Mexico); 15 measurement views across B-mode, Doppler, M-mode; probes 5V1, 5Z1, 8V3, 10V4, Z6T; age 4-79 y, 44% female, 51% male, 5% unknown; BMI 14-41.2 (49% normal). Truth: at least 3 expert cardiac sonographers scored each measurement for clinical acceptability (Pass or Pass with edit). Test sites disjoint from training sites.",
+          "subgroup_notes": null,
+          "quote": "As tested on datasets from different aquisition modes, the algorithm sucess is 88.1% or higher",
+          "page": 18,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K242523",
+          "endpoint": "Trace AI orifice contour vs sonographer ground-truth contour",
+          "metric": "lower 90% confidence bound of the 90th-percentile DICE coefficient",
+          "value": "0.95 (acceptance criterion >=0.80)",
+          "comparator": "3 ARDMS sonographers' refined contours, blinded",
+          "n_studies": 10,
+          "n_patients": 10,
+          "n_sites": 3,
+          "dataset_description": "Trace AI: 10 adult patients, 24 volumes (10 exams) from 3 institutions (US, Germany, Mexico); acquired on ACUSON Origin with 5Z1 (3D TTE), Z6T (3D TEE), Lumos (3D ICE); structures LV, RV, LVOT, LA, ascending aorta, MV annulus, STJ, LAA opening, sinus of Valsalva, TV annulus; age 18-79, 25% female, 13% unknown; BMI 18.1-44.2 (60% unknown). Ground truth: 3 ARDMS sonographers independently refined the initial Trace AI circle, blinded to each other and to the algorithm contour. Test sites disjoint from training sites.",
+          "subgroup_notes": "3D TTE, 3D TEE and 3D ICE volumes; 60% BMI unknown",
+          "quote": "The lower 90% confidence bound for the 90th percentile is 0.95, which is greater than the requirement of 0.8, therefore, the test passes.",
+          "page": 15,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K260844",
+          "endpoint": "Valves AI (with user edits) aortic and mitral valve surface similarity and landmark distance error",
+          "metric": "lower bound of 95% CI, all metrics",
+          "value": ">80%",
+          "comparator": "reference auto-detection corrected by 3 examiners",
+          "n_studies": 42,
+          "n_patients": null,
+          "n_sites": 3,
+          "dataset_description": "Valves AI: 86 volumes from 42 TEE studies (Z6T; patient count not stated) at 3 institutions (USA, Mexico); age 35-93, 44% female; BMI 21-33 (35% normal). Reference: 3 examiners corrected the automatic valve detection using on-system editing tools; inter-user Pearson >=0.9, Bland-Altman bias <10%. Fresh data collected for verification, stated to be separate from training data.",
+          "subgroup_notes": "3D TEE (Z6T) only",
+          "quote": "Accuracy of Aortic and Mitral valve surface similarity and landmark distance errors meets acceptance criteria, with all metrics exceeding 80% at the lower bound of the 95% confidence interval.",
+          "page": 12,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K260844",
+          "endpoint": "Valves AI measurements derived from surfaces and landmarks",
+          "metric": "Pearson correlation coefficient",
+          "value": ">=0.9",
+          "comparator": "reference auto-detection corrected by 3 examiners",
+          "n_studies": 42,
+          "n_patients": null,
+          "n_sites": 3,
+          "dataset_description": "Valves AI: 86 volumes from 42 TEE studies (Z6T; patient count not stated) at 3 institutions (USA, Mexico); age 35-93, 44% female; BMI 21-33 (35% normal). Reference: 3 examiners corrected the automatic valve detection using on-system editing tools; inter-user Pearson >=0.9, Bland-Altman bias <10%. Fresh data collected for verification, stated to be separate from training data.",
+          "subgroup_notes": null,
+          "quote": "Pearson correlation coefficient of 0.9 or higher for measurements derived from surfaces and landmarks.",
+          "page": 12,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K260844",
+          "endpoint": "Valves AI, BMI subgroups",
+          "metric": "performance (metric not specified in summary)",
+          "value": "normal BMI >=0.97; BMI >25 >0.88",
+          "comparator": "reference auto-detection corrected by 3 examiners",
+          "n_studies": 42,
+          "n_patients": null,
+          "n_sites": 3,
+          "dataset_description": "Valves AI: 86 volumes from 42 TEE studies (Z6T; patient count not stated) at 3 institutions (USA, Mexico); age 35-93, 44% female; BMI 21-33 (35% normal). Reference: 3 examiners corrected the automatic valve detection using on-system editing tools; inter-user Pearson >=0.9, Bland-Altman bias <10%. Fresh data collected for verification, stated to be separate from training data.",
+          "subgroup_notes": "35% normal BMI, 65% overweight/obese",
+          "quote": "For subjects with a normal body mass index (BMI), the performance of the Valves AI algorithm  was 0.97 or higher. For subjects with a BMI of >25 kg/m² (obese), performance was greater  than 0.88.",
+          "page": 13,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K260844",
+          "endpoint": "2D Heart AI (with user edits) chamber contour vs 3-examiner manual contours",
+          "metric": "DICE, average",
+          "value": "88%",
+          "comparator": "3 examiners' manual contours",
+          "n_studies": 48,
+          "n_patients": 48,
+          "n_sites": 5,
+          "dataset_description": "2D Heart AI enhancement: 48 patients / 96 images from 5 institutions (USA, Mexico); transducers 5V1, 5Z1, 8V3, 10V4; apical 2/3/4-chamber views, frame rate >17 fps; contrast in 10 exams; age 1-83 (labelled 'Adults'), 39% female, 61% male (unknown 63%); known BMI 13-28 (73% normal). Reference: 3 examiners performed all manual contouring and measurements; inter-user variability of the reference standard reported as Pearson >=0.9 with Bland-Altman bias 'around 10%' (p.14). Fresh data collected for verification, stated to be separate from training data.",
+          "subgroup_notes": "Normal BMI 0.87 average; BMI >25 0.89 average",
+          "quote": "Contour DICE average of 88%",
+          "page": 13,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K260844",
+          "endpoint": "2D Heart AI view classification (A2C/A3C/A4C)",
+          "metric": "accuracy, average",
+          "value": "98%",
+          "comparator": "view label (truthing method not stated for view labels)",
+          "n_studies": 48,
+          "n_patients": 48,
+          "n_sites": 5,
+          "dataset_description": "2D Heart AI enhancement: 48 patients / 96 images from 5 institutions (USA, Mexico); transducers 5V1, 5Z1, 8V3, 10V4; apical 2/3/4-chamber views, frame rate >17 fps; contrast in 10 exams; age 1-83 (labelled 'Adults'), 39% female, 61% male (unknown 63%); known BMI 13-28 (73% normal). Reference: 3 examiners performed all manual contouring and measurements; inter-user variability of the reference standard reported as Pearson >=0.9 with Bland-Altman bias 'around 10%' (p.14). Fresh data collected for verification, stated to be separate from training data.",
+          "subgroup_notes": null,
+          "quote": "View classification performance with accuracy of 98% in average",
+          "page": 13,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K260844",
+          "endpoint": "2D Heart AI contouring, BMI subgroups",
+          "metric": "contour performance (DICE implied), average",
+          "value": "normal BMI 0.87; BMI >25 0.89",
+          "comparator": "3 examiners' manual contours",
+          "n_studies": 48,
+          "n_patients": 48,
+          "n_sites": 5,
+          "dataset_description": "2D Heart AI enhancement: 48 patients / 96 images from 5 institutions (USA, Mexico); transducers 5V1, 5Z1, 8V3, 10V4; apical 2/3/4-chamber views, frame rate >17 fps; contrast in 10 exams; age 1-83 (labelled 'Adults'), 39% female, 61% male (unknown 63%); known BMI 13-28 (73% normal). Reference: 3 examiners performed all manual contouring and measurements; inter-user variability of the reference standard reported as Pearson >=0.9 with Bland-Altman bias 'around 10%' (p.14). Fresh data collected for verification, stated to be separate from training data.",
+          "subgroup_notes": "73% normal BMI, 27% overweight/obese (known BMI only)",
+          "quote": "For subjects with a Normal BMI the performance of the contouring AI Algorithm was 0.87 in average. For subjects with a BMI > 25 (obese), performance was 0.89 in average.",
+          "page": 13,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": null,
+          "endpoint": "AI Assist color box placement",
+          "metric": "accuracy (no or minor adjustment)",
+          "value": "98%",
+          "comparator": null,
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; no study details given",
+          "subgroup_notes": null,
+          "quote": "Color box placement 98% accurate (no or minor adjustment)",
+          "page": null,
+          "verification": "company"
+        },
+        {
+          "k_number": null,
+          "endpoint": "AI Assist PW Doppler gate placement",
+          "metric": "accuracy (no or minor adjustment)",
+          "value": "95%",
+          "comparator": null,
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; no study details given",
+          "subgroup_notes": null,
+          "quote": "PW Gate Placement 95% accurate (no or minor adjustment)",
+          "page": null,
+          "verification": "company"
+        },
+        {
+          "k_number": null,
+          "endpoint": "AI Assist view classification and Doppler placement, 12 standard views, 23 targets",
+          "metric": "accuracy",
+          "value": "99%",
+          "comparator": null,
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; no study details given",
+          "subgroup_notes": null,
+          "quote": "For 12 standard Echocardiogram views, AI Assist has a 99%* accuracy rate for proper view classification and Doppler placement on 23 anatomical and hemodynamic targets.",
+          "page": null,
+          "verification": "company"
+        },
+        {
+          "k_number": null,
+          "endpoint": "AI Measure (B-mode, Doppler, M-mode) judged accurate by user",
+          "metric": "user acceptance",
+          "value": "89%",
+          "comparator": null,
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; consistent with the 89.6% in K232145",
+          "subgroup_notes": null,
+          "quote": "89% AI Measure (B-mode, Doppler and M-mode) was judged accurate by the user.",
+          "page": null,
+          "verification": "company"
+        },
+        {
+          "k_number": null,
+          "endpoint": "2D Heart AI LV EDV / ESV detection across users",
+          "metric": "accuracy",
+          "value": "99%",
+          "comparator": null,
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; no study details given",
+          "subgroup_notes": null,
+          "quote": "99% accuracy for detecting LVEVD and LVESV (across different users).",
+          "page": null,
+          "verification": "company"
+        },
+        {
+          "k_number": null,
+          "endpoint": "2D Heart AI view classification A4C/A3C/A2C with and without contrast",
+          "metric": "accuracy",
+          "value": "100%",
+          "comparator": null,
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; no study details given",
+          "subgroup_notes": null,
+          "quote": "100% accuracy on view classification for A4C, A3C, A2C (with and without contrast, across multiple sonographers).",
+          "page": null,
+          "verification": "company"
+        },
+        {
+          "k_number": null,
+          "endpoint": "2D Heart AI GLS estimate",
+          "metric": "correlation coefficient",
+          "value": "98%",
+          "comparator": null,
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; comparator not stated",
+          "subgroup_notes": null,
+          "quote": "2D Heart AI automatically produces estimates of left ventricular volumes and GLS, both for contrast enhanced and non contrast enhanced acquisitions, achieving 98% correlation coefficient* with GLS estimates.",
+          "page": null,
+          "verification": "company"
+        },
+        {
+          "k_number": null,
+          "endpoint": "4D Heart AI LV ED and ES volumes, 3D TTE and TEE (page also states '96% accuracy for detecting LV ED and ES volumes using both TTE and TEE')",
+          "metric": "accuracy vs 3 experienced readers",
+          "value": "96%",
+          "comparator": "three experienced readers",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; no n given",
+          "subgroup_notes": null,
+          "quote": "4D Heart AI on both 3D TTE and TEE acquisitions achieves 96% accuracy when compared with estimates provided by three experienced readers.",
+          "page": null,
+          "verification": "company"
+        },
+        {
+          "k_number": null,
+          "endpoint": "4D Heart AI MPR identification and alignment",
+          "metric": "accuracy",
+          "value": "98%",
+          "comparator": null,
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; no study details given",
+          "subgroup_notes": null,
+          "quote": "98% accuracy in MPR identification and alignment.",
+          "page": null,
+          "verification": "company"
+        },
+        {
+          "k_number": null,
+          "endpoint": "Trace AI automated orifice contour (annulus circumference, max/min diameter)",
+          "metric": "accuracy",
+          "value": ">95%",
+          "comparator": null,
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Siemens ACUSON Origin product page (fetched 2026-09-05; figures footnoted to internal Siemens reports, e.g. 'Algorithm Study Report', 'Accuracy and Verification Test Report'), not an FDA summary; no study details given",
+          "subgroup_notes": null,
+          "quote": "Automated orifice assessment precisely contours the annulus, providing real-time circumference, maximum, and minimum diameter measurements with over 95% accuracy.",
+          "page": null,
+          "verification": "company"
+        }
+      ],
+      "training_data": {
+        "disclosed": false,
+        "n_studies": null,
+        "n_patients": null,
+        "n_sites": null,
+        "description": "No FDA summary states training-set size, number of training sites or training demographics. Each summary states only that test data came from clinical sites different from the training sites (K232145, K242523) or that fresh data was collected for verification (K260844). The Siemens Origin press release refers to 'the world's largest cardiac image database' without a number.",
+        "source": "K232145 p.15-19; K242523 p.14,16; K260844 p.13-14; https://www.siemens-healthineers.com/press/releases/acusonorigin",
+        "verification": "fda_summary"
+      },
+      "validation_data": {
+        "n_studies": null,
+        "n_patients": null,
+        "n_sites": 5,
+        "description": "Per-feature FDA verification sets: AI Assist 12 patients / 14 exams / 168 samples (K232145); 2D HeartAI 45 exams / 90 images (patients not stated), 5 institutions (K232145); 4D HeartAI 32 patients / 64 volumes, 5 institutions (K232145); AI Measure 32 patients / 392 images / 1354 samples, 5 institutions (K232145); Trace AI 10 patients / 24 volumes, 3 institutions (K242523); Valves AI 42 TEE studies / 86 volumes (patients not stated), 3 institutions (K260844); 2D Heart AI enhancement 48 patients / 96 images, 5 institutions (K260844). Countries: US, Mexico, Germany (Trace AI only). Patient totals are not summed because overlap across features is unknown; n_sites = the maximum per-feature site count.",
+        "independent_of_training": true,
+        "source": "K232145 p.14-19; K242523 p.15-16; K260844 p.12-14",
+        "verification": "fda_summary"
+      },
+      "prior_validations": [
+        {
+          "description": "Valves AI was previously cleared as eSie Valves on the ACUSON SC2000 (K233613, reference device for K260844); AI Measure maps to eSie Measure and 2D/4D HeartAI to eSie LH / eSie LVA / eSie RH + GLS on the SC2000 (K211726, reference device for K232145). Peer-reviewed evaluations of the SC2000 eSie Valves tool exist (see papers) but none of the Sequoia/Origin-cleared features.",
+          "source_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf26/K260844.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "description": "Siemens ACUSON Origin product page (fetched 2026-09-05) lists accuracy figures for AI Assist (98% color box, 95% PW gate, 99% view classification/placement on 23 targets), AI Measure (89%), 2D Heart AI (99% LV EDV/ESV detection, 100% view classification, 98% GLS correlation), 4D Heart AI (96% LV ED/ES volumes vs 3 readers, 98% MPR alignment) and Trace AI (>95%). Footnotes cite internal Siemens reports; no n, comparator or study design is given, and the figures are not the same as the FDA-summary figures (e.g., FDA AI Assist 99.3% aggregated over all placements).",
+          "source_url": "https://www.siemens-healthineers.com/en-us/ultrasound/cardiovascular/acuson-origin",
+          "verification": "company"
+        }
+      ],
+      "papers": [
+        {
+          "title": "Artificial Intelligence for the Measurement of the Aortic Valve Annulus",
+          "first_author": "Thalappillil R",
+          "journal": "Journal of Cardiothoracic and Vascular Anesthesia",
+          "year": 2020,
+          "doi": "10.1053/j.jvca.2019.06.017",
+          "pmid": "31351874",
+          "url": "https://doi.org/10.1053/j.jvca.2019.06.017",
+          "relation": "external-validation",
+          "n_subjects": 47,
+          "key_result": "Siemens eSie Valves automated aortic valve software (SC2000 predecessor of the K260844 Valves AI feature) vs MDCT in 47 TAVR patients (SAPIEN 3): r = 0.84 (area-derived) and 0.85 (perimeter-derived); Bland-Altman 95% LOA -4.62 to 1.26 mm (area) and -4.51 to 1.45 mm (perimeter). Single-center, retrospective. Not an evaluation of the Sequoia/Origin implementation.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Agreement between 4D transesophageal echocardiography and multi-detector computed tomography in measuring aortic root dimensions and coronary ostia heights",
+          "first_author": "Hassan M",
+          "journal": "The International Journal of Cardiovascular Imaging",
+          "year": 2023,
+          "doi": "10.1007/s10554-023-02873-3",
+          "pmid": "37269399",
+          "url": "https://doi.org/10.1007/s10554-023-02873-3",
+          "relation": "external-validation",
+          "n_subjects": 43,
+          "key_result": "eSie Valve semi-automatic 4D TEE aortic root measurements vs ECG-gated MDCT in 43 adults (prospective): strong correlation/good agreement for annular area, perimeter, derived diameters, left coronary ostial height, STJ and SoV minor diameters; moderate for right coronary ostial height. Predecessor tool on SC2000, not the Sequoia/Origin implementation.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Artificial Intelligence in Mitral Valve Analysis",
+          "first_author": "Jeganathan J",
+          "journal": "Annals of Cardiac Anaesthesia",
+          "year": 2017,
+          "doi": "10.4103/aca.ACA_243_16",
+          "pmid": "28393769",
+          "url": "https://doi.org/10.4103/aca.ACA_243_16",
+          "relation": "other",
+          "n_subjects": 4,
+          "key_result": "Inter-observer reproducibility of eSie Valve mitral analysis on intraoperative 3D TEE: 4 patients with normal MV, 36 end-systolic frames, 3 examiners; examiner had no significant effect on any of 6 parameters (mixed-effects ANOVA, Bonferroni P = 0.0083). Predecessor tool on SC2000.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Dynamic Three-Dimensional Geometry of the Aortic Valve Apparatus - A Feasibility Study",
+          "first_author": "Khamooshian A",
+          "journal": "Journal of Cardiothoracic and Vascular Anesthesia",
+          "year": 2017,
+          "doi": "10.1053/j.jvca.2017.03.004",
+          "pmid": "28800987",
+          "url": "https://doi.org/10.1053/j.jvca.2017.03.004",
+          "relation": "other",
+          "n_subjects": 10,
+          "key_result": "Feasibility of semi-automated eSie Valve aortic apparatus analysis on SC2000 / Z6Ms intraoperative 3D TEE in 10 patients with non-stenotic, non-regurgitant aortic valves; 13 of 45 exported parameters analyzed across the cardiac cycle. No accuracy comparator. Predecessor tool on SC2000.",
+          "verification": "doi_resolved"
+        }
+      ],
+      "clinical_trials": [],
+      "open_questions": [
+        "Training-set sizes, number of training sites and training demographics are not disclosed in any of the four FDA summaries.",
+        "K232145 2D HeartAI and 4D HeartAI: the Bland-Altman bias values (<5.2, <13.3) and the Pearson coefficients are not tied to named measurements (EF, volumes, GLS) or units in the summary.",
+        "K260844 Valves AI: the BMI-subgroup values (>=0.97, >0.88) are not attributed to a named metric; the reference standard is the algorithm's own auto-detection corrected by examiners.",
+        "K260844 2D Heart AI: the summary states the dataset was collected from 'Adults 1-83 years' and lists gender as 39% female / 61% male with 'unknown: 63%'; these internally inconsistent demographics are reproduced verbatim.",
+        "K251481 reports no performance data for the AI Assist view-classification-triggered AI Measure workflow; K260844 cites K251481 as the clearance of 2D Heart AI although K251481 does not mention it.",
+        "K240704 (2024-07-22), which carried the cardiac AI package unmodified, is the predicate of K242523 but is outside this batch.",
+        "Company accuracy figures on the ACUSON Origin product page (e.g., AI Assist 99% on 23 targets, 2D HeartAI 100% view classification) have no stated n, comparator or study; they are recorded with verification 'company' only.",
+        "Which product/version first shipped Valves AI outside the US and the SC2000 K233613 summary content were not reviewed this session.",
+        "No peer-reviewed publication evaluating AI Assist, AI Measure, 2D HeartAI, 4D HeartAI, Trace AI or Valves AI on Sequoia/Origin was found in PubMed (searches on each feature name, 'eSie Valve(s)', 'eSie LVA/LH/RH', 'eSie Measure', 'AcuNav Lumos', 'ACUSON Origin/Sequoia' + AI, 2026-09-05); the four listed papers evaluate the SC2000 eSie Valves tool that K260844 names as the prior clearance of Valves AI.",
+        "K232145 lists the 4D HeartAI TEE test transducer as '6ZT'; the Z6T transducer is what the same submission adds, so this is likely a typo in the summary but is reproduced as written.",
+        "Company product-page figures do not match FDA-summary figures for the same features (e.g., AI Assist color box 98% / PW gate 95% vs FDA 99.3% aggregated; 2D Heart AI view classification 100% vs FDA 98% average in K260844); the company figures cite internal reports that were not reviewed."
+      ],
+      "sources": [
+        {
+          "fact": "K232145 decision date 2023-10-30, product code IYN, applicant Siemens Medical Solutions USA, Inc.",
+          "url_or_file": "openfda_records.json",
+          "verification": "openfda"
+        },
+        {
+          "fact": "K242523 decision date 2024-11-19, product code IYN",
+          "url_or_file": "openfda_records.json",
+          "verification": "openfda"
+        },
+        {
+          "fact": "K251481 decision date 2025-08-20, product code IYN",
+          "url_or_file": "openfda_records.json",
+          "verification": "openfda"
+        },
+        {
+          "fact": "K260844 decision date 2026-06-16, product code IYN",
+          "url_or_file": "openfda_records.json",
+          "verification": "openfda"
+        },
+        {
+          "fact": "K232145 predicates K223735 (primary) and K211726 (reference); AI Assist/2D HeartAI/4D HeartAI/AI Measure test statistics and datasets",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K232145.txt (pp. 6, 8, 13-19)",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K242523 predicates K240704 (primary) and K230207 (reference); Trace AI description, DICE result, dataset",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K242523.txt (pp. 8, 11, 14-16)",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K251481 predicate K242523; AI Assist / AI Measure integrated workflow; no AI performance data",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K251481.txt (pp. 8, 10-12)",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K260844 predicate K251481, reference K233613; Valves AI and 2D Heart AI enhancement results and datasets",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K260844.txt (pp. 8, 10, 12-14)",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "ACUSON Origin press release (2023-08-25, ESC): AI Assist described as 'real-time cardiac view recognition'; 2D HeartAI 'auto tracking on contrast images'; 4D HeartAI 'auto contouring of all four chambers in 4D TTE and both ventricles in 4D TEE'; 'More than 500 AI-powered measurements'; AI features 'trained on the world's largest cardiac image database' (no number)",
+          "url_or_file": "https://www.siemens-healthineers.com/press/releases/acusonorigin",
+          "verification": "company"
+        },
+        {
+          "fact": "ACUSON Sequoia cardiology press release (2024-05-21): AI Measure 'up to 120 AI-powered calculations'; 2D HeartAI 'auto view detection and auto contour placement with or without an electrocardiogram', with or without contrast, for ejection fraction and strain (company description)",
+          "url_or_file": "https://www.siemens-healthineers.com/press/releases/acusonsequoia-cardio",
+          "verification": "company"
+        },
+        {
+          "fact": "ACUSON Origin product page accuracy figures for AI Assist, AI Measure, 2D Heart AI, 4D Heart AI, Trace AI (quotes verified against page fetched 2026-09-05; footnotes cite internal Siemens reports)",
+          "url_or_file": "https://www.siemens-healthineers.com/en-us/ultrasound/cardiovascular/acuson-origin",
+          "verification": "company"
+        },
+        {
+          "fact": "Paper metadata and abstracts for PMIDs 31351874, 37269399, 28393769, 28800987 (efetch, 2026-09-05); PMIDs 27535041 and 26306693 resolved but removed as not evaluating a feature cleared in this family",
+          "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ (esearch/esummary/efetch)",
+          "verification": "pmid_resolved"
+        },
+        {
+          "fact": "DOIs for the four retained papers confirmed via Crossref (title, journal, year, first author match) on 2026-09-05",
+          "url_or_file": "https://api.crossref.org/works/<DOI>",
+          "verification": "doi_resolved"
+        }
+      ]
+    }
+  ],
+  "notes": "Verified copy. Single family siemens-acuson-heart-ai covering K232145, K242523, K251481, K260844 (each in exactly one family; K240704 excluded per triage and not added). All FDA performance quotes were re-checked verbatim against the '===== PAGE n =====' markers in the extracted text files and openFDA decision dates / product code IYN match. Company figures from the Siemens ACUSON Origin product page were re-fetched and quoted verbatim; they are kept as separate 'company' claims and never merged with FDA figures. Feature 'function' text was trimmed to what the FDA summaries state, with company descriptions flagged as such. Papers: four eSie Valves (SC2000) papers retained as predecessor-tool evidence for Valves AI (K260844 names eSie Valves K233613 as its prior clearance); two papers on other SC2000-era tools (eSie Volume Mechanics 3D strain in sheep; eSie volume analysis LA volume) removed because no FDA text ties those tools to a feature cleared here. Training-set sizes are not disclosed anywhere."
+}

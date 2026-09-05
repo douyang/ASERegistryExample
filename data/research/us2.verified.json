@@ -1,0 +1,1382 @@
+{
+ "batch_id": "us2",
+ "families": [
+  {
+   "id": "us2",
+   "product_name": "Us2.v1 / Us2.v2",
+   "company": "Us2.ai (Eko.ai Pte. Ltd. d/b/a Us2.ai)",
+   "company_website": "https://us2.ai/",
+   "product_url": "https://us2.ai/platform-overview/",
+   "category": "comprehensive-measurement",
+   "tags": [
+    "LVEF",
+    "LV volumes",
+    "GLS",
+    "regional strain",
+    "diastolic function",
+    "E/e'",
+    "Doppler",
+    "aortic valve",
+    "LVOT",
+    "RV function",
+    "TAPSE",
+    "LA volume",
+    "automated reporting"
+   ],
+   "modality_scope": [
+    "TTE",
+    "2D",
+    "M-mode",
+    "PW/CW/tissue Doppler",
+    "handheld/POCUS (company and peer-reviewed use; not specified in FDA IFU)"
+   ],
+   "deployment": [
+    "cloud",
+    "on-premise (company)",
+    "vendor-neutral",
+    "PACS/CVIS/EMR-integrated via DICOM-SR/HL7/PDF (company)",
+    "workstation viewing/editing"
+   ],
+   "summary": "Fully automated post-processing software that classifies views, segments and annotates transthoracic echo DICOM images (2D, M-mode, PW/CW/tissue Doppler) and produces an editable measurement report. Us2.v1 (K210791, 2021) was validated against Brigham and Women's core-lab triplicate reads in 600 studies using an individual equivalence coefficient non-inferiority margin of 0.25; Us2.v2 (K233676, 2024) added LV global and regional longitudinal strain, RV tissue Doppler, TAPSE, aortic root and LVOT/aortic valve Doppler parameters, validated by RMSE (strain vs GE EchoPAC) and ICC in three US datasets (n=3029, 260, 192) spanning 8 ultrasound vendors.",
+   "intended_use_quote": "Us2.v2 is an image post-processing analysis software device used for viewing and quantifying cardiovascular ultrasound images in DI COM format. The device is intended to aid diagnostic review and analysis of echocardiographic data, patient record management and reporting.",
+   "indications_for_use_quote": "Us2.v2 software is used to process acquired transthoracic cardiac ultrasound images, to analyze and make measurements on images in order to provide automated estimation of several cardiac structural and functional parameters, including left/ right atrial and ventricular linear dimensions, volumes, systolic function and diastolic function, measured by B mode, M mode and Doppler (PW, CW, tissue) modalities. The data produced by this software is intended to be used to support qualified cardiologists, sonographers, or other licensed professional healthcare practitioners for clinical decision-making. Us2.v2 is indicated for use in adult patients.",
+   "embedded_ai_features": [
+    "Machine-learning view classification",
+    "Machine-learning border detection/segmentation (LV, LA)",
+    "Automated clip and frame selection",
+    "Automated 2D, M-mode and Doppler measurements (LV/RV/LA/RA dimensions, volumes, LVEF biplane MOD, E/A, e', E/e', TR Vmax; v2 adds LV GLS (A4C/A3C/A2C) and regional strain, TAPSE, RV E'/A'/S', LVOT diameter and PW Doppler, CW aortic valve Doppler, AVA, VR, sinotubular junction, sinus of Valsalva)",
+    "Image-quality filtering algorithms",
+    "Guideline reference-range comparison and automated report generation"
+   ],
+   "clearances": [
+    {
+     "k_number": "K210791",
+     "decision_date": "2021-07-27",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K173780"
+     ],
+     "changes_summary": "Initial clearance of Us2.v1 (model V1.0.0). Predicate: EchoMD Automated Ejection Fraction Software (Bay Labs/Caption Health, K173780, product code LLZ). Subject device provides many more automated measurements than the predicate's ejection fraction (LV Doppler/tissue Doppler, biplane volumes/LVEF, linear dimensions, RV/LA/RA dimensions, TR Vmax); manual editing performed in the application rather than on a PACS workstation.",
+     "notable_flags": [
+      "Regulation 21 CFR 892.2050",
+      "Reviewed by Division of Radiological Health (OHT7)",
+      "Retrospective validation vs Brigham and Women's core lab",
+      "Indicated for adults; not validated for congenital, valve, pericardial disease or intra-cardiac lesions"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K210791.pdf"
+    },
+    {
+     "k_number": "K233676",
+     "decision_date": "2024-04-01",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K210791"
+     ],
+     "changes_summary": "Us2.v2 (model V2.0.0) uses Us2.v1 as predicate. Automated calculations are 'Same as the predicate plus': LV GLS, A4C/A3C/A2C LV GLS, LV regional strain, TAPSE, RV E'/A'/S', aortic sinotubular junction and sinus of Valsalva, LVOT diameter, PW LVOT Vmax/VTI/Pmax/Pmean, CW AoV Vmax/VTI/Pmax/Pmean, AVA and VR (p.7 table). Indications broadened to list B-mode, M-mode and Doppler modalities and to support 'sonographers, or other licensed professional healthcare practitioners' in addition to cardiologists; the v1 statement that the device 'has not been validated for ... valve disease' is no longer in the IFU. Validation switched from IEC to RMSE (strain vs GE EchoPAC) and ICC.",
+     "notable_flags": [
+      "Regulation 21 CFR 892.2050",
+      "Reviewed by DHT 8B, OHT 8: Office of Radiological Health (letter p.2)",
+      "Strain (GLS/regional) added",
+      "Tested on data from 8 ultrasound vendors",
+      "Pages 7 and 9 of the FDA PDF are image-only (tables transcribed from rendered page)"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233676.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K210791",
+     "endpoint": "Interchangeability of all claimed automated measurements with core-lab human readers",
+     "metric": "Individual equivalence coefficient (IEC), non-inferiority margin 0.25",
+     "value": "IEC + 1.96*SD(IEC) < 0.25 for all claimed measurements (point values not reported in summary)",
+     "comparator": "Triplicate human measurements by three readers, Cardiovascular Imaging Core Laboratory, Brigham and Women's Hospital",
+     "n_studies": 600,
+     "n_patients": 600,
+     "n_sites": null,
+     "dataset_description": "Retrospective, blinded, anonymized set of 600 previously acquired echocardiograms: 421 HFrEF (LVEF <40%, NYHA II-IV) and 179 normal subjects (age 18-55, BMI 18-32); balanced for gender and BMI; reference = triplicate human measurements by the Brigham and Women's Hospital Cardiovascular Imaging Core Laboratory. Test data 'strictly segregated' from training data.",
+     "subgroup_notes": "Cohort balanced for gender and BMI; Normal cohort 72.6% male, HFrEF cohort 67.4% male (Table 1, p.8). No per-subgroup results reported.",
+     "quote": "We define our success criterion as a non-inferiority margin, ∆= 0.25, such that Us2.v1 is deemed interchangeable with the reference if IEC + 1.96*SD(IEC) < ∆. Compared to reference standard echocardiographic human measurements made in triplicate by the independent Cardiovascular Imaging Core Laboratory at Brigham and Women’s Hospital, the 95% confidence intervals of automated Us2.v1 measurements all fell below the pre-specified non-inferiority margin of 0.25 for IEC.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "LV global longitudinal strain vs GE EchoPAC",
+     "metric": "RMSE",
+     "value": "2.6 - 4.12 (reported as a range; units and basis of the range not stated)",
+     "comparator": "GE EchoPAC (FDA-cleared strain software)",
+     "n_studies": null,
+     "n_patients": 3029,
+     "n_sites": null,
+     "dataset_description": "Dataset 1 (n=3029; US-based; age 73.7+/-8.4; 47.1% male; 25% African American, 39.9% White, 21.7% Hispanic, 13.4% other). Comparator for strain = GE EchoPAC. Test datasets 'strictly segregated from algorithm training datasets, as they are from completely separate cohorts'. Software tested on data from 8 ultrasound vendors.",
+     "subgroup_notes": null,
+     "quote": "Acceptance criteria were based on Root Mean Square Error against reference values generated using the comparator device. Performance was tested on Dataset 1 described in 5.4.1. Measurement RMSE Global Longitudinal Strain 2.6 - 4.12",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "LV regional longitudinal strain vs GE EchoPAC",
+     "metric": "RMSE",
+     "value": "4.84 - 9.54 (reported as a range; units and basis of the range not stated)",
+     "comparator": "GE EchoPAC",
+     "n_studies": null,
+     "n_patients": 3029,
+     "n_sites": null,
+     "dataset_description": "Dataset 1 (n=3029; US-based; age 73.7+/-8.4; 47.1% male; 25% African American, 39.9% White, 21.7% Hispanic, 13.4% other). Comparator for strain = GE EchoPAC. Test datasets 'strictly segregated from algorithm training datasets, as they are from completely separate cohorts'. Software tested on data from 8 ultrasound vendors.",
+     "subgroup_notes": null,
+     "quote": "Regional Longitudinal Strain 4.84 - 9.54",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "LVOT Diameter (mm) agreement vs expert manual measurement",
+     "metric": "ICC (with lower 95% CI bound)",
+     "value": "ICC 0.78 (lower 95% CI 0.77)",
+     "comparator": "Manual measurement by trained echocardiography technicians/cardiologists",
+     "n_studies": null,
+     "n_patients": 3029,
+     "n_sites": null,
+     "dataset_description": "Dataset 1 (n=3029; US-based; age 73.7+/-8.4; 47.1% male; 25% African American, 39.9% White, 21.7% Hispanic, 13.4% other). Comparator for strain = GE EchoPAC. Test datasets 'strictly segregated from algorithm training datasets, as they are from completely separate cohorts'. Software tested on data from 8 ultrasound vendors.",
+     "subgroup_notes": null,
+     "quote": "Dataset 1 Measurement ICC lower 95% CI ICC ... LVOT Diameter (mm) 0.77 0.78",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "RV a' (cm/s) agreement vs expert manual measurement",
+     "metric": "ICC (with lower 95% CI bound)",
+     "value": "ICC 0.85 (lower 95% CI 0.84)",
+     "comparator": "Manual measurement by trained echocardiography technicians/cardiologists",
+     "n_studies": null,
+     "n_patients": 3029,
+     "n_sites": null,
+     "dataset_description": "Dataset 1 (n=3029; US-based; age 73.7+/-8.4; 47.1% male; 25% African American, 39.9% White, 21.7% Hispanic, 13.4% other). Comparator for strain = GE EchoPAC. Test datasets 'strictly segregated from algorithm training datasets, as they are from completely separate cohorts'. Software tested on data from 8 ultrasound vendors.",
+     "subgroup_notes": null,
+     "quote": "Dataset 1 Measurement ICC lower 95% CI ICC ... RV a' (cm/s) 0.84 0.85",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "RV e' (cm/s) agreement vs expert manual measurement",
+     "metric": "ICC (with lower 95% CI bound)",
+     "value": "ICC 0.86 (lower 95% CI 0.85)",
+     "comparator": "Manual measurement by trained echocardiography technicians/cardiologists",
+     "n_studies": null,
+     "n_patients": 3029,
+     "n_sites": null,
+     "dataset_description": "Dataset 1 (n=3029; US-based; age 73.7+/-8.4; 47.1% male; 25% African American, 39.9% White, 21.7% Hispanic, 13.4% other). Comparator for strain = GE EchoPAC. Test datasets 'strictly segregated from algorithm training datasets, as they are from completely separate cohorts'. Software tested on data from 8 ultrasound vendors.",
+     "subgroup_notes": null,
+     "quote": "Dataset 1 Measurement ICC lower 95% CI ICC ... RV e' (cm/s) 0.85 0.86",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "RV s' (cm/s) agreement vs expert manual measurement",
+     "metric": "ICC (with lower 95% CI bound)",
+     "value": "ICC 0.90 (lower 95% CI 0.89)",
+     "comparator": "Manual measurement by trained echocardiography technicians/cardiologists",
+     "n_studies": null,
+     "n_patients": 3029,
+     "n_sites": null,
+     "dataset_description": "Dataset 1 (n=3029; US-based; age 73.7+/-8.4; 47.1% male; 25% African American, 39.9% White, 21.7% Hispanic, 13.4% other). Comparator for strain = GE EchoPAC. Test datasets 'strictly segregated from algorithm training datasets, as they are from completely separate cohorts'. Software tested on data from 8 ultrasound vendors.",
+     "subgroup_notes": null,
+     "quote": "Dataset 1 Measurement ICC lower 95% CI ICC ... RV s' (cm/s) 0.89 0.90",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "TAPSE (mm) agreement vs expert manual measurement",
+     "metric": "ICC (with lower 95% CI bound)",
+     "value": "ICC 0.74 (lower 95% CI 0.72)",
+     "comparator": "Manual measurement by trained echocardiography technicians/cardiologists",
+     "n_studies": null,
+     "n_patients": 3029,
+     "n_sites": null,
+     "dataset_description": "Dataset 1 (n=3029; US-based; age 73.7+/-8.4; 47.1% male; 25% African American, 39.9% White, 21.7% Hispanic, 13.4% other). Comparator for strain = GE EchoPAC. Test datasets 'strictly segregated from algorithm training datasets, as they are from completely separate cohorts'. Software tested on data from 8 ultrasound vendors.",
+     "subgroup_notes": null,
+     "quote": "Dataset 1 Measurement ICC lower 95% CI ICC ... TAPSE (mm) 0.72 0.74",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "AoV Pmax (mmHg) agreement vs expert manual measurement",
+     "metric": "ICC (with lower 95% CI bound)",
+     "value": "ICC 0.96 (lower 95% CI 0.95)",
+     "comparator": "Manual measurement by trained echocardiography technicians/cardiologists",
+     "n_studies": null,
+     "n_patients": 452,
+     "n_sites": null,
+     "dataset_description": "Dataset 2 (n=260; age 67.5+/-9.4; 54.2% male; 46.5% African American) + Dataset 3 (n=192; age 74+/-9; 44.2% male; 87.9% White); US-based cohorts; comparator = manual analysis by trained echocardiography technicians or cardiologists (core lab and real-world settings). Table columns: 'ICC lower 95% CI' and 'ICC'.",
+     "subgroup_notes": null,
+     "quote": "Dataset 2 + Dataset 3 Measurement ICC lower 95% CI ICC ... AoV Pmax (mmHg) 0.95 0.96",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "AoV Pmean (mmHg) agreement vs expert manual measurement",
+     "metric": "ICC (with lower 95% CI bound)",
+     "value": "ICC 0.98 (lower 95% CI 0.97)",
+     "comparator": "Manual measurement by trained echocardiography technicians/cardiologists",
+     "n_studies": null,
+     "n_patients": 452,
+     "n_sites": null,
+     "dataset_description": "Dataset 2 (n=260; age 67.5+/-9.4; 54.2% male; 46.5% African American) + Dataset 3 (n=192; age 74+/-9; 44.2% male; 87.9% White); US-based cohorts; comparator = manual analysis by trained echocardiography technicians or cardiologists (core lab and real-world settings). Table columns: 'ICC lower 95% CI' and 'ICC'.",
+     "subgroup_notes": null,
+     "quote": "Dataset 2 + Dataset 3 Measurement ICC lower 95% CI ICC ... AoV Pmean (mmHg) 0.97 0.98",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "AoV Vmax (m/s) agreement vs expert manual measurement",
+     "metric": "ICC (with lower 95% CI bound)",
+     "value": "ICC 0.98 (lower 95% CI 0.98)",
+     "comparator": "Manual measurement by trained echocardiography technicians/cardiologists",
+     "n_studies": null,
+     "n_patients": 452,
+     "n_sites": null,
+     "dataset_description": "Dataset 2 (n=260; age 67.5+/-9.4; 54.2% male; 46.5% African American) + Dataset 3 (n=192; age 74+/-9; 44.2% male; 87.9% White); US-based cohorts; comparator = manual analysis by trained echocardiography technicians or cardiologists (core lab and real-world settings). Table columns: 'ICC lower 95% CI' and 'ICC'.",
+     "subgroup_notes": null,
+     "quote": "Dataset 2 + Dataset 3 Measurement ICC lower 95% CI ICC ... AoV Vmax (m/s) 0.98 0.98",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "AoV VTI (cm) agreement vs expert manual measurement",
+     "metric": "ICC (with lower 95% CI bound)",
+     "value": "ICC 0.97 (lower 95% CI 0.96)",
+     "comparator": "Manual measurement by trained echocardiography technicians/cardiologists",
+     "n_studies": null,
+     "n_patients": 452,
+     "n_sites": null,
+     "dataset_description": "Dataset 2 (n=260; age 67.5+/-9.4; 54.2% male; 46.5% African American) + Dataset 3 (n=192; age 74+/-9; 44.2% male; 87.9% White); US-based cohorts; comparator = manual analysis by trained echocardiography technicians or cardiologists (core lab and real-world settings). Table columns: 'ICC lower 95% CI' and 'ICC'.",
+     "subgroup_notes": null,
+     "quote": "Dataset 2 + Dataset 3 Measurement ICC lower 95% CI ICC ... AoV VTI (cm) 0.96 0.97",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "AVA (cm^2) agreement vs expert manual measurement",
+     "metric": "ICC (with lower 95% CI bound)",
+     "value": "ICC 0.82 (lower 95% CI 0.78)",
+     "comparator": "Manual measurement by trained echocardiography technicians/cardiologists",
+     "n_studies": null,
+     "n_patients": 452,
+     "n_sites": null,
+     "dataset_description": "Dataset 2 (n=260; age 67.5+/-9.4; 54.2% male; 46.5% African American) + Dataset 3 (n=192; age 74+/-9; 44.2% male; 87.9% White); US-based cohorts; comparator = manual analysis by trained echocardiography technicians or cardiologists (core lab and real-world settings). Table columns: 'ICC lower 95% CI' and 'ICC'.",
+     "subgroup_notes": null,
+     "quote": "Dataset 2 + Dataset 3 Measurement ICC lower 95% CI ICC ... AVA (cm^2) 0.78 0.82",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "LVOT Pmax (mmHg) agreement vs expert manual measurement",
+     "metric": "ICC (with lower 95% CI bound)",
+     "value": "ICC 0.90 (lower 95% CI 0.88)",
+     "comparator": "Manual measurement by trained echocardiography technicians/cardiologists",
+     "n_studies": null,
+     "n_patients": 452,
+     "n_sites": null,
+     "dataset_description": "Dataset 2 (n=260; age 67.5+/-9.4; 54.2% male; 46.5% African American) + Dataset 3 (n=192; age 74+/-9; 44.2% male; 87.9% White); US-based cohorts; comparator = manual analysis by trained echocardiography technicians or cardiologists (core lab and real-world settings). Table columns: 'ICC lower 95% CI' and 'ICC'.",
+     "subgroup_notes": null,
+     "quote": "Dataset 2 + Dataset 3 Measurement ICC lower 95% CI ICC ... LVOT Pmax (mmHg) 0.88 0.90",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "LVOT Pmean (mmHg) agreement vs expert manual measurement",
+     "metric": "ICC (with lower 95% CI bound)",
+     "value": "ICC 0.91 (lower 95% CI 0.90)",
+     "comparator": "Manual measurement by trained echocardiography technicians/cardiologists",
+     "n_studies": null,
+     "n_patients": 452,
+     "n_sites": null,
+     "dataset_description": "Dataset 2 (n=260; age 67.5+/-9.4; 54.2% male; 46.5% African American) + Dataset 3 (n=192; age 74+/-9; 44.2% male; 87.9% White); US-based cohorts; comparator = manual analysis by trained echocardiography technicians or cardiologists (core lab and real-world settings). Table columns: 'ICC lower 95% CI' and 'ICC'.",
+     "subgroup_notes": null,
+     "quote": "Dataset 2 + Dataset 3 Measurement ICC lower 95% CI ICC ... LVOT Pmean (mmHg) 0.90 0.91",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "LVOT Vmax (m/s) agreement vs expert manual measurement",
+     "metric": "ICC (with lower 95% CI bound)",
+     "value": "ICC 0.92 (lower 95% CI 0.91)",
+     "comparator": "Manual measurement by trained echocardiography technicians/cardiologists",
+     "n_studies": null,
+     "n_patients": 452,
+     "n_sites": null,
+     "dataset_description": "Dataset 2 (n=260; age 67.5+/-9.4; 54.2% male; 46.5% African American) + Dataset 3 (n=192; age 74+/-9; 44.2% male; 87.9% White); US-based cohorts; comparator = manual analysis by trained echocardiography technicians or cardiologists (core lab and real-world settings). Table columns: 'ICC lower 95% CI' and 'ICC'.",
+     "subgroup_notes": null,
+     "quote": "Dataset 2 + Dataset 3 Measurement ICC lower 95% CI ICC ... LVOT Vmax (m/s) 0.91 0.92",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "LVOT VTI (cm) agreement vs expert manual measurement",
+     "metric": "ICC (with lower 95% CI bound)",
+     "value": "ICC 0.91 (lower 95% CI 0.89)",
+     "comparator": "Manual measurement by trained echocardiography technicians/cardiologists",
+     "n_studies": null,
+     "n_patients": 452,
+     "n_sites": null,
+     "dataset_description": "Dataset 2 (n=260; age 67.5+/-9.4; 54.2% male; 46.5% African American) + Dataset 3 (n=192; age 74+/-9; 44.2% male; 87.9% White); US-based cohorts; comparator = manual analysis by trained echocardiography technicians or cardiologists (core lab and real-world settings). Table columns: 'ICC lower 95% CI' and 'ICC'.",
+     "subgroup_notes": null,
+     "quote": "Dataset 2 + Dataset 3 Measurement ICC lower 95% CI ICC ... LVOT VTI (cm) 0.89 0.91",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "VR agreement vs expert manual measurement",
+     "metric": "ICC (with lower 95% CI bound)",
+     "value": "ICC 0.94 (lower 95% CI 0.93)",
+     "comparator": "Manual measurement by trained echocardiography technicians/cardiologists",
+     "n_studies": null,
+     "n_patients": 452,
+     "n_sites": null,
+     "dataset_description": "Dataset 2 (n=260; age 67.5+/-9.4; 54.2% male; 46.5% African American) + Dataset 3 (n=192; age 74+/-9; 44.2% male; 87.9% White); US-based cohorts; comparator = manual analysis by trained echocardiography technicians or cardiologists (core lab and real-world settings). Table columns: 'ICC lower 95% CI' and 'ICC'.",
+     "subgroup_notes": null,
+     "quote": "Dataset 2 + Dataset 3 Measurement ICC lower 95% CI ICC ... VR 0.93 0.94",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "Sinotub Junction (mm) agreement vs expert manual measurement",
+     "metric": "ICC (with lower 95% CI bound)",
+     "value": "ICC 0.78 (lower 95% CI 0.74)",
+     "comparator": "Manual measurement by trained echocardiography technicians/cardiologists",
+     "n_studies": null,
+     "n_patients": 452,
+     "n_sites": null,
+     "dataset_description": "Dataset 2 (n=260; age 67.5+/-9.4; 54.2% male; 46.5% African American) + Dataset 3 (n=192; age 74+/-9; 44.2% male; 87.9% White); US-based cohorts; comparator = manual analysis by trained echocardiography technicians or cardiologists (core lab and real-world settings). Table columns: 'ICC lower 95% CI' and 'ICC'.",
+     "subgroup_notes": null,
+     "quote": "Dataset 2 + Dataset 3 Measurement ICC lower 95% CI ICC ... Sinotub Junction (mm) 0.74 0.78",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "Sinus Valsalva (mm) agreement vs expert manual measurement",
+     "metric": "ICC (with lower 95% CI bound)",
+     "value": "ICC 0.82 (lower 95% CI 0.78)",
+     "comparator": "Manual measurement by trained echocardiography technicians/cardiologists",
+     "n_studies": null,
+     "n_patients": 452,
+     "n_sites": null,
+     "dataset_description": "Dataset 2 (n=260; age 67.5+/-9.4; 54.2% male; 46.5% African American) + Dataset 3 (n=192; age 74+/-9; 44.2% male; 87.9% White); US-based cohorts; comparator = manual analysis by trained echocardiography technicians or cardiologists (core lab and real-world settings). Table columns: 'ICC lower 95% CI' and 'ICC'.",
+     "subgroup_notes": null,
+     "quote": "Dataset 2 + Dataset 3 Measurement ICC lower 95% CI ICC ... Sinus Valsalva (mm) 0.78 0.82",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K210791",
+     "endpoint": "Interchangeability of 23 automated parameters with core-lab readers (published pivotal study)",
+     "metric": "IEC",
+     "value": "All IEC point estimates <0; upper bound of 95% CI <0.25",
+     "comparator": "Three repeated measurements by core lab sonographers",
+     "n_studies": 602,
+     "n_patients": 600,
+     "n_sites": null,
+     "dataset_description": "Tromp J et al., Nat Commun 2022 (doi 10.1038/s41467-022-34245-1); same 600-subject cohort (421 HF / 179 controls) as the K210791 validation study. Note the paper reports 69% women whereas the FDA summary Table 1 reports 72.6%/67.4% male; discrepancy unresolved.",
+     "subgroup_notes": null,
+     "quote": "Among 602 anonymised echocardiographic studies from 600 people (421 with heart failure, 179 controls, 69% women), the point estimates of IEC are all <0 and the upper bound of the 95% confidence intervals below 0.25, indicating that the disagreement between the deep learning and human measures is lower than the disagreement among three core lab readers.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K210791",
+     "endpoint": "LVEF and LV volume agreement in external datasets (algorithm-development paper)",
+     "metric": "Mean absolute error / AUC",
+     "value": "MAE 9-25 mL for LV volumes, 6-10% for LVEF, 1.8-2.2 for E/e'; AUC 0.90-0.92 for LVEF<40%, 0.91 for E/e'>=13",
+     "comparator": "Locally measured manual values (Alberta HEART, Taiwan real-world, EchoNet-Dynamic)",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Tromp J et al., Lancet Digit Health 2022 (doi 10.1016/S2589-7500(21)00235-1): training 1145 echos + internal test 406 (ATTRaCT); external Alberta HEART n=1029, Taiwan n=31,241, EchoNet-Dynamic n=10,030, prospective n=142.",
+     "subgroup_notes": null,
+     "quote": "In the external datasets (n=1029 to 10 030 echocardiograms used as input), automated measurements showed good agreement with locally measured values, with a mean absolute error range of 9-25 mL for left ventricular volumes, 6-10% for left ventricular ejection fraction (LVEF), and 1·8-2·2 for the ratio of the mitral inflow E wave to the tissue Doppler e' wave (E/e' ratio); and reliably classified systolic dysfunction (LVEF <40%, area under the receiver operating characteristic curve [AUC] range 0·90-0·92) and diastolic dysfunction (E/e' ratio ≥13, AUC range 0·91-0·91), with narrow 95% CIs for AUC values.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "Automated GLS vs manual GLS, external validation (strain paper)",
+     "metric": "Bias / RMSE / correlation",
+     "value": "Taiwan cohort: bias 0.68+/-2.52%, MAD 2.0+/-1.67, RMSE 2.61, R 0.84; PROMIS-HFpEF: bias -0.65+/-2.71%, MAD 2.19+/-1.71, RMSE 2.78, R 0.76",
+     "comparator": "Manual GLS measurements (real-world Taiwan cohort; PROMIS-HFpEF core lab)",
+     "n_studies": 3741,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Myhre PL et al., Eur Heart J Digit Health 2024 (doi 10.1093/ehjdh/ztad072): DL workflow analysed 3741 (89%) Taiwanese studies, 176 (96%) PROMIS-HFpEF, 158 (98%) HMC-QU-MI; regional strain AUC 0.80 for wall-motion abnormalities.",
+     "subgroup_notes": null,
+     "quote": "Automated GLS showed good agreement with manual measurements (mean ± SD): -18.9 ± 4.5% vs. -18.2 ± 4.4%, respectively, bias 0.68 ± 2.52%, MAD 2.0 ± 1.67, RMSE = 2.61, R = 0.84 in the Taiwanese cohort; and -15.4 ± 4.1% vs. -15.9 ± 3.6%, respectively, bias -0.65 ± 2.71%, MAD 2.19 ± 1.71, RMSE = 2.78, R = 0.76 in PROMIS-HFpEF.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "Detection of LVEF <=40% from AI-analysed handheld echo vs expert cart-based echo",
+     "metric": "Diagnostic accuracy / IEC",
+     "value": "Accuracy 0.93 (95% CI 0.90-0.95); IEC -0.40 (95% CI -0.60, -0.16) for cart-based LVEF interchangeability",
+     "comparator": "Human expert analysis of cart-based TTE",
+     "n_studies": null,
+     "n_patients": 867,
+     "n_sites": null,
+     "dataset_description": "Campbell RT et al., Eur J Heart Fail 2025 (doi 10.1002/ejhf.3783); multicentre prospective observational study, suspected HF; AI produced an LVEF in 61% of handheld and 77% of cart-based scans. Full text (PMC12803686) states handheld and cart scans were reported by Us2.ai software version 1.4.1 (Philips Lumify handheld; GE Vivid E95 cart).",
+     "subgroup_notes": null,
+     "quote": "The AI-automated analysis of handheld echocardiography had a diagnostic accuracy of 0.93 (95% confidence interval [CI] 0.90, 0.95) for identifying LVEF ≤40% (compared to the human analysis of cart-based transthoracic echocardiography scans). AI-automated analysis of LVEF on handheld devices was interchangeable with cart-based LVEF reported by two expert humans (IEC -0.40, 95% CI -0.60, -0.16).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "Detection of LVEF <50% by AI-enhanced novice handheld pathway",
+     "metric": "AUC / sensitivity / specificity",
+     "value": "AUC 0.880 (95% CI 0.802-0.958); sensitivity 84.6%, specificity 91.4%, PPV 78.5%, NPV 94.1%; median absolute LVEF deviation 6.03%",
+     "comparator": "Standard echo by trained sonographers interpreted by cardiologists",
+     "n_studies": null,
+     "n_patients": 100,
+     "n_sites": null,
+     "dataset_description": "Huang W et al., Sci Rep 2024 (doi 10.1038/s41598-024-62467-4), PANES-HF: EchoNous Kosmos handheld acquisition by novices with Us2.ai automated reporting; n=100 symptomatic suspected-HF patients, 27 with LVEF<50%.",
+     "subgroup_notes": null,
+     "quote": "The area under the curve (AUC) of the AI novice pathway was 0.880 (95% CI 0.802, 0.958). The sensitivity, specificity, positive predictive and negative predictive values of the AI-enhanced novice pathway in detecting LVEF < 50% were 84.6%, 91.4%, 78.5% and 94.1% respectively. The median absolute deviation of the AI-novice pathway LVEF from the reference standard LVEF was 6.03%.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "Aortic stenosis Doppler parameters vs blinded human readers",
+     "metric": "Pearson r",
+     "value": "AV peak velocity r=0.97; mean gradient r=0.94; AVA (continuity) r=0.88; SVi r=0.79; LVOT VTI r=0.89; AV VTI r=0.96; LVOT diameter r=0.76 (all P<.001)",
+     "comparator": "Manual measurements by trained echocardiographers blinded to AI",
+     "n_studies": null,
+     "n_patients": 256,
+     "n_sites": null,
+     "dataset_description": "Krishna H et al., J Am Soc Echocardiogr 2023 (doi 10.1016/j.echo.2023.03.008); 256 patients, normal valves through all AS severities; single-center.",
+     "subgroup_notes": null,
+     "quote": "Across all AS severities, AI closely matched human measurement of aortic valve peak velocity (r = 0.97, P < .001), mean pressure gradient (r = 0.94, P < .001), aortic valve area by continuity equation (r = 0.88, P < .001), stroke volume index (r = 0.79, P < .001), left ventricular outflow tract velocity-time integral (r = 0.89, P < .001), aortic valve velocity-time integral (r = 0.96, P < .001), and left ventricular outflow tract diameter (r = 0.76, P < .001).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "Sonographer workflow with AI-automated analysis (randomized crossover trial)",
+     "metric": "Examination time / exams per day",
+     "value": "13.0+/-3.5 vs 14.3+/-4.2 min per exam (P<0.001); 16.7+/-2.5 vs 14.1+/-2.5 exams/day (P=0.003); AI values agreed with expert-endorsed values within clinical limits for 90% of parameters",
+     "comparator": "Manual sonographer workflow (non-AI days)",
+     "n_studies": null,
+     "n_patients": 585,
+     "n_sites": 1,
+     "dataset_description": "Sakamoto A et al., J Am Heart Assoc 2026 (doi 10.1161/JAHA.125.045637), AI-Echo RCT, single-center Japan, 4 sonographers, 585 patients over 38 days (AI days 317; non-AI days 268). The abstract does not name the vendor; the full text (PMC12909003) states the AI tool was the US2.ai platform (Us2.ai, Singapore) and that M3AI, its Japanese distributor, provided software and two co-authors.",
+     "subgroup_notes": null,
+     "quote": "AI assistance significantly reduced examination time (13.0±3.5 minutes versus 14.3±4.2 minutes, P<0.001) and increased the number of daily examinations (16.7±2.5 versus 14.1±2.5, P=0.003). The number of echocardiographic parameters per examination increased 3.4-fold on AI days (85±12 versus 25±1, P<0.001).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "LVOT, sinotubular junction and sinus of Valsalva diameters vs cardiac MRI (independent validation)",
+     "metric": "ICC",
+     "value": "AI vs CMR: LVOT 0.70 (95% CI 0.61-0.77), STJ 0.77 (0.70-0.83), SoV 0.77 (0.70-0.83); experts vs CMR: LVOT 0.63/0.51, STJ 0.71/0.82, SoV 0.85/0.85",
+     "comparator": "Cardiac magnetic resonance (gold standard) and two expert echocardiographers",
+     "n_studies": null,
+     "n_patients": 169,
+     "n_sites": null,
+     "dataset_description": "Mołek-Dziadosz P et al., Eur Heart J Digit Health 2026 (doi 10.1093/ehjdh/ztag126): 183 patients with TTE and CMR within 7 days; 169 with complete AI measurements of LVOT, STJ and SoV on the US2.ai platform.",
+     "subgroup_notes": "Clinically significant AI-CMR differences (>=2 mm LVOT; >=4 mm STJ/SoV) in 36.7% of LVOT, 20% of STJ and 11.8% of SoV measurements.",
+     "quote": "Artificial intelligence-derived measurements demonstrated comparable agreement with CMR: ICC 0.70 (95% CI: 0.61-0.77) for LVOT, 0.77 (95% 0.70-0.83) for STJ, and 0.77 (95% 0.70-0.83) for SoV.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "LV GLS and LA reservoir strain vs expert sonographer (independent validation)",
+     "metric": "ICC",
+     "value": "LV GLS ICC 0.83 (95% CI 0.77-0.88); LASr ICC 0.77 (95% CI 0.67-0.84)",
+     "comparator": "Expert sonographer measurements",
+     "n_studies": null,
+     "n_patients": 150,
+     "n_sites": null,
+     "dataset_description": "Nomura Y et al., J Echocardiogr 2026 (doi 10.1007/s12574-026-00736-z): 150 patients regardless of underlying disease, analysed by the fully automated Us2.ai software.",
+     "subgroup_notes": "Accuracy reported as maintained across LVEF and LAVi subcategories.",
+     "quote": "For LVGLS, the ICC was 0.83 (95% CI: 0.77-0.88) and 0.77 (95% CI: 0.67-0.84) for LASr.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K210791",
+     "endpoint": "TR jet velocity vs manual measurement and PH detection (independent validation)",
+     "metric": "ICC / AUC",
+     "value": "TRJV measured in 87% of echocardiograms; ICC 0.94 (95% CI 0.94-0.95); AUC for PH 0.88 (95% CI 0.84-0.90) automated vs 0.88 (0.86-0.91) manual",
+     "comparator": "Manual TRJV; right heart catheterisation (mPAP >20 mmHg) as PH reference",
+     "n_studies": null,
+     "n_patients": 1031,
+     "n_sites": 1,
+     "dataset_description": "Salehi M et al., ERJ Open Res 2025 (doi 10.1183/23120541.00592-2024): ASPIRE registry, 1031 consecutive patients investigated for suspected PH 2009-2021 with echo and RHC; 771 (75%) had PH.",
+     "subgroup_notes": null,
+     "quote": "The AI tool demonstrated high interpretation yield, successfully measuring TRJV in 87% of echocardiograms. Manually and automatically derived TRJV values showed excellent agreement (intraclass correlation coefficient 0.94, 95% CI 0.94-0.95) with minimal bias (Bland-Altman analysis). Automated TRJV measurements showed equally high diagnostic accuracy for PH as manual measurements (area under the curve 0.88, 95% CI 0.84-0.90 versus 0.88, 95% CI 0.86-0.91).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "Peri-operative anaesthetist-acquired echo analysed by US2.AI vs clinician measurements (multicentre)",
+     "metric": "ICC / correlation / classification accuracy",
+     "value": "ICC 0.605-0.956 across 10 parameters; LVEF r=0.845, mean difference -1.9%; LV systolic function classified correctly in 180/201 (91%), diastolic dysfunction in 193/201 (96%)",
+     "comparator": "Manual measurements by echocardiography-certified anaesthetists",
+     "n_studies": null,
+     "n_patients": 206,
+     "n_sites": null,
+     "dataset_description": "Borde DP et al., Anaesthesia 2026 (doi 10.1111/anae.70235): prospective multicentre observational study; 12-view protocol; 202/206 (98%) analysable.",
+     "subgroup_notes": "All 10 pulmonary hypertension and 6 severe aortic stenosis cases identified; IVC collapsibility (r=0.641) and cardiac output (r=0.675) agreement moderate.",
+     "quote": "Agreement between artificial intelligence- and clinician-derived continuous measurements was good to excellent for most parameters, with intraclass correlation coefficient values 0.605-0.956 (p < 0.001). Left ventricular ejection fraction was strongly correlated (r = 0.845, p < 0.001) with a mean difference of -1.9%. The US2.AI software classified left ventricular systolic function correctly in 180/201 (91%) patients and left ventricular diastolic dysfunction in 193/201 (96%) patients.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K233676",
+     "endpoint": "Real-world hospital cohort: AI vs human measurements and 1-year mortality prediction",
+     "metric": "Mean difference / AUC",
+     "value": "AI LVEF higher than human by 5.8% (P<0.001); mortality AUC 0.67 (AI) vs 0.66 (human), P=0.86; 0.73 vs 0.66 (P=0.048) with AI strain included",
+     "comparator": "Human expert echocardiographic reads",
+     "n_studies": null,
+     "n_patients": 889,
+     "n_sites": 1,
+     "dataset_description": "Merin R et al., Eur Heart J Digit Health 2026 (doi 10.1093/ehjdh/ztaf148): 889 consecutive hospitalized patients, 731 (82%) with sufficient data; commercially available Us2.ai software.",
+     "subgroup_notes": null,
+     "quote": "AI-derived LVEF values were significantly higher than human estimates (mean difference 5.8%, P < 0.001). In a multivariable model, AI- and human-based mortality prediction were comparable (AUC 0.67 vs. 0.66, P = 0.86). When including AI-obtained automated left ventricular strain analysis, the AI-based model was superior to humans in predicting 1-year mortality (AUC 0.73 vs. 0.66, P = 0.048).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K210791",
+     "endpoint": "Measurement and report-creation time, AI vs manual",
+     "metric": "Time (seconds)",
+     "value": "Measurement 159+/-66 vs 325+/-94 s (p<0.01); report creation 71+/-39 vs 429+/-128 s (p<0.01); 70% overall reduction",
+     "comparator": "Manual measurement and reporting by a human expert",
+     "n_studies": 23,
+     "n_patients": 23,
+     "n_sites": 1,
+     "dataset_description": "Hirata Y et al., J Echocardiogr 2024 (doi 10.1007/s12574-023-00636-6): 23 consecutive patients examined by a single operator with varying image quality; US2.ai fully automated software vs manual method.",
+     "subgroup_notes": "Fair/poor image quality required more corrections and longer measurement time; report time longer with more complex reports.",
+     "quote": "The AI significantly reduced the measurement time compared to the manual method (159 ± 66 vs. 325 ± 94 s, p < 0.01). In the report creation step, AI was also significantly faster compared to the manual method (71 ± 39 vs. 429 ± 128 s, p < 0.01). The incorporation of AI into echocardiographic analysis led to a 70% reduction in measurement and report creation time compared to manual methods.",
+     "page": null,
+     "verification": "peer_reviewed"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "Neither FDA summary states a training set size; both state only that test data were strictly segregated from training data (K210791 p.8; K233676 p.8). The algorithm-development paper (Tromp J et al., Lancet Digit Health 2022) reports that the workflow was developed on 1145 training echocardiograms and 406 internal-test echocardiograms from the ATTRaCT platform (Asia) with manual tracings by expert sonographers; the strain algorithm (Myhre 2024) was 'trained in an internal dataset' of unstated size. Whether these figures correspond to the training data of the cleared versions (V1.0.0, V2.0.0) is not stated anywhere, so no training-set size is recorded here.",
+    "source": "FDA summaries K210791 p.8 and K233676 p.8 (segregation statements only); Tromp J et al., Lancet Digit Health 2022, doi 10.1016/S2589-7500(21)00235-1 (Methods)",
+    "verification": "peer_reviewed"
+   },
+   "validation_data": {
+    "n_studies": 3481,
+    "n_patients": 3481,
+    "n_sites": null,
+    "description": "K210791: 600 retrospective studies (421 HFrEF, 179 normal), balanced gender/BMI, reference = BWH core lab triplicate reads. K233676: three US-based clinical datasets, Dataset 1 n=3029 (age 73.7+/-8.4, 47.1% male, 25% African American/39.9% White/21.7% Hispanic), Dataset 2 n=260 (46.5% African American), Dataset 3 n=192 (87.9% White); data from 8 ultrasound vendors; comparators = GE EchoPAC (strain) and manual reads by technicians/cardiologists in core-lab and real-world settings. n_studies/n_patients here = K233676 total (3029+260+192). Number of sites not stated.",
+    "independent_of_training": true,
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K210791.pdf (pp.7-8); https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233676.pdf (p.8; results table p.9 image-only)",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Us2.ai press coverage (Sept 14, 2021) of the Us2.v1 clearance cites a validation study at Brigham & Women's Hospital showing automated measurements 'completely interchangeable with expert human measurements' (~2 min processing per study).",
+     "source_url": "https://www.dicardiology.com/content/fda-clears-fully-automated-cardiac-ultrasound-solution-measure-2d-and-doppler",
+     "verification": "news"
+    },
+    {
+     "description": "Us2.ai regulatory-status page: FDA K210791 (2021) and K233676 (2024); CE Class IIb under EU MDR (certificate 743947); 'approved, registered, or available in 28+ markets'. The page cites regulation 21 CFR 892.1560, which differs from the 21 CFR 892.2050 stated in both FDA letters.",
+     "source_url": "https://us2.ai/resources/regulatory-status/",
+     "verification": "company"
+    },
+    {
+     "description": "Company platform page: cloud or on-premise deployment, DICOM routing, DICOM-SR/HL7/PDF output to PACS/CVIS/EMR, compatible with GE, Philips, Siemens and handheld POCUS devices; claims a 70% reduction in combined measurement and report-creation time. The 70% figure matches Hirata Y et al., J Echocardiogr 2024 (doi 10.1007/s12574-023-00636-6; 23 patients, single operator).",
+     "source_url": "https://us2.ai/platform-overview/",
+     "verification": "company"
+    },
+    {
+     "description": "Company press release (Apr 2024 per web summary) on Us2.v2 clearance: '45 automated echo parameters, including strain analysis'; June 2025 CE release cites 68 CE-marked parameters.",
+     "source_url": "https://us2.ai/us2-ai-receives-fda-clearance-for-us2-v2-transforming-cardiovascular-ultrasound-analysis/",
+     "verification": "company"
+    }
+   ],
+   "papers": [
+    {
+     "title": "A formal validation of a deep learning-based automated workflow for the interpretation of the echocardiogram",
+     "first_author": "Tromp J",
+     "journal": "Nature Communications",
+     "year": 2022,
+     "doi": "10.1038/s41467-022-34245-1",
+     "pmid": "36351912",
+     "url": "https://doi.org/10.1038/s41467-022-34245-1",
+     "relation": "pivotal-validation",
+     "n_subjects": 600,
+     "key_result": "602 studies from 600 people (421 HF, 179 controls): IEC point estimates all <0 and upper 95% CI <0.25 for 23 parameters vs triplicate core-lab reads; matches the K210791 validation study design (600 studies, 421 HFrEF/179 normal, IEC margin 0.25, BWH core lab).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Automated interpretation of systolic and diastolic function on the echocardiogram: a multicohort study",
+     "first_author": "Tromp J",
+     "journal": "The Lancet Digital Health",
+     "year": 2022,
+     "doi": "10.1016/S2589-7500(21)00235-1",
+     "pmid": "34863649",
+     "url": "https://doi.org/10.1016/S2589-7500(21)00235-1",
+     "relation": "algorithm-development",
+     "n_subjects": null,
+     "key_result": "Workflow developed on 1145 training echos + 406 internal test (ATTRaCT); external validation in Alberta HEART (n=1029), Taiwan real-world (n=31,241), EchoNet-Dynamic (n=10,030) and prospective n=142; view classification accuracy 0.91-0.99; LVEF MAE 6-10%; AUC 0.90-0.92 for LVEF<40%.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "External validation of a deep learning algorithm for automated echocardiographic strain measurements",
+     "first_author": "Myhre PL",
+     "journal": "European Heart Journal - Digital Health",
+     "year": 2024,
+     "doi": "10.1093/ehjdh/ztad072",
+     "pmid": "38264705",
+     "url": "https://doi.org/10.1093/ehjdh/ztad072",
+     "relation": "external-validation",
+     "n_subjects": null,
+     "key_result": "GLS: RMSE 2.61, R 0.84 (Taiwan, 3741 studies analysed); RMSE 2.78, R 0.76 (PROMIS-HFpEF, 176); regional strain AUC 0.80 for wall-motion abnormalities (HMC-QU-MI, 158). Us2.ai employees co-authors; relevant to the strain features added in K233676.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial intelligence fully automated analysis of handheld echocardiography in real-world patients with suspected heart failure",
+     "first_author": "Campbell RT",
+     "journal": "European Journal of Heart Failure",
+     "year": 2025,
+     "doi": "10.1002/ejhf.3783",
+     "pmid": "40702880",
+     "url": "https://doi.org/10.1002/ejhf.3783",
+     "relation": "external-validation",
+     "n_subjects": 867,
+     "key_result": "Multicentre prospective study (n=867); AI analysis of handheld echo had accuracy 0.93 (95% CI 0.90-0.95) for LVEF<=40% vs expert cart-based echo; IEC -0.40 (95% CI -0.60, -0.16). Vendor not named in abstract; full text (PMC12803686) identifies Us2.ai software version 1.4.1.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Point-of-care AI-enhanced novice echocardiography for screening heart failure (PANES-HF)",
+     "first_author": "Huang W",
+     "journal": "Scientific Reports",
+     "year": 2024,
+     "doi": "10.1038/s41598-024-62467-4",
+     "pmid": "38866831",
+     "url": "https://doi.org/10.1038/s41598-024-62467-4",
+     "relation": "real-world",
+     "n_subjects": 100,
+     "key_result": "Novices + Kosmos handheld + Us2.ai automated reporting: AUC 0.880 for LVEF<50%; sensitivity 84.6%, specificity 91.4%.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Nurse-led home-based detection of cardiac dysfunction by ultrasound: results of the CUMIN pilot study",
+     "first_author": "Tromp J",
+     "journal": "European Heart Journal - Digital Health",
+     "year": 2024,
+     "doi": "10.1093/ehjdh/ztad079",
+     "pmid": "38505488",
+     "url": "https://doi.org/10.1093/ehjdh/ztad079",
+     "relation": "real-world",
+     "n_subjects": 94,
+     "key_result": "Feasibility pilot in Tunisia: 7 novice nurses (5 met the standard), 94 patients, home AI-POCUS vs clinic TTE; AI-POCUS gave an interpretable LVEF in 80% and LAVI in 68%; sensitivity 92% (95% CI 62-99) for LVEF<50% or LAVI>34 mL/m2 vs 87% for NT-proBNP>125 pg/mL (AUC higher for AI-POCUS, P=0.040).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Fully Automated Artificial Intelligence Assessment of Aortic Stenosis by Echocardiography",
+     "first_author": "Krishna H",
+     "journal": "Journal of the American Society of Echocardiography",
+     "year": 2023,
+     "doi": "10.1016/j.echo.2023.03.008",
+     "pmid": "36958708",
+     "url": "https://doi.org/10.1016/j.echo.2023.03.008",
+     "relation": "external-validation",
+     "n_subjects": 256,
+     "key_result": "Us2.ai neural network with no human input vs blinded readers: AV peak velocity r=0.97, mean gradient r=0.94, AVA r=0.88, LVOT VTI r=0.89, LVOT diameter r=0.76.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "An Automated Machine Learning-Based Quantitative Multiparametric Approach for Mitral Regurgitation Severity Grading",
+     "first_author": "Sadeghpour A",
+     "journal": "JACC: Cardiovascular Imaging",
+     "year": 2025,
+     "doi": "10.1016/j.jcmg.2024.06.011",
+     "pmid": "39152959",
+     "url": "https://doi.org/10.1016/j.jcmg.2024.06.011",
+     "relation": "algorithm-development",
+     "n_subjects": null,
+     "key_result": "Fully automated ML MR grading (16 measured parameters, 9 used): accuracy 0.80 for none-to-severe, 0.97 for significant vs non-significant MR (sens 0.96, spec 0.98); feasibility 99.3%. Us2.ai-affiliated authors; MR grading is not part of the FDA-cleared indications.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial Intelligence-Based Echocardiography in Pulmonary Arterial Hypertension",
+     "first_author": "Celestin B",
+     "journal": "CHEST",
+     "year": 2026,
+     "doi": "10.1016/j.chest.2025.06.052",
+     "pmid": "40876740",
+     "url": "https://doi.org/10.1016/j.chest.2025.06.052",
+     "relation": "external-validation",
+     "n_subjects": 434,
+     "key_result": "Us2.ai software v1.4.5 vs core-lab readers (213 healthy, 221 PAH): no significant bias for peak TRV (0.90%), RA area (1.71%), TAPSE (1.28%); RVFAC bias 11.46%; PH detection AUC in referral cohort (n=196) 0.75 (DL) vs 0.79 (clinical lab), P=.068.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial intelligence-based echocardiographic assessment for monitoring disease progression in transthyretin cardiac amyloidosis",
+     "first_author": "Venneri L",
+     "journal": "European Journal of Heart Failure",
+     "year": 2025,
+     "doi": "10.1002/ejhf.70073",
+     "pmid": "41098006",
+     "url": "https://doi.org/10.1002/ejhf.70073",
+     "relation": "real-world",
+     "n_subjects": 752,
+     "key_result": "AI-derived LVOT-VTI decrease >=5% over 12 months independently predicted mortality in 752 ATTR-CM patients (adjusted HR 1.41, 95% CI 1.13-1.76). Uses Us2.ai automated measurements (Us2.ai-affiliated co-authors).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Clinical and artificial intelligence assessed echocardiographic predictors of outcomes after acute myocardial infarction",
+     "first_author": "Lenselink C",
+     "journal": "International Journal of Cardiology",
+     "year": 2026,
+     "doi": "10.1016/j.ijcard.2026.134638",
+     "pmid": "42331183",
+     "url": "https://doi.org/10.1016/j.ijcard.2026.134638",
+     "relation": "real-world",
+     "n_subjects": 1001,
+     "key_result": "Echocardiograms of 1001 AMI patients analysed with Us2.ai; combined AI-echo + clinical model AUC 0.85 vs 0.81 for 1-year mortality (p=0.018).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial Intelligence-Based Automated Echocardiographic Analysis and the Workflow of Sonographers: A Randomized Crossover Trial (AI-Echo RCT)",
+     "first_author": "Sakamoto A",
+     "journal": "Journal of the American Heart Association",
+     "year": 2026,
+     "doi": "10.1161/JAHA.125.045637",
+     "pmid": "41404733",
+     "url": "https://doi.org/10.1161/JAHA.125.045637",
+     "relation": "clinical-trial",
+     "n_subjects": 585,
+     "key_result": "Single-center randomized crossover (UMIN000053259): AI days reduced exam time (13.0 vs 14.3 min, P<0.001) and increased exams/day (16.7 vs 14.1); AI values within clinical limits for 90% of parameters. Vendor not named in abstract; full text (PMC12909003) identifies the US2.ai platform.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "AI task-shifting for echocardiographic LVEF assessment in Singapore: an economic evaluation",
+     "first_author": "Kaushik A",
+     "journal": "ESC Heart Failure",
+     "year": 2026,
+     "doi": "10.1093/eschf/xvag069",
+     "pmid": "41784150",
+     "url": "https://doi.org/10.1093/eschf/xvag069",
+     "relation": "other",
+     "n_subjects": 100,
+     "key_result": "Cost-minimization decision-tree model (PANES-HF pathway): novice-operated AI-POC pathway cost S$1185 (US$1422) per patient vs S$1403 (US$1684) for sonographer TTE, i.e. S$21,669 saved per 100 patients; 99.9% probability of cost saving in probabilistic sensitivity analysis.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Development and validation of echocardiography-based machine-learning models to predict mortality",
+     "first_author": "Valsaraj A",
+     "journal": "eBioMedicine",
+     "year": 2023,
+     "doi": "10.1016/j.ebiom.2023.104479",
+     "pmid": "36857967",
+     "url": "https://doi.org/10.1016/j.ebiom.2023.104479",
+     "relation": "other",
+     "n_subjects": 3626,
+     "key_result": "Echo-based ML mortality models trained on MacKay (6083 echos, 3626 patients) and validated in Alberta HEART (997 echos); Us2.ai-affiliated authors; not a cleared function.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Implementing focused echocardiography and AI-supported analysis in a population-based survey in Lesotho: implications for community-based cardiovascular disease care models",
+     "first_author": "Firima E",
+     "journal": "Hypertension Research",
+     "year": 2024,
+     "doi": "10.1038/s41440-023-01559-6",
+     "pmid": "38228749",
+     "url": "https://doi.org/10.1038/s41440-023-01559-6",
+     "relation": "real-world",
+     "n_subjects": null,
+     "key_result": "Population-based survey in Lesotho: 16 nurses/nurse-assistants after 2-day training obtained 756 PLAX echocardiograms on a handheld device; 628/754 (83.3%) uploaded files evaluable by the deep-learning algorithm and 514/628 (81.9%) confirmed by a cardiologist. Vendor not named in abstract; full text (PMC10912015) states analysis used Us2.ai software (Singapore) at University Hospital Basel.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Real-life clinical validation of artificial intelligence-assisted echocardiography for aortic root and left ventricular outflow tract measurements against human readers and cardiac magnetic resonance",
+     "first_author": "Mołek-Dziadosz P",
+     "journal": "European Heart Journal - Digital Health",
+     "year": 2026,
+     "doi": "10.1093/ehjdh/ztag126",
+     "pmid": "42644151",
+     "url": "https://doi.org/10.1093/ehjdh/ztag126",
+     "relation": "external-validation",
+     "n_subjects": 169,
+     "key_result": "Us2.ai LVOT, sinotubular junction and sinus of Valsalva diameters vs CMR (169 patients with complete AI measurements): ICC 0.70 (LVOT), 0.77 (STJ), 0.77 (SoV), comparable to two expert readers (LVOT ICC 0.63/0.51; STJ 0.71/0.82; SoV 0.85/0.85); clinically significant AI-CMR differences in 36.7% of LVOT, 20% of STJ and 11.8% of SoV measurements.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Validation of a fully automated workflow for longitudinal strain using artificial intelligence",
+     "first_author": "Nomura Y",
+     "journal": "Journal of Echocardiography",
+     "year": 2026,
+     "doi": "10.1007/s12574-026-00736-z",
+     "pmid": "42166090",
+     "url": "https://doi.org/10.1007/s12574-026-00736-z",
+     "relation": "external-validation",
+     "n_subjects": 150,
+     "key_result": "Us2.ai vs expert sonographer in 150 patients: ICC 0.83 (95% CI 0.77-0.88) for LV GLS and 0.77 (95% CI 0.67-0.84) for LA reservoir strain; accuracy maintained across LVEF and LAVi subgroups.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial intelligence-assisted peri-operative echocardiography: a multicentre observational study",
+     "first_author": "Borde DP",
+     "journal": "Anaesthesia",
+     "year": 2026,
+     "doi": "10.1111/anae.70235",
+     "pmid": "42086509",
+     "url": "https://doi.org/10.1111/anae.70235",
+     "relation": "real-world",
+     "n_subjects": 206,
+     "key_result": "Anaesthetist-acquired 12-view protocol analysed on the US2.AI cloud platform (202/206 analysable): ICC 0.605-0.956 across 10 parameters; LVEF r=0.845, mean difference -1.9%; LV systolic function classified correctly in 180/201 (91%) and diastolic dysfunction in 193/201 (96%); all 10 PH and 6 severe AS cases identified.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Association of echocardiographic findings with mortality: human assessment vs. automated deep learning analysis",
+     "first_author": "Merin R",
+     "journal": "European Heart Journal - Digital Health",
+     "year": 2026,
+     "doi": "10.1093/ehjdh/ztaf148",
+     "pmid": "41640420",
+     "url": "https://doi.org/10.1093/ehjdh/ztaf148",
+     "relation": "real-world",
+     "n_subjects": 889,
+     "key_result": "889 consecutive hospitalized patients (731 analysable) read by experts and by Us2.ai: strong correlation for most parameters; AI LVEF higher than human by 5.8% on average (P<0.001); 1-year mortality AUC 0.67 (AI) vs 0.66 (human), rising to 0.73 when AI strain was included (P=0.048).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Automated analysis of echocardiographic images: do different artificial intelligence tools provide concordant measurements?",
+     "first_author": "Szasz T",
+     "journal": "The International Journal of Cardiovascular Imaging",
+     "year": 2026,
+     "doi": "10.1007/s10554-025-03539-y",
+     "pmid": "41486249",
+     "url": "https://doi.org/10.1007/s10554-025-03539-y",
+     "relation": "external-validation",
+     "n_subjects": 116,
+     "key_result": "Us2.AI vs Philips automated tools vs two expert readers in 116 subjects (10 linear, Doppler and volumetric parameters): the two AI tools differed significantly for 6/10 parameters (experts 3/10), but inter-software variability was overall similar to inter-observer variability.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial intelligence-based echocardiography assessment to detect pulmonary hypertension",
+     "first_author": "Salehi M",
+     "journal": "ERJ Open Research",
+     "year": 2025,
+     "doi": "10.1183/23120541.00592-2024",
+     "pmid": "40356796",
+     "url": "https://doi.org/10.1183/23120541.00592-2024",
+     "relation": "external-validation",
+     "n_subjects": 1031,
+     "key_result": "ASPIRE registry, 1031 patients with RHC: US2.AI measured TRJV in 87% of echocardiograms; ICC vs manual 0.94 (95% CI 0.94-0.95); AUC for PH (mPAP >20 mmHg) 0.88 automated vs 0.88 manual.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Concordance of left ventricular volumes and function measurements between two human readers, a fully automated AI algorithm, and the 3D heart model",
+     "first_author": "Myhre PL",
+     "journal": "Frontiers in Cardiovascular Medicine",
+     "year": 2024,
+     "doi": "10.3389/fcvm.2024.1400333",
+     "pmid": "39081366",
+     "url": "https://doi.org/10.3389/fcvm.2024.1400333",
+     "relation": "external-validation",
+     "n_subjects": 109,
+     "key_result": "109 patients with 2D and 3D TTE: US2ai LV volumes correlated with the mean of two human readers (r=0.89 LVEDV, 0.92 LVESV) more strongly than the readers with each other (r=0.74, 0.84); LVEF comparable to human readers; GLS correlation with human only moderate.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Reducing echocardiographic examination time through routine use of fully automated software: a comparative study of measurement and report creation time",
+     "first_author": "Hirata Y",
+     "journal": "Journal of Echocardiography",
+     "year": 2024,
+     "doi": "10.1007/s12574-023-00636-6",
+     "pmid": "38308797",
+     "url": "https://doi.org/10.1007/s12574-023-00636-6",
+     "relation": "real-world",
+     "n_subjects": 23,
+     "key_result": "23 consecutive patients, single operator: US2.ai measurement time 159+/-66 vs 325+/-94 s manual (p<0.01); report creation 71+/-39 vs 429+/-128 s (p<0.01); 70% reduction in combined time. Fair/poor image quality required more corrections.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Application of Machine Learning Technology to Automate Thoracic Aorta Dimensions by Echocardiography",
+     "first_author": "Krishna H",
+     "journal": "Journal of the American Society of Echocardiography",
+     "year": 2025,
+     "doi": "10.1016/j.echo.2024.10.017",
+     "pmid": "39515397",
+     "url": "https://doi.org/10.1016/j.echo.2024.10.017",
+     "relation": "external-validation",
+     "n_subjects": null,
+     "key_result": "Us2.ai-affiliated co-authors; relevant to the aortic root measurements (sinotubular junction, sinus of Valsalva) added in K233676. No abstract is available via PubMed or Crossref, so results are not recorded here.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Vendor differences in 2D-speckle tracking global longitudinal strain: an update on a 10-year standardization effort",
+     "first_author": "Balinisteanu A",
+     "journal": "European Heart Journal - Cardiovascular Imaging",
+     "year": 2025,
+     "doi": "10.1093/ehjci/jeaf155",
+     "pmid": "40418621",
+     "url": "https://doi.org/10.1093/ehjci/jeaf155",
+     "relation": "other",
+     "n_subjects": 62,
+     "key_result": "62 subjects scanned on six ultrasound systems; GLS measured on three vendor-specific and six vendor-agnostic software packages including US2.AI. Abstract reports aggregate inter-vendor bias (average maximum 0.6% strain units among contemporary semi-automated software) and does not give Us2.ai-specific values.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Fully automated artificial intelligence-based echocardiographic analysis for global longitudinal strain monitoring and cancer therapy-related cardiac dysfunction detection in breast cancer patients",
+     "first_author": "Saijo Y",
+     "journal": "European Heart Journal - Digital Health",
+     "year": 2026,
+     "doi": "10.1093/ehjdh/ztag097",
+     "pmid": "42388419",
+     "url": "https://doi.org/10.1093/ehjdh/ztag097",
+     "relation": "real-world",
+     "n_subjects": 92,
+     "key_result": "92 breast-cancer patients, 456 studies: AI GLS lower than expert (17.7+/-2.9% vs 18.4+/-2.8%, P=0.007), R=0.64, ICC 0.63; CTRCD detected in 34.8% by AI vs 31.5% by experts (kappa 0.68). Vendor not named in abstract; full text (PMC13322393) states Us2.ai software version 1.4.1.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [
+    {
+     "nct_id": "NCT07738419",
+     "title": "Diagnostic Accuracy of a Deep Learning-Based Software for Automated Multiparametric Echocardiographic Measurements",
+     "status": "RECRUITING",
+     "url": "https://clinicaltrials.gov/study/NCT07738419"
+    },
+    {
+     "nct_id": "NCT07701369",
+     "title": "Relevance of Artificial Intelligence-Assisted Echocardiography for Left Ventricular Ejection Fraction Assessment in Geriatric Patients",
+     "status": "RECRUITING",
+     "url": "https://clinicaltrials.gov/study/NCT07701369"
+    },
+    {
+     "nct_id": "NCT05919342",
+     "title": "Screening for earlY Heart Failure Diagnosis and Management in Primary Care or at HOme Using Natriuretic Peptides and echocardiographY \"SYMPHONY-HF\"",
+     "status": "RECRUITING",
+     "url": "https://clinicaltrials.gov/study/NCT05919342"
+    },
+    {
+     "nct_id": "NCT07486271",
+     "title": "Artificial Intelligence in Aortic Regurgitation",
+     "status": "RECRUITING",
+     "url": "https://clinicaltrials.gov/study/NCT07486271"
+    },
+    {
+     "nct_id": "NCT05860608",
+     "title": "Multidisciplinary Approach for High-risk Patients Leading to Early Diagnosis of Canadians With Heart Failure",
+     "status": "WITHDRAWN",
+     "url": "https://clinicaltrials.gov/study/NCT05860608"
+    }
+   ],
+   "open_questions": [
+    "K210791: per-measurement IEC point estimates and CIs are not given in the summary (only that all upper bounds < 0.25); the list of 'claimed measurements' validated is inferred from Table 5-2 (p.6).",
+    "K210791: FDA Table 1 reports 72.6%/67.4% male whereas the matching Nat Commun 2022 paper reports 69% women for the same 600-subject cohort; unresolved.",
+    "K233676: RMSE units for strain are not stated; the RMSE ranges (2.6-4.12 GLS; 4.84-9.54 regional) are given without the per-view breakdown; LVEF/volume/Doppler measurements carried over from v1 were not re-reported in the v2 summary.",
+    "K233676: number of clinical sites for Datasets 1-3 and the names of the 8 ultrasound vendors are not stated; per-vendor or per-subgroup results are not reported.",
+    "Training set size for the FDA-cleared software versions is not disclosed in either summary; the 1145-echo training figure is from the 2022 Lancet Digital Health development paper and may not reflect the cleared versions.",
+    "Company press coverage dates the Us2.v1 clearance announcement to Sept 14, 2021; openFDA decision date is 2021-07-27 (used here).",
+    "NCT05705869 (TARGET-HF-DM, Glasgow) was returned by a clinicaltrials.gov search for 'Us2.ai' but the record text fetched did not contain a Us2.ai mention; excluded pending confirmation.",
+    "Some company-listed 2025-2026 publications (Heart2Miss, PANACEA-HF, JACC contrast-echo, PCWP estimation) were not resolved to PMIDs/DOIs and are omitted; the 'EHJ-DH mortality' item resolves to Merin 2026 (doi 10.1093/ehjdh/ztaf148) and the 'study-time' item to Hirata 2024 (J Echocardiogr), both now listed.",
+    "The Sakamoto 2026 JAHA RCT, Campbell 2025 EJHF, Firima 2024 and Saijo 2026 abstracts do not name the software vendor; attribution to Us2.ai was confirmed from the open-access full texts (Europe PMC PMC12909003, PMC12803686, PMC10912015, PMC13322393), which name Us2.ai (Campbell and Saijo: version 1.4.1).",
+    "Peer-reviewed studies report the Us2.ai software version only occasionally (e.g. 1.4.1 in Campbell 2025 and Saijo 2026; 1.4.5 in Celestin 2026); mapping of these versions to the FDA-cleared models V1.0.0 (K210791) and V2.0.0 (K233676) is not published."
+   ],
+   "sources": [
+    {
+     "fact": "K210791 device description, IFU, predicate K173780, validation cohort (600 studies), IEC criterion",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K210791.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K210791 Form FDA 3881 (page 3, image-only): IFU text reads 'Us2.v1 is a fully automated software platform that processes, analyses and makes measurements on acquired transthoracic cardiac ultrasound images, automatically producing a full report...'; Prescription Use",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K210791.pdf (p.3, Form FDA 3881; image-only page transcribed from the rendered PDF)",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K233676 IFU, device description, predicate K210791, cohorts (n=3029/260/192), 8 vendors, GE EchoPAC comparator",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233676.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K233676 p.7 technological comparison table (measurements added in v2) and p.9 RMSE/ICC results and SE conclusion (image-only pages, transcribed from render)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233676.pdf (pp.7 and 9; image-only pages transcribed from the rendered PDF)",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Decision dates 2021-07-27 and 2024-04-01, product code QIH, applicant Eko.Ai Pte Ltd. D/B/A Us2.Ai, device names Us2.v1/Us2.v2",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K210791; https://api.fda.gov/device/510k.json?search=k_number:K233676",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Paper metadata, abstracts and PMIDs",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ (esearch/esummary/efetch, this session)",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "DOI resolution and title match for all listed papers",
+     "url_or_file": "https://api.crossref.org/works/<doi> (this session)",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "Trial records and Us2.ai mentions",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies?query.term=Us2.ai (this session)",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Company regulatory status, deployment and product claims",
+     "url_or_file": "https://us2.ai/resources/regulatory-status/ ; https://us2.ai/platform-overview/ ; https://us2.ai/clinical-evidence/",
+     "verification": "company"
+    },
+    {
+     "fact": "Vendor attribution for Campbell 2025, Sakamoto 2026, Firima 2024 and Saijo 2026 (full text names Us2.ai)",
+     "url_or_file": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12803686/fullTextXML ; .../PMC12909003/fullTextXML ; .../PMC10912015/fullTextXML ; .../PMC13322393/fullTextXML",
+     "verification": "peer_reviewed"
+    }
+   ]
+  },
+  {
+   "id": "us2-ca",
+   "product_name": "Us2.ca",
+   "company": "Us2.ai (Eko.ai Pte. Ltd. d/b/a Us2.ai)",
+   "company_website": "https://us2.ai/",
+   "product_url": "https://us2.ai/features/cardiac-amyloidosis/",
+   "category": "amyloid-indicator",
+   "tags": [
+    "cardiac amyloidosis",
+    "A4C video deep learning",
+    "increased LV wall thickness",
+    "SDJ",
+    "special controls",
+    "adjunctive status indicator",
+    "cloud"
+   ],
+   "modality_scope": [
+    "TTE",
+    "apical 4-chamber video clips"
+   ],
+   "deployment": [
+    "cloud ('Hosted on Us2.ai's platform on 3rd party infrastructure')",
+    "integrated into the Us2.v2 reporting platform"
+   ],
+   "summary": "Video-based deep-learning module added to the Us2.v2 platform that analyzes apical four-chamber clips to flag adult patients with IVSd or LVPWd >=12 mm who may need follow-up for cardiac amyloidosis. Cleared June 20, 2025 (K250151) under 21 CFR 870.2200 special controls with Ultromics EchoGo Amyloidosis 1.0 (K240860) as predicate; trained on 4,371 patients and externally validated on 1,647 patients from six US and Japanese sites (sensitivity 86.9%, specificity 87.4% among the 87.1% with a confident prediction).",
+   "intended_use_quote": "The primary intended function of Us2.ca is to automatically identify patients who require additional follow-up for cardiac amyloidosis. In doing so, the primary benefit is to improve clinical echocardiographic workflow, enabling clinicians to generate and edit reports faster, with precision and with full control. The final clinical decision of the results still remains with the clinicians.",
+   "indications_for_use_quote": "Us2.ca processes acquired transthoracic cardiac ultrasound images to support qualified cardiologists, sonographers, or other licensed professional healthcare practitioners in their diagnosis of cardiac amyloidosis. Us2.ca is intended for use only in adult patients with increased left ventricular wall thickness, defined as an interventricular septal thickness (IVSd) or left ventricular posterior wall thickness (LVPWd) ≥ 12mm. Us2.ca is not intended to provide a diagnosis and does not replace current standards of care. The results from Us2.ca are not intended to exclude the need for further follow-up on cardiac amyloidosis.",
+   "embedded_ai_features": [
+    "Video-based convolutional deep-learning classifier on A4C clips for cardiac amyloidosis presence",
+    "Confidence thresholding on image quality and prediction (no output for ~13% of patients)",
+    "Intended only for adults with IVSd or LVPWd >=12 mm (the summary does not describe how wall thickness is determined or gated)",
+    "Guideline-based automated report text with disease indications"
+   ],
+   "clearances": [
+    {
+     "k_number": "K250151",
+     "decision_date": "2025-06-20",
+     "pathway": "510(k)",
+     "product_code": "SDJ",
+     "predicates": [
+      "K240860"
+     ],
+     "changes_summary": "New indication: 'Us2.ca is an enhancement to Us2.ai existing Us2.v2 software, adding the capability to detect cardiac amyloidosis.' Predicate EchoGo Cardiac Amyloidosis 1.0 (Ultromics, K240860, cleared Nov 15, 2024). Differences from predicate: intended population is adults with IVSd/LVPWd >=12 mm (predicate: adults >=65 with heart failure); users include sonographers and other licensed practitioners; characterized as a 'clinical decision-making support tool' rather than 'diagnostic aid'. Does not differentiate ATTR (wild-type/hereditary) from AL.",
+     "notable_flags": [
+      "Special controls (21 CFR 870.2200, adjunctive cardiovascular status indicator)",
+      "cloud",
+      "Reviewed by Office of Cardiovascular Devices",
+      "Externally validated on GE and Philips only; Siemens in training only",
+      "Form FDA 3881 states '> 12mm' while the 510(k) summary states '≥ 12mm'"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K250151.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K250151",
+     "endpoint": "Cardiac amyloidosis detection from A4C clips in patients with IVSd or LVPWd >=12 mm",
+     "metric": "Sensitivity",
+     "value": "86.9% (95% CI 84.2%-89.7%)",
+     "comparator": "Cardiac amyloidosis diagnosis (CA group vs control group; reference standard not detailed in summary)",
+     "n_studies": null,
+     "n_patients": 1647,
+     "n_sites": 6,
+     "dataset_description": "Retrospective case-control external validation: 1647 patients (664 CA, 983 controls) pooled from six clinical sites across the United States and Japan; GE and Philips systems only; DICOM from routine clinical evaluations via a range of PACS systems. Testing demographics: CA cases 76.5% male, 40.8% aged 71-80; controls 64.2% male; race CA 36.1% African American/32.7% White/27.4% Asian; BMI 25.8+/-5.3 (CA) vs 29.1+/-7.4 (controls). Training set (4371 patients) from entirely separate data providers.",
+     "subgroup_notes": "Computed on the 1434 patients with a confident prediction (574 CA, 860 controls).",
+     "quote": "When tested on a total of 1647 patients, Us2.ca was able to generate a confident prediction for 1434 patients (CA group: 574 patients; Controls group: 860 patients), in which Us2.ca performed with a sensitivity of 86.9% (95% CI: 84.2%-89.7%) and specificity of 87.4% (95% CI: 85.2%-89.7%).",
+     "page": 13,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K250151",
+     "endpoint": "Cardiac amyloidosis detection from A4C clips",
+     "metric": "Specificity",
+     "value": "87.4% (95% CI 85.2%-89.7%)",
+     "comparator": "Control group (increased LV wall thickness without CA)",
+     "n_studies": null,
+     "n_patients": 1647,
+     "n_sites": 6,
+     "dataset_description": "Retrospective case-control external validation: 1647 patients (664 CA, 983 controls) pooled from six clinical sites across the United States and Japan; GE and Philips systems only; DICOM from routine clinical evaluations via a range of PACS systems. Testing demographics: CA cases 76.5% male, 40.8% aged 71-80; controls 64.2% male; race CA 36.1% African American/32.7% White/27.4% Asian; BMI 25.8+/-5.3 (CA) vs 29.1+/-7.4 (controls). Training set (4371 patients) from entirely separate data providers.",
+     "subgroup_notes": "Computed on 1434 patients with a confident prediction.",
+     "quote": "Us2.ca performed with a sensitivity of 86.9% (95% CI: 84.2%-89.7%) and specificity of 87.4% (95% CI: 85.2%-89.7%).",
+     "page": 13,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K250151",
+     "endpoint": "Proportion of tested patients receiving a confident prediction",
+     "metric": "Yield",
+     "value": "87.1% (1434/1647)",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": 1647,
+     "n_sites": 6,
+     "dataset_description": "Retrospective case-control external validation: 1647 patients (664 CA, 983 controls) pooled from six clinical sites across the United States and Japan; GE and Philips systems only; DICOM from routine clinical evaluations via a range of PACS systems. Testing demographics: CA cases 76.5% male, 40.8% aged 71-80; controls 64.2% male; race CA 36.1% African American/32.7% White/27.4% Asian; BMI 25.8+/-5.3 (CA) vs 29.1+/-7.4 (controls). Training set (4371 patients) from entirely separate data providers.",
+     "subgroup_notes": null,
+     "quote": "The overall yield, which refers to the proportion of total tested patients for whom the device was able to generate a confident prediction, was sufficiently high at 87.1%.",
+     "page": 13,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K250151",
+     "endpoint": "Subgroup by age",
+     "metric": "Sensitivity / specificity",
+     "value": "<65 y: sens 78.02% (69.51-86.53), spec 88.63% (85.27-91.99); >=65 y: sens 88.7% (85.87-91.54), spec 86.58% (83.63-89.52)",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": 1647,
+     "n_sites": null,
+     "dataset_description": "Retrospective case-control external validation: 1647 patients (664 CA, 983 controls) pooled from six clinical sites across the United States and Japan; GE and Philips systems only; DICOM from routine clinical evaluations via a range of PACS systems. Testing demographics: CA cases 76.5% male, 40.8% aged 71-80; controls 64.2% male; race CA 36.1% African American/32.7% White/27.4% Asian; BMI 25.8+/-5.3 (CA) vs 29.1+/-7.4 (controls). Training set (4371 patients) from entirely separate data providers.",
+     "subgroup_notes": "Sensitivity lower in patients <65 years (78.0%).",
+     "quote": "Stratified by Age ... <65 years 78.02 (69.51, 86.53) 88.63 (85.27, 91.99) >= 65 years 88.7 (85.87, 91.54) 86.58 (83.63, 89.52)",
+     "page": 13,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K250151",
+     "endpoint": "Subgroup by sex",
+     "metric": "Sensitivity / specificity",
+     "value": "Female: sens 85.61% (79.62-91.59), spec 87.83% (84.15-91.5); Male: sens 87.41% (84.3-90.52), spec 87.21% (84.43-89.99)",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": 1647,
+     "n_sites": null,
+     "dataset_description": "Retrospective case-control external validation: 1647 patients (664 CA, 983 controls) pooled from six clinical sites across the United States and Japan; GE and Philips systems only; DICOM from routine clinical evaluations via a range of PACS systems. Testing demographics: CA cases 76.5% male, 40.8% aged 71-80; controls 64.2% male; race CA 36.1% African American/32.7% White/27.4% Asian; BMI 25.8+/-5.3 (CA) vs 29.1+/-7.4 (controls). Training set (4371 patients) from entirely separate data providers.",
+     "subgroup_notes": "Test set 22.7% female among CA cases, 35.6% among controls.",
+     "quote": "Stratified by Gender ... Female 85.61 (79.62, 91.59) 87.83 (84.15, 91.5) Male 87.41 (84.3, 90.52) 87.21 (84.43, 89.99)",
+     "page": 13,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K250151",
+     "endpoint": "Subgroup by race",
+     "metric": "Sensitivity / specificity",
+     "value": "Asian: sens 92.31% (88.13-96.49), spec 85.29% (80.43-90.15); African American: sens 85.38% (80.62-90.13), spec 87.5% (83.57-91.43); White: sens 83.7% (78.36-89.03), spec 88.73% (85.4-92.06); Hispanic/Latino: sens 100% (n=5 CA, no controls); Others: sens 83.33% (53.51-113.15), spec 90.91% (73.92-100)",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": 1647,
+     "n_sites": null,
+     "dataset_description": "Retrospective case-control external validation: 1647 patients (664 CA, 983 controls) pooled from six clinical sites across the United States and Japan; GE and Philips systems only; DICOM from routine clinical evaluations via a range of PACS systems. Testing demographics: CA cases 76.5% male, 40.8% aged 71-80; controls 64.2% male; race CA 36.1% African American/32.7% White/27.4% Asian; BMI 25.8+/-5.3 (CA) vs 29.1+/-7.4 (controls). Training set (4371 patients) from entirely separate data providers.",
+     "subgroup_notes": "Hispanic/Latino subgroup has only 5 CA cases and no controls; 'Others' CI exceeds 100%, indicating very small n.",
+     "quote": "Stratified by Race ... Asian 92.31 (88.13, 96.49) 85.29 (80.43, 90.15) African American 85.38 (80.62, 90.13) 87.5 (83.57, 91.43) Hispanic or Latino 100 (100, 100) - White 83.7 (78.36, 89.03) 88.73 (85.4, 92.06) Others 83.33 (53.51, 113.15) 90.91 (73.92, 100)",
+     "page": 13,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K250151",
+     "endpoint": "Subgroup by ultrasound vendor",
+     "metric": "Sensitivity / specificity",
+     "value": "Philips: sens 84.17% (80.58-87.76), spec 88.42% (85.31-91.54); GE: sens 93.14% (89.4-96.89), spec 86.41% (83.24-89.58)",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": 1647,
+     "n_sites": null,
+     "dataset_description": "Retrospective case-control external validation: 1647 patients (664 CA, 983 controls) pooled from six clinical sites across the United States and Japan; GE and Philips systems only; DICOM from routine clinical evaluations via a range of PACS systems. Testing demographics: CA cases 76.5% male, 40.8% aged 71-80; controls 64.2% male; race CA 36.1% African American/32.7% White/27.4% Asian; BMI 25.8+/-5.3 (CA) vs 29.1+/-7.4 (controls). Training set (4371 patients) from entirely separate data providers.",
+     "subgroup_notes": "Siemens data used in training but not in testing; labeling warns of lower accuracy on non-GE/Philips systems (p.7).",
+     "quote": "Us2.ca is externally validated on data from Philips and GE vendors. ... Philips 84.17 (80.58, 87.76) 88.42 (85.31, 91.54) GE 93.14 (89.4, 96.89) 86.41 (83.24, 89.58)",
+     "page": 14,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K250151",
+     "endpoint": "Subgroup by data source (clinical center)",
+     "metric": "Sensitivity / specificity",
+     "value": "Center 1: sens 86.55% (82.63-90.48), spec 87.91% (85.25-90.57); Center 2: sens 78.21% (69.04-87.37), spec 92.11% (83.53-100); Center 3: sens 86.27% (76.83-95.72), spec 86.67% (76.73-96.6); Center 4: sens 92.26% (88.05-96.47), spec 85.35% (80.43-90.28)",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": 1647,
+     "n_sites": null,
+     "dataset_description": "Retrospective case-control external validation: 1647 patients (664 CA, 983 controls) pooled from six clinical sites across the United States and Japan; GE and Philips systems only; DICOM from routine clinical evaluations via a range of PACS systems. Testing demographics: CA cases 76.5% male, 40.8% aged 71-80; controls 64.2% male; race CA 36.1% African American/32.7% White/27.4% Asian; BMI 25.8+/-5.3 (CA) vs 29.1+/-7.4 (controls). Training set (4371 patients) from entirely separate data providers.",
+     "subgroup_notes": "Four centers reported although the narrative states six clinical sites; mapping not given.",
+     "quote": "Stratified by Data Source ... Center 1 86.55 (82.63, 90.48) 87.91 (85.25, 90.57) Center 2 78.21 (69.04, 87.37) 92.11 (83.53, 100) Center 3 86.27 (76.83, 95.72) 86.67 (76.73, 96.6) Center 4 92.26 (88.05, 96.47) 85.35 (80.43, 90.28)",
+     "page": 14,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K250151",
+     "endpoint": "Video-based deep-learning CA detection, external validation (published development paper)",
+     "metric": "Accuracy / sensitivity / specificity / AUC",
+     "value": "US cohort (Duke): accuracy 87.5%, sens 86.6%, spec 87.9%; Japan cohort (NCVC): accuracy 88.4%, sens 92.3%, spec 85.3%; overall AUC 0.93 (95% CI 0.91-0.95)",
+     "comparator": "Confirmed CA vs LVH controls",
+     "n_studies": null,
+     "n_patients": 5776,
+     "n_sites": null,
+     "dataset_description": "Ioannou A et al., Circ Cardiovasc Imaging 2026 (doi 10.1161/CIRCIMAGING.125.018991): training UK National Amyloidosis Centre + Taiwan MacKay (CA 2241; controls 2130 = 4371, identical to the K250151 training set); external test Duke (CA 334; LVH controls 668) and Japan NCVC (CA 181; controls 222).",
+     "subgroup_notes": "CA vs hypertension AUC 0.92; vs HCM 0.91; vs AS 0.93; vs CKD 0.93.",
+     "quote": "External validation of the deep-learning model showed accuracies of 87.5% (sensitivity, 86.6%; specificity, 87.9%) in the United States and 88.4% (sensitivity, 92.3%; specificity, 85.3%) in the Japanese cohort.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K250151",
+     "endpoint": "Us2.Ca stand-alone CA detection in a global multiethnic registry (published, independent of FDA test set)",
+     "metric": "AUC / accuracy / sensitivity / specificity",
+     "value": "AUC 0.89; accuracy 80%; sensitivity 76%; specificity 91%; indeterminate classification in 9% of cases",
+     "comparator": "Consensus-criteria adjudicated CA diagnosis; controls = 202 suspected ATTR-CA with negative diagnostic evaluation + 114 biopsy-proven extracardiac AL without cardiac involvement",
+     "n_studies": null,
+     "n_patients": 1043,
+     "n_sites": null,
+     "dataset_description": "Slivnick JA et al., Circ Cardiovasc Imaging 2026 (doi 10.1161/CIRCIMAGING.126.019610): Amyloidosis Imaging International Consortium registry, 727 CA and 316 controls; used for training/internal validation of the combined AI echo-clinical model and to benchmark the existing Us2.Ca model.",
+     "subgroup_notes": "Combined AI echo-clinical model (not a cleared function): AUC 0.94, accuracy 90%, sensitivity 93%, specificity 85%, no indeterminate cases.",
+     "quote": "The AI-ECM demonstrated superior performance (area under the curve, 0.94; accuracy, 90%; sensitivity, 93%; specificity, 85%) compared with the Us2.Ca (area under the curve, 0.89; accuracy, 80%; sensitivity, 76%; specificity, 91%; P=0.006). While the Us2.Ca model classification was indeterminate in 9% of the cases, the AI-ECM allowed classification of all cases.",
+     "page": null,
+     "verification": "peer_reviewed"
+    }
+   ],
+   "training_data": {
+    "disclosed": true,
+    "n_studies": null,
+    "n_patients": 4371,
+    "n_sites": null,
+    "description": "Training dataset of 4,371 patients (2,241 CA cases; 2,130 controls); ultrasound data from GE, Philips and Siemens systems. Training demographics: CA cases 83% male, 84.6% White, 44.1% aged 71-80; controls 61.7% male, 74.8% Asian; BMI 26.3 kg/m2 both groups. The FDA summary does not name the training sites; the matching development paper (Ioannou 2026) identifies them as the UK National Amyloidosis Centre and Taiwan MacKay Memorial Hospital (CA 2241; controls 2130).",
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K250151.pdf (p.12); Ioannou A et al., Circ Cardiovasc Imaging 2026, doi 10.1161/CIRCIMAGING.125.018991",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": 1647,
+    "n_sites": 6,
+    "description": "Independent pooled external validation dataset of 1,647 patients (664 CA, 983 controls) from six clinical sites across the United States and Japan; retrospective routine clinical DICOM; GE and Philips systems only; patient-level analysis (one sample per patient). Confident predictions in 1,434 (87.1%). 'The training and external validation datasets were sourced from entirely separate data providers, ensuring no overlap.'",
+    "independent_of_training": true,
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K250151.pdf (pp.11-14)",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Company press release (July 7, 2025): cardiac amyloidosis feature of the 'AI Echo Copilot' software FDA cleared and CE marked; cites multicenter validation presented at EuroEcho-Imaging 2024 (Ioannou A et al.) with 'datasets nearly twice the size of existing models'.",
+     "source_url": "https://us2.ai/news/detection-of-cardiac-amyloidosis-with-us2-ai-now-fda-cleared-and-ce-marked/",
+     "verification": "company"
+    },
+    {
+     "description": "ASE 2025 abstract listed on the Us2.ai evidence page (Randazzo MJ, Slivnick JA, ... Fontana M, Lang RM): external validation in 1,142 patients across 10 centers (787 confirmed CA, 229 ATTR-negative, 126 non-cardiac AL); AUC 0.87; sensitivity 74% overall / 82% for wall thickness >12 mm; specificity 93%; accuracy 80% / 83%; feasibility 89%. Conference abstract, not peer-reviewed; no DOI.",
+     "source_url": "https://us2.ai/clinical-evidence/external-validation-of-deep-learning-based-echo-detection-of-cardiac-amyloidosis-using-a-global-multiethnic-population/",
+     "verification": "company"
+    },
+    {
+     "description": "AI-SCREEN-CA (late-breaking, AHA Scientific Sessions 2025) per company feature page: 11,000+ consecutive patients; sensitivity 82.8%, specificity 95.2%; CA prevalence 16.7% in screen-positive vs 3.0% in screen-negative. Not peer-reviewed; unverified.",
+     "source_url": "https://us2.ai/features/cardiac-amyloidosis/",
+     "verification": "company"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Diagnosis of Cardiac Amyloidosis on Echocardiography Using Artificial Intelligence",
+     "first_author": "Ioannou A",
+     "journal": "Circulation: Cardiovascular Imaging",
+     "year": 2026,
+     "doi": "10.1161/CIRCIMAGING.125.018991",
+     "pmid": "41674454",
+     "url": "https://doi.org/10.1161/CIRCIMAGING.125.018991",
+     "relation": "algorithm-development",
+     "n_subjects": 5776,
+     "key_result": "Video-based DL model trained on UK NAC + Taiwan MacKay (CA 2241; controls 2130, matching the K250151 training set); external accuracy 87.5% (US, Duke) and 88.4% (Japan, NCVC); AUC 0.93 vs 0.88 for AI-measurement multiparametric score. Us2.ai employees co-authors.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Multimodal Artificial Intelligence for Cardiac Amyloidosis Diagnosis: Integrating Echocardiography With Clinical and Laboratory Data for Improved Detection",
+     "first_author": "Slivnick JA",
+     "journal": "Circulation: Cardiovascular Imaging",
+     "year": 2026,
+     "doi": "10.1161/CIRCIMAGING.126.019610",
+     "pmid": "42200278",
+     "url": "https://doi.org/10.1161/CIRCIMAGING.126.019610",
+     "relation": "external-validation",
+     "n_subjects": 1043,
+     "key_result": "Amyloidosis Imaging International Consortium registry (727 CA, 316 controls incl. 202 suspected ATTR-CA with negative work-up and 114 extracardiac AL): the TTE-only Us2.Ca model alone gave AUC 0.89, accuracy 80%, sensitivity 76%, specificity 91%, indeterminate in 9%; adding clinical/laboratory data (AI-ECM) gave AUC 0.94, accuracy 90%, sensitivity 93%, specificity 85% (P=0.006). Us2.ai-affiliated co-authors.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [
+    {
+     "nct_id": "NCT07529860",
+     "title": "AI-based Echocardiography for Detection of Cardiac Amyloidosis",
+     "status": "NOT_YET_RECRUITING",
+     "url": "https://clinicaltrials.gov/study/NCT07529860"
+    }
+   ],
+   "open_questions": [
+    "The FDA summary does not state the reference standard used to adjudicate CA cases and controls in the test set (e.g., biopsy, scintigraphy, cardiac MRI).",
+    "The narrative states six clinical sites but the data-source subgroup table lists four centers; the site-to-center mapping is not given.",
+    "Wall-thickness threshold discrepancy: Form FDA 3881 says IVSd or LVPWd '> 12mm', the 510(k) summary says '≥ 12mm'.",
+    "The FDA test set (1,647; 664 CA/983 controls) is larger than the published external test sets in Ioannou 2026 (1,405; 515 CA/890 controls); the additional sites are unidentified.",
+    "The company-cited 2026 Circ Cardiovasc Imaging multimodal paper resolves to Slivnick JA et al. (doi 10.1161/CIRCIMAGING.126.019610); its '93% sensitivity and 90% accuracy' describe the combined AI echo-clinical model, not Us2.Ca alone (AUC 0.89, sensitivity 76%, specificity 91%, accuracy 80%). The AI-SCREEN-CA AHA 2025 results remain unresolved to a PMID/DOI.",
+    "The 'Others' race subgroup CI (53.51-113.15) and the Hispanic/Latino subgroup (n=5, no controls) indicate very small strata; exact n per subgroup not reported.",
+    "Whether Us2.ca is sold as a separately licensed module or bundled in the Us2.v2 platform is not stated."
+   ],
+   "sources": [
+    {
+     "fact": "K250151 IFU, device description, predicate K240860, special controls, training (4,371) and test (1,647) datasets, demographics, sensitivity/specificity and subgroup tables",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K250151.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Decision date 2025-06-20, product code SDJ, regulation 870.2200, advisory committee CV, applicant Eko.Ai Pte Ltd. D/B/A Us2.Ai",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K250151",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Ioannou 2026 abstract, author affiliations (Us2.ai: Lim SC, Frost M, Tee WW) and training-set match to K250151",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=41674454",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "Slivnick JA et al., Eur Heart J 2025 (doi 10.1093/eurheartj/ehaf387) is an Ultromics-authored paper (predicate EchoGo Amyloidosis), not a Us2.ca paper; excluded",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40631729",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "Company press release, feature page and ASE 2025 abstract summary",
+     "url_or_file": "https://us2.ai/news/detection-of-cardiac-amyloidosis-with-us2-ai-now-fda-cleared-and-ce-marked/ ; https://us2.ai/features/cardiac-amyloidosis/",
+     "verification": "company"
+    },
+    {
+     "fact": "NCT07529860 record names Us2.ai software as the AI algorithm",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies/NCT07529860",
+     "verification": "fda_database"
+    }
+   ]
+  }
+ ],
+ "notes": "Verified copy. All FDA summary numbers, page numbers, predicates, decision dates (openFDA) and product codes were checked against the K210791, K233676 and K250151 summary texts; K233676 pp.7 and 9 and K210791 p.3 are image-only and were checked against the rendered PDF pages (all RMSE/ICC values and the v2 measurement-addition table confirmed). All DOIs were resolved via Crossref with matching titles; PubMed abstracts were used to check every peer-reviewed quote. Journal years follow PubMed issue dates (Crossref lists the online-first year 2023 for Myhre ztad072, Tromp ztad079 and Salehi ERJ Open Res). Vendor attribution for papers whose abstracts do not name Us2.ai was confirmed from Europe PMC full text. The 1145-echo training figure was removed from the structured training_data fields because it comes from a 2022 workflow paper and is not tied to the cleared versions. Company-page claims (parameter counts, ASE 2025 abstract, AI-SCREEN-CA) remain labeled 'company' and unverified. Slivnick 2025 EHJ (Ultromics) remains excluded."
+}

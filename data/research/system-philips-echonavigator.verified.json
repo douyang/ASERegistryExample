@@ -1,0 +1,414 @@
+{
+  "batch_id": "philips-echonavigator",
+  "families": [
+    {
+      "id": "philips-echonavigator",
+      "product_name": "EchoNavigator interventional echo/X-ray fusion AI features (Automatic Annotations, AutoViews, DeviceGuide)",
+      "company": "Philips Medical Systems Nederland B.V.",
+      "company_website": "https://www.philips.com",
+      "product_url": "https://www.usa.philips.com/healthcare/image-guided-therapy/shd-suite",
+      "category": "interventional-guidance",
+      "tags": [
+        "Automatic Annotations",
+        "3D heart model",
+        "AutoViews",
+        "MPR auto-alignment",
+        "DeviceGuide",
+        "M-TEER device detection",
+        "device tracking",
+        "3D pose estimation",
+        "echo/X-ray fusion",
+        "structural heart intervention",
+        "PASCAL Ace"
+      ],
+      "modality_scope": [
+        "TEE",
+        "3D",
+        "interventional echo/X-ray fusion"
+      ],
+      "deployment": [
+        "ultrasound-system-embedded",
+        "interventional X-ray system software"
+      ],
+      "summary": "EchoNavigator is Philips software that registers live 3D TEE to live X-ray from compatible Philips interventional X-ray systems (Azurion, per Philips press releases) for structural heart procedures. R3.0.3 (K200713) added Automatic Annotations, which propose annotations and tissue contours of cardiac anatomical structures in the echo volume; R4.0 (K221270) added AutoViews, which uses those automatic annotations to align the 3D echo volume and MPR planes; R5.0 (K253614) added DeviceGuide, a deep-learning function that detects, tracks and estimates the 3D pose of the Edwards PASCAL Ace M-TEER device in live 3D echo and X-ray. Only K253614 reports quantitative algorithm performance in its 510(k) summary.",
+      "intended_use_quote": "EchoNavigator is a tool that assists the interventionalist and surgeon with image guidance during treatment of cardiovascular disease for which the procedure uses both live X-ray and live Echo guidance. EchoNavigator can be used with compatible Echo- probes and Echo units in combination with compatible Philips interventional X-ray systems.",
+      "indications_for_use_quote": "EchoNavigator supports the interventionalist and surgeon in treatments where both live X-ray and live Echo guidance are used. The targeted patient population consists of patients with cardiovascular diseases requiring such a treatment.",
+      "embedded_ai_features": [
+        {
+          "name": "Automatic Annotations",
+          "function": "Proposes annotations and tissue contours for cardiac anatomical structures in the live 3D echo (TEE) volume, backed by a 3D heart model; annotations are transposed to the X-ray modality as navigation context. The K200713 and K221270 summaries do not use AI/ML terminology for this feature.",
+          "first_k_number": "K200713",
+          "quote": "the proposed device extends this functionality with Automatic Annotations. This functionality is allowing the user to identify anatomical structures in the echo modality and annotate them with annotations and tissue contours as proposed by the device."
+        },
+        {
+          "name": "AutoViews",
+          "function": "Uses the positions of the automatic annotations to automatically align the 3D echo volume and MPR planes to a clinically relevant orientation for a user-selected anatomical preset (aortic valve, mitral valve, left atrial appendage per the 2022 press release); in R5.0 views can also be aligned to the therapy device position.",
+          "first_k_number": "K221270",
+          "quote": "In the subject device, automatic annotations can be used to automatically align the 3D echo volume and the MPR planes with the position of these automatic annotations (called ‘AutoViews’)."
+        },
+        {
+          "name": "DeviceGuide (M-TEER therapy device detection, tracking and 3D pose estimation)",
+          "function": "Deep-learning algorithm that takes the 2D X-ray image, geometry information, the 3D echo volume and the TEE probe registration result and outputs the 3D position, orientation and openness angle of the M-TEER therapy device (Edwards PASCAL Ace only in this release) with detection status; overlays device shape, trajectory and orientation on X-ray and/or echo and generates device-focused echo views.",
+          "first_k_number": "K253614",
+          "quote": "DeviceGuide offers real-time automatic device detection, tracking and 3D pose-estimation in live Echo and live X-ray enabled by Artificial Intelligence which is built with Deep Learning technology."
+        }
+      ],
+      "clearances": [
+        {
+          "k_number": "K200713",
+          "decision_date": "2020-04-09",
+          "pathway": "510(k)",
+          "product_code": "LLZ",
+          "predicates": [
+            "K121781"
+          ],
+          "changes_summary": "EchoNavigator R3.0.3: added Automatic Annotations (device-proposed annotations and tissue contours of anatomical structures in the echo modality), Model View, touch-screen-module table-side control, and control from the Echo console. Reference device QLAB Advanced Quantification Software (K181264). No clinical testing; no algorithm performance data reported.",
+          "notable_flags": [
+            "Special 510(k)",
+            "reference device K181264 (QLAB)",
+            "no AI/ML terminology in summary",
+            "no performance metrics reported"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200713.pdf"
+        },
+        {
+          "k_number": "K221270",
+          "decision_date": "2022-05-31",
+          "pathway": "510(k)",
+          "product_code": "LLZ",
+          "predicates": [
+            "K200713"
+          ],
+          "changes_summary": "EchoNavigator R4.0: added AutoViews (automatic alignment of the 3D echo volume and MPR planes to the automatic annotations), minor 3D heart model updates (mitral valve leaflets and transseptal zone area), EchoNavigator UI on the Echo console touch screen, and updated rendering modes (MPR, TrueVue, GlassVue). No clinical study; no algorithm performance data reported.",
+          "notable_flags": [
+            "Special 510(k)",
+            "no AI/ML terminology in summary",
+            "no performance metrics reported"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K221270.pdf"
+        },
+        {
+          "k_number": "K253614",
+          "decision_date": "2026-03-17",
+          "pathway": "510(k)",
+          "product_code": "QIH",
+          "predicates": [
+            "K221270"
+          ],
+          "changes_summary": "EchoNavigator R5.0: added DeviceGuide, deep-learning-based real-time detection, tracking and 3D pose estimation of the Edwards PASCAL Ace M-TEER device in live 3D echo and live X-ray, with overlay and device-focused echo views; UI harmonization with the EPIQ console. Only new feature versus R4.0. Non-clinical algorithm V&V on 72 patients plus 41 out-of-domain patients.",
+          "notable_flags": [
+            "Traditional 510(k)",
+            "primary product code QIH with associated code LLZ",
+            "explicit deep learning claim",
+            "references FDA draft AI-enabled device software functions guidance (Jan 7, 2025)",
+            "no clinical study",
+            "developed with Edwards Lifesciences per press release"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253614.pdf"
+        }
+      ],
+      "performance_claims": [
+        {
+          "k_number": "K253614",
+          "endpoint": "DeviceGuide therapy-device positional accuracy vs reference standard",
+          "metric": "positional error specification limit",
+          "value": "≤5 mm (met)",
+          "comparator": "reference standard (ground truth) derived from pre-clinical high-resolution imaging data; element-level testing against manually annotated images",
+          "n_studies": null,
+          "n_patients": 72,
+          "n_sites": null,
+          "dataset_description": "Verification/validation dataset: procedural image data from 72 unique patients, plus 41 patients for out-of-domain testing; academic centers and community hospitals across the U.S. and Europe; acquired on a range of compatible Philips X-ray and Philips ultrasound systems under routine procedural conditions; at least 50% U.S. site data; algorithm frozen before testing and development data excluded from testing.",
+          "subgroup_notes": "41 additional patients used for out-of-domain testing; per-subgroup results not reported",
+          "quote": "Overall performance met predefined specification limits, including ≤5 mm positional accuracy and ≤10° trajectory/orientation accuracy. Algorithm latency met predefined specification, including detection and localization of the therapy device within 100ms of reception of the echo image. In a clinical review, five physicians assessed the algorithm output as sufficient in 93.1% of evaluated cases.",
+          "page": 11,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K253614",
+          "endpoint": "DeviceGuide therapy-device trajectory/orientation accuracy vs reference standard",
+          "metric": "angular error specification limit",
+          "value": "≤10° (met)",
+          "comparator": "reference standard (ground truth) derived from pre-clinical high-resolution imaging data; element-level testing against manually annotated images",
+          "n_studies": null,
+          "n_patients": 72,
+          "n_sites": null,
+          "dataset_description": "Verification/validation dataset: procedural image data from 72 unique patients, plus 41 patients for out-of-domain testing; academic centers and community hospitals across the U.S. and Europe; acquired on a range of compatible Philips X-ray and Philips ultrasound systems under routine procedural conditions; at least 50% U.S. site data; algorithm frozen before testing and development data excluded from testing.",
+          "subgroup_notes": "41 additional patients used for out-of-domain testing; per-subgroup results not reported",
+          "quote": "Overall performance met predefined specification limits, including ≤5 mm positional accuracy and ≤10° trajectory/orientation accuracy. Algorithm latency met predefined specification, including detection and localization of the therapy device within 100ms of reception of the echo image. In a clinical review, five physicians assessed the algorithm output as sufficient in 93.1% of evaluated cases.",
+          "page": 11,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K253614",
+          "endpoint": "DeviceGuide algorithm latency",
+          "metric": "time from echo image reception to device detection and localization",
+          "value": "within 100 ms (met specification)",
+          "comparator": "predefined specification",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Verification/validation dataset: procedural image data from 72 unique patients, plus 41 patients for out-of-domain testing; academic centers and community hospitals across the U.S. and Europe; acquired on a range of compatible Philips X-ray and Philips ultrasound systems under routine procedural conditions; at least 50% U.S. site data; algorithm frozen before testing and development data excluded from testing.",
+          "subgroup_notes": null,
+          "quote": "Overall performance met predefined specification limits, including ≤5 mm positional accuracy and ≤10° trajectory/orientation accuracy. Algorithm latency met predefined specification, including detection and localization of the therapy device within 100ms of reception of the echo image. In a clinical review, five physicians assessed the algorithm output as sufficient in 93.1% of evaluated cases.",
+          "page": 11,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K253614",
+          "endpoint": "Physician clinical review of DeviceGuide algorithm output",
+          "metric": "proportion of evaluated cases rated sufficient",
+          "value": "93.1%",
+          "comparator": "five physician reviewers",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Clinical review by five physicians of algorithm output; number of evaluated cases not stated in the summary",
+          "subgroup_notes": null,
+          "quote": "Overall performance met predefined specification limits, including ≤5 mm positional accuracy and ≤10° trajectory/orientation accuracy. Algorithm latency met predefined specification, including detection and localization of the therapy device within 100ms of reception of the echo image. In a clinical review, five physicians assessed the algorithm output as sufficient in 93.1% of evaluated cases.",
+          "page": 11,
+          "verification": "fda_summary"
+        }
+      ],
+      "training_data": {
+        "disclosed": false,
+        "n_studies": null,
+        "n_patients": null,
+        "n_sites": null,
+        "description": "Training/development dataset size not disclosed. K253614 states only that development data were excluded from testing and that the algorithm was frozen before testing. No training information for Automatic Annotations (K200713) or AutoViews (K221270).",
+        "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253614.pdf",
+        "verification": "fda_summary"
+      },
+      "validation_data": {
+        "n_studies": null,
+        "n_patients": 72,
+        "n_sites": null,
+        "description": "Verification/validation dataset: procedural image data from 72 unique patients, plus 41 patients for out-of-domain testing; academic centers and community hospitals across the U.S. and Europe; acquired on a range of compatible Philips X-ray and Philips ultrasound systems under routine procedural conditions; at least 50% U.S. site data; algorithm frozen before testing and development data excluded from testing. (K253614, DeviceGuide only). Number of sites not stated. Additional out-of-domain test set of 41 patients.",
+        "independent_of_training": true,
+        "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253614.pdf",
+        "verification": "fda_summary"
+      },
+      "prior_validations": [
+        {
+          "description": "K253614 summary: DeviceGuide AI algorithm verified and validated on procedural image data from 72 unique patients plus 41 out-of-domain patients from U.S. and European academic and community sites (≥50% U.S.), on Philips X-ray and ultrasound systems; met ≤5 mm positional and ≤10° trajectory/orientation accuracy limits, <100 ms latency, and five physicians rated output sufficient in 93.1% of evaluated cases. No clinical study required.",
+          "source_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253614.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "description": "Prospective multi-centre clinical utility evaluation of DeviceGuide (EchoNavigator SmartVue) in 51 consecutive PASCAL Ace M-TEER procedures at four structural heart centres (USA, Netherlands, Switzerland) using a structured qualitative questionnaire; teams rated the software helpful or very helpful in most cases (Biaggi et al., 2026).",
+          "source_url": "https://doi.org/10.1093/ehjimp/qyag048",
+          "verification": "peer_reviewed"
+        },
+        {
+          "description": "K200713 and K221270 summaries report only software verification and in-house simulated-use validation for Automatic Annotations and AutoViews; no algorithm accuracy data and no clinical testing.",
+          "source_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K221270.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "description": "Philips press release (March 26, 2026) states DeviceGuide was developed with Edwards Lifesciences and evaluated at investigational sites in Europe and the U.S., including NewYork-Presbyterian/Columbia University Irving Medical Center; no quantitative performance figures given.",
+          "source_url": "https://www.usa.philips.com/a-w/about/news/archive/standard/news/press/2026/fda-clears-philips-ai-solution-that-provides-real-time-guidance-during-complex-minimally-invasive-heart-valve-repair.html",
+          "verification": "company"
+        }
+      ],
+      "papers": [
+        {
+          "title": "Artificial intelligence based fusion imaging streamlining mitral transcatheter edge-to-edge repair",
+          "first_author": "Biaggi P",
+          "journal": "European Heart Journal - Imaging Methods and Practice",
+          "year": 2026,
+          "doi": "10.1093/ehjimp/qyag048",
+          "pmid": "41889595",
+          "url": "https://doi.org/10.1093/ehjimp/qyag048",
+          "relation": "real-world",
+          "n_subjects": 51,
+          "key_result": "Prospective multi-centre study of DeviceGuide EchoNavigator SmartVue in 51 PASCAL Ace M-TEER procedures at four centres (USA, Netherlands, Switzerland); structured qualitative questionnaire; teams rated the software helpful or very helpful in guiding the intervention in most cases; no outcome or accuracy endpoints.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Mitral Transcatheter Edge-to-Edge Repair Using Novel Augmented Imaging Software",
+          "first_author": "Hahn RT",
+          "journal": "JACC: Case Reports",
+          "year": 2025,
+          "doi": "10.1016/j.jaccas.2025.106160",
+          "pmid": "41945536",
+          "url": "https://doi.org/10.1016/j.jaccas.2025.106160",
+          "relation": "other",
+          "n_subjects": null,
+          "key_result": "Case report describing DeviceGuide (then investigational) automatically tracking the M-TEER device within the 3D TEE volume and generating auto-aligned MPR and orthogonal target views with real-time device position/trajectory indicators.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Safety and feasibility of novel technology fusing echocardiography and fluoroscopy images during MitraClip interventions",
+          "first_author": "Sündermann SH",
+          "journal": "EuroIntervention",
+          "year": 2014,
+          "doi": "10.4244/EIJV9I10A203",
+          "pmid": "24103772",
+          "url": "https://doi.org/10.4244/EIJV9I10A203",
+          "relation": "other",
+          "n_subjects": 42,
+          "key_result": "Base EchoNavigator fusion (pre-AI release): 21 MitraClip patients with EchoNavigator vs 21 before installation; radiation dose 146.5±123.6 vs 146.8±134.1 Gy/cm2 (p=0.9) and procedure time 136.2±50.2 vs 125.7±51.2 min (p=0.5); feasible and safe.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Initial clinical experience using the EchoNavigator-system during structural heart disease interventions",
+          "first_author": "Balzer J",
+          "journal": "World Journal of Cardiology",
+          "year": 2015,
+          "doi": "10.4330/wjc.v7.i9.562",
+          "pmid": "26413233",
+          "url": "https://doi.org/10.4330/wjc.v7.i9.562",
+          "relation": "other",
+          "n_subjects": null,
+          "key_result": "Single-centre initial experience with the base EchoNavigator fusion system (pre-AI release) across LAA, ASD, PVL closure, transaortic valve repair and MitraClip procedures; reported as feasible and safe; no quantitative endpoints in abstract.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Feasibility, Safety and Accuracy of Echocardiography-Fluoroscopy Imaging Fusion During Percutaneous Atrial Septal Defect Closure in Children",
+          "first_author": "Hascoët S",
+          "journal": "Journal of the American Society of Echocardiography",
+          "year": 2018,
+          "doi": "10.1016/j.echo.2018.07.012",
+          "pmid": "30219347",
+          "url": "https://doi.org/10.1016/j.echo.2018.07.012",
+          "relation": "other",
+          "n_subjects": 31,
+          "key_result": "Prospective study of 31 children (median weight 26 kg) undergoing percutaneous ASD closure with base EchoNavigator fusion (pre-AI release): fusion and marker positioning feasible in real time in all cases; median echo-to-fluoroscopy registration distance on the occluder screw 0.5 mm in systole vs 2 mm in diastole (P<.0001) for both marker-based and 3D-echo-based measurements; feasible, safe and accurate in children >20 kg.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Left Atrial Appendage Closure Guided by Integrated Echocardiography and Fluoroscopy Imaging Reduces Radiation Exposure",
+          "first_author": "Jungen C",
+          "journal": "PLoS One",
+          "year": 2015,
+          "doi": "10.1371/journal.pone.0140386",
+          "pmid": "26465747",
+          "url": "https://doi.org/10.1371/journal.pone.0140386",
+          "relation": "other",
+          "n_subjects": 34,
+          "key_result": "Base EchoNavigator fusion (pre-AI release), single-centre open-label LAA closure (Amplatzer Cardiac Plug): 17 EchoNavigator vs 17 without; radiation dose 48.5±30.7 vs 93.9±64.4 Gy/cm2 (p=0.01, about 52% reduction), fluoroscopy time 16.7±7 vs 24.0±11.4 min (p=0.035), procedure time 89.6±28.8 vs 90.1±30.2 min (p=0.96). NCT01262508.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Safety and efficacy of transseptal puncture guided by real-time fusion of echocardiography and fluoroscopy",
+          "first_author": "Afzal S",
+          "journal": "Netherlands Heart Journal",
+          "year": 2017,
+          "doi": "10.1007/s12471-016-0937-0",
+          "pmid": "27966185",
+          "url": "https://doi.org/10.1007/s12471-016-0937-0",
+          "relation": "other",
+          "n_subjects": 88,
+          "key_result": "EchoNavigator Release II (pre-AI release), retrospective single-centre: 44 patients before vs 44 after introduction of fusion for transseptal puncture during MitraClip and LAA closure; no TSP adverse events in either group; time to TSP 18.48±5.62 vs 23.20±9.61 min (p=0.006).",
+          "verification": "doi_resolved"
+        }
+      ],
+      "clinical_trials": [
+        {
+          "nct_id": "NCT02529111",
+          "title": "Percutaneous Closure of Atrial Septal Defects in Children: Integration of 3D Echocardiography and Fluoroscopy Imaging.",
+          "status": "COMPLETED",
+          "url": "https://clinicaltrials.gov/study/NCT02529111"
+        },
+        {
+          "nct_id": "NCT02608008",
+          "title": "Safety and Efficacy of EchoNavigator System Release II During Structural Heart Interventions",
+          "status": "UNKNOWN",
+          "url": "https://clinicaltrials.gov/study/NCT02608008"
+        }
+      ],
+      "open_questions": [
+        "K200713 and K221270 summaries never use the terms AI, machine learning, deep learning or 'trained'; whether Automatic Annotations/AutoViews are ML-based (versus model-fitting) cannot be determined from the summaries.",
+        "No algorithm accuracy, dataset size, or clinical performance data for Automatic Annotations (K200713) or AutoViews (K221270) in the FDA summaries or in any located publication.",
+        "K253614: training/development dataset size, number of sites, number of evaluated cases in the five-physician clinical review, and actual measured error values (only specification limits ≤5 mm / ≤10° reported as 'met') are not disclosed.",
+        "K253614 lists product codes 'QIH, LLZ' (primary QIH); openFDA record lists QIH only. Recorded as QIH.",
+        "The two registered ClinicalTrials.gov studies (NCT02529111, NCT02608008) concern earlier EchoNavigator releases (pre-Automatic Annotations); no registered trial for DeviceGuide, AutoViews or Automatic Annotations was found (ClinicalTrials.gov API searches for 'DeviceGuide' returned nothing).",
+        "Biaggi 2026 refers to the product as 'DeviceGuide EchoNavigator SmartVue'; the relationship between the 'SmartVue' name and the cleared EchoNavigator R5.0 was not verified.",
+        "The EchoNavigator product page URL found by web search (usa.philips.com/healthcare/product/HCOPT08/...) redirects to the generic Azurion structural heart disease suite page; no dedicated public EchoNavigator R5.0 product page was located, so product_url points to the resolved SHD suite page.",
+        "PubMed queries 'EchoNavigator' (33 hits) and 'Philips echocardiography fluoroscopy fusion' (18 hits) returned no additional publications on Automatic Annotations, AutoViews or DeviceGuide beyond Biaggi 2026 and Hahn 2025; other hits concern the base fusion product or are case reports."
+      ],
+      "sources": [
+        {
+          "fact": "K200713 decision date 2020-04-09, product code LLZ, applicant Philips Medical Systems Nederland B.V., Special 510(k)",
+          "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K200713",
+          "verification": "openfda"
+        },
+        {
+          "fact": "K221270 decision date 2022-05-31, product code LLZ, Special 510(k)",
+          "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K221270",
+          "verification": "openfda"
+        },
+        {
+          "fact": "K253614 decision date 2026-03-17, product code QIH, Traditional 510(k)",
+          "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K253614",
+          "verification": "openfda"
+        },
+        {
+          "fact": "K200713: Automatic Annotations introduced (PDF page 6); predicate K121781, reference device K181264 (pages 4-5); no clinical testing (page 7)",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200713.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K221270: AutoViews introduced, 3D heart model updates (PDF page 5); predicate K200713 (page 4); no clinical study (page 7)",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K221270.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K253614: DeviceGuide inputs/outputs and deep learning claim (PDF pages 6-8); predicate K221270 (page 5); V&V dataset 72 + 41 patients and performance limits (page 11)",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253614.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "Verbatim K253614 dataset description: DeviceGuide uses an AI algorithm that was verified and validated using procedural image data from 72 unique patients. In addition, image data from 41 patients were used for out-of-domain testing. Data were sourced from a diverse mix of institutions (academic centers and community hospitals) across the U.S. and Europe. Clinical data were acquired using a range of compatible Philips X-ray and Philips ultrasound systems under routine procedural conditions. To ensure independence between development and testing, testing was performed after algorithm development was completed and the algorithm was frozen. Data used for development were not used for testing. To support representative evaluation across intended-use settings, the validation dataset included at least 50% U.S. site data.",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253614.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "Verbatim K253614 reference standard description: Verification included element-level testing against manually annotated images and assessment of algorithm outputs against predefined acceptance criteria. In addition, algorithm outputs were compared to a reference standard (\"ground truth\") derived from pre-clinical high resolution imaging data.",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253614.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "Philips press release 2026-03-26: DeviceGuide FDA 510(k) cleared; works with EPIQ CVxi and Azurion; intended for Edwards PASCAL Ace; developed with Edwards Lifesciences; investigational sites in Europe and U.S. including NewYork-Presbyterian/Columbia",
+          "url_or_file": "https://www.usa.philips.com/a-w/about/news/archive/standard/news/press/2026/fda-clears-philips-ai-solution-that-provides-real-time-guidance-during-complex-minimally-invasive-heart-valve-repair.html",
+          "verification": "company"
+        },
+        {
+          "fact": "Philips press release 2022-05-16: EchoNavigator 4.0 automatic annotations, 3D heart model with mitral leaflets and transseptal area, automatic MPR presets for aortic/mitral valves and LAA; no AI/ML language; not available in USA at that time",
+          "url_or_file": "https://www.usa.philips.com/a-w/about/news/archive/standard/news/press/2022/20220516-new-release-of-philips-echonavigator-helps-interventional-teams-treat-structural-heart-disease-with-greater-ease-and-efficiency.html",
+          "verification": "company"
+        },
+        {
+          "fact": "Biaggi 2026 DOI and PMID confirmed via Crossref and PubMed esummary/efetch",
+          "url_or_file": "https://api.crossref.org/works/10.1093/ehjimp/qyag048",
+          "verification": "peer_reviewed"
+        },
+        {
+          "fact": "Hahn 2025 DOI and PMID confirmed via Crossref and PubMed",
+          "url_or_file": "https://api.crossref.org/works/10.1016/j.jaccas.2025.106160",
+          "verification": "peer_reviewed"
+        },
+        {
+          "fact": "NCT02529111 and NCT02608008 located via ClinicalTrials.gov API v2 search for 'EchoNavigator'",
+          "url_or_file": "https://clinicaltrials.gov/api/v2/studies?query.term=EchoNavigator",
+          "verification": "clinicaltrials_gov"
+        },
+        {
+          "fact": "Verified this session: Philips product URL https://www.usa.philips.com/healthcare/product/HCOPT08/echonavigator-live-echo-and-live-x-ray-fusion-tool redirects (HTTP 200 after redirect) to the Azurion SHD suite page",
+          "url_or_file": "https://www.usa.philips.com/healthcare/image-guided-therapy/shd-suite",
+          "verification": "company"
+        },
+        {
+          "fact": "Jungen 2015 (PMID 26465747) and Afzal 2017 (PMID 27966185) DOIs and abstracts confirmed via Crossref and PubMed efetch; Hascoet 2018 n=31 and registration-distance results confirmed via PubMed efetch",
+          "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&retmode=xml&id=26465747,27966185,30219347",
+          "verification": "peer_reviewed"
+        },
+        {
+          "fact": "NCT02529111 (Toulouse, 'Echonavigator' software, enrollment 20, completed) and NCT02608008 (Duesseldorf, EchoNavigator Release II, enrollment 500, status unknown) confirmed via ClinicalTrials.gov API v2",
+          "url_or_file": "https://clinicaltrials.gov/api/v2/studies/NCT02529111",
+          "verification": "clinicaltrials_gov"
+        }
+      ]
+    }
+  ],
+  "notes": "Single family covering the Philips EchoNavigator lineage (K200713 R3.0.3, K221270 R4.0, K253614 R5.0), category interventional-guidance. All three operate on live 3D TEE fused with X-ray during structural heart procedures. Only K253614 (DeviceGuide) contains explicit AI/deep-learning language and quantitative performance data; Automatic Annotations and AutoViews are described without AI/ML terminology and without accuracy data. Page numbers refer to PDF page order as marked in the extracted text files. Product code for K253614 recorded as QIH per openFDA (summary lists QIH primary, LLZ associated). All DOIs/PMIDs listed were confirmed this session via Crossref and PubMed E-utilities. Fact-check pass: all five draft DOIs/PMIDs re-resolved (Crossref + PubMed) with matching titles; K-number decision dates, product codes, clearance types and predicates match openFDA and the summary text; the K253614 performance quote is verbatim on PDF page 11; both press releases, both NCTs and the no-AI-terminology claim for K200713/K221270 were re-verified. Corrections were limited to sources (local paths replaced by public URLs), the product URL (redirects to a generic page), Hascoet 2018 details, and two added base-product papers."
+}

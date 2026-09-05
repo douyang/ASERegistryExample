@@ -1,0 +1,878 @@
+{
+ "batch_id": "samsung",
+ "families": [
+  {
+   "id": "samsung-heartassist",
+   "product_name": "HeartAssist (fetal and adult cardiac AI view classification, segmentation and auto-measurement) on HERA W9/W10, HERA Z20/Z30, V8/V7/V6, V5/V4 systems; AutoEF and Strain+ named in FDA text",
+   "company": "Samsung Medison Co., Ltd.",
+   "company_website": "https://www.samsunghealthcare.com",
+   "product_url": "https://resources.samsunghealthcare.com/en/cardiovascular",
+   "category": "system-embedded",
+   "tags": [
+    "HeartAssist",
+    "fetal echocardiography",
+    "adult TTE",
+    "view recognition",
+    "segmentation",
+    "auto measurement",
+    "B-mode",
+    "M-mode",
+    "Doppler",
+    "AutoEF",
+    "GLS",
+    "Strain+",
+    "LA strain",
+    "RV strain"
+   ],
+   "modality_scope": [
+    "TTE",
+    "fetal echocardiography"
+   ],
+   "deployment": [
+    "ultrasound-system-embedded"
+   ],
+   "summary": "HeartAssist is a deep-learning function embedded in Samsung Medison ultrasound systems that classifies echocardiographic images into measurement views, segments cardiac structures and proposes measurements. It was first cleared for fetal heart scanning on HERA W10 (K211824, 2021), expanded to adult echocardiography on V8/V7 (K223387, 2023) with automated B-mode, M-mode and Doppler measurements compared against cardiologist ground truth, carried to HERA Z20/Z30 (K241971), V5/V4 (K242511) and HERA W9/W10 (K242444), and its AI models were updated in K250999 (2025). FDA summaries report standalone view-recognition accuracy, Dice scores and measurement error rates on validation sets of 280-888 images; no clinical studies were required and training-set sizes are not disclosed.",
+   "intended_use_quote": "The diagnostic ultrasound system and probes are designed to obtain ultrasound images and analyze body fluids.",
+   "indications_for_use_quote": "The diagnostic ultrasound system and probes are designed to obtain ultrasound images and analyze body fluids. The clinical applications include: Fetal/Obstetrics, Abdominal, Gynecology, Intra-operative, Pediatric, Small Organ, Neonatal Cephalic, Adult Cephalic, Trans-rectal, Trans-vaginal, Muscular-Skeletal (Conventional, Superficial), Urology, Cardiac Adult, Cardiac Pediatric, Thoracic, Trans-esophageal (Cardiac) and Peripheral vessel. It is intended for use by, or by the order of, and under the supervision of, an appropriately trained healthcare professional who is qualified for direct use of medical devices. It can be used in hospitals, private practices, clinics and similar care environment for clinical diagnosis of patients.",
+   "embedded_ai_features": [
+    {
+     "name": "HeartAssist (fetal)",
+     "function": "Deep-learning classification of fetal heart ultrasound images into measurement views, segmentation of cardiac structures, and proposed caliper placement / automatic measurements (area, angle, circumference, diameter) that the user can edit. HERA W10 only on the HERA W9/W10 platform. View items later subdivided by cardiac phase (4CV early/end diastole, end systole; LVOT and RVOT systole / end diastole) in K241971; AI model updated in K250999.",
+     "first_k_number": "K211824",
+     "quote": "HeartAssist is a deep learning based function that provides classification of ultrasound image into measurement views required for fetal heart scanning and provides measurement results. The feature recognizes views and proposes caliper placements and corresponding me asurements allowing users to save time and increase examination efficiency through reducing key-strokes and proposing measurements which can be edited by the user."
+    },
+    {
+     "name": "HeartAssist (adult)",
+     "function": "Deep-learning adult transthoracic echocardiography view recognition (16 adult heart views per ASE/AIUM in K223387; 18 in K242511), segmentation of heart contours and Doppler signal outlines, and automated measurements in B-mode, M-mode and Doppler mode; auto-measurement evaluated by Pearson correlation against cardiologist measurements. AI model updated in K250999 (adult re-validation not reported there).",
+     "first_k_number": "K223387",
+     "quote": "The proposed V8 / V7 have included the HeartAssist  which is  based on  the AI version from the previously cleared HERA W9/ HERA W10 (K220043) and expanded the clinical application to adult."
+    },
+    {
+     "name": "AutoEF (with Global Longitudinal Strain)",
+     "function": "Left-ventricular ejection fraction tool with GLS measurement item added; migrated to V5/cV5, V4/cV4 in K250999 after clearance on V8/cV8, V7/cV7, V6/cV6 (K243702). The FDA summary does not characterize AutoEF as AI/ML and reports no algorithm performance for it.",
+     "first_k_number": null,
+     "quote": "The proposed V5/cV5, V4/cV4 have updated ‘AutoEF’ function, which was previously cleared in the predicate, by expanding its measurement item to include ‘Global Longitudinal Strain(GLS)’. This change has already been cleared in the predicate device V8/cV8, V7/cV7, V6/cV6 (K243702), and it has been migrated to V5/cV5, V4/cV4."
+    },
+    {
+     "name": "Strain+ (LA and RV)",
+     "function": "Speckle-tracking strain tool with left atrium and right ventricle measurement items added; migrated to V5/cV5, V4/cV4 in K250999 after clearance in K243702. Not characterized as AI/ML in the FDA summary; no performance reported.",
+     "first_k_number": null,
+     "quote": "The proposed V5/cV5, V4/cV4 systems have updated the 'Strain+' function, which was previously cleared in the predicate, by expanding its measurement items to include the left atrium (LA) and right ventricle (RV). This change has already been cleared in the  predicate device V8/cV8, V7/cV7, V6/cV6 (K243702) and it has been migrated to V5/cV5, V4/cV4."
+    }
+   ],
+   "clearances": [
+    {
+     "k_number": "K211824",
+     "decision_date": "2021-09-09",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K192319",
+      "K192903",
+      "K201828"
+     ],
+     "changes_summary": "Introduced HeartAssist (fetal heart view classification and auto-measurement, HERA W10 only) together with ViewAssist and Slice A; BiometryAssist changed to an AI version. Performance testing described only as passing pre-defined criteria; no numbers.",
+     "notable_flags": [
+      "Summary lists product codes IYN, IYO, ITX",
+      "No quantitative AI performance reported",
+      "Clinical studies not required",
+      "Reference predicate Voluson SWIFT (K201828) SonoLystIR cited for similar functionality"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K211824.pdf"
+    },
+    {
+     "k_number": "K220043",
+     "decision_date": "2022-04-05",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K211824"
+     ],
+     "changes_summary": "HeartAssist carried over unchanged (HERA W10 only). Changes were expansion of BiometryAssist and ViewAssist (OB) and a 14-inch touch monitor option. No cardiac AI performance reported.",
+     "notable_flags": [
+      "No AI performance data in summary",
+      "Clinical studies not required"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K220043.pdf"
+    },
+    {
+     "k_number": "K223387",
+     "decision_date": "2023-02-13",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K220975",
+      "K221117",
+      "K210068",
+      "K220043"
+     ],
+     "changes_summary": "Brought HeartAssist to V8/V7 and expanded it to adult echocardiography (16 adult views, B-mode/M-mode/Doppler auto-measurement vs cardiologist ground truth). First K with quantitative HeartAssist standalone results (888 fetal + adult images, five hospitals).",
+     "notable_flags": [
+      "First adult HeartAssist clearance",
+      "Adult PCC acceptance criterion stated but actual PCC values not reported",
+      "Only V8 images used for the performance test",
+      "Clinical studies not required"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K223387.pdf"
+    },
+    {
+     "k_number": "K230084",
+     "decision_date": "2023-04-21",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K220043"
+     ],
+     "changes_summary": "HeartAssist (fetal, HERA W10 only) carried over unchanged; changes were BiometryAssist and ViewAssist expansions, EV2-12 transducer and 27-inch OLED monitor. No HeartAssist performance reported.",
+     "notable_flags": [
+      "No HeartAssist performance data",
+      "Clinical studies not required"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K230084.pdf"
+    },
+    {
+     "k_number": "K241971",
+     "decision_date": "2024-10-11",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K240631",
+      "K230084",
+      "K241302",
+      "K231965"
+     ],
+     "changes_summary": "New HERA Z20/R20/Z30/R30 platform including fetal HeartAssist from K230084 with view-recognition items subdivided by cardiac phase (4CV, LVOT, RVOT). Fetal HeartAssist validated on 440 fetal heart images across 11 views. No adult HeartAssist testing reported.",
+     "notable_flags": [
+      "Product codes IYN, IYO, ITX, QIH, LLZ",
+      "Fetal only",
+      "Number of hospitals for the 440-image set not stated",
+      "Clinical studies not required"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K241971.pdf"
+    },
+    {
+     "k_number": "K242444",
+     "decision_date": "2024-11-27",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K230084",
+      "K240516"
+     ],
+     "changes_summary": "Improved HeartAssist performance through an AI algorithm change on HERA W9/W10 (fetal). Validated on 280 fetal heart images (315 static images from 69 individuals, two hospitals, US and South Korea).",
+     "notable_flags": [
+      "Product codes IYN, IYO, ITX, QIH, LLZ",
+      "Fetal only",
+      "HeartAssist no longer listed as HERA W10-only in the W9/W10 difference table",
+      "Clinical studies not required"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242444.pdf"
+    },
+    {
+     "k_number": "K242511",
+     "decision_date": "2024-12-10",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K240631",
+      "K221599",
+      "K233112"
+     ],
+     "changes_summary": "Migrated HeartAssist (adult and fetal), BiometryAssist, ViewAssist, UterineAssist and NerveTrack from V8/V7/V6 (K240631) to V5/H5/XV5/XH5 and V4/H4/XV4/XH4 without changes. Reports adult HeartAssist validation on 540 images from 30 individuals (18 adult views) and fetal validation on 280 images from 80 individuals.",
+     "notable_flags": [
+      "Product codes IYN, IYO, ITX, LLZ, QIH",
+      "Adult PCC values not reported, only pass criterion",
+      "Clinical studies not required",
+      "Reported fetal and adult values (93.21%, 98.31%, Dice 0.88/0.93, identical error-rate bounds) are the same as in K223387 even though the stated image counts differ (280+540 here vs 888 combined in K223387); the summary says HeartAssist was included 'without changes' from K240631"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242511.pdf"
+    },
+    {
+     "k_number": "K250999",
+     "decision_date": "2025-07-18",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K243702",
+      "K242511"
+     ],
+     "changes_summary": "Updated the AI models of HeartAssist, BiometryAssist and ViewAssist on V8/cV8, V7/cV7, V6/cV6 and V5/cV5, V4/cV4; migrated AutoEF (GLS) and Strain+ (LA/RV) updates and TEE application to V5/V4. Reported validation is titled HeartAssist(fetus) only: 280 images from 70 patients, sensitivity 94.29%, specificity 99.62%, Dice 0.865.",
+     "notable_flags": [
+      "Product codes IYN, IYO, ITX, LLZ, QIH",
+      "HeartAssist AI model updated but only fetal validation reported",
+      "AutoEF and Strain+ not described as AI/ML",
+      "Validation ground truth established on the target device",
+      "Clinical studies not required"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K250999.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K211824",
+     "endpoint": "HeartAssist (fetal) performance testing",
+     "metric": "pass/fail vs pre-defined criteria",
+     "value": "passed; no numbers reported",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Not described",
+     "subgroup_notes": null,
+     "quote": "Performance testing was successfully completed for the new software functions (artificial intelligence based features HeartAssist, ViewAssist and Slice A) to show passing results for pre -defined testing criteria.",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K223387",
+     "endpoint": "HeartAssist view recognition (fetal)",
+     "metric": "average recognition accuracy",
+     "value": "93.21% (threshold 89%)",
+     "comparator": "expert view classification (obstetrician >20 y, two sonographers >10 y, supervised by obstetrician >25 y)",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": 5,
+     "dataset_description": "888 fetal heart and adult heart static images collected at five hospitals; acquired on Samsung W10, W9 and V8 systems, only V8 images used for the performance test; 7 fetal heart views and 16 adult heart views per ASE/AIUM; male and female; Americans and Koreans",
+     "subgroup_notes": "7 fetal heart views; n=888 is the combined fetal + adult image count stated on p.11; the fetal/adult split is not given",
+     "quote": "A deep learning based view recognition algorithm was validated using 888 fetal heart and adult heart images collected at five hospitals. \n◌ (Fetus) The average recognition accuracy is 93.21% (threshold 89%)",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K223387",
+     "endpoint": "HeartAssist view recognition (adult)",
+     "metric": "average recognition accuracy",
+     "value": "98.31% (threshold 84%)",
+     "comparator": "expert view classification",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": 5,
+     "dataset_description": "888 fetal heart and adult heart static images collected at five hospitals; acquired on Samsung W10, W9 and V8 systems, only V8 images used for the performance test; 7 fetal heart views and 16 adult heart views per ASE/AIUM; male and female; Americans and Koreans",
+     "subgroup_notes": "16 adult heart views; n=888 is the combined fetal + adult image count stated on p.11; the fetal/adult split is not given",
+     "quote": "(Adult) The average recognition accuracy is 98.31% (threshold 84%)",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K223387",
+     "endpoint": "HeartAssist segmentation (fetal)",
+     "metric": "average Dice score",
+     "value": "0.88 (threshold 0.8)",
+     "comparator": "manual expert anatomy tracing",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": 5,
+     "dataset_description": "888 fetal heart and adult heart static images collected at five hospitals; acquired on Samsung W10, W9 and V8 systems, only V8 images used for the performance test; 7 fetal heart views and 16 adult heart views per ASE/AIUM; male and female; Americans and Koreans",
+     "subgroup_notes": "n=888 is the combined fetal + adult image count stated on p.11; the fetal/adult split is not given",
+     "quote": "(Fetus) The average dice-score is 0.88 (threshold 0.8).",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K223387",
+     "endpoint": "HeartAssist segmentation (adult)",
+     "metric": "average Dice score",
+     "value": "0.93 (threshold 0.9)",
+     "comparator": "two cardiologists and two sonographers (>=10 y) manually traced heart contours and signal outline",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": 5,
+     "dataset_description": "888 fetal heart and adult heart static images collected at five hospitals; acquired on Samsung W10, W9 and V8 systems, only V8 images used for the performance test; 7 fetal heart views and 16 adult heart views per ASE/AIUM; male and female; Americans and Koreans",
+     "subgroup_notes": "n=888 is the combined fetal + adult image count stated on p.11; the fetal/adult split is not given",
+     "quote": "(Adult) The average dice-score is 0.93 (threshold 0.9).",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K223387",
+     "endpoint": "HeartAssist size measurement (fetal)",
+     "metric": "error rate",
+     "value": "area <=8%; angle <=4%; circumference <=11%; diameter <=11%",
+     "comparator": "expert manual measurements",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": 5,
+     "dataset_description": "888 fetal heart and adult heart static images collected at five hospitals; acquired on Samsung W10, W9 and V8 systems, only V8 images used for the performance test; 7 fetal heart views and 16 adult heart views per ASE/AIUM; male and female; Americans and Koreans",
+     "subgroup_notes": "n=888 is the combined fetal + adult image count stated on p.11; the fetal/adult split is not given",
+     "quote": "(Fetus) The error rate of area measured value is 8% or less. \n◌ (Fetus) The error rate of angle measured value is 4% or less. \n◌ (Fetus) The error rate of circumference measured value is 11% or less. \n           ◌ (Fetus) The error rate of diameter measured value is 11% or less.",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K223387",
+     "endpoint": "HeartAssist auto measurement (adult B-mode, M-mode, Doppler)",
+     "metric": "Pearson correlation coefficient vs cardiologist measurements",
+     "value": "pass criterion PCC >= 0.8; actual values not reported",
+     "comparator": "cardiologist measurements (ground truth)",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": 5,
+     "dataset_description": "888 fetal heart and adult heart static images collected at five hospitals; acquired on Samsung W10, W9 and V8 systems, only V8 images used for the performance test; 7 fetal heart views and 16 adult heart views per ASE/AIUM; male and female; Americans and Koreans",
+     "subgroup_notes": "n=888 is the combined fetal + adult image count stated on p.11; the fetal/adult split is not given",
+     "quote": "(Adult, B-mode) Pass if the *PCC value is 0.8 or greater than the specification. \n◌ (Adult, M-mode) Pass if the *PCC value is 0.8 or greater than the specification. \n◌ (Adult, Doppler-mode) Pass if the *PCC value is 0.8 or greater than the specification. \n* The Pearson correlation coefficient(PCC) that is a representative way to measure similarity is a measure of linear correlation between two sets of data. The HeartAssist’s PCC was   calculated to evaluate the auto measurement using the ground truth, defined as the cardiologist’s measurements.",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241971",
+     "endpoint": "HeartAssist view recognition (fetal)",
+     "metric": "average recognition accuracy",
+     "value": "95.00% (threshold 89%)",
+     "comparator": "expert view classification (obstetrician >20 y, two sonographers >10 y, supervised by obstetrician >25 y)",
+     "n_studies": 440,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "440 fetal heart images 'at the hospitals' (number of sites not stated); 11 fetal heart views per AIUM; female, reproductive age; Americans and Koreans; maternal BMI 17-45.4; Samsung Medison systems, mix of retrospective and prospective collection",
+     "subgroup_notes": "11 fetal heart views (4CV/LVOT/RVOT subdivided by cardiac phase)",
+     "quote": "A deep learning based view recognition algorithm was validated using 440 fetal heart at the hospitals. \n◌ The average recognition accuracy is 95.00% (threshold 89%)",
+     "page": 14,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241971",
+     "endpoint": "HeartAssist segmentation (fetal)",
+     "metric": "average Dice score",
+     "value": "0.876 (threshold 0.8)",
+     "comparator": "manual expert anatomy tracing",
+     "n_studies": 440,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "440 fetal heart images 'at the hospitals' (number of sites not stated); 11 fetal heart views per AIUM; female, reproductive age; Americans and Koreans; maternal BMI 17-45.4; Samsung Medison systems, mix of retrospective and prospective collection",
+     "subgroup_notes": null,
+     "quote": "The average dice-score is 0.876 (threshold 0.8)",
+     "page": 14,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241971",
+     "endpoint": "HeartAssist size measurement (fetal)",
+     "metric": "error rate",
+     "value": "area <=8%; angle <=4%; circumference <=11%; diameter <=11%",
+     "comparator": "expert manual measurements",
+     "n_studies": 440,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "440 fetal heart images 'at the hospitals' (number of sites not stated); 11 fetal heart views per AIUM; female, reproductive age; Americans and Koreans; maternal BMI 17-45.4; Samsung Medison systems, mix of retrospective and prospective collection",
+     "subgroup_notes": null,
+     "quote": "The error rate of area measured value is 8% or less \n◌ The error rate of angle measured value is 4% or less \n◌ The error rate of circumference measured value is 11% or less \n           ◌ The error rate of diameter measured value is 11% or less",
+     "page": 14,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242444",
+     "endpoint": "HeartAssist view recognition (fetal)",
+     "metric": "average recognition accuracy",
+     "value": "96.07% (threshold 89%)",
+     "comparator": "expert view classification (obstetricians >20 y, two sonographers >10 y, supervised by obstetrician >25 y)",
+     "n_studies": 280,
+     "n_patients": 69,
+     "n_sites": 2,
+     "dataset_description": "280 fetal heart images collected at two hospitals (United States and South Korea); validation dataset 315 static images of 2D sequences from 69 individuals; 7 fetal heart views per ISUOG/AIUM; BMI 14.88-49.2; gestational age 11-38 weeks; acquired on HERA W9/W10",
+     "subgroup_notes": "7 fetal heart views",
+     "quote": "A deep learning based view recognition algorithm was validated using 280 fetal heart images collected at two hospitals. \n◌ The average recognition accuracy is 96.07% (threshold 89%)",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242444",
+     "endpoint": "HeartAssist segmentation (fetal)",
+     "metric": "average Dice score",
+     "value": "0.88 (threshold 0.8)",
+     "comparator": "manual expert anatomy tracing",
+     "n_studies": 280,
+     "n_patients": 69,
+     "n_sites": 2,
+     "dataset_description": "280 fetal heart images collected at two hospitals (United States and South Korea); validation dataset 315 static images of 2D sequences from 69 individuals; 7 fetal heart views per ISUOG/AIUM; BMI 14.88-49.2; gestational age 11-38 weeks; acquired on HERA W9/W10",
+     "subgroup_notes": null,
+     "quote": "The average dice-score is 0.88 (threshold 0.8).",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242444",
+     "endpoint": "HeartAssist size measurement (fetal)",
+     "metric": "error rate",
+     "value": "area <=8%; angle <=4%; circumference <=11%; diameter <=11%",
+     "comparator": "expert manual measurements",
+     "n_studies": 280,
+     "n_patients": 69,
+     "n_sites": 2,
+     "dataset_description": "280 fetal heart images collected at two hospitals (United States and South Korea); validation dataset 315 static images of 2D sequences from 69 individuals; 7 fetal heart views per ISUOG/AIUM; BMI 14.88-49.2; gestational age 11-38 weeks; acquired on HERA W9/W10",
+     "subgroup_notes": null,
+     "quote": "The error rate of area measured value is 8% or less. \n◌ The error rate of angle measured value is 4% or less. \n◌ The error rate of circumference measured value is 11% or less. \n                      ◌ The error rate of diameter measured value is 11% or less.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242444",
+     "endpoint": "HeartAssist (fetal) validation set size",
+     "metric": "patients / images",
+     "value": "69 individuals; 315 static images",
+     "comparator": null,
+     "n_studies": 315,
+     "n_patients": 69,
+     "n_sites": 2,
+     "dataset_description": "280 fetal heart images collected at two hospitals (United States and South Korea); validation dataset 315 static images of 2D sequences from 69 individuals; 7 fetal heart views per ISUOG/AIUM; BMI 14.88-49.2; gestational age 11-38 weeks; acquired on HERA W9/W10",
+     "subgroup_notes": null,
+     "quote": "A total 69 individuals contributed to the validation dataset. \n▣ The number of samples, if different from above, and the relationship between the two: \n□ Each individual contributed at least 1 static image per view location \n□ Validation dataset included 315 static images of 2D sequences.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242511",
+     "endpoint": "HeartAssist view recognition (fetal)",
+     "metric": "average recognition accuracy",
+     "value": "93.21% (threshold 89%)",
+     "comparator": "expert view classification (obstetrician >20 y, two sonographers >10 y, supervised by obstetrician >25 y)",
+     "n_studies": 280,
+     "n_patients": 80,
+     "n_sites": 5,
+     "dataset_description": "280 fetal heart static images from 80 individuals, five hospitals; 7 fetal heart views; BMI 17-45.4; gestational age 17-38 weeks",
+     "subgroup_notes": "7 fetal heart views",
+     "quote": "A deep learning based view recognition algorithm was validated using 280 fetal heart  and 540 adult heart images collected at five hospitals. \n◌ (Fetus) The average recognition accuracy is 93.21% (threshold 89%)",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242511",
+     "endpoint": "HeartAssist view recognition (adult)",
+     "metric": "average recognition accuracy",
+     "value": "98.31% (threshold 84%)",
+     "comparator": "expert view classification",
+     "n_studies": 540,
+     "n_patients": 30,
+     "n_sites": 5,
+     "dataset_description": "540 adult heart static images of 2D sequences from 30 individuals, five hospitals; 18 adult heart views per ASE/AIUM; male and female; Americans and Koreans; adult BMI 14.88-49.2; age from 20, distributed 20-40, 40-60, 60+; Samsung Medison systems, retrospective and prospective mix",
+     "subgroup_notes": "18 adult heart views; age groups 20-40, 40-60, 60+",
+     "quote": "(Adult) The average recognition accuracy is 98.31% (threshold 84%)",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242511",
+     "endpoint": "HeartAssist segmentation (fetal)",
+     "metric": "average Dice score",
+     "value": "0.88 (threshold 0.8)",
+     "comparator": "manual expert anatomy tracing",
+     "n_studies": 280,
+     "n_patients": 80,
+     "n_sites": 5,
+     "dataset_description": "280 fetal heart static images from 80 individuals, five hospitals; 7 fetal heart views; BMI 17-45.4; gestational age 17-38 weeks",
+     "subgroup_notes": null,
+     "quote": "(Fetus) The average dice-score is 0.88 (threshold 0.8)",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242511",
+     "endpoint": "HeartAssist segmentation (adult)",
+     "metric": "average Dice score",
+     "value": "0.93 (threshold 0.9)",
+     "comparator": "two cardiologists and two sonographers (>=10 y) manually traced heart contours and signal outline",
+     "n_studies": 540,
+     "n_patients": 30,
+     "n_sites": 5,
+     "dataset_description": "540 adult heart static images of 2D sequences from 30 individuals, five hospitals; 18 adult heart views per ASE/AIUM; male and female; Americans and Koreans; adult BMI 14.88-49.2; age from 20, distributed 20-40, 40-60, 60+; Samsung Medison systems, retrospective and prospective mix",
+     "subgroup_notes": null,
+     "quote": "(Adult) The average dice-score is 0.93 (threshold 0.9)",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242511",
+     "endpoint": "HeartAssist size measurement (fetal)",
+     "metric": "error rate",
+     "value": "area <=8%; angle <=4%; circumference <=11%; diameter <=11%",
+     "comparator": "expert manual measurements",
+     "n_studies": 280,
+     "n_patients": 80,
+     "n_sites": 5,
+     "dataset_description": "280 fetal heart static images from 80 individuals, five hospitals; 7 fetal heart views; BMI 17-45.4; gestational age 17-38 weeks",
+     "subgroup_notes": null,
+     "quote": "(Fetus) The error rate of area measured value is 8% or less \n◌ (Fetus) The error rate of angle measured value is 4% or less \n◌ (Fetus) The error rate of circumference measured value is 11% or less \n           ◌ (Fetus) The error rate of diameter measured value is 11% or less",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242511",
+     "endpoint": "HeartAssist auto measurement (adult B-mode, M-mode, Doppler)",
+     "metric": "Pearson correlation coefficient vs cardiologist measurements",
+     "value": "pass criterion PCC >= 0.8; actual values not reported",
+     "comparator": "cardiologist measurements (ground truth)",
+     "n_studies": 540,
+     "n_patients": 30,
+     "n_sites": 5,
+     "dataset_description": "540 adult heart static images of 2D sequences from 30 individuals, five hospitals; 18 adult heart views per ASE/AIUM; male and female; Americans and Koreans; adult BMI 14.88-49.2; age from 20, distributed 20-40, 40-60, 60+; Samsung Medison systems, retrospective and prospective mix",
+     "subgroup_notes": null,
+     "quote": "(Adult, B-mode) Pass if the PCC value is 0.8 or more of spec \n◌ (Adult, M-mode) Pass if the PCC value is 0.8 or more of spec \n◌ (Adult, Doppler-mode) Pass if the PCC value is 0.8 or more of spec \n* The Pearson’s correlation coefficient (PCC) that is a representative way to measure similarity is a measure of linear correlation between two sets of data. The HeartAssist ’s PCC was cal culated to evaluate the auto measurement using the ground truth, defined as the cardiologist’s measurements.",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242511",
+     "endpoint": "HeartAssist validation set size (adult and fetal)",
+     "metric": "patients / images",
+     "value": "fetal 80 individuals / 280 images; adult 30 individuals / 540 images",
+     "comparator": null,
+     "n_studies": 820,
+     "n_patients": 110,
+     "n_sites": 5,
+     "dataset_description": "Combined adult + fetal HeartAssist validation set",
+     "subgroup_notes": null,
+     "quote": "(Fetus) A total 80 individuals contributed to the validation dataset. \n□ (Adult) A total 30 individuals contributed to the validation dataset. \n▣ The number of samples, if different from above, and the relationship between the two: \n□ (Fetus) Each individual contributed at least 1 static image per view location \n□ (Fetus) Validation dataset included 280 static images of 2D sequences. \n□ (Adult) Each individual contributed at least 1 static image per view location \n□ (Adult) Validation dataset included 540 static images of 2D sequences.",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K250999",
+     "endpoint": "HeartAssist(fetus) view recognition after AI model update",
+     "metric": "sensitivity / specificity",
+     "value": "sensitivity 94.29%, specificity 99.62% (thresholds 75.9%, 88.2%)",
+     "comparator": "expert view classification on the target device (obstetrician >20 y in fetal cardiology, two sonographers >10 y, supervised by senior obstetrician >25 y)",
+     "n_studies": 280,
+     "n_patients": 70,
+     "n_sites": null,
+     "dataset_description": "280 static images from 70 individual patients (26 South Korea, 44 US), multiple static images randomly selected per patient; 7 fetal views per ISUOG/AIUM; gestational age 11-38 weeks; BMI normal/overweight/obese categories; acquired on HERA W10, HERA W9 and V series (V8/V7/V6/V5/V4); validation ground truth established on the target device by expert reviewers",
+     "subgroup_notes": "7 fetal views",
+     "quote": "A deep learning based view recognition algorithm was validated using 280 fetal \nbiometry images collected at hospitals (South Korea and United States). \n The achieved sensitivity is 94.29% and specificity is 99.62% (thresholds: 75.9%, \n88.2%, respectively)",
+     "page": 13,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K250999",
+     "endpoint": "HeartAssist(fetus) segmentation after AI model update",
+     "metric": "average Dice score",
+     "value": "0.865 (threshold 0.8)",
+     "comparator": "manual expert annotation",
+     "n_studies": 280,
+     "n_patients": 70,
+     "n_sites": null,
+     "dataset_description": "280 static images from 70 individual patients (26 South Korea, 44 US), multiple static images randomly selected per patient; 7 fetal views per ISUOG/AIUM; gestational age 11-38 weeks; BMI normal/overweight/obese categories; acquired on HERA W10, HERA W9 and V series (V8/V7/V6/V5/V4); validation ground truth established on the target device by expert reviewers",
+     "subgroup_notes": null,
+     "quote": "The average dice-score is 0.865 (threshold 0.8)",
+     "page": 13,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K250999",
+     "endpoint": "HeartAssist(fetus) size measurement after AI model update",
+     "metric": "error rate",
+     "value": "area <=8%; angle <=4%; circumference <=11%; diameter <=11%",
+     "comparator": "expert manual measurements on the target device",
+     "n_studies": 280,
+     "n_patients": 70,
+     "n_sites": null,
+     "dataset_description": "280 static images from 70 individual patients (26 South Korea, 44 US), multiple static images randomly selected per patient; 7 fetal views per ISUOG/AIUM; gestational age 11-38 weeks; BMI normal/overweight/obese categories; acquired on HERA W10, HERA W9 and V series (V8/V7/V6/V5/V4); validation ground truth established on the target device by expert reviewers",
+     "subgroup_notes": null,
+     "quote": "The error rate of area measured value is 8% or less. \n The error rate of angle measured value is 4% or less. \n The error rate of circumference measured value is 11% or less. \n The error rate of diameter measured value is 11% or less.",
+     "page": 13,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K250999",
+     "endpoint": "HeartAssist(fetus) validation set size",
+     "metric": "patients / images",
+     "value": "70 patients (26 South Korea, 44 US); 280 images",
+     "comparator": null,
+     "n_studies": 280,
+     "n_patients": 70,
+     "n_sites": null,
+     "dataset_description": "280 static images from 70 individual patients (26 South Korea, 44 US), multiple static images randomly selected per patient; 7 fetal views per ISUOG/AIUM; gestational age 11-38 weeks; BMI normal/overweight/obese categories; acquired on HERA W10, HERA W9 and V series (V8/V7/V6/V5/V4); validation ground truth established on the target device by expert reviewers",
+     "subgroup_notes": null,
+     "quote": "A total of 70 individual patients contributed to the validation dataset (26 from South \nKorea, 44 from the US). \n From each of these 70 patients, multiple static images were randomly selected and \nused for the validation, resulting in a total of 280 images.",
+     "page": 13,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K211824",
+     "endpoint": "Fetal HeartAssist view classification (development/feasibility study, Asan Medical Center)",
+     "metric": "classification accuracy; recall; precision; F1",
+     "value": "99.4%; 0.93; 0.95; 0.94",
+     "comparator": "one expert's manual classification",
+     "n_studies": 65324,
+     "n_patients": 2985,
+     "n_sites": 1,
+     "dataset_description": "Fetal cardiac images, GA 20-40 weeks, Asan Medical Center, Jan 2016-Oct 2018; 10 views, 26 structures, 43 parameters",
+     "subgroup_notes": null,
+     "quote": "A total of 65,324 images from 2,985 fetuses were analyzed. HeartAssist achieved 99.4% classification accuracy, with recall, precision, and F1-score of 0.93, 0.95, and 0.94, respectively.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K211824",
+     "endpoint": "Fetal HeartAssist annotation and automatic measurement (development/feasibility study)",
+     "metric": "annotation accuracy; measurement success rate; error rate; caliper similarity",
+     "value": "98.4%; 97.6%; 7.62%; 0.613",
+     "comparator": "one expert's manual annotations and measurements",
+     "n_studies": 65324,
+     "n_patients": 2985,
+     "n_sites": 1,
+     "dataset_description": "Same Sci Rep 2025 dataset (Kim R et al., PMID 40240835)",
+     "subgroup_notes": null,
+     "quote": "Annotation accuracy was 98.4%, while the automatic measurement success rate was 97.6%, with an error rate of 7.62% and caliper similarity of 0.613.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K211824",
+     "endpoint": "Fetal HeartAssist view-quality assessment vs expert (external prospective study)",
+     "metric": "Cohen's kappa",
+     "value": "4CV 0.827 (95% CI 0.662-0.992); LVOT 0.814 (0.638-0.990); RVOT 0.838 (0.683-0.992); 3VT 0.866 (0.717-0.999)",
+     "comparator": "expert sonographer visual adequacy assessment",
+     "n_studies": null,
+     "n_patients": 120,
+     "n_sites": 1,
+     "dataset_description": "120 consecutive low-risk singleton pregnancies, 19-23 weeks, Rome (Pietrolucci ME et al., J Perinat Med 2023, PMID 37097825)",
+     "subgroup_notes": null,
+     "quote": "The Cohen's κ coefficient values were for the four-chamber view 0.827 (95 % CI 0.662-0.992), 0.814 (95 % CI 0.638-0.990) for left ventricle outflow tract, 0.838 (95 % CI 0.683-0.992) and three vessel trachea view 0.866 (95 % CI 0.717-0.999), indicating a good agreement between the two techniques.",
+     "page": null,
+     "verification": "peer_reviewed"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "No FDA summary in this batch states training-set size; each states only that training, tuning and validation data are completely separated. The peer-reviewed fetal HeartAssist development study (Kim R et al., Sci Rep 2025) reports that 65,324 images from 2,985 fetuses collected at Asan Medical Center (Jan 2016-Oct 2018, GA 20-40 weeks) were analyzed for development and feasibility evaluation; the abstract does not give the train/test split, and it is not stated whether this is the same model version as the cleared device.",
+    "source": "https://doi.org/10.1038/s41598-025-97934-z",
+    "verification": "peer_reviewed"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": 110,
+    "n_sites": 5,
+    "description": "Latest combined adult+fetal FDA validation (K242511): 540 adult static images from 30 individuals (18 adult views, age 20+, BMI 14.88-49.2) and 280 fetal static images from 80 individuals (7 fetal views, GA 17-38 weeks), collected at five hospitals, Americans and Koreans; adult ground truth by two cardiologists and two sonographers with >=10 years' experience. Fetal-only re-validations: K241971 440 images (11 views); K242444 315 static images from 69 individuals (two hospitals); K250999 280 images from 70 patients (26 South Korea, 44 US). K223387: 888 fetal+adult images, five hospitals, only V8 images used. n_patients reflects K242511 (30 adult + 80 fetal).",
+    "independent_of_training": true,
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242511.pdf",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Samsung white paper 'HeartAssist for Adults' (Hyuk-Jae Chang, CONNECT-AI Research Center, Yonsei; PDF dated 2022/11) states HeartAssist is 'an AI software based on a SONIX HEALTH algorithm developed by ON:TACT HEALTH', reports a 93% keystroke reduction for parasternal long-axis LV measurements ('while 14 keystrokes are required ... only a single touch is required (93% keystroke reduction)'), 90% and 83% keystroke reductions for M-mode and Doppler, and per-view acceptance rates for B-mode auto-measurements judged by two experts. Most numeric tables in the PDF use a custom font and could not be reliably extracted.",
+     "source_url": "https://img.global.news.samsung.com/de/wp-content/uploads/2022/11/Samsung_Whitepaper_HeartAssistTM-for-Adults.pdf",
+     "verification": "company"
+    },
+    {
+     "description": "Samsung 'theSUITE' course page for adult HeartAssist (author Hyuk-Jae Chang, updated 2024-08-29): 20 echocardiographic views; view classification accuracy 'up to 98%'; measurement accuracy '95-100%'; 'reduces manual keystrokes by up to 93% and measurement time by 90%'. No sample size given.",
+     "source_url": "https://global.samsungsuite.com/courses/heartassist-automatic-view-classification-and-measurement-tool-for-adult-transthoracic-echocardiography/",
+     "verification": "company"
+    },
+    {
+     "description": "Samsung 'theSUITE' white paper page for fetal HeartAssist (Won HS, Lee MY, Kim R; updated 2024-08-28): 4,000 fetal echocardiograms (GA 20-40 weeks, Asan Medical Center); '95.5% classification accuracy', '100% annotation accuracy', DSC '84.8% for segmentation performance', processing time reduced 'by 87% compared to manual measurements'; 10 views, 44 parameters; supported on WS80A and HERA W10.",
+     "source_url": "https://global.samsungsuite.com/courses/heartassist-the-automatic-classi%EF%AC%81cation-and-measurement-tool-for-fetal-heart-assessment/",
+     "verification": "company"
+    },
+    {
+     "description": "Korea Biomedical Review (2023-10-17) on Samsung Medison at ISUOG 2023: 'HeartAssist automatically categorizes and provides results for fetal heart diagnosis by pressing the measurement button.' No performance numbers.",
+     "source_url": "https://www.koreabiomed.com/news/articleView.html?idxno=22276",
+     "verification": "news"
+    },
+    {
+     "description": "Medical Device Network (2023-02-10) on HERA W10 Elite launch: HeartAssist 'can automatically classify an ultrasound image into measurement views that are needed for fetal heart diagnosis'. No performance numbers.",
+     "source_url": "https://www.medicaldevice-network.com/news/samsung-unveils-new-ai-enabled-womens-health-ultrasound-system/",
+     "verification": "news"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Artificial intelligence based automatic classification, annotation, and measurement of the fetal heart using HeartAssist",
+     "first_author": "Kim R",
+     "journal": "Scientific Reports",
+     "year": 2025,
+     "doi": "10.1038/s41598-025-97934-z",
+     "pmid": "40240835",
+     "url": "https://doi.org/10.1038/s41598-025-97934-z",
+     "relation": "algorithm-development",
+     "n_subjects": 2985,
+     "key_result": "65,324 images from 2,985 fetuses (GA 20-40 weeks, Asan Medical Center, 2016-2018); CNN classifies 10 views, annotates 26 structures, measures 43 parameters; classification accuracy 99.4% (recall 0.93, precision 0.95, F1 0.94); annotation accuracy 98.4%; automatic measurement success rate 97.6% with error rate 7.62% and caliper similarity 0.613 vs one expert. Three authors (Park J, Lee J, Choi K) affiliated with Samsung Medison AI & Informatics Group per PubMed; authors declare no competing interests.",
+     "verification": "pmid_resolved"
+    },
+    {
+     "title": "Evaluation of an artificial intelligent algorithm (Heartassist) to automatically assess the quality of second trimester cardiac views: a prospective study",
+     "first_author": "Pietrolucci ME",
+     "journal": "Journal of Perinatal Medicine",
+     "year": 2023,
+     "doi": "10.1515/jpm-2023-0052",
+     "pmid": "37097825",
+     "url": "https://doi.org/10.1515/jpm-2023-0052",
+     "relation": "external-validation",
+     "n_subjects": 120,
+     "key_result": "Prospective single-center study (Rome), 120 consecutive low-risk singleton pregnancies at 19-23 weeks; agreement between expert sonographer and HeartAssist on view adequacy: Cohen's kappa 0.827 (4CV), 0.814 (LVOT), 0.838 (RVOT), 0.866 (3VT); >87% of images adequate by both methods.",
+     "verification": "pmid_resolved"
+    },
+    {
+     "title": "EP24.20: Reference ranges of fetal cardiac biometric measurements by HeartAssist in the Korean population: a multicentre prospective study",
+     "first_author": "Kim R",
+     "journal": "Ultrasound in Obstetrics & Gynecology",
+     "year": 2023,
+     "doi": "10.1002/uog.27073",
+     "pmid": null,
+     "url": "https://doi.org/10.1002/uog.27073",
+     "relation": "other",
+     "n_subjects": null,
+     "key_result": "ISUOG 2023 congress abstract (electronic poster) establishing Korean-population reference ranges for HeartAssist fetal cardiac measurements; abstract content not retrieved this session.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [],
+   "open_questions": [
+    "Training-set sizes for fetal and adult HeartAssist are not disclosed in any FDA summary (K211824-K250999).",
+    "Adult HeartAssist auto-measurement performance is reported only as a pass criterion ('Pass if the PCC value is 0.8 or more of spec'); actual Pearson correlation coefficients per measurement are not given in K223387 or K242511.",
+    "K250999 updated the HeartAssist AI models for both adult and fetal use, but only the HeartAssist(fetus) validation (280 images, 70 patients) is reported; no adult re-validation appears in the summary.",
+    "K250999 fetal view-recognition text says the algorithm 'was validated using 280 fetal biometry images' under the HeartAssist(fetus) heading; likely a copy error for fetal heart images, recorded verbatim.",
+    "K241971 states 440 fetal heart images were collected 'at the hospitals' without giving the number of sites or individual patients.",
+    "K211824 and K220043 report no quantitative HeartAssist performance; K230084 reports none for HeartAssist (carried over unchanged).",
+    "HeartAssist adult and fetal clearance on V8/XV8/XH8, V7/XV7/XH7, V6/XV6/XH6 (K240631) and V8/cV8 (K243702) is asserted by K242511 and K250999, but those predicate summaries (excluded by triage) do not describe HeartAssist.",
+    "AutoEF (GLS) and Strain+ (LA/RV) are named in K250999 but are not characterized as AI/ML and have no reported performance; their first clearance K243702 is outside this batch.",
+    "Samsung's adult HeartAssist white paper (2022) tables use a custom font; view-classification image counts and per-view accuracies could not be reliably extracted, so only the plain-text keystroke-reduction claims are recorded.",
+    "The Samsung course page claims ('up to 98%' view classification, '95-100%' measurement accuracy, 4,000 fetal echocardiograms with 95.5% classification accuracy) carry no sample sizes or methods and are unverified beyond the vendor pages.",
+    "Whether the peer-reviewed fetal model (Kim R, Sci Rep 2025; 10 views, 43 parameters) is the same version as the cleared 7-view / 11-view device configuration is not stated.",
+    "ClinicalTrials.gov API query for 'HeartAssist' returned no matching studies this session; no registered trial identified.",
+    "openFDA lists product code IYN; the FDA summaries also list IYO, ITX and (from K241971 onward) QIH and LLZ.",
+    "Jang Y et al., Korean Circ J 2024 (PMID 39434367, DOI 10.4070/kcj.2024.0060) reports an Ontact Health adult echo AI system (632 STEMI patients; view accuracy 98.5%; Pearson r 0.81-0.92 vs manual LVEF/GLS/LAVI/LA strain). Samsung's 2022 white paper states adult HeartAssist is 'based on a SONIX HEALTH algorithm developed by ON:TACT HEALTH', but the paper itself does not name HeartAssist or Samsung, so it is not recorded as a HeartAssist paper; whether the evaluated software is the cleared feature is unverified.",
+    "K242444 states the HeartAssist view-recognition algorithm 'was validated using 280 fetal heart images' but also that the 'Validation dataset included 315 static images of 2D sequences' from 69 individuals (both p.8); the relationship between 280 and 315 is not explained.",
+    "intended_use_quote and indications_for_use_quote reproduce the V-series wording (K223387 p.5; K250999 IFU form, V8/cV8-V6/cV6). HERA W9/W10 summaries (K211824, K220043, K230084, K242444) instead read 'intended for diagnostic ultrasound imaging and fluid analysis of the human body' and omit Intra-operative, Thoracic and Trans-esophageal; K242511 (V5/V4) adds Dermatology and omits Trans-esophageal.",
+    "Verification-pass PubMed searches ('HeartAssist' with fetal/echocardiography/ultrasound, 'Heartassist AND Samsung', 'Samsung Medison AND echocardiography', 'Samsung Medison AND fetal heart/cardiac', 'Ontact Health AND echocardiography') found no additional peer-reviewed HeartAssist evaluations beyond PMIDs 40240835 and 37097825 and the UOG 2023 abstract; one Ontact Health paper (PMID 38975004, diastolic assessment) cites the Samsung adult HeartAssist white paper in its reference list only."
+   ],
+   "sources": [
+    {
+     "fact": "K211824 FDA 510(k) summary text (predicates, features, performance quotes, pages)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K211824.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K211824 decision date, product code IYN, applicant Samsung Medison Co., Ltd., device name",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K211824",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K220043 FDA 510(k) summary text (predicates, features, performance quotes, pages)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K220043.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K220043 decision date, product code IYN, applicant Samsung Medison Co., Ltd., device name",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K220043",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K223387 FDA 510(k) summary text (predicates, features, performance quotes, pages)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K223387.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K223387 decision date, product code IYN, applicant Samsung Medison Co., Ltd., device name",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K223387",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K230084 FDA 510(k) summary text (predicates, features, performance quotes, pages)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K230084.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K230084 decision date, product code IYN, applicant Samsung Medison Co., Ltd., device name",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K230084",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K241971 FDA 510(k) summary text (predicates, features, performance quotes, pages)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K241971.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K241971 decision date, product code IYN, applicant Samsung Medison Co., Ltd., device name",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K241971",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K242444 FDA 510(k) summary text (predicates, features, performance quotes, pages)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242444.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K242444 decision date, product code IYN, applicant Samsung Medison Co., Ltd., device name",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K242444",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K242511 FDA 510(k) summary text (predicates, features, performance quotes, pages)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242511.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K242511 decision date, product code IYN, applicant Samsung Medison Co., Ltd., device name",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K242511",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K250999 FDA 510(k) summary text (predicates, features, performance quotes, pages)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K250999.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K250999 decision date, product code IYN, applicant Samsung Medison Co., Ltd., device name",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K250999",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Kim R et al. Sci Rep 2025 PMID 40240835 title/abstract/affiliations (PubMed efetch) and DOI 10.1038/s41598-025-97934-z (Crossref)",
+     "url_or_file": "https://pubmed.ncbi.nlm.nih.gov/40240835/",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "Pietrolucci ME et al. J Perinat Med 2023 PMID 37097825 abstract (PubMed efetch) and DOI 10.1515/jpm-2023-0052 (Crossref)",
+     "url_or_file": "https://pubmed.ncbi.nlm.nih.gov/37097825/",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "Kim R et al. UOG 2023 EP24.20 abstract DOI 10.1002/uog.27073 resolved via Crossref",
+     "url_or_file": "https://api.crossref.org/works/10.1002/uog.27073",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "Jang Y et al. Korean Circ J 2024 PMID 39434367 abstract and Ontact Health affiliations/COI (PubMed efetch); DOI 10.4070/kcj.2024.0060 (Crossref) - paper does not name HeartAssist; retained only as the source for the Ontact Health open question",
+     "url_or_file": "https://pubmed.ncbi.nlm.nih.gov/39434367/",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "Adult HeartAssist white paper: developer ON:TACT HEALTH (SONIX HEALTH algorithm), author Hyuk-Jae Chang, keystroke-reduction claims",
+     "url_or_file": "https://img.global.news.samsung.com/de/wp-content/uploads/2022/11/Samsung_Whitepaper_HeartAssistTM-for-Adults.pdf",
+     "verification": "company"
+    },
+    {
+     "fact": "Adult HeartAssist course page claims (20 views, up to 98% view classification, 95-100% measurements, 93% keystrokes / 90% time)",
+     "url_or_file": "https://global.samsungsuite.com/courses/heartassist-automatic-view-classification-and-measurement-tool-for-adult-transthoracic-echocardiography/",
+     "verification": "company"
+    },
+    {
+     "fact": "Fetal HeartAssist white paper page claims (4,000 echocardiograms, 95.5% classification, 100% annotation, DSC 84.8%, 87% time reduction; WS80A and HERA W10)",
+     "url_or_file": "https://global.samsungsuite.com/courses/heartassist-the-automatic-classi%EF%AC%81cation-and-measurement-tool-for-fetal-heart-assessment/",
+     "verification": "company"
+    },
+    {
+     "fact": "Samsung cardiovascular resources page listing HeartAssist, AutoEF, Strain+ on V8/V7/V6/V5",
+     "url_or_file": "https://resources.samsunghealthcare.com/en/cardiovascular",
+     "verification": "company"
+    },
+    {
+     "fact": "Korea Biomedical Review ISUOG 2023 article (HeartAssist description)",
+     "url_or_file": "https://www.koreabiomed.com/news/articleView.html?idxno=22276",
+     "verification": "news"
+    },
+    {
+     "fact": "Medical Device Network HERA W10 Elite article, 2023-02-10 (HeartAssist description)",
+     "url_or_file": "https://www.medicaldevice-network.com/news/samsung-unveils-new-ai-enabled-womens-health-ultrasound-system/",
+     "verification": "news"
+    },
+    {
+     "fact": "Samsung Medison 510(k) inventory used for triage of included and excluded K-numbers (openFDA 510(k) endpoint; internal triage records not distributed)",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=applicant:\"Samsung+Medison\"",
+     "verification": "fda_summary"
+    }
+   ]
+  }
+ ],
+ "notes": "Single family samsung-heartassist covering 8 included K-numbers (K211824, K220043, K223387, K230084, K241971, K242444, K242511, K250999). Fetal HeartAssist introduced K211824 (HERA W10 only); adult HeartAssist introduced K223387 (V8/V7). Adult quantitative results exist only in K223387 and K242511 (view recognition 98.31%, Dice 0.93; auto-measurement PCC reported as a pass criterion, not values). K250999 updated AI models but reports fetal validation only. AutoEF (GLS) and Strain+ (LA/RV) are named in K250999 but not characterized as AI and have no reported performance; first cleared in K243702 (outside batch). ViewAssist recognizes fetal cardiac views (4CV/LVOT/RVOT) but is an OB annotation feature and was left out of embedded_ai_features. All decision dates and product code IYN match openFDA. Three peer-reviewed performance claims from PMIDs 40240835 and 37097825 are keyed to K211824 (the first fetal HeartAssist clearance) because the papers do not reference a K-number; the Ontact Health KCJ 2024 paper (PMID 39434367) was removed from papers during verification because it does not name HeartAssist or Samsung; it is kept as an open question. Company white-paper/course-page numbers are recorded only in prior_validations (no sample sizes). Vendor product pages on samsunghealthcare.com redirect-looped; resources.samsunghealthcare.com/en/cardiovascular used as product_url. No clinical trial registrations found. Verification pass (2026-09-05): all FDA quotes, values, pages, predicates, product codes and decision dates confirmed against the summary texts and openFDA; PMIDs 40240835, 37097825 and DOIs 10.1038/s41598-025-97934-z, 10.1515/jpm-2023-0052, 10.1002/uog.27073 resolved with matching titles; white-paper and vendor-page quotes re-fetched and confirmed."
+}

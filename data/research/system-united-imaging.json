@@ -1,0 +1,504 @@
+{
+ "batch_id": "united-imaging",
+ "families": [
+  {
+   "id": "united-imaging-usonique-cardiac-ai",
+   "product_name": "uSONIQUE series cardiac AI features (Auto EF / Fast EF, uWorks Echo, Fast Strain / 2D Strain LV-RV-LA, Auto WMA, 4D MVQ, 4D LAAQ)",
+   "company": "Wuhan United Imaging Healthcare Co., Ltd.",
+   "company_website": "https://usa.united-imaging.com/",
+   "product_url": "https://usa.united-imaging.com/products/ultrasound",
+   "category": "system-embedded",
+   "tags": [
+    "Auto EF",
+    "Fast EF",
+    "LV ejection fraction",
+    "LV segmentation",
+    "ED/ES detection",
+    "uWorks Echo",
+    "view recognition",
+    "image quality assessment",
+    "auto measurement",
+    "Fast Strain",
+    "2D Strain LV",
+    "2D Strain RV",
+    "2D Strain LA",
+    "Auto WMA",
+    "wall motion",
+    "4D MVQ",
+    "4D LAAQ",
+    "scanning assistant"
+   ],
+   "modality_scope": [
+    "TTE",
+    "TEE",
+    "3D/4D"
+   ],
+   "deployment": [
+    "ultrasound-system-embedded"
+   ],
+   "summary": "United Imaging's uSONIQUE cart-based ultrasound systems (Genesis/Pulse/Venus under K253716; Nova/Vita/Grace under K253720) embed machine-learning Auto EF / Fast EF (LV segmentation and ED/ES detection on A2C and A4C loops) and a uWorks Echo auto workflow (view recognition, quality assessment, automatic measurement across 14 echo views), plus Fast Strain / 2D Strain LV-RV-LA, Auto WMA, and (Genesis/Pulse) 4D MVQ and 4D LAAQ. Both 510(k)s were cleared in May 2026 with GE LOGIQ E10 (K231966) as predicate. Standalone validation reported Dice 90.8-92% and mean absolute EF error 4.2-4.7% on 45-50 cases per view (68-74 subjects) and uWorks Echo view-recognition accuracy 98.09-99.34% on 50-55 cases per view (93-111 subjects); no peer-reviewed publications or clinical trials for these features were found.",
+   "intended_use_quote": null,
+   "indications_for_use_quote": "The Ultrasonic Pulsed Doppler Imaging System is used for ultrasound scanning of the whole body. It is intended for use by qualified and trained healthcare professionals in a hospital or medical clinic to perform ultrasound diagnostic examinations, supporting the following clinical applications: Abdominal (including Renal, Gynecological, and Obstetric), Pediatric, Small Parts, Cranial(Neonatal Cephalic, Adult Cephalic), Cardiac, Peripheral Vascular, Musculoskeletal, Urological. Modes of operation include: B Mode, M Mode, Color Mode, PW Mode, CW Mode, 3D/4D Mode, Strain Elastography Imaging, Shear Wave Elastography Imaging. Combined modes: B/M, B/Color, B/PW, B/Color/ PW.",
+   "embedded_ai_features": [
+    {
+     "name": "Auto EF (non-real-time) / Fast EF (real-time)",
+     "function": "Machine-learning left-ventricular segmentation on A2C and A4C cine loops with end-diastolic/end-systolic frame detection to compute LV ejection fraction. Auto EF is the non-real-time (stored-loop) workflow; Fast EF is the real-time workflow driven by a scanning assistant. Compared to GE LOGIQ E10 Auto EF2.0 (predicate K231966). Listed under 'Summary of the Machine Learning Algorithm'.",
+     "first_k_number": "K253716",
+     "quote": "For the proposed device, ejection fraction (EF) measurement is separated into two distinct functional modes based on workflow: non-real-time and real-time scenarios, corresponding to “Auto EF” and “Fast EF,” respectively. In contrast, the predicate device does not differentiate between these scenarios and provides a single EF measurement function."
+    },
+    {
+     "name": "uWorks Echo (Auto Workflow, cardiology)",
+     "function": "Automated echocardiography workflow with three ML components: echo view recognition, image quality assessment (A: high-quality / B: low-quality), and automatic measurement across 14 standard views (PLAX, PSAX_AV, PSAX_PA, PSAX_MV, PSAX_PM, PSAX_A, A2C, A3C, A4C, A5C, RVI, S4C, SIVC, SSN); a scanning assistant sequences the views. Compared to GE Voluson SonoLyst (reference K231965), whose auto workflow is OB-only.",
+     "first_k_number": "K253716",
+     "quote": "The uWorks Echo algorithm primarily consists of three algorithmic components: view recognition algorithm, quality assessment algorithm and automatic measurement algorithm."
+    },
+    {
+     "name": "Fast Strain (real-time) / 2D Strain LV, 2D Strain RV, 2D Strain LA (non-real-time)",
+     "function": "Speckle-tracking strain analysis of the left ventricle, right ventricle and left atrium (equivalent to GE Vivid AFI / AFI RV / AFI LA, reference K200743). Fast Strain is the real-time mode. Performance testing is stated but no numeric results are reported, and the summary does not describe it as machine learning.",
+     "first_k_number": "K253716",
+     "quote": "For the proposed device, 2D Strain(AFI) measurement is divided into two distinct functional modes based on workflow: non-real-time and real-time scenarios, corresponding to “2D Strain” and “Fast Strain,” respectively. In contrast, the predicate device is used primarily in non-real-time scenarios."
+    },
+    {
+     "name": "Auto WMA (Auto Wall Motion Analysis)",
+     "function": "Automated LV wall motion analysis, compared to Philips EPIQ/Affiniti Auto SWMS (reference K240850). Performance testing stated; no numeric results and not described as machine learning in the summary.",
+     "first_k_number": "K253716",
+     "quote": "Auto WMA (Auto Wall Motion Analysis) Yes Yes Yes Auto SWMS Same"
+    },
+    {
+     "name": "4D MVQ (4D Mitral Valve Quantification)",
+     "function": "Automated mitral valve quantification from 4D TEE volumes, compared to GE Vivid 4D Auto MVQ (reference K220882). Available on uSONIQUE Genesis and Pulse series only in K253716; not listed in the K253720 comparison tables. Performance testing stated; no numeric results.",
+     "first_k_number": "K253716",
+     "quote": "Various testing has been conducted (such as performance testing for SWE, SE, 4D TEE, CEUS, uNeedle, Fusion Navigation, uMFI, Biopsy Guide, Panoramic Imaging, 3D/4D mode, Auto OB, Auto EF, Fast EF, Auto Workflow(uWorks ABD, uWorks Echo, uWorks OB), Auto HRI, Auto Bladder, Auto IMT, Auto IVC, Fast Strain, 2D Strain LV, 2D Strain RV, 2D Strain LA, Auto WMA, 4D MVQ, 4D LAAQ, Auto NT, Auto Fetal HR, Auto ICV, Auto CNS, Auto Endo, Auto FLC, Auto Pelvic and Auto Hip."
+    },
+    {
+     "name": "4D LAAQ (4D Left Atrial Appendage Quantification)",
+     "function": "Automated left atrial appendage quantification from 4D TEE volumes, compared to GE Vivid 4D Auto LAQ (reference K220882). Genesis and Pulse series only in K253716 (Venus does not support it); not listed in the K253720 comparison tables. Performance testing stated; no numeric results.",
+     "first_k_number": "K253716",
+     "quote": "uSONIQUE Venus series do not support 4D LAAQ. The difference did not raise new safety and effectiveness concerns."
+    }
+   ],
+   "clearances": [
+    {
+     "k_number": "K253716",
+     "decision_date": "2026-05-15",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K231966",
+      "K223830",
+      "K200743",
+      "K220882",
+      "K231965",
+      "K240850",
+      "K221300"
+     ],
+     "changes_summary": "Initial clearance of uSONIQUE Genesis/Pulse/Venus (Pro/Elite/Super) cart systems. Introduces ML Auto EF / Fast EF and uWorks Echo auto workflow (with validation data), plus Fast Strain / 2D Strain LV/RV/LA, Auto WMA, 4D MVQ and 4D LAAQ (Genesis and Pulse only; Venus lacks TEE/4D LAAQ and Stress Echo). Primary predicate GE LOGIQ E10 (K231966); reference devices Siemens Ultrasound System 2300 (K223830), GE Vivid E80/E90/E95 (K200743, K220882), GE Voluson Expert (K231965), Philips EPIQ/Affiniti (K240850), Mindray Consona series (K221300).",
+     "notable_flags": [
+      "Summary lists product codes IYN, IYO, ITX, QIH; openFDA primary code IYN",
+      "Machine-learning summary provided for Auto EF/Fast EF and uWorks Echo only; strain, Auto WMA, 4D MVQ/LAAQ have no reported numbers",
+      "Auto EF subject-count text is internally inconsistent (74 subjects vs '30 ... in China and 20 in the USA' vs 'dataset of 50 patients')",
+      "Training set size not disclosed for cardiac algorithms"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253716.pdf"
+    },
+    {
+     "k_number": "K253720",
+     "decision_date": "2026-05-21",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K231966",
+      "K223830",
+      "K200743",
+      "K220882",
+      "K231965",
+      "K240850",
+      "K221300"
+     ],
+     "changes_summary": "Initial clearance of uSONIQUE Nova/Vita/Grace (and Elite) cart systems, with the same cardiac feature set validated separately on uSONIQUE Nova: ML Auto EF / Fast EF (adds ED/ES frame-deviation results) and uWorks Echo, plus Fast Strain / 2D Strain LV/RV/LA and Auto WMA. 4D TEE imaging is listed but 4D MVQ / 4D LAAQ are not in the comparison tables. Same predicate (K231966) and reference devices as K253716.",
+     "notable_flags": [
+      "Summary lists product codes IYN, IYO, ITX, QIH; openFDA primary code IYN",
+      "Auto EF equipment paragraph says data were 'collected prospectively from 45 demographically diverse patients in China' while the subgroup paragraph reports 68 subjects with 60% US",
+      "ED/ES deviation values reported without units",
+      "Training set size not disclosed for cardiac algorithms",
+      "Vendor Vita product page lists 4D MVQ and 4D LAAQ although the K253720 summary does not list them"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253720.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K253716",
+     "endpoint": "Auto EF / Fast EF LV segmentation, A2C",
+     "metric": "mean Dice score",
+     "value": "92%",
+     "comparator": "Predefined acceptance criteria: Dice score >80%; relative EF measurement error <5%. Reference standard = expert-annotated LV segmentation / EF.",
+     "n_studies": null,
+     "n_patients": 74,
+     "n_sites": null,
+     "dataset_description": "Prospective validation set: 50 cases each for A2C and A4C views drawn from 74 subjects (47 Chinese, 27 North American; age 18-77; female 47.3%; China 63.5% / US 36.5%; BMI 15.0-34.75), acquired on uSONIQUE Genesis with the Fast EF/Auto EF Measure Assistant; 3-5 s cine loops with >=3 cardiac cycles. Reference standard: annotators (>1 y) reviewed by two radiologists (>=3 y) with senior-radiologist (>=5 y) arbitration. Acceptance criteria: Dice >80%, relative EF error <5%.",
+     "subgroup_notes": "Subgroups reported (age, gender, country, BMI) as distribution only; no per-subgroup performance values given. Age >=10&<30 17.6%, 30-50 31.1%, 50-70 44.6%, 70-90 6.8%; BMI <18.5 2.7%, 18.5-24 24.3%, 24-28 44.6%, >=28 28.4%. (Sentence begins 'The Fast' at the foot of p.17 and continues on p.18.)",
+     "quote": "EF/Auto EF of EF measurements has average Dice of 92% and average absolute final measure error of 4.4% in A2C,91.7% and 4.2% in A4C.",
+     "page": 18,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K253716",
+     "endpoint": "Auto EF / Fast EF ejection fraction, A2C",
+     "metric": "mean absolute relative EF error",
+     "value": "4.4%",
+     "comparator": "Predefined acceptance criteria: Dice score >80%; relative EF measurement error <5%. Reference standard = expert-annotated LV segmentation / EF.",
+     "n_studies": null,
+     "n_patients": 74,
+     "n_sites": null,
+     "dataset_description": "Prospective validation set: 50 cases each for A2C and A4C views drawn from 74 subjects (47 Chinese, 27 North American; age 18-77; female 47.3%; China 63.5% / US 36.5%; BMI 15.0-34.75), acquired on uSONIQUE Genesis with the Fast EF/Auto EF Measure Assistant; 3-5 s cine loops with >=3 cardiac cycles. Reference standard: annotators (>1 y) reviewed by two radiologists (>=3 y) with senior-radiologist (>=5 y) arbitration. Acceptance criteria: Dice >80%, relative EF error <5%.",
+     "subgroup_notes": "Subgroups reported (age, gender, country, BMI) as distribution only; no per-subgroup performance values given. Age >=10&<30 17.6%, 30-50 31.1%, 50-70 44.6%, 70-90 6.8%; BMI <18.5 2.7%, 18.5-24 24.3%, 24-28 44.6%, >=28 28.4%. (Sentence begins 'The Fast' at the foot of p.17 and continues on p.18.)",
+     "quote": "EF/Auto EF of EF measurements has average Dice of 92% and average absolute final measure error of 4.4% in A2C,91.7% and 4.2% in A4C.",
+     "page": 18,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K253716",
+     "endpoint": "Auto EF / Fast EF LV segmentation, A4C",
+     "metric": "mean Dice score",
+     "value": "91.7%",
+     "comparator": "Predefined acceptance criteria: Dice score >80%; relative EF measurement error <5%. Reference standard = expert-annotated LV segmentation / EF.",
+     "n_studies": null,
+     "n_patients": 74,
+     "n_sites": null,
+     "dataset_description": "Prospective validation set: 50 cases each for A2C and A4C views drawn from 74 subjects (47 Chinese, 27 North American; age 18-77; female 47.3%; China 63.5% / US 36.5%; BMI 15.0-34.75), acquired on uSONIQUE Genesis with the Fast EF/Auto EF Measure Assistant; 3-5 s cine loops with >=3 cardiac cycles. Reference standard: annotators (>1 y) reviewed by two radiologists (>=3 y) with senior-radiologist (>=5 y) arbitration. Acceptance criteria: Dice >80%, relative EF error <5%.",
+     "subgroup_notes": "Subgroups reported (age, gender, country, BMI) as distribution only; no per-subgroup performance values given. Age >=10&<30 17.6%, 30-50 31.1%, 50-70 44.6%, 70-90 6.8%; BMI <18.5 2.7%, 18.5-24 24.3%, 24-28 44.6%, >=28 28.4%. (Sentence begins 'The Fast' at the foot of p.17 and continues on p.18.)",
+     "quote": "EF/Auto EF of EF measurements has average Dice of 92% and average absolute final measure error of 4.4% in A2C,91.7% and 4.2% in A4C.",
+     "page": 18,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K253716",
+     "endpoint": "Auto EF / Fast EF ejection fraction, A4C",
+     "metric": "mean absolute relative EF error",
+     "value": "4.2%",
+     "comparator": "Predefined acceptance criteria: Dice score >80%; relative EF measurement error <5%. Reference standard = expert-annotated LV segmentation / EF.",
+     "n_studies": null,
+     "n_patients": 74,
+     "n_sites": null,
+     "dataset_description": "Prospective validation set: 50 cases each for A2C and A4C views drawn from 74 subjects (47 Chinese, 27 North American; age 18-77; female 47.3%; China 63.5% / US 36.5%; BMI 15.0-34.75), acquired on uSONIQUE Genesis with the Fast EF/Auto EF Measure Assistant; 3-5 s cine loops with >=3 cardiac cycles. Reference standard: annotators (>1 y) reviewed by two radiologists (>=3 y) with senior-radiologist (>=5 y) arbitration. Acceptance criteria: Dice >80%, relative EF error <5%.",
+     "subgroup_notes": "Subgroups reported (age, gender, country, BMI) as distribution only; no per-subgroup performance values given. Age >=10&<30 17.6%, 30-50 31.1%, 50-70 44.6%, 70-90 6.8%; BMI <18.5 2.7%, 18.5-24 24.3%, 24-28 44.6%, >=28 28.4%. (Sentence begins 'The Fast' at the foot of p.17 and continues on p.18.)",
+     "quote": "EF/Auto EF of EF measurements has average Dice of 92% and average absolute final measure error of 4.4% in A2C,91.7% and 4.2% in A4C.",
+     "page": 18,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K253716",
+     "endpoint": "uWorks Echo view recognition (14 echo views)",
+     "metric": "mean accuracy",
+     "value": "0.9934",
+     "comparator": "Predefined acceptance criterion: view recognition accuracy >90% vs expert view labels.",
+     "n_studies": null,
+     "n_patients": 111,
+     "n_sites": null,
+     "dataset_description": "Test set: 55 cases per view for each of 14 standard echo views (PLAX, PSAX_AV, PSAX_PA, PSAX_MV, PSAX_PM, PSAX_A, A2C, A3C, A4C, A5C, RVI, S4C, SIVC, SSN) drawn from 111 subjects (74 Chinese, 37 North American; age 18-79; female 44%; China 67% / US 33%; BMI 15.0-36.53), acquired on uSONIQUE Genesis (uS5-1, uSC5-1) with 3-5 s cine loops of >=3 cardiac cycles; 1-4 frames per case annotated. Acceptance: view recognition >90%, quality assessment >80%, automatic measurement accuracy >80%.",
+     "subgroup_notes": "Distribution only: age <40 30%, 40-60 36%, >=60 34%; BMI <18.5 6%, 18.5-25 37%, >=25 57%. No per-subgroup performance values given.",
+     "quote": "The view recognition algorithm has average accuracy of 0.9934. The quality assessment algorithm has average accuracy of 0.9362. The automatic measure algorithm has average Dice of 0.9353 and average measurement error of 0.0514.",
+     "page": 24,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K253716",
+     "endpoint": "uWorks Echo image quality assessment",
+     "metric": "mean accuracy",
+     "value": "0.9362",
+     "comparator": "Predefined acceptance criterion: quality assessment accuracy >80% vs expert quality score (A: high-quality, B: low-quality).",
+     "n_studies": null,
+     "n_patients": 111,
+     "n_sites": null,
+     "dataset_description": "Test set: 55 cases per view for each of 14 standard echo views (PLAX, PSAX_AV, PSAX_PA, PSAX_MV, PSAX_PM, PSAX_A, A2C, A3C, A4C, A5C, RVI, S4C, SIVC, SSN) drawn from 111 subjects (74 Chinese, 37 North American; age 18-79; female 44%; China 67% / US 33%; BMI 15.0-36.53), acquired on uSONIQUE Genesis (uS5-1, uSC5-1) with 3-5 s cine loops of >=3 cardiac cycles; 1-4 frames per case annotated. Acceptance: view recognition >90%, quality assessment >80%, automatic measurement accuracy >80%.",
+     "subgroup_notes": "Distribution only: age <40 30%, 40-60 36%, >=60 34%; BMI <18.5 6%, 18.5-25 37%, >=25 57%. No per-subgroup performance values given.",
+     "quote": "The view recognition algorithm has average accuracy of 0.9934. The quality assessment algorithm has average accuracy of 0.9362. The automatic measure algorithm has average Dice of 0.9353 and average measurement error of 0.0514.",
+     "page": 24,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K253716",
+     "endpoint": "uWorks Echo automatic measurement (segmentation)",
+     "metric": "mean Dice score",
+     "value": "0.9353",
+     "comparator": "Predefined acceptance criterion: automatic measurement accuracy >80% vs expert segmentation masks and measurements.",
+     "n_studies": null,
+     "n_patients": 111,
+     "n_sites": null,
+     "dataset_description": "Test set: 55 cases per view for each of 14 standard echo views (PLAX, PSAX_AV, PSAX_PA, PSAX_MV, PSAX_PM, PSAX_A, A2C, A3C, A4C, A5C, RVI, S4C, SIVC, SSN) drawn from 111 subjects (74 Chinese, 37 North American; age 18-79; female 44%; China 67% / US 33%; BMI 15.0-36.53), acquired on uSONIQUE Genesis (uS5-1, uSC5-1) with 3-5 s cine loops of >=3 cardiac cycles; 1-4 frames per case annotated. Acceptance: view recognition >90%, quality assessment >80%, automatic measurement accuracy >80%.",
+     "subgroup_notes": "Distribution only: age <40 30%, 40-60 36%, >=60 34%; BMI <18.5 6%, 18.5-25 37%, >=25 57%. No per-subgroup performance values given.",
+     "quote": "The view recognition algorithm has average accuracy of 0.9934. The quality assessment algorithm has average accuracy of 0.9362. The automatic measure algorithm has average Dice of 0.9353 and average measurement error of 0.0514.",
+     "page": 24,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K253716",
+     "endpoint": "uWorks Echo automatic measurement",
+     "metric": "mean measurement error",
+     "value": "0.0514",
+     "comparator": "Predefined acceptance criterion: automatic measurement accuracy >80% vs expert segmentation masks and measurements.",
+     "n_studies": null,
+     "n_patients": 111,
+     "n_sites": null,
+     "dataset_description": "Test set: 55 cases per view for each of 14 standard echo views (PLAX, PSAX_AV, PSAX_PA, PSAX_MV, PSAX_PM, PSAX_A, A2C, A3C, A4C, A5C, RVI, S4C, SIVC, SSN) drawn from 111 subjects (74 Chinese, 37 North American; age 18-79; female 44%; China 67% / US 33%; BMI 15.0-36.53), acquired on uSONIQUE Genesis (uS5-1, uSC5-1) with 3-5 s cine loops of >=3 cardiac cycles; 1-4 frames per case annotated. Acceptance: view recognition >90%, quality assessment >80%, automatic measurement accuracy >80%.",
+     "subgroup_notes": "Distribution only: age <40 30%, 40-60 36%, >=60 34%; BMI <18.5 6%, 18.5-25 37%, >=25 57%. No per-subgroup performance values given.",
+     "quote": "The view recognition algorithm has average accuracy of 0.9934. The quality assessment algorithm has average accuracy of 0.9362. The automatic measure algorithm has average Dice of 0.9353 and average measurement error of 0.0514.",
+     "page": 24,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K253720",
+     "endpoint": "Auto EF / Fast EF LV segmentation, A2C",
+     "metric": "mean Dice score",
+     "value": "91.7%",
+     "comparator": "Predefined acceptance criteria: Dice score >80%; relative EF measurement error <5%. Reference standard = expert-annotated LV segmentation / EF.",
+     "n_studies": null,
+     "n_patients": 68,
+     "n_sites": null,
+     "dataset_description": "Prospective validation set: 45 cases each for A2C and A4C views drawn from 68 subjects (27 Chinese, 41 North American; age 17-80; female 53%; China 40% / US 60%; BMI 15.57-38.27), acquired on uSONIQUE Nova with the Fast EF/Auto EF Measure Assistant. Reference standard: two reviewers (>=3 y medical imaging experience) with one arbitrator (>=5 y). Acceptance criteria: Dice >80%, relative EF error <5%.",
+     "subgroup_notes": "Distribution only: age >=10&<30 26%, 30-50 28%, 50-70 31%, 70-90 15%; BMI <18.5 7%, 18.5-24 40%, 24-28 32%, >=28 21%. No per-subgroup performance values given.",
+     "quote": "The Fast EF/Auto EF of EF measurements has average Dice of 91.7% and average absolute final measure error of 4.4% in A2C, 90.8% and 4.7% in A4C. In the ED/ES detection, the average ES deviation in A2C is 1.36, and the average ED deviation is 1.24. In A4C, the average ES deviation is 1.29, and the average ED deviation is 1.44.",
+     "page": 14,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K253720",
+     "endpoint": "Auto EF / Fast EF ejection fraction, A2C",
+     "metric": "mean absolute relative EF error",
+     "value": "4.4%",
+     "comparator": "Predefined acceptance criteria: Dice score >80%; relative EF measurement error <5%. Reference standard = expert-annotated LV segmentation / EF.",
+     "n_studies": null,
+     "n_patients": 68,
+     "n_sites": null,
+     "dataset_description": "Prospective validation set: 45 cases each for A2C and A4C views drawn from 68 subjects (27 Chinese, 41 North American; age 17-80; female 53%; China 40% / US 60%; BMI 15.57-38.27), acquired on uSONIQUE Nova with the Fast EF/Auto EF Measure Assistant. Reference standard: two reviewers (>=3 y medical imaging experience) with one arbitrator (>=5 y). Acceptance criteria: Dice >80%, relative EF error <5%.",
+     "subgroup_notes": "Distribution only: age >=10&<30 26%, 30-50 28%, 50-70 31%, 70-90 15%; BMI <18.5 7%, 18.5-24 40%, 24-28 32%, >=28 21%. No per-subgroup performance values given.",
+     "quote": "The Fast EF/Auto EF of EF measurements has average Dice of 91.7% and average absolute final measure error of 4.4% in A2C, 90.8% and 4.7% in A4C. In the ED/ES detection, the average ES deviation in A2C is 1.36, and the average ED deviation is 1.24. In A4C, the average ES deviation is 1.29, and the average ED deviation is 1.44.",
+     "page": 14,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K253720",
+     "endpoint": "Auto EF / Fast EF LV segmentation, A4C",
+     "metric": "mean Dice score",
+     "value": "90.8%",
+     "comparator": "Predefined acceptance criteria: Dice score >80%; relative EF measurement error <5%. Reference standard = expert-annotated LV segmentation / EF.",
+     "n_studies": null,
+     "n_patients": 68,
+     "n_sites": null,
+     "dataset_description": "Prospective validation set: 45 cases each for A2C and A4C views drawn from 68 subjects (27 Chinese, 41 North American; age 17-80; female 53%; China 40% / US 60%; BMI 15.57-38.27), acquired on uSONIQUE Nova with the Fast EF/Auto EF Measure Assistant. Reference standard: two reviewers (>=3 y medical imaging experience) with one arbitrator (>=5 y). Acceptance criteria: Dice >80%, relative EF error <5%.",
+     "subgroup_notes": "Distribution only: age >=10&<30 26%, 30-50 28%, 50-70 31%, 70-90 15%; BMI <18.5 7%, 18.5-24 40%, 24-28 32%, >=28 21%. No per-subgroup performance values given.",
+     "quote": "The Fast EF/Auto EF of EF measurements has average Dice of 91.7% and average absolute final measure error of 4.4% in A2C, 90.8% and 4.7% in A4C. In the ED/ES detection, the average ES deviation in A2C is 1.36, and the average ED deviation is 1.24. In A4C, the average ES deviation is 1.29, and the average ED deviation is 1.44.",
+     "page": 14,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K253720",
+     "endpoint": "Auto EF / Fast EF ejection fraction, A4C",
+     "metric": "mean absolute relative EF error",
+     "value": "4.7%",
+     "comparator": "Predefined acceptance criteria: Dice score >80%; relative EF measurement error <5%. Reference standard = expert-annotated LV segmentation / EF.",
+     "n_studies": null,
+     "n_patients": 68,
+     "n_sites": null,
+     "dataset_description": "Prospective validation set: 45 cases each for A2C and A4C views drawn from 68 subjects (27 Chinese, 41 North American; age 17-80; female 53%; China 40% / US 60%; BMI 15.57-38.27), acquired on uSONIQUE Nova with the Fast EF/Auto EF Measure Assistant. Reference standard: two reviewers (>=3 y medical imaging experience) with one arbitrator (>=5 y). Acceptance criteria: Dice >80%, relative EF error <5%.",
+     "subgroup_notes": "Distribution only: age >=10&<30 26%, 30-50 28%, 50-70 31%, 70-90 15%; BMI <18.5 7%, 18.5-24 40%, 24-28 32%, >=28 21%. No per-subgroup performance values given.",
+     "quote": "The Fast EF/Auto EF of EF measurements has average Dice of 91.7% and average absolute final measure error of 4.4% in A2C, 90.8% and 4.7% in A4C. In the ED/ES detection, the average ES deviation in A2C is 1.36, and the average ED deviation is 1.24. In A4C, the average ES deviation is 1.29, and the average ED deviation is 1.44.",
+     "page": 14,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K253720",
+     "endpoint": "Auto EF / Fast EF ED/ES frame detection, A2C",
+     "metric": "mean ES deviation / mean ED deviation (unit not stated)",
+     "value": "ES 1.36; ED 1.24",
+     "comparator": "Expert-labeled ED/ES frames (unit of deviation not stated in summary; presumably frames)",
+     "n_studies": null,
+     "n_patients": 68,
+     "n_sites": null,
+     "dataset_description": "Prospective validation set: 45 cases each for A2C and A4C views drawn from 68 subjects (27 Chinese, 41 North American; age 17-80; female 53%; China 40% / US 60%; BMI 15.57-38.27), acquired on uSONIQUE Nova with the Fast EF/Auto EF Measure Assistant. Reference standard: two reviewers (>=3 y medical imaging experience) with one arbitrator (>=5 y). Acceptance criteria: Dice >80%, relative EF error <5%.",
+     "subgroup_notes": "Distribution only: age >=10&<30 26%, 30-50 28%, 50-70 31%, 70-90 15%; BMI <18.5 7%, 18.5-24 40%, 24-28 32%, >=28 21%. No per-subgroup performance values given.",
+     "quote": "The Fast EF/Auto EF of EF measurements has average Dice of 91.7% and average absolute final measure error of 4.4% in A2C, 90.8% and 4.7% in A4C. In the ED/ES detection, the average ES deviation in A2C is 1.36, and the average ED deviation is 1.24. In A4C, the average ES deviation is 1.29, and the average ED deviation is 1.44.",
+     "page": 14,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K253720",
+     "endpoint": "Auto EF / Fast EF ED/ES frame detection, A4C",
+     "metric": "mean ES deviation / mean ED deviation (unit not stated)",
+     "value": "ES 1.29; ED 1.44",
+     "comparator": "Expert-labeled ED/ES frames (unit of deviation not stated in summary; presumably frames)",
+     "n_studies": null,
+     "n_patients": 68,
+     "n_sites": null,
+     "dataset_description": "Prospective validation set: 45 cases each for A2C and A4C views drawn from 68 subjects (27 Chinese, 41 North American; age 17-80; female 53%; China 40% / US 60%; BMI 15.57-38.27), acquired on uSONIQUE Nova with the Fast EF/Auto EF Measure Assistant. Reference standard: two reviewers (>=3 y medical imaging experience) with one arbitrator (>=5 y). Acceptance criteria: Dice >80%, relative EF error <5%.",
+     "subgroup_notes": "Distribution only: age >=10&<30 26%, 30-50 28%, 50-70 31%, 70-90 15%; BMI <18.5 7%, 18.5-24 40%, 24-28 32%, >=28 21%. No per-subgroup performance values given.",
+     "quote": "The Fast EF/Auto EF of EF measurements has average Dice of 91.7% and average absolute final measure error of 4.4% in A2C, 90.8% and 4.7% in A4C. In the ED/ES detection, the average ES deviation in A2C is 1.36, and the average ED deviation is 1.24. In A4C, the average ES deviation is 1.29, and the average ED deviation is 1.44.",
+     "page": 14,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K253720",
+     "endpoint": "uWorks Echo view recognition (14 echo views)",
+     "metric": "mean accuracy",
+     "value": "98.09%",
+     "comparator": "Predefined acceptance criterion: view recognition accuracy >90% vs expert view labels.",
+     "n_studies": null,
+     "n_patients": 93,
+     "n_sites": null,
+     "dataset_description": "Test set: 50 cases per view (45 for PSAX_PA) for each of 14 standard echo views drawn from 93 subjects (61 Chinese, 32 North American; age 17-80; female 49%; China 66% / US 34%; BMI 15.0-36.53), acquired on uSONIQUE Nova (uS5-1s, uSC5-1s) with 3-5 s cine loops of >=3 cardiac cycles; 1-4 frames per case annotated. Acceptance: view recognition >90%, quality assessment >80%, automatic measurement accuracy >80%.",
+     "subgroup_notes": "Distribution only: age <40 35%, 40-60 38%, >=60 27%; BMI <18.5 6%, 18.5-25 48%, >=25 45%. No per-subgroup performance values given.",
+     "quote": "The view recognition  algorithm has average accuracy of 98.09%. The quality assessment algorithm has average accuracy of 91.27%. The automatic measure algorithm has average Dice of  93.83% and average measurement error of 4.28%.",
+     "page": 17,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K253720",
+     "endpoint": "uWorks Echo image quality assessment",
+     "metric": "mean accuracy",
+     "value": "91.27%",
+     "comparator": "Predefined acceptance criterion: quality assessment accuracy >80% vs expert quality score (A: high-quality, B: low-quality).",
+     "n_studies": null,
+     "n_patients": 93,
+     "n_sites": null,
+     "dataset_description": "Test set: 50 cases per view (45 for PSAX_PA) for each of 14 standard echo views drawn from 93 subjects (61 Chinese, 32 North American; age 17-80; female 49%; China 66% / US 34%; BMI 15.0-36.53), acquired on uSONIQUE Nova (uS5-1s, uSC5-1s) with 3-5 s cine loops of >=3 cardiac cycles; 1-4 frames per case annotated. Acceptance: view recognition >90%, quality assessment >80%, automatic measurement accuracy >80%.",
+     "subgroup_notes": "Distribution only: age <40 35%, 40-60 38%, >=60 27%; BMI <18.5 6%, 18.5-25 48%, >=25 45%. No per-subgroup performance values given.",
+     "quote": "The view recognition  algorithm has average accuracy of 98.09%. The quality assessment algorithm has average accuracy of 91.27%. The automatic measure algorithm has average Dice of  93.83% and average measurement error of 4.28%.",
+     "page": 17,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K253720",
+     "endpoint": "uWorks Echo automatic measurement (segmentation)",
+     "metric": "mean Dice score",
+     "value": "93.83%",
+     "comparator": "Predefined acceptance criterion: automatic measurement accuracy >80% vs expert segmentation masks and measurements.",
+     "n_studies": null,
+     "n_patients": 93,
+     "n_sites": null,
+     "dataset_description": "Test set: 50 cases per view (45 for PSAX_PA) for each of 14 standard echo views drawn from 93 subjects (61 Chinese, 32 North American; age 17-80; female 49%; China 66% / US 34%; BMI 15.0-36.53), acquired on uSONIQUE Nova (uS5-1s, uSC5-1s) with 3-5 s cine loops of >=3 cardiac cycles; 1-4 frames per case annotated. Acceptance: view recognition >90%, quality assessment >80%, automatic measurement accuracy >80%.",
+     "subgroup_notes": "Distribution only: age <40 35%, 40-60 38%, >=60 27%; BMI <18.5 6%, 18.5-25 48%, >=25 45%. No per-subgroup performance values given.",
+     "quote": "The view recognition  algorithm has average accuracy of 98.09%. The quality assessment algorithm has average accuracy of 91.27%. The automatic measure algorithm has average Dice of  93.83% and average measurement error of 4.28%.",
+     "page": 17,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K253720",
+     "endpoint": "uWorks Echo automatic measurement",
+     "metric": "mean measurement error",
+     "value": "4.28%",
+     "comparator": "Predefined acceptance criterion: automatic measurement accuracy >80% vs expert segmentation masks and measurements.",
+     "n_studies": null,
+     "n_patients": 93,
+     "n_sites": null,
+     "dataset_description": "Test set: 50 cases per view (45 for PSAX_PA) for each of 14 standard echo views drawn from 93 subjects (61 Chinese, 32 North American; age 17-80; female 49%; China 66% / US 34%; BMI 15.0-36.53), acquired on uSONIQUE Nova (uS5-1s, uSC5-1s) with 3-5 s cine loops of >=3 cardiac cycles; 1-4 frames per case annotated. Acceptance: view recognition >90%, quality assessment >80%, automatic measurement accuracy >80%.",
+     "subgroup_notes": "Distribution only: age <40 35%, 40-60 38%, >=60 27%; BMI <18.5 6%, 18.5-25 48%, >=25 45%. No per-subgroup performance values given.",
+     "quote": "The view recognition  algorithm has average accuracy of 98.09%. The quality assessment algorithm has average accuracy of 91.27%. The automatic measure algorithm has average Dice of  93.83% and average measurement error of 4.28%.",
+     "page": 17,
+     "verification": "fda_summary"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "Neither summary states training set size, source, or composition for Auto EF / Fast EF or uWorks Echo. (A training/tuning/test split of 280/90/30 from 400 Chinese cases is stated only for the non-cardiac uWorks Abd algorithm.)",
+    "source": "K253716 pp. 18, 25; K253720 pp. 15, 19",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": 74,
+    "n_sites": null,
+    "description": "Per-K standalone validation sets, as stated. K253716 (uSONIQUE Genesis): Auto EF/Fast EF 50 cases each for A2C and A4C from 74 subjects (47 Chinese, 27 North American; age 18-77; 47.3% female; 63.5% China / 36.5% US; BMI 15.0-34.75); uWorks Echo 55 cases per view x 14 views from 111 subjects (74 Chinese, 37 North American; age 18-79; 44% female; 67% China / 33% US). K253720 (uSONIQUE Nova): Auto EF/Fast EF 45 cases each for A2C and A4C from 68 subjects (27 Chinese, 41 North American; age 17-80; 53% female; 40% China / 60% US; BMI 15.57-38.27); uWorks Echo 50 cases per view (45 for PSAX_PA) x 14 views from 93 subjects (61 Chinese, 32 North American; age 17-80; 49% female; 66% China / 34% US). All sets prospectively collected on the proposed device by clinicians following the scanning assistant; reference standard by annotators/reviewers with >=3 y experience and >=5 y arbitrator. n_patients field carries the K253716 Auto EF cohort (74); see description for the others.",
+    "independent_of_training": true,
+    "source": "K253716 pp. 17-18, 24-25; K253720 pp. 14-15, 17-19",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [],
+   "papers": [],
+   "clinical_trials": [],
+   "open_questions": [
+    "Training data: size, sites, vendors and composition of the training sets for Auto EF/Fast EF and uWorks Echo are not disclosed in either summary.",
+    "K253716 Auto EF subject count is internally inconsistent: subgroup paragraph says 74 subjects (47 Chinese + 27 North American), equipment paragraph says 30 patients in China and 20 in the USA, truthing paragraph says 'dataset of 50 patients'.",
+    "K253720 Auto EF equipment paragraph says data were collected from 45 patients in China only, but the subgroup paragraph reports 68 subjects with 60% US; which is correct is unclear.",
+    "K253720 ED/ES deviation values (1.24-1.44) are reported without units (presumably frames) and without an acceptance criterion.",
+    "Fast Strain / 2D Strain LV-RV-LA, Auto WMA, 4D MVQ and 4D LAAQ: 'performance testing' is stated but no metrics, n, or comparator are given, and the summaries do not say whether these use ML.",
+    "uWorks Echo 'automatic measurement' outputs are not enumerated (which cardiac measurements are produced per view is not stated); 'measurement error' metric definition is not stated.",
+    "Number of clinical sites in China and the US contributing validation data is not stated.",
+    "The uSONIQUE Vita vendor page lists 4D MVQ and 4D LAAQ, but the K253720 summary comparison tables do not include them; whether these are cleared on Nova/Vita/Grace is unclear.",
+    "No peer-reviewed publication, preprint, or ClinicalTrials.gov registration describing these cardiac algorithms was found (PubMed queries on 'United Imaging'/'uSONIQUE'/'uWorks Echo'/'Auto EF' returned no relevant hits; the only United Imaging ultrasound trial, NCT07590063, is obstetric).",
+    "Product code: summaries list IYN, IYO, ITX and QIH; openFDA lists IYN as the primary code and the file used IYN."
+   ],
+   "sources": [
+    {
+     "fact": "K253716 decision date 2026-05-15, product code IYN, applicant Wuhan United Imaging Healthcare Co.,Ltd, device names",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K253720 decision date 2026-05-21, product code IYN, applicant, device names",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K253716 predicates, feature comparison tables, Auto EF/Fast EF and uWorks Echo ML validation results and dataset descriptions",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K253716.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K253716 FDA summary PDF",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253716.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K253720 predicates, feature comparison tables, Auto EF/Fast EF (incl. ED/ES deviation) and uWorks Echo ML validation results and dataset descriptions",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K253720.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K253720 FDA summary PDF",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253720.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "uSONIQUE product family listing: Genesis/Nova (General Imaging), Pulse/Vita (Cardiology), Venus/Grace (Women's Health); 'AI at the Core' / uEDGETEC platform",
+     "url_or_file": "https://usa.united-imaging.com/products/ultrasound",
+     "verification": "company"
+    },
+    {
+     "fact": "uSONIQUE Pulse page names 'Fast Strain, Fast EF, 4D MVQ, and 4D LAAQ' as automated quantification tools",
+     "url_or_file": "https://usa.united-imaging.com/products/ultrasound/usonique-pulse",
+     "verification": "company"
+    },
+    {
+     "fact": "uSONIQUE Vita page: 'AI-powered, end-to-end cardiac assistant streamlines image capture, measurements and reporting' and 'Fast EF, Fast Strain, 4D MVQ, 4D LAAQ, and more, support automated workflows'",
+     "url_or_file": "https://usa.united-imaging.com/products/ultrasound/usonique-vita",
+     "verification": "company"
+    },
+    {
+     "fact": "RSNA 2025 (Nov 30, 2025) global unveiling of uSONIQUE family; some products pending 510(k) at that time",
+     "url_or_file": "https://usa.united-imaging.com/news/press/united-imaging-broadens-imaging-portfolio-and-advances-native-ai-at-rsna-2025",
+     "verification": "company"
+    },
+    {
+     "fact": "Signify Research (June 5, 2026): United Imaging received FDA 510(k) clearance for seven uSONIQUE systems covering general imaging, cardiology and women's health; no cardiac AI specifics",
+     "url_or_file": "https://www.signifyresearch.net/insights/fda-clears-the-way-united-imaging-lands-in-america-bone-imaging-joins-the-frame/",
+     "verification": "news"
+    },
+    {
+     "fact": "PubMed esearch queries ('United Imaging' AND echocardiography ...; 'uSONIQUE'; 'uWorks Echo'; 'Auto EF'/'Fast EF'/'Fast Strain'/'Auto WMA') returned no papers about these ultrasound features (hits were CMR/PET/CT papers)",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+     "verification": "unverified"
+    },
+    {
+     "fact": "ClinicalTrials.gov sponsor search 'United Imaging': only ultrasound study is NCT07590063 (obstetric imaging; United Imaging Healthcare North America); no cardiac ultrasound trial",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies?query.spons=United+Imaging",
+     "verification": "unverified"
+    }
+   ]
+  }
+ ],
+ "notes": "Two included clearances (K253716 Genesis/Pulse/Venus, 2026-05-15; K253720 Nova/Vita/Grace, 2026-05-21) folded into one family. All 18 performance claims are verbatim from the FDA summaries with PDF page numbers (page = '===== PAGE N =====' index in the text files, i.e., PDF page). Quotes preserve the source text's spacing/OCR artifacts (e.g., 'dra wn', 'in A2C,91.7%'). Product code set to openFDA primary 'IYN' although the summaries also list IYO, ITX, QIH. Training data not disclosed for cardiac algorithms. No peer-reviewed papers or clinical trials found for these features; papers/clinical_trials left empty rather than guessed. Excluded K-numbers in the triage file (K251673, K250959, K241949, etc.) were ignored per instructions."
+}

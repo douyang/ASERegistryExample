@@ -1,0 +1,917 @@
+{
+ "batch_id": "ge-vivid",
+ "families": [
+  {
+   "id": "ge-vivid-cardiac-ai",
+   "product_name": "GE Vivid cardiac AI features (Automatic View Recognition, AI Auto Measure 2D / Spectrum Recognition, Easy Auto EF / Easy AFI LV with AI Auto ROI, AI Cardiac Auto Doppler, AI FlexiViews LAA; plus AFI/Auto EF/4D Auto quantification tools)",
+   "company": "GE HealthCare (GE Medical Systems Ultrasound and Primary Care Diagnostics, LLC; manufacturer GE Vingmed Ultrasound AS, Horten, Norway)",
+   "company_website": "https://www.gehealthcare.com",
+   "product_url": "https://gehealthcare-ultrasound.com/en/vivid-family/vivid-ai-and-automation/",
+   "category": "system-embedded",
+   "tags": [
+    "Automatic View Recognition",
+    "view classification",
+    "AI Auto Measure 2D",
+    "PLAX linear measurements",
+    "Spectrum Recognition",
+    "Cardiac Auto Doppler",
+    "Doppler auto-trace",
+    "Auto EF",
+    "Easy Auto EF",
+    "AI Auto ROI",
+    "LV ejection fraction",
+    "AFI",
+    "Easy AFI LV",
+    "GLS",
+    "LV strain",
+    "AFI RV",
+    "AFI LA",
+    "4D Auto LAQ",
+    "4D Auto TVQ",
+    "4D Auto LHQ",
+    "AI FlexiViews LAA",
+    "left atrial appendage",
+    "TEE",
+    "Scan Coach"
+   ],
+   "modality_scope": [
+    "TTE",
+    "TEE (AI FlexiViews LAA, 6VT probe)",
+    "3D/4D (4D Auto LAQ/TVQ/LHQ)",
+    "compact and portable carts (Vivid iq, Vivid T8/T9)",
+    "adult and pediatric cardiac"
+   ],
+   "deployment": [
+    "ultrasound-system-embedded"
+   ],
+   "summary": "Cardiac AI features embedded in GE HealthCare Vivid ultrasound systems (E80/E90/E95, S60N/S70N, iq, T8/T9, Pioneer) cleared under product code IYN across ten 510(k)s from 2018 to 2025. The line began with a deep-neural-network Automatic View Recognition (K181685), added AI Auto Measure 2D and Spectrum Recognition (K200497/K200743), then Easy Auto EF and Easy AFI LV with an AI Auto ROI segmentation algorithm (K220619 and siblings; Dice >=91-92% on 45 exams), and most recently AI Cardiac Auto Doppler and AI FlexiViews LAA on Vivid Pioneer (K251169; test sets of 805-1369 individuals for Doppler and 84 for LAA). None of the ten summaries reports a clinical study.",
+   "intended_use_quote": "Vivid Pioneer is a general-purpose ultrasound system, specialized for use in cardiac imaging. It is intended for use by, or under the direction of a qualified and trained physician or sonographer for ultrasound imaging, measurement, display and analysis of the human body and fluid.",
+   "indications_for_use_quote": "Vivid Pioneer is intended for use in a hospital environment including echo lab, other hospital settings, operating room, Cath lab and EP lab or in private medical offices. The systems support the following clinical applications: Fetal/Obstetrics, Abdominal (including renal, GYN), Pediatric, Small Organ (breast, testes, thyroid), Neonatal Cephalic, Adult Cephalic, Cardiac (adult and pediatric), Peripheral Vascular, Musculo-skeletal Conventional, Musculo-skeletal Superficial, Urology (including prostate), Transesophageal, Transvaginal, Transrectal, Intra-cardiac, lntra-luminal and lnterventional Guidance (including Biopsy, Vascular Access), Thoracic/Pleural and lntraoperative (vascular). Modes of operation include: 3D, Real time (RT) 3D Mode (4D), B, M, PW Doppler, CW Doppler, Color Doppler, Color M Doppler, Power Doppler, Harmonic Imaging, Coded Pulse and Combined modes: B/M, B/Color M, B/PWD or CWD, B/Color/PWD or CWD, B/Power/PWD.",
+   "embedded_ai_features": [
+    {
+     "name": "Automatic View Recognition",
+     "function": "Deep-neural-network classification of echocardiographic views to automatically select the apical images used by AFI 2.0 (LV longitudinal strain) and Auto EF 2.0 (LV ejection fraction) instead of manual image selection.",
+     "first_k_number": "K181685",
+     "quote": "“Automatic View Recognition” is new functionality based on deep neural network embedded into the software of Vivid E95 / Vivid E90. Automatic View Recognition is a tool for workflow improvement to AFI 2.0 and Auto EF 2.0 and provides an automated alternative to manual image selection already available on the predicate Vivid E80 / Vivid E90 / Vivid E95 (K173341)."
+    },
+    {
+     "name": "AutoEF 2.0",
+     "function": "Automated LV ejection fraction from 2D apical views; already on predicate K173341 (outside batch), updated as a workflow improvement in K181685. No AI/ML method stated.",
+     "first_k_number": "K173341",
+     "quote": "“AutoEF 2.0” is a workflow improvement of functionality already available on the predicate Vivid E80 / Vivid E90 / Vivid E95 (K173341)."
+    },
+    {
+     "name": "AFI 2.0 (Automated Function Imaging)",
+     "function": "Automated LV longitudinal strain (speckle tracking); already on predicate K173341, updated and expanded to pediatric use in K181685. No AI/ML method stated.",
+     "first_k_number": "K173341",
+     "quote": "“AFI 2.0” is a workflow improvement of functionality already available on the predicate Vivid E80 / Vivid E90 / Vivid E95 (K173341). In addition to the changes to the tool, we have now expanded if for pediatric use."
+    },
+    {
+     "name": "4D Auto LAQ",
+     "function": "Quantification of left-atrial volumes, emptying fraction and strain from live 3D (4D) data; claimed equivalent to 4D Auto RVQ. No AI/ML method stated.",
+     "first_k_number": "K181685",
+     "quote": "The new features “4D Auto LAQ” is a new feature for quantification of Left Atrium volumes, emptying fraction and strain in live 3D (4D). The feature is substantially equivalent to the 4D Auto RVQ already present on the predicate Vivid E80 / Vivid E90 / Vivid E95 (K173341)."
+    },
+    {
+     "name": "AI Auto Measure - 2D",
+     "function": "AI-based Cardiac Auto 2D feature performing (semi-)automated linear measurements on parasternal long-axis (PLAX) images. Introduced in K200497 (Vivid S60N/S70N); K200497 text layer is font-shifted, so the verbatim quote is taken from K200708, which attributes the feature to K200497.",
+     "first_k_number": "K200497",
+     "quote": "AI Auto Measure – 2D: same feature as cleared on Vivid S70N(K200497). It is AI (Artificial Intelligence) based Cardiac Auto 2D feature that enables automated measurements on a PLAX image."
+    },
+    {
+     "name": "AI Auto Measure - Spectrum Recognition",
+     "function": "AI recognition of common cardiac Doppler spectra that automatically launches the Auto Doppler measurement or opens the matching manual measurement folder. Introduced in K200497; quote from K200743 (clean text).",
+     "first_k_number": "K200497",
+     "quote": "AI Auto Measure – Spectrum Recognition: AI based Spectrum Recognition feature that enables automated recognition of common Doppler spectra and automatically starts the Auto Doppler measurement or opens the appropriate manual measurement folder."
+    },
+    {
+     "name": "AFI 3.0",
+     "function": "LV longitudinal strain analysis extended to GE raw data and third-party DICOM images. No AI/ML method stated. Introduced in K200497; quote from K200743.",
+     "first_k_number": "K200497",
+     "quote": "AFI 3.0: based on AFI 2.0 (cleared in Vivid E80/E90/E95, K181685), adds the ability to analyze the left ventricle on both GEHC raw data images and DICOM images from 3rd party ultrasound scanners."
+    },
+    {
+     "name": "Auto EF 3.0",
+     "function": "Automated LV function/EF assessment on GE raw data and other-vendor DICOM images. No AI/ML method stated. Introduced in K200497; quote from K200743.",
+     "first_k_number": "K200497",
+     "quote": "Auto EF 3.0: based on Auto EF 2.0 (cleared in K181685), adds the ability to assess LV function on raw data images acquired with GEHC scanners as well as on DICOM images from other vendors systems."
+    },
+    {
+     "name": "AFI RV",
+     "function": "Right-ventricular longitudinal global, free-wall and segmental strain from the apical 4-chamber RV-focused view. No AI/ML method stated. Introduced in K200497; quote from K200743.",
+     "first_k_number": "K200497",
+     "quote": "AFI RV: based on AFI 2.0 (cleared in K181685) but modified for the right ventricle (RV). It is a parametric tool giving quantitative data for right ventricular longitudinal global strain, free wall strain and segmental strain derived from the apical 4-chamber RV focused view."
+    },
+    {
+     "name": "AFI LA",
+     "function": "Left-atrial global strain plus LA volumes and emptying fraction. No AI/ML method stated. Introduced in K200497; quote from K200743.",
+     "first_k_number": "K200497",
+     "quote": "AFI LA: based on AFI 2.0 (cleared in K181685) but modified for the left atrium. It provides quantitative data for left atrial (LA) global strain. The tool also supports measurements of LA volumes and emptying fraction (EF)."
+    },
+    {
+     "name": "4D Auto TVQ",
+     "function": "Quantification of tricuspid annulus and valve from 4D echo; claimed equivalent to 4D Auto MVQ. No AI/ML method stated.",
+     "first_k_number": "K200743",
+     "quote": "4D Auto TVQ: new feature for quantification of tricuspid annulus and valve in 4D echocardiographic data. The feature is substantially equivalent to the feature for quantification of the Mitral Valve, 4D Auto MVQ, which is already present on the predicate Vivid E80 / Vivid E90 / Vivid E95 (K170823)."
+    },
+    {
+     "name": "Scan Coach",
+     "function": "Displays guidance information to help the user acquire the correct scan plane; originally cleared on Vivid T8 (K160078, outside batch). No AI/ML method stated.",
+     "first_k_number": "K160078",
+     "quote": "Scan Coach: same feature as cleared on Vivid T8 (K160078), is designed to display information which helps user acquire the right scan plane."
+    },
+    {
+     "name": "Easy Auto EF (Auto EF 3.0 + AI Auto ROI)",
+     "function": "One-step LV ejection fraction: an AI Auto ROI algorithm automatically places the LV region of interest / endocardial border so Auto EF 3.0 runs without manual tracing. Tested by Dice score of the segmentation.",
+     "first_k_number": "K220619",
+     "quote": "Added Easy Auto EF -based on AutoEF 3.0 (includes AI Auto ROI algorithm)"
+    },
+    {
+     "name": "Easy AFI LV (AFI 3.0 + AI Auto ROI)",
+     "function": "One-step LV longitudinal strain: the AI Auto ROI algorithm places the LV region of interest for AFI 3.0 speckle-tracking strain. Same AI test summary as Easy Auto EF.",
+     "first_k_number": "K220619",
+     "quote": "Added Easy AFI LV-based on AFI 3.0 (includes AI Auto ROI algorithm)"
+    },
+    {
+     "name": "AI Cardiac Auto Doppler",
+     "function": "Two AI algorithms (Tissue Doppler, Doppler Trace) auto-trace cardiac Doppler spectra and measure peak velocities and additional heart-valve-related parameters, extending the predicate Cardiac Auto Doppler / Spectrum Recognition.",
+     "first_k_number": "K251169",
+     "quote": "AI Cardiac Auto Doppler: AI based algorithm for auto-tracing of additional doppler spectrums added to the predicate Cardiac Auto Doppler available in the predicate Vivid E95 (K220882), introducing additional heart valve related measurements compared to the predicate Spectrum Recognition algorithm available in Vivid E95 (K220882)."
+    },
+    {
+     "name": "AI FlexiViews LAA",
+     "function": "AI workflow tool that localizes the left atrial appendage and extracts landmarks (LAA contour, circumflex, ridge point) in real-time 2D or biplane TEE images (6VT probe) with one button press, to support LAA visualization and device sizing.",
+     "first_k_number": "K251169",
+     "quote": "AI FlexiViews LAA: AI based workflow tool to help localize the LAA (Left Atrial Appendage) anatomical structure in real-time 2D or Biplane images with a single button press."
+    }
+   ],
+   "clearances": [
+    {
+     "k_number": "K181685",
+     "decision_date": "2018-10-25",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K173341",
+      "K082185"
+     ],
+     "changes_summary": "Added Automatic View Recognition (deep neural network view classifier feeding AFI 2.0 and Auto EF 2.0), 4D Auto LAQ (LA volumes, emptying fraction, strain in 4D), and workflow updates to AutoEF 2.0 and AFI 2.0 (AFI 2.0 expanded to pediatric use). No performance data for any AI feature; no clinical studies.",
+     "notable_flags": [
+      "First deep-neural-network feature in the Vivid line (Automatic View Recognition); summary gives no accuracy or dataset figures",
+      "No clinical studies required"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf18/K181685.pdf"
+    },
+    {
+     "k_number": "K200497",
+     "decision_date": "2020-07-16",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [],
+     "changes_summary": "Vivid S60N/S70N: introduced AI Auto Measure - 2D (AI-based semi-automated PLAX measurements), AI Auto Measure - Spectrum Recognition (AI recognition of Doppler spectra that launches Auto Doppler), AFI 3.0, Auto EF 3.0, AFI RV, AFI LA. No performance data; no clinical studies.",
+     "notable_flags": [
+      "Summary PDF uses a font-shifted encoding; digits (including all predicate K-numbers) are not recoverable from the text layer",
+      "No performance data for AI features",
+      "No clinical studies required"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200497.pdf"
+    },
+    {
+     "k_number": "K200743",
+     "decision_date": "2020-07-23",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K181685",
+      "K163077",
+      "K170823",
+      "K150087",
+      "K051449"
+     ],
+     "changes_summary": "Vivid E80/E90/E95: added AI Auto Measure - 2D (with a 79% click-reduction claim, 4 vs 19), AI Auto Measure - Spectrum Recognition, AFI 3.0, Auto EF 3.0, AFI RV, AFI LA, and 4D Auto TVQ (tricuspid annulus/valve quantification). No accuracy data; no clinical studies.",
+     "notable_flags": [
+      "Only performance figure is a workflow click count (79%, 4 vs 19) with no dataset or method described",
+      "No clinical studies required"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200743.pdf"
+    },
+    {
+     "k_number": "K200708",
+     "decision_date": "2020-09-09",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K181727",
+      "K160078",
+      "K181685",
+      "K191792",
+      "K200497"
+     ],
+     "changes_summary": "Vivid iq (compact): carried over AI Auto Measure - 2D, AI Auto Measure - Spectrum Recognition, AFI 3.0, Auto EF 3.0, AFI RV, AFI LA from Vivid S70N (K200497) and Scan Coach from Vivid T8 (K160078). No performance data.",
+     "notable_flags": [
+      "All AI features stated as 'same feature as cleared on Vivid S70N (K200497)'",
+      "No clinical studies required"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200708.pdf"
+    },
+    {
+     "k_number": "K200851",
+     "decision_date": "2020-09-09",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K181934",
+      "K181727",
+      "K160078",
+      "K181685",
+      "K191792",
+      "K200497"
+     ],
+     "changes_summary": "Vivid T8/T9: carried over AI Auto Measure - 2D, AI Auto Measure - Spectrum Recognition, AFI 3.0, Auto EF 3.0, AFI RV, AFI LA from Vivid S70N (K200497); Scan Coach from Vivid T8 (K160078). No performance data.",
+     "notable_flags": [
+      "All AI features stated as 'same feature as cleared on Vivid S70N (K200497)'",
+      "No clinical studies required"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200851.pdf"
+    },
+    {
+     "k_number": "K220619",
+     "decision_date": "2022-07-15",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K211216",
+      "K211488",
+      "K202658",
+      "K202132",
+      "K200179",
+      "K150193"
+     ],
+     "changes_summary": "Vivid S60N/S70N: added Easy Auto EF (Auto EF 3.0 plus AI Auto ROI algorithm) and Easy AFI LV (AFI 3.0 plus AI Auto ROI algorithm). First GE Vivid summary with an AI test section: average Dice >=92% (countries), >=91% (views), >=92% (LV volumes) on 45 exams / 135 images.",
+     "notable_flags": [
+      "AI test set is small (45 exams, 135 images); patient count 'assumed' because of anonymization; gender unknown",
+      "Training-set size not disclosed",
+      "No clinical studies required"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K220619.pdf"
+    },
+    {
+     "k_number": "K221148",
+     "decision_date": "2022-07-18",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K200708",
+      "K173341",
+      "K202233",
+      "K210438"
+     ],
+     "changes_summary": "Vivid iq: added Easy Auto EF and Easy AFI LV (AI Auto ROI algorithm). AI test summary identical to K220619 (Dice >=92%/>=91%/>=92%; 45 exams / 135 images).",
+     "notable_flags": [
+      "AI test summary text identical to K220619",
+      "No clinical studies required"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K221148.pdf"
+    },
+    {
+     "k_number": "K221147",
+     "decision_date": "2022-07-18",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K200851",
+      "K161706",
+      "K202233",
+      "K210438"
+     ],
+     "changes_summary": "Vivid T8/T9: added Easy Auto EF and Easy AFI LV (AI Auto ROI algorithm). AI test summary identical to K220619 (Dice >=92%/>=91%/>=92%; 45 exams / 135 images).",
+     "notable_flags": [
+      "AI test summary text identical to K220619",
+      "No clinical studies required"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K221147.pdf"
+    },
+    {
+     "k_number": "K220882",
+     "decision_date": "2022-07-22",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K202658",
+      "K211488",
+      "K202132",
+      "K181685",
+      "K200179",
+      "K150193"
+     ],
+     "changes_summary": "Vivid E80/E90/E95: added Easy Auto EF and Easy AFI LV (AI Auto ROI algorithm); updates to 4D Auto LVQ and 4D Auto TVQ (not described as AI); added 9VT-D 4D TEE transducer. AI test summary identical to K220619.",
+     "notable_flags": [
+      "AI test summary text identical to K220619",
+      "No clinical studies required"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K220882.pdf"
+    },
+    {
+     "k_number": "K251169",
+     "decision_date": "2025-07-10",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K220882",
+      "K223832",
+      "K231989",
+      "K243620",
+      "K231965",
+      "K181685",
+      "K170823",
+      "K200743"
+     ],
+     "changes_summary": "Vivid Pioneer (new console): added AI Cardiac Auto Doppler (two AI algorithms, Tissue Doppler and Doppler Trace, auto-tracing additional Doppler spectra and adding valve-related measurements) and AI FlexiViews LAA (AI localization of the left atrial appendage and landmarks in real-time 2D/biplane TEE, 6VT probe). Also 4D Auto LHQ (merging 4D Auto LAQ and LVQ), 4D ColorFlow in 4D Auto MVQ/TVQ, cSound Pioneer reconstruction. Largest AI test sets in the batch: 4106 recordings/805 individuals (Tissue Doppler), 3390/1369 (Doppler Trace), 342/84 (LAA).",
+     "notable_flags": [
+      "Auto Doppler acceptance thresholds (feasibility >95%, mean absolute percent error) are stated as passed but numeric error values are not disclosed except for a BMI subgroup (41 patients)",
+      "BMI-subgroup agreement metric is 'predefined' but not defined in the summary",
+      "No clinical studies required"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251169.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K200743",
+     "endpoint": "AI Auto Measure - 2D workflow (PLAX measurements)",
+     "metric": "user interactions (clicks) reduction",
+     "value": "79% (4 vs. 19 clicks)",
+     "comparator": "manual PLAX measurement workflow",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": "No dataset, n, or method described; inter-observer claim is stated as 'may'",
+     "quote": "This saves time compared to manual measurements, due to elimination of user interactions (clicks) by 79% (4 vs. 19). AI Auto Measure – 2D may also reduce inter-observer variability.",
+     "page": 6,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K220619",
+     "endpoint": "Easy Auto EF / Easy AFI LV - AI Auto ROI LV segmentation",
+     "metric": "average Dice score (datasets from different countries)",
+     "value": "92% or higher",
+     "comparator": "consensus manual delineation by two certified cardiologists",
+     "n_studies": 45,
+     "n_patients": 45,
+     "n_sites": null,
+     "dataset_description": "Test set: 45 exams from assumed 45 patients (exact number unknown due to anonymization), 135 images extracted from the 45 exams; adult; gender unknown; Europe, Asia, US; 5 probes and 4 console variants; ground truth = consensus delineation by two certified cardiologists with expert-panel adjudication; test sites different from training sites.",
+     "subgroup_notes": "Countries: Europe, Asia, US. Patient count is 'assumed 45' due to anonymization.",
+     "quote": "The accuracy of the AI algorithm (average dice score) as tested on datasets from different countries, is 92% or higher; as tested on datasets from different scanning views, is 91% or higher; as tested on dataset from different left ventricle volumes, is 92% or higher.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K220619",
+     "endpoint": "Easy Auto EF / Easy AFI LV - AI Auto ROI LV segmentation",
+     "metric": "average Dice score (datasets from different scanning views)",
+     "value": "91% or higher",
+     "comparator": "consensus manual delineation by two certified cardiologists",
+     "n_studies": 45,
+     "n_patients": 45,
+     "n_sites": null,
+     "dataset_description": "Test set: 45 exams from assumed 45 patients (exact number unknown due to anonymization), 135 images extracted from the 45 exams; adult; gender unknown; Europe, Asia, US; 5 probes and 4 console variants; ground truth = consensus delineation by two certified cardiologists with expert-panel adjudication; test sites different from training sites.",
+     "subgroup_notes": "Scanning views not enumerated in summary",
+     "quote": "The accuracy of the AI algorithm (average dice score) as tested on datasets from different countries, is 92% or higher; as tested on datasets from different scanning views, is 91% or higher; as tested on dataset from different left ventricle volumes, is 92% or higher.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K220619",
+     "endpoint": "Easy Auto EF / Easy AFI LV - AI Auto ROI LV segmentation",
+     "metric": "average Dice score (datasets from different LV volumes)",
+     "value": "92% or higher",
+     "comparator": "consensus manual delineation by two certified cardiologists",
+     "n_studies": 45,
+     "n_patients": 45,
+     "n_sites": null,
+     "dataset_description": "Test set: 45 exams from assumed 45 patients (exact number unknown due to anonymization), 135 images extracted from the 45 exams; adult; gender unknown; Europe, Asia, US; 5 probes and 4 console variants; ground truth = consensus delineation by two certified cardiologists with expert-panel adjudication; test sites different from training sites.",
+     "subgroup_notes": "LV-volume strata not enumerated in summary",
+     "quote": "The accuracy of the AI algorithm (average dice score) as tested on datasets from different countries, is 92% or higher; as tested on datasets from different scanning views, is 91% or higher; as tested on dataset from different left ventricle volumes, is 92% or higher.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K221148",
+     "endpoint": "Easy Auto EF / Easy AFI LV - AI Auto ROI LV segmentation",
+     "metric": "average Dice score (countries / views / LV volumes)",
+     "value": "92% / 91% / 92% or higher",
+     "comparator": "consensus manual delineation by two certified cardiologists",
+     "n_studies": 45,
+     "n_patients": 45,
+     "n_sites": null,
+     "dataset_description": "Test set: 45 exams from assumed 45 patients (exact number unknown due to anonymization), 135 images extracted from the 45 exams; adult; gender unknown; Europe, Asia, US; 5 probes and 4 console variants; ground truth = consensus delineation by two certified cardiologists with expert-panel adjudication; test sites different from training sites.",
+     "subgroup_notes": "Text identical to K220619 (same test set)",
+     "quote": "The accuracy of the AI algorithm (average dice score) as tested on datasets from different countries, is 92% or higher; as tested on datasets from different scanning views, is 91% or higher; as tested on dataset from different left ventricle volumes, is 92% or higher.",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K221147",
+     "endpoint": "Easy Auto EF / Easy AFI LV - AI Auto ROI LV segmentation",
+     "metric": "average Dice score (countries / views / LV volumes)",
+     "value": "92% / 91% / 92% or higher",
+     "comparator": "consensus manual delineation by two certified cardiologists",
+     "n_studies": 45,
+     "n_patients": 45,
+     "n_sites": null,
+     "dataset_description": "Test set: 45 exams from assumed 45 patients (exact number unknown due to anonymization), 135 images extracted from the 45 exams; adult; gender unknown; Europe, Asia, US; 5 probes and 4 console variants; ground truth = consensus delineation by two certified cardiologists with expert-panel adjudication; test sites different from training sites.",
+     "subgroup_notes": "Text identical to K220619 (same test set)",
+     "quote": "The accuracy of the AI algorithm (average dice score) as tested on datasets from different countries, is 92% or higher; as tested on datasets from different scanning views, is 91% or higher; as tested on dataset from different left ventricle volumes, is 92% or higher.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K220882",
+     "endpoint": "Easy Auto EF / Easy AFI LV - AI Auto ROI LV segmentation",
+     "metric": "average Dice score (countries / views / LV volumes)",
+     "value": "92% / 91% / 92% or higher",
+     "comparator": "consensus manual delineation by two certified cardiologists",
+     "n_studies": 45,
+     "n_patients": 45,
+     "n_sites": null,
+     "dataset_description": "Test set: 45 exams from assumed 45 patients (exact number unknown due to anonymization), 135 images extracted from the 45 exams; adult; gender unknown; Europe, Asia, US; 5 probes and 4 console variants; ground truth = consensus delineation by two certified cardiologists with expert-panel adjudication; test sites different from training sites.",
+     "subgroup_notes": "Text identical to K220619 (same test set)",
+     "quote": "The accuracy of the AI algorithm (average dice score) as tested on datasets from different countries, is 92% or higher; as tested on datasets from different scanning views, is 91% or higher; as tested on dataset from different left ventricle volumes, is 92% or higher.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K251169",
+     "endpoint": "AI Cardiac Auto Doppler (Tissue Doppler and Doppler Trace algorithms) - verification",
+     "metric": "feasibility score and mean absolute percent error vs. threshold",
+     "value": "passed (feasibility >95% required; numeric error values not disclosed)",
+     "comparator": "manual measurements by two cardiologists (ASE-based annotation guidelines) with five-expert review panel",
+     "n_studies": 7496,
+     "n_patients": 2174,
+     "n_sites": null,
+     "dataset_description": "Tissue Doppler testing dataset: 4106 recordings from 805 individuals; Doppler Trace testing dataset: 3390 recordings from 1369 individuals. Male and female; adult and pediatric; USA (several locations), Australia, France, Spain, Norway, Italy, Germany, Thailand, Philippines; consoles Vivid E80, E95, E9, iq, S70, T9, Q, Pioneer; 14 probes. Test sites independent of training/validation sites.",
+     "subgroup_notes": "n_studies here = 4106 + 3390 recordings; n_patients = 805 + 1369 individuals (the two datasets may overlap; summary does not say). Accuracy thresholds and achieved error values are not reported numerically. Preceding bullet (same page): 'The verification requirement included a step to check for a feasibility score of more than 95%, as well as an expected accuracy threshold calculated as the mean absolute difference in percentage for each measured parameter.'",
+     "quote": "The verification requirement included a step to check mean percent absolute error across all cardiac cycles against a threshold. All clinical parameters, as performed by AI Cardiac Auto Doppler without user edits passed this check",
+     "page": 12,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K251169",
+     "endpoint": "AI Cardiac Auto Doppler - tissue Doppler peak velocity agreement by BMI",
+     "metric": "mean (SD) of predefined manual-vs-AI agreement metric",
+     "value": "-0.002 (SD 0.077) for BMI <25; -0.006 (SD 0.081) for BMI >=25",
+     "comparator": "manual Doppler measurements reviewed by clinical experts",
+     "n_studies": null,
+     "n_patients": 41,
+     "n_sites": null,
+     "dataset_description": "Subset of the Vivid Pioneer dataset containing BMI data: 41 patients, 433 Doppler measurements",
+     "subgroup_notes": "Metric is described only as 'a predefined metric quantifying agreement between manual and AI-derived peak velocities'; units not stated",
+     "quote": "For tissue Doppler, the mean performance metric was -0.002 (SD = 0.077) for BMI < 25 and -0.006 (SD = 0.081) for BMI ≥ 25.",
+     "page": 13,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K251169",
+     "endpoint": "AI Cardiac Auto Doppler - flow Doppler peak velocity agreement by BMI",
+     "metric": "mean (SD) of predefined manual-vs-AI agreement metric",
+     "value": "0.021 (SD 0.073) for BMI <25; 0.003 (SD 0.057) for BMI >=25",
+     "comparator": "manual Doppler measurements reviewed by clinical experts",
+     "n_studies": null,
+     "n_patients": 41,
+     "n_sites": null,
+     "dataset_description": "Subset of the Vivid Pioneer dataset containing BMI data: 41 patients, 433 Doppler measurements",
+     "subgroup_notes": "Same caveat on metric definition as tissue Doppler row",
+     "quote": "For flow Doppler, the means were 0.021 (SD = 0.073) and 0.003 (SD = 0.057), respectively.",
+     "page": 13,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K251169",
+     "endpoint": "AI FlexiViews LAA - LAA region localization and landmark extraction",
+     "metric": "success rate / sensitivity / specificity",
+     "value": "85% success; sensitivity 84.91%; specificity 91.82% (acceptance: >80% success)",
+     "comparator": "manual LAA contour, circumflex and ridge-point annotation by two cardiologists, three-expert review panel",
+     "n_studies": 342,
+     "n_patients": 84,
+     "n_sites": null,
+     "dataset_description": "Verification dataset: 342 recordings from 84 adults; male and female; BMI 18.5-25, 25-30, >30; USA, Norway, Italy, France, Philippines; consoles Vivid E95, S70N, iq, Pioneer; 6VT probe; sites independent of development sites",
+     "subgroup_notes": "Expected performance stated as 'Greater than 80% success rate of LAA region localization and landmark extraction'",
+     "quote": "The model achieved a verification success rate of 85%, with a sensitivity of 84.91% and a specificity of 91.82%",
+     "page": 14,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K251169",
+     "endpoint": "AI FlexiViews LAA - performance by TEE angle",
+     "metric": "success rate",
+     "value": "80% or higher across 0-100 degrees",
+     "comparator": null,
+     "n_studies": 342,
+     "n_patients": 84,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": "Confounders listed: TEE angle 0-45, 45-90, 90-135, >135; feature-supported range stated as 0-100 degrees",
+     "quote": "Subgroup analysis by TEE angle demonstrated consistent model performance, with a success rate of 80% or higher across the feature-supported angle range of 0 to 100 degrees.",
+     "page": 14,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K251169",
+     "endpoint": "AI FlexiViews LAA - performance in BMI >25",
+     "metric": "accuracy",
+     "value": "over 85%",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": "Size of BMI subset not stated; quote spans PDF pages 14-15",
+     "quote": "Analysis of the subset with available BMI data showed strong model performance, with over 85% accuracy for individuals with a BMI above 25.",
+     "page": 14,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K220619",
+     "endpoint": "AI Auto Measure 2D (company marketing claim)",
+     "metric": "detectability / reproducibility",
+     "value": "98% detectability and 100% reproducibility",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": "Source: GE HealthCare 'Vivid AI and Automation' page (https://gehealthcare-ultrasound.com/en/vivid-family/vivid-ai-and-automation/); no dataset or method given; k_number is the nearest clearance, not the source of the number",
+     "quote": "achieves 98% detectability and 100% reproducibility.",
+     "page": null,
+     "verification": "company"
+    },
+    {
+     "k_number": "K181685",
+     "endpoint": "AI-based View Recognition (company marketing claim)",
+     "metric": "classification accuracy / detectability",
+     "value": "up to 99% classification accuracy and 98% detectability",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": "Source: GE HealthCare 'Vivid AI and Automation' page; no dataset or method given",
+     "quote": "up to 99% classification accuracy and 98% detectability",
+     "page": null,
+     "verification": "company"
+    },
+    {
+     "k_number": "K220619",
+     "endpoint": "Easy AFI LV processing time (company marketing claim)",
+     "metric": "time to EF and strain results",
+     "value": "15 seconds (on average)",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": "Source: GE HealthCare 'Vivid AI and Automation' page",
+     "quote": "EF and strain results in 15 seconds (on average).",
+     "page": null,
+     "verification": "company"
+    },
+    {
+     "k_number": "K200743",
+     "endpoint": "AI Auto Measure 2D click reduction (company marketing claim)",
+     "metric": "fewer clicks",
+     "value": "up to 80%",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": "Source: GE HealthCare Vivid E95 product page (https://gehealthcare-ultrasound.com/en/vivid-family/vivid-e95/); FDA summary K200743 states 79% (4 vs 19)",
+     "quote": "Up to 80% fewer klicks thanks to AI Auto Measure 2D",
+     "page": null,
+     "verification": "company"
+    },
+    {
+     "k_number": "K251169",
+     "endpoint": "Cardiac Auto Doppler with AI keystroke reduction (company marketing claim)",
+     "metric": "fewer keystrokes",
+     "value": "up to 93%",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": "Source: GE HealthCare Vivid E95 product page; no method given",
+     "quote": "you will need up to 93% fewer keystrokes.",
+     "page": null,
+     "verification": "company"
+    },
+    {
+     "k_number": "K251169",
+     "endpoint": "Easy AFI processing time on Vivid Pioneer (news)",
+     "metric": "time to strain and EF results",
+     "value": "less than nine seconds",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": "Source: ITN, 'GE HealthCare Launches AI-powered Cardiovascular Ultrasound System', Aug 29 2025 (https://www.itnonline.com/content/ge-healthcare-launches-ai-powered-cardiovascular-ultrasound-system); article notes timing varies by heart rate, frame rate and system",
+     "quote": "Easy AFI that provides strain results and ejection fraction analyses in less than nine seconds",
+     "page": null,
+     "verification": "news"
+    },
+    {
+     "k_number": "K220619",
+     "endpoint": "Fully automated AI GLS vs semi-automatic speckle tracking (EchoPAC v202) - research pipeline",
+     "metric": "bias (limits of agreement)",
+     "value": "-1.4 ± 0.3% (95% LoA 2.3 to -5.1); views classified and events timed in 89% of patients; analysis within 15 s",
+     "comparator": "EchoPAC v202 semi-automatic speckle tracking (GE Healthcare)",
+     "n_studies": null,
+     "n_patients": 200,
+     "n_sites": null,
+     "dataset_description": "200 patients with a wide range of LV function; three standard apical cine-loops",
+     "subgroup_notes": "Salte et al., JACC Cardiovasc Imaging 2021 (PMID 34147442). NTNU/CIUS academic pipeline with GE licensing priority; the paper does not state that it is the commercial Easy AFI product.",
+     "quote": "GLS was -12.0 ± 4.1% for the AI method and -13.5 ± 5.3% for the reference method. Bias was -1.4 ± 0.3% (95% limits of agreement: 2.3 to -5.1), which is comparable with intervendor studies. The AI method eliminated measurement variability and a complete GLS analysis was processed within 15 s.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K220619",
+     "endpoint": "Fully automatic AI LV volumes/EF - real-time clinical validation - research pipeline",
+     "metric": "acquisition + processing time reduction; test-retest reproducibility",
+     "value": "77% time reduction (median 5.3 min); reproducibility superior inter-observer, non-inferior intra-observer",
+     "comparator": "manual measurements (standard clinical workflow; 4 readers in test-retest)",
+     "n_studies": null,
+     "n_patients": 2820,
+     "n_sites": null,
+     "dataset_description": "50 consecutive patients (real time), 40 test-retest subjects, internal and external research databases of 1881 and 849 subjects",
+     "subgroup_notes": "Olaisen et al., Eur Heart J Cardiovasc Imaging 2024 (PMID 37883712). n_patients = 50+40+1881+849. Authors state GE Healthcare has licensing priority; not confirmed as the shipped Easy Auto EF.",
+     "quote": "Real-time AI measurements significantly reduced the total acquisition and processing time by 77% (median 5.3 min, P < 0.001) compared with standard clinical workflow. Test-retest reproducibility of AI measurements was superior in inter-observer scenarios and non-inferior in intra-observer scenarios.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K181685",
+     "endpoint": "Real-time CNN standard view classification (TTE) - research pipeline with GE Vingmed co-author",
+     "metric": "classification accuracy",
+     "value": "98.3% ± 0.6% (single frames), 98.9% ± 0.6% (sequences); 4.4 ± 0.3 ms per frame",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": 500,
+     "n_sites": null,
+     "dataset_description": "more than 500 patients and 7000 videos; up to seven cardiac views",
+     "subgroup_notes": "Østvik et al., Ultrasound Med Biol 2019 (PMID 30470606); co-author affiliated with GE Vingmed Ultrasound AS. Not stated to be the Automatic View Recognition product.",
+     "quote": "Data sets of 2-D ultrasound acquired from studies totaling more than 500 patients and 7000 videos were included. State-of-the-art accuracies of 98.3% ± 0.6% and 98.9% ± 0.6% on single frames and sequences, respectively, and real-time performance with 4.4 ± 0.3 ms per frame were achieved.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K220619",
+     "endpoint": "Real-time automatic EF with deep learning - research pipeline",
+     "metric": "EF bias ± SD; mean absolute difference",
+     "value": "-3.6 ± 8.1%; MAD 7.2%",
+     "comparator": "expert manual LV volume/EF using clinical protocols and software",
+     "n_studies": null,
+     "n_patients": 100,
+     "n_sites": null,
+     "dataset_description": "training: 500 patients from an outpatient clinic; evaluation: separate 100 patients from another clinic",
+     "subgroup_notes": "Smistad et al., IEEE TUFFC 2020 (PMID 32175861). Academic pipeline; not stated to be the shipped Easy Auto EF.",
+     "quote": "The bias and standard deviation of the automatic EF measurements were -3.6 ± 8.1%, while the mean absolute difference was measured at 7.2% which are all within the interobserver variability and comparable with related studies.",
+     "page": null,
+     "verification": "peer_reviewed"
+    }
+   ],
+   "training_data": {
+    "disclosed": true,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "Disclosed only for K251169 (as recordings, not patients): Tissue Doppler development dataset 1482 recordings from 4 clinical sites; Doppler Trace development dataset 2070 recordings from 4 clinical sites (probes M5Sc, M5S, 4Vc, 4V, M4S, 6S, 12S, 6Vc, 6VT on Vivid E80, E95, E9, 7, S70N); AI FlexiViews LAA development dataset 612 recordings from 5 clinical sites (6VT probe on Vivid E9, S70N, E95). Development sites were not used for testing. Ground truth: two cardiologists annotating per ASE-based guidelines with an expert review panel (five experts for Doppler, three for LAA). For the AI Auto ROI algorithm (K220619/K221148/K221147/K220882) the training-set size is not disclosed; the summaries state only that training and test data came from different clinical sites. No training data disclosed for Automatic View Recognition (K181685) or AI Auto Measure (K200497/K200743).",
+    "source": "FDA 510(k) summaries K251169 (PDF pages 13, 15) and K220619 (page 9)",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "K220619/K221148/K221147/K220882 (AI Auto ROI): 45 exams from assumed 45 patients, 135 images; adult; gender unknown; Europe, Asia, US; 5 probes, 4 console variants. K251169: Tissue Doppler 4106 recordings / 805 individuals; Doppler Trace 3390 recordings / 1369 individuals (adult and pediatric, 9 countries, 8 consoles, 14 probes; BMI subset 41 patients / 433 measurements); AI FlexiViews LAA 342 recordings / 84 adults (5 countries, 4 consoles, 6VT probe). K181685, K200497, K200743, K200708, K200851: no validation data reported.",
+    "independent_of_training": true,
+    "source": "FDA 510(k) summaries K220619 (pages 8-9), K251169 (pages 11-15)",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "GE HealthCare marketing page 'Vivid AI and Automation' claims AI Auto Measure 2D '98% detectability and 100% reproducibility', AI-based View Recognition 'up to 99% classification accuracy and 98% detectability', and Easy AFI LV results in '15 seconds (on average)'; no methods or datasets given.",
+     "source_url": "https://gehealthcare-ultrasound.com/en/vivid-family/vivid-ai-and-automation/",
+     "verification": "company"
+    },
+    {
+     "description": "GE HealthCare Vivid E95 product page claims 'Up to 80% fewer klicks thanks to AI Auto Measure 2D' and 'up to 93% fewer keystrokes' for Cardiac Auto Doppler with AI.",
+     "source_url": "https://gehealthcare-ultrasound.com/en/vivid-family/vivid-e95/",
+     "verification": "company"
+    },
+    {
+     "description": "Vivid Pioneer launch coverage (ITN, Aug 29 2025) states the system received CE Mark and FDA 510(k) clearance and that Easy AFI provides strain and EF in under nine seconds.",
+     "source_url": "https://www.itnonline.com/content/ge-healthcare-launches-ai-powered-cardiovascular-ultrasound-system",
+     "verification": "news"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Real-Time Standard View Classification in Transthoracic Echocardiography Using Convolutional Neural Networks.",
+     "first_author": "Østvik A",
+     "journal": "Ultrasound in Medicine & Biology",
+     "year": 2019,
+     "doi": "10.1016/j.ultrasmedbio.2018.07.024",
+     "pmid": "30470606",
+     "url": "https://doi.org/10.1016/j.ultrasmedbio.2018.07.024",
+     "relation": "algorithm-development",
+     "n_subjects": 500,
+     "key_result": "CNN view classifier (up to 7 views) trained/tested on >500 patients and 7000 videos: 98.3% ± 0.6% (frames) and 98.9% ± 0.6% (sequences) accuracy, 4.4 ms per frame. Co-author from GE Vingmed Ultrasound AS. Not stated to be the Automatic View Recognition product.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Real-Time Automatic Ejection Fraction and Foreshortening Detection Using Deep Learning.",
+     "first_author": "Smistad E",
+     "journal": "IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control",
+     "year": 2020,
+     "doi": "10.1109/TUFFC.2020.2981037",
+     "pmid": "32175861",
+     "url": "https://doi.org/10.1109/TUFFC.2020.2981037",
+     "relation": "algorithm-development",
+     "n_subjects": 600,
+     "key_result": "Deep-learning pipeline (view classification, timing, segmentation, landmarks) trained on 500 patients, evaluated on 100 patients from another clinic: EF bias -3.6 ± 8.1%, MAD 7.2%. NTNU/CIUS academic work.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Myocardial Function Imaging in Echocardiography Using Deep Learning.",
+     "first_author": "Østvik A",
+     "journal": "IEEE Transactions on Medical Imaging",
+     "year": 2021,
+     "doi": "10.1109/TMI.2021.3054566",
+     "pmid": "33493114",
+     "url": "https://doi.org/10.1109/TMI.2021.3054566",
+     "relation": "algorithm-development",
+     "n_subjects": null,
+     "key_result": "Deep-learning motion estimation / strain pipeline underlying the Salte et al. clinical studies (abstract not retrieved this session; details from Crossref/PubMed metadata only).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial Intelligence for Automatic Measurement of Left Ventricular Strain in Echocardiography.",
+     "first_author": "Salte IM",
+     "journal": "JACC: Cardiovascular Imaging",
+     "year": 2021,
+     "doi": "10.1016/j.jcmg.2021.04.018",
+     "pmid": "34147442",
+     "url": "https://doi.org/10.1016/j.jcmg.2021.04.018",
+     "relation": "external-validation",
+     "n_subjects": 200,
+     "key_result": "Fully automated AI GLS vs EchoPAC v202 semi-automatic speckle tracking in 200 patients: views classified and events timed in 89%; GLS -12.0 ± 4.1% (AI) vs -13.5 ± 5.3% (reference); bias -1.4 ± 0.3% (LoA 2.3 to -5.1); analysis within 15 s.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Deep Learning for Improved Precision and Reproducibility of Left Ventricular Strain in Echocardiography: A Test-Retest Study.",
+     "first_author": "Salte IM",
+     "journal": "Journal of the American Society of Echocardiography",
+     "year": 2023,
+     "doi": "10.1016/j.echo.2023.02.017",
+     "pmid": "36933849",
+     "url": "https://doi.org/10.1016/j.echo.2023.02.017",
+     "relation": "external-validation",
+     "n_subjects": 72,
+     "key_result": "Two test-retest datasets (n=40, n=32): AI GLS minimal detectable change 3.7 vs 5.5 and 3.9 vs 5.2 (inter-reader), no reader bias with AI; processing time 7.9 ± 2.8 s.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Automatic measurements of left ventricular volumes and ejection fraction by artificial intelligence: clinical validation in real time and large databases.",
+     "first_author": "Olaisen S",
+     "journal": "European Heart Journal - Cardiovascular Imaging",
+     "year": 2024,
+     "doi": "10.1093/ehjci/jead280",
+     "pmid": "37883712",
+     "url": "https://doi.org/10.1093/ehjci/jead280",
+     "relation": "external-validation",
+     "n_subjects": 2820,
+     "key_result": "Real-time AI LV volumes/EF in 50 consecutive patients cut acquisition + processing time by 77% (median 5.3 min); test-retest (n=40, 4 readers) reproducibility superior inter-observer and non-inferior intra-observer; good agreement in databases of 1881 and 849 subjects. Authors disclose GE Healthcare licensing priority via CIUS.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "A deep learning based method for left ventricular strain measurements: repeatability and accuracy compared to experienced echocardiographers.",
+     "first_author": "Rogstadkjernet M",
+     "journal": "BMC Medical Imaging",
+     "year": 2024,
+     "doi": "10.1186/s12880-024-01470-7",
+     "pmid": "39528980",
+     "url": "https://doi.org/10.1186/s12880-024-01470-7",
+     "relation": "algorithm-development",
+     "n_subjects": 672,
+     "key_result": "EfficientNetB1 model trained on cardiologist-defined ROIs from 672 exams; DL ROIs fed to commercial analysis software gave average absolute GLS difference 0.75 (95% CI 0.58-0.92) vs operators. Co-author affiliated with GE Healthcare, Oslo. Not stated to be the shipped AI Auto ROI.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Deep learning improves test-retest reproducibility of regional strain in echocardiography.",
+     "first_author": "Nyberg J",
+     "journal": "European Heart Journal - Imaging Methods and Practice",
+     "year": 2024,
+     "doi": "10.1093/ehjimp/qyae092",
+     "pmid": "39449961",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39449961/",
+     "relation": "external-validation",
+     "n_subjects": null,
+     "key_result": "Test-retest reproducibility of regional strain with the NTNU/CIUS deep-learning strain pipeline (abstract not retrieved this session; PMID confirmed via esummary).",
+     "verification": "pmid_resolved"
+    }
+   ],
+   "clinical_trials": [],
+   "open_questions": [
+    "K200497 predicate and reference K-numbers cannot be read: the 510(k) summary PDF text layer is font-shifted and drops all digits (pdftotext, PyMuPDF and the probe extractor all fail). Predicates left empty; the decoded text names 'Vivid S60N/Vivid S70N (K...)' as primary predicate and Vivid E95, LOGIQ E9, Vivid S60N/S70N and Vivid 7 as reference devices.",
+    "No accuracy data exist in any FDA summary for Automatic View Recognition (K181685), AI Auto Measure 2D, or Spectrum Recognition; the only figure is a click count (79%, 4 vs 19) in K200743. Company pages claim 98-99% detectability/accuracy without methods.",
+    "AI Auto ROI (Easy Auto EF / Easy AFI LV) training-set size, number of training sites, and patient demographics are undisclosed; the test set is 45 exams with patient count 'assumed'.",
+    "K251169 AI Cardiac Auto Doppler: the numeric accuracy thresholds and achieved mean absolute percent errors per parameter are not reported (only 'passed'); the BMI-subgroup 'predefined metric' is not defined and has no units; overlap between the Tissue Doppler (805) and Doppler Trace (1369) cohorts is not stated.",
+    "K251169 AI FlexiViews LAA: size of the BMI>25 subset is not stated; sensitivity/specificity definitions (per recording vs per landmark) are not given.",
+    "The peer-reviewed papers listed are NTNU/CIUS (and one Oslo/GE Healthcare co-authored) research pipelines with GE licensing priority; none names the commercial Vivid feature it corresponds to, so they are labeled algorithm-development/external-validation of a related pipeline rather than pivotal validation of the cleared product.",
+    "No peer-reviewed validation was found for AI Cardiac Auto Doppler, AI FlexiViews LAA, AI Auto Measure 2D, or Spectrum Recognition (PubMed searches returned no relevant hits).",
+    "No registered clinical trials were searched on ClinicalTrials.gov this session; clinical_trials left empty."
+   ],
+   "sources": [
+    {
+     "fact": "Decision dates, product code IYN, applicant names for all ten clearances",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K181685 features, predicates K173341 and K082185, no clinical studies (PDF pages 25-29)",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K181685.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K200497 features (decoded from font-shifted text; digits lost), IFU (page 3)",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K200497.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K200743 features, 79% click reduction, predicates (pages 4-8)",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K200743.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K200708 features 'same as K200497', Scan Coach, predicates (pages 4-8)",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K200708.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K200851 features 'same as K200497', predicates (pages 4-8)",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K200851.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K220619 Easy Auto EF / Easy AFI LV, AI Auto ROI Dice results and test-set description, predicates (pages 4-9)",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K220619.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K221148 identical AI test summary, predicates (pages 4-8)",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K221148.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K221147 identical AI test summary, predicates (pages 4-9)",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K221147.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K220882 identical AI test summary, 4D Auto LVQ/TVQ updates, predicates (pages 4-9)",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K220882.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K251169 AI Cardiac Auto Doppler and AI FlexiViews LAA descriptions, test/development datasets, results, IFU (pages 4-15)",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K251169.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Company claims for AI Auto Measure 2D, View Recognition, Easy AFI LV, Easy AutoEF",
+     "url_or_file": "https://gehealthcare-ultrasound.com/en/vivid-family/vivid-ai-and-automation/",
+     "verification": "company"
+    },
+    {
+     "fact": "Company claims on Vivid E95 page (80% fewer clicks, 93% fewer keystrokes, 15 s Easy AFI)",
+     "url_or_file": "https://gehealthcare-ultrasound.com/en/vivid-family/vivid-e95/",
+     "verification": "company"
+    },
+    {
+     "fact": "Vivid Pioneer launch: CE Mark and FDA 510(k), Easy AFI under nine seconds",
+     "url_or_file": "https://www.itnonline.com/content/ge-healthcare-launches-ai-powered-cardiovascular-ultrasound-system",
+     "verification": "news"
+    },
+    {
+     "fact": "Paper metadata and abstracts (PubMed esearch/esummary/efetch); DOIs confirmed via Crossref for 7 papers",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ ; https://api.crossref.org/works/",
+     "verification": "peer_reviewed"
+    }
+   ]
+  }
+ ],
+ "notes": "One family covering ten GE Vivid 510(k)s. All values come from the FDA summary text files, openFDA, GE product pages, one ITN news article, and PubMed/Crossref records read this session. K200497's summary PDF is font-shifted and its predicate K-numbers could not be recovered. Company marketing figures are kept separate (verification 'company'/'news') from FDA-summary figures. Peer-reviewed entries are NTNU/CIUS research pipelines with GE licensing links, not confirmed as the shipped features. Page numbers refer to the PDF page index in the probe text files."
+}

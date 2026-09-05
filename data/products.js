@@ -1141,6 +1141,80 @@ window.AIECHO_PRODUCTS = {
    "research_pending": false
   },
   {
+   "id": "anumana-watchmate",
+   "product_name": "WatchMate Software",
+   "company": "Anumana",
+   "company_website": null,
+   "product_url": null,
+   "category": "other",
+   "tags": [],
+   "modality_scope": [],
+   "deployment": [],
+   "summary": "",
+   "intended_use_quote": null,
+   "indications_for_use_quote": null,
+   "embedded_ai_features": [],
+   "clearances": [
+    {
+     "k_number": "K260300",
+     "decision_date": "2026-06-15",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "device_name_fda": "WatchMate Software",
+     "applicant_fda": "Anumana, Inc.",
+     "predicates": [],
+     "changes_summary": null,
+     "notable_flags": [],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf26/K260300.pdf",
+     "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K260300",
+     "on_fda_ai_list": true
+    }
+   ],
+   "performance_claims": [],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": null,
+    "source": null,
+    "verification": "unverified"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": null,
+    "independent_of_training": null,
+    "source": null,
+    "verification": "unverified"
+   },
+   "prior_validations": [],
+   "papers": [],
+   "clinical_trials": [],
+   "open_questions": [
+    "Research not yet run for this family; only openFDA fields shown."
+   ],
+   "sources": [],
+   "_source_file": null,
+   "_verified": false,
+   "_research_pending": true,
+   "first_cleared": "2026-06-15",
+   "latest_cleared": "2026-06-15",
+   "n_clearances": 1,
+   "pathways": [
+    "510(k)"
+   ],
+   "product_codes": [
+    "QIH"
+   ],
+   "n_performance_claims": 0,
+   "n_papers_resolved": 0,
+   "n_papers": 0,
+   "research_verified": false,
+   "research_pending": true
+  },
+  {
    "id": "heartfocus",
    "product_name": "HeartFocus",
    "company": "DESKi",
@@ -2113,6 +2187,108 @@ window.AIECHO_PRODUCTS = {
    "n_papers": 0,
    "research_verified": true,
    "research_pending": false
+  },
+  {
+   "id": "siemens-syngo-dynamics-auto-ef",
+   "product_name": "syngo Dynamics Auto EF / Extended View Classification / Auto Measures",
+   "company": "Siemens Healthineers",
+   "company_website": null,
+   "product_url": null,
+   "category": "other",
+   "tags": [],
+   "modality_scope": [],
+   "deployment": [],
+   "summary": "",
+   "intended_use_quote": null,
+   "indications_for_use_quote": null,
+   "embedded_ai_features": [],
+   "clearances": [
+    {
+     "k_number": "K222428",
+     "decision_date": "2022-11-14",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "device_name_fda": "Syngo Dynamics (Version VA40F)",
+     "applicant_fda": "Siemens Medical Solutions USA, Inc.",
+     "predicates": [],
+     "changes_summary": null,
+     "notable_flags": [],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K222428.pdf",
+     "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K222428",
+     "on_fda_ai_list": true
+    },
+    {
+     "k_number": "K242551",
+     "decision_date": "2025-04-03",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "device_name_fda": "syngo Dynamics (Version VA41D)",
+     "applicant_fda": "Siemens Healthcare GmbH",
+     "predicates": [],
+     "changes_summary": null,
+     "notable_flags": [],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242551.pdf",
+     "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K242551",
+     "on_fda_ai_list": true
+    },
+    {
+     "k_number": "K253689",
+     "decision_date": "2026-04-10",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "device_name_fda": "syngo Dynamics (VA41F)",
+     "applicant_fda": "Siemens Healthcare GmbH",
+     "predicates": [],
+     "changes_summary": null,
+     "notable_flags": [],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253689.pdf",
+     "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K253689",
+     "on_fda_ai_list": true
+    }
+   ],
+   "performance_claims": [],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": null,
+    "source": null,
+    "verification": "unverified"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": null,
+    "independent_of_training": null,
+    "source": null,
+    "verification": "unverified"
+   },
+   "prior_validations": [],
+   "papers": [],
+   "clinical_trials": [],
+   "open_questions": [
+    "Research not yet run for this family; only openFDA fields shown."
+   ],
+   "sources": [],
+   "_source_file": null,
+   "_verified": false,
+   "_research_pending": true,
+   "first_cleared": "2022-11-14",
+   "latest_cleared": "2026-04-10",
+   "n_clearances": 3,
+   "pathways": [
+    "510(k)"
+   ],
+   "product_codes": [
+    "QIH"
+   ],
+   "n_performance_claims": 0,
+   "n_papers_resolved": 0,
+   "n_papers": 0,
+   "research_verified": false,
+   "research_pending": true
   },
   {
    "id": "esaote-mylab-cardiac-ai",
@@ -4377,6 +4553,122 @@ window.AIECHO_PRODUCTS = {
    "n_papers": 5,
    "research_verified": true,
    "research_pending": false
+  },
+  {
+   "id": "biosense-cartosound-fam",
+   "product_name": "CARTOSOUND FAM (CARTO 3)",
+   "company": "Biosense Webster (Johnson & Johnson MedTech)",
+   "company_website": null,
+   "product_url": null,
+   "category": "other",
+   "tags": [],
+   "modality_scope": [],
+   "deployment": [],
+   "summary": "",
+   "intended_use_quote": null,
+   "indications_for_use_quote": null,
+   "embedded_ai_features": [],
+   "clearances": [
+    {
+     "k_number": "K231207",
+     "decision_date": "2023-09-07",
+     "pathway": "510(k)",
+     "product_code": "DQK",
+     "device_name_fda": "CARTO 3 EP Navigation System Software V8.0 (FG-5400-00, FG-5400-00U)",
+     "applicant_fda": "Biosense Webster, Inc.",
+     "predicates": [],
+     "changes_summary": null,
+     "notable_flags": [],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K231207.pdf",
+     "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K231207",
+     "on_fda_ai_list": true
+    },
+    {
+     "k_number": "K252302",
+     "decision_date": "2025-08-22",
+     "pathway": "510(k)",
+     "product_code": "DQK",
+     "device_name_fda": "CARTO 3 EP Navigation System V8.1",
+     "applicant_fda": "Biosense Webster, Inc.",
+     "predicates": [],
+     "changes_summary": null,
+     "notable_flags": [],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K252302.pdf",
+     "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K252302",
+     "on_fda_ai_list": true
+    },
+    {
+     "k_number": "K254085",
+     "decision_date": "2026-01-18",
+     "pathway": "510(k)",
+     "product_code": "DQK",
+     "device_name_fda": "CARTO 3 EP Navigation System V9.0 with PIU Plus",
+     "applicant_fda": "Biosense Webster, Inc.",
+     "predicates": [],
+     "changes_summary": null,
+     "notable_flags": [],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K254085.pdf",
+     "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K254085",
+     "on_fda_ai_list": true
+    },
+    {
+     "k_number": "K252972",
+     "decision_date": "2026-02-20",
+     "pathway": "510(k)",
+     "product_code": "DQK",
+     "device_name_fda": "CARTO 3 EP Navigation System V8.4",
+     "applicant_fda": "Biosense Webster, Inc.",
+     "predicates": [],
+     "changes_summary": null,
+     "notable_flags": [],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K252972.pdf",
+     "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K252972",
+     "on_fda_ai_list": true
+    }
+   ],
+   "performance_claims": [],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": null,
+    "source": null,
+    "verification": "unverified"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": null,
+    "independent_of_training": null,
+    "source": null,
+    "verification": "unverified"
+   },
+   "prior_validations": [],
+   "papers": [],
+   "clinical_trials": [],
+   "open_questions": [
+    "Research not yet run for this family; only openFDA fields shown."
+   ],
+   "sources": [],
+   "_source_file": null,
+   "_verified": false,
+   "_research_pending": true,
+   "first_cleared": "2023-09-07",
+   "latest_cleared": "2026-02-20",
+   "n_clearances": 4,
+   "pathways": [
+    "510(k)"
+   ],
+   "product_codes": [
+    "DQK"
+   ],
+   "n_performance_claims": 0,
+   "n_papers_resolved": 0,
+   "n_papers": 0,
+   "research_verified": false,
+   "research_pending": true
   },
   {
    "id": "ultrasight-pvad-iq",
@@ -20761,6 +21053,94 @@ window.AIECHO_PRODUCTS = {
    "research_pending": false
   },
   {
+   "id": "philips-qlab-3d-auto",
+   "product_name": "QLAB 3D Auto RV / 3D Auto MV",
+   "company": "Philips",
+   "company_website": null,
+   "product_url": null,
+   "category": "other",
+   "tags": [],
+   "modality_scope": [],
+   "deployment": [],
+   "summary": "",
+   "intended_use_quote": null,
+   "indications_for_use_quote": null,
+   "embedded_ai_features": [],
+   "clearances": [
+    {
+     "k_number": "K191647",
+     "decision_date": "2019-12-20",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "device_name_fda": "QLAB Advanced Quantification Software",
+     "applicant_fda": "Philips Health Care",
+     "predicates": [],
+     "changes_summary": null,
+     "notable_flags": [],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf19/K191647.pdf",
+     "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K191647",
+     "on_fda_ai_list": true
+    },
+    {
+     "k_number": "K200974",
+     "decision_date": "2020-06-03",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "device_name_fda": "QLAB Advanced Quantification Software",
+     "applicant_fda": "Philips Health Care",
+     "predicates": [],
+     "changes_summary": null,
+     "notable_flags": [],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200974.pdf",
+     "fda_database_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K200974",
+     "on_fda_ai_list": true
+    }
+   ],
+   "performance_claims": [],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": null,
+    "source": null,
+    "verification": "unverified"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": null,
+    "independent_of_training": null,
+    "source": null,
+    "verification": "unverified"
+   },
+   "prior_validations": [],
+   "papers": [],
+   "clinical_trials": [],
+   "open_questions": [
+    "Research not yet run for this family; only openFDA fields shown."
+   ],
+   "sources": [],
+   "_source_file": null,
+   "_verified": false,
+   "_research_pending": true,
+   "first_cleared": "2019-12-20",
+   "latest_cleared": "2020-06-03",
+   "n_clearances": 2,
+   "pathways": [
+    "510(k)"
+   ],
+   "product_codes": [
+    "QIH"
+   ],
+   "n_performance_claims": 0,
+   "n_papers_resolved": 0,
+   "n_papers": 0,
+   "research_verified": false,
+   "research_pending": true
+  },
+  {
    "id": "ventripoint-vms",
    "product_name": "Ventripoint Medical System Plus (VMS+)",
    "company": "Ventripoint Diagnostics Ltd.",
@@ -21295,6 +21675,15 @@ window.AIECHO_PRODUCTS = {
    "group": "ecg-based"
   },
   {
+   "k_number": "K261519",
+   "device_name": "Sonio Suspect",
+   "company": "Sonio",
+   "decision_date": "2026-06-04",
+   "product_code": "POK",
+   "reason": "Sonio Suspect integrated configuration; same general fetal-anomaly scope as K243614",
+   "group": "general-fetal"
+  },
+  {
    "k_number": "K260123",
    "device_name": "EPIQ Series Diagnostic Ultrasound System",
    "company": "Philips Ultrasound, LLC",
@@ -21344,6 +21733,15 @@ window.AIECHO_PRODUCTS = {
    "triage_group": "philips-epiq-c"
   },
   {
+   "k_number": "K252433",
+   "device_name": "Sonio Detect  (v3)",
+   "company": "Sonio",
+   "decision_date": "2026-03-16",
+   "product_code": "IYN",
+   "reason": "Sonio Detect v3: general fetal view and structure detection including first trimester; cardiac views are one subset",
+   "group": "general-fetal"
+  },
+  {
    "k_number": "K253597",
    "device_name": "Aplio beyond and Aplio me Software V2.0 Diagnostic Ultrasound System",
    "company": "Canon Medical Systems Corporation",
@@ -21352,6 +21750,24 @@ window.AIECHO_PRODUCTS = {
    "reason": "AI feature not identifiable in summary. No occurrence of artificial intelligence, machine learning, deep learning, neural network or algorithm. This is a new-platform clearance (Aplio beyond CUS-ABE00 / Aplio me CUS-AME00) whose software architecture was migrated largely unchanged from predicate Aplio i700 V8.5 (K242808) (p.7); the only software differences named are Precision+ Fine Processing, Breast Scan Guide, strain ratio, SWE Quad View, and sensor-based features (Fusion, Smart Body Mark, Smart Navigation, Breast Package) (p.8). The predicate lineage carries cardiac AI (Auto EF / 2D WMT Full-assist per K212333 and K250328), so cardiac AI is very likely present on this platform, but the summary does not name it; flag for manual review.",
    "group": "system-no-cardiac-ai",
    "triage_group": "canon-aplio"
+  },
+  {
+   "k_number": "K253370",
+   "device_name": "LOGIQ Totus",
+   "company": "GE Medical Systems Ultrasound and Primary Care Diagnostics",
+   "decision_date": "2026-01-08",
+   "product_code": "IYN",
+   "reason": "GE LOGIQ Totus; 'Auto EF without ECG' migrated from Vivid K220882; no AI wording in the summary",
+   "group": "feature-migration"
+  },
+  {
+   "k_number": "K253366",
+   "device_name": "LOGIQ Fortis",
+   "company": "GE Medical Systems Ultrasound and Primary Care Diagnostics",
+   "decision_date": "2026-01-07",
+   "product_code": "IYN",
+   "reason": "GE LOGIQ Fortis; 'Auto EF without ECG' migrated from Vivid K220882; no AI wording in the summary",
+   "group": "feature-migration"
   },
   {
    "k_number": "K252018",
@@ -21402,6 +21818,24 @@ window.AIECHO_PRODUCTS = {
    "reason": "The only AI/ML feature named is 3rd Harmonic Imaging (3-HI), a deep-learning abdominal image-quality filter validated on abdominal images from 30 U.S. patients by three radiologists (p.8-9). Other changes (SMI Angio Mode, Precision+ Fine Processing, Auto Tune for SWE/SWD, Windows 11) are non-AI and non-cardiac. No cardiac AI feature is named in this summary; previously cleared cardiac AI (Auto EF / 2D WMT Full-assist, Auto Plane Detection, etc.) is presumably carried over from predicate K242808 but is not mentioned.",
    "group": "system-no-cardiac-ai",
    "triage_group": "canon-aplio"
+  },
+  {
+   "k_number": "K251985",
+   "device_name": "LOGIQ E10",
+   "company": "GE Medical Systems Ultrasound and Primary Care Diagnostics",
+   "decision_date": "2025-10-29",
+   "product_code": "IYN",
+   "reason": "GE LOGIQ E10; 'Auto EF without ECG' migrated from Vivid K220882 (in inventory); no AI wording in the summary",
+   "group": "feature-migration"
+  },
+  {
+   "k_number": "K251963",
+   "device_name": "LOGIQ E10s",
+   "company": "GE Medical Systems Ultrasound and Primary Care Diagnostics",
+   "decision_date": "2025-10-29",
+   "product_code": "IYN",
+   "reason": "GE LOGIQ E10s; 'Auto EF without ECG' migrated from Vivid K220882; no AI wording in the summary",
+   "group": "feature-migration"
   },
   {
    "k_number": "K251673",
@@ -21491,6 +21925,15 @@ window.AIECHO_PRODUCTS = {
    "triage_group": "philips-epiq-b"
   },
   {
+   "k_number": "K243614",
+   "device_name": "Sonio Suspect",
+   "company": "Sonio",
+   "decision_date": "2025-02-21",
+   "product_code": "POK",
+   "reason": "Sonio Suspect: general fetal-anomaly detection across organ systems; cardiac views are one subset, not a cardiac product",
+   "group": "general-fetal"
+  },
+  {
    "k_number": "K243702",
    "device_name": "V8 Diagnostic Ultrasound System; cV8 Diagnostic Ultrasound System; V7 Diagnostic Ultrasound System; cV7 Diagnostic Ultrasound System; V6 Diagnostic Ultrasound System; cV6 Diagnostic Ultrasound System",
    "company": "Samsung Medison Co., Ltd.",
@@ -21571,6 +22014,15 @@ window.AIECHO_PRODUCTS = {
    "triage_group": "samsung-b"
   },
   {
+   "k_number": "K240406",
+   "device_name": "Sonio Detect",
+   "company": "Sonio",
+   "decision_date": "2024-04-26",
+   "product_code": "IYN",
+   "reason": "Sonio Detect v2: general fetal view and structure detection; cardiac views are one subset",
+   "group": "general-fetal"
+  },
+  {
    "k_number": "K233409",
    "device_name": "Eko Low Ejection Fraction Tool (ELEFT)",
    "company": "Eko Health, Inc.",
@@ -21610,6 +22062,15 @@ window.AIECHO_PRODUCTS = {
    "triage_group": "samsung-b"
   },
   {
+   "k_number": "K232381",
+   "device_name": "LOGIQ Totus",
+   "company": "GE Medical Systems Ultrasound and Primary Care Diagnostics",
+   "decision_date": "2023-12-07",
+   "product_code": "IYN",
+   "reason": "GE LOGIQ Totus; Auto EF / AFI enhancement migrated from Vivid with no AI wording in the summary",
+   "group": "feature-migration"
+  },
+  {
    "k_number": "K232661",
    "device_name": "Myocardial Strain Software Application",
    "company": "Circle Cardiovascular Imaging",
@@ -21628,6 +22089,33 @@ window.AIECHO_PRODUCTS = {
    "reason": "AI feature not identifiable in summary. This clearance introduces only the X11-4t 3D transesophageal (TEE) cardiac transducer hardware: 'The purpose of this Traditional 510(k) Pre-Market Notification is to introduce the X11-4t transducer' (p.4); 'The intended users, use environment, intended use, accessories and offered features are unchanged as compared to the predicate' (p.5). Although the transducer is cardiac, no AI/ML, algorithm, or automated software feature is named or evaluated. QIH product code is carried over from the predicate K231190.",
    "group": "system-no-cardiac-ai",
    "triage_group": "philips-epiq-a"
+  },
+  {
+   "k_number": "K231966",
+   "device_name": "LOGIQ E10",
+   "company": "GE Medical Systems Ultrasound and Primary Care Diagnostics",
+   "decision_date": "2023-11-07",
+   "product_code": "IYN",
+   "reason": "GE LOGIQ general-imaging system; Auto EF 2.0 / AFI 2.0 migrated from Vivid (in inventory) with no AI wording or cardiac AI testing in the summary",
+   "group": "feature-migration"
+  },
+  {
+   "k_number": "K231989",
+   "device_name": "LOGIQ E10s, LOGIQ Fortis",
+   "company": "Ge Medical Systems Ultrasound and Primary Care Diagnostic,",
+   "decision_date": "2023-11-07",
+   "product_code": "IYN",
+   "reason": "GE LOGIQ general-imaging system; Auto EF 2.0 / AFI 2.0 migrated from Vivid with no AI wording in the summary",
+   "group": "feature-migration"
+  },
+  {
+   "k_number": "K231965",
+   "device_name": "Voluson Expert 22, Voluson Expert 20, Voluson Expert 18",
+   "company": "GE Medical Systems Ultrasound and Primary Care Diagnostics",
+   "decision_date": "2023-10-30",
+   "product_code": "IYN",
+   "reason": "GE Voluson SonoLyst extended; same general fetal-plane scope",
+   "group": "general-fetal"
   },
   {
    "k_number": "K223905",
@@ -21676,6 +22164,15 @@ window.AIECHO_PRODUCTS = {
    "product_code": "QXO",
    "reason": "ECG-based estimation of an echo phenotype; input is ECG, not ultrasound",
    "group": "ecg-based"
+  },
+  {
+   "k_number": "K230365",
+   "device_name": "Sonio Detect",
+   "company": "Sonio",
+   "decision_date": "2023-07-25",
+   "product_code": "IYN",
+   "reason": "Sonio Detect v1: general fetal view, structure and quality detection; cardiac views are one subset",
+   "group": "general-fetal"
   },
   {
    "k_number": "K231190",
@@ -21746,6 +22243,15 @@ window.AIECHO_PRODUCTS = {
    "reason": "Only AI feature addressed is NerveTrack (peripheral nerve detection); no cardiac AI feature named. NerveTrack standalone performance: accuracy 91.7% (SD 5.6, 95% CI 89.5-93.9) and 7.93 FPS on 2,146 images from 18 Korean subjects (page 7).",
    "group": "system-no-cardiac-ai",
    "triage_group": "samsung-a"
+  },
+  {
+   "k_number": "K220358",
+   "device_name": "Voluson Expert 22, Voluson Expert 20, Voluson Expert 18",
+   "company": "GE Medical Systems Ultrasound and Primary Care Diagnostics",
+   "decision_date": "2022-06-06",
+   "product_code": "IYN",
+   "reason": "GE Voluson SonoLyst: fetal-plane recognition across the anatomy survey; not a cardiac product",
+   "group": "general-fetal"
   },
   {
    "k_number": "K212265",

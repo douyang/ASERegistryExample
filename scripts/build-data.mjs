@@ -18,7 +18,8 @@ const fdaUrl = (k) => {
 };
 
 // ---- 1. Load research outputs. Prefer <batch>.verified.json over <batch>.json.
-const files = fs.readdirSync(rdir).filter((f) => f.endsWith('.json') && !['openfda_records.json', 'families.json'].includes(f));
+// addenda-* files load last so their families override earlier batches (used to extend families found by the completeness pass)
+const files = fs.readdirSync(rdir).filter((f) => f.endsWith('.json') && !['openfda_records.json', 'families.json'].includes(f)).sort((a, b) => Number(a.startsWith('addenda')) - Number(b.startsWith('addenda')) || a.localeCompare(b));
 const batches = new Map();
 for (const f of files) {
   const base = f.replace(/\.verified\.json$/, '').replace(/\.json$/, '');
@@ -36,7 +37,7 @@ for (const [, b] of batches) {
     if (!fam || !fam.id) { warnings.push(`family without id in ${b.file}`); continue; }
     fam._source_file = b.file;
     fam._verified = b.verified;
-    if (researched.has(fam.id)) warnings.push(`duplicate family id ${fam.id} (${b.file} overrides ${researched.get(fam.id)._source_file})`);
+    if (researched.has(fam.id) && !b.file.startsWith('addenda')) warnings.push(`duplicate family id ${fam.id} (${b.file} overrides ${researched.get(fam.id)._source_file})`);
     researched.set(fam.id, fam);
   }
 }
@@ -141,6 +142,10 @@ const excluded = [];
 for (const k of seed.excluded_ecg_based || []) {
   const r = openfda[k]; if (!r) continue;
   excluded.push({ k_number: k, device_name: r.device_name, company: r.applicant, decision_date: r.decision_date, product_code: r.product_code, reason: 'ECG-based estimation of an echo phenotype; input is ECG, not ultrasound', group: 'ecg-based' });
+}
+for (const x of seed.excluded_other || []) {
+  const r = openfda[x.k]; if (!r) { warnings.push(`excluded_other ${x.k} not in openFDA records`); continue; }
+  excluded.push({ k_number: x.k, device_name: r.device_name, company: r.applicant, decision_date: r.decision_date, product_code: r.product_code, reason: x.reason, group: x.group });
 }
 for (const t of triage) {
   if (t.is_cardiac_ultrasound_ai) continue;

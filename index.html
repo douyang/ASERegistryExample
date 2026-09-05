@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Echo Central</title>
+<meta name="description" content="Catalog of FDA-cleared AI echocardiography products with FDA performance evidence, training and validation sample sizes, linked publications, and a placeholder evaluation on the ASE ImageGuideEcho Registry.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="brand" href="#products" aria-label="AI Echo Central home">
+      <svg class="heart" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+        <defs><linearGradient id="ase-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff0000"/><stop offset="1" stop-color="#1a1ac6"/></linearGradient></defs>
+        <path d="M20 35.5C7.5 27 2.5 17.5 7.6 10.2 11.3 5 17.6 5.6 20 10.6 22.4 5.6 28.7 5 32.4 10.2 37.5 17.5 32.5 27 20 35.5Z" fill="url(#ase-g)"/>
+        <path d="M9.5 21h5.2l2.1-4.4 3.4 9.6 2.6-6.6 1.6 1.4h6.1" fill="none" stroke="#fff" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text"><span class="brand-name">AI Echo Central</span><span class="brand-sub">FDA-cleared AI for echocardiography</span></span>
+    </a>
+    <nav class="tabs" role="tablist" aria-label="Sections">
+      <a role="tab" href="#products" data-tab="products" aria-selected="true" aria-controls="products">Products</a>
+      <a role="tab" href="#registry" data-tab="registry" aria-selected="false" aria-controls="registry">ASE Registry Performance</a>
+      <a role="tab" href="#methods" data-tab="methods" aria-selected="false" aria-controls="methods">Methods</a>
+    </nav>
+  </div>
+  <div class="gradient-rule" aria-hidden="true"></div>
+</header>
+
+<main id="main" class="wrap">
+
+  <!-- ============ PRODUCTS ============ -->
+  <section id="products" class="tab-panel" role="tabpanel" aria-labelledby="products-h">
+    <div class="page-head">
+      <h1 id="products-h">FDA-cleared AI echocardiography products</h1>
+      <p class="lede">Every 510(k) and De Novo on FDA’s AI-enabled device list that operates on cardiac ultrasound. Each entry carries the performance evidence in its FDA summary, training and validation sample sizes where disclosed, prior validations, and linked publications.</p>
+      <div class="stats" id="catalog-stats"></div>
+    </div>
+
+    <div class="catalog">
+      <button class="rail-toggle" id="rail-toggle" type="button" aria-expanded="false" aria-controls="rail">Filters</button>
+      <aside class="rail" id="rail" aria-label="Filters">
+        <div id="filters"></div>
+        <button id="clear-filters" type="button">Clear filters</button>
+      </aside>
+
+      <div class="results">
+        <div class="toolbar">
+          <label class="search"><span class="sr-only">Search products</span><input id="search" type="search" placeholder="Search product, company, K-number, tag" autocomplete="off"></label>
+          <div class="toolbar-right">
+            <label for="sort">Sort
+              <select id="sort">
+                <option value="latest">Latest clearance</option>
+                <option value="first">First clearance</option>
+                <option value="name">Product A–Z</option>
+                <option value="company">Company A–Z</option>
+                <option value="metrics">Most FDA metrics</option>
+                <option value="papers">Most publications</option>
+              </select>
+            </label>
+            <div class="view-toggle" role="group" aria-label="View">
+              <button type="button" data-view="cards" aria-pressed="true">Cards</button>
+              <button type="button" data-view="table" aria-pressed="false">Table</button>
+            </div>
+          </div>
+        </div>
+        <p class="count" id="count" aria-live="polite"></p>
+        <div id="cards" class="grid"></div>
+        <div id="table" class="table-wrap" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REGISTRY ============ -->
+  <section id="registry" class="tab-panel" role="tabpanel" aria-labelledby="registry-h" hidden>
+    <div class="placeholder-banner" role="note">
+      <b>Placeholder data</b>
+      <span>Every number on this tab is synthetic, generated from a fixed seed by <code>scripts/gen-registry.mjs</code>. No product has been evaluated on the ImageGuideEcho Registry by this project. The layout shows how a registry evaluation would be reported once real linked data exist. Registry facts in the last section are real and sourced.</span>
+    </div>
+    <div class="page-head">
+      <h1 id="registry-h">Performance on the ASE ImageGuideEcho Registry <span class="placeholder-tag">Placeholder</span></h1>
+      <p class="lede">Each product’s output compared against the finalized clinical report in the registry’s adult TTE module. Agreement products are scored against reported LVEF, volumes, strain, and valve measurements. Detection products are scored against registry-reported disease. Guidance products are scored on registry quality metrics.</p>
+    </div>
+    <div class="kpis" id="reg-kpis"></div>
+    <div class="reg-layout" id="reg-charts"></div>
+
+    <section class="reg-detail" aria-labelledby="reg-detail-h">
+      <div class="reg-detail-head">
+        <h2 id="reg-detail-h">Product detail <span class="placeholder-tag">Placeholder</span></h2>
+        <label for="reg-select">Product <select id="reg-select"></select></label>
+      </div>
+      <div id="reg-detail"></div>
+    </section>
+
+    <section class="reg-context" aria-labelledby="reg-context-h">
+      <h2 id="reg-context-h">About the registry</h2>
+      <div class="facts" id="reg-facts"></div>
+      <p id="reg-phase" class="notice"></p>
+      <h3>Quality metrics live in the registry</h3>
+      <ul id="reg-metrics"></ul>
+      <h3>Adult TTE data domains</h3>
+      <ul id="reg-domains"></ul>
+    </section>
+  </section>
+
+  <!-- ============ METHODS ============ -->
+  <section id="methods" class="tab-panel" role="tabpanel" aria-labelledby="methods-h" hidden>
+    <div class="page-head">
+      <h1 id="methods-h">Methods</h1>
+      <p class="lede">How products were found, what counts as an AI echo product, and how much to trust each field.</p>
+    </div>
+    <div class="prose">
+      <h2>Inclusion</h2>
+      <ol>
+        <li>The clearance appears on FDA’s <a href="https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices">Artificial Intelligence-Enabled Medical Devices</a> list, or was found through openFDA under an AI-specific product code (QJU, QIH, QVD, QUO, SDJ, POK) with a cardiac ultrasound indication.</li>
+        <li>The device input is ultrasound of the heart: transthoracic, point-of-care or handheld, fetal echocardiography, or procedural echo.</li>
+        <li>Standalone software and ultrasound systems both qualify. A system clearance is included only when its FDA summary names a cardiac AI feature. System clearances whose AI feature is non-cardiac, or not identifiable in the summary, are listed under exclusions.</li>
+      </ol>
+      <h2>Exclusion</h2>
+      <ul>
+        <li>ECG-based estimators of echocardiographic phenotypes (low ejection fraction, cardiac amyloidosis, structural heart disease). The input is an ECG, not an echo.</li>
+        <li>Digital stethoscope and phonocardiography software.</li>
+        <li>Cardiac CT and cardiac MR analysis software.</li>
+        <li>Ultrasound AI for other organs (bladder, lung, nerve, liver, breast, obstetric biometry).</li>
+      </ul>
+      <h2>Sources and pipeline</h2>
+      <ol>
+        <li><b>Inventory.</b> FDA AI-enabled device list (CSV) and openFDA 510(k) endpoint queries by product code, applicant, and device name. openFDA is authoritative for decision dates, product codes, and applicant names.</li>
+        <li><b>FDA summaries.</b> The 510(k) summary or De Novo decision summary PDF for every clearance was downloaded from accessdata.fda.gov and text-extracted. Indications, predicates, changes, performance testing, dataset descriptions, and flags were read from those documents.</li>
+        <li><b>Publications.</b> PubMed and Crossref lookups for each product; a paper is shown as resolved only when its DOI or PMID resolved during extraction and its title matched.</li>
+        <li><b>Verification.</b> A second, adversarial pass re-read every quoted performance claim against the source text, re-checked dates and codes against openFDA, and re-resolved every DOI. Unsupported claims were removed.</li>
+        <li><b>Build.</b> <code>scripts/build-data.mjs</code> merges the verified research files with openFDA and writes <code>data/products.js</code>. Warnings from that step are listed below.</li>
+      </ol>
+      <h2>Verification levels</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Level</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td><span class="vlevel fda_summary">FDA summary</span></td><td>Read verbatim from the 510(k) or De Novo summary; page number given.</td></tr>
+          <tr><td><span class="vlevel fda_database">FDA database</span></td><td>From openFDA or the FDA AI-enabled device list.</td></tr>
+          <tr><td><span class="vlevel peer_reviewed">Peer reviewed</span></td><td>From a publication whose DOI or PMID resolved.</td></tr>
+          <tr><td><span class="vlevel company">Company</span></td><td>From the manufacturer’s website or press release. Not independently checked.</td></tr>
+          <tr><td><span class="vlevel news">News</span></td><td>From trade press. Not independently checked.</td></tr>
+          <tr><td><span class="vlevel unverified">Unverified</span></td><td>Reported but not confirmed against a source. Treat as a lead, not a fact.</td></tr>
+        </tbody>
+      </table></div>
+      <h2>Known limits</h2>
+      <ul>
+        <li>openFDA lags FDA decisions by days to weeks. Clearances after the build date are missing.</li>
+        <li>Many summaries do not disclose training-set size; blanks mean not disclosed, not zero.</li>
+        <li>510(k) “Statement” filings (as opposed to summaries) contain no performance section. Those clearances show indications only.</li>
+        <li>Ultrasound-system summaries often describe AI features in general terms. Feature attribution to a specific clearance can be uncertain and is quoted where possible.</li>
+        <li>The registry tab is placeholder data by design. See its banner.</li>
+      </ul>
+      <h2>Product codes</h2>
+      <div class="table-wrap"><table><thead><tr><th>Code</th><th>FDA classification name</th></tr></thead><tbody id="product-codes"></tbody></table></div>
+      <h2>Excluded and adjacent clearances</h2>
+      <p>Clearances reviewed and left out, with the reason.</p>
+      <div class="table-wrap"><table><thead><tr><th>Date</th><th>Submission</th><th>Device</th><th>Company</th><th>Code</th><th>Reason</th></tr></thead><tbody id="excluded"></tbody></table></div>
+      <h2>Build</h2>
+      <p id="build-info"></p>
+      <ul class="warnlist" id="build-warnings"></ul>
+      <h2>Update procedure</h2>
+      <ol>
+        <li><code>node scripts/refresh-openfda.mjs</code> re-pulls openFDA records for every known submission and prints new AI-coded cardiac ultrasound clearances to review.</li>
+        <li>Add new families to <code>data/research/families.json</code>, research them, and drop the verified JSON into <code>data/research/</code>.</li>
+        <li><code>node scripts/build-data.mjs</code> then <code>node scripts/gen-registry.mjs</code>.</li>
+        <li><code>node scripts/validate.cjs</code> renders the site headless, checks for console errors, and refreshes the screenshots.</li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<div id="panel-backdrop" class="panel-backdrop" hidden></div>
+<aside id="panel" class="panel" role="dialog" aria-modal="true" aria-labelledby="panel-title" hidden>
+  <div class="panel-inner">
+    <button class="panel-close" id="panel-close" type="button">Close ✕</button>
+    <div id="panel-body"></div>
+  </div>
+</aside>
+<div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+
+<footer class="site-footer wrap">
+  <span>Independent catalog styled after the American Society of Echocardiography’s visual identity. Not an ASE publication and not FDA guidance. Verify every regulatory fact against the linked FDA document before relying on it.</span>
+  <span id="footer-build"></span>
+</footer>
+
+<script src="data/products.js"></script>
+<script src="data/registry.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

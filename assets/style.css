@@ -489,3 +489,9 @@ table.scorecard tr.na td { color: var(--ink-3); }
 :root[data-theme="dark"] .nd3, :root[data-theme="dark"] .nd4 { color: var(--nd-ink-hi); }
 .qc-cell.nd, .sc-tiles .tile.nd, .pill-dv.nd { outline: 1px dashed var(--line-2); outline-offset: -1px; }
 .qc-key .sw.nd { border-radius: 2px; }
+
+/* declared interest: the catalog maintainer holds an interest in two of the products it lists */
+.chip.coi { border-color: var(--placeholder-line); background: var(--placeholder-bg); color: var(--placeholder-ink); font-weight: 600; }
+.coi-note { border: 1px solid var(--placeholder-line); background: var(--placeholder-bg); color: var(--placeholder-ink); border-radius: var(--radius); padding: 10px 12px; font-size: 13.5px; }
+.coi-note b { display: block; font-family: var(--font-display); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
+.coi-mark { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 3px; background: var(--placeholder-bg); color: var(--placeholder-ink); border: 1px solid var(--placeholder-line); white-space: nowrap; cursor: default; }

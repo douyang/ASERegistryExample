@@ -24,7 +24,7 @@
   const byId = new Map(fams.map((f) => [f.id, f]));
 
   // ---------- state ----------
-  const state = { tab: 'products', view: 'cards', q: '', sort: 'latest', sel: {}, regSel: null, open: { category: true, mode: true, pathway: true, evidence: true }, opener: null };
+  const state = { tab: 'products', view: 'cards', q: '', sort: 'latest', sel: {}, regSel: null, openFacet: null, opener: null };
   const FILTERS = [
     { key: 'category', label: 'Function', get: (f) => [f.research_pending ? 'pending' : f.category], name: (v) => (v === 'pending' ? 'Research pending' : CAT[v] || v) },
     { key: 'mode', label: 'Imaging mode', get: (f) => f.modes || [], order: ['TTE', 'TEE', 'POCUS', 'ICE', 'Fetal echo', 'Stress echo'] },
@@ -48,26 +48,53 @@
   }
 
   // ---------- filters rail ----------
+  function facetValues(F) {
+    const counts = new Map();
+    for (const f of fams) for (const v of F.get(f)) if (v) counts.set(v, (counts.get(v) || 0) + 0);
+    for (const f of fams.filter((x) => matchesFacets(x, F.key) && searchOk(x))) for (const v of F.get(f)) if (v) counts.set(v, (counts.get(v) || 0) + 1);
+    const vals = [...counts.keys()].sort((a, b) => (F.order ? F.order.indexOf(a) - F.order.indexOf(b) : F.key === 'year' ? b.localeCompare(a) : a.localeCompare(b)));
+    return { counts, vals };
+  }
   function renderFilters() {
     const host = $('#filters');
-    const focused = document.activeElement && document.activeElement.closest && document.activeElement.closest('#filters input') ? { key: document.activeElement.dataset.key, value: document.activeElement.value } : null;
+    const act = document.activeElement;
+    const focused = act && act.closest && act.closest('#filters input') ? { key: act.dataset.key, value: act.value } : null;
     host.innerHTML = FILTERS.map((F) => {
-      const counts = new Map();
-      for (const f of fams) for (const v of F.get(f)) if (v) counts.set(v, (counts.get(v) || 0) + 0);
-      const base = fams.filter((f) => matchesFacets(f, F.key) && searchOk(f));
-      for (const f of base) for (const v of F.get(f)) if (v) counts.set(v, (counts.get(v) || 0) + 1);
-      const vals = [...counts.keys()].sort((a, b) => (F.order ? F.order.indexOf(a) - F.order.indexOf(b) : F.key === 'year' ? b.localeCompare(a) : a.localeCompare(b)));
+      const { counts, vals } = facetValues(F);
       const sel = state.sel[F.key] || new Set();
-      const open = sel.size > 0 || !!state.open[F.key];
-      return `<details class="filter-group" data-key="${esc(F.key)}" ${open ? 'open' : ''}><summary>${esc(F.label)}</summary><ul>${vals.map((v) => {
+      const open = state.openFacet === F.key;
+      return `<details class="f-drop ${sel.size ? 'on' : ''}" data-key="${esc(F.key)}" ${open ? 'open' : ''}><summary>${esc(F.label)}${sel.size ? ` <span class="badge num">${sel.size}</span>` : ''}</summary><div class="f-pop"><ul>${vals.map((v) => {
         const n = counts.get(v); const on = sel.has(v);
-        return `<li><label class="${n === 0 && !on ? 'zero' : ''}"><input type="checkbox" data-key="${esc(F.key)}" value="${esc(v)}" ${on ? 'checked' : ''}> <span>${esc(F.name ? F.name(v) : v)}</span><span class="n num">${n}</span></label></li>`;
-      }).join('')}</ul></details>`;
+        return `<li><label class="${n === 0 && !on ? 'zero' : ''}"><input type="checkbox" data-key="${esc(F.key)}" value="${esc(v)}" ${on ? 'checked' : ''}> <span>${esc(F.name ? F.name(v) : v)}</span><span class="n">${n}</span></label></li>`;
+      }).join('')}</ul></div></details>`;
     }).join('');
     if (focused) { const el = host.querySelector(`input[data-key="${CSS.escape(focused.key)}"][value="${CSS.escape(focused.value)}"]`); if (el) el.focus({ preventScroll: true }); }
+    if (state.openFacet) placePopover(host.querySelector(`.f-drop[data-key="${CSS.escape(state.openFacet)}"]`));
+  }
+  // Drop the popover below the whole bar, not just its own pill: the bar wraps to several rows on
+  // narrow viewports and an overlay anchored to one pill would cover the pills beneath it. Then clamp
+  // it to the viewport, because a pill near either edge would otherwise push the panel off-screen.
+  function placePopover(d) {
+    if (!d) return;
+    const pop = d.querySelector('.f-pop'); if (!pop) return;
+    pop.style.top = ''; pop.style.left = '';
+    const bar = d.closest('.filter-bar');
+    const dr = d.getBoundingClientRect();
+    if (bar) pop.style.top = `${Math.round(bar.getBoundingClientRect().bottom - dr.top) + 6}px`;
+    const w = pop.getBoundingClientRect().width, vw = document.documentElement.clientWidth, pad = 8;
+    const left = Math.min(Math.max(pad, dr.left), Math.max(pad, vw - pad - w));
+    pop.style.left = `${Math.round(left - dr.left)}px`;
+  }
+  function renderActiveFilters() {
+    const host = $('#active-filters');
+    const out = [];
+    for (const F of FILTERS) {
+      for (const v of state.sel[F.key] || []) out.push(`<button class="pill" type="button" data-off-key="${esc(F.key)}" data-off-value="${esc(v)}">${esc(F.name ? F.name(v) : v)}<span class="x" aria-hidden="true">✕</span><span class="sr-only">Remove filter</span></button>`);
+    }
+    if (out.length || state.q) out.push('<button class="pill clear" type="button" id="clear-filters">Clear all</button>');
+    host.innerHTML = out.join('');
   }
 
-  // ---------- filtering / sorting ----------
   function matchesFacets(f, skipKey) {
     for (const F of FILTERS) {
       if (F.key === skipKey) continue;
@@ -94,9 +121,9 @@
   function render() {
     const visible = fams.filter(matches).sort(SORTS[state.sort] || SORTS.latest);
     renderFilters();
+    renderActiveFilters();
     const nSel = Object.values(state.sel).reduce((n, s) => n + s.size, 0);
     $('#count').textContent = `${nSel || state.q ? `${visible.length} of ${fams.length}` : fams.length} products${nSel ? ` · ${nSel} filter${nSel > 1 ? 's' : ''}` : ''}${state.q ? ` · “${state.q}”` : ''}`;
-    $('#rail-toggle').textContent = nSel ? `Filters (${nSel})` : 'Filters';
     if (state.view === 'cards') { $('#cards').hidden = false; $('#table').hidden = true; renderCards(visible); }
     else { $('#cards').hidden = true; $('#table').hidden = false; renderTable(visible); }
   }
@@ -116,7 +143,7 @@
     for (const t of f.tags || []) {
       const v = String(t || '').trim(); if (!v || seenChip.has(v.toLowerCase())) continue;
       seenChip.add(v.toLowerCase()); out.push(`<span class="chip">${esc(v)}</span>`);
-      if (out.length >= 11) break;
+      if (out.length >= 8) break;
     }
     return out.join('');
   }
@@ -187,7 +214,6 @@
   }
   function panelHTML(f) {
     const latest = f.clearances[f.clearances.length - 1];
-    const reg = R.evaluations[f.id];
     const links = [
       f.product_url ? `<a href="${esc(f.product_url)}" rel="noopener">Product page</a>` : '',
       f.company_website ? `<a href="${esc(f.company_website)}" rel="noopener">Company</a>` : '',
@@ -195,7 +221,6 @@
       `<a href="${esc(latest.fda_database_url)}" rel="noopener">FDA database</a>`,
     ].filter(Boolean).join('');
     const feats = (f.embedded_ai_features || []).filter((e) => e && e.name && e.name.trim());
-    const primaryReg = reg && reg.evaluable ? reg.endpoints.find((e) => e.id === reg.primary_endpoint_id) : null;
     return `
       <div class="panel-head">
         <span class="cat ${f.research_pending ? 'pending' : ''}" style="justify-self:start">${f.research_pending ? 'Research pending' : esc(CAT[f.category] || f.category)}</span>
@@ -222,17 +247,14 @@
         ${f.n_papers ? `<ol class="papers">${f.papers.map((p) => `<li><span class="t">${p.doi ? `<a href="https://doi.org/${esc(p.doi)}" rel="noopener">${esc(p.title)}</a>` : p.url ? `<a href="${esc(p.url)}" rel="noopener">${esc(p.title)}</a>` : esc(p.title)}</span><span class="m">${[p.first_author ? esc(p.first_author) + ' et al.' : '', p.journal ? esc(p.journal) : '', p.year || ''].filter(Boolean).join(' · ')}${p.pmid ? ` · <a href="https://pubmed.ncbi.nlm.nih.gov/${esc(p.pmid)}/" rel="noopener">PMID ${esc(p.pmid)}</a>` : ''} · <span class="chip">${esc(p.relation)}</span> ${vl(p.verification)}</span>${p.key_result ? `<span>${esc(p.key_result)}${p.n_subjects ? ` (n = ${fmtN(p.n_subjects)})` : ''}</span>` : ''}</li>`).join('')}</ol>` : '<p class="notice">None found.</p>'}
       </section>
       ${(f.clinical_trials || []).length ? `<section class="psec"><h3>Registered trials</h3><ul class="papers">${f.clinical_trials.map((t) => `<li><span class="t"><a href="${esc(t.url)}" rel="noopener">${esc(t.nct_id)}</a> ${esc(t.title)}</span><span class="m">${esc(t.status || '')}</span></li>`).join('')}</ul></section>` : ''}
-      <section class="psec"><h3>Registry performance${ptag()}</h3>
-        ${reg && reg.evaluable ? `<dl class="kv"><dt>Cohort</dt><dd class="num">${fmtN(reg.cohort.n_studies)} TTEs · ${reg.cohort.n_sites} sites · ${esc(reg.cohort.period)}</dd>${primaryReg ? `<dt>${esc(primaryReg.label)}</dt><dd class="num">${primaryReg.value}${primaryReg.unit ? ' ' + esc(primaryReg.unit) : ''} (95% CI ${primaryReg.ci.low} to ${primaryReg.ci.high})</dd>` : ''}<dt>Feasibility</dt><dd class="num">${(() => { const fe = reg.endpoints.find((e) => e.id === 'feasibility'); return fe ? fe.value + '%' : '—'; })()}</dd></dl><p class="notice"><a href="#registry/${esc(f.id)}" data-reg="${esc(f.id)}">Open the registry tab for this product.</a></p>` : `<p class="not-evaluable">${reg ? esc(reg.reason) : 'Not evaluated.'}</p>`}
-      </section>
       ${(f.open_questions || []).length ? `<section class="psec"><h3>Open questions</h3><ul class="oq">${f.open_questions.map((q) => `<li>${esc(q)}</li>`).join('')}</ul></section>` : ''}
       ${(f.sources || []).length ? `<section class="psec"><details><summary class="quote-toggle">Sources (${f.sources.length})</summary><ul class="oq">${f.sources.map((s) => `<li>${esc(s.fact)} — ${linkify(s.url_or_file)} ${vl(s.verification)}</li>`).join('')}</ul></details></section>` : ''}
 `;
   }
 
   // ---------- registry tab ----------
-  const evals = Object.values(R.evaluations || {});
-  const evaluable = evals.filter((e) => e.evaluable);
+  const sims = R.products || [];
+  const TOP_N = 10;
   function tip(html, x, y) { const t = $('#tooltip'); t.innerHTML = html; t.hidden = false; const w = t.offsetWidth, h = t.offsetHeight; t.style.left = Math.min(x + 14, window.innerWidth - w - 8) + 'px'; t.style.top = Math.max(8, y - h - 12) + 'px'; }
   function hideTip() { $('#tooltip').hidden = true; }
 
@@ -285,29 +307,32 @@
   function renderRegistry() {
     if (!PLACEHOLDER) { const b = $('.placeholder-banner'); if (b) b.hidden = true; for (const t of $$('.placeholder-tag')) t.remove(); }
     const kp = $('#reg-kpis');
-    const nStudies = evaluable.reduce((n, e) => n + e.cohort.n_studies, 0);
-    const sites = new Set(evaluable.flatMap((e) => e.cohort.sites)).size;
+    const nStudies = sims.reduce((n, e) => n + e.cohort.n_studies, 0);
+    const sites = new Set(sims.flatMap((e) => e.cohort.sites)).size;
     kp.innerHTML = [
-      [evaluable.length, `of ${evals.length} products evaluable`], [fmtN(nStudies), 'TTEs scored'], [sites, 'registry sites'], [evaluable.length ? evaluable[0].cohort.period : '—', 'evaluation window'],
+      [sims.length, `of ${R.n_catalog_products || sims.length} products scored`], [fmtN(nStudies), 'TTEs simulated'], [sites, 'registry sites'], [sims.length ? sims[0].cohort.period : '—', 'evaluation window'],
     ].map(([v, l]) => `<div class="kpi"><div class="v">${esc(v)}</div><div class="l">${esc(l)}${ptag()}</div></div>`).join('');
 
     const fam = (id) => byId.get(id) || { product_name: id, company: '' };
-    const mk = (type, epId) => evaluable.filter((e) => type.includes(e.evaluation_type)).map((e) => { const ep = e.endpoints.find((x) => x.id === epId); return ep ? { id: e.family_id, label: fam(e.family_id).product_name, company: companyShort(fam(e.family_id).company), value: ep.value, low: ep.ci.low, high: ep.ci.high, n: e.cohort.n_studies } : null; }).filter(Boolean);
+    const mk = (type, epId) => sims.filter((e) => type.includes(e.evaluation_type)).map((e) => { const ep = e.endpoints.find((x) => x.id === epId); return ep ? { id: e.id, label: e.label, company: '', value: ep.value, low: ep.ci.low, high: ep.ci.high, n: e.cohort.n_studies } : null; }).filter(Boolean);
+    // Charts show the leading TOP_N only; the subtitle always states how many were left out.
+    const cap = (rows) => rows.slice(0, TOP_N);
+    const capNote = (rows) => (rows.length > TOP_N ? ` Top ${TOP_N} of ${rows.length}.` : '');
     const lv = mk(['lvef', 'comprehensive'], 'lvef_mae').sort((a, b) => a.value - b.value);
     const det = mk(['detection', 'hfpef', 'amyloid'], 'auc').sort((a, b) => b.value - a.value);
     const acq = mk(['acquisition'], 'diag_quality').sort((a, b) => b.value - a.value);
     const strain = mk(['strain'], 'gls_icc').sort((a, b) => b.value - a.value);
     const qual = mk(['quality'], 'kappa').sort((a, b) => b.value - a.value);
     $('#reg-charts').innerHTML = `
-      <section class="chart-block wide"><h2>LVEF agreement with the registry report</h2><p class="chart-sub">Mean absolute error vs reported LVEF, in EF points. Lower is better. Dot = estimate, bar = 95% CI.</p>${dotRangeChart(lv, { unit: '', decimals: 1, wide: true, aria: 'LVEF mean absolute error by product', domain: [0, Math.max(10, ...lv.map((r) => r.high)) * 1.05] })}</section>
-      <section class="chart-block"><h2>Detection: area under the ROC curve</h2><p class="chart-sub">Severe aortic stenosis, HFpEF, or cardiac amyloidosis vs the registry reference, higher is better.</p>${dotRangeChart(det, { unit: '', decimals: 2, aria: 'AUC by product', domain: [0.5, 1], refLine: 0.5 })}</section>
-      <section class="chart-block"><h2>Acquisition guidance: diagnostic-quality studies</h2><p class="chart-sub">Share of guided acquisitions graded diagnostic by the reading physician.</p>${dotRangeChart(acq, { unit: '%', decimals: 1, aria: 'Diagnostic quality by product', domain: [50, 100] })}</section>
-      ${strain.length ? `<section class="chart-block"><h2>Strain: ICC vs reported GLS</h2><p class="chart-sub">Where the registry report contains GLS.</p>${dotRangeChart(strain, { unit: '', decimals: 2, aria: 'GLS ICC by product', domain: [0.5, 1] })}</section>` : ''}
-      ${qual.length ? `<section class="chart-block"><h2>Image quality: agreement with the sonographer grade</h2><p class="chart-sub">Cohen’s κ vs the registry image-quality field, higher is better.</p>${dotRangeChart(qual, { unit: '', decimals: 2, aria: 'Image-quality kappa by product', domain: [0, 1] })}</section>` : ''}`;
+      <section class="chart-block wide"><h2>LVEF agreement with the registry report</h2><p class="chart-sub">Mean absolute error vs reported LVEF, in EF points. Lower is better. Dot = estimate, bar = 95% CI.${capNote(lv)}</p>${dotRangeChart(cap(lv), { unit: '', decimals: 1, wide: true, aria: 'LVEF mean absolute error by product', domain: [0, Math.max(10, ...cap(lv).map((r) => r.high)) * 1.05] })}</section>
+      <section class="chart-block"><h2>Detection: area under the ROC curve</h2><p class="chart-sub">Severe aortic stenosis, HFpEF, or cardiac amyloidosis vs the registry reference, higher is better.${capNote(det)}</p>${dotRangeChart(cap(det), { unit: '', decimals: 2, aria: 'AUC by product', domain: [0.5, 1], refLine: 0.5 })}</section>
+      <section class="chart-block"><h2>Acquisition guidance: diagnostic-quality studies</h2><p class="chart-sub">Share of guided acquisitions graded diagnostic by the reading physician.${capNote(acq)}</p>${dotRangeChart(cap(acq), { unit: '%', decimals: 1, aria: 'Diagnostic quality by product', domain: [50, 100] })}</section>
+      ${strain.length ? `<section class="chart-block"><h2>Strain: ICC vs reported GLS</h2><p class="chart-sub">Where the registry report contains GLS.${capNote(strain)}</p>${dotRangeChart(cap(strain), { unit: '', decimals: 2, aria: 'GLS ICC by product', domain: [0.5, 1] })}</section>` : ''}
+      ${qual.length ? `<section class="chart-block"><h2>Image quality: agreement with the sonographer grade</h2><p class="chart-sub">Cohen’s κ vs the registry image-quality field, higher is better.${capNote(qual)}</p>${dotRangeChart(cap(qual), { unit: '', decimals: 2, aria: 'Image-quality kappa by product', domain: [0, 1] })}</section>` : ''}`;
 
     const sel = $('#reg-select');
-    sel.innerHTML = evals.slice().sort((a, b) => a.product_name.localeCompare(b.product_name)).map((e) => `<option value="${esc(e.family_id)}">${esc(e.product_name)}${e.evaluable ? '' : ' (not evaluable)'}</option>`).join('');
-    if (!state.regSel || !R.evaluations[state.regSel]) state.regSel = lv.length ? lv[0].id : (evaluable[0] ? evaluable[0].family_id : null);
+    sel.innerHTML = sims.map((e) => `<option value="${esc(e.id)}">${esc(e.label)}</option>`).join('');
+    if (!state.regSel || !sims.some((e) => e.id === state.regSel)) state.regSel = lv.length ? lv[0].id : (sims[0] ? sims[0].id : null);
     if (state.regSel) sel.value = state.regSel;
     renderRegDetail();
     $('#reg-facts').innerHTML = (R.registry.facts || []).map((f) => `<div class="fact"><b class="num">${esc(f.value)}</b>${esc(f.label)}<br><a href="${esc(f.source)}" rel="noopener">source</a></div>`).join('');
@@ -320,16 +345,17 @@
     let t = mx === mn ? 0.5 : (v - mn) / (mx - mn); if (better === 'lower') t = 1 - t; if (better === 'zero') t = 1 - Math.min(1, Math.abs(v) / Math.max(Math.abs(mn), Math.abs(mx), 1e-9));
     const step = 1 + Math.round(t * 6); return { step, hi: step >= 5 };
   }
+  const EVAL_LABEL = { lvef: 'LV function', comprehensive: 'Multi-parameter measurement', strain: 'Strain', detection: 'Disease detection', hfpef: 'Heart failure indicator', amyloid: 'Cardiac amyloidosis indicator', acquisition: 'Acquisition guidance', quality: 'Image quality' };
   function renderRegDetail() {
-    const host = $('#reg-detail'); const e = R.evaluations[state.regSel]; const f = byId.get(state.regSel);
+    const host = $('#reg-detail'); const e = sims.find((x) => x.id === state.regSel);
     if (!e) { host.innerHTML = ''; return; }
-    if (!e.evaluable) { host.innerHTML = `<p class="not-evaluable">${esc(e.product_name)} — ${esc(e.reason)}</p>`; return; }
+
     const primary = e.endpoints.find((x) => x.id === e.primary_endpoint_id);
     const dims = [...new Set(e.subgroups.map((s) => s.dimension))];
     const vals = e.subgroups.map((s) => s.value); const mn = Math.min(...vals), mx = Math.max(...vals);
     host.innerHTML = `
       <div class="reg-detail-grid">
-        <div class="chart-block"><h3>${esc(e.product_name)} <span class="notice">${esc(f ? CAT[f.category] || f.category : '')}</span></h3>
+        <div class="chart-block"><h3>${esc(e.label)} <span class="notice">${esc(EVAL_LABEL[e.evaluation_type] || e.evaluation_type)}</span></h3>
           <dl class="kv"><dt>Module</dt><dd>${esc(e.cohort.module)}</dd><dt>Cohort</dt><dd class="num">${fmtN(e.cohort.n_studies)} TTEs · ${e.cohort.n_sites} sites · ${esc(e.cohort.period)}</dd><dt>Vendors</dt><dd>${e.cohort.vendors.map(esc).join(', ')}</dd></dl>
           <div class="table-wrap"><table class="endpoints"><thead><tr><th>Endpoint</th><th>Estimate (95% CI)</th><th>Reference</th></tr></thead><tbody>${e.endpoints.map((ep) => `<tr><td>${esc(ep.label)}${ep.primary ? ' <span class="chip on">primary</span>' : ''}</td><td class="num"><b>${ep.value}${ep.unit ? ' ' + esc(ep.unit) : ''}</b> <span class="notice">(${ep.ci.low} to ${ep.ci.high})</span></td><td class="notice">${esc(ep.reference)}</td></tr>`).join('')}</tbody></table></div>
         </div>
@@ -377,8 +403,10 @@
     const reg = ev.target.closest('[data-reg]'); if (reg) { closePanelQuiet(); return; }
     const row = ev.target.closest('.chart-block .row'); if (row) { state.regSel = row.dataset.id; $('#reg-select').value = state.regSel; renderRegistry(); return; }
     const vb = ev.target.closest('.view-toggle button'); if (vb) { state.view = vb.dataset.view; for (const b of $$('.view-toggle button')) b.setAttribute('aria-pressed', b === vb ? 'true' : 'false'); render(); return; }
-    if (ev.target.closest('#rail-toggle')) { const r = $('#rail'), b = $('#rail-toggle'); const o = !r.classList.contains('open'); r.classList.toggle('open', o); b.setAttribute('aria-expanded', String(o)); return; }
-    if (ev.target.closest('#clear-filters')) { state.sel = {}; state.q = ''; $('#search').value = ''; render(); return; }
+    if (ev.target.closest('#clear-filters')) { state.sel = {}; state.q = ''; $('#search').value = ''; state.openFacet = null; render(); return; }
+    const off = ev.target.closest('[data-off-key]');
+    if (off) { const s2 = state.sel[off.dataset.offKey]; if (s2) { s2.delete(off.dataset.offValue); if (!s2.size) delete state.sel[off.dataset.offKey]; } render(); return; }
+    if (!ev.target.closest('#filters') && state.openFacet) { state.openFacet = null; for (const d of $$('#filters .f-drop')) d.open = false; }
   });
   document.addEventListener('change', (ev) => {
     const cb = ev.target.closest('#filters input[type=checkbox]');
@@ -389,6 +417,7 @@
   let qt; $('#search').addEventListener('input', (ev) => { clearTimeout(qt); qt = setTimeout(() => { state.q = ev.target.value.trim().toLowerCase(); render(); }, 120); });
   document.addEventListener('keydown', (ev) => {
     if (ev.key === 'Escape' && !$('#panel').hidden) { closePanel(); return; }
+    if (ev.key === 'Escape' && state.openFacet) { const d = $(`#filters .f-drop[data-key="${CSS.escape(state.openFacet)}"]`); state.openFacet = null; if (d) { d.open = false; d.querySelector('summary').focus(); } return; }
     if (ev.key === 'Tab' && !$('#panel').hidden) {
       const f = $$('#panel a[href], #panel button, #panel summary, #panel [tabindex="0"]').filter((el) => el.offsetParent !== null);
       if (!f.length) return; const first = f[0], last = f[f.length - 1];
@@ -397,7 +426,12 @@
     }
     if ((ev.key === 'Enter' || ev.key === ' ') && ev.target.closest && ev.target.closest('.chart-block .row')) { ev.preventDefault(); ev.target.closest('.row').dispatchEvent(new MouseEvent('click', { bubbles: true })); }
   });
-  document.addEventListener('toggle', (ev) => { const d = ev.target && ev.target.closest && ev.target.closest('#filters details'); if (d && d.dataset.key && ev.isTrusted) state.open[d.dataset.key] = d.open; }, true);
+  document.addEventListener('toggle', (ev) => {
+    const d = ev.target && ev.target.closest && ev.target.closest('#filters .f-drop');
+    if (!d || !d.dataset.key || !ev.isTrusted) return;
+    if (d.open) { state.openFacet = d.dataset.key; for (const o of $$('#filters .f-drop')) if (o !== d) o.open = false; placePopover(d); }
+    else if (state.openFacet === d.dataset.key) state.openFacet = null;
+  }, true);
   document.addEventListener('mousemove', (ev) => { const t = ev.target.closest('[data-tip]'); if (t) tip(t.dataset.tip, ev.clientX, ev.clientY); else hideTip(); });
   document.addEventListener('focusin', (ev) => { const t = ev.target.closest && ev.target.closest('[data-tip]'); if (t) { const r = t.getBoundingClientRect(); tip(t.dataset.tip, r.left + r.width / 2, r.top); } else hideTip(); });
   document.addEventListener('mouseleave', hideTip);

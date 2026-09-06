@@ -36,13 +36,15 @@ const server = http.createServer((req, res) => {
   await d.goto(base + 'index.html#products', { waitUntil: 'load' }); await d.waitForTimeout(600);
   const nCards = await d.locator('#cards .card').count();
   expect(nCards === data.families.length, `cards ${nCards} != families ${data.families.length}`);
-  await d.screenshot({ path: path.join(shots, 'products-desktop.png'), fullPage: false });
-  // filter interaction: first category checkbox
-  const firstCb = d.locator('#filters input[type=checkbox]').first();
-  await firstCb.check(); await d.waitForTimeout(150);
+  // filter interaction: open a facet, tick a value, clear it again
+  await d.locator('#filters .f-drop[data-key=category] summary').click(); await d.waitForTimeout(150);
+  const firstCb = d.locator('#filters .f-drop[data-key=category] input[type=checkbox]').first();
+  await firstCb.check(); await d.waitForTimeout(200);
   const nFiltered = await d.locator('#cards .card').count();
   expect(nFiltered > 0 && nFiltered <= nCards, `filter yields ${nFiltered}`);
-  await d.locator('#clear-filters').click(); await d.waitForTimeout(150);
+  await d.keyboard.press('Escape'); await d.waitForTimeout(150);
+  expect((await d.locator('#filters .f-drop[open]').count()) === 0, 'Escape closes the open facet');
+  await d.locator('#active-filters .pill.clear').click(); await d.waitForTimeout(200);
   expect((await d.locator('#cards .card').count()) === nCards, 'clear filters restores all');
   // search
   await d.fill('#search', 'ultromics'); await d.waitForTimeout(300);
@@ -57,6 +59,19 @@ const server = http.createServer((req, res) => {
   await d.keyboard.press('Escape'); await d.waitForTimeout(150);
   expect(await d.locator('#panel').isHidden(), 'Escape closes panel');
   // table view
+  // filter bar
+  expect((await d.locator('#filters .f-drop').count()) === 8, 'eight facet dropdowns');
+  await d.locator('#filters .f-drop[data-key=mode] summary').click(); await d.waitForTimeout(150);
+  await d.locator('#filters input[data-key=mode][value=TEE]').check(); await d.waitForTimeout(250);
+  const nMode = await d.locator('#cards .card').count();
+  expect(nMode > 0 && nMode < nCards, `imaging mode filter narrows list (${nMode})`);
+  expect((await d.locator('#active-filters .pill[data-off-key=mode]').count()) === 1, 'active filter pill shown');
+  await d.keyboard.press('Escape'); await d.waitForTimeout(150);
+  await d.locator('#active-filters .pill[data-off-key=mode]').click(); await d.waitForTimeout(250);
+  expect((await d.locator('#cards .card').count()) === nCards, 'removing the pill restores the list');
+  await d.keyboard.press('Escape');
+  await d.screenshot({ path: path.join(shots, 'products-desktop.png'), fullPage: false });
+
   await d.locator('.view-toggle button[data-view=table]').click(); await d.waitForTimeout(150);
   expect((await d.locator('#table tbody tr').count()) === nCards, 'table rows match');
   expect((await d.locator('#cards').evaluate((el) => el.offsetHeight)) === 0, 'card grid hidden in table view');
@@ -89,10 +104,21 @@ const server = http.createServer((req, res) => {
   const m = await page({ width: 390, height: 844 });
   await m.goto(base + 'index.html#products', { waitUntil: 'load' }); await m.waitForTimeout(600);
   expect((await m.locator('#cards .card').count()) === nCards, 'mobile cards');
-  expect(await m.locator('#rail').isHidden(), 'rail hidden on mobile by default');
-  await m.locator('#rail-toggle').click(); await m.waitForTimeout(100);
-  expect(!(await m.locator('#rail').isHidden()), 'rail opens on mobile');
-  await m.locator('#rail-toggle').click();
+  expect((await m.locator('#filters .f-drop').count()) > 0, 'filter bar present on mobile');
+  await m.locator('#filters .f-drop[data-key=mode] summary').click(); await m.waitForTimeout(200);
+  expect(!(await m.locator('#filters .f-drop[data-key=mode] .f-pop').isHidden()), 'mode filter opens on mobile');
+  expect(await m.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1), 'no horizontal scroll with a facet open (mobile)');
+  expect(await m.evaluate(() => { const r = document.querySelector('.f-drop[open] .f-pop').getBoundingClientRect(); return r.left >= 0 && r.right <= document.documentElement.clientWidth + 1; }), 'open facet panel stays inside the viewport (mobile)');
+  await m.locator('#filters .f-drop[data-key=year] summary').click(); await m.waitForTimeout(200);
+  expect(await m.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1), 'no horizontal scroll with the last facet open (mobile)');
+  expect((await m.locator('#filters .f-drop[open]').count()) === 1, 'only one facet open at a time');
+  await m.locator('#filters .f-drop[data-key=mode] summary').click(); await m.waitForTimeout(200);
+  await m.locator('#filters input[data-key=mode][value=TEE]').check(); await m.waitForTimeout(250);
+  const nTee = await m.locator('#cards .card').count();
+  expect(nTee > 0 && nTee < nCards, `mobile filter narrows list (${nTee})`);
+  await m.keyboard.press('Escape'); await m.waitForTimeout(150);
+  await m.locator('#active-filters .pill.clear').click(); await m.waitForTimeout(250);
+  expect((await m.locator('#cards .card').count()) === nCards, 'mobile clear all restores list');
   const overM = await m.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
   expect(!overM, 'no horizontal page scroll (mobile)');
   await m.screenshot({ path: path.join(shots, 'products-mobile.png'), fullPage: false });

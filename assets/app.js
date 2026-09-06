@@ -140,7 +140,6 @@
     if (f.n_other_claims) out.push(`<span class="chip">${f.n_other_claims} published/company metric${f.n_other_claims > 1 ? 's' : ''}</span>`);
     if (f.n_papers) out.push(`<span class="chip on">${f.n_papers_resolved}/${f.n_papers} paper${f.n_papers > 1 ? 's' : ''} resolved</span>`);
     if (f.training_data && f.training_data.disclosed) out.push('<span class="chip on">Training n disclosed</span>');
-    if (f.declared_interest) out.push('<span class="chip coi">Declared interest</span>');
     if (f.pathways.some((p) => /PCCP/.test(p))) out.push('<span class="chip flag">PCCP</span>');
     if (f.pathways.includes('De Novo')) out.push('<span class="chip flag">De Novo</span>');
     const seenChip = new Set();
@@ -178,7 +177,7 @@
     const host = $('#table');
     if (!list.length) { host.innerHTML = '<p class="empty">No AI products match.</p>'; return; }
     host.innerHTML = `<table><thead><tr><th>AI product</th><th>Company</th><th>Function</th><th>Latest clearance</th><th class="r">Clearances</th><th>Pathway</th><th>Code</th><th class="r">FDA summary metrics</th><th class="r">Papers</th><th>Training set</th></tr></thead><tbody>${list.map((f) => `
-      <tr><td><button class="link" type="button" data-open="${esc(f.id)}" title="${esc(f.product_name)}">${esc(shortName(f.product_name))}</button>${f.declared_interest ? ' <span class="coi-mark" data-tip="' + esc('<b>Declared interest</b>' + f.declared_interest) + '">declared interest</span>' : ''}</td><td>${esc(companyShort(f.company))}</td><td>${f.research_pending ? 'Research pending' : esc(CAT[f.category] || f.category)}</td><td class="num">${fmtDate(f.latest_cleared)}</td><td class="r num">${f.n_clearances}</td><td>${esc(f.pathways.join(', '))}</td><td>${esc(f.product_codes.join(', '))}</td><td class="r num">${f.n_fda_claims}</td><td class="r num">${f.n_papers_resolved}/${f.n_papers}</td><td class="num">${trainingCell(f.training_data)}</td></tr>`).join('')}</tbody></table>`;
+      <tr><td><button class="link" type="button" data-open="${esc(f.id)}" title="${esc(f.product_name)}">${esc(shortName(f.product_name))}</button></td><td>${esc(companyShort(f.company))}</td><td>${f.research_pending ? 'Research pending' : esc(CAT[f.category] || f.category)}</td><td class="num">${fmtDate(f.latest_cleared)}</td><td class="r num">${f.n_clearances}</td><td>${esc(f.pathways.join(', '))}</td><td>${esc(f.product_codes.join(', '))}</td><td class="r num">${f.n_fda_claims}</td><td class="r num">${f.n_papers_resolved}/${f.n_papers}</td><td class="num">${trainingCell(f.training_data)}</td></tr>`).join('')}</tbody></table>`;
   }
 
   // ---------- detail panel ----------
@@ -233,7 +232,6 @@
         <p class="co">${esc(f.company)}</p>
         <div class="panel-links">${links}</div>
         <div class="chips">${panelChips(f)}</div>
-        ${f.declared_interest ? `<p class="coi-note" role="note"><b>Declared interest</b> ${esc(f.declared_interest)}</p>` : ''}
         ${f.summary ? `<p>${esc(f.summary)}</p>` : ''}
       </div>
       ${f.indications_for_use_quote || f.intended_use_quote ? `<section class="psec"><h3>Indications for use <small>FDA summary</small></h3><blockquote class="q">${esc(f.indications_for_use_quote || f.intended_use_quote)}</blockquote></section>` : ''}
@@ -324,16 +322,23 @@
     // has to say so rather than implying one common denominator.
     const mixNote = nExtracts > 1 ? ` Pooled across ${nExtracts} registry extracts (${esc(usedExtracts.sort().join(', '))}); open a product for the one it used.` : '';
     const lv = mk(['lvef', 'comprehensive'], 'lvef_mae').sort((a, b) => a.value - b.value);
-    const det = mk(['detection', 'hfpef', 'amyloid'], 'auc').sort((a, b) => b.value - a.value);
     const acq = mk(['acquisition'], 'diag_quality').sort((a, b) => b.value - a.value);
     const strain = mk(['strain'], 'gls_icc').sort((a, b) => b.value - a.value);
     const qual = mk(['quality'], 'kappa').sort((a, b) => b.value - a.value);
+    // One chart per detection task. An AUC for a 1.2% prevalence problem and one for an 11.4%
+    // problem are not the same measurement, so they are never plotted on shared axes.
+    // A task with fewer than MIN_N cleared products is not charted at all.
+    const MIN_N = R.min_products_per_chart || 2;
+    const tasks = (R.detection_tasks || []).map((t) => ({ ...t, rows: mk([t.id], 'auc').sort((a, b) => b.value - a.value) }));
+    const charted = tasks.filter((t) => t.rows.length >= MIN_N);
+    const thin = tasks.filter((t) => t.rows.length && t.rows.length < MIN_N);
     $('#reg-charts').innerHTML = `
       <section class="chart-block wide"><h2>LVEF agreement with the registry report</h2><p class="chart-sub">Mean absolute error vs reported LVEF, in EF points. Lower is better. Dot = estimate, bar = 95% CI.${capNote(lv)}${mixNote}</p>${dotRangeChart(cap(lv), { unit: '', decimals: 1, wide: true, aria: 'LVEF mean absolute error by product', domain: [0, Math.max(10, ...cap(lv).map((r) => r.high)) * 1.05] })}</section>
-      <section class="chart-block"><h2>Detection: area under the ROC curve</h2><p class="chart-sub">Severe aortic stenosis, HFpEF, or cardiac amyloidosis vs the registry reference, higher is better.${capNote(det)}${mixNote}</p>${dotRangeChart(cap(det), { unit: '', decimals: 2, aria: 'AUC by product', domain: [0.5, 1], refLine: 0.5 })}</section>
-      <section class="chart-block"><h2>Acquisition guidance: diagnostic-quality studies</h2><p class="chart-sub">Share of guided acquisitions graded diagnostic by the reading physician.${capNote(acq)}${mixNote}</p>${dotRangeChart(cap(acq), { unit: '%', decimals: 1, aria: 'Diagnostic quality by product', domain: [50, 100] })}</section>
-      ${strain.length ? `<section class="chart-block"><h2>Strain: ICC vs reported GLS</h2><p class="chart-sub">Where the registry report contains GLS.${capNote(strain)}</p>${dotRangeChart(cap(strain), { unit: '', decimals: 2, aria: 'GLS ICC by product', domain: [0.5, 1] })}</section>` : ''}
-      ${qual.length ? `<section class="chart-block"><h2>Image quality: agreement with the sonographer grade</h2><p class="chart-sub">Cohen’s κ vs the registry image-quality field, higher is better.${capNote(qual)}</p>${dotRangeChart(cap(qual), { unit: '', decimals: 2, aria: 'Image-quality kappa by product', domain: [0, 1] })}</section>` : ''}`;
+      ${charted.map((t) => `<section class="chart-block"><h2>Detection: ${esc(t.label.toLowerCase())}</h2><p class="chart-sub">Area under the ROC curve against ${esc(t.reference.charAt(0).toLowerCase() + t.reference.slice(1))}. Higher is better. ${t.rows.length} cleared product${t.rows.length === 1 ? '' : 's'} scored on this task; registry prevalence ${t.prevalence}%.${capNote(t.rows)}${mixNote}</p>${dotRangeChart(cap(t.rows), { unit: '', decimals: 2, aria: `AUC by product, ${t.label}`, domain: [0.5, 1], refLine: 0.5 })}</section>`).join('')}
+      ${thin.length ? `<section class="chart-block"><h2>Detection tasks not charted</h2><p class="chart-sub">A task needs at least ${MIN_N} cleared products before a comparison chart means anything. These have fewer, so their results appear only on the product record.</p><ul class="thin-tasks">${thin.map((t) => `<li><b>${esc(t.label)}</b><span>${t.rows.length} cleared product${t.rows.length === 1 ? '' : 's'} · ${esc(t.reference)}</span></li>`).join('')}</ul></section>` : ''}
+      ${acq.length >= MIN_N ? `<section class="chart-block"><h2>Acquisition guidance: diagnostic-quality studies</h2><p class="chart-sub">Share of guided acquisitions graded diagnostic by the reading physician.${capNote(acq)}${mixNote}</p>${dotRangeChart(cap(acq), { unit: '%', decimals: 1, aria: 'Diagnostic quality by product', domain: [50, 100] })}</section>` : ''}
+      ${strain.length >= MIN_N ? `<section class="chart-block"><h2>Strain: ICC vs reported GLS</h2><p class="chart-sub">Where the registry report contains GLS.${capNote(strain)}</p>${dotRangeChart(cap(strain), { unit: '', decimals: 2, aria: 'GLS ICC by product', domain: [0.5, 1] })}</section>` : ''}
+      ${qual.length >= MIN_N ? `<section class="chart-block"><h2>Image quality: agreement with the sonographer grade</h2><p class="chart-sub">Cohen’s κ vs the registry image-quality field, higher is better.${capNote(qual)}</p>${dotRangeChart(cap(qual), { unit: '', decimals: 2, aria: 'Image-quality kappa by product', domain: [0, 1] })}</section>` : ''}`;
 
     const ex = $('#reg-extract');
     if (ex) {
@@ -365,7 +370,7 @@
     let t = mx === mn ? 0.5 : (v - mn) / (mx - mn); if (better === 'lower') t = 1 - t; if (better === 'zero') t = 1 - Math.min(1, Math.abs(v) / Math.max(Math.abs(mn), Math.abs(mx), 1e-9));
     const step = 1 + Math.round(t * 6); return { step, hi: step >= 5 };
   }
-  const EVAL_LABEL = { lvef: 'LV function', comprehensive: 'Multi-parameter measurement', strain: 'Strain', detection: 'Disease detection', hfpef: 'Heart failure indicator', amyloid: 'Cardiac amyloidosis indicator', acquisition: 'Acquisition guidance', quality: 'Image quality' };
+  const EVAL_LABEL = { lvef: 'LV function', comprehensive: 'Multi-parameter measurement', strain: 'Strain', as: 'Severe aortic stenosis', hfpef: 'Heart failure indicator', amyloid: 'Cardiac amyloidosis indicator', cad: 'Coronary artery disease on stress echo', 'other-detection': 'Disease detection', acquisition: 'Acquisition guidance', quality: 'Image quality' };
   function renderRegDetail() {
     const host = $('#reg-detail'); const e = sims.find((x) => x.id === state.regSel);
     if (!e) { host.innerHTML = ''; return; }

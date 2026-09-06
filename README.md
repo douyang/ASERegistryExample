@@ -114,15 +114,17 @@ Design rules the code enforces:
 - **A site that cannot export per-element AI provenance reads as not submitted, never as zero**, which would be indistinguishable from a lab that uses no AI. Two of the eight sites are generated that way on purpose, so the path is exercised.
 - **Reference values are illustrative placeholders.** No measurement, guideline or published distribution sets them.
 
+## Detection is scored one task at a time
+
+Severe aortic stenosis, cardiac amyloidosis, HFpEF and coronary disease on stress echo are different detection problems with different registry prevalences (1.2% to 11.4%) and different references. A pooled ROC curve across them compares nothing, so each task gets its own chart.
+
+`quality.detection_tasks` in `data/registry.js` names each task, its reference and its prevalence. `min_products_per_chart` (2) is the threshold: a task is charted only where at least that many cleared products address it, and the rest are named under **Detection tasks not charted** with their product count. The same threshold now applies to every chart on the tab, so a single-product comparison chart is never drawn.
+
+Task assignment happens in `evalType()` in `scripts/gen-registry.mjs`. Order matters there: `aortic stenosis` is tested before the coronary terms, because `cadx` is the FDA product-code term for computer-assisted diagnostic software and sits on the AS products too — matching it as a task label put four AS products in the coronary bucket.
+
 ## AI benchmarking is one-off, not live
 
 Benchmarking runs are point-in-time analyses of a dated, frozen registry extract, so there is no month-to-month view. Every evaluation states which extract it used (`dataset`: label, extract date, study period, extract size, inclusion rule) and when it ran (`analysis`: type, run date, protocol version). Products are scored against different extracts, so the charts either say which extracts they pool or are pinned to one with the **Dataset** picker.
-
-## Declared interests
-
-`scripts/build-data.mjs` carries a `DECLARED_INTERESTS` map keyed by family id, surfaced as `declared_interest` on the family record. The catalog's maintainer, registry chair David Ouyang, co-founded InVision Medical Technology and is the openFDA contact on both of its clearances (K232331, K243866), and both products are in the catalog. The disclosure renders as a chip on the card, a marked cell in the table, a note in the detail panel, and a section in Methods. `validate.cjs` asserts every flagged product shows the chip and that the panel note names the interest.
-
-Add an entry to that map whenever a maintainer or registry officer holds an interest in a listed product. A catalog that rates products cannot be silent about an interest in one of them.
 
 ## Demo wash
 

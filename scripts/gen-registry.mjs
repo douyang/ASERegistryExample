@@ -168,15 +168,15 @@ products.sort((a, b) => a.label.localeCompare(b.label));
 // registry reports as live (REGISTRY.quality_metrics); the numbers under them are generated.
 // Generated after the product loop so the product draws above keep the same values for a given seed.
 const QC_METRICS = [
-  { id: 'tat', section: 'Timeliness', label: 'Report turnaround time', short: 'Turnaround time', unit: 'h', direction: 'lower', num: 'Hours from study to finalized report (median)', denom: 'All finalized studies', lo: 3, hi: 34, benchmark: 24 },
-  { id: 'study_completeness', section: 'Study and report completeness', label: 'Study completeness', short: 'Study completeness', unit: '%', direction: 'higher', num: 'Studies with all protocol views acquired', denom: 'All studies', lo: 76, hi: 98, benchmark: 90 },
-  { id: 'report_completeness', section: 'Study and report completeness', label: 'Report completeness', short: 'Report completeness', unit: '%', direction: 'higher', num: 'Reports with all required fields populated', denom: 'All finalized reports', lo: 74, hi: 99, benchmark: 90 },
-  { id: 'quant_completeness', section: 'Study and report completeness', label: 'Quantitative report completeness', short: 'Quantitative completeness', unit: '%', direction: 'higher', num: 'Reports with all required measurements', denom: 'All finalized reports', lo: 62, hi: 95, benchmark: 85 },
-  { id: 'qual_completeness', section: 'Study and report completeness', label: 'Qualitative report completeness', short: 'Qualitative completeness', unit: '%', direction: 'higher', num: 'Reports with all required descriptive fields', denom: 'All finalized reports', lo: 70, hi: 97, benchmark: 88 },
-  { id: 'gradients', section: 'Valvular disease reporting', label: 'Mean and peak gradients for valvular disease', short: 'Valve gradients', unit: '%', direction: 'higher', num: 'Studies reporting mean and peak gradients', denom: 'Studies with valvular disease', lo: 58, hi: 96, benchmark: 85 },
-  { id: 'valve_areas', section: 'Valvular disease reporting', label: 'Valve areas for stenotic lesions', short: 'Valve areas', unit: '%', direction: 'higher', num: 'Studies reporting a valve area', denom: 'Studies with a stenotic lesion', lo: 52, hi: 94, benchmark: 80 },
-  { id: 'regurg', section: 'Valvular disease reporting', label: 'Regurgitation severity reporting', short: 'Regurgitation severity', unit: '%', direction: 'higher', num: 'Studies grading regurgitation severity', denom: 'Studies with regurgitation', lo: 66, hi: 98, benchmark: 90 },
-  { id: 'strain_util', section: 'Advanced imaging utilization', label: 'Strain utilization for chemotherapy, heart failure, or cardiomyopathy', short: 'Strain utilization', unit: '%', direction: 'higher', num: 'Eligible studies reporting strain', denom: 'Eligible chemotherapy, HF or cardiomyopathy studies', lo: 14, hi: 78, benchmark: 50 },
+  { id: 'tat', code: 'TAT', section: 'Timeliness', label: 'Report turnaround time', short: 'Turnaround time', unit: 'h', direction: 'lower', num: 'Hours from study to finalized report (median)', denom: 'All finalized studies', lo: 3, hi: 34, benchmark: 24 },
+  { id: 'study_completeness', code: 'STU', section: 'Study and report completeness', label: 'Study completeness', short: 'Study completeness', unit: '%', direction: 'higher', num: 'Studies with all protocol views acquired', denom: 'All studies', lo: 76, hi: 98, benchmark: 90 },
+  { id: 'report_completeness', code: 'RPT', section: 'Study and report completeness', label: 'Report completeness', short: 'Report completeness', unit: '%', direction: 'higher', num: 'Reports with all required fields populated', denom: 'All finalized reports', lo: 74, hi: 99, benchmark: 90 },
+  { id: 'quant_completeness', code: 'QNT', section: 'Study and report completeness', label: 'Quantitative report completeness', short: 'Quantitative completeness', unit: '%', direction: 'higher', num: 'Reports with all required measurements', denom: 'All finalized reports', lo: 62, hi: 95, benchmark: 85 },
+  { id: 'qual_completeness', code: 'QAL', section: 'Study and report completeness', label: 'Qualitative report completeness', short: 'Qualitative completeness', unit: '%', direction: 'higher', num: 'Reports with all required descriptive fields', denom: 'All finalized reports', lo: 70, hi: 97, benchmark: 88 },
+  { id: 'gradients', code: 'GRD', section: 'Valvular disease reporting', label: 'Mean and peak gradients for valvular disease', short: 'Valve gradients', unit: '%', direction: 'higher', num: 'Studies reporting mean and peak gradients', denom: 'Studies with valvular disease', lo: 58, hi: 96, benchmark: 85 },
+  { id: 'valve_areas', code: 'ARE', section: 'Valvular disease reporting', label: 'Valve areas for stenotic lesions', short: 'Valve areas', unit: '%', direction: 'higher', num: 'Studies reporting a valve area', denom: 'Studies with a stenotic lesion', lo: 52, hi: 94, benchmark: 80 },
+  { id: 'regurg', code: 'REG', section: 'Valvular disease reporting', label: 'Regurgitation severity reporting', short: 'Regurgitation severity', unit: '%', direction: 'higher', num: 'Studies grading regurgitation severity', denom: 'Studies with regurgitation', lo: 66, hi: 98, benchmark: 90 },
+  { id: 'strain_util', code: 'STR', section: 'Advanced imaging utilization', label: 'Strain utilization for chemotherapy, heart failure, or cardiomyopathy', short: 'Strain utilization', unit: '%', direction: 'higher', num: 'Eligible studies reporting strain', denom: 'Eligible chemotherapy, HF or cardiomyopathy studies', lo: 14, hi: 78, benchmark: 50 },
 ];
 const QUARTERS = [...new Set(MONTHS.map((m) => { const [y, mm] = m.split('-'); return `${y}-Q${Math.ceil(Number(mm) / 3)}`; }))];
 const SETTINGS = ['Academic medical center', 'Community hospital', 'Integrated health system', 'Outpatient cardiology network'];
@@ -187,7 +187,7 @@ const siteSkill = new Map(SITES.map((s) => [s, U(-1, 1)]));
 const qcSites = SITES.map((name, i) => {
   const skill = siteSkill.get(name);
   const nStudies = Math.round(U(9000, 68000) / 100) * 100;
-  const metrics = QC_METRICS.map((m) => {
+  const metrics = QC_METRICS.map((m, mi) => {
     const span = m.hi - m.lo;
     const good = m.direction === 'lower' ? m.lo + span * (0.5 - skill * 0.32) : m.lo + span * (0.5 + skill * 0.32);
     const value = R(Math.min(m.hi, Math.max(m.lo, good + U(-1, 1) * span * 0.13)), m.unit === 'h' ? 1 : 1);
@@ -195,7 +195,10 @@ const qcSites = SITES.map((name, i) => {
     // Every interval carries its own numerator and denominator, so the metric table can show the
     // value over N / D the way the reference registry report does.
     const monthly = MONTHS.map((mo, k) => {
-      const v = R(Math.min(m.hi, Math.max(m.lo, value * (1 + Math.sin((k + i) / 3.4) * 0.035 + U(-0.035, 0.035)))), 1);
+      // Each metric gets its own phase and period. A single site-indexed wave would move all nine
+      // metrics in lockstep, which reads as a site-wide trend that nothing in the model produces.
+      const wave = Math.sin((k + i * 1.7 + mi * 2.9) / (2.6 + (mi % 4) * 0.7)) * (0.02 + (mi % 3) * 0.012);
+      const v = R(Math.min(m.hi, Math.max(m.lo, value * (1 + wave + U(-0.035, 0.035)))), 1);
       const d = Math.round(nDenom / MONTHS.length * U(0.72, 1.28));
       return { month: mo, value: v, d, n: m.unit === '%' ? Math.round(d * v / 100) : null };
     });

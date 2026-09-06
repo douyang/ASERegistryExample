@@ -95,6 +95,16 @@ const server = http.createServer((req, res) => {
   await d.goto(base + 'index.html#methods', { waitUntil: 'load' }); await d.waitForTimeout(400);
   expect((await d.locator('#excluded tr').count()) > 0, 'excluded table populated');
   expect((await d.locator('#product-codes tr').count()) > 0, 'product codes populated');
+  // views: screenshot figures that link to the live site
+  await d.locator('#figures').scrollIntoViewIfNeeded(); await d.waitForTimeout(700);
+  const nFigs = await d.locator('#figures a.fig').count();
+  expect(nFigs > 0, `figures ${nFigs}`);
+  expect(await d.evaluate(() => Array.from(document.querySelectorAll('#figures img')).every((i) => i.complete && i.naturalWidth > 0)), 'every figure image decodes');
+  expect(await d.evaluate(() => Array.from(document.querySelectorAll('#figures a.fig')).every((a) => a.href.startsWith('https://douyang.github.io/ASERegistryExample/#'))), 'every figure links to the live site at a hash route');
+  const figHashes = await d.evaluate(() => Array.from(document.querySelectorAll('#figures a.fig')).map((a) => a.href.split('#')[1].split('/')[0]));
+  expect(figHashes.every((h) => ['products', 'registry', 'quality', 'methods', 'product'].includes(h)), `figure hashes are real routes (${figHashes.join(',')})`);
+  const figIds = await d.evaluate(() => Array.from(document.querySelectorAll('#figures a.fig')).map((a) => a.href.split('#')[1]).filter((h) => h.startsWith('product/')).map((h) => decodeURIComponent(h.slice(8))));
+  expect(figIds.every((id) => data.families.some((f) => f.id === id)), `every product figure id exists in the catalog (${figIds.join(',')})`);
   await d.screenshot({ path: path.join(shots, 'methods-desktop.png'), fullPage: false });
   // horizontal overflow check
   const over = await d.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
@@ -182,6 +192,16 @@ const server = http.createServer((req, res) => {
   });
   expect(csvHead && csvHead.startsWith('"Metric","Unit","Comparison","Benchmark"'), 'CSV export produces a header row');
   expect(await d.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1), 'no horizontal page scroll (quality desktop)');
+  // sites at a glance + per-site permalinks
+  const nSiteCards = await d.locator('#qc-site-cards a.site-card').count();
+  expect(nSiteCards === 8, `site cards ${nSiteCards}`);
+  expect((await d.locator('#qc-site-cards .tile').count()) === nSiteCards * 9, 'nine metric tiles on every site card');
+  const tileCodes = await d.evaluate(() => Array.from(document.querySelectorAll('#qc-site-cards a.site-card')[0].querySelectorAll('.tile i')).map((i) => i.textContent));
+  expect(new Set(tileCodes).size === tileCodes.length, `tile codes are unique (${tileCodes.join(',')})`);
+  await d.locator('#qc-site-cards a.site-card').nth(4).click(); await d.waitForTimeout(400);
+  expect((await d.evaluate(() => location.hash)) === '#quality/s5', 'site card deep-links to its scorecard');
+  await d.locator('#qc-site-select').selectOption('s2'); await d.waitForTimeout(300);
+  expect((await d.evaluate(() => location.hash)) === '#quality/s2', 'site selection writes a copyable permalink');
   await d.screenshot({ path: path.join(shots, 'quality-desktop.png'), fullPage: false });
   await d.goto(base + 'index.html#products', { waitUntil: 'load' }); await d.waitForTimeout(400);
   expect((await d.locator('#demo-wash').isHidden()) && (await d.locator('#demo-badge').isHidden()), 'demo wash hidden on the products tab');

@@ -15,14 +15,14 @@ const put = (marker, content) => {
   html = html.replace(marker, () => content);
 };
 put('<link rel="stylesheet" href="assets/style.css">', `<style>\n${read('assets/style.css')}\n</style>`);
-for (const src of ['data/products.js', 'data/registry.js', 'assets/app.js']) put(`<script src="${src}"></script>`, inlineScript(src));
+for (const src of ['data/thumbs.js', 'data/products.js', 'data/registry.js', 'assets/app.js']) put(`<script src="${src}"></script>`, inlineScript(src));
 for (const src of ['assets/app.js', 'assets/style.css']) {
   const body = read(src);
   const marker = body.slice(0, 40);
   if (!html.includes(marker)) throw new Error(`inlined ${src} does not appear verbatim in the bundle`);
 }
 if (!html.includes('const $$ = ')) throw new Error('bundle mangled: $$ helper missing');
-if (/src="(assets|data)\//.test(html) || /href="assets\//.test(html)) throw new Error('unresolved local reference remains');
+if (/src="(assets|data|docs)\//.test(html) || /href="(assets|docs)\//.test(html)) throw new Error('unresolved local reference remains');
 fs.mkdirSync(path.join(root, 'dist'), { recursive: true });
 const out = path.join(root, 'dist', 'ai-echo-central.html');
 fs.writeFileSync(out, html);

@@ -24,7 +24,7 @@
       <span class="brand-text"><span class="brand-name">AI Echo Central</span><span class="brand-sub">American Society of Echocardiography · ImageGuideEcho Registry</span></span>
     </a>
     <nav class="tabs" aria-label="Sections">
-      <a href="#products" data-tab="products" aria-current="page">Products</a>
+      <a href="#products" data-tab="products" aria-current="page">AI Products</a>
       <a href="#registry" data-tab="registry"><span class="short">AI Bench</span><span class="long">AI Benchmarking</span></a>
       <a href="#quality" data-tab="quality"><span class="short">Site QC</span><span class="long">Site Quality</span></a>
       <a href="#methods" data-tab="methods">Methods</a>
@@ -51,7 +51,7 @@
             <select id="sort">
               <option value="latest">Latest clearance</option>
               <option value="first">First clearance</option>
-              <option value="name">Product A–Z</option>
+              <option value="name">AI product A–Z</option>
               <option value="company">Company A–Z</option>
               <option value="metrics">Most FDA metrics</option>
               <option value="papers">Most publications</option>
@@ -113,6 +113,12 @@
       <b>Simulated data</b>
       <span>Every value on this tab is generated from a fixed seed, not measured. The nine metrics are the nine the registry reports as live; the numbers under them are not. Sites are labelled anonymously so no simulated result is attached to a real lab.</span>
     </div>
+
+    <section class="site-cards-wrap" aria-labelledby="qc-cards-h">
+      <h2 id="qc-cards-h">Sites at a glance</h2>
+      <p class="chart-sub">One card per enrolled site. Each tile is a quality metric, coloured by distance from its benchmark: blue better, red worse, grey within 1%. Open a card for the full scorecard.</p>
+      <div id="qc-site-cards" class="site-cards"></div>
+    </section>
 
     <details class="params" id="qc-params" open>
       <summary><span>Metric parameters</span><span class="params-sum" id="qc-params-sum"></span></summary>
@@ -218,6 +224,9 @@
       <h2>Build</h2>
       <p id="build-info"></p>
       <ul class="warnlist" id="build-warnings"></ul>
+      <h2 id="figures-h">Views</h2>
+      <p>Each thumbnail is a capture of this site, taken from the running page so the demonstration markings are in the image itself. Open one for the interactive version.</p>
+      <div id="figures" class="figures"></div>
       <h2>Update procedure</h2>
       <ol>
         <li><code>node scripts/refresh-openfda.mjs</code> re-pulls openFDA records for every known submission and prints new AI-coded cardiac ultrasound clearances to review.</li>
@@ -245,6 +254,7 @@
   <span id="footer-build"></span>
 </footer>
 
+<script src="data/thumbs.js"></script>
 <script src="data/products.js"></script>
 <script src="data/registry.js"></script>
 <script src="assets/app.js"></script>

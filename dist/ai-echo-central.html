@@ -501,11 +501,12 @@ table.scorecard tr.na td { color: var(--ink-3); }
 .qc-cell.nd, .sc-tiles .tile.nd, .pill-dv.nd { outline: 1px dashed var(--line-2); outline-offset: -1px; }
 .qc-key .sw.nd { border-radius: 2px; }
 
-/* declared interest: the catalog maintainer holds an interest in two of the products it lists */
-.chip.coi { border-color: var(--placeholder-line); background: var(--placeholder-bg); color: var(--placeholder-ink); font-weight: 600; }
-.coi-note { border: 1px solid var(--placeholder-line); background: var(--placeholder-bg); color: var(--placeholder-ink); border-radius: var(--radius); padding: 10px 12px; font-size: 13.5px; }
-.coi-note b { display: block; font-family: var(--font-display); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
-.coi-mark { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 3px; background: var(--placeholder-bg); color: var(--placeholder-ink); border: 1px solid var(--placeholder-line); white-space: nowrap; cursor: default; }
+
+/* detection tasks below the charting threshold */
+.thin-tasks { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 8px; }
+.thin-tasks li { display: grid; gap: 2px; font-size: 13.5px; border-left: 3px solid var(--line-2); padding-left: 10px; }
+.thin-tasks b { font-family: var(--font-display); color: var(--navy); font-size: 14px; }
+.thin-tasks span { color: var(--ink-3); font-size: 12.5px; }
 
 </style>
 </head>
@@ -712,9 +713,6 @@ table.scorecard tr.na td { color: var(--ink-3); }
           <tr><td><span class="vlevel unverified">Unverified</span></td><td>Reported, not confirmed against a source.</td></tr>
         </tbody>
       </table></div>
-      <h2>Declared interests</h2>
-      <p>The maintainer of this catalog, ASE ImageGuideEcho Registry chair David Ouyang, co-founded InVision Medical Technology and is the openFDA contact on both of its clearances (K232331, K243866). Both products are listed in this catalog and both carry the disclosure on their record. A catalog that rates products cannot be silent about an interest in two of them.</p>
-      <p>The same disclosure governs the benchmarking design: any evaluation that scores a product in which the registry’s officers hold an interest has to be run and reported by people who do not.</p>
       <h2>Site quality metrics</h2>
       <p>The Site Quality tab reports the nine quality metrics the registry lists as live, for every enrolled site, against a benchmark, plus four proposed AI-assisted reporting metrics kept separate from them.</p>
       <ul>
@@ -1236,7 +1234,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -1982,7 +1979,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 4,
    "n_papers": 4,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -2250,7 +2246,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -2702,7 +2697,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 1,
    "n_papers": 1,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -3238,7 +3232,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -3589,7 +3582,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -3965,7 +3957,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 4,
    "n_papers": 4,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -4258,7 +4249,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -4701,7 +4691,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 7,
    "n_papers": 7,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -4907,7 +4896,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -5259,7 +5247,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 8,
    "n_papers": 8,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -5892,7 +5879,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 5,
    "n_papers": 5,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -6258,7 +6244,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 6,
    "n_papers": 6,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -6464,7 +6449,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -6931,7 +6915,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 5,
    "n_papers": 5,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -7566,7 +7549,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -7868,7 +7850,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -8529,7 +8510,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -9577,7 +9557,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 6,
    "n_papers": 6,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -10504,7 +10483,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -10974,7 +10952,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 12,
    "n_papers": 12,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -11990,7 +11967,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 11,
    "n_papers": 11,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -12173,7 +12149,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -12517,7 +12492,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -12758,7 +12732,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -13113,7 +13086,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
-   "declared_interest": "The maintainer of this catalog, ASE ImageGuideEcho Registry chair David Ouyang, co-founded InVision Medical Technology and is the openFDA contact on this clearance.",
    "research_pending": false
   },
   {
@@ -13362,7 +13334,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 5,
    "n_papers": 5,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -13926,7 +13897,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -14447,7 +14417,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 12,
    "n_papers": 12,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -15284,7 +15253,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 15,
    "n_papers": 15,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -15569,7 +15537,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -16266,7 +16233,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 14,
    "n_papers": 14,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -16584,7 +16550,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -17268,7 +17233,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 6,
    "n_papers": 6,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -17694,7 +17658,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 8,
    "n_papers": 8,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -18253,7 +18216,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -18677,7 +18639,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -19003,7 +18964,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 5,
    "n_papers": 5,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -19477,7 +19437,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 5,
    "n_papers": 5,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -19959,7 +19918,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 4,
    "n_papers": 4,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -20189,7 +20147,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -20517,7 +20474,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
-   "declared_interest": "The maintainer of this catalog, ASE ImageGuideEcho Registry chair David Ouyang, co-founded InVision Medical Technology and is the openFDA contact on this clearance.",
    "research_pending": false
   },
   {
@@ -21606,7 +21562,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 26,
    "n_papers": 26,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -21865,7 +21820,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -22384,7 +22338,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -22578,7 +22531,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -23045,7 +22997,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 17,
    "n_papers": 17,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -23580,7 +23531,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 8,
    "n_papers": 8,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -23963,7 +23913,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 6,
    "n_papers": 6,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -24445,7 +24394,6 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 9,
    "n_papers": 9,
    "research_verified": true,
-   "declared_interest": null,
    "research_pending": false
   }
  ],
@@ -25639,6 +25587,33 @@ window.AIECHO_REGISTRY = {
   }
  ],
  "analysis_note": "One-off point-in-time analysis. A product is scored once against a frozen extract; the result is not refreshed as new studies arrive. Re-scoring requires a new run against a newer extract.",
+ "detection_tasks": [
+  {
+   "id": "as",
+   "label": "Severe aortic stenosis",
+   "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)",
+   "prevalence": 3.1
+  },
+  {
+   "id": "amyloid",
+   "label": "Cardiac amyloidosis",
+   "reference": "Registry-linked confirmed cardiac amyloidosis diagnosis",
+   "prevalence": 1.2
+  },
+  {
+   "id": "hfpef",
+   "label": "Heart failure with preserved ejection fraction",
+   "reference": "Registry diastolic function grade ≥ 2 with linked HF diagnosis",
+   "prevalence": 11.4
+  },
+  {
+   "id": "cad",
+   "label": "Obstructive coronary artery disease on stress echo",
+   "reference": "Registry-linked obstructive coronary artery disease after stress echocardiography",
+   "prevalence": 8.7
+  }
+ ],
+ "min_products_per_chart": 2,
  "products": [
   {
    "id": "p01",
@@ -25904,7 +25879,7 @@ window.AIECHO_REGISTRY = {
   {
    "id": "p02",
    "label": "Product 02",
-   "evaluation_type": "detection",
+   "evaluation_type": "as",
    "cohort": {
     "n_studies": 3090,
     "n_sites": 6,
@@ -25962,7 +25937,7 @@ window.AIECHO_REGISTRY = {
       "high": 0.855
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)",
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)",
      "primary": true
     },
     {
@@ -25975,7 +25950,7 @@ window.AIECHO_REGISTRY = {
       "high": 92.2
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)"
     },
     {
      "id": "spec",
@@ -25987,7 +25962,7 @@ window.AIECHO_REGISTRY = {
       "high": 84
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)"
     },
     {
      "id": "ppv",
@@ -28656,7 +28631,7 @@ window.AIECHO_REGISTRY = {
   {
    "id": "p15",
    "label": "Product 15",
-   "evaluation_type": "detection",
+   "evaluation_type": "as",
    "cohort": {
     "n_studies": 12520,
     "n_sites": 4,
@@ -28710,7 +28685,7 @@ window.AIECHO_REGISTRY = {
       "high": 0.948
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)",
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)",
      "primary": true
     },
     {
@@ -28723,7 +28698,7 @@ window.AIECHO_REGISTRY = {
       "high": 80
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)"
     },
     {
      "id": "spec",
@@ -28735,7 +28710,7 @@ window.AIECHO_REGISTRY = {
       "high": 84.7
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)"
     },
     {
      "id": "ppv",
@@ -29030,7 +29005,7 @@ window.AIECHO_REGISTRY = {
   {
    "id": "p17",
    "label": "Product 17",
-   "evaluation_type": "detection",
+   "evaluation_type": "as",
    "cohort": {
     "n_studies": 7550,
     "n_sites": 5,
@@ -29086,7 +29061,7 @@ window.AIECHO_REGISTRY = {
       "high": 0.873
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)",
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)",
      "primary": true
     },
     {
@@ -29099,7 +29074,7 @@ window.AIECHO_REGISTRY = {
       "high": 90.8
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)"
     },
     {
      "id": "spec",
@@ -29111,7 +29086,7 @@ window.AIECHO_REGISTRY = {
       "high": 80.6
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)"
     },
     {
      "id": "ppv",
@@ -29685,7 +29660,7 @@ window.AIECHO_REGISTRY = {
   {
    "id": "p20",
    "label": "Product 20",
-   "evaluation_type": "detection",
+   "evaluation_type": "as",
    "cohort": {
     "n_studies": 19130,
     "n_sites": 4,
@@ -29741,7 +29716,7 @@ window.AIECHO_REGISTRY = {
       "high": 0.833
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)",
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)",
      "primary": true
     },
     {
@@ -29754,7 +29729,7 @@ window.AIECHO_REGISTRY = {
       "high": 88.6
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)"
     },
     {
      "id": "spec",
@@ -29766,7 +29741,7 @@ window.AIECHO_REGISTRY = {
       "high": 82.3
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)"
     },
     {
      "id": "ppv",
@@ -34052,7 +34027,7 @@ window.AIECHO_REGISTRY = {
   {
    "id": "p40",
    "label": "Product 40",
-   "evaluation_type": "detection",
+   "evaluation_type": "cad",
    "cohort": {
     "n_studies": 21760,
     "n_sites": 4,
@@ -34107,7 +34082,7 @@ window.AIECHO_REGISTRY = {
       "high": 0.835
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)",
+     "reference": "Registry-linked obstructive coronary artery disease after stress echocardiography",
      "primary": true
     },
     {
@@ -34120,7 +34095,7 @@ window.AIECHO_REGISTRY = {
       "high": 89.9
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-linked obstructive coronary artery disease after stress echocardiography"
     },
     {
      "id": "spec",
@@ -34132,16 +34107,16 @@ window.AIECHO_REGISTRY = {
       "high": 85.6
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-linked obstructive coronary artery disease after stress echocardiography"
     },
     {
      "id": "ppv",
-     "label": "PPV at registry prevalence (3.1%)",
+     "label": "PPV at registry prevalence (8.7%)",
      "unit": "%",
-     "value": 16.4,
+     "value": 36.9,
      "ci": {
-      "low": 16.1,
-      "high": 16.7
+      "low": 36.6,
+      "high": 37.2
      },
      "direction": "higher",
      "reference": "Derived from sensitivity, specificity and cohort prevalence"
@@ -54359,7 +54334,6 @@ window.AIECHO_REGISTRY = {
     if (f.n_other_claims) out.push(`<span class="chip">${f.n_other_claims} published/company metric${f.n_other_claims > 1 ? 's' : ''}</span>`);
     if (f.n_papers) out.push(`<span class="chip on">${f.n_papers_resolved}/${f.n_papers} paper${f.n_papers > 1 ? 's' : ''} resolved</span>`);
     if (f.training_data && f.training_data.disclosed) out.push('<span class="chip on">Training n disclosed</span>');
-    if (f.declared_interest) out.push('<span class="chip coi">Declared interest</span>');
     if (f.pathways.some((p) => /PCCP/.test(p))) out.push('<span class="chip flag">PCCP</span>');
     if (f.pathways.includes('De Novo')) out.push('<span class="chip flag">De Novo</span>');
     const seenChip = new Set();
@@ -54397,7 +54371,7 @@ window.AIECHO_REGISTRY = {
     const host = $('#table');
     if (!list.length) { host.innerHTML = '<p class="empty">No AI products match.</p>'; return; }
     host.innerHTML = `<table><thead><tr><th>AI product</th><th>Company</th><th>Function</th><th>Latest clearance</th><th class="r">Clearances</th><th>Pathway</th><th>Code</th><th class="r">FDA summary metrics</th><th class="r">Papers</th><th>Training set</th></tr></thead><tbody>${list.map((f) => `
-      <tr><td><button class="link" type="button" data-open="${esc(f.id)}" title="${esc(f.product_name)}">${esc(shortName(f.product_name))}</button>${f.declared_interest ? ' <span class="coi-mark" data-tip="' + esc('<b>Declared interest</b>' + f.declared_interest) + '">declared interest</span>' : ''}</td><td>${esc(companyShort(f.company))}</td><td>${f.research_pending ? 'Research pending' : esc(CAT[f.category] || f.category)}</td><td class="num">${fmtDate(f.latest_cleared)}</td><td class="r num">${f.n_clearances}</td><td>${esc(f.pathways.join(', '))}</td><td>${esc(f.product_codes.join(', '))}</td><td class="r num">${f.n_fda_claims}</td><td class="r num">${f.n_papers_resolved}/${f.n_papers}</td><td class="num">${trainingCell(f.training_data)}</td></tr>`).join('')}</tbody></table>`;
+      <tr><td><button class="link" type="button" data-open="${esc(f.id)}" title="${esc(f.product_name)}">${esc(shortName(f.product_name))}</button></td><td>${esc(companyShort(f.company))}</td><td>${f.research_pending ? 'Research pending' : esc(CAT[f.category] || f.category)}</td><td class="num">${fmtDate(f.latest_cleared)}</td><td class="r num">${f.n_clearances}</td><td>${esc(f.pathways.join(', '))}</td><td>${esc(f.product_codes.join(', '))}</td><td class="r num">${f.n_fda_claims}</td><td class="r num">${f.n_papers_resolved}/${f.n_papers}</td><td class="num">${trainingCell(f.training_data)}</td></tr>`).join('')}</tbody></table>`;
   }
 
   // ---------- detail panel ----------
@@ -54452,7 +54426,6 @@ window.AIECHO_REGISTRY = {
         <p class="co">${esc(f.company)}</p>
         <div class="panel-links">${links}</div>
         <div class="chips">${panelChips(f)}</div>
-        ${f.declared_interest ? `<p class="coi-note" role="note"><b>Declared interest</b> ${esc(f.declared_interest)}</p>` : ''}
         ${f.summary ? `<p>${esc(f.summary)}</p>` : ''}
       </div>
       ${f.indications_for_use_quote || f.intended_use_quote ? `<section class="psec"><h3>Indications for use <small>FDA summary</small></h3><blockquote class="q">${esc(f.indications_for_use_quote || f.intended_use_quote)}</blockquote></section>` : ''}
@@ -54543,16 +54516,23 @@ window.AIECHO_REGISTRY = {
     // has to say so rather than implying one common denominator.
     const mixNote = nExtracts > 1 ? ` Pooled across ${nExtracts} registry extracts (${esc(usedExtracts.sort().join(', '))}); open a product for the one it used.` : '';
     const lv = mk(['lvef', 'comprehensive'], 'lvef_mae').sort((a, b) => a.value - b.value);
-    const det = mk(['detection', 'hfpef', 'amyloid'], 'auc').sort((a, b) => b.value - a.value);
     const acq = mk(['acquisition'], 'diag_quality').sort((a, b) => b.value - a.value);
     const strain = mk(['strain'], 'gls_icc').sort((a, b) => b.value - a.value);
     const qual = mk(['quality'], 'kappa').sort((a, b) => b.value - a.value);
+    // One chart per detection task. An AUC for a 1.2% prevalence problem and one for an 11.4%
+    // problem are not the same measurement, so they are never plotted on shared axes.
+    // A task with fewer than MIN_N cleared products is not charted at all.
+    const MIN_N = R.min_products_per_chart || 2;
+    const tasks = (R.detection_tasks || []).map((t) => ({ ...t, rows: mk([t.id], 'auc').sort((a, b) => b.value - a.value) }));
+    const charted = tasks.filter((t) => t.rows.length >= MIN_N);
+    const thin = tasks.filter((t) => t.rows.length && t.rows.length < MIN_N);
     $('#reg-charts').innerHTML = `
       <section class="chart-block wide"><h2>LVEF agreement with the registry report</h2><p class="chart-sub">Mean absolute error vs reported LVEF, in EF points. Lower is better. Dot = estimate, bar = 95% CI.${capNote(lv)}${mixNote}</p>${dotRangeChart(cap(lv), { unit: '', decimals: 1, wide: true, aria: 'LVEF mean absolute error by product', domain: [0, Math.max(10, ...cap(lv).map((r) => r.high)) * 1.05] })}</section>
-      <section class="chart-block"><h2>Detection: area under the ROC curve</h2><p class="chart-sub">Severe aortic stenosis, HFpEF, or cardiac amyloidosis vs the registry reference, higher is better.${capNote(det)}${mixNote}</p>${dotRangeChart(cap(det), { unit: '', decimals: 2, aria: 'AUC by product', domain: [0.5, 1], refLine: 0.5 })}</section>
-      <section class="chart-block"><h2>Acquisition guidance: diagnostic-quality studies</h2><p class="chart-sub">Share of guided acquisitions graded diagnostic by the reading physician.${capNote(acq)}${mixNote}</p>${dotRangeChart(cap(acq), { unit: '%', decimals: 1, aria: 'Diagnostic quality by product', domain: [50, 100] })}</section>
-      ${strain.length ? `<section class="chart-block"><h2>Strain: ICC vs reported GLS</h2><p class="chart-sub">Where the registry report contains GLS.${capNote(strain)}</p>${dotRangeChart(cap(strain), { unit: '', decimals: 2, aria: 'GLS ICC by product', domain: [0.5, 1] })}</section>` : ''}
-      ${qual.length ? `<section class="chart-block"><h2>Image quality: agreement with the sonographer grade</h2><p class="chart-sub">Cohen’s κ vs the registry image-quality field, higher is better.${capNote(qual)}</p>${dotRangeChart(cap(qual), { unit: '', decimals: 2, aria: 'Image-quality kappa by product', domain: [0, 1] })}</section>` : ''}`;
+      ${charted.map((t) => `<section class="chart-block"><h2>Detection: ${esc(t.label.toLowerCase())}</h2><p class="chart-sub">Area under the ROC curve against ${esc(t.reference.charAt(0).toLowerCase() + t.reference.slice(1))}. Higher is better. ${t.rows.length} cleared product${t.rows.length === 1 ? '' : 's'} scored on this task; registry prevalence ${t.prevalence}%.${capNote(t.rows)}${mixNote}</p>${dotRangeChart(cap(t.rows), { unit: '', decimals: 2, aria: `AUC by product, ${t.label}`, domain: [0.5, 1], refLine: 0.5 })}</section>`).join('')}
+      ${thin.length ? `<section class="chart-block"><h2>Detection tasks not charted</h2><p class="chart-sub">A task needs at least ${MIN_N} cleared products before a comparison chart means anything. These have fewer, so their results appear only on the product record.</p><ul class="thin-tasks">${thin.map((t) => `<li><b>${esc(t.label)}</b><span>${t.rows.length} cleared product${t.rows.length === 1 ? '' : 's'} · ${esc(t.reference)}</span></li>`).join('')}</ul></section>` : ''}
+      ${acq.length >= MIN_N ? `<section class="chart-block"><h2>Acquisition guidance: diagnostic-quality studies</h2><p class="chart-sub">Share of guided acquisitions graded diagnostic by the reading physician.${capNote(acq)}${mixNote}</p>${dotRangeChart(cap(acq), { unit: '%', decimals: 1, aria: 'Diagnostic quality by product', domain: [50, 100] })}</section>` : ''}
+      ${strain.length >= MIN_N ? `<section class="chart-block"><h2>Strain: ICC vs reported GLS</h2><p class="chart-sub">Where the registry report contains GLS.${capNote(strain)}</p>${dotRangeChart(cap(strain), { unit: '', decimals: 2, aria: 'GLS ICC by product', domain: [0.5, 1] })}</section>` : ''}
+      ${qual.length >= MIN_N ? `<section class="chart-block"><h2>Image quality: agreement with the sonographer grade</h2><p class="chart-sub">Cohen’s κ vs the registry image-quality field, higher is better.${capNote(qual)}</p>${dotRangeChart(cap(qual), { unit: '', decimals: 2, aria: 'Image-quality kappa by product', domain: [0, 1] })}</section>` : ''}`;
 
     const ex = $('#reg-extract');
     if (ex) {
@@ -54584,7 +54564,7 @@ window.AIECHO_REGISTRY = {
     let t = mx === mn ? 0.5 : (v - mn) / (mx - mn); if (better === 'lower') t = 1 - t; if (better === 'zero') t = 1 - Math.min(1, Math.abs(v) / Math.max(Math.abs(mn), Math.abs(mx), 1e-9));
     const step = 1 + Math.round(t * 6); return { step, hi: step >= 5 };
   }
-  const EVAL_LABEL = { lvef: 'LV function', comprehensive: 'Multi-parameter measurement', strain: 'Strain', detection: 'Disease detection', hfpef: 'Heart failure indicator', amyloid: 'Cardiac amyloidosis indicator', acquisition: 'Acquisition guidance', quality: 'Image quality' };
+  const EVAL_LABEL = { lvef: 'LV function', comprehensive: 'Multi-parameter measurement', strain: 'Strain', as: 'Severe aortic stenosis', hfpef: 'Heart failure indicator', amyloid: 'Cardiac amyloidosis indicator', cad: 'Coronary artery disease on stress echo', 'other-detection': 'Disease detection', acquisition: 'Acquisition guidance', quality: 'Image quality' };
   function renderRegDetail() {
     const host = $('#reg-detail'); const e = sims.find((x) => x.id === state.regSel);
     if (!e) { host.innerHTML = ''; return; }

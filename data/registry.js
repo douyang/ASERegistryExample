@@ -80,6 +80,33 @@ window.AIECHO_REGISTRY = {
   }
  ],
  "analysis_note": "One-off point-in-time analysis. A product is scored once against a frozen extract; the result is not refreshed as new studies arrive. Re-scoring requires a new run against a newer extract.",
+ "detection_tasks": [
+  {
+   "id": "as",
+   "label": "Severe aortic stenosis",
+   "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)",
+   "prevalence": 3.1
+  },
+  {
+   "id": "amyloid",
+   "label": "Cardiac amyloidosis",
+   "reference": "Registry-linked confirmed cardiac amyloidosis diagnosis",
+   "prevalence": 1.2
+  },
+  {
+   "id": "hfpef",
+   "label": "Heart failure with preserved ejection fraction",
+   "reference": "Registry diastolic function grade ≥ 2 with linked HF diagnosis",
+   "prevalence": 11.4
+  },
+  {
+   "id": "cad",
+   "label": "Obstructive coronary artery disease on stress echo",
+   "reference": "Registry-linked obstructive coronary artery disease after stress echocardiography",
+   "prevalence": 8.7
+  }
+ ],
+ "min_products_per_chart": 2,
  "products": [
   {
    "id": "p01",
@@ -345,7 +372,7 @@ window.AIECHO_REGISTRY = {
   {
    "id": "p02",
    "label": "Product 02",
-   "evaluation_type": "detection",
+   "evaluation_type": "as",
    "cohort": {
     "n_studies": 3090,
     "n_sites": 6,
@@ -403,7 +430,7 @@ window.AIECHO_REGISTRY = {
       "high": 0.855
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)",
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)",
      "primary": true
     },
     {
@@ -416,7 +443,7 @@ window.AIECHO_REGISTRY = {
       "high": 92.2
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)"
     },
     {
      "id": "spec",
@@ -428,7 +455,7 @@ window.AIECHO_REGISTRY = {
       "high": 84
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)"
     },
     {
      "id": "ppv",
@@ -3097,7 +3124,7 @@ window.AIECHO_REGISTRY = {
   {
    "id": "p15",
    "label": "Product 15",
-   "evaluation_type": "detection",
+   "evaluation_type": "as",
    "cohort": {
     "n_studies": 12520,
     "n_sites": 4,
@@ -3151,7 +3178,7 @@ window.AIECHO_REGISTRY = {
       "high": 0.948
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)",
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)",
      "primary": true
     },
     {
@@ -3164,7 +3191,7 @@ window.AIECHO_REGISTRY = {
       "high": 80
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)"
     },
     {
      "id": "spec",
@@ -3176,7 +3203,7 @@ window.AIECHO_REGISTRY = {
       "high": 84.7
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)"
     },
     {
      "id": "ppv",
@@ -3471,7 +3498,7 @@ window.AIECHO_REGISTRY = {
   {
    "id": "p17",
    "label": "Product 17",
-   "evaluation_type": "detection",
+   "evaluation_type": "as",
    "cohort": {
     "n_studies": 7550,
     "n_sites": 5,
@@ -3527,7 +3554,7 @@ window.AIECHO_REGISTRY = {
       "high": 0.873
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)",
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)",
      "primary": true
     },
     {
@@ -3540,7 +3567,7 @@ window.AIECHO_REGISTRY = {
       "high": 90.8
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)"
     },
     {
      "id": "spec",
@@ -3552,7 +3579,7 @@ window.AIECHO_REGISTRY = {
       "high": 80.6
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)"
     },
     {
      "id": "ppv",
@@ -4126,7 +4153,7 @@ window.AIECHO_REGISTRY = {
   {
    "id": "p20",
    "label": "Product 20",
-   "evaluation_type": "detection",
+   "evaluation_type": "as",
    "cohort": {
     "n_studies": 19130,
     "n_sites": 4,
@@ -4182,7 +4209,7 @@ window.AIECHO_REGISTRY = {
       "high": 0.833
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)",
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)",
      "primary": true
     },
     {
@@ -4195,7 +4222,7 @@ window.AIECHO_REGISTRY = {
       "high": 88.6
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)"
     },
     {
      "id": "spec",
@@ -4207,7 +4234,7 @@ window.AIECHO_REGISTRY = {
       "high": 82.3
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-reported severe aortic stenosis (valve area, mean gradient)"
     },
     {
      "id": "ppv",
@@ -8493,7 +8520,7 @@ window.AIECHO_REGISTRY = {
   {
    "id": "p40",
    "label": "Product 40",
-   "evaluation_type": "detection",
+   "evaluation_type": "cad",
    "cohort": {
     "n_studies": 21760,
     "n_sites": 4,
@@ -8548,7 +8575,7 @@ window.AIECHO_REGISTRY = {
       "high": 0.835
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)",
+     "reference": "Registry-linked obstructive coronary artery disease after stress echocardiography",
      "primary": true
     },
     {
@@ -8561,7 +8588,7 @@ window.AIECHO_REGISTRY = {
       "high": 89.9
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-linked obstructive coronary artery disease after stress echocardiography"
     },
     {
      "id": "spec",
@@ -8573,16 +8600,16 @@ window.AIECHO_REGISTRY = {
       "high": 85.6
      },
      "direction": "higher",
-     "reference": "Registry-reported severe aortic stenosis (valve area, gradients)"
+     "reference": "Registry-linked obstructive coronary artery disease after stress echocardiography"
     },
     {
      "id": "ppv",
-     "label": "PPV at registry prevalence (3.1%)",
+     "label": "PPV at registry prevalence (8.7%)",
      "unit": "%",
-     "value": 16.4,
+     "value": 36.9,
      "ci": {
-      "low": 16.1,
-      "high": 16.7
+      "low": 36.6,
+      "high": 37.2
      },
      "direction": "higher",
      "reference": "Derived from sensitivity, specificity and cohort prevalence"

@@ -62,7 +62,16 @@ function evalType(f) {
     case 'lv-function-quantification': return 'lvef';
     case 'comprehensive-measurement': return 'comprehensive';
     case 'system-embedded': return /strain|gls/.test(tags) && !/ef|ejection/.test(tags) ? 'strain' : 'lvef';
-    case 'disease-detection': return /amyloid/.test(tags) ? 'amyloid' : /hfpef|heart failure/.test(tags) ? 'hfpef' : 'detection';
+    case 'disease-detection':
+      // One task per finding. Severe AS, cardiac amyloidosis and CAD on stress echo are different
+      // detection problems with different prevalences and references; a pooled AUC is meaningless.
+      if (/amyloid/.test(tags)) return 'amyloid';
+      if (/hfpef|heart failure/.test(tags)) return 'hfpef';
+      // Aortic stenosis wins before the coronary test: "cadx" is the FDA product-code term for
+      // computer-assisted diagnostic software and sits on the AS products too, so it names no task.
+      if (/aortic stenosis/.test(tags)) return 'as';
+      if (/stress echo|coronary artery disease/.test(tags)) return 'cad';
+      return 'other-detection';
     case 'hf-status-indicator': return 'hfpef';
     case 'amyloid-indicator': return 'amyloid';
     case 'acquisition-guidance': return 'acquisition';
@@ -72,6 +81,10 @@ function evalType(f) {
     default: return 'not-evaluable-other';
   }
 }
+
+// Detection tasks are scored separately. Pooling their AUCs would compare a 1.2% prevalence problem
+// with an 11.4% one.
+const DETECTION_TYPES = ['as', 'amyloid', 'hfpef', 'cad', 'other-detection'];
 
 function ci(v, half, d = 1) { return { low: R(v - half, d), high: R(v + half, d) }; }
 function endpointsFor(type, n) {
@@ -98,12 +111,18 @@ function endpointsFor(type, n) {
     const icc = R(U(0.74, 0.92), 3); e.push({ id: 'gls_icc', label: 'GLS ICC', unit: '', value: icc, ci: ci(icc, half * 0.012, 3), direction: 'higher', reference: 'Registry-reported GLS' });
     const util = R(U(28, 64)); e.push({ id: 'strain_util', label: 'Strain utilization in eligible studies', unit: '%', value: util, ci: ci(util, half), direction: 'higher', reference: 'Registry metric: strain utilization for chemotherapy, HF, cardiomyopathy' });
   }
-  if (type === 'detection' || type === 'hfpef' || type === 'amyloid') {
-    const refs = { detection: 'Registry-reported severe aortic stenosis (valve area, gradients)', hfpef: 'Registry diastolic function grade ≥ 2 with linked HF diagnosis', amyloid: 'Registry-linked confirmed cardiac amyloidosis diagnosis' };
+  if (DETECTION_TYPES.includes(type)) {
+    const refs = {
+      as: 'Registry-reported severe aortic stenosis (valve area, mean gradient)',
+      hfpef: 'Registry diastolic function grade ≥ 2 with linked HF diagnosis',
+      amyloid: 'Registry-linked confirmed cardiac amyloidosis diagnosis',
+      cad: 'Registry-linked obstructive coronary artery disease after stress echocardiography',
+      'other-detection': 'Registry-reported finding for the product’s cleared indication',
+    };
     const auc = R(U(0.82, 0.95), 3); e.push({ id: 'auc', label: 'AUC', unit: '', value: auc, ci: ci(auc, half * 0.012, 3), direction: 'higher', reference: refs[type], primary: true });
     const sens = R(U(78, 94)); e.push({ id: 'sens', label: 'Sensitivity', unit: '%', value: sens, ci: ci(sens, half * 1.2), direction: 'higher', reference: refs[type] });
     const spec = R(U(80, 95)); e.push({ id: 'spec', label: 'Specificity', unit: '%', value: spec, ci: ci(spec, half * 0.8), direction: 'higher', reference: refs[type] });
-    const prev = { detection: 3.1, hfpef: 11.4, amyloid: 1.2 }[type]; const ppv = R(100 * (sens / 100 * prev / 100) / (sens / 100 * prev / 100 + (1 - spec / 100) * (1 - prev / 100)));
+    const prev = { as: 3.1, hfpef: 11.4, amyloid: 1.2, cad: 8.7, 'other-detection': 5.0 }[type]; const ppv = R(100 * (sens / 100 * prev / 100) / (sens / 100 * prev / 100 + (1 - spec / 100) * (1 - prev / 100)));
     e.push({ id: 'ppv', label: `PPV at registry prevalence (${prev}%)`, unit: '%', value: ppv, ci: ci(ppv, half * 1.5), direction: 'higher', reference: 'Derived from sensitivity, specificity and cohort prevalence' });
   }
   if (type === 'acquisition') {
@@ -367,6 +386,13 @@ const out = {
   seed: SEED, generated: GENERATED, registry: REGISTRY,
   n_catalog_products: families.length, n_not_evaluable: nNotEvaluable,
   extracts: EXTRACTS, analysis_note: ANALYSIS_NOTE,
+  detection_tasks: [
+    { id: 'as', label: 'Severe aortic stenosis', reference: 'Registry-reported severe aortic stenosis (valve area, mean gradient)', prevalence: 3.1 },
+    { id: 'amyloid', label: 'Cardiac amyloidosis', reference: 'Registry-linked confirmed cardiac amyloidosis diagnosis', prevalence: 1.2 },
+    { id: 'hfpef', label: 'Heart failure with preserved ejection fraction', reference: 'Registry diastolic function grade ≥ 2 with linked HF diagnosis', prevalence: 11.4 },
+    { id: 'cad', label: 'Obstructive coronary artery disease on stress echo', reference: 'Registry-linked obstructive coronary artery disease after stress echocardiography', prevalence: 8.7 },
+  ],
+  min_products_per_chart: 2,
   products,
   quality: { metrics: qcMetrics, sites: qcSites, n_live_metrics: qcMetrics.filter((m) => m.status === 'live').length, n_proposed_metrics: qcMetrics.filter((m) => m.status === 'proposed').length, months: MONTHS, quarters: QUARTERS, benchmark_source: 'Registry-wide target for the metric (illustrative)', n_metrics: qcMetrics.length, period: `${MONTHS[0]} to ${MONTHS[MONTHS.length - 1]}`, module: 'Adult TTE (phase 1)' },
 };

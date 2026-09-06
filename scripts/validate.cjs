@@ -121,16 +121,25 @@ const server = http.createServer((req, res) => {
   const over = await d.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
   expect(!over, 'no horizontal page scroll (desktop)');
 
-  // declared interest: the catalog maintainer holds an interest in two of the listed products
-  await d.goto(base + 'index.html#products', { waitUntil: 'load' }); await d.waitForTimeout(500);
-  const coi = await d.evaluate(() => (window.AIECHO_PRODUCTS.families || []).filter((f) => f.declared_interest).map((f) => f.id));
-  expect(coi.length > 0, 'at least one product carries a declared interest');
-  expect((await d.locator('#cards .chip.coi').count()) === coi.length, `every declared-interest product is flagged on its card (${coi.length})`);
-  await d.goto(base + `index.html#product/${coi[0]}`, { waitUntil: 'load' }); await d.waitForTimeout(600);
-  expect((await d.locator('#panel .coi-note').count()) === 1, 'the detail panel discloses the interest');
-  const coiText = await d.locator('#panel .coi-note').textContent();
-  expect(/co-founded/i.test(coiText) && /Ouyang/.test(coiText), 'the disclosure names the interest');
-  await d.keyboard.press('Escape'); await d.waitForTimeout(250);
+  // detection is reported one task at a time, and only where enough products address it
+  await d.goto(base + 'index.html#registry', { waitUntil: 'load' }); await d.waitForTimeout(700);
+  const detMeta = await d.evaluate(() => {
+    const R = window.AIECHO_REGISTRY, min = R.min_products_per_chart || 2;
+    const counts = {};
+    for (const p of R.products) counts[p.evaluation_type] = (counts[p.evaluation_type] || 0) + 1;
+    const tasks = (R.detection_tasks || []).map((t) => ({ id: t.id, label: t.label, n: counts[t.id] || 0 }));
+    return { min, tasks, heads: Array.from(document.querySelectorAll('#reg-charts h2')).map((h) => h.textContent) };
+  });
+  const above = detMeta.tasks.filter((t) => t.n >= detMeta.min);
+  const below = detMeta.tasks.filter((t) => t.n > 0 && t.n < detMeta.min);
+  expect(above.length >= 2, `at least two detection tasks clear the ${detMeta.min}-product threshold`);
+  for (const t of above) expect(detMeta.heads.some((h) => h.toLowerCase().includes(t.label.toLowerCase())), `${t.label} (${t.n} products) has its own chart`);
+  for (const t of below) expect(!detMeta.heads.some((h) => h.toLowerCase() === `detection: ${t.label.toLowerCase()}`), `${t.label} (${t.n} product) is not charted`);
+  expect((await d.locator('.thin-tasks li').count()) === below.length, `every below-threshold task is named but not charted (${below.length})`);
+  expect(!detMeta.heads.some((h) => /^Detection: area under/i.test(h)), 'the pooled detection chart is gone');
+  // every AUC chart plots one task only, so no chart mixes references
+  const auc = await d.evaluate(() => Array.from(document.querySelectorAll('#reg-charts .chart-block')).filter((b) => /Detection: /.test(b.querySelector('h2').textContent) && b.querySelector('svg')).length);
+  expect(auc === above.length, `one AUC chart per charted task (${auc})`);
 
   // ---- mobile
   const m = await page({ width: 390, height: 844 });

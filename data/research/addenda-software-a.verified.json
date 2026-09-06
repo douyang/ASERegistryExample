@@ -1,0 +1,564 @@
+{
+  "batch_id": "addenda-software-a",
+  "families": [
+    {
+      "id": "anumana-watchmate",
+      "product_name": "WatchMate Software",
+      "company": "Anumana, Inc.",
+      "company_website": "https://anumana.ai/",
+      "product_url": null,
+      "category": "interventional-guidance",
+      "tags": [
+        "LAAC",
+        "left atrial appendage",
+        "TEE",
+        "3D reconstruction",
+        "landing zone",
+        "device sizing",
+        "WATCHMAN",
+        "structural heart",
+        "deep learning"
+      ],
+      "modality_scope": [
+        "TEE",
+        "2D TEE input",
+        "3D reconstruction output"
+      ],
+      "deployment": [
+        "dedicated workstation (Linux + NVIDIA GPU hardware platform)",
+        "iPad mobile client",
+        "local private network (mTLS; DICOM from TEE console via Ethernet/Wi-Fi)",
+        "optional HDMI display",
+        "input validated for compatibility with GE and Philips TEE ultrasound systems only"
+      ],
+      "summary": "Standalone software (version 1.2.0) that reconstructs a 3D model of the left atrial appendage from up to three 2D TEE DICOM videos and outputs landing-zone measurements for LAAC pre-procedural planning and device sizing. Cleared 2026-06-15 (K260300) by traditional 510(k) with Circle TruPlan CT (K222593) as predicate. The summary states no clinical testing was necessary; a prospective 6-site U.S. observational data-collection study (NCT07126600; 100 enrolled, 72 per-protocol) was elected and reported non-inferiority and superiority of WatchMate to the average of three physician 2D TEE readers for landing-zone maximum diameter against a three-reader consensus CT reference.",
+      "intended_use_quote": "The WatchMate Software (Version 1.2.0) is a standalone software application intended for use by healthcare professionals during left atrial appendage closure (LAAC) procedures. It processes transesophageal echocardiography (TEE) images to assist in pre-procedural planning and device sizing.",
+      "indications_for_use_quote": "WatchMate Software enables visualization and measurement of structures of the heart and vessels for pre-procedural planning and sizing for the left atrial appendage closure (LAAC) procedure. To facilitate the above, WatchMate Software provides general functionality such as: • 3D reconstruction of the left atrial appendage (LAA) from trans-esophageal echocardiogram images of the left atrial appendage • Visualization and image reconstruction, including 2D review and 3D rendering • Measurement and annotation tools The results are intended to be used by qualified clinicians in conjunction with the patient's clinical history, symptoms, and other preprocedural evaluations, as well as the clinician's professional judgment. WatchMate Software’s intended patient population is comprised of adult patients.",
+      "embedded_ai_features": [
+        "Video validation models that classify 2D B-mode TEE input and confirm presence of the LAA",
+        "Character recognition models extracting transducer angle and imaging depth from each frame",
+        "Anatomy segmentation model (LAA, left atrium, left pulmonary vein, cardiac vessels, left ventricle) per TEE frame",
+        "3D mesh generation models (densified point cloud from segmentation contours converted to surface mesh)",
+        "Landing zone estimation algorithm providing a tentative, user-adjustable landing-zone plane with quantitative measurements (max/min diameters, area/perimeter-based diameters, depth, compression ratios)",
+        "Optional device simulation / device placement helper utilities"
+      ],
+      "clearances": [
+        {
+          "k_number": "K260300",
+          "decision_date": "2026-06-15",
+          "pathway": "510(k)",
+          "product_code": "QIH",
+          "predicates": [
+            "K222593",
+            "K201352",
+            "K222683"
+          ],
+          "changes_summary": "First clearance of this product. Predicate: Circle Cardiovascular Imaging TruPlan CT Imaging Software (K222593); reference devices: Philips 3D Auto LAA (K201352) and Nesa Medtech Fibroid Mapping Reviewer Application (K222683). Differs from predicate by using 2D TEE rather than CT input and by ML-driven TEE view recognition, 3D reconstruction and landing-zone estimation.",
+          "notable_flags": [
+            "dedicated Linux/GPU workstation + iPad client",
+            "local-only network, mTLS, LUKS full-disk encryption (p.12)",
+            "prospective multicenter data-collection study elected, not required (NCT07126600; p.14, p.18)",
+            "Rx-only",
+            "input validated for GE and Philips TEE systems only (p.10)",
+            "no PCCP described in summary"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf26/K260300.pdf"
+        }
+      ],
+      "performance_claims": [
+        {
+          "k_number": "K260300",
+          "endpoint": "LAA landing-zone maximum diameter: mean absolute deviation vs consensus CT (WatchMate)",
+          "metric": "mean absolute deviation (mm)",
+          "value": "3.1 ± 3.4 mm",
+          "comparator": "unanimous-consensus contrast-enhanced CT (3 blinded expert readers)",
+          "n_studies": null,
+          "n_patients": 72,
+          "n_sites": 6,
+          "dataset_description": "Prospective, multicenter, observational data-collection study (NCT07126600); 100 subjects enrolled at 6 U.S. centers, 72 in per-protocol population after exclusions for unanalyzable TEE or WatchMate 2D–3D inconsistency check. Input: routine intraprocedural 2D TEE. Reference standard: unanimous-consensus contrast-enhanced cardiac CT from three independent blinded expert CT readers. Comparator: average of three blinded physician TEE readers measuring per the WATCHMAN IFU.",
+          "subgroup_notes": null,
+          "quote": "Mean absolute deviation vs. CT: WatchMate 3.1 ± 3.4 mm, Physician-interpreted 2D TEE (average of three readers) 5.2 ± 3.4 mm",
+          "page": 18,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K260300",
+          "endpoint": "LAA landing-zone maximum diameter: mean absolute deviation vs consensus CT (physician 2D TEE, average of 3 readers)",
+          "metric": "mean absolute deviation (mm)",
+          "value": "5.2 ± 3.4 mm",
+          "comparator": "unanimous-consensus contrast-enhanced CT (3 blinded expert readers)",
+          "n_studies": null,
+          "n_patients": 72,
+          "n_sites": 6,
+          "dataset_description": "Prospective, multicenter, observational data-collection study (NCT07126600); 100 subjects enrolled at 6 U.S. centers, 72 in per-protocol population after exclusions for unanalyzable TEE or WatchMate 2D–3D inconsistency check. Input: routine intraprocedural 2D TEE. Reference standard: unanimous-consensus contrast-enhanced cardiac CT from three independent blinded expert CT readers. Comparator: average of three blinded physician TEE readers measuring per the WATCHMAN IFU.",
+          "subgroup_notes": null,
+          "quote": "Mean absolute deviation vs. CT: WatchMate 3.1 ± 3.4 mm, Physician-interpreted 2D TEE (average of three readers) 5.2 ± 3.4 mm",
+          "page": 18,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K260300",
+          "endpoint": "Primary endpoint: non-inferiority of WatchMate vs average of 3 physician 2D TEE readers for landing-zone maximum diameter",
+          "metric": "difference in mean absolute deviation (WatchMate − TEE) with upper 97.5% CI, as stated",
+          "value": "−2.1 mm; upper 97.5% CI −0.9 mm; non-inferiority margin 1 mm; P < 0.001; superiority also demonstrated",
+          "comparator": "consensus CT reference; comparator = average of three blinded TEE readers",
+          "n_studies": null,
+          "n_patients": 72,
+          "n_sites": 6,
+          "dataset_description": "Prospective, multicenter, observational data-collection study (NCT07126600); 100 subjects enrolled at 6 U.S. centers, 72 in per-protocol population after exclusions for unanalyzable TEE or WatchMate 2D–3D inconsistency check. Input: routine intraprocedural 2D TEE. Reference standard: unanimous-consensus contrast-enhanced cardiac CT from three independent blinded expert CT readers. Comparator: average of three blinded physician TEE readers measuring per the WATCHMAN IFU.",
+          "subgroup_notes": null,
+          "quote": "Difference (WatchMate – TEE): –2.1 mm, upper 97.5% CI -0.9 mm, meeting the pre-specified non-inferiority margin of 1 mm (P < 0.001) The upper bound of the 97.5% confidence interval was less than zero, so superiority of WatchMate over the average of three 2D TEE readers was also demonstrated.",
+          "page": 18,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K260300",
+          "endpoint": "Sensitivity analyses: non-inferiority under each individual CT reader as reference and each individual TEE reader as comparator",
+          "metric": "non-inferiority (qualitative)",
+          "value": "Non-inferiority met in all alternative-reference analyses (P < 0.001 for each of the three individual TEE-reader analyses)",
+          "comparator": "each individual CT reader / each individual TEE reader",
+          "n_studies": null,
+          "n_patients": 72,
+          "n_sites": 6,
+          "dataset_description": "Prospective, multicenter, observational data-collection study (NCT07126600); 100 subjects enrolled at 6 U.S. centers, 72 in per-protocol population after exclusions for unanalyzable TEE or WatchMate 2D–3D inconsistency check. Input: routine intraprocedural 2D TEE. Reference standard: unanimous-consensus contrast-enhanced cardiac CT from three independent blinded expert CT readers. Comparator: average of three blinded physician TEE readers measuring per the WATCHMAN IFU.",
+          "subgroup_notes": null,
+          "quote": "The primary endpoint was re-computed using each individual CT reader as the reference standard (with the 2D TEE comparator held fixed as the average of three TEE readers); non-inferiority was met under each of the three alternative CT reference standards. The endpoint was also re-computed using each individual TEE reader as the comparator against the consensus CT reference standard; non-inferiority was met for each of the three TEE readers (P < 0.001 in all three analyses).",
+          "page": "18-19",
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K260300",
+          "endpoint": "Secondary endpoints: landing-zone maximum depth and minimum diameter; Bland–Altman bias",
+          "metric": "descriptive comparison / Bland–Altman bias (no numbers given)",
+          "value": "Comparable to physician 2D TEE relative to CT; minimal systematic bias for WatchMate vs consistent underestimation by 2D TEE (numeric values not reported in summary)",
+          "comparator": "consensus CT",
+          "n_studies": null,
+          "n_patients": 72,
+          "n_sites": 6,
+          "dataset_description": "Prospective, multicenter, observational data-collection study (NCT07126600); 100 subjects enrolled at 6 U.S. centers, 72 in per-protocol population after exclusions for unanalyzable TEE or WatchMate 2D–3D inconsistency check. Input: routine intraprocedural 2D TEE. Reference standard: unanimous-consensus contrast-enhanced cardiac CT from three independent blinded expert CT readers. Comparator: average of three blinded physician TEE readers measuring per the WATCHMAN IFU.",
+          "subgroup_notes": null,
+          "quote": "Additional descriptive endpoints (landing zone maximum depth and landing zone minimum diameter) demonstrated WatchMate performance comparable to physician-interpreted 2D TEE relative to CT. Bland–Altman analyses showed minimal systematic bias for WatchMate in landing zone maximum diameter, whereas 2D TEE demonstrated consistent underestimation.",
+          "page": 19,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K260300",
+          "endpoint": "Subgroup consistency (sex, age, race, ethnicity, LAA morphology)",
+          "metric": "interaction testing (qualitative)",
+          "value": "No significant interactions",
+          "comparator": "consensus CT",
+          "n_studies": null,
+          "n_patients": 72,
+          "n_sites": 6,
+          "dataset_description": "Prospective, multicenter, observational data-collection study (NCT07126600); 100 subjects enrolled at 6 U.S. centers, 72 in per-protocol population after exclusions for unanalyzable TEE or WatchMate 2D–3D inconsistency check. Input: routine intraprocedural 2D TEE. Reference standard: unanimous-consensus contrast-enhanced cardiac CT from three independent blinded expert CT readers. Comparator: average of three blinded physician TEE readers measuring per the WATCHMAN IFU.",
+          "subgroup_notes": "Subgroups analyzed: sex, age, race, ethnicity, LAA morphology; no subgroup-level numbers reported",
+          "quote": "Subgroup analyses (sex, age, race, ethnicity, LAA morphology) showed no significant interactions, indicating consistent performance across clinically relevant sub-groups.",
+          "page": 19,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K260300",
+          "endpoint": "Analyzable-case yield (per-protocol population)",
+          "metric": "proportion of enrolled subjects analyzable",
+          "value": "72 of 100 enrolled subjects in per-protocol population (72% is derived arithmetic; the summary states only the counts)",
+          "comparator": null,
+          "n_studies": null,
+          "n_patients": 100,
+          "n_sites": 6,
+          "dataset_description": "Prospective, multicenter, observational data-collection study (NCT07126600); 100 subjects enrolled at 6 U.S. centers, 72 in per-protocol population after exclusions for unanalyzable TEE or WatchMate 2D–3D inconsistency check. Input: routine intraprocedural 2D TEE. Reference standard: unanimous-consensus contrast-enhanced cardiac CT from three independent blinded expert CT readers. Comparator: average of three blinded physician TEE readers measuring per the WATCHMAN IFU.",
+          "subgroup_notes": "Exclusions: unanalyzable TEE data or WatchMate 2D–3D inconsistency check",
+          "quote": "A total of 100 subjects were enrolled across 6 U.S. centers, with 72 subjects included in the per-protocol (PP) population. Exclusions occurred due to unanalyzable TEE data or WatchMate 2D–3D inconsistency check.",
+          "page": 18,
+          "verification": "fda_summary"
+        }
+      ],
+      "training_data": {
+        "disclosed": true,
+        "n_studies": null,
+        "n_patients": null,
+        "n_sites": null,
+        "description": "Anatomy segmentation model: 36,541 annotated TEE frames (training) and 7,385 annotated TEE frames (internal verification). 3D point cloud generation model: 61,284 cardiac CT scans (training) and 3,270 cardiac CT scans (internal verification). All models developed from a de-identified clinical dataset sourced from 'a large United States health system spanning over 35 years' of echo and cardiac CT imaging (number of sites within that health system not stated); training and verification split at the patient level. Patient counts are not stated (counts are frames/scans). Verification sets were used for internal model tuning/selection and are stated to be distinct from the external clinical validation study (NCT07126600).",
+        "source": "K260300 510(k) summary, pages 6-7 (Device Description: AI/ML Algorithm Development and Training)",
+        "verification": "fda_summary"
+      },
+      "validation_data": {
+        "n_studies": null,
+        "n_patients": 100,
+        "n_sites": 6,
+        "description": "Prospective multicenter observational study NCT07126600 (sponsor Anumana; observational; 100 enrolled actual; start 2025-07-11, completion 2025-12-17 per clinicaltrials.gov). 6 U.S. sites (clinicaltrials.gov lists: Arrhythmia Research Group, Jonesboro AR; Massachusetts General Hospital; Southcoast Hospital, New Bedford MA; UMass Chan Medical School; University of Buffalo; Montefiore Medical Center). 72 subjects in per-protocol analysis. Reference: consensus CT (3 blinded readers); comparator: average of 3 blinded physician 2D TEE readers.",
+        "independent_of_training": true,
+        "source": "K260300 510(k) summary pages 7, 18-19; clinicaltrials.gov API record NCT07126600",
+        "verification": "fda_summary"
+      },
+      "prior_validations": [
+        {
+          "description": "Predicate comparison table (Input data type row) states WatchMate input is 'Validated for compatibility with GE and Philips TEE ultrasound systems only.'",
+          "source_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf26/K260300.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "description": "Draft cited an April 24, 2025 BusinessWire release about Anumana expanding its platform (including LAAC-related imaging work with Boston Scientific). The release could not be retrieved in this session (connection failed), so its content is unconfirmed; the name WatchMate was not seen on any retrieved company page.",
+          "source_url": "https://www.businesswire.com/news/home/20250424342388/en/Anumana-Expands-AI-Platform-from-Diagnostic-Solutions-to-the-Full-Continuum-of-Cardiovascular-Care",
+          "verification": "unverified"
+        }
+      ],
+      "papers": [],
+      "clinical_trials": [
+        {
+          "nct_id": "NCT07126600",
+          "title": "A Data Collection Study for Echocardiography-Based Software Assessment",
+          "status": "COMPLETED",
+          "url": "https://clinicaltrials.gov/study/NCT07126600"
+        }
+      ],
+      "open_questions": [
+        "No peer-reviewed publication of the NCT07126600 validation study or of the WatchMate algorithm was found in PubMed as of 2026-09-05. Queries run: 'WatchMate' (0 hits); Anumana[Affiliation] AND (left atrial appendage OR LAAC OR Watchman) (0 hits); Anumana[Affiliation] AND (appendage OR transesophageal OR echocardiograph*) and Anumana[Affiliation] AND (ultrasound OR echocardiogram OR echocardiography) (5 hits, all AI-ECG papers unrelated to this product); LAA + TEE + 3D reconstruction + deep learning + landing zone (0 hits).",
+        "Product page and clearance press release could not be located: anumana.ai homepage and news page list only ECG-AI products; the name 'WatchMate' collides with an unrelated maritime navigation app in web search results. product_url left null.",
+        "Training-set patient counts, number of contributing sites beyond 'a large United States health system', and demographic composition of training data are not stated (only frame/scan counts).",
+        "Numeric results for secondary endpoints (landing-zone depth, minimum diameter), Bland–Altman bias/limits of agreement, and per-subgroup estimates are not given in the 510(k) summary.",
+        "Age/sex/BMI/LAA-morphology breakdown of the 100 enrolled and 72 per-protocol subjects is not reported in the summary.",
+        "Whether WatchMate is deployed commercially (e.g., through Boston Scientific) and its commercial name are unconfirmed.",
+        "The predicate TruPlan performance figures quoted in the comparison table (99.81% bone removal, 97.37% LAA visualization, 97-99% landing-zone accuracy; p.13) belong to the predicate device, not WatchMate, and are deliberately not recorded as WatchMate performance."
+      ],
+      "sources": [
+        {
+          "fact": "Decision date 2026-06-15, product code QIH, applicant Anumana, Inc., device name WatchMate Software, traditional 510(k)",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+          "verification": "fda_database"
+        },
+        {
+          "fact": "Indications for use, device description, AI pipeline, training/verification dataset sizes, predicates, clinical study design and results",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K260300.txt",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "NCT07126600: title 'A Data Collection Study for Echocardiography-Based Software Assessment', sponsor Anumana, Inc., observational/prospective, 100 enrolled (actual), status COMPLETED, start 2025-07-11, primary completion 2025-11-19, completion 2025-12-17, 6 U.S. sites (re-confirmed via clinicaltrials.gov API v2 on 2026-09-05)",
+          "url_or_file": "https://clinicaltrials.gov/api/v2/studies/NCT07126600",
+          "verification": "fda_database"
+        },
+        {
+          "fact": "anumana.ai homepage and news page list only ECG-AI products; no WatchMate/LAAC product page found",
+          "url_or_file": "https://anumana.ai/news/",
+          "verification": "company"
+        }
+      ]
+    },
+    {
+      "id": "siemens-syngo-dynamics-auto-ef",
+      "product_name": "syngo Dynamics Auto EF / Extended View Classification / Auto Measures (VA40F, VA41D, VA41F)",
+      "company": "Siemens Healthineers",
+      "company_website": "https://www.siemens-healthineers.com/",
+      "product_url": "https://www.siemens-healthineers.com/en-us/digital-health-solutions/syngo-dynamics",
+      "category": "comprehensive-measurement",
+      "tags": [
+        "LVEF",
+        "LV volumes",
+        "biplane method of disks",
+        "view classification",
+        "Doppler measurements",
+        "PLAX",
+        "PCCP",
+        "reporting workstation",
+        "vendor-neutral",
+        "TTE"
+      ],
+      "modality_scope": [
+        "TTE",
+        "adult",
+        "2D B-mode",
+        "Doppler (Auto Measures)",
+        "contrast (EVC only)"
+      ],
+      "deployment": [
+        "workstation",
+        "client-server on-premise software (hardware not part of device)",
+        "vendor-neutral",
+        "EHR-integrated",
+        "web viewer (non-diagnostic on mobile)"
+      ],
+      "summary": "syngo Dynamics is a multimodality cardiology image management and reporting system. VA40F (K222428, 2022-11-14) added an AI/ML semi-automated biplane LVEF tool (Auto EF) for apical 4- and 2-chamber adult TTE views to a predicate (VA40E) that had only manual EF calculation; VA41D (K242551, 2025-04-03) re-trained the LV auto-contouring model and authorized a PCCP for Auto EF; VA41F (K253689, 2026-04-10) added Auto Measures (8 measurement groups) and Extended View Classification with PCCPs for all three AI functions. Auto EF standalone testing on 150 studies from 3 U.S. sites gave biplane EF Pearson r 0.827 (VA40F) and 0.822 with bias -0.2% EF (VA41D and VA41F) against two-sonographer manual method-of-disks ground truth; Auto Measures and EVC numeric results are not in the summaries.",
+      "intended_use_quote": "syngo Dynamics is intended to be used by trained healthcare professionals in a professional healthcare facility to review, edit, and manipulate image data, as well as to generate quantitative data, qualitative data, and diagnostic reports.",
+      "indications_for_use_quote": "syngo Dynamics is a multimodality, vendor agnostic Cardiology image and information system intended for medical image management and processing that provides capabilities relating to the review and digital processing of medical images. syngo Dynamics supports clinicians by providing post image processing functions for image manipulation, and/or quantification that are intended for use in the interpretation and analysis of medical images for disease detection, diagnosis, and/or patient management within the healthcare institution’s network. syngo Dynamics is not intended to be used for display or diagnosis of digital mammography images in the U.S.",
+      "embedded_ai_features": [
+        "Auto EF: semi-automated LV ejection fraction and volumes (biplane method of disks) in apical 4- and 2-chamber views of adult TTE; includes view classification and image-based cardiac phase (ED/ES) detection plus LV auto-contouring; user can review, edit or reject (VA40F onward; contouring model re-trained in VA41D)",
+        "Auto Measures: semi-automated measurements for 8 measurement groups in adult TTE — PLAX 2D, MV Inflow, AoV Systolic Flow, LVOT Systolic Flow, MR Flow, MV VTI, PV Systolic Flow, TR Flow (VA41F)",
+        "Extended View Classification (EVC): assigns view labels to 2D B-mode TTE clips, including contrast studies, as a workflow aid (VA41F)"
+      ],
+      "clearances": [
+        {
+          "k_number": "K222428",
+          "decision_date": "2022-11-14",
+          "pathway": "510(k)",
+          "product_code": "QIH",
+          "predicates": [
+            "K220832"
+          ],
+          "changes_summary": "Added AI/ML-based optional semi-automated LVEF calculation (Auto EF) on user-selected ultrasound images to the existing manual EF calculation of syngo Dynamics VA40E (K220832, product code LLZ per predicate table, p.4); subject product code QIH. Also added a Portal web-client access strategy (p.9). Applicant (openFDA and summary submitter): Siemens Medical Solutions USA, Inc.",
+          "notable_flags": [
+            "AI/ML Auto EF added to a predicate that had manual EF calculation only",
+            "software-only workstation",
+            "no clinical study (standalone bench testing)",
+            "acceptance criterion r >= 0.800 stated to have been previously used in K210053"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K222428.pdf"
+        },
+        {
+          "k_number": "K242551",
+          "decision_date": "2025-04-03",
+          "pathway": "510(k) with PCCP",
+          "product_code": "QIH",
+          "predicates": [
+            "K222428"
+          ],
+          "changes_summary": "Auto EF LV auto-contouring algorithm updated with pre-training and additional annotated training data; view classification and image-based cardiac phase detection unchanged; UI unchanged; algorithms locked before integration. PCCP authorized for Auto EF covering (1) re-training with additional data, (2) core algorithm optimizations, (3) contrast support. The K242551 comparison table lists ECG among supported modalities for both VA41D and the VA40F predicate (marked Identical), whereas the K222428 table for VA40F did not list ECG. Applicant per openFDA: Siemens Healthcare GmbH (Erlangen); the summary's submitter section (p.5) names Siemens Medical Solutions USA, Inc. The summary once cites the predicate as 'K222482' (p.7), elsewhere K222428.",
+          "notable_flags": [
+            "PCCP",
+            "re-trained algorithm",
+            "same 150-study test set as predicate"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242551.pdf"
+        },
+        {
+          "k_number": "K253689",
+          "decision_date": "2026-04-10",
+          "pathway": "510(k) with PCCP",
+          "product_code": "QIH",
+          "predicates": [
+            "K242551"
+          ],
+          "changes_summary": "Added two new AI/ML device software functions, Auto Measures (8 measurement groups) and Extended View Classification (EVC), alongside unchanged core Auto EF algorithms. Removed the Multi-Modality Cardiovascular (MMCV) deployment and the MPR, MIP/MinIP and VRT visualization functions (pp.9-11). PCCPs authorized for all three AI functions (Auto EF: re-training, optimization, contrast support; Auto Measures: modifications to existing and new measures; EVC: re-training and additional inputs/outputs). Applicant: Siemens Healthcare GmbH (openFDA and summary submitter).",
+          "notable_flags": [
+            "PCCP",
+            "three independent AI/ML DSFs",
+            "contrast studies included in EVC test set",
+            "EVC results provided in IFU rather than summary"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253689.pdf"
+        }
+      ],
+      "performance_claims": [
+        {
+          "k_number": "K222428",
+          "endpoint": "Auto EF biplane LVEF agreement vs manual method of disks",
+          "metric": "Pearson correlation coefficient",
+          "value": "r = 0.827 (P<0.0001); acceptance criterion r ≥ 0.800; all 12 predetermined acceptance criteria met",
+          "comparator": "manual biplane method of disks (modified Simpson) by 2 independent experienced sonographers",
+          "n_studies": 150,
+          "n_patients": null,
+          "n_sites": 3,
+          "dataset_description": "Standalone bench test set, n = 150 studies from 3 U.S. sites in 2 geographic regions, stated to be independent of Auto EF training data; balanced for gender; age 21-93 years (average 64); BMI 16.5-48.8 (average 27.9); Philips, GE and Siemens ultrasound systems; cases across the range of cardiac function. Ground truth: biplane method of disks (modified Simpson) by 2 experienced sonographers working independently without access to Auto EF. K242551 states the same test data and ground truth as VA40F were used; K253689 describes an identically specified test set (same n, sites, demographics) without explicitly stating reuse.",
+          "subgroup_notes": "Reported dataset covariates: gender-balanced; age 21–93; BMI 16.5–48.8; three vendors; range of cardiac function. No per-subgroup performance reported.",
+          "quote": "The Auto EF results are exceeding all 12 defined acceptance criteria. Biplane EF correlation was 0.827 between Auto EF and ground truth (P<0.0001).",
+          "page": 12,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K242551",
+          "endpoint": "Auto EF biplane result yield (cases producing a biplane EF)",
+          "metric": "proportion of cases with biplane result",
+          "value": "140/150 (93.3%) with VA41D vs 138/150 (92.0%) with predicate VA40F",
+          "comparator": "n/a (algorithm output availability)",
+          "n_studies": 150,
+          "n_patients": null,
+          "n_sites": 3,
+          "dataset_description": "Standalone bench test set, n = 150 studies from 3 U.S. sites in 2 geographic regions, stated to be independent of Auto EF training data; balanced for gender; age 21-93 years (average 64); BMI 16.5-48.8 (average 27.9); Philips, GE and Siemens ultrasound systems; cases across the range of cardiac function. Ground truth: biplane method of disks (modified Simpson) by 2 experienced sonographers working independently without access to Auto EF. K242551 states the same test data and ground truth as VA40F were used; K253689 describes an identically specified test set (same n, sites, demographics) without explicitly stating reuse.",
+          "subgroup_notes": "Reported dataset covariates: gender-balanced; age 21–93; BMI 16.5–48.8; three vendors; range of cardiac function. No per-subgroup performance reported.",
+          "quote": "The Auto EF version in the predicate device has biplane results in 138 of 150 cases (92.0%) which is increased to 140 of 150 cases (93.3%) with the subject device.",
+          "page": 13,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K242551",
+          "endpoint": "Auto EF biplane LVEF agreement vs manual method of disks (re-trained algorithm)",
+          "metric": "Pearson correlation coefficient",
+          "value": "r = 0.822 (VA41D) vs 0.826 (predicate VA40F as restated in this summary); all 12 acceptance criteria met",
+          "comparator": "manual biplane method of disks by 2 independent experienced sonographers",
+          "n_studies": 150,
+          "n_patients": null,
+          "n_sites": 3,
+          "dataset_description": "Standalone bench test set, n = 150 studies from 3 U.S. sites in 2 geographic regions, stated to be independent of Auto EF training data; balanced for gender; age 21-93 years (average 64); BMI 16.5-48.8 (average 27.9); Philips, GE and Siemens ultrasound systems; cases across the range of cardiac function. Ground truth: biplane method of disks (modified Simpson) by 2 experienced sonographers working independently without access to Auto EF. K242551 states the same test data and ground truth as VA40F were used; K253689 describes an identically specified test set (same n, sites, demographics) without explicitly stating reuse.",
+          "subgroup_notes": "Reported dataset covariates: gender-balanced; age 21–93; BMI 16.5–48.8; three vendors; range of cardiac function. No per-subgroup performance reported.",
+          "quote": "Biplane EF correlation between Auto EF and ground truth is 0.822 with the subject device compared to 0.826 with the predicate device which is on a similar level .",
+          "page": 13,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K242551",
+          "endpoint": "Auto EF biplane LVEF bias vs manual method of disks",
+          "metric": "bias (absolute EF percentage points)",
+          "value": "−0.2% absolute EF (unchanged from predicate)",
+          "comparator": "manual biplane method of disks by 2 independent experienced sonographers",
+          "n_studies": 150,
+          "n_patients": null,
+          "n_sites": 3,
+          "dataset_description": "Standalone bench test set, n = 150 studies from 3 U.S. sites in 2 geographic regions, stated to be independent of Auto EF training data; balanced for gender; age 21-93 years (average 64); BMI 16.5-48.8 (average 27.9); Philips, GE and Siemens ultrasound systems; cases across the range of cardiac function. Ground truth: biplane method of disks (modified Simpson) by 2 experienced sonographers working independently without access to Auto EF. K242551 states the same test data and ground truth as VA40F were used; K253689 describes an identically specified test set (same n, sites, demographics) without explicitly stating reuse.",
+          "subgroup_notes": "Reported dataset covariates: gender-balanced; age 21–93; BMI 16.5–48.8; three vendors; range of cardiac function. No per-subgroup performance reported.",
+          "quote": "The bias is minimal with -0.2% absolute EF which remains unchanged.",
+          "page": 13,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K242551",
+          "endpoint": "Auto EF proportion of cases with |ΔEF| ≤ 10 EF points vs ground truth",
+          "metric": "coverage (% of cases within ±10 EF points)",
+          "value": "87.9% (VA41D) vs 83.7% (predicate VA40F)",
+          "comparator": "manual biplane method of disks by 2 independent experienced sonographers",
+          "n_studies": 150,
+          "n_patients": null,
+          "n_sites": 3,
+          "dataset_description": "Standalone bench test set, n = 150 studies from 3 U.S. sites in 2 geographic regions, stated to be independent of Auto EF training data; balanced for gender; age 21-93 years (average 64); BMI 16.5-48.8 (average 27.9); Philips, GE and Siemens ultrasound systems; cases across the range of cardiac function. Ground truth: biplane method of disks (modified Simpson) by 2 experienced sonographers working independently without access to Auto EF. K242551 states the same test data and ground truth as VA40F were used; K253689 describes an identically specified test set (same n, sites, demographics) without explicitly stating reuse.",
+          "subgroup_notes": "Reported dataset covariates: gender-balanced; age 21–93; BMI 16.5–48.8; three vendors; range of cardiac function. No per-subgroup performance reported.",
+          "quote": "The coverage plot shows that the absolute biplane EF delta between Auto EF and GT is ≤10% in 87.9% of cases with the subject device which is higher than 83.7% with the predicate device.",
+          "page": 13,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K253689",
+          "endpoint": "Auto EF biplane result yield (unchanged core algorithm)",
+          "metric": "proportion of cases with biplane result",
+          "value": "140/150 (93.3%)",
+          "comparator": "n/a (algorithm output availability)",
+          "n_studies": 150,
+          "n_patients": null,
+          "n_sites": 3,
+          "dataset_description": "Standalone bench test set, n = 150 studies from 3 U.S. sites in 2 geographic regions, stated to be independent of Auto EF training data; balanced for gender; age 21-93 years (average 64); BMI 16.5-48.8 (average 27.9); Philips, GE and Siemens ultrasound systems; cases across the range of cardiac function. Ground truth: biplane method of disks (modified Simpson) by 2 experienced sonographers working independently without access to Auto EF. K242551 states the same test data and ground truth as VA40F were used; K253689 describes an identically specified test set (same n, sites, demographics) without explicitly stating reuse.",
+          "subgroup_notes": "Reported dataset covariates: gender-balanced; age 21–93; BMI 16.5–48.8; three vendors; range of cardiac function. No per-subgroup performance reported.",
+          "quote": "Auto EF has biplane results 140 of 150 cases (93.3%) with the current version.",
+          "page": 13,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K253689",
+          "endpoint": "Auto EF biplane LVEF agreement vs manual method of disks (unchanged core algorithm)",
+          "metric": "Pearson correlation coefficient; bias; coverage",
+          "value": "r = 0.822; bias −0.2% absolute EF; |ΔEF| ≤10 EF units in 87.9% of cases",
+          "comparator": "manual biplane method of disks by 2 independent experienced sonographers",
+          "n_studies": 150,
+          "n_patients": null,
+          "n_sites": 3,
+          "dataset_description": "Standalone bench test set, n = 150 studies from 3 U.S. sites in 2 geographic regions, stated to be independent of Auto EF training data; balanced for gender; age 21-93 years (average 64); BMI 16.5-48.8 (average 27.9); Philips, GE and Siemens ultrasound systems; cases across the range of cardiac function. Ground truth: biplane method of disks (modified Simpson) by 2 experienced sonographers working independently without access to Auto EF. K242551 states the same test data and ground truth as VA40F were used; K253689 describes an identically specified test set (same n, sites, demographics) without explicitly stating reuse.",
+          "subgroup_notes": "Reported dataset covariates: gender-balanced; age 21–93; BMI 16.5–48.8; three vendors; range of cardiac function. No per-subgroup performance reported.",
+          "quote": "Biplane EF correlation was 0.822 between Auto EF and ground truth. The bias is minimal with -0.2% absolute EF. The coverage plot shows that the absolute biplane EF delta between Auto EF and GT is ≤10% EF units in 87.9% of cases.",
+          "page": 13,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K253689",
+          "endpoint": "Auto Measures (8 measurement groups) agreement vs sonographer ground truth",
+          "metric": "predefined acceptance criteria (metrics not disclosed)",
+          "value": "Exceeded all predefined acceptance criteria; numeric results not given in summary",
+          "comparator": "ground truth established by 2 experienced sonographers",
+          "n_studies": null,
+          "n_patients": 150,
+          "n_sites": 3,
+          "dataset_description": "Auto Measures bench test data from 3 U.S. sites in 2 regions; gender balanced; age range of intended-use population; Philips, GE and Siemens each with at least 25% representation; each of 8 measurement groups (PLAX 2D, MV Inflow, AoV Systolic Flow, LVOT Systolic Flow, MR Flow, MV VTI, PV Systolic Flow, TR Flow) tested on 150 images from unique patients; ground truth by 2 experienced sonographers.",
+          "subgroup_notes": "150 images from unique patients per measurement group (8 groups; n_patients = 150 per group, not pooled); each vendor >= 25%; gender balanced; age range of intended-use population; no per-group numeric results in summary",
+          "quote": "Each Measurement Group has a test set consisting of 150 images from unique patients. The ground truth was established by 2 experienced sonographers. The Auto Measure results are exceeding all predefined acceptance criteria.",
+          "page": 13,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K253689",
+          "endpoint": "Extended View Classification accuracy and processing success vs manual labels",
+          "metric": "predefined acceptance criteria for processing success and overall view classification accuracy (values not disclosed)",
+          "value": "Met or exceeded all predefined acceptance criteria; results stated to be provided in the Instructions for Use",
+          "comparator": "manual clinical-review view labels",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": 3,
+          "dataset_description": "EVC test set: TTE studies with and without contrast from 3 U.S. sites in 2 regions, independent of EVC training data; gender balanced; age 21–93 (mean 66); BMI 13.5–52.7 (mean 29.5); Philips, GE and Siemens; ground truth by manual clinical review labeling. Number of studies/clips not stated in summary.",
+          "subgroup_notes": "Gender balanced; age 21–93 (mean 66); BMI 13.5–52.7 (mean 29.5); three vendors; studies with and without contrast",
+          "quote": "Predefined acceptance criteria were established for EVC performance, including requirements for successful processing of supported clips and overall view classification accuracy relative to the ground truth. The EVC algorithm met or exceeded all predefined acceptance criteria.",
+          "page": 14,
+          "verification": "fda_summary"
+        }
+      ],
+      "training_data": {
+        "disclosed": false,
+        "n_studies": null,
+        "n_patients": null,
+        "n_sites": null,
+        "description": "Training set sizes are not disclosed in any of the three summaries. K242551 states only that the LV auto contouring algorithm 'has been updated with pre-training and additional annotated training data' (p.13) and that the algorithm 'is re-trained with more training data' (p.11). Test data are stated to be independent of the training data for Auto EF (K222428 p.12, K242551 p.13, K253689 p.13) and for EVC (K253689 p.14). The draft's quote from the Siemens academy Auto EF page ('utilizes a database of typical adult transthoracic images') could not be verified: the page is JavaScript-rendered and returned no article text in this session.",
+        "source": "K242551 510(k) summary pages 11 and 13; K222428 page 12; K253689 pages 13-14",
+        "verification": "fda_summary"
+      },
+      "validation_data": {
+        "n_studies": 150,
+        "n_patients": null,
+        "n_sites": 3,
+        "description": "Auto EF: 150-study standalone test set from 3 U.S. sites (2 regions), gender balanced, age 21-93 (average 64), BMI 16.5-48.8 (average 27.9), Philips/GE/Siemens systems, range of cardiac function; ground truth by 2 independent sonographers (biplane MOD); K242551 states reuse of the VA40F test data and ground truth, and K253689 describes an identically specified set. Auto Measures (VA41F): 150 images from unique patients per each of 8 measurement groups, 3 U.S. sites, each vendor >= 25%, ground truth by 2 sonographers. EVC (VA41F): TTE studies with and without contrast from 3 U.S. sites, gender balanced, age 21-93 (average 66), BMI 13.5-52.7 (average 29.5), Philips/GE/Siemens; number of studies/clips not stated; ground truth by manual clinical-review labeling. No clinical (in-use) studies were performed for any version (K222428 p.11, K242551 p.12, K253689 p.12).",
+        "independent_of_training": true,
+        "source": "K222428 page 12; K242551 page 13; K253689 pages 13-14",
+        "verification": "fda_summary"
+      },
+      "prior_validations": [
+        {
+          "description": "Draft quoted a Siemens Healthineers Academy page for Auto EF (VA41A and higher) stating the tool is validated only for apical 4- and 2-chamber images and not for Doppler, contrast, or horizontally/vertically flipped images. The page is JavaScript-rendered and returned no article text when fetched in this session, so these quotes are unconfirmed. The FDA summaries independently limit Auto EF to apical 4 and 2 chamber views of adult TTE (K253689 p.13) and list contrast support only as a planned PCCP modification.",
+          "source_url": "https://academy.siemens-healthineers.com/en-us/auto-ef-va41a/",
+          "verification": "unverified"
+        },
+        {
+          "description": "Siemens USA product page (fetched 2026-09-05): 'Echocardiography AI: automated measurements and view classification - no additional software launch required' and 'syngo Dynamics enables vendor-agnostic, semi-automated off-cart view classification and routine echo measurements directly within the application.' No performance data on the page.",
+          "source_url": "https://www.siemens-healthineers.com/en-us/digital-health-solutions/syngo-dynamics",
+          "verification": "company"
+        }
+      ],
+      "papers": [],
+      "clinical_trials": [],
+      "open_questions": [
+        "No peer-reviewed publication describing or validating the syngo Dynamics Auto EF, Auto Measures, or Extended View Classification algorithms was found in PubMed as of 2026-09-05. Queries run: 'syngo Dynamics' AND (ejection fraction OR echocardiograph*) (4 hits: 2008-2013 CT/VVI/TAVI papers, none about Auto EF); 'syngo Dynamics'[All Fields] (30 hits, none about these AI functions); 'Siemens Healthineers' AND (Auto EF OR automated ejection fraction) AND echocardiography (0); '\"syngo Dynamics\" AND view classification' (0); 'automated ejection fraction AND syngo' (6 hits about MRI/CT/HCM/on-cart tools, not syngo Dynamics). Older 'syngo Auto EF' literature refers to the on-cart ACUSON scanner feature, a different product, and is excluded.",
+        "Training data size, number of sites, vendors, and demographics are not disclosed for any of the three AI functions.",
+        "Discrepancy across summaries: K222428 reports the VA40F biplane EF correlation as 0.827, whereas K242551 restates the predicate (VA40F) value as 0.826.",
+        "The K242551 summary cites the predicate once as 'K222482' (page 7) and elsewhere as K222428; confirmed in the text and treated as a typo for K222428.",
+        "Numeric performance results for Auto Measures and EVC (accuracy, agreement, processing success rates) are not in the K253689 summary; they are stated to be in the Instructions for Use, which was not retrieved.",
+        "Number of patients (vs studies/images) in the 150-study Auto EF test set and whether the same studies were used for the Auto Measures groups is not stated.",
+        "Whether the acceptance-criteria reference K210053 (cited in K222428) is a Siemens or third-party device was not verified in this session.",
+        "The 2023 Nature randomized trial of sonographer vs AI EF (He et al., DOI 10.1038/s41586-023-05947-3, resolved via Crossref) used syngo Dynamics VA40D as the reporting workstation but evaluated the EchoNet-Dynamic model, not Siemens Auto EF; it is therefore not listed as a validation of this product.",
+        "Applicant naming: openFDA lists Siemens Healthcare GmbH for K242551, but the K242551 summary submitter section (p.5) lists Siemens Medical Solutions USA, Inc.; openFDA is recorded as authoritative."
+      ],
+      "sources": [
+        {
+          "fact": "K222428: decision 2022-11-14, QIH, applicant Siemens Medical Solutions USA, Inc., device 'Syngo Dynamics (Version VA40F)'",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+          "verification": "fda_database"
+        },
+        {
+          "fact": "K242551: decision 2025-04-03, QIH, applicant Siemens Healthcare GmbH, device 'syngo Dynamics (Version VA41D)'",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+          "verification": "fda_database"
+        },
+        {
+          "fact": "K253689: decision 2026-04-10, QIH, applicant Siemens Healthcare GmbH, device 'syngo Dynamics (VA41F)'",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+          "verification": "fda_database"
+        },
+        {
+          "fact": "VA40F: Auto EF added; test set n=150, 3 U.S. sites, demographics, vendors; r=0.827; 12 acceptance criteria; predicate K220832",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K222428.txt",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "VA41D: re-trained contouring model; 138→140/150 biplane yield; r 0.822 vs 0.826; bias −0.2%; coverage 87.9% vs 83.7%; PCCP for Auto EF",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K242551.txt",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "VA41F: Auto Measures (8 groups, 150 images/group) and EVC added; Auto EF unchanged; MMCV/3D visualization removed; PCCPs for all three AI functions",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K253689.txt",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "Academy page for Auto EF (VA41A) could not be read (JavaScript shell only); quoted validation caveats unconfirmed",
+          "url_or_file": "https://academy.siemens-healthineers.com/en-us/auto-ef-va41a/",
+          "verification": "unverified"
+        },
+        {
+          "fact": "Product page language on Echo AI automated measurements and view classification; vendor-agnostic off-cart (fetched and confirmed 2026-09-05)",
+          "url_or_file": "https://www.siemens-healthineers.com/en-us/digital-health-solutions/syngo-dynamics",
+          "verification": "company"
+        }
+      ]
+    }
+  ],
+  "notes": "Verified copy. All decision dates, product codes, applicants and device names match openFDA for K260300, K222428, K242551 and K253689. All performance quotes were located in the cited FDA summary text files at the cited pages (one WatchMate quote spans pages 18-19). PubMed re-searches (2-4 extra queries per family) found no papers about either product; papers arrays remain empty. Two company/news sources cited in the draft could not be retrieved (Siemens academy page is a JavaScript shell; BusinessWire release connection failed) and were downgraded to unverified. Numeric values appear only where stated in FDA text or clinicaltrials.gov; the single derived figure (72% per-protocol yield) is labeled as arithmetic."
+}

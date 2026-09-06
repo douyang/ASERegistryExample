@@ -1,0 +1,1027 @@
+{
+ "batch_id": "as-detection",
+ "families": [
+  {
+   "id": "aisap-cardio",
+   "product_name": "AISAP CARDIO V1.0",
+   "company": "AISAP Ltd",
+   "company_website": "https://www.aisap.ai/",
+   "product_url": null,
+   "category": "disease-detection",
+   "tags": [
+    "aortic stenosis",
+    "mitral regurgitation",
+    "tricuspid regurgitation",
+    "aortic regurgitation",
+    "LVEF",
+    "IVC",
+    "RV FAC",
+    "POCUS",
+    "multi-finding",
+    "CADx",
+    "POK",
+    "QIH"
+   ],
+   "modality_scope": [
+    "POCUS",
+    "TTE",
+    "handheld"
+   ],
+   "deployment": [
+    "cloud",
+    "vendor-neutral",
+    "PACS-integrated"
+   ],
+   "summary": "AISAP CARDIO V1.0 is machine-learning decision-support software (product codes POK/QIH, 21 CFR 892.2060) that processes acquired adult cardiac POCUS DICOM images and reports a 2-level (none-mild vs more than mild) and 4-class ASE-category assessment of mitral, tricuspid and aortic regurgitation and aortic stenosis, plus LVEF, LVEDD, RV FAC, IVC diameter, aortic root diameter and atrial areas. Cleared 2024-08-01 (K234141) with Ultromics EchoGo Pro (K201555) and EchoGo Core 2.0 (K213275) as predicates, supported by standalone measurement (200 cases), standalone valve (329 cases) and MRMC (260 cases) studies on prospectively collected POCUS exams from 4 US/Israel sites.",
+   "intended_use_quote": "AISAP CARDIO V1.0 is a software platform that automatically processes and analyzes acquired cardiac POCUS images, producing a report with diagnostic assessment and measurements of several key cardiac structural and functional parameters, including: presence of valvular pathology (regurgitations of the mitral, tricuspid, aortic valves and aortic stenosis), and measurements of the Left Ventricle Ejection Fraction (LVEF), right and left ventricular dimensions, right ventricular fractional area change (RV FAC), atrial areas, ascending aorta diameter, and inferior vena cava (IVC) diameter. The device outputs are provided in a report that is intended to support qualified physicians in their analysis and interpretation of adult cardiac POCUS images, using FDA-cleared ultrasound devices. Physicians should be trained and privileged by their organization following education processes and should perform cardiac POCUS according to their specialty professional society clinical guidelines. AISAP CARDIO V1.0 has not been validated for the assessment of congenital heart disease, and/or intra-cardiac lesions (e.g., tumors, thrombi, vegetations), prosthetic valves, and in the presence of ventricular assist devices. AISAP CARDIO V1.0 is indicated for use in adult patients only.",
+   "indications_for_use_quote": "AISAP CARDIO V1.0 is a software platform that automatically processes and analyzes acquired cardiac POCUS images, producing a report with diagnostic assessment and measurements of several key cardiac structural and functional parameters, including: presence of valvular pathology (regurgitations of the mitral, tricuspid, aortic valves and aortic stenosis), and measurements of the Left Ventricle Ejection Fraction (LVEF), right and left ventricular dimensions, right ventricular fractional area change (RV FAC), atrial areas, ascending aorta diameter, and inferior vena cava (IVC) diameter. The device outputs are provided in a report that is intended to support qualified physicians in their analysis and interpretation of adult cardiac POCUS images, using FDA-cleared ultrasound devices. Physicians should be trained and privileged by their organization following education processes and should perform cardiac POCUS according to their specialty professional society clinical guidelines. AISAP CARDIO V1.0 has not been validated for the assessment of congenital heart disease, and/or intra-cardiac lesions (e.g., tumors, thrombi, vegetations), prosthetic valves, and in the presence of ventricular assist devices. AISAP CARDIO V1.0 is indicated for use in adult patients only.",
+   "embedded_ai_features": [
+    "Valvular pathology >mild vs none-to-mild classification (MR, TR, AR, AS)",
+    "4-class ASE severity category (none/mild/moderate/severe) for MR, TR, AR, AS",
+    "LVEF (%)",
+    "LV end-diastolic diameter",
+    "RV fractional area change",
+    "IVC maximal diameter",
+    "Aortic root diameter",
+    "RA area",
+    "LA area",
+    "Automatic view classification and ROI selection"
+   ],
+   "clearances": [
+    {
+     "k_number": "K234141",
+     "decision_date": "2024-08-01",
+     "pathway": "510(k)",
+     "product_code": "POK",
+     "predicates": [
+      "K201555",
+      "K213275"
+     ],
+     "changes_summary": "Initial clearance (V1.0). Versus predicates: output is categorical assessment of >mild valvular pathology (MR, AS, AR, TR) rather than CAD likelihood; adds a secondary 4-grade classification per valve; adds measurements not in secondary predicate (IVC diameter, RV FAC). Secondary product code QIH.",
+     "notable_flags": [
+      "cloud",
+      "POCUS",
+      "multi-vendor",
+      "secondary product code QIH",
+      "Israel-based applicant"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K234141.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K234141",
+     "endpoint": "LVEF vs mean of 3 cardiologists (ASE)",
+     "metric": "RMSE",
+     "value": "6.20% (95% CI 5.57-6.83); success criterion <7%",
+     "comparator": "Mean of 3 US board-certified cardiologists' measurements per ASE guidelines",
+     "n_studies": null,
+     "n_patients": 197,
+     "n_sites": 4,
+     "dataset_description": "Prospectively collected cardiac POCUS exams from 4 clinical reader sites in the United States (51% of cases) and Israel; multiple ultrasound vendors (Philips 41%, GE 28%, Wisonic 12.5%, EchoNous 18.5%); in-patient and out-patient; scans by physicians and sonographers; 13% Black or African, 5.5% Asian, 4% Hispanic or Latino; age 68±16.39 y, 36.8% female, BMI 26.69±4.97.",
+     "subgroup_notes": "Subgroups reported in labeling: sex, age >65, BMI (WHO categories), LVEF categories, device manufacturer, image quality score, US/OUS, physician vs sonographer scanner; summary states acceptable RMSE across subgroups, mostly lower (or similar for LVEDD) than mean RMSE of the 3 ground-truth cardiologists.",
+     "quote": "Left Ventricular Ejection Fraction (LVEF): RMSE of 6.20% (CI 5.57-6.83), indicating high accuracy. [table p.10: LVEF Primary 197 < 7% 6.20% (5.57-6.83)]",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K234141",
+     "endpoint": "IVC maximal diameter vs cardiologists",
+     "metric": "RMSE",
+     "value": "0.25 cm (95% CI 0.20-0.29); success criterion <0.3 cm",
+     "comparator": "Mean of 3 cardiologists",
+     "n_studies": null,
+     "n_patients": 175,
+     "n_sites": 4,
+     "dataset_description": "Prospectively collected cardiac POCUS exams from 4 clinical reader sites in the United States (51% of cases) and Israel; multiple ultrasound vendors (Philips 41%, GE 28%, Wisonic 12.5%, EchoNous 18.5%); in-patient and out-patient; scans by physicians and sonographers; 13% Black or African, 5.5% Asian, 4% Hispanic or Latino; age 68±16.39 y, 36.8% female, BMI 26.69±4.97.",
+     "subgroup_notes": "Subgroups reported in labeling: sex, age >65, BMI (WHO categories), LVEF categories, device manufacturer, image quality score, US/OUS, physician vs sonographer scanner; summary states acceptable RMSE across subgroups, mostly lower (or similar for LVEDD) than mean RMSE of the 3 ground-truth cardiologists.",
+     "quote": "Inferior Vena Cava (IVC) Maximal Diameter: RMSE of 0.25 cm (CI 0.20-0.29), well below the success threshold and below ground truth cardiologist RMSE. [table p.10: IVC maximal diameter Primary 175 < 0.3 0.25cm (0.20,0.29)]",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K234141",
+     "endpoint": "Left atrium area vs cardiologists",
+     "metric": "RMSE",
+     "value": "2.39 cm2 (95% CI 1.96-2.82); success criterion <4.28",
+     "comparator": "Mean of 3 cardiologists",
+     "n_studies": null,
+     "n_patients": 188,
+     "n_sites": 4,
+     "dataset_description": "Prospectively collected cardiac POCUS exams from 4 clinical reader sites in the United States (51% of cases) and Israel; multiple ultrasound vendors (Philips 41%, GE 28%, Wisonic 12.5%, EchoNous 18.5%); in-patient and out-patient; scans by physicians and sonographers; 13% Black or African, 5.5% Asian, 4% Hispanic or Latino; age 68±16.39 y, 36.8% female, BMI 26.69±4.97.",
+     "subgroup_notes": "Subgroups reported in labeling: sex, age >65, BMI (WHO categories), LVEF categories, device manufacturer, image quality score, US/OUS, physician vs sonographer scanner; summary states acceptable RMSE across subgroups, mostly lower (or similar for LVEDD) than mean RMSE of the 3 ground-truth cardiologists.",
+     "quote": "Left atrium (LA) area Secondary 188 < 4.28 2.39cm2 (1.96,2.82)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K234141",
+     "endpoint": "Right atrium area vs cardiologists",
+     "metric": "RMSE",
+     "value": "2.11 cm2 (95% CI 1.75-2.47); success criterion <3.36",
+     "comparator": "Mean of 3 cardiologists",
+     "n_studies": null,
+     "n_patients": 178,
+     "n_sites": 4,
+     "dataset_description": "Prospectively collected cardiac POCUS exams from 4 clinical reader sites in the United States (51% of cases) and Israel; multiple ultrasound vendors (Philips 41%, GE 28%, Wisonic 12.5%, EchoNous 18.5%); in-patient and out-patient; scans by physicians and sonographers; 13% Black or African, 5.5% Asian, 4% Hispanic or Latino; age 68±16.39 y, 36.8% female, BMI 26.69±4.97.",
+     "subgroup_notes": "Subgroups reported in labeling: sex, age >65, BMI (WHO categories), LVEF categories, device manufacturer, image quality score, US/OUS, physician vs sonographer scanner; summary states acceptable RMSE across subgroups, mostly lower (or similar for LVEDD) than mean RMSE of the 3 ground-truth cardiologists.",
+     "quote": "Right atrium (RA) area Secondary 178 < 3.36 2.11cm 2 (1.75,2.47)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K234141",
+     "endpoint": "LV end-diastolic diameter vs cardiologists",
+     "metric": "RMSE",
+     "value": "5.06 mm (95% CI 4.58-5.55); success criterion <9.15",
+     "comparator": "Mean of 3 cardiologists",
+     "n_studies": null,
+     "n_patients": 173,
+     "n_sites": 4,
+     "dataset_description": "Prospectively collected cardiac POCUS exams from 4 clinical reader sites in the United States (51% of cases) and Israel; multiple ultrasound vendors (Philips 41%, GE 28%, Wisonic 12.5%, EchoNous 18.5%); in-patient and out-patient; scans by physicians and sonographers; 13% Black or African, 5.5% Asian, 4% Hispanic or Latino; age 68±16.39 y, 36.8% female, BMI 26.69±4.97.",
+     "subgroup_notes": "Subgroups reported in labeling: sex, age >65, BMI (WHO categories), LVEF categories, device manufacturer, image quality score, US/OUS, physician vs sonographer scanner; summary states acceptable RMSE across subgroups, mostly lower (or similar for LVEDD) than mean RMSE of the 3 ground-truth cardiologists.",
+     "quote": "LV end diastolic diameter Secondary 173 < 9.15 5.06mm (4.58,5.55)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K234141",
+     "endpoint": "RV fractional area change vs cardiologists",
+     "metric": "RMSE",
+     "value": "10.17% (95% CI 9.01-11.33); success criterion <9.12 (point estimate exceeds the stated criterion)",
+     "comparator": "Mean of 3 cardiologists",
+     "n_studies": null,
+     "n_patients": 161,
+     "n_sites": 4,
+     "dataset_description": "Prospectively collected cardiac POCUS exams from 4 clinical reader sites in the United States (51% of cases) and Israel; multiple ultrasound vendors (Philips 41%, GE 28%, Wisonic 12.5%, EchoNous 18.5%); in-patient and out-patient; scans by physicians and sonographers; 13% Black or African, 5.5% Asian, 4% Hispanic or Latino; age 68±16.39 y, 36.8% female, BMI 26.69±4.97.",
+     "subgroup_notes": "Subgroups reported in labeling: sex, age >65, BMI (WHO categories), LVEF categories, device manufacturer, image quality score, US/OUS, physician vs sonographer scanner; summary states acceptable RMSE across subgroups, mostly lower (or similar for LVEDD) than mean RMSE of the 3 ground-truth cardiologists.",
+     "quote": "Right ventricle (RV) fractional area change (FAC) Secondary 161 < 9.12 10.17% (9.01,11.33 )",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K234141",
+     "endpoint": "Aortic root diameter vs cardiologists",
+     "metric": "RMSE",
+     "value": "0.19 cm (95% CI 0.16-0.21); success criterion <0.62",
+     "comparator": "Mean of 3 cardiologists",
+     "n_studies": null,
+     "n_patients": 197,
+     "n_sites": 4,
+     "dataset_description": "Prospectively collected cardiac POCUS exams from 4 clinical reader sites in the United States (51% of cases) and Israel; multiple ultrasound vendors (Philips 41%, GE 28%, Wisonic 12.5%, EchoNous 18.5%); in-patient and out-patient; scans by physicians and sonographers; 13% Black or African, 5.5% Asian, 4% Hispanic or Latino; age 68±16.39 y, 36.8% female, BMI 26.69±4.97.",
+     "subgroup_notes": "Subgroups reported in labeling: sex, age >65, BMI (WHO categories), LVEF categories, device manufacturer, image quality score, US/OUS, physician vs sonographer scanner; summary states acceptable RMSE across subgroups, mostly lower (or similar for LVEDD) than mean RMSE of the 3 ground-truth cardiologists.",
+     "quote": "Aortic root diameter Secondary 197 < 0.62 0.19cm (0.16,0.21)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K234141",
+     "endpoint": "Mitral regurgitation > mild, standalone detection",
+     "metric": "AUC / sensitivity / specificity / kappa",
+     "value": "AUC 0.975 (0.960-0.987); sensitivity 95.3% (90.5-98.9); specificity 90.2% (86.3-93.9); kappa 0.879 (0.852-0.906)",
+     "comparator": "Cardiologist interpretations (summary p.10: 'device outputs compared to cardiologist interpretations'; the 2+1 US board-certified adjudication is described only for the 260-case reader study, not for this 329-case standalone study)",
+     "n_studies": null,
+     "n_patients": 310,
+     "n_sites": 4,
+     "dataset_description": "Prospectively collected cardiac POCUS exams from 4 clinical reader sites in the United States (51% of cases) and Israel; multiple ultrasound vendors (Philips 41%, GE 28%, Wisonic 12.5%, EchoNous 18.5%); in-patient and out-patient; scans by physicians and sonographers; 13% Black or African, 5.5% Asian, 4% Hispanic or Latino; age 68±16.39 y, 36.8% female, BMI 26.69±4.97. Standalone valve study: 329 cases.",
+     "subgroup_notes": "Subgroups: sex, age >65, BMI WHO groups, LVEF categories, device manufacturer, image quality score, US/OUS, physician vs sonographer, presence of concomitant significant valve disease; 'Across all the subgroups detailed above, the AUC attained was well above the prespecified success criteria of AUC > 0.80.' (p.11)",
+     "quote": "MR 310 0.975 (0.960,0.987) 95.3% (90.5,98.9) 90.2% (86.3,93.9) 0.879 (0.852,0.906)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K234141",
+     "endpoint": "Aortic stenosis > mild, standalone detection",
+     "metric": "AUC / sensitivity / specificity / kappa",
+     "value": "AUC 0.969 (0.950-0.984); sensitivity 86.5% (76.2-95.7); specificity 94.5% (91.3-97.3); kappa 0.865 (0.825-0.901); acceptance AUC >0.80",
+     "comparator": "Cardiologist interpretation",
+     "n_studies": null,
+     "n_patients": 272,
+     "n_sites": 4,
+     "dataset_description": "Prospectively collected cardiac POCUS exams from 4 clinical reader sites in the United States (51% of cases) and Israel; multiple ultrasound vendors (Philips 41%, GE 28%, Wisonic 12.5%, EchoNous 18.5%); in-patient and out-patient; scans by physicians and sonographers; 13% Black or African, 5.5% Asian, 4% Hispanic or Latino; age 68±16.39 y, 36.8% female, BMI 26.69±4.97. Standalone valve study: 329 cases.",
+     "subgroup_notes": "Subgroups: sex, age >65, BMI WHO groups, LVEF categories, device manufacturer, image quality score, US/OUS, physician vs sonographer, presence of concomitant significant valve disease; 'Across all the subgroups detailed above, the AUC attained was well above the prespecified success criteria of AUC > 0.80.' (p.11)",
+     "quote": "AS 272 0.969 (0.950,0.984) 86.5% (76.2,95.7) 94.5% (91.3,97.3) 0.865 (0.825,0.901)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K234141",
+     "endpoint": "Aortic regurgitation > mild, standalone detection",
+     "metric": "AUC / sensitivity / specificity / kappa",
+     "value": "AUC 0.993 (0.986-0.999); sensitivity 96.5% (91.3-100.0); specificity 97.0% (94.9-98.9); kappa 0.913 (0.892-0.932)",
+     "comparator": "Cardiologist interpretation",
+     "n_studies": null,
+     "n_patients": 323,
+     "n_sites": 4,
+     "dataset_description": "Prospectively collected cardiac POCUS exams from 4 clinical reader sites in the United States (51% of cases) and Israel; multiple ultrasound vendors (Philips 41%, GE 28%, Wisonic 12.5%, EchoNous 18.5%); in-patient and out-patient; scans by physicians and sonographers; 13% Black or African, 5.5% Asian, 4% Hispanic or Latino; age 68±16.39 y, 36.8% female, BMI 26.69±4.97. Standalone valve study: 329 cases.",
+     "subgroup_notes": "Subgroups: sex, age >65, BMI WHO groups, LVEF categories, device manufacturer, image quality score, US/OUS, physician vs sonographer, presence of concomitant significant valve disease; 'Across all the subgroups detailed above, the AUC attained was well above the prespecified success criteria of AUC > 0.80.' (p.11)",
+     "quote": "AR 323 0.993 (0.986,0.999) 96.5% (91.3,100.0) 97.0% (94.9,98.9) 0.913 (0.892,0.932)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K234141",
+     "endpoint": "Tricuspid regurgitation > mild, standalone detection",
+     "metric": "AUC / sensitivity / specificity / kappa",
+     "value": "AUC 0.973 (0.955-0.987); sensitivity 93.5% (86.9-98.5); specificity 89.3% (85.2-93.1); kappa 0.879 (0.854-0.905)",
+     "comparator": "Cardiologist interpretation",
+     "n_studies": null,
+     "n_patients": 295,
+     "n_sites": 4,
+     "dataset_description": "Prospectively collected cardiac POCUS exams from 4 clinical reader sites in the United States (51% of cases) and Israel; multiple ultrasound vendors (Philips 41%, GE 28%, Wisonic 12.5%, EchoNous 18.5%); in-patient and out-patient; scans by physicians and sonographers; 13% Black or African, 5.5% Asian, 4% Hispanic or Latino; age 68±16.39 y, 36.8% female, BMI 26.69±4.97. Standalone valve study: 329 cases.",
+     "subgroup_notes": "Subgroups: sex, age >65, BMI WHO groups, LVEF categories, device manufacturer, image quality score, US/OUS, physician vs sonographer, presence of concomitant significant valve disease; 'Across all the subgroups detailed above, the AUC attained was well above the prespecified success criteria of AUC > 0.80.' (p.11)",
+     "quote": "TR 295 0.973 (0.955,0.987) 93.5% (86.9,98.5) 89.3% (85.2,93.1) 0.879 (0.854,0.905)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K234141",
+     "endpoint": "MRMC reader study: MR grading, aided vs unaided",
+     "metric": "AUC (aided vs unaided)",
+     "value": "Aided 0.963 (0.943-0.984) vs unaided 0.870 (0.807-0.934); kappa 0.881 vs 0.756 (+0.125); accuracy 73.6% vs 61.6% (+12.0%)",
+     "comparator": "Ground truth: 2 US board-certified cardiologists + third adjudicator (2+1)",
+     "n_studies": null,
+     "n_patients": 259,
+     "n_sites": 4,
+     "dataset_description": "Fully crossed, randomized prospective MRMC study of 260 cases; readers assessed each case with and without device aid with a memory washout; passing criterion: lower bound of 95% CI of AUC(aided)-AUC(unaided) above zero. Number of readers not stated in summary.",
+     "subgroup_notes": "Subgroup analysis by reader specialty and reader country of origin; AUC increase with aid across subgroups (p.11-12).",
+     "quote": "MR 259 0.963 (0.943,0.984) 0.870 (0.807,0.934) ... MR Kappa Accuracy 0.881 (0.872,0.890) 73.6% (71.9%,75.2%) 0.756 (0.737,0.774) 61.6% (59.8%,63.4%) 0.125 12.0%",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K234141",
+     "endpoint": "MRMC reader study: TR grading, aided vs unaided",
+     "metric": "AUC (aided vs unaided)",
+     "value": "Aided 0.937 (0.903-0.971) vs unaided 0.851 (0.794-0.907); kappa 0.881 vs 0.765 (+0.116); accuracy 75.3% vs 64.1% (+11.2%)",
+     "comparator": "2+1 cardiologist ground truth",
+     "n_studies": null,
+     "n_patients": 256,
+     "n_sites": 4,
+     "dataset_description": "MRMC, 260 cases (see MR row).",
+     "subgroup_notes": "Reader specialty and country subgroups reported.",
+     "quote": "TR 256 0.937 (0.903,0.971) 0.851 (0.794,0.907) ... TR Kappa Accuracy 0.881 (0.871,0.892) 75.3% (73.6%,77.0%) 0.765 (0.747,0.783) 64.1% (62.2%,65.9%) 0.116 11.2%",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K234141",
+     "endpoint": "MRMC reader study: AR grading, aided vs unaided",
+     "metric": "AUC (aided vs unaided)",
+     "value": "Aided 0.947 (0.899-0.995) vs unaided 0.868 (0.789-0.947); kappa 0.913 vs 0.815 (+0.098); accuracy 80.6% vs 71.7% (+8.9%)",
+     "comparator": "2+1 cardiologist ground truth",
+     "n_studies": null,
+     "n_patients": 260,
+     "n_sites": 4,
+     "dataset_description": "MRMC, 260 cases (see MR row).",
+     "subgroup_notes": "Reader specialty and country subgroups reported.",
+     "quote": "AR 260 0.947 (0.899,0.995) 0.868 (0.789,0.947) ... AR Kappa Accuracy 0.913 (0.905,0.921) 80.6% (79.1%,82.1%) 0.815 (0.798,0.831) 71.7% (70.0%,73.3%) 0.098 8.9%",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K234141",
+     "endpoint": "MRMC reader study: AS grading, aided vs unaided",
+     "metric": "AUC (aided vs unaided)",
+     "value": "Aided 0.925 (0.895-0.954) vs unaided 0.897 (0.851-0.944); kappa 0.850 vs 0.792 (+0.058); accuracy 74.7% vs 69.8% (+4.9%)",
+     "comparator": "2+1 cardiologist ground truth",
+     "n_studies": null,
+     "n_patients": 257,
+     "n_sites": 4,
+     "dataset_description": "MRMC, 260 cases (see MR row).",
+     "subgroup_notes": "Reader specialty and country subgroups reported.",
+     "quote": "AS 257 0.925 (0.895,0.954) 0.897 (0.851,0.944) ... AS Kappa Accuracy 0.850 (0.834,0.864) 74.7% (73.0%,76.3%) 0.792 (0.773,0.809) 69.8% (68.1%,71.6%) 0.058 4.9%",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K234141",
+     "endpoint": "View classification accuracy (PLAX, PSAX, A4C, SC IVC)",
+     "metric": "% correct per view",
+     "value": "PLAX 500/500; PSAX 496/500; A4C 495/500; SC IVC 494/500; acceptance >95%",
+     "comparator": "2 certified experienced echo technicians (30% over-read by lead technician, 10% by senior cardiologist)",
+     "n_studies": 2000,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "500 sampled loops per cardiac view (4 views; 2,000 loops in total, derived) from the clinical study dataset, classified by the view-classification phase as a valid view. n_studies counts loops, not exams.",
+     "subgroup_notes": null,
+     "quote": "Correct identification of the video clip view classification: i. PLAX - 500/500 ii. PSAX - 496/500 iii. A4C - 495/500 iv. SC IVC - 494/500 e. Conclusion - Accuracy greater than 98% for all the relevant echocardiographic views.",
+     "page": 12,
+     "verification": "fda_summary"
+    }
+   ],
+   "training_data": {
+    "disclosed": true,
+    "n_studies": 140000,
+    "n_patients": null,
+    "n_sites": 2,
+    "description": "'The AISAP CARDIO V1.0 algorithms were trained at 2 academic institutions that perform cardiac ultrasound examinations and interpretations according to ASE guidelines. Over 140,000 individual exams were used for training the machine learning models representing > 1 billion frames.' (p.5). Training cohort table (p.6): age 67±16.73 y; 39.6% female; POCUS device (not high-end cardiac system) 25.9%; bedside exam outside echo lab 23.8%; cardiac valve disease of any severity 40.7%; hypertension 41.9%; IHD 17.5%; DM 15.2%; HF/CMP 5.8%. n_studies is a floor ('over 140,000').",
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K234141.pdf",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": 4,
+    "description": "'The study cohort consisted of cardiac POCUS exams that have been collected prospectively at 4 clinical reader sites in the United States (51% of cases) and Israel.' 260 de-identified cases for the reader study, 329 for the standalone valve study, 200 for the standalone measurement study; average 23.7 loops per case; vendors Philips 41%, GE 28%, Wisonic 12.5%, EchoNous 18.5%; 13% Black or African, 5.5% Asian, 4% Hispanic or Latino (p.8-9). Whether the three study cohorts overlap is not stated.",
+    "independent_of_training": null,
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K234141.pdf",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "AISAP FDA-clearance press coverage (DAIC, Aug 2024) states MRMC clinical trials were run at six institutions (Mass General Brigham, Thomas Jefferson University Hospital, Mayo Clinic, Inova Fairfax, Crozer-Chester, Stony Brook), that the model was 'trained on hundreds of thousands of studies comprising over 24 million echo video clips', and cites '93 percent sensitivity and 93 percent specificity' for valve pathology. These figures differ from the FDA summary (4 reader sites; >140,000 exams) and are company-sourced.",
+     "source_url": "https://www.dicardiology.com/content/aisaps-cardio-ai-powered-diagnostic-assessment-software-receives-fda-clearance",
+     "verification": "news"
+    },
+    {
+     "description": "Prospective single-arm study of AI-enhanced handheld FoCUS by non-cardiologists at Sheba (NCT05455541; AISAP CARDIO V0.7 per registry): 660 patients; clinically relevant findings in 193 (29%); therapy adjusted in 49 (7%).",
+     "source_url": "https://doi.org/10.1016/j.mcpdig.2026.100355",
+     "verification": "peer_reviewed"
+    },
+    {
+     "description": "External validation at Mayo Clinic Health System of the Aisap.ai atrioventricular regurgitation deep-learning algorithm on TTE (2013-23): predictions returned for 578/1541 studies (38%); MR AUC 0.98, TR AUC 0.96.",
+     "source_url": "https://doi.org/10.1093/ehjdh/ztaf078",
+     "verification": "peer_reviewed"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Artificial Intelligence-Enhanced Cardiac Point-of-Care Ultrasound: A Prospective Single-Arm Study",
+     "first_author": "Fisher L",
+     "journal": "Mayo Clinic Proceedings: Digital Health",
+     "year": 2026,
+     "doi": "10.1016/j.mcpdig.2026.100355",
+     "pmid": "42094314",
+     "url": "https://doi.org/10.1016/j.mcpdig.2026.100355",
+     "relation": "real-world",
+     "n_subjects": 660,
+     "key_result": "Prospective single-arm study (NCT05455541, Jul 2022-Dec 2023) of handheld FoCUS with AI algorithms by non-cardiologist physicians in ED/internal medicine: clinically relevant findings in 193/660 (29%), therapy adjusted in 49 (7%), interventional procedures in 9 (1.4%); high sensitivity for reduced LV function and valvular disease, lower for right-sided abnormalities.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial intelligence assessment of valvular disease and ventricular function by a single echocardiography view",
+     "first_author": "Fisher L",
+     "journal": "Frontiers in Digital Health",
+     "year": 2025,
+     "doi": "10.3389/fdgth.2025.1684933",
+     "pmid": "41602208",
+     "url": "https://doi.org/10.3389/fdgth.2025.1684933",
+     "relation": "algorithm-development",
+     "n_subjects": 120127,
+     "key_result": "Single A4C-view deep-learning model trained/validated on 120,127 studies from a tertiary center; retrospective AUCs 0.883 (MR), 0.913 (TR), 0.940 (RV dysfunction), 0.982 (LVEF<=40%); prospective handheld POCUS cohort of 209 patients (NCT05455541) AUCs 0.72, 0.87, 0.95, 0.97. Relationship to the cleared V1.0 multi-view pipeline is not stated. A Correction to this article was published (Front Digit Health 2026, doi 10.3389/fdgth.2026.1815054, PMID 41878373); content of the correction not reviewed here.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Deep learning for atrioventricular regurgitation diagnosis: an external validation study",
+     "first_author": "Cohen I",
+     "journal": "European Heart Journal - Digital Health",
+     "year": 2025,
+     "doi": "10.1093/ehjdh/ztaf078",
+     "pmid": "40984997",
+     "url": "https://doi.org/10.1093/ehjdh/ztaf078",
+     "relation": "external-validation",
+     "n_subjects": 1541,
+     "key_result": "External validation of the Aisap.ai algorithm on Mayo Clinic Health System TTEs: model returned predictions for 578/1541 (38%); MR (n=280) AUC 0.98 (0.97-0.99), 91% accuracy, 95% sensitivity, 89% specificity; TR (n=298) AUC 0.96 (0.94-0.98), 84% accuracy, 91% sensitivity, 80% specificity.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "AI assisted focused cardiac ultrasound in preventive cardiology - a perspective",
+     "first_author": "Cohen I",
+     "journal": "npj Cardiovascular Health",
+     "year": 2025,
+     "doi": "10.1038/s44325-025-00063-9",
+     "pmid": "41776021",
+     "url": "https://doi.org/10.1038/s44325-025-00063-9",
+     "relation": "review",
+     "n_subjects": null,
+     "key_result": "Perspective proposing AI-assisted FoCUS for valvular disease, heart failure, pulmonary hypertension and biological-age assessment; no new performance data.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [
+    {
+     "nct_id": "NCT05455541",
+     "title": "Reliability of Artificial Intelligence (AI)-Augmented Point-of-care Cardiac Ultrasound (POCCUS) in the Hands of Internists",
+     "status": "UNKNOWN",
+     "url": "https://clinicaltrials.gov/study/NCT05455541"
+    },
+    {
+     "nct_id": "NCT05631977",
+     "title": "Prospective Acquisition of Cardiac Ultrasound Images at the Point of Care",
+     "status": "COMPLETED",
+     "url": "https://clinicaltrials.gov/study/NCT05631977"
+    }
+   ],
+   "open_questions": [
+    "Number of readers in the MRMC study is not stated in the FDA summary.",
+    "RV FAC RMSE point estimate (10.17%) exceeds the stated success criterion (<9.12); summary does not explain how this was adjudicated.",
+    "Whether the 200-case measurement, 329-case valve and 260-case MRMC cohorts overlap, and whether the validation cohort was independent of the 2 training institutions, is not stated.",
+    "Training set: 'over 140,000 individual exams' at 2 academic institutions; number of patients not stated. Company press coverage cites 'hundreds of thousands of studies / 24 million clips' and six MRMC institutions, which does not match the FDA summary (4 reader sites).",
+    "Sensitivity/specificity operating points for the standalone valve study are given without the threshold definition.",
+    "No peer-reviewed publication of the FDA pivotal standalone/MRMC dataset was found on PubMed in this session.",
+    "Training cohort BMI row reads 'BMI 15 to 49 (mean 6±18)' in the summary, which appears to be a typographical error in the source.",
+    "Company product page (https://www.aisap.ai/product, linked from the site navigation) returned HTTP 404 on 2026-09-05; product_url left null."
+   ],
+   "sources": [
+    {
+     "fact": "Indications, predicates, training set size, all performance metrics",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K234141.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "decision_date 2024-08-01, product code POK, applicant Aisap",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K234141",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Company website: 'on-premise to cloud' architecture, 'works with any ultrasound device, PACS and EMR'; vendor logos present on homepage on 2026-09-05: Clarius, Mindray, Butterfly, Philips, Samsung, SonoSite, Wisonic (GE and Siemens not found in page text)",
+     "url_or_file": "https://www.aisap.ai/",
+     "verification": "company"
+    },
+    {
+     "fact": "Press coverage of clearance (DAIC, 2024-08-27, verified 2026-09-05): six MRMC institutions named (Mass General Brigham, Thomas Jefferson University Hospital, Mayo Clinic, Inova Fairfax, Crozer-Chester, Stony Brook), 'trained on hundreds of thousands of studies comprising over 24 million echo video clips', '93 percent sensitivity and 93 percent specificity', cloud-based vendor-agnostic",
+     "url_or_file": "https://www.dicardiology.com/content/aisaps-cardio-ai-powered-diagnostic-assessment-software-receives-fda-clearance",
+     "verification": "news"
+    },
+    {
+     "fact": "Papers and PMIDs/DOIs",
+     "url_or_file": "PubMed E-utilities esearch/esummary/efetch and api.crossref.org, queried 2026-09-05",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "Clinical trials NCT05455541 (Sheba Medical Center sponsor; 'AISAP CARDIO V0.7'; status UNKNOWN; estimated n=300) and NCT05631977 (Aisap LTD; COMPLETED; n=300 actual; sites Thomas Jefferson University Hospital, Inova Health, Sheba Medical Center) - re-verified 2026-09-05",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies",
+     "verification": "fda_database"
+    }
+   ]
+  },
+  {
+   "id": "echosolv-as",
+   "product_name": "EchoSolv AS",
+   "company": "Echo IQ Ltd",
+   "company_website": "https://echoiq.ai/",
+   "product_url": "https://echoiq.ai/aortic-stenosis",
+   "category": "disease-detection",
+   "tags": [
+    "aortic stenosis",
+    "severe AS phenotype",
+    "measurement-based",
+    "guideline check",
+    "cloud",
+    "CADx",
+    "POK"
+   ],
+   "modality_scope": [
+    "TTE"
+   ],
+   "deployment": [
+    "cloud",
+    "vendor-neutral",
+    "PACS-integrated"
+   ],
+   "summary": "EchoSolv AS is standalone cloud-based decision-support software (product code POK, 21 CFR 892.2060) that ingests TTE measurements plus age and body-surface area (no image analysis) and outputs a low/medium/high probability of a severe-AS phenotype (predicted AVA <=1.0 cm2) together with a 2020 ACC/AHA guideline-based severe-AS check. Cleared 2024-10-04 (K241245) with Ultromics EchoGo Pro (K201555) as predicate; the model was developed on 631,824 individuals / 1,077,145 TTEs (70:30 train/test) and validated on an independent 6,268-study retrospective cohort (AUROC 0.948) and a 5-reader, 200-case MRMC study.",
+   "intended_use_quote": "EchoSolv AS is a standalone, cloud-based decision support software which is intended to be used by board certified cardiologist to aid in the diagnosis of Severe Aortic Stenosis. EchoSolv AS analyzes basic patient demographic data and measurements obtained from a transthoracic echo examination to provide a categorical assessment as to whether the data are suggestive of a high, medium or low probability of Severe AS. EchoSolv AS is intended for patients who 18 years or older who have an echocardiogram performed as part of routine clinical care (i.e., for the evaluation of structural heart disease).",
+   "indications_for_use_quote": "EchoSolv AS is a machine learning (ML) and artificial intelligence (AI) -based decision support software indicated for use as an adjunct to echocardiography for assessment of severe aortic stenosis (AS). When utilized by an interpreting physician, this device provides information to facilitate rendering an accurate diagnosis of AS. Patient management decisions should not be made solely on the results of the EchoSolv AS analysis. EchoSolv AS includes both the algorithm based AS phenotype analysis, and the application of recognized Aortic Stenosis clinical practice guidelines. Limitations: EchoSolv AS is not intended for patients under the age of 18 years or those who have previously undergone aortic valve replacement surgery.",
+   "embedded_ai_features": [
+    "Severe AS phenotype probability (high/medium/low) from echo measurements + demographics, independent of LVOT/continuity-equation inputs",
+    "Severe AS guideline assessment (AV peak velocity, mean gradient, AVA vs 2020 ACC/AHA definition)",
+    "CSV upload for retrospective batch analysis",
+    "Third-party integration returning outputs to PACS/reporting systems"
+   ],
+   "clearances": [
+    {
+     "k_number": "K241245",
+     "decision_date": "2024-10-04",
+     "pathway": "510(k)",
+     "product_code": "POK",
+     "predicates": [
+      "K201555"
+     ],
+     "changes_summary": "Initial clearance. Versus predicate (EchoGo Pro, stress-echo CAD): resting TTE measurement inputs (sonographer-entered) plus age and BSA rather than semi-automated image-derived measurements; outputs high/medium/low probability of severe AS; adds CSV upload for retrospective analysis and output integration to PACS/reporting.",
+     "notable_flags": [
+      "cloud",
+      "measurement-based (no image analysis)",
+      "special controls 21 CFR 892.2060 1(ii)-(iv) cited",
+      "Basic Documentation Level",
+      "Australia-based applicant"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K241245.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K241245",
+     "endpoint": "Severe AS phenotype (AVA<=1.0 cm2) standalone detection",
+     "metric": "AUROC",
+     "value": "0.948 (95% CI 0.943-0.952)",
+     "comparator": "US board-certified cardiologists' assessment of AVA<=1 cm2, blinded to device output",
+     "n_studies": 6268,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Independent retrospective cohort of 6,268 TTE studies (mean age 74.95±13.98 y; 3,172 men 50.61%, 3,095 women 49.38%; 78.61% Caucasian, 5.47% African American, 2.49% Hispanic, 1.82% Asian, 11.60% Other); 2,483 (39.6%) with AVA <=1.0 cm2. Inputs are echo measurements plus age/BSA, not images. Site count not stated.",
+     "subgroup_notes": "AUROC by subgroup (p.8-9): age 18-65 0.954, >=65 0.942; male 0.945, female 0.954; White 0.949, Black 0.953, Asian 0.970, Hispanic 0.965, Other 0.921; LVEF <30% 0.914, 30-<50% 0.939, >=50% 0.950; BMI 18-25 0.952, >25-30 0.951, >30-35 0.936, >35 0.947; minimum inputs 0.931 (0.925-0.937) vs all available inputs 0.948. Note: the prose (p.8) gives the overall CI as 0.943-0.952 while the inputs table (p.9) gives 0.942-0.952 for 'all available inputs'; both appear in the summary.",
+     "quote": "The EchoSolv AS model achieved a native system performance of 0.948 (95% CI: 0.943-0.952) AUROC.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241245",
+     "endpoint": "Severe AS standalone, high-probability threshold",
+     "metric": "sensitivity / specificity",
+     "value": "Sensitivity 0.801 (95% CI 0.786-0.818); specificity 0.923 (95% CI 0.915-0.932)",
+     "comparator": "Cardiologist-verified AVA<=1 cm2",
+     "n_studies": 6268,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Independent retrospective cohort of 6,268 TTE studies (mean age 74.95±13.98 y; 3,172 men 50.61%, 3,095 women 49.38%; 78.61% Caucasian, 5.47% African American, 2.49% Hispanic, 1.82% Asian, 11.60% Other); 2,483 (39.6%) with AVA <=1.0 cm2. Inputs are echo measurements plus age/BSA, not images. Site count not stated.",
+     "subgroup_notes": "AUROC by subgroup (p.8-9): age 18-65 0.954, >=65 0.942; male 0.945, female 0.954; White 0.949, Black 0.953, Asian 0.970, Hispanic 0.965, Other 0.921; LVEF <30% 0.914, 30-<50% 0.939, >=50% 0.950; BMI 18-25 0.952, >25-30 0.951, >30-35 0.936, >35 0.947; minimum inputs 0.931 (0.925-0.937) vs all available inputs 0.948.",
+     "quote": "Sensitivity and specificity at the high probability threshold were 0.801(95%CI: 0. 786-0.818) and 0.923 (95%CI: 0. 915-0.932), respectively",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241245",
+     "endpoint": "Diagnostic likelihood ratios by output category",
+     "metric": "DLR (low / medium / high)",
+     "value": "0.067 (0.057-0.080) / 0.935 (0.829-1.05) / 10.3 (9.22-11.50); Cochran-Armitage trend test statistic 41.362, p<0.0001",
+     "comparator": "Cardiologist-verified AVA<=1 cm2",
+     "n_studies": 6268,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Independent retrospective cohort of 6,268 TTE studies (mean age 74.95±13.98 y; 3,172 men 50.61%, 3,095 women 49.38%; 78.61% Caucasian, 5.47% African American, 2.49% Hispanic, 1.82% Asian, 11.60% Other); 2,483 (39.6%) with AVA <=1.0 cm2. Inputs are echo measurements plus age/BSA, not images. Site count not stated.",
+     "subgroup_notes": "AUROC by subgroup (p.8-9): age 18-65 0.954, >=65 0.942; male 0.945, female 0.954; White 0.949, Black 0.953, Asian 0.970, Hispanic 0.965, Other 0.921; LVEF <30% 0.914, 30-<50% 0.939, >=50% 0.950; BMI 18-25 0.952, >25-30 0.951, >30-35 0.936, >35 0.947; minimum inputs 0.931 (0.925-0.937) vs all available inputs 0.948.",
+     "quote": "At the low, medium and high probability outputs, the DLR were 0.067 (95% CI: 0.057 -0.080), 0.935 (95%CI: 0.829-1.05) and 10.3 (95%CI: 9.22 -11.50), respectively. The Cochran -Armitage Trend Test yielded a test statistic of 41.362 p: <0.0001.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241245",
+     "endpoint": "Standalone AUROC with minimum vs all available inputs",
+     "metric": "AUROC",
+     "value": "Minimum inputs 0.931 (0.925-0.937); all available inputs 0.948 (0.942-0.952)",
+     "comparator": "Cardiologist-verified AVA<=1 cm2",
+     "n_studies": 6268,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Independent retrospective cohort of 6,268 TTE studies (mean age 74.95±13.98 y; 3,172 men 50.61%, 3,095 women 49.38%; 78.61% Caucasian, 5.47% African American, 2.49% Hispanic, 1.82% Asian, 11.60% Other); 2,483 (39.6%) with AVA <=1.0 cm2. Inputs are echo measurements plus age/BSA, not images. Site count not stated.",
+     "subgroup_notes": "Summary also states (p.9): 'The predicate device achieved a native system performance of 0.927 AUROC' (EchoGo Pro, K201555) as a comparison; this is not an EchoSolv AS result.",
+     "quote": "Inputs Minimum inputs 6,268 0.931 (0.925 - 0.937) All available inputs 6,268 0.948 (0.942 - 0.952)",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241245",
+     "endpoint": "MRMC: reader detection of severe AS, aided vs unaided",
+     "metric": "AUROC (aided vs unaided)",
+     "value": "Unassisted 0.865 (0.837-0.893) vs assisted 0.883 (0.857-0.909); mean improvement 0.018±0.010 (95% CI 0.037-0.001; p=0.064)",
+     "comparator": "2 board-certified cardiologists confirmed presence/severity of severe AS",
+     "n_studies": 200,
+     "n_patients": null,
+     "n_sites": 1,
+     "dataset_description": "Fully crossed MRMC, 5 board-certified cardiologist readers, 200 retrospective TTE studies (100 confirmed severe AS, 100 controls) from one US investigational site; 101 women (50.5%), 99 men; mean age 73.55±12.5 y; 86.5% Caucasian, 10.5% African American, 2.5% Hispanic or Latino.",
+     "subgroup_notes": "Summary also states (p.9): 'The predicate device showed a mean improvement of 0.054' in reader AUROC, versus 0.018 for EchoSolv AS. The reported 95% CI for the 0.018 improvement is written '0.037-0.001' and p=0.064.",
+     "quote": "AUROC for unassisted and assisted reads were 0.865 (95%CI: 0.837-0.893) and 0.883 (95%CI: 0.857-0.909), respectively. When cardiologist readers were provided with EchoSolv AS to assist with their interpretation of a TTE, there was an improvement in all study endpoints: mean AUROC (0.018±0.010, 95%CI: 0.037-0.001; p=0.064).",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241245",
+     "endpoint": "MRMC: reader concordance, aided vs unaided",
+     "metric": "Fleiss' kappa",
+     "value": "Unassisted 0.641 (0.597-0.685) vs assisted 0.667 (0.623-0.711); improvement 0.027",
+     "comparator": "Between-reader agreement",
+     "n_studies": 200,
+     "n_patients": null,
+     "n_sites": 1,
+     "dataset_description": "MRMC, 5 readers, 200 studies (see AUROC row).",
+     "subgroup_notes": null,
+     "quote": "Kappa for unassisted and assisted reads were 0.641 (95%CI: 0.597 -0.685) and 0.667 (95%CI: 0.623 -0.711), respectively. When assisted with EchoSolv AS, there was an improvement in reader concordance of 0.027.",
+     "page": 9,
+     "verification": "fda_summary"
+    }
+   ],
+   "training_data": {
+    "disclosed": true,
+    "n_studies": null,
+    "n_patients": 442276,
+    "n_sites": null,
+    "description": "'The EchoSolv AS AI Model was developed on a dataset consisting of 631,824 individuals with 1,077,145 transthoracic echocardiograms (TTE). The dataset was randomly split (ratio 70:30 based on individuals) into two separate groups, training and test set. Data from 442,276 individuals (70%) were entered into the AI model to train the device to detect severe AS cases. The remaining 189,548 individuals (30%) were reserved for internal testing. Individual patients appeared only once in either the training or test dataset but not both.' (p.6). Number of TTEs in the training partition alone is not stated. The FDA summary does not name the data source. The same 631,824-individual / 442,276-training cohort is described in Strange 2023 (Open Heart, PMID 37491129), whose abstract does not name the database; the NEDA methodology paper by the same group (Strange 2018, PMID 30098706) states NEDA data will inform AI-based aortic stenosis analyses.",
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K241245.pdf",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": 6268,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "Standalone: 'independent retrospective cohort study. Overall, 6,268 studies were included' (p.8), US-style race categories reported; reference standard AVA<=1 cm2 verified by US board-certified cardiologists blinded to device output; a reference-standard verification analysis on an additional cohort is reported in labeling. MRMC: 200 studies (100 severe AS / 100 controls) from one US investigational site, 'to ensure the test data was independent from the training dataset' (p.9). Internal test set: 189,548 individuals held out from development data.",
+    "independent_of_training": true,
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K241245.pdf",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Proof-of-concept AI detection of severe AS on 530,871 echocardiograms (NEDA).",
+     "source_url": "https://doi.org/10.1016/j.jcmg.2019.10.013",
+     "verification": "peer_reviewed"
+    },
+    {
+     "description": "Mixture-density-network AI-DSA trained on 442,276 individuals (70% of 631,824; 1.08 million echos) to predict AVA<1 cm2; AUROC 0.986 (0.985-0.987) in test set; high-probability group 5-year mortality 67.9% vs 19.2% low-probability (age/sex-adjusted OR 2.41).",
+     "source_url": "https://doi.org/10.1136/openhrt-2023-002265",
+     "verification": "peer_reviewed"
+    },
+    {
+     "description": "US external cohort: 31,141 Medicare beneficiaries at an academic medical center (2003-2017); AI-DSA sensitivity 82.2%, specificity 98.1%, c-statistic 0.986 for AVA<1 cm2 phenotype.",
+     "source_url": "https://doi.org/10.1016/j.jacadv.2024.101176",
+     "verification": "peer_reviewed"
+    },
+    {
+     "description": "Retrospective two-centre cohort (9,189 adults with native aortic valves): AI alert increased guideline-defined severe AS cases from 218 to 376 (2.4% to 4.1%), with women disproportionately under-diagnosed.",
+     "source_url": "https://doi.org/10.1016/j.ahjo.2024.100485",
+     "verification": "peer_reviewed"
+    },
+    {
+     "description": "Company/press: EchoSolv AS deployed at Mount Sinai Health System (Apr 2026); company claims training on '200M+ measurements' and validation against ~1 million studies; earlier press claims a trial identified 72% more severe-AS patients than human diagnosis alone. (GlobeNewswire URL could not be fetched on 2026-09-05 and MobiHealthNews returned HTTP 403; these figures are unverified. The company's own aortic-stenosis page states '200M+ Measurements', '24.1% Reduction Review Time', '82.2% Sensitivity Detection Rate', '99.2% NPV Rules Out Severe AS' and 'EchoSolv AS is cleared for use in the United States (FDA) only'.)",
+     "source_url": "https://www.globenewswire.com/news-release/2026/04/30/3285449/0/en/Echo-IQ-Announces-EchoSolv-AS-Deployed-into-Mount-Sinai-Health-System.html",
+     "verification": "unverified"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Enhanced Diagnosis of Severe Aortic Stenosis Using Artificial Intelligence: A Proof-of-Concept Study of 530,871 Echocardiograms",
+     "first_author": "Playford D",
+     "journal": "JACC: Cardiovascular Imaging",
+     "year": 2020,
+     "doi": "10.1016/j.jcmg.2019.10.013",
+     "pmid": "31864981",
+     "url": "https://doi.org/10.1016/j.jcmg.2019.10.013",
+     "relation": "algorithm-development",
+     "n_subjects": null,
+     "key_result": "Proof-of-concept AI detection of severe AS phenotype on 530,871 echocardiograms (per title); abstract not available via PubMed, Crossref or Europe PMC on 2026-09-05, so metrics not recorded.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Enhanced detection of severe aortic stenosis via artificial intelligence: a clinical cohort study",
+     "first_author": "Strange G",
+     "journal": "Open Heart",
+     "year": 2023,
+     "doi": "10.1136/openhrt-2023-002265",
+     "pmid": "37491129",
+     "url": "https://doi.org/10.1136/openhrt-2023-002265",
+     "relation": "algorithm-development",
+     "n_subjects": 631824,
+     "key_result": "631,824 individuals / 1.08 million echos split 70:30; MDN model trained on 442,276 individuals to predict AVA<1 cm2; AUROC 0.986 (0.985-0.987); 4,622/88,199 (5.2%) high-probability severe AS of whom 77.2% met guideline severe AS; 5-year mortality 67.9% high vs 19.2% low probability (adjusted OR 2.41). The 631,824 / 442,276 figures match the FDA summary's development set, but the paper's independent evaluation cohort is 184,301 (30%) individuals versus 189,548 stated in the FDA summary (PubMed abstract, verified 2026-09-05).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "An Artificial Intelligence Algorithm for Detection of Severe Aortic Stenosis: A Clinical Cohort Study",
+     "first_author": "Strom JB",
+     "journal": "JACC: Advances",
+     "year": 2024,
+     "doi": "10.1016/j.jacadv.2024.101176",
+     "pmid": "39372458",
+     "url": "https://doi.org/10.1016/j.jacadv.2024.101176",
+     "relation": "external-validation",
+     "n_subjects": 31141,
+     "key_result": "AI-DSA applied to TTE reports of 31,141 US Medicare beneficiaries (2003-2017): sensitivity 82.2%, specificity 98.1%, c-statistic 0.986 for AVA<1 cm2 phenotype; identified an additional 1,034 (3.3%) with guideline-moderate AS but severe-AS phenotype (5-year mortality 73.5% vs 75.9% known severe, 44.6% without).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Detection of severe aortic stenosis by clinicians versus artificial intelligence: A retrospective clinical cohort study",
+     "first_author": "Strange GA",
+     "journal": "American Heart Journal Plus",
+     "year": 2024,
+     "doi": "10.1016/j.ahjo.2024.100485",
+     "pmid": "39687290",
+     "url": "https://doi.org/10.1016/j.ahjo.2024.100485",
+     "relation": "real-world",
+     "n_subjects": 9189,
+     "key_result": "Two tertiary centres, 9,189 adults with native valves: clinicians diagnosed 218 severe AS (2.4%); AI alert increased this to 376 (4.1%); women more often under-diagnosed (54.4% vs 38.6%, aOR 0.21).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "The National Echocardiography Database Australia (NEDA): Rationale and methodology",
+     "first_author": "Strange G",
+     "journal": "American Heart Journal",
+     "year": 2018,
+     "doi": "10.1016/j.ahj.2018.07.001",
+     "pmid": "30098706",
+     "url": "https://doi.org/10.1016/j.ahj.2018.07.001",
+     "relation": "other",
+     "n_subjects": null,
+     "key_result": "NEDA registry methodology paper by the EchoSolv development group (435,133 individuals at time of writing); abstract states the data will inform analyses including 'the role of artificial intelligence to facilitate accurate diagnoses'. A direct statement that NEDA is the EchoSolv AS training source was not confirmed from abstracts in this session.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [],
+   "open_questions": [
+    "Number and location of sites contributing the 6,268-study standalone cohort is not stated in the FDA summary (race categories suggest US data).",
+    "MRMC AUROC improvement (0.018) did not reach statistical significance (p=0.064) and the reported 95% CI is written as '0.037-0.001'; the summary nonetheless states improvement in all endpoints.",
+    "The summary reports 6,268 studies included but then '6,262 studies' when giving AVA distribution; discrepancy unexplained.",
+    "Training set size in TTEs (vs individuals) is not stated; 442,276 individuals is the training partition.",
+    "No clinicaltrials.gov registrations for EchoSolv were found in this session; company press mentions a 'flagship clinical trial' (72% more severe AS identified) without an identifier or peer-reviewed reference located here.",
+    "Playford 2020 abstract not retrievable via E-utilities/Crossref in this session; performance figures from that paper were not recorded.",
+    "Overall standalone AUROC 95% CI is given as 0.943-0.952 in the text (p.8) but 0.942-0.952 in the inputs table (p.9)."
+   ],
+   "sources": [
+    {
+     "fact": "Indications, predicate, development dataset split, all performance metrics",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K241245.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "decision_date 2024-10-04, product code POK, applicant Echo IQ, Ltd.",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K241245",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Company website (verified 2026-09-05): '200M+ Measurements - developed using one of the world's largest echocardiographic measurement datasets'; 'measurement-based decision support without image analysis'; 'EchoSolv AS is cleared for use in the United States (FDA) only'; AS page claims '24.1% Reduction Review Time', '82.2% Sensitivity Detection Rate', '99.2% NPV Rules Out Severe AS' (footnoted, company-sourced)",
+     "url_or_file": "https://echoiq.ai/",
+     "verification": "company"
+    },
+    {
+     "fact": "Mount Sinai Health System deployment (Apr 2026) (URL not retrievable on 2026-09-05; unverified)",
+     "url_or_file": "https://www.globenewswire.com/news-release/2026/04/30/3285449/0/en/Echo-IQ-Announces-EchoSolv-AS-Deployed-into-Mount-Sinai-Health-System.html",
+     "verification": "unverified"
+    },
+    {
+     "fact": "Cloud platform features (role-based access, alerts, web API), '72% more severe AS' trial claim (URL not retrievable on 2026-09-05; unverified)",
+     "url_or_file": "https://www.mobihealthnews.com/news/anz/sydney-based-medtech-echo-iq-brings-ai-heart-screening-platform-us",
+     "verification": "unverified"
+    },
+    {
+     "fact": "Papers and PMIDs/DOIs",
+     "url_or_file": "PubMed E-utilities esearch/esummary/efetch and api.crossref.org, queried 2026-09-05",
+     "verification": "peer_reviewed"
+    }
+   ]
+  },
+  {
+   "id": "ge-autoas",
+   "product_name": "Automated Aortic Stenosis Software (AutoAS)",
+   "company": "GE HealthCare (GE Medical Systems Ultrasound & Primary Care Diagnostics, LLC)",
+   "company_website": "https://www.gehealthcare.com/",
+   "product_url": null,
+   "category": "disease-detection",
+   "tags": [
+    "aortic stenosis",
+    "Breakthrough Device",
+    "B-mode only",
+    "no Doppler",
+    "point-of-care",
+    "confidence metric",
+    "CADx",
+    "POK",
+    "Caption Health"
+   ],
+   "modality_scope": [
+    "TTE",
+    "POCUS",
+    "handheld"
+   ],
+   "deployment": [
+    "ultrasound-system-embedded",
+    "on-device"
+   ],
+   "summary": "AutoAS is a Breakthrough-designated AI software (product code POK, 21 CFR 892.2060) that analyzes B-mode PLAX, PSAX-AV and AP5 clips from compatible GE HealthCare ultrasound systems and returns 'suggestive' or 'not suggestive' of moderate-to-severe aortic stenosis with a study-level confidence score, intended as a point-of-care aid for deciding whether a full Doppler echocardiogram is needed. Cleared 2026-03-27 (K254161) with Ultromics EchoGo Pro (K201555) as predicate; standalone AUC 93.2% on 401 patients from four US institutions and a 5-reader, 220-case MRMC study showing +5.5% reader sensitivity.",
+   "intended_use_quote": "AutoAS is a software application intended to assist medical professionals in the assessment of moderate/severe aortic stenosis (AS). The software uses an artificial intelligence (AI) algorithm to process previously acquired two-dimensional transthoracic echocardiography (2D-TTE) images to provide a suggestion of moderate/severe aortic stenosis along with an associated confidence metric that can be a diagnostic aid to a physician in a point of care or similar setting in determining if further evaluation is needed, including whether a full echocardiogram (2D, Doppler) needs to be performed. The results of AutoAS are not intended to be used on a stand-alone basis for clinical decision making and are not intended to supplement or replace a full echocardiographic examination. AutoAS results, along with the obtained ultrasound images, must be reviewed by a qualified physician. The AutoAS product is not intended to be used on patients who have prosthetic valves and/or have had prior valve repair or replacement. AutoAS software is indicated for use in adult patients and is intended to be an accessory to compatible ultrasound systems in environments where healthcare is provided.",
+   "indications_for_use_quote": "AutoAS is a software application intended to assist medical professionals in the assessment of moderate/severe aortic stenosis (AS). The software uses an artificial intelligence (AI) algorithm to process previously acquired two-dimensional transthoracic echocardiography (2D-TTE) images to provide a suggestion of moderate/severe aortic stenosis along with an associated confidence metric that can be a diagnostic aid to a physician in a point of care or similar setting in determining if further evaluation is needed, including whether a full echocardiogram (2D, Doppler) needs to be performed. The results of AutoAS are not intended to be used on a stand-alone basis for clinical decision making and are not intended to supplement or replace a full echocardiographic examination. AutoAS results, along with the obtained ultrasound images, must be reviewed by a qualified physician. The AutoAS product is not intended to be used on patients who have prosthetic valves and/or have had prior valve repair or replacement. AutoAS software is indicated for use in adult patients and is intended to be an accessory to compatible ultrasound systems in environments where healthcare is provided.",
+   "embedded_ai_features": [
+    "Binary suggestion: suggestive / not suggestive of moderate-to-severe AS",
+    "Study-level confidence score",
+    "Clip annotator (B-mode and view validation: PLAX, PSAX-AV, AP5)",
+    "Internal heart-rate estimation from video (not reported to user)",
+    "Report export to archive with images"
+   ],
+   "clearances": [
+    {
+     "k_number": "K254161",
+     "decision_date": "2026-03-27",
+     "pathway": "510(k)",
+     "product_code": "POK",
+     "predicates": [
+      "K201555"
+     ],
+     "changes_summary": "Initial clearance. Versus predicate (EchoGo Pro, stress-echo CAD): resting 2D B-mode TTE views (PLAX, PSAX-AV, AP5) instead of A2C/A4C/SAX stress views; targets aortic stenosis instead of CAD; adds a confidence score; runs headless as an accessory to compatible GE ultrasound systems.",
+     "notable_flags": [
+      "Breakthrough Device",
+      "ultrasound-system-embedded",
+      "headless integration",
+      "B-mode only (no Doppler)",
+      "point-of-care triage to full echo"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K254161.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K254161",
+     "endpoint": "Moderate/severe AS standalone detection",
+     "metric": "AUC",
+     "value": "93.2% (95% CI 90.5%-95.6%); statistically significantly greater than predefined target (target value not stated)",
+     "comparator": "Majority vote of 3 level-III echocardiographers (AVA per ASE guidelines)",
+     "n_studies": 401,
+     "n_patients": 401,
+     "n_sites": 4,
+     "dataset_description": "Retrospective validation dataset of 401 studies from 401 unique patients from four U.S. institutions; GE (Vivid E95, Vivid E9, Vivid i, Vscan Air SL) and Philips (iE33, CX50, EPIQ 5C, EPIQ CVx, EPIQ 7C) systems; reference standard = majority vote of 3 level-III echocardiographers grading AS severity by AVA per ASE guidelines, blinded to each other and to the original read.",
+     "subgroup_notes": "Subgroup AUC point estimates (Table 1, p.9): age <65 (n=104) 0.964, >=65 (n=278) 0.908; BMI <25 (n=121) 0.944, 25-30 (n=126) 0.903, >=30 (n=135) 0.959; female (n=187) 0.947, male (n=195) 0.920; site group #1 (n=218) 0.922, #2 (n=116) 0.945, #3 (n=48) 0.953. Sensitivity/specificity subgroups on p.10-11 (e.g., sensitivity female 0.726 / male 0.776; specificity female 0.973 / male 0.871; specificity >=65 y 0.882). Subgroup totals sum to 382, not 401.",
+     "quote": "The standalone assessment findings demonstrated strong overall performance; Area Under the ROC Curve, 93.2% [95% CI: 90.5% - 95.6%] which is statistically significantly greater than the predefined performance target.",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K254161",
+     "endpoint": "Moderate/severe AS standalone detection",
+     "metric": "sensitivity / specificity",
+     "value": "Sensitivity 75.2% (67.4%-83.0%); specificity 92.4% (86.3%-98.4%)",
+     "comparator": "Majority vote of 3 level-III echocardiographers",
+     "n_studies": 401,
+     "n_patients": 401,
+     "n_sites": 4,
+     "dataset_description": "Retrospective validation dataset of 401 studies from 401 unique patients from four U.S. institutions; GE (Vivid E95, Vivid E9, Vivid i, Vscan Air SL) and Philips (iE33, CX50, EPIQ 5C, EPIQ CVx, EPIQ 7C) systems; reference standard = majority vote of 3 level-III echocardiographers grading AS severity by AVA per ASE guidelines, blinded to each other and to the original read.",
+     "subgroup_notes": "Subgroup AUC point estimates (Table 1, p.9): age <65 (n=104) 0.964, >=65 (n=278) 0.908; BMI <25 (n=121) 0.944, 25-30 (n=126) 0.903, >=30 (n=135) 0.959; female (n=187) 0.947, male (n=195) 0.920; site group #1 (n=218) 0.922, #2 (n=116) 0.945, #3 (n=48) 0.953. Sensitivity/specificity subgroups on p.10-11 (e.g., sensitivity female 0.726 / male 0.776; specificity female 0.973 / male 0.871; specificity >=65 y 0.882). Subgroup totals sum to 382, not 401.",
+     "quote": "Specificity of 92.4% [95% CI: 86.3% - 98.4%] and sensitivity of 75.2% [95% CI: 67.4% - 83.0%] were observed, on par with original reading cardiologists when compared to the same reference panel).",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K254161",
+     "endpoint": "MRMC: reader sensitivity for moderate/severe AS, aided vs unaided",
+     "metric": "difference in sensitivity",
+     "value": "+5.5% (95% CI 1.5%-9.5%), statistically significant; specificity 0.897 aided vs 0.900 unaided",
+     "comparator": "Reference standard from standalone study (3 level-III echocardiographers)",
+     "n_studies": 220,
+     "n_patients": 220,
+     "n_sites": 3,
+     "dataset_description": "MRMC subset of the standalone validation data: 220 unique studies / 220 patients from three U.S. institutions; 5 expert echocardiography readers; randomized crossover with one-month washout.",
+     "subgroup_notes": null,
+     "quote": "A statistically significant improvement in sensitivity was observed for the \"Aided\" readers compared to the \"Unaided\" readers (+ 5.5%, 95% CI: (1.5%, 9.5%)), while maintaining comparable specificity (0.897 vs. 0.900).",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K254161",
+     "endpoint": "MRMC: partial AUROC in critical region, aided vs unaided",
+     "metric": "difference in partial AUROC",
+     "value": "8.9% (95% CI 1.2%-20.5%) favoring aided",
+     "comparator": "Reference standard from standalone study",
+     "n_studies": 220,
+     "n_patients": 220,
+     "n_sites": 3,
+     "dataset_description": "MRMC, 220 studies, 5 readers (see sensitivity row).",
+     "subgroup_notes": null,
+     "quote": "when comparing the diagnostic performance of the two reader groups, the critical region of the ROC curve revealed superiority for the \"Aided\" group with an 8.9% [95% CI: 1.2%, 20.5%] difference in partial AUROC.",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K254161",
+     "endpoint": "MRMC: inter-rater agreement, aided vs unaided",
+     "metric": "% agreement",
+     "value": "Aided 89.0% vs unaided 81.9%; reference panel 88.7%",
+     "comparator": "Between-reader agreement",
+     "n_studies": 220,
+     "n_patients": 220,
+     "n_sites": 3,
+     "dataset_description": "MRMC, 220 studies, 5 readers.",
+     "subgroup_notes": null,
+     "quote": "aided readers demonstrated higher inter-rater agreement (89.0%) than unaided readers (81.9%), comparable to the reference standard (88.7%), reflecting improved reader consistency and diagnostic performance.",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K254161",
+     "endpoint": "Clip annotator: B-mode classification",
+     "metric": "PPV / sensitivity",
+     "value": "PPV 100% and sensitivity 100% (95% CI 98.5%-100.0%) across all view types",
+     "comparator": "Annotated clips (ground truth not further described)",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "Testing demonstrated both a positive predictive value (PPV) and Sensitivity of 100% (95% CI: (98.5%, 100.0%)) across all view types (i.e., PLAX, AP5, PSAX-AV, and all other views) when classifying the B-mode image.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K254161",
+     "endpoint": "Clip annotator: view classification (PLAX, PSAX-AV, AP5, other)",
+     "metric": "PPV / sensitivity",
+     "value": "PPV at least 97.1% (94.2%-98.8%); sensitivity at least 87.5% (83.1%-91.2%) across view types",
+     "comparator": "Annotated clips",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "For any image that was classified as B-mode, the ability to accurately classify the view was also tested, and the verification test results revealed a PPV of at least 97.1% (95% CI: (94.2%, 98.8%)) and a Sensitivity of at least 87.5% (95% CI: (83.1%, 91.2%)) across all view types.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K254161",
+     "endpoint": "Confidence metric calibration",
+     "metric": "monotonic relationship (qualitative)",
+     "value": "Statistically monotonically increasing relationship between confidence and probability of correct classification; no numeric value given",
+     "comparator": "Correct/incorrect binary classification",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "Testing demonstrated a statistically monotonically increasing relationship between the confidence value and the probability of accurately detecting whether moderate / severe aortic stenosis was present.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K254161",
+     "endpoint": "Internal heart-rate estimation from video (not user-facing)",
+     "metric": "MAD / MAE vs benchmark (qualitative)",
+     "value": "Statistically significantly lower MAD/MAE than the established benchmark for AP5, PLAX and PSAX; no numeric values given",
+     "comparator": "Reference heart-rate measurements (benchmark not further described)",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "The verification testing demonstrated a statistically significantly lesser MAD / MAE than the established benchmark for all views (AP5, PLAX, and PSAX). Based on these results, there were no clinically significant differences between the estimated heart rates by the software and the reference measurements.",
+     "page": 8,
+     "verification": "fda_summary"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "The FDA summary does not describe the training dataset (size, sites, vendors). Clinicaltrials.gov NCT06717373 (sponsor Caption Health, Inc., a GE HealthCare company) describes a prospective Northwestern University collection in which 'the first 45 patients, 15 with mild, 15 with moderate and 15 with severe AS, will be used for testing and possible fine-tuning the AutoAS algorithm' on Vscan Air and Venue devices.",
+    "source": null,
+    "verification": "unverified"
+   },
+   "validation_data": {
+    "n_studies": 401,
+    "n_patients": 401,
+    "n_sites": 4,
+    "description": "'A validation dataset was retrospectively obtained consisting of a total 401 studies from 401 unique patients from four different U.S. institutions.' GE (Vivid E95, Vivid E9, Vivid i, Vscan Air SL) and Philips (iE33, CX50, EPIQ 5C, EPIQ CVx, EPIQ 7C) systems; reference = majority of 3 blinded level-III echocardiographers using AVA per ASE. MRMC used a 220-study subset from three U.S. institutions. Independence from training data is not stated.",
+    "independent_of_training": null,
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K254161.pdf",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Prospective Caption Health (GE HealthCare) study NCT06717373 at Northwestern University (start 2025-02-07, completion 2025-05-16; n=63 actual; status COMPLETED as of 2026-07 verification): sonographer-acquired PLAX, PSAX-AV, AP4, AP2, AP3, AP5 views on Vscan Air and Venue point-of-care devices in patients with known/suspected AS, with the clinical echo as gold standard, to test and validate the AutoAS algorithm. Results not posted. Re-verified via ClinicalTrials.gov API 2026-09-05.",
+     "source_url": "https://clinicaltrials.gov/study/NCT06717373",
+     "verification": "fda_database"
+    }
+   ],
+   "papers": [],
+   "clinical_trials": [
+    {
+     "nct_id": "NCT06717373",
+     "title": "Point-of-Care Echocardiography in Patients With Known or Suspected Aortic Stenosis",
+     "status": "COMPLETED",
+     "url": "https://clinicaltrials.gov/study/NCT06717373"
+    }
+   ],
+   "open_questions": [
+    "Training dataset size, sources and vendors are not disclosed in the FDA summary.",
+    "No peer-reviewed publication describing the AutoAS algorithm or its validation was found on PubMed in this session.",
+    "No GE HealthCare product page or press release for AutoAS was located; product_url left null. Compatible ultrasound systems are described only as 'compatible GE HealthCare ultrasound system'; NCT06717373 names Vscan Air and Venue.",
+    "Subgroup sample sizes (Table 1) sum to 382 for AUC, 238 for sensitivity and 144 for specificity, not the 401 studies stated; the summary does not explain the difference.",
+    "The predefined standalone performance target value is not stated.",
+    "Breakthrough Device designation is stated in a footnote (p.6) but the designation request number/date is not given.",
+    "Whether the 401-patient validation set was independent of training data is not stated.",
+    "PubMed searches on 2026-09-05 for 'AutoAS', 'Automated Aortic Stenosis', 'Caption Health' + aortic stenosis, and GE HealthCare + aortic stenosis + AI returned no publication about this product."
+   ],
+   "sources": [
+    {
+     "fact": "Indications, predicate, Breakthrough footnote, device description, all performance metrics",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K254161.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "decision_date 2026-03-27, product code POK, applicant GE Medical Systems Ultrasound & Primary Care Diagnostics, LLC",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K254161",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "NCT06717373 sponsor Caption Health, Inc.; Northwestern University site; Vscan Air and Venue devices; AutoAS fine-tuning/validation design; n=63 actual",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies/NCT06717373",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Third-party trial listing (verified 2026-09-05) describing 'AutoAS for Aortic Valve Stenosis (POC Trial)', sponsor Caption Health, Inc., using Vscan Air and Venue ultrasound systems",
+     "url_or_file": "https://www.withpower.com/trial/phase-heart-diseases-2025-9d642",
+     "verification": "news"
+    },
+    {
+     "fact": "Company website",
+     "url_or_file": "https://www.gehealthcare.com/",
+     "verification": "company"
+    }
+   ]
+  }
+ ],
+ "notes": "Three families, one clearance each, all product code POK under 21 CFR 892.2060 with Ultromics EchoGo Pro (K201555) as primary predicate. Verified 2026-09-05 against the FDA summary text (every quote located on the cited page), openFDA (decision dates, product codes, applicants all match), Crossref and PubMed (all 9 DOIs/PMIDs resolve with matching titles), ClinicalTrials.gov API (NCT05455541, NCT05631977, NCT06717373), and the company/press pages that were reachable (aisap.ai, dicardiology.com, echoiq.ai, withpower.com). Not reachable: aisap.ai/product (404), GlobeNewswire (connection failed), MobiHealthNews (403) - dependent claims marked unverified. AISAP and Echo IQ disclose training set sizes in their summaries (>140,000 exams at 2 institutions; 442,276 of 631,824 individuals); GE does not. Extra PubMed queries per family found no additional papers about the cleared products: Faierstein 2024 (JASE, Aisap.ai-affiliated echo age estimation) and Amster 2026 (EHJ-DH, Sheba POCUS biological age) concern features not in the cleared AISAP device; Playford 2025 (JACC Adv, Echo IQ AI-LVD) concerns LV dysfunction, not EchoSolv AS; nothing for AutoAS. Company-sourced figures that conflict with the FDA summary (AISAP six-site/24M-clip claims; Echo IQ '200M+ measurements' and '72% more' claims) are recorded as company/news, not as performance claims."
+}

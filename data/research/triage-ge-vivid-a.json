@@ -1,0 +1,304 @@
+{
+  "group_id": "ge-vivid-a",
+  "records": [
+    {
+      "k_number": "K181685",
+      "device_name": "Vivid E80, Vivid E90, Vivid E95",
+      "decision_date": "2018-10-25",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "Automatic View Recognition",
+          "function": "Deep-neural-network classification of echocardiographic views to automatically select the apical images fed into AFI 2.0 (LV longitudinal strain) and Auto EF 2.0 (LV ejection fraction), replacing manual image selection.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "\"Automatic View Recognition\" is new functionality based on deep neural network embedded into the software of Vivid E95 / Vivid E90. Automatic View Recognition is a tool for workflow improvement to AFI 2.0 and Auto EF 2.0 and provides an automated alternative to manual image selection already available on the predicate Vivid E80 / Vivid E90 / Vivid E95 (K173341).",
+          "page": 27
+        },
+        {
+          "name": "AutoEF 2.0",
+          "function": "Automated left-ventricular ejection fraction from 2D apical views; described only as a workflow improvement of existing predicate functionality (no AI/ML method stated).",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "\"AutoEF 2.0\" is a workflow improvement of functionality already available on the predicate Vivid E80 / Vivid E90 / Vivid E95 (K173341).",
+          "page": 26
+        },
+        {
+          "name": "AFI 2.0 (Automated Function Imaging)",
+          "function": "Automated LV longitudinal strain (speckle-tracking) tool; workflow improvement of predicate functionality, expanded to pediatric use (no AI/ML method stated).",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "\"AFI 2.0\" is a workflow improvement of functionality already available on the predicate Vivid E80 / Vivid E90 / Vivid E95 (K173341). In addition to the changes to the tool, we have now expanded if for pediatric use.",
+          "page": 26
+        },
+        {
+          "name": "4D Auto LAQ",
+          "function": "Automated quantification of left-atrial volumes, emptying fraction and strain from live 3D (4D) echo; claimed equivalent to 4D Auto RVQ (no AI/ML method stated).",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "The new features \"4D Auto LAQ\" is a new feature for quantification of Left Atrium volumes, emptying fraction and strain in live 3D (4D). The feature is substantially equivalent to the 4D Auto RVQ already present on the predicate Vivid E80 / Vivid E90 / Vivid E95 (K173341).",
+          "page": 26
+        }
+      ],
+      "performance_summary": "No performance data reported. The summary states the submission \"did not require clinical studies to support substantial equivalence\" (page 29) and lists only bench/safety standards and generic V&V quality measures; no accuracy, agreement, or dataset figures are given for Automatic View Recognition, AutoEF 2.0, or AFI 2.0.",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K200497",
+      "device_name": "Vivid S60N, Vivid S70N",
+      "decision_date": "2020-07-16",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "AI Auto Measure - 2D",
+          "function": "Artificial-intelligence-based Cardiac Auto 2D feature enabling semi-automated linear measurements on parasternal long-axis (PLAX) images.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "AI Auto Measure - 2D: AI (Artificial Intelligence) based Cardiac Auto 2D feature that enables semi-automated measurements on a PLAX images using similar process as IMT feature first released on Vivid 7 (K051449) and manual workflow on predicate Vivid S60N/Vivid S70N [decoded from font-shifted text; digits and spaces lost in extraction]",
+          "page": 6
+        },
+        {
+          "name": "AI Auto Measure - Spectrum Recognition",
+          "function": "AI-based recognition of common cardiac Doppler spectra that automatically launches the Auto Doppler measurement or opens the appropriate manual measurement folder.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "AI Auto Measure - Spectrum Recognition: AI based Spectrum Recognition feature that enables automated recognition of common Doppler spectra and automatically starts the Auto Doppler measurement or opens the appropriate manual measurement folder [decoded from font-shifted text]",
+          "page": 6
+        },
+        {
+          "name": "AFI 3.0",
+          "function": "Automated LV longitudinal strain analysis, extended to GEHC raw data and third-party DICOM images (no AI/ML method stated).",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "AFI 3.0: based on AFI 2.0 cleared in Vivid S60N/S70N (K...) adds the ability to analyze the left ventricle on both GEHC raw data images and DICOM images from 3rd party ultrasound scanners [decoded from font-shifted text]",
+          "page": 6
+        },
+        {
+          "name": "Auto EF 3.0",
+          "function": "Automated LV ejection fraction assessment on GEHC raw data and other-vendor DICOM images (no AI/ML method stated).",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Auto EF 3.0: based on Auto EF 2.0 cleared in K... adds the ability to assess LV function on raw data images acquired with GEHC scanners as well as on DICOM images from other vendors systems [decoded from font-shifted text]",
+          "page": 6
+        },
+        {
+          "name": "AFI RV",
+          "function": "Parametric tool for right-ventricular longitudinal global, free-wall and segmental strain from the apical 4-chamber RV-focused view (no AI/ML method stated).",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "AFI RV: based on AFI 2.0 cleared in K... but modified for the right ventricle (RV). It is a parametric tool giving quantitative data for right ventricular longitudinal global strain, free wall strain and segmental strain derived from the apical 4-chamber RV focused view [decoded from font-shifted text]",
+          "page": 6
+        },
+        {
+          "name": "AFI LA",
+          "function": "Left-atrial global strain, LA volumes and emptying fraction (no AI/ML method stated).",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "AFI LA: based on AFI 2.0 cleared in K... but modified for the left atrium. It provides quantitative data for left atrial (LA) global strain. The tool also supports measurements of LA volumes and emptying fraction (EF) [decoded from font-shifted text]",
+          "page": 6
+        }
+      ],
+      "performance_summary": "No performance data reported. Summary states the device \"did not require clinical studies to support substantial equivalence\" (page 8); only bench/safety standards and generic V&V are listed. No accuracy, agreement, click-reduction, or dataset figures for AI Auto Measure.",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K200743",
+      "device_name": "Vivid E80/ Vivid E90/ Vivid E95",
+      "decision_date": "2020-07-23",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "AI Auto Measure - 2D",
+          "function": "Artificial-intelligence-based Cardiac Auto 2D feature enabling automated linear measurements on PLAX images; claimed 79% reduction in user clicks (4 vs 19) and possible reduction of inter-observer variability.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "AI Auto Measure - 2D:  AI (Artificial Intelligence) based Cardiac Auto 2D feature that enables automated measurements on a PLAX images using similar process as IMT feature first released on Vivid 7, K051449 and manual workflow on predicate Vivid E95, K150087. This saves time compared to manual measurements, due to elimination of user interactions (clicks) by 79% (4 vs. 19). AI Auto Measure - 2D may also reduce inter-observer variability.",
+          "page": 6
+        },
+        {
+          "name": "AI Auto Measure - Spectrum Recognition",
+          "function": "AI-based recognition of common cardiac Doppler spectra that automatically starts the Auto Doppler measurement or opens the appropriate manual measurement folder.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "AI Auto Measure - Spectrum Recognition: AI based Spectrum Recognition feature that enables automated recognition of common Doppler spectra and automatically starts the Auto Doppler measurement or opens the appropriate manual measurement folder.",
+          "page": 6
+        },
+        {
+          "name": "AFI 3.0",
+          "function": "Automated LV longitudinal strain analysis, extended to GEHC raw data and third-party DICOM images (no AI/ML method stated).",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "AFI 3.0: based on AFI 2.0 (cleared in Vivid E80/E90/E95, K181685), adds the ability to analyze the left ventricle on both GEHC raw data images and DICOM images from 3rd party ultrasound scanners.",
+          "page": 6
+        },
+        {
+          "name": "Auto EF 3.0",
+          "function": "Automated LV ejection fraction assessment on GEHC raw data and other-vendor DICOM images (no AI/ML method stated).",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Auto EF 3.0: based on Auto EF 2.0 (cleared in K181685), adds the ability to assess LV function on raw data images acquired with GEHC scanners as well as on DICOM images from other vendors systems.",
+          "page": 6
+        },
+        {
+          "name": "AFI RV",
+          "function": "Parametric tool for RV longitudinal global, free-wall and segmental strain from apical 4-chamber RV-focused view (no AI/ML method stated).",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "AFI RV: based on AFI 2.0 (cleared in K181685) but modified for the right ventricle (RV). It is a parametric tool giving quantitative data for right ventricular longitudinal global strain, free wall strain and segmental strain derived from the apical 4-chamber RV focused view.",
+          "page": 6
+        },
+        {
+          "name": "AFI LA",
+          "function": "Left-atrial global strain, LA volumes and emptying fraction (no AI/ML method stated).",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "AFI LA: based on AFI 2.0 (cleared in K181685) but modified for the left atrium. It provides quantitative data for left atrial (LA) global strain. The tool also supports measurements of LA volumes and emptying fraction (EF).",
+          "page": 7
+        },
+        {
+          "name": "4D Auto TVQ",
+          "function": "Automated quantification of tricuspid annulus and valve from 4D echo, claimed equivalent to 4D Auto MVQ (no AI/ML method stated).",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "4D Auto TVQ: new feature for quantification of tricuspid annulus and valve in 4D echocardiographic data. The feature is substantially equivalent to the feature for quantification of the Mitral Valve, 4D Auto MVQ, which is already present on the predicate Vivid E80 / Vivid E90 / Vivid E95 (K170823).",
+          "page": 7
+        }
+      ],
+      "performance_summary": "Only a workflow metric is reported for AI Auto Measure - 2D: \"elimination of user interactions (clicks) by 79% (4 vs. 19)\" and it \"may also reduce inter-observer variability\" (page 6). No accuracy/agreement statistics, dataset sizes, or clinical study; summary states the device \"did not require clinical studies to support substantial equivalence\" (page 8).",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K200708",
+      "device_name": "Vivid iq",
+      "decision_date": "2020-09-09",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "AI Auto Measure - 2D",
+          "function": "AI-based Cardiac Auto 2D feature enabling automated measurements on a PLAX image; carried over from Vivid S70N (K200497).",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "AI Auto Measure - 2D: same feature as cleared on Vivid S70N(K200497). It is AI (Artificial Intelligence) based Cardiac Auto 2D feature that enables automated measurements on a PLAX image.",
+          "page": 6
+        },
+        {
+          "name": "AI Auto Measure - Spectrum Recognition",
+          "function": "AI-based recognition of common Doppler spectra that auto-starts Auto Doppler measurement or opens the appropriate manual measurement folder; carried over from K200497.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "AI Auto Measure - Spectrum Recognition: same feature as cleared on Vivid S70N(K200497). It is AI based Spectrum Recognition feature that enables automated recognition of common Doppler spectra and automatically starts the Auto Doppler measurement or opens the appropriate manual measurement folder.",
+          "page": 6
+        },
+        {
+          "name": "AFI 3.0",
+          "function": "Automated LV strain on GEHC raw data and third-party DICOM; carried over from K200497 (no AI/ML method stated).",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "AFI 3.0:  same feature as cleared on Vivid S70N(K200497), has the ability to analyze the left ventricle on both GEHC raw data images and DICOM images from 3rd party ultrasound scanners",
+          "page": 6
+        },
+        {
+          "name": "Auto EF 3.0",
+          "function": "Automated LV function/EF on GEHC raw data and other-vendor DICOM; carried over from K200497 (no AI/ML method stated).",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "Auto EF 3.0: same feature as cleared on Vivid S70N(K200497), has the ability to assess LV function on raw data images acquired with GEHC scanners as well as on DICOM images from other vendors systems.",
+          "page": 6
+        },
+        {
+          "name": "AFI RV",
+          "function": "RV longitudinal global, free-wall and segmental strain; carried over from K200497.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "AFI RV: same feature as cleared on Vivid S70N(K200497). It is a parametric tool giving quantitative data for right ventricular longitudinal global strain, free wall strain and segmental strain derived from the apical 4-chamber RV focused view.",
+          "page": 6
+        },
+        {
+          "name": "AFI LA",
+          "function": "LA global strain, LA volumes and emptying fraction; carried over from K200497.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "AFI LA: same feature as cleared on Vivid S70N(K200497). It provides quantitative data for left atrial (LA) global strain. The tool also supports measurements of LA volumes and emptying fraction (EF).",
+          "page": 6
+        },
+        {
+          "name": "Scan Coach",
+          "function": "Displays information to help the user acquire the right scan plane; carried over from Vivid T8 (K160078). No AI/ML method stated.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "Scan Coach: same feature as cleared on Vivid T8 (K160078), is designed to display information which helps user acquire the right scan plane.",
+          "page": 7
+        }
+      ],
+      "performance_summary": "No performance data reported. All AI features are described as \"same feature as cleared on Vivid S70N (K200497)\"; the summary states the device \"did not require clinical studies to support substantial equivalence\" (page 8).",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K200851",
+      "device_name": "Vivid T8, Vivid T9",
+      "decision_date": "2020-09-09",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "AI Auto Measure - 2D",
+          "function": "AI-based Cardiac Auto 2D feature enabling semi-automated measurements on a PLAX image; carried over from Vivid S70N (K200497).",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "AI Auto Measure - 2D:  same feature as cleared on Vivid S70N(K200497). It is AI (Artificial Intelligence) based Cardiac Auto 2D feature that enables semi-automated measurements on a PLAX image.",
+          "page": 6
+        },
+        {
+          "name": "AI Auto Measure - Spectrum Recognition",
+          "function": "AI-based recognition of common Doppler spectra that auto-starts Auto Doppler measurement or opens the appropriate manual measurement folder; carried over from K200497.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "AI Auto Measure - Spectrum Recognition: same feature as cleared on Vivid S70N(K200497), It is AI based Spectrum Recognition feature that enables automated recognition of common Doppler spectra and automatically starts the Auto Doppler measurement or opens the appropriate manual measurement folder.",
+          "page": 6
+        },
+        {
+          "name": "AFI 3.0",
+          "function": "Automated LV strain on GEHC raw data and third-party DICOM; carried over from K200497 (no AI/ML method stated).",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "AFI 3.0: same feature as cleared on Vivid S70N(K200497), based on AFI 2.0, adds the ability to analyze the left ventricle on both GEHC raw data images and DICOM images from 3rd party ultrasound scanners.",
+          "page": 6
+        },
+        {
+          "name": "Auto EF 3.0",
+          "function": "Automated LV function/EF on GEHC raw data and other-vendor DICOM; carried over from K200497 (no AI/ML method stated).",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "Auto EF 3.0: same feature as cleared on Vivid S70N(K200497), based on Auto EF 2.0, adds the ability to assess LV function on raw data images acquired with GEHC scanners as well as on DICOM images from other vendors systems.",
+          "page": 6
+        },
+        {
+          "name": "AFI RV",
+          "function": "RV longitudinal global, free-wall and segmental strain; carried over from K200497.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "AFI RV: same feature as cleared on Vivid S70N(K200497), based on AFI 2.0, but modified for the right ventricle (RV). It is a parametric tool giving quantitative data for right ventricular longitudinal global strain, free wall strain and segmental strain derived from the apical 4-chamber RV focused view.",
+          "page": 6
+        },
+        {
+          "name": "AFI LA",
+          "function": "LA global strain, LA volumes and emptying fraction; carried over from K200497.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "AFI LA: same feature as cleared on Vivid S70N(K200497), based on AFI 2.0, but modified for the left atrium. It provides quantitative data for left atrial (LA) global strain. The tool also supports measurements of LA volumes and emptying fraction (EF).",
+          "page": 6
+        },
+        {
+          "name": "Scan Coach",
+          "function": "Displays information to help the user acquire the right scan plane; carried over from Vivid T8 (K160078). No AI/ML method stated.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "Scan Coach: cleared on Vivid T8 (K160078), is designed to display information which helps user acquire the right scan plane.",
+          "page": 6
+        }
+      ],
+      "performance_summary": "No performance data reported. All AI features are carried over \"same feature as cleared on Vivid S70N (K200497)\"; the summary states the device \"did not require clinical studies to support substantial equivalence\" (page 8).",
+      "exclusion_reason": null
+    }
+  ],
+  "notes": "All five GE Vivid clearances are cardiac-focused platforms (\"specialized for use in cardiac imaging\") and each summary explicitly names a cardiac AI feature, so all are is_cardiac_ultrasound_ai=true. Lineage: K181685 (Oct 2018) is the first in this group to name an AI method - \"Automatic View Recognition\" is described as \"based on deep neural network\" and feeds AFI 2.0 / Auto EF 2.0 (explicitly for the Vivid E95/E90); AutoEF 2.0 and AFI 2.0 themselves are described only as workflow improvements of predicate K173341 functionality with no AI/ML claim. K200497 (Vivid S60N/S70N, Jul 2020) is the first clearance of the explicitly labeled \"AI (Artificial Intelligence) based\" features AI Auto Measure - 2D (PLAX) and AI Auto Measure - Spectrum Recognition (Doppler), plus AFI 3.0 / Auto EF 3.0 / AFI RV / AFI LA. K200743 (Vivid E80/E90/E95, Jul 2020) adds the same feature set to the E-series (its predicate is K181685; the AI Auto Measure - 2D entry there says 'automated' rather than 'semi-automated' and is the only place any quantitative claim appears: 79% fewer clicks, 4 vs 19). K200708 (Vivid iq) and K200851 (Vivid T8/T9), both Sep 2020, port every feature as \"same feature as cleared on Vivid S70N (K200497)\", so introduced_in_this_k=false for all their features. Only the AI Auto Measure features and Automatic View Recognition are explicitly described as AI/deep-learning in the FDA text; AFI, Auto EF, 4D Auto LAQ/TVQ and Scan Coach are listed as automated/guidance cardiac features without a stated ML method and are flagged accordingly in their function fields. None of the five summaries reports accuracy, agreement, or dataset/training-size figures; all state clinical studies were not required. Extraction caveat: K200497 pages 4-8 were extracted with a font-encoding shift (each ASCII character offset by 29); I decoded them programmatically, which recovers letters but drops digits and spaces, so the K200497 quotes are reconstructed readings marked '[decoded from font-shifted text]' and should be verified against the PDF; the content matches K200743 nearly word-for-word except 'semi-automated' vs 'automated'. K181685 pages 4-24 are similarly font-shifted Indications-for-Use grid forms (transducer tables) with no feature content; pages 25-29 (the 510(k) Summary) extracted cleanly. No web search was used; all determinations are grounded in the FDA text."
+}

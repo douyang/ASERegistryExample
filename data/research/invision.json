@@ -1,0 +1,650 @@
+{
+ "batch_id": "invision",
+ "families": [
+  {
+   "id": "invision-lvef",
+   "product_name": "InVision Precision LVEF",
+   "company": "InVision Medical Technology Corporation",
+   "company_website": "https://invisionmedtech.com/",
+   "product_url": "https://invisionmedtech.com/product/lvef/",
+   "category": "lv-function-quantification",
+   "tags": [
+    "LVEF",
+    "LV segmentation",
+    "semi-automated",
+    "RCT-validated",
+    "EchoNet-Dynamic"
+   ],
+   "modality_scope": [
+    "TTE"
+   ],
+   "deployment": [
+    "PACS-integrated",
+    "vendor-neutral",
+    "cloud",
+    "on-premise"
+   ],
+   "summary": "Software as a medical device that selects apical 4-chamber and 2-chamber DICOM clips from previously acquired transthoracic echocardiograms, generates semi-automatic machine-learning left-ventricular segmentations, and computes an editable LVEF estimate (single-view or biplane) displayed as adjustable annotations inside the site's existing PACS viewer. Cleared April 25, 2024 (K232331) with Caption Interpretation Automated Ejection Fraction (K210747) as predicate; the precursor algorithm (EchoNet-Dynamic) was tested in a blinded randomized trial published in Nature (2023).",
+   "intended_use_quote": "InVision Precision LVEF is used to process previously acquired transthoracic cardiac ultrasound images, store images, and manipulate and make measurements on images using an ultrasound device, personal computer, or a compatible DICOM-compliant PACS system to provide an automated estimation of LVEF. This measurement can be used to assist the clinician in a cardiac evaluation. InVision Precision is indicated for use in patients 22 years and older by sonographers and physicians evaluating cardiac ultrasound.",
+   "indications_for_use_quote": "InVision Precision LVEF is used to process previously acquired transthoracic cardiac ultrasound images, store images, and manipulate and make measurements on images using an ultrasound device, personal computer, or a compatible DICOM-compliant PACS system to provide an automated estimation of LVEF. This measurement can be used to assist the clinician in a cardiac evaluation. InVision Precision is indicated for use in patients 22 years and older by sonographers and physicians evaluating cardiac ultrasound.",
+   "embedded_ai_features": [
+    "Automated view selection of A4C/A2C clips",
+    "Semi-automatic LV segmentation (machine learning, spatiotemporal pooling architecture)",
+    "Automated LVEF calculation (single view or biplane) with real-time update when user edits segmentation"
+   ],
+   "clearances": [
+    {
+     "k_number": "K232331",
+     "decision_date": "2024-04-25",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K210747"
+     ],
+     "changes_summary": null,
+     "notable_flags": [
+      "PACS-integrated (uses interface of PACS system rather than own UI)",
+      "semi-automated (user-adjustable segmentation)",
+      "first clearance for this product"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K232331.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K232331",
+     "endpoint": "LVEF agreement vs reference ground-truth EF, biplane",
+     "metric": "RMSD",
+     "value": "~6.06 (EF percentage points; no CI reported)",
+     "comparator": "reference ground truth EF",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Retrospective, multicenter study; imaging equipment from Philips, GE and Siemens; site count and n not stated in summary",
+     "subgroup_notes": "Subgroup analyses by race/ethnicity, age, gender, BMI, imaging site and equipment, and ejection fraction values; all endpoints met, subgroup values not reported",
+     "quote": "The average RMSD (Root Mean Square Deviation) for the device's biplane view was around 6.06, for A4C view was 6.17, for A2C view was 7.12.",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232331",
+     "endpoint": "LVEF agreement vs reference ground-truth EF, A4C single view",
+     "metric": "RMSD",
+     "value": "6.17 (no CI reported)",
+     "comparator": "reference ground truth EF",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Retrospective, multicenter study; Philips, GE and Siemens equipment",
+     "subgroup_notes": null,
+     "quote": "The average RMSD (Root Mean Square Deviation) for the device's biplane view was around 6.06, for A4C view was 6.17, for A2C view was 7.12.",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232331",
+     "endpoint": "LVEF agreement vs reference ground-truth EF, A2C single view",
+     "metric": "RMSD",
+     "value": "7.12 (no CI reported)",
+     "comparator": "reference ground truth EF",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Retrospective, multicenter study; Philips, GE and Siemens equipment",
+     "subgroup_notes": null,
+     "quote": "The average RMSD (Root Mean Square Deviation) for the device's biplane view was around 6.06, for A4C view was 6.17, for A2C view was 7.12.",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232331",
+     "endpoint": "LV segmentation agreement, A4C",
+     "metric": "Dice score",
+     "value": "0.89 (no CI reported)",
+     "comparator": "consensus annotation of three cardiologists",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Retrospective, multicenter study; Philips, GE and Siemens equipment",
+     "subgroup_notes": null,
+     "quote": "The Dice score for A4C segmentation was 0.89 and for A2C segmentation was 0.90.",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232331",
+     "endpoint": "LV segmentation agreement, A2C",
+     "metric": "Dice score",
+     "value": "0.90 (no CI reported)",
+     "comparator": "consensus annotation of three cardiologists",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Retrospective, multicenter study; Philips, GE and Siemens equipment",
+     "subgroup_notes": null,
+     "quote": "The Dice score for A4C segmentation was 0.89 and for A2C segmentation was 0.90.",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232331",
+     "endpoint": "Precursor algorithm (EchoNet-Dynamic): proportion of studies with substantial (>5%) LVEF change between initial assessment and final cardiologist assessment, AI vs sonographer (blinded RCT)",
+     "metric": "% of studies substantially changed (difference, 95% CI)",
+     "value": "16.8% AI vs 27.2% sonographer; difference -10.4% (95% CI -13.2% to -7.7%), P<0.001 non-inferiority and superiority",
+     "comparator": "sonographer initial assessment; final cardiologist assessment as reference",
+     "n_studies": 3495,
+     "n_patients": null,
+     "n_sites": 1,
+     "dataset_description": "Cedars-Sinai single-center blinded randomized non-inferiority trial (NCT05140642); 3,769 studies screened, 274 excluded for poor image quality",
+     "subgroup_notes": null,
+     "quote": "The proportion of studies substantially changed was 16.8% in the AI group and 27.2% in the sonographer group (difference of -10.4%, 95% confidence interval: -13.2% to -7.7%, P < 0.001 for non-inferiority, P < 0.001 for superiority).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K232331",
+     "endpoint": "Precursor algorithm (EchoNet-Dynamic): mean absolute difference between final cardiologist assessment and independent previous cardiologist assessment, AI vs sonographer arm",
+     "metric": "mean absolute difference (LVEF points)",
+     "value": "6.29% AI vs 7.23% sonographer; difference -0.96% (95% CI -1.34% to -0.54%), P<0.001 superiority",
+     "comparator": "independent prior cardiologist assessment",
+     "n_studies": 3495,
+     "n_patients": null,
+     "n_sites": 1,
+     "dataset_description": "Cedars-Sinai blinded randomized trial (NCT05140642)",
+     "subgroup_notes": null,
+     "quote": "The mean absolute difference between final cardiologist assessment and independent previous cardiologist assessment was 6.29% in the AI group and 7.23% in the sonographer group (difference of -0.96%, 95% confidence interval: -1.34% to -0.54%, P < 0.001 for superiority).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K232331",
+     "endpoint": "Precursor algorithm (EchoNet-Dynamic): LVEF prediction error, internal test set",
+     "metric": "MAE",
+     "value": "4.1%",
+     "comparator": "clinician-reported LVEF",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": 1,
+     "dataset_description": "Stanford Health Care echocardiogram videos (EchoNet-Dynamic dataset of 10,030 annotated videos)",
+     "subgroup_notes": null,
+     "quote": "Trained on echocardiogram videos, our model accurately segments the left ventricle with a Dice similarity coefficient of 0.92, predicts ejection fraction with a mean absolute error of 4.1% and reliably classifies heart failure with reduced ejection fraction (area under the curve of 0.97).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K232331",
+     "endpoint": "Precursor algorithm (EchoNet-Dynamic): LVEF prediction error, external dataset",
+     "metric": "MAE",
+     "value": "6.0%; HFrEF classification AUC 0.96",
+     "comparator": "clinician-reported LVEF",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": 1,
+     "dataset_description": "External dataset from another healthcare system (Cedars-Sinai)",
+     "subgroup_notes": null,
+     "quote": "In an external dataset from another healthcare system, EchoNet-Dynamic predicts the ejection fraction with a mean absolute error of 6.0% and classifies heart failure with reduced ejection fraction with an area under the curve of 0.96.",
+     "page": null,
+     "verification": "peer_reviewed"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "FDA summary does not state training set size; it states only that verification/validation images and cases were separate and segregated from training datasets. The company press release (May 14, 2024) claims the model was trained on more videos than competing FDA-cleared echo AI models without giving a number. The published precursor algorithm (EchoNet-Dynamic, Ouyang et al. Nature 2020) was trained on Stanford echocardiogram videos and released a 10,030-video dataset, but the abstract does not state the training split and the commercial model's training set is not disclosed.",
+    "source": "FDA summary K232331 p.7; https://invisionmedtech.com/press/lvef-clearance/; PMID 32269341",
+    "verification": "unverified"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "Retrospective, multicenter study comparing device LVEF to reference ground-truth EF and device segmentation to consensus annotation of three cardiologists; input data from Philips, GE and Siemens equipment; subgroup analyses by race/ethnicity, age, gender, BMI, imaging site and equipment, and EF values. Sample size and number of sites not stated.",
+    "independent_of_training": true,
+    "source": "FDA summary K232331 p.7 ('Images and cases used for verification and validation testing were separate and carefully segregated from training datasets.')",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "EchoNet-Dynamic (precursor algorithm): video-based deep learning for LV segmentation and LVEF; Dice 0.92, MAE 4.1% internal, MAE 6.0% external; public dataset of 10,030 annotated videos (Ouyang et al., Nature 2020).",
+     "source_url": "https://doi.org/10.1038/s41586-020-2145-8",
+     "verification": "peer_reviewed"
+    },
+    {
+     "description": "EchoNet-RCT: blinded, randomized non-inferiority trial of AI vs sonographer initial LVEF assessment at Cedars-Sinai, 3,495 studies analyzed; AI non-inferior and superior on proportion of studies substantially changed by cardiologist (He et al., Nature 2023; NCT05140642).",
+     "source_url": "https://doi.org/10.1038/s41586-023-05947-3",
+     "verification": "peer_reviewed"
+    },
+    {
+     "description": "Company states Precision LVEF is 'the only AI-Echo product to undergo a blinded, randomized prospective clinical trial' and cites MAE 4.1% and the 3,495-study RCT on its product page.",
+     "source_url": "https://invisionmedtech.com/product/lvef/",
+     "verification": "company"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Video-based AI for beat-to-beat assessment of cardiac function",
+     "first_author": "Ouyang D",
+     "journal": "Nature",
+     "year": 2020,
+     "doi": "10.1038/s41586-020-2145-8",
+     "pmid": "32269341",
+     "url": "https://doi.org/10.1038/s41586-020-2145-8",
+     "relation": "algorithm-development",
+     "n_subjects": null,
+     "key_result": "EchoNet-Dynamic: LV segmentation Dice 0.92; LVEF MAE 4.1% (internal) and 6.0% (external health system); HFrEF classification AUC 0.97/0.96; 10,030-video public dataset released.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Blinded, randomized trial of sonographer versus AI cardiac function assessment",
+     "first_author": "He B",
+     "journal": "Nature",
+     "year": 2023,
+     "doi": "10.1038/s41586-023-05947-3",
+     "pmid": "37020027",
+     "url": "https://doi.org/10.1038/s41586-023-05947-3",
+     "relation": "clinical-trial",
+     "n_subjects": 3495,
+     "key_result": "Proportion of studies substantially changed by cardiologist: 16.8% AI vs 27.2% sonographer (difference -10.4%, 95% CI -13.2% to -7.7%; P<0.001 non-inferiority and superiority); AI workflow saved time for sonographers and cardiologists; blinding index 0.088.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [
+    {
+     "nct_id": "NCT05140642",
+     "title": "Blinded Randomized Controlled Trial of Artificial Intelligence Guided Assessment of Cardiac Function",
+     "status": "COMPLETED",
+     "url": "https://clinicaltrials.gov/study/NCT05140642"
+    }
+   ],
+   "open_questions": [
+    "FDA summary does not report the number of studies, patients, or sites in the retrospective multicenter validation for K232331.",
+    "FDA summary does not report confidence intervals for RMSD or Dice, nor the acceptance thresholds ('set threshold') used as success criteria.",
+    "Training set size for the cleared commercial model is not disclosed by FDA summary or company; only the precursor EchoNet-Dynamic public dataset (10,030 videos) is documented.",
+    "The relationship between the cleared device model and the published EchoNet-Dynamic / EchoNet-RCT model is asserted by the company (product page and press release) but not stated in the FDA summary; the FDA summary lists a 'Spatiotemporal Pooling' architecture.",
+    "Cloud vs on-premise deployment is stated on the company website (both options) but not in the FDA summary."
+   ],
+   "sources": [
+    {
+     "fact": "Decision date 2024-04-25, product code QIH, applicant InVision Medical Technology Corporation",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Indications for use, predicate K210747, device description, technological comparison, performance data (RMSD, Dice, subgroups, vendors)",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K232331.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Company website, product page, deployment (vendor-neutral DICOM, PACS/CVIS/Epic integration, cloud or on-premise), cited MAE 4.1% and 3,495-study RCT",
+     "url_or_file": "https://invisionmedtech.com/ and https://invisionmedtech.com/product/lvef/",
+     "verification": "company"
+    },
+    {
+     "fact": "Press release May 14, 2024 announcing FDA 510(k) clearance of Precision LVEF, citing He 2023 and Ouyang 2020",
+     "url_or_file": "https://invisionmedtech.com/press/lvef-clearance/",
+     "verification": "company"
+    },
+    {
+     "fact": "EchoNet-Dynamic paper metadata and abstract",
+     "url_or_file": "https://api.crossref.org/works/10.1038/s41586-020-2145-8; PubMed PMID 32269341",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "EchoNet-RCT paper metadata and abstract",
+     "url_or_file": "https://api.crossref.org/works/10.1038/s41586-023-05947-3; PubMed PMID 37020027",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "NCT05140642 status COMPLETED, enrollment 3,495 actual, sponsor Cedars-Sinai Medical Center",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies/NCT05140642",
+     "verification": "fda_database"
+    }
+   ]
+  },
+  {
+   "id": "invision-amyloid",
+   "product_name": "InVision Precision Cardiac Amyloid",
+   "company": "InVision Medical Technology Corporation",
+   "company_website": "https://invisionmedtech.com/",
+   "product_url": "https://invisionmedtech.com/product/cardiac-amyloid/",
+   "category": "amyloid-indicator",
+   "tags": [
+    "cardiac amyloidosis",
+    "ATTR-CM",
+    "screening",
+    "Breakthrough",
+    "SDJ",
+    "adjunctive status indicator",
+    "EchoNet-LVH",
+    "CPT 0932T"
+   ],
+   "modality_scope": [
+    "TTE"
+   ],
+   "deployment": [
+    "PACS-integrated",
+    "vendor-neutral",
+    "cloud",
+    "on-premise"
+   ],
+   "summary": "Machine-learning software that analyzes apical 4-chamber and parasternal long-axis videos from routine transthoracic echocardiograms and outputs a report 'suggestive' or 'not suggestive' of cardiac amyloidosis for patients 65 years and older, as an adjunct alerting the interpreting physician to refer for confirmatory testing. Cleared May 21, 2025 (K243866, product code SDJ) with Ultromics EchoGo Amyloidosis (K240860) as predicate; FDA validation in 1,221 studies from three U.S. sites showed sensitivity 0.607 and specificity 0.990. Company reports prior FDA Breakthrough Device designation (January 2024) and enrollment in FDA TAP.",
+   "intended_use_quote": "InVision Precision Cardiac Amyloid is intended to provide adjunctive information on a patient's cardiovascular condition (diagnostic aid for cardiac amyloidosis).",
+   "indications_for_use_quote": "InVision Precision Cardiac Amyloid is an automated machine learning-based decision support system, indicated as a screening tool for adult patients aged 65 years and over undergoing cardiovascular assessment using echocardiography. When utilized by an interpreting physician, this device provides information alerting the physician for referral to confirmatory investigations. InVision Precision Cardiac Amyloid is indicated in adult populations over 65 years of age. Patient management decisions should not be made solely on the results of the InVision Precision Cardiac Amyloid.",
+   "embedded_ai_features": [
+    "Machine-learning classification of cardiac amyloidosis suspicion from A4C and PLAX echocardiogram videos",
+    "Binary report output: suggestive / not suggestive of cardiac amyloidosis",
+    "Installed as third-party application to institution PACS; result returned as DICOM secondary capture (company)"
+   ],
+   "clearances": [
+    {
+     "k_number": "K243866",
+     "decision_date": "2025-05-21",
+     "pathway": "510(k)",
+     "product_code": "SDJ",
+     "predicates": [
+      "K240860"
+     ],
+     "changes_summary": null,
+     "notable_flags": [
+      "Breakthrough Device (per company; not stated in FDA summary)",
+      "FDA TAP enrollment (per company)",
+      "PACS-integrated third-party application",
+      "hosted on InVision platform or third-party infrastructure",
+      "human factors validation n=31",
+      "first clearance for this product"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243866.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K243866",
+     "endpoint": "Detection of cardiac amyloidosis vs confirmatory reference",
+     "metric": "sensitivity",
+     "value": "0.607 (no CI reported)",
+     "comparator": "confirmatory reference data such as diagnostic imaging or pathology",
+     "n_studies": 1221,
+     "n_patients": null,
+     "n_sites": 3,
+     "dataset_description": "1,221 unique echocardiogram studies from three geographically different U.S. sites; CA case to non-suspicious non-CA control ratio 1:2",
+     "subgroup_notes": "Subgroup analysis across age, gender, BMI, race/ethnicity, CA type, sites, and imaging manufacturers; acceptance criteria passed in all subgroups; subgroup values not reported",
+     "quote": "The ML model performance validation study was conducted using a total of 1221 unique echocardiogram studies that fulfilled the inclusion and exclusion criteria. The data were selected from three geographically different U.S. sites. The ratio of cardiac amyloidosis cases to non-suspicious non-CA control cases was 1:2. The study compared the device's performance in analyzing previously acquired transthoracic cardiac ultrasound images and identifying cases of Cardiac Amyloidosis compared to confirmatory reference data, such as diagnostic imaging or pathology. The validation study met all its predefined endpoints, demonstrating a sensitivity of 0.607 and a specificity of 0.990.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K243866",
+     "endpoint": "Detection of cardiac amyloidosis vs confirmatory reference",
+     "metric": "specificity",
+     "value": "0.990 (no CI reported)",
+     "comparator": "confirmatory reference data such as diagnostic imaging or pathology",
+     "n_studies": 1221,
+     "n_patients": null,
+     "n_sites": 3,
+     "dataset_description": "1,221 unique echocardiogram studies from three U.S. sites; 1:2 case:control ratio",
+     "subgroup_notes": "Subgroups: age, gender, BMI, race/ethnicity, CA type, sites, imaging manufacturers; all passed acceptance criteria",
+     "quote": "The validation study met all its predefined endpoints, demonstrating a sensitivity of 0.607 and a specificity of 0.990. Subgroup analysis was performed across age, gender, BMI, race/ethnicity, CA type, sites, and imaging manufacturers. The device successfully passed the acceptance criteria across all subgroups.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K243866",
+     "endpoint": "Modeled PPV/NPV at assumed prevalence (derived from Se 60.7%, Sp 99.0%)",
+     "metric": "PPV / NPV",
+     "value": "Prevalence 0.5%: PPV 0.237, NPV 0.998; 1%: PPV 0.384, NPV 0.996; 2%: PPV 0.558, NPV 0.992; 3%: PPV 0.656, NPV 0.988; 5%: PPV 0.765, NPV 0.980",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Calculated values, not measured in a cohort",
+     "subgroup_notes": null,
+     "quote": "PPV and NPV at various prevalences based on the device's sensitivity (Se) and specificity (Sp). Se=60.7% Sp=99.0% (Actual) Prevalence PPV NPV 0.5% 0.237 0.998 1% 0.384 0.996 2% 0.558 0.992 3% 0.656 0.988 5% 0.765 0.980",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K243866",
+     "endpoint": "Human factors validation: user comprehension of output report",
+     "metric": "qualitative (all users comprehended report)",
+     "value": "31 users (16 non-cardiologists, 15 cardiologists), simulated use, U.S.",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Simulated-use human factors study with intended users",
+     "subgroup_notes": null,
+     "quote": "The HF validation consisted of intended users (16 non-cardiologists and 15 cardiologists) and was conducted under simulated-use conditions in the United States. The HF validation concluded that all users were able to comprehend the output report of the device, and the existing use-related errors have been mitigated as far as possible.",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K243866",
+     "endpoint": "EchoNet-LVH amyloid detection, international multisite external validation",
+     "metric": "AUC",
+     "value": "0.896 (95% CI 0.875-0.916)",
+     "comparator": "physician-confirmed cardiac amyloidosis cases vs controls",
+     "n_studies": null,
+     "n_patients": 1553,
+     "n_sites": 5,
+     "dataset_description": "574 CA patients and 979 controls across multiple international sites (retrospective case-control)",
+     "subgroup_notes": "No evidence of heterogeneity by site, race, sex, age, BMI, CA subtype, or ultrasound manufacturer",
+     "quote": "We evaluated EchoNet-LVH's ability to distinguish between the echocardiogram studies of 574 CA patients and 979 controls. We reported discrimination performance with an area under the receiver operating characteristic curve and associated sensitivity, specificity, and positive predictive value at the prespecified threshold. EchoNet-LVH had an area under the receiver operating characteristic curve of 0.896 (95% CI: 0.875-0.916).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K243866",
+     "endpoint": "EchoNet-LVH amyloid detection at prespecified threshold, international validation",
+     "metric": "sensitivity / specificity / PPV / NPV",
+     "value": "Sensitivity 0.644 (95% CI 0.601-0.685); specificity 0.988 (0.978-0.994); PPV 0.968 (0.944-0.984); NPV 0.828 (0.804-0.850)",
+     "comparator": "physician-confirmed cardiac amyloidosis cases vs controls",
+     "n_studies": null,
+     "n_patients": 1553,
+     "n_sites": 5,
+     "dataset_description": "574 CA patients and 979 controls, multiple international sites",
+     "subgroup_notes": "No heterogeneity by site, race, sex, age, BMI, CA subtype, or manufacturer",
+     "quote": "At the prespecified model threshold optimizing for specificity, EchoNet-LVH had a sensitivity of 0.644 (95% CI: 0.601-0.685), specificity of 0.988 (95% CI: 0.978-0.994), positive predictive value of 0.968 (95% CI: 0.944-0.984), and negative predictive value of 0.828 (95% CI: 0.804-0.850).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K243866",
+     "endpoint": "EchoNet-LVH ATTR-CM detection in heart-failure population, independent head-to-head comparison",
+     "metric": "AUC",
+     "value": "0.88 (EchoNet-LVH) vs 0.92 (EchoGo Amyloidosis) vs 0.79 (Mayo ATTR-CM Score); DeLong P<0.001 for both DL models vs Mayo score",
+     "comparator": "confirmed ATTR-CM vs age- and sex-matched heart-failure controls",
+     "n_studies": null,
+     "n_patients": 3368,
+     "n_sites": 1,
+     "dataset_description": "Integrated health system 2010-2022; 176 confirmed ATTR-CM cases and 3,192 HF controls matched to target 5% prevalence; 79.2% White, 9.0% Black",
+     "subgroup_notes": "Bias audit met fairness criteria for equal opportunity among Black patients",
+     "quote": "Both deep learning echo models had a higher AUC when compared to the Mayo ATTR-CM Score (EchoNet-LVH 0.88; EchoGo Amyloidosis 0.92; Mayo ATTR-CM Score 0.79; DeLong P < 0.001 for both).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K243866",
+     "endpoint": "EchoNet-LVH original development: cardiac amyloidosis classification among increased LV wall thickness",
+     "metric": "AUC",
+     "value": "0.83 (internal test); 0.79 (domestic external validation site)",
+     "comparator": "physician-curated amyloid clinic cohorts (Stanford Amyloid Center, Cedars-Sinai)",
+     "n_studies": null,
+     "n_patients": 23745,
+     "n_sites": 2,
+     "dataset_description": "23,745 patients from Stanford Health Care and Cedars-Sinai (PLAX and A4C videos); external domestic and international datasets (Unity Imaging Collaborative)",
+     "subgroup_notes": null,
+     "quote": "The deep learning algorithm accurately measured intraventricular wall thickness (mean absolute error [MAE], 1.2 mm; 95% CI, 1.1-1.3 mm), LV diameter (MAE, 2.4 mm; 95% CI, 2.2-2.6 mm), and posterior wall thickness (MAE, 1.4 mm; 95% CI, 1.2-1.5 mm) and classified cardiac amyloidosis (area under the curve [AUC], 0.83) and hypertrophic cardiomyopathy (AUC, 0.98) separately from other causes of LV hypertrophy. ... The deep learning algorithm accurately detected cardiac amyloidosis (AUC, 0.79) and hypertrophic cardiomyopathy (AUC, 0.89) in the domestic external validation site.",
+     "page": null,
+     "verification": "peer_reviewed"
+    }
+   ],
+   "training_data": {
+    "disclosed": true,
+    "n_studies": null,
+    "n_patients": 23745,
+    "n_sites": 2,
+    "description": "Company evidence page states 'Training cohort: 23,745 patients; Training videos: 24,804 echocardiogram videos', citing Duffy et al. JAMA Cardiology 2022 (EchoNet-LVH). The JAMA Cardiology abstract reports 23,745 patients included from Stanford Health Care and Cedars-Sinai (12,001 + 1,309 with PLAX videos; 8,084 + 2,351 with A4C videos) spanning training and test splits; the exact training-only split is not given in the abstract. The FDA summary does not state training set size.",
+    "source": "https://invisionmedtech.com/product/amyloid-evidence/; PMID 35195663 (abstract)",
+    "verification": "company"
+   },
+   "validation_data": {
+    "n_studies": 1221,
+    "n_patients": null,
+    "n_sites": 3,
+    "description": "1,221 unique echocardiogram studies meeting inclusion/exclusion criteria from three geographically different U.S. sites; cardiac amyloidosis case to non-suspicious non-CA control ratio 1:2; reference standard confirmatory data such as diagnostic imaging or pathology; subgroups analyzed by age, gender, BMI, race/ethnicity, CA type, site, and imaging manufacturer.",
+    "independent_of_training": null,
+    "source": "FDA summary K243866 p.8",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "EchoNet-LVH development (Duffy et al., JAMA Cardiology 2022): 23,745 patients from Stanford and Cedars-Sinai; amyloid AUC 0.83 internal, 0.79 domestic external site.",
+     "source_url": "https://doi.org/10.1001/jamacardio.2021.6059",
+     "verification": "peer_reviewed"
+    },
+    {
+     "description": "International multisite validation (Duffy et al., JACC: Advances 2025): 574 CA vs 979 controls; AUC 0.896, sensitivity 0.644, specificity 0.988; no heterogeneity by site, race, sex, age, BMI, CA subtype, or manufacturer. Company lists sites as Cedars-Sinai, Keio University, Northwestern, Kumamoto University, Yale-New Haven.",
+     "source_url": "https://doi.org/10.1016/j.jacadv.2025.102067",
+     "verification": "peer_reviewed"
+    },
+    {
+     "description": "Independent head-to-head comparison (Hourmozdi et al., JACC: Advances 2025): EchoNet-LVH AUC 0.88 vs EchoGo Amyloidosis 0.92 vs Mayo ATTR-CM score 0.79 in 176 ATTR-CM cases and 3,192 HF controls; bias audit met equal-opportunity fairness criteria for Black patients.",
+     "source_url": "https://doi.org/10.1016/j.jacadv.2025.101901",
+     "verification": "peer_reviewed"
+    },
+    {
+     "description": "FDA Breakthrough Device Designation for the InVision cardiac amyloidosis algorithm announced January 5, 2024; enrollment in FDA TAP stated in the May 28, 2025 clearance press release.",
+     "source_url": "https://invisionmedtech.com/press/amyloidosis-breakthrough/",
+     "verification": "company"
+    },
+    {
+     "description": "Company evidence page reports ~15-20% of patients produce no prediction due to clip quality, view classification, or low confidence, and that a negative result does not exclude cardiac amyloidosis.",
+     "source_url": "https://invisionmedtech.com/product/amyloid-evidence/",
+     "verification": "company"
+    }
+   ],
+   "papers": [
+    {
+     "title": "High-Throughput Precision Phenotyping of Left Ventricular Hypertrophy With Cardiovascular Deep Learning",
+     "first_author": "Duffy G",
+     "journal": "JAMA Cardiology",
+     "year": 2022,
+     "doi": "10.1001/jamacardio.2021.6059",
+     "pmid": "35195663",
+     "url": "https://doi.org/10.1001/jamacardio.2021.6059",
+     "relation": "algorithm-development",
+     "n_subjects": 23745,
+     "key_result": "EchoNet-LVH: wall thickness MAE 1.2 mm (IVS), 1.4 mm (PW), LV diameter MAE 2.4 mm; cardiac amyloidosis AUC 0.83 (internal) and 0.79 (domestic external); HCM AUC 0.98/0.89.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "International Validation of Echocardiographic Artificial Intelligence Amyloid Detection Algorithm",
+     "first_author": "Duffy G",
+     "journal": "JACC: Advances",
+     "year": 2025,
+     "doi": "10.1016/j.jacadv.2025.102067",
+     "pmid": "40965401",
+     "url": "https://doi.org/10.1016/j.jacadv.2025.102067",
+     "relation": "external-validation",
+     "n_subjects": 1553,
+     "key_result": "574 CA vs 979 controls across international sites: AUC 0.896 (95% CI 0.875-0.916); sensitivity 0.644, specificity 0.988, PPV 0.968, NPV 0.828 at prespecified threshold; no heterogeneity by site, race, sex, age, BMI, CA subtype, or manufacturer.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Evaluating the Performance and Potential Bias of Predictive Models for Detection of Transthyretin Cardiac Amyloidosis",
+     "first_author": "Hourmozdi J",
+     "journal": "JACC: Advances",
+     "year": 2025,
+     "doi": "10.1016/j.jacadv.2025.101901",
+     "pmid": "40616933",
+     "url": "https://doi.org/10.1016/j.jacadv.2025.101901",
+     "relation": "external-validation",
+     "n_subjects": 3368,
+     "key_result": "Independent comparison in 176 ATTR-CM cases and 3,192 HF controls: EchoNet-LVH AUC 0.88, EchoGo Amyloidosis 0.92, Mayo ATTR-CM score 0.79, Huda claims model 0.49; both DL echo models superior to Mayo score (DeLong P<0.001); fairness criteria met for Black patients.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Impact of Case and Control Selection on Training Artificial Intelligence Screening of Cardiac Amyloidosis",
+     "first_author": "Vrudhula A",
+     "journal": "JACC: Advances",
+     "year": 2024,
+     "doi": "10.1016/j.jacadv.2024.100998",
+     "pmid": "39372462",
+     "url": "https://doi.org/10.1016/j.jacadv.2024.100998",
+     "relation": "other",
+     "n_subjects": 341989,
+     "key_result": "Methods study cited by the company as a model-development reference; note it evaluates ECG-waveform (not echo) amyloid models using ~1.3 million ECGs from 341,989 patients, showing AUC ranging 0.660-0.898 depending on case/control definitions.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [
+    {
+     "nct_id": "NCT05139797",
+     "title": "Artificial Intelligence Guided Echocardiographic Screening of Rare Diseases",
+     "status": "RECRUITING",
+     "url": "https://clinicaltrials.gov/study/NCT05139797"
+    },
+    {
+     "nct_id": "NCT06664866",
+     "title": "Artificial Intelligence Guided Echocardiographic Screening of Rare Diseases (EchoNet-Screening)",
+     "status": "ENROLLING_BY_INVITATION",
+     "url": "https://clinicaltrials.gov/study/NCT06664866"
+    }
+   ],
+   "open_questions": [
+    "FDA summary reports sensitivity 0.607 and specificity 0.990 without confidence intervals, and does not give the number of CA cases vs controls beyond the 1:2 ratio, the number of patients (vs studies), or per-subgroup results.",
+    "FDA summary does not state whether the 1,221-study validation set was independent of training data or which three U.S. sites were used.",
+    "Breakthrough Device designation and FDA TAP enrollment are stated only by the company; neither appears in the FDA 510(k) summary text.",
+    "Training set size (23,745 patients / 24,804 videos) is stated on the company evidence page citing the JAMA Cardiology 2022 paper; the abstract's 23,745 figure spans training and test cohorts, so the training-only count is unconfirmed.",
+    "Company evidence page reports the JACC: Advances 2025 international validation cohort as 520 cases / 903 controls with AUC 0.893, whereas the PubMed abstract reports 574 CA patients / 979 controls with AUC 0.896; the discrepancy (possibly analyzable-study subset) is unresolved.",
+    "The Cedars-Sinai NCT05139797 and NCT06664866 screening trials are run by the same investigator group; whether they use the cleared commercial product versus the research EchoNet-LVH model is not confirmed from the registry entries.",
+    "Company reports ~15-20% of studies yield no prediction (clip quality, view classification, low confidence); the FDA summary does not report the non-evaluable rate."
+   ],
+   "sources": [
+    {
+     "fact": "Decision date 2025-05-21, product code SDJ, regulation 870.2200, applicant InVision Medical Technology Corporation",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Indications for use, intended use, predicate K240860, device description, technological comparison, validation (n=1221, 3 U.S. sites, 1:2 ratio, Se 0.607, Sp 0.990), PPV/NPV table, human factors n=31, cybersecurity testing",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K243866.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Company website, product page (A4C+PLAX views, cloud or on-premise, vendor-neutral DICOM, secondary-capture output, CPT 0932T, NTAP), evidence page (validation summary, training cohort, publications)",
+     "url_or_file": "https://invisionmedtech.com/product/cardiac-amyloid/ and https://invisionmedtech.com/product/amyloid-evidence/",
+     "verification": "company"
+    },
+    {
+     "fact": "Press release May 28, 2025 announcing FDA 510(k) clearance; prior Breakthrough Device Designation and FDA TAP enrollment",
+     "url_or_file": "https://invisionmedtech.com/press/cardiac-amyloid-clearance/",
+     "verification": "company"
+    },
+    {
+     "fact": "Press release January 5, 2024 announcing FDA Breakthrough Device Designation for cardiac amyloidosis algorithm",
+     "url_or_file": "https://invisionmedtech.com/press/amyloidosis-breakthrough/",
+     "verification": "company"
+    },
+    {
+     "fact": "Press index: CPT 0932T adopted July 2, 2024 (effective Jan 1, 2025); Medicare NTAP announced Aug 4, 2026",
+     "url_or_file": "https://invisionmedtech.com/press/",
+     "verification": "company"
+    },
+    {
+     "fact": "Duffy 2022, Duffy 2025, Hourmozdi 2025, Vrudhula 2024 paper metadata and abstracts",
+     "url_or_file": "Crossref API and PubMed E-utilities (PMIDs 35195663, 40965401, 40616933, 39372462)",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "NCT05139797 (RECRUITING, 300 est.) and NCT06664866 (ENROLLING_BY_INVITATION, 500 est.), sponsor Cedars-Sinai Medical Center",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies/NCT05139797; https://clinicaltrials.gov/api/v2/studies/NCT06664866",
+     "verification": "fda_database"
+    }
+   ]
+  }
+ ],
+ "notes": "Both K-numbers read in full from the extracted FDA summary text (K232331: 8 pages; K243866: 10 pages). Dates and product codes match openFDA. Neither FDA summary discloses training set size; the LVEF summary gives no validation n, and the amyloid summary gives n=1221 studies, 3 U.S. sites, 1:2 case:control. Peer-reviewed papers attached are the published precursor algorithms (EchoNet-Dynamic, EchoNet-LVH) and their validations; the company links these to the cleared products, but the FDA summaries do not name them. Related but excluded: NCT05791227 (EchoNet-LVH-RCT, wall thickness, not amyloid detection) and NCT07229300 / Lee et al. 2026 AI ECHO INSIGHT trial (comprehensive AI echo reporting, corresponds to InVision's in-development Precision Reporting, not either cleared product). The K243866 openFDA contact field lists David Ouyang, who is also a company co-founder and senior author on the cited papers; the user of this session shares that name, so the catalog should note the potential conflict of interest when presenting this batch."
+}

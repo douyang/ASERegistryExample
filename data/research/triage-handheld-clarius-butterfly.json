@@ -1,0 +1,86 @@
+{
+  "group_id": "handheld-clarius-butterfly",
+  "records": [
+    {
+      "k_number": "K213436",
+      "device_name": "Clarius Ultrasound Scanner",
+      "decision_date": "2021-11-15",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [],
+      "performance_summary": null,
+      "exclusion_reason": "AI feature not identifiable in summary. Special 510(k) for the HD3 transducer generation (C3/C7/EC7/L7/L15/PA/L20 HD3) vs. predicate K192107; changes are hardware (built-in battery, new scanner models). The summary contains no mention of artificial intelligence, machine learning, deep learning, neural network, automated/auto measurement, or any named AI feature; the only software listed is the Clarius App, with modes B/M/Color/Power/PW Doppler. Cardiac (adult, pediatric) is an imaging indication only."
+    },
+    {
+      "k_number": "K232704",
+      "device_name": "Clarius Ultrasound Scanner",
+      "decision_date": "2023-10-05",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [],
+      "performance_summary": null,
+      "exclusion_reason": "AI feature not identifiable in summary. Special 510(k) for the PAL HD3 dual-array (phased + linear) transducer vs. predicate K213436; the summary describes only a scanner-head hardware change, states no clinical studies were required, and contains no mention of AI, machine learning, automated measurement, or any named AI feature. Cardiac (adult, pediatric) is an imaging indication of the phased array only."
+    },
+    {
+      "k_number": "K222406",
+      "device_name": "Clarius AI",
+      "decision_date": "2023-01-23",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "Clarius AI (MSK model)",
+          "function": "U-Net (MobileNetV2 backbone) segmentation of tendons (Achilles tendon, plantar fascia, patellar tendon) on L7/L15 linear-array images with semi-automatic caliper placement for tendon thickness measurement",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "Clarius AI (MSK model) is intended to semi-automatically place adjustable calipers and provide supplementary information to the user regarding tendon thickness measurements (i.e., foot/plantar fascia, ankle/Achilles' tendon, knee/patellar tendon).",
+          "page": 5
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "Non-cardiac AI (musculoskeletal tendon segmentation and thickness measurement). Anatomical sites are foot, ankle, knee; indication is limited to MSK ultrasound on L7/L15 linear transducers. The only cardiac reference is the predicate device (DiA LVivo, K200232, LV/RV/bladder), which the summary explicitly distinguishes from the subject device's MSK anatomy. Reported performance (Dice 96%, mean IoU 94% on 2,503 frames from 73 subjects; auto-measurement non-inferior to manual with 20% equivalence margin, p = 9.0 x 10^-7) is for tendon segmentation, not cardiac."
+    },
+    {
+      "k_number": "K220068",
+      "device_name": "Butterfly iQ/iQ+ Ultrasound System",
+      "decision_date": "2023-03-31",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "Auto B-line Counter",
+          "function": "Automated detection, segmentation overlay and counting of B-lines in a rib space on lung ultrasound",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "The subject device introduces the Auto B-line Counter, a software application backed by an image analysis algorithm. The purpose of the Auto B-line Counter is to provide automated detection and automatic calculation of the number of B-lines to a user in a given rib space and also provides the users the capabilities of reviewing the detected B-lines (via visual overlays).",
+          "page": 5
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "Non-cardiac AI (lung B-line counting). This K adds 'Lung' to the indications and Spectral PW Doppler; the sole AI feature is the Auto B-line Counter (validation on 6,000 cines from 253 sites; clinical evaluation on 99 subjects, ICC non-inferior to clinician annotators; DSC for segmentation). Heart failure appears only as a patient confounder subgroup for B-line performance, not as a cardiac imaging function. Cardiac is an imaging indication only with no cardiac AI named."
+    },
+    {
+      "k_number": "K232808",
+      "device_name": "Butterfly iQ3 Ultrasound System",
+      "decision_date": "2024-01-04",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "Auto B-Lines Counter",
+          "function": "Automated detection and counting of B-lines on lung ultrasound (carried over from predicate K220068)",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "Software Features Auto B-Lines Counter ✔ ✔ Remains Unchanged",
+          "page": 11
+        },
+        {
+          "name": "Auto Bladder Volume",
+          "function": "Automated bladder volume measurement tool (carried over from predicate; the summary does not describe the algorithm)",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "The Bladder Volume and B-lines tools remain compatible with the images generated with the iQ3.",
+          "page": 6
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "Non-cardiac AI only (lung B-line counter and bladder volume, both carried over unchanged from K220068). This is a hardware clearance for the iQ3 CMUT transducer plus new Multi-Slice and Sweep B-mode display modes; no clinical studies were required and no cardiac AI feature (EF, cardiac measurements, view guidance) is named anywhere in the summary. Cardiac is an imaging indication only."
+    }
+  ],
+  "notes": "All five clearances triaged as NOT cardiac ultrasound AI. Both Clarius scanner Ks (K213436, K232704) are Special 510(k)s for transducer hardware and their summaries contain no identifiable AI feature at all (the FDA AI list entry is presumably driven by the Clarius App platform hosting Clarius AI, but nothing in these summaries states that); they were flagged with exclusion_reason 'AI feature not identifiable in summary'. K222406 (Clarius AI, QIH) is the only Clarius K with a described algorithm and it is MSK tendon segmentation on linear probes; its predicate DiA LVivo is a cardiac/bladder tool, which should not be mistaken for a cardiac claim on the subject device. Butterfly K220068 introduces the Auto B-line Counter (lung) and K232808 (iQ3) carries over the B-line counter and Auto Bladder Volume unchanged. performance_summary is left null for all records because none of the reported performance data concerns a cardiac AI feature; non-cardiac performance figures are captured in exclusion_reason for reference. Decisions are grounded entirely in the local FDA summary text; no web search was used."
+}

@@ -1,0 +1,184 @@
+{
+  "group_id": "siemens-acuson",
+  "records": [
+    {
+      "k_number": "K232145",
+      "device_name": "ACUSON Sequoia Diagnostic Ultrasound System, ACUSON Sequoia Select Diagnostic Ultrasound System, ACUSON Origin Diagnostic Ultrasound System",
+      "decision_date": "2023-10-30",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "AI Assist",
+          "function": "Automated Color Box and Doppler Gate placement for 12 standard adult echocardiography views (1-4 anatomy locations per view, 42 placements total); cardiac view-aware acquisition assistance.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "AI Assist provides Color Box and Doppler Gate placement for 12 Cardiac Views and 1-4 anatomy locations in each view, for a total of 42 supported placements.",
+          "page": 14
+        },
+        {
+          "name": "AI Measure",
+          "function": "Semi-automated cardiac measurements across Doppler, B-mode and M-mode acquisitions (15 measurement views); equivalent to eSie Measure on the SC2000 reference device but new to the Sequoia/Origin platform.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "AI Measure covers a set of semi-automated cardiac measurements for Doppler, BMode and M-mode acquisitions.",
+          "page": 18
+        },
+        {
+          "name": "2D HeartAI",
+          "function": "Machine-learning 2D echo chamber contouring/measurement on apical 2/3/4-chamber views (LV quantification); compared to eSie LH / Velocity Variance Mapping on SC2000 but new to Sequoia/Origin.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "The ACUSON Sequoia, Sequoia Select, and Origin will offer four (4) new software applications (AI Measure, AI Assist, 2D HeartAI, 4D HeartAI) containing Machine Learning that are specifically intended to support cardiac imaging for blood flow, valves and anatomical features and modifies the Indications for Use.",
+          "page": 8
+        },
+        {
+          "name": "4D HeartAI",
+          "function": "Machine-learning volumetric (3D/4D TTE and TEE) cardiac chamber contouring and measurement; Origin only in this K; compared to eSie LH, eSie LVA, eSie RH + GLS on SC2000 but new to the Sequoia/Origin platform.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "The image dataset was collected from 32 patients from 5 institutions including different transducers (5Z1 (17 TTE), 6ZT (15 TEE)), Volume rates were > 13.4vps.",
+          "page": 17
+        }
+      ],
+      "performance_summary": "Four cardiac ML applications tested on data independent of training sites. AI Assist (color box/Doppler gate placement): 99.3% success aggregated over 42 cardiac placements, >=92% for any single placement; 12 patients, 14 exams, 168 samples (5V1, 5Z1, 8V3), truth = 3 expert cardiac sonographers scoring need for adjustment (p.14-15). 2D HeartAI: Pearson r >= 0.81 vs 3-examiner reference with Bland-Altman bias < 5.2; r >= 0.84 normal BMI, > 0.82 BMI > 25; 45 exams / 90 images from 5 institutions, A2C/A3C/A4C, contrast in 12 exams (p.15-16). 4D HeartAI: Pearson r >= 0.87, Bland-Altman bias < 13.3; r >= 0.98 normal BMI, > 0.81 BMI > 25; 32 patients / 64 volumes, 5Z1 TTE (17) and 6ZT TEE (15), 5 institutions (p.16-18). AI Measure: 89.6% of measurements Pass or Pass-with-edit aggregated over B-mode, Doppler and M-mode, >= 88.1% per mode; 32 patients, 392 images, 1354 samples, 15 measurement views, 5 probes (p.18-19). Quote: 'Aggregating test results over all cardiac views and placement locations, the algorithm is successful 99.3% of the time.' (p.14).",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K240704",
+      "device_name": "ACUSON Sequoia Diagnostic Ultrasound System, ACUSON Sequoia Select Diagnostic Ultrasound System, ACUSON Origin Diagnostic Ultrasound System, ACUSON Origin ICE Diagnostic Ultrasound System",
+      "decision_date": "2024-07-22",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "UDFF (Ultrasonically-Derived Fat Fraction) - pediatric expansion",
+          "function": "Quantitative liver fat-fraction algorithm for hepatic steatosis; this K expands the indication to pediatric patients (8-17 y). Summary describes it as a trained algorithm that was not retrained. Non-cardiac.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "The algorithm for UDFF was not retrained and remained unchanged.",
+          "page": 14
+        },
+        {
+          "name": "Cardiac imaging and analysis package (unnamed; carried over from K232145)",
+          "function": "The optional cardiac AI package (AI Measure, AI Assist, 2D/4D HeartAI per K232145) is referenced only as previously cleared and unmodified; no feature is named or tested in this summary.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "The ACUSON Sequoia, Sequoia Select, Origin and Origin ICE will offer an optional cardiac imaging and analysis package with new transducers and software applications have been previously cleared by FDA under K232145 and not modified in the current submission.",
+          "page": 10
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "The only AI/ML feature identified and tested in this summary is UDFF (liver fat fraction) expanded to pediatrics (AUROC >= 0.87 vs MRI-PDFF, ICC >= 0.97, 105 patients); the changes are pediatric UDFF, AcuNav Crystal / SOUNDSTAR Crystal ICE catheters, the Origin ICE model name, CARTOSOUND, 3D data export and a Wi-Fi module. The cardiac AI package is carried over from K232145 unmodified and no cardiac AI feature is named or evaluated here."
+    },
+    {
+      "k_number": "K242523",
+      "device_name": "ACUSON Sequoia Diagnostic Ultrasound System; ACUSON Sequoia Select Diagnostic Ultrasound System; ACUSON Origin Diagnostic Ultrasound System; ACUSON Origin ICE Diagnostic Ultrasound System",
+      "decision_date": "2024-11-19",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "Trace AI",
+          "function": "Semi-automated (trained algorithm) contouring/measurement of orifice-type cardiac structures (LV, RV, LVOT, LA, ascending aorta, MV annulus, STJ, LAA opening, sinus of Valsalva, TV annulus) on MPRs from volumetric ICE, TEE and TTE acquisitions.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Trace AI is a semi-automated measurement tool that provides an ability to measure orifice-type anatomic structures on MPRs generated from volumetric ICE, TEE and TTE transducers.",
+          "page": 15
+        },
+        {
+          "name": "AI Abdomen",
+          "function": "Semi-automated abdominal B-mode view classification (17 views) and 12 semi-automated measurements, built on AI Measure / AI Assist. Non-cardiac.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "AI Abdomen covers a set of semi-automated Abdomen view classifications and measurements for B-Mode acquisitions.",
+          "page": 13
+        },
+        {
+          "name": "4D Heart AI",
+          "function": "Volumetric cardiac chamber AI (cleared under K232145 on Origin) expanded to the Sequoia / Sequoia Select models with the 5Z1 transducer.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "The modified ACUSON Sequoia and Sequoia Select Ultrasound System includes the expansion of the 5Z1 transduce, 4D Heart AI and AI Assist which was already cleared on ACUSON Sequoia, Sequoia Select, Origin, and Origin ICE (K240704).",
+          "page": 11
+        },
+        {
+          "name": "AI Assist",
+          "function": "Cardiac color box / Doppler gate placement AI (cleared under K232145) expanded to Sequoia / Sequoia Select.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "The modified ACUSON Sequoia and Sequoia Select Ultrasound System includes the expansion of the 5Z1 transduce, 4D Heart AI and AI Assist which was already cleared on ACUSON Sequoia, Sequoia Select, Origin, and Origin ICE (K240704).",
+          "page": 11
+        }
+      ],
+      "performance_summary": "Trace AI (cardiac): acceptance criterion was 90th-percentile DICE >= 0.80 with 90% confidence; observed lower 90% confidence bound for the 90th percentile DICE = 0.95, test passed. Test set: 10 adult patients, 24 volumes from 3 institutions (US, Mexico, Germany) acquired on Origin with 5Z1 (3D TTE), Z6T (3D TEE) and Lumos (3D ICE); reference contours from 3 ARDMS sonographers independently refining the initial Trace AI circle, blinded to each other and to the algorithm output; test sites disjoint from training sites (p.15-16). Quote: 'The lower 90% confidence bound for the 90th percentile is 0.95, which is greater than the requirement of 0.8, therefore, the test passes.' (p.15). Non-cardiac AI Abdomen: view classification 77.8% across 17 views (82.5% excluding CBD and pancreas sagittal); IEC < 0.25 for all 12 measurements; 105 exams, 1,785 images (p.13-14).",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K251481",
+      "device_name": "ACUSON Sequoia Diagnostic Ultrasound System; ACUSON Sequoia Select Diagnostic Ultrasound System; ACUSON Origin Diagnostic Ultrasound System; ACUSON Origin ICE Diagnostic Ultrasound System",
+      "decision_date": "2025-08-20",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "AI Measure + AI Assist integrated workflow",
+          "function": "Workflow integration: AI Assist classifies the cardiac view and the relevant AI Measure measurement labels for that view/anatomy are launched automatically (software version VC10). Underlying cardiac AI features carried over from K232145/K242523; the integration is new.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "AI Measure and AI Assist workflow efficiency feature where the workflows are integrated such that, when cardiac view is classified, relevant AI Measure measurements labels (appropriate for the anatomy area or view detected by AI Assist) are automatically launched.",
+          "page": 10
+        },
+        {
+          "name": "Auto pSWE / Liver Elastography optimization",
+          "function": "Optimization of abdominal shear-wave elastography modes (pSWE, auto pSWE, 2D SWE) verified on phantoms; not described as AI/ML. Non-cardiac.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "Liver Elastography optimization for all the abdominal shear wave elastography (SWE) modes- point shear wave elastography (pSWE), auto pSWE, and 2D SWE.",
+          "page": 10
+        },
+        {
+          "name": "UDFF attenuation coefficient display",
+          "function": "Adds ultrasound attenuation coefficient to the UDFF liver fat display. Non-cardiac.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "Ultrasound attenuation coefficient (Atten) was added to the ultrasound-derived fat fraction (UDFF) display, as an additional measurement.",
+          "page": 10
+        }
+      ],
+      "performance_summary": "No AI performance data reported. The summary states clinical studies were not required and the only performance testing described is SWE phantom testing for the liver elastography optimization ('The verification results met the acceptance criteria for accuracy and variability.', p.12). No accuracy metrics are given for the AI Assist cardiac view classification or the AI Measure integration. Note: the later K260844 summary states 2D Heart AI 'was previously cleared on ... (K251481) and provided automated contouring for all chambers but tracking workflow only for the left side', but 2D Heart AI is not mentioned in the K251481 summary itself.",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K260844",
+      "device_name": "ACUSON Sequoia Diagnostic Ultrasound System;ACUSON Sequoia Select Diagnostic Ultrasound System;ACUSON Origin Diagnostic Ultrasound System;ACUSON Origin ICE Diagnostic Ultrasound System",
+      "decision_date": "2026-06-16",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "Valves AI",
+          "function": "AI-based mitral and aortic valve modeling from 3D TEE volumes: builds valve models, visualizes valvular motion and provides valve measurements for assessing valve health. Previously cleared as eSie Valves on SC2000 (K233613); new to the Sequoia/Origin platform (software VD10).",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Introduction of the new Valves AI feature, an artificial intelligence based application for mitral, and aortic valve analysis. The feature creates models that illustrate valve anatomy and function and provides visualization and measurements of valvular motion for assessing valve health. This was previously cleared as eSie Valves on ACUSON SC2000 (K233613).",
+          "page": 10
+        },
+        {
+          "name": "2D Heart AI (right-side tracking enhancement)",
+          "function": "AI-based 2D echo application providing automated contouring of all chambers and view classification; this K adds right-heart tracking workflow (previously left side only).",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "Enhancement of 2D Heart AI to include right side tracking. 2D Heart AI artificial intelligence based application was previously cleared on ACUSON Sequoia, Sequoia Select, Origin and Origin ICE (K251481) and provided automated contouring for all chambers but tracking workflow only for the left side.",
+          "page": 10
+        },
+        {
+          "name": "UDFF QUS optimization (5C1, 9C2)",
+          "function": "Quantitative ultrasound liver fat-fraction optimization to reduce variability; 30-subject study vs MRI-PDFF. Non-cardiac.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "Quantitative Ultrasound (QUS) UDFF optimization on the 5C1 and 9C2 transducers to reduce measurement variability.",
+          "page": 10
+        }
+      ],
+      "performance_summary": "Valves AI (mitral + aortic): user-edited Valves AI output vs reference auto-detection on a verification dataset; aortic and mitral valve surface-similarity and landmark-distance metrics all exceeded 80% at the lower bound of the 95% CI; Pearson r >= 0.9 for surface/landmark-derived measurements; performance >= 0.97 for normal BMI and > 0.88 for BMI > 25. Dataset: 86 volumes from 42 TEE studies (Z6T) at 3 institutions (USA, Mexico), age 35-93, 44% female; reference from 3 examiners correcting automatic detection (inter-user Pearson >= 0.9, Bland-Altman bias < 10%); fresh data collected for verification, disjoint from training (p.12-13). Quote: 'Accuracy of Aortic and Mitral valve surface similarity and landmark distance errors meets acceptance criteria, with all metrics exceeding 80% at the lower bound of the 95% confidence interval.' (p.12). 2D Heart AI enhancement: contour DICE average 88%; view classification accuracy 98% average; contouring 0.87 normal BMI vs 0.89 BMI > 25; 48 patients, 96 images, 5 institutions, transducers 5V1/5Z1/8V3/10V4, A2C/A3C/A4C, frame rate > 17 fps, contrast in 10 exams; 3-examiner manual contour reference; test data disjoint from training (p.13-14). Quote: 'Contour DICE average of 88%' and 'View classification performance with accuracy of 98% in average' (p.13).",
+      "exclusion_reason": null
+    }
+  ],
+  "notes": "All decisions grounded solely in the local FDA summary text; no web search was used. Lineage: K223735 (Sequoia, no cardiac AI) -> K232145 (introduces AI Assist, AI Measure, 2D HeartAI, 4D HeartAI; the comparison table maps AI Measure to eSie Measure and 2D/4D HeartAI to eSie LH/LVA/RH+GLS on the SC2000 reference K211726, so these are new to Sequoia/Origin rather than de novo) -> K240704 (pediatric UDFF, ICE catheters; cardiac AI package carried over unmodified and unnamed; set false per the 'not identifiable in summary' rule, though the device lineage still contains the cardiac AI apps - parent may reclassify if lineage counts) -> K242523 (Trace AI, a trained cardiac orifice-contouring tool on 3D ICE/TEE/TTE, plus non-cardiac AI Abdomen; 4D Heart AI and AI Assist extended to Sequoia) -> K251481 (AI Assist cardiac-view-triggered AI Measure workflow; no AI performance data) -> K260844 (Valves AI from SC2000 eSie Valves; 2D Heart AI right-side tracking; performance reported for both). Product code QIH (Automated Radiological Image Processing Software) appears on all five. Features listed in K232145's comparison table but not described as AI/ML (Auto Doppler/eSieDoppler, Auto Calcs/eSie Calcs, Auto OB, Auto IMT, Auto TEQ, UDFF) were not recorded as AI features for that K. K251481's summary never mentions 2D Heart AI even though K260844 cites K251481 as its clearance; recorded as an inconsistency in that record's performance_summary. Page numbers refer to the '===== PAGE n =====' markers in the extracted text files."
+}

@@ -1,0 +1,577 @@
+{
+  "batch_id": "ge-venue-vscan",
+  "families": [
+    {
+      "id": "ge-venue-real-time-ef",
+      "product_name": "Venue / Venue Go / Venue Fit / Venue Sprint cardiac AI features (Real-Time EF, Caption Guidance with Auto Depth, AFI with AI Auto ROI)",
+      "company": "GE HealthCare (GE Medical Systems Ultrasound and Primary Care Diagnostics, LLC)",
+      "company_website": "https://www.gehealthcare.com",
+      "product_url": "https://www.gehealthcare.com/en-us/products/ultrasound/point-of-care-ultrasound/venue/venue",
+      "category": "system-embedded",
+      "tags": [
+        "Real-Time EF",
+        "LVEF",
+        "Caption Guidance",
+        "view acquisition guidance",
+        "Auto Depth",
+        "Automated Function Imaging",
+        "AFI",
+        "AI Auto ROI",
+        "strain",
+        "LV strain",
+        "RV strain",
+        "LA strain",
+        "point-of-care"
+      ],
+      "modality_scope": [
+        "POCUS",
+        "TTE",
+        "handheld (Venue Sprint with Vscan Air SL probe)"
+      ],
+      "deployment": [
+        "ultrasound-system-embedded"
+      ],
+      "summary": "GE HealthCare Venue-family point-of-care ultrasound systems (Venue, Venue Go, Venue Fit, Venue Sprint) carry three cardiac AI features across the six clearances in this batch: Real-Time Ejection Fraction (an automated LVEF tool carried over from the 2020 predicates and expanded to pediatrics in the 2022 clearances K220800/K220851/K220848), Caption Guidance cardiac view-acquisition guidance (separately cleared as K243065; expanded to the Vscan Air SL probe in K251322 and given Auto Depth in K261668), and Automated Function Imaging with an AI Auto ROI myocardium-detection algorithm for LV/RV/LA strain (added to Venue and Venue Go in K251322). None of the six FDA summaries reports performance data, training-set size, or validation-set size for any cardiac feature; the AI testing sections cover only non-cardiac tools (cNerve, Auto Bladder Volume, Auto Gastric Volume, cNeedle).",
+      "intended_use_quote": "The Venue, Venue Go, Venue Fit and Venue Sprint are general purpose diagnostic ultrasound systems for use by qualified and trained healthcare professionals or practitioners that are legally authorized or licensed by law in the country, state or other local municipality in which he or she practices, for ultrasound imaging, measurement, display and analysis of the human body and fluid.",
+      "indications_for_use_quote": "Venue, Venue Go and Venue Fit are intended to be used in a hospital or medical clinic. Venue, Venue Go and Venue Fit clinical applications include: abdominal (GYN and Urology), thoracic/pleural, ophthalmic, Fetal/OB, Small Organ (including breast, testes, thyroid), Vascular/Peripheral vascular, neonatal and adult cephalic, pediatric, musculoskeletal (conventional and superficial), cardiac (adults and pediatric), Transrectal, Transvaginal, Transesophageal, Intraoperative (vascular) and interventional guidance (includes tissue biopsy, fluid drainage, vascular and non-vascular access).",
+      "embedded_ai_features": [
+        {
+          "name": "Real-Time Ejection Fraction (Real-Time EF)",
+          "function": "Automated left ventricular ejection fraction during live scanning of the apical four-chamber view; the FDA summaries do not describe the method or label it AI/ML (the vendor insight article describes it as 'AI in ultrasound' that 'traces the walls of the LV in each frame'). Carried over from predicates Venue Go K202233 / Venue K202132 / Venue Fit K203137 (adults only, outside this batch); first appears in this batch in K220800, which expands it to pediatrics excluding neonates.",
+          "first_k_number": null,
+          "quote": "Expanding Real-Time Ejection Fraction (EF) to pediatrics (excluding neonates). Real-Time EF tool is available on the cleared predicate Venue Go (K202233) for adults only."
+        },
+        {
+          "name": "Caption Guidance (cardiac view acquisition guidance) on Venue family",
+          "function": "Real-time textual guidance, prescriptive graphical navigation and reference images to obtain standard cardiac views; separately cleared software (K243065, with PCCP per K261668). Already on predicates Venue K240111, Venue Go K240053, Venue Fit K234106 (outside this batch); first appears in this batch in K251322, which expands it to the Vscan Air SL probe used with Venue Sprint.",
+          "first_k_number": null,
+          "quote": "Expand Caption Guidance application for Vscan Air SL probe. Caption Guidance enables the user to obtain different cardiac views through textual guidance, prescriptive graphical navigation, and reference images. Caption Guidance has its own FDA clearance (K243065) and is similar to Caption Guidance cleared on predicates Venue K240111, Venue Go K240053 and Venue Fit K234106."
+        },
+        {
+          "name": "Automated Function Imaging (AFI) with AI Auto ROI",
+          "function": "Automated global and regional systolic function (longitudinal strain) assessment of LV, RV and LA on Venue and Venue Go, with an AI Auto ROI algorithm that automatically detects the myocardium; adapted from Vivid S70N (K223832) and EchoPAC (K220940).",
+          "first_k_number": "K251322",
+          "quote": "Automated Function Imaging (AFI): an automated tool for global and regional assessment of the systolic function of the left ventricle (LV), right ventricle (RV), and left atrium (LA). The AFI tool on proposed Venue and Venue Go is similar to AFI with Easy AFI LV tool available on the cleared references Vivid S70N (K223832) and EchoPAC Software Only/EchoPAC Plug-in (K220940) and includes AI Auto ROI algorithm that automatically detects the myocardium."
+        },
+        {
+          "name": "Auto Depth on Caption Guidance",
+          "function": "Automatically adjusts imaging depth in real time during Caption-guided cardiac scanning on Venue Go; stated to be identical to the Auto Depth implementation on Vscan Air K250087. Whether Auto Depth itself is ML-based is not stated.",
+          "first_k_number": "K261668",
+          "quote": "Adding Auto Depth on Caption guidance: automatically adjusts the imaging depth in real time to optimize visualization. Caption Guidance has its own FDA clearance with approved PCCP (K243065) and cleared instructions for use which is also provided to customers who order this optional application. Caption guidance feature is already cleared on predicate Venue Go K251322. On the proposed Venue Go, we are expanding SW scanning capability to support Auto Depth. This is identical to Auto Depth on Caption guidance as implemented on cleared Vscan Air K250087."
+        }
+      ],
+      "clearances": [
+        {
+          "k_number": "K220800",
+          "decision_date": "2022-06-21",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K202233",
+            "K210438",
+            "K161706",
+            "K203114",
+            "K210426",
+            "K202658",
+            "K182234"
+          ],
+          "changes_summary": "Venue Go: expands Real-Time Ejection Fraction (EF) from adults to pediatrics (excluding neonates); also adds cNerve (non-cardiac, the only feature with an AI testing section), pediatric B-lines, M5Sc-RS probe, Catheter Vessel Ratio and other workflow tools.",
+          "notable_flags": [
+            "Primary predicate K202233; the other listed K-numbers are reference devices",
+            "No cardiac AI performance data; AI Summary of Testing covers cNerve only (124 sequences, 3,776 frames, 44 individuals)",
+            "No clinical studies"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K220800.pdf"
+        },
+        {
+          "k_number": "K220851",
+          "decision_date": "2022-06-27",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K202132",
+            "K210438",
+            "K161706",
+            "K203114",
+            "K210426",
+            "K202658",
+            "K182234"
+          ],
+          "changes_summary": "Venue: expands Real-Time Ejection Fraction (EF) from adults to pediatrics (excluding neonates); same feature set as K220800 (cNerve, pediatric B-lines, M5Sc-RS probe, workflow tools) plus a processor change.",
+          "notable_flags": [
+            "Primary predicate K202132; the other listed K-numbers are reference devices",
+            "Summary near-identical to K220800 and K220848",
+            "No cardiac AI performance data; AI testing covers cNerve only",
+            "No clinical studies"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K220851.pdf"
+        },
+        {
+          "k_number": "K220848",
+          "decision_date": "2022-06-27",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K203137",
+            "K210438",
+            "K161706",
+            "K203114",
+            "K210426",
+            "K202658",
+            "K182234"
+          ],
+          "changes_summary": "Venue Fit: expands Real-Time Ejection Fraction (EF) from adults to pediatrics (excluding neonates); same feature set as K220800.",
+          "notable_flags": [
+            "Primary predicate K203137; the other listed K-numbers are reference devices",
+            "Summary near-identical to K220800 and K220851",
+            "No cardiac AI performance data; AI testing covers cNerve only",
+            "No clinical studies"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K220848.pdf"
+        },
+        {
+          "k_number": "K251322",
+          "decision_date": "2025-07-25",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K240111",
+            "K240053",
+            "K234106",
+            "K240206",
+            "K231966",
+            "K223832",
+            "K161588",
+            "K220940"
+          ],
+          "changes_summary": "Venue, Venue Go, Venue Fit, Venue Sprint: adds Automated Function Imaging (LV/RV/LA strain) with AI Auto ROI myocardium detection on Venue and Venue Go; expands Caption Guidance (K243065) to the Vscan Air SL probe; adds deep-learning Auto Bladder Volume (non-cardiac) and Contrast Imaging.",
+          "notable_flags": [
+            "Primary predicates K240111, K240053, K234106, K240206; references K231966, K223832, K161588, K220940",
+            "Single 510(k) covering four trade names",
+            "Only Auto Bladder Volume (non-cardiac) has an AI testing section: 1,874 verification images from 101 individuals, caliper placement success 95.09%; total dataset 8,392 images from 496 individuals",
+            "No performance data for AFI/AI Auto ROI or Caption Guidance in this summary",
+            "No clinical studies"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251322.pdf"
+        },
+        {
+          "k_number": "K261668",
+          "decision_date": "2026-08-07",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K251322",
+            "K241201",
+            "K250818"
+          ],
+          "changes_summary": "Venue Go: adds Auto Depth to Caption Guidance (real-time automatic depth adjustment, identical to Vscan Air K250087 implementation); non-cardiac additions are Auto Gastric Volume (AI segmentation/classification), cNeedle 2.0, Auto Catheter Vessel Ratio, new 4Sc-RS and L8-18t-RS transducers, Windows 11 and new UI.",
+          "notable_flags": [
+            "Primary predicate K251322; references K241201 (TEX20) and K250818 (Nerveblox)",
+            "FDA letter lists product codes 'IYN, ITO, ITX, QIH' while the summary lists 'IYN (primary), IYO, ITX, QIH (secondary)'; QIH (automated radiological image processing software) is newly listed relative to earlier Venue clearances",
+            "Caption Guidance described as having an approved PCCP under K243065",
+            "AI testing sections cover Auto Gastric Volume and cNeedle 2.0 only (non-cardiac); no cardiac AI performance data",
+            "No clinical studies"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf26/K261668.pdf"
+        }
+      ],
+      "performance_claims": [
+        {
+          "k_number": null,
+          "endpoint": "Real-Time EF agreement with expert LVEF",
+          "metric": "proportion of cases within +/-10 EF points of expert measurement",
+          "value": "86%",
+          "comparator": "experts' measurements",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Not described on the vendor page; study size not disclosed",
+          "subgroup_notes": null,
+          "quote": "In 86% of cases, the ejection fraction results from the Real-Time EF have been found to be within ±10 points of experts' measurements",
+          "page": null,
+          "verification": "company"
+        },
+        {
+          "k_number": null,
+          "endpoint": "Venue automatic LVEF tool agreement with blinded POCUS expert (high-quality views)",
+          "metric": "Cohen's kappa",
+          "value": "0.498 (p < 0.001)",
+          "comparator": "POCUS expert blinded to the auto tool measurement",
+          "n_studies": 1,
+          "n_patients": null,
+          "n_sites": 1,
+          "dataset_description": "Single-center (Soroka Medical Center, Israel); cardiac views acquired by a POCUS expert on the GE Venue; number of exams not stated in abstract",
+          "subgroup_notes": "Agreement reported only for high-quality views; auto VTI 0.655 and auto IVC 0.536 in the same paper are non-EF tools",
+          "quote": "All three tools have shown good agreement with the POCUS expert for high quality views: auto LVEF (0.498; p < 0.001), auto IVC (0.536; p = 0.009), and the auto VTI (0.655; p = 0.024).",
+          "page": null,
+          "verification": "peer_reviewed"
+        }
+      ],
+      "training_data": {
+        "disclosed": false,
+        "n_studies": null,
+        "n_patients": null,
+        "n_sites": null,
+        "description": "None of the five Venue-family summaries discloses training data for Real-Time EF, Caption Guidance, Auto Depth, or AFI/AI Auto ROI. (Training-set sizes are disclosed only for non-cardiac features: Auto Bladder Volume in K251322, total 8,392 images from 496 individuals with 1,874 held for verification; cNeedle 2.0 in K261668, development dataset >70,000 frames.)",
+        "source": null,
+        "verification": "unverified"
+      },
+      "validation_data": {
+        "n_studies": null,
+        "n_patients": null,
+        "n_sites": null,
+        "description": "No verification/validation dataset is reported for any cardiac AI feature in K220800, K220851, K220848, K251322 or K261668. Each summary states the device 'did not require clinical studies to support substantial equivalence.'",
+        "independent_of_training": null,
+        "source": null,
+        "verification": "unverified"
+      },
+      "prior_validations": [
+        {
+          "description": "Caption Guidance is separately cleared software (K201992 original; K243065 current, with an approved PCCP per the K261668 summary); its pivotal evidence is the Narang 2021 JAMA Cardiology study (240 patients, 8 novice nurses, 2 hospitals), on Terason hardware rather than Venue.",
+          "source_url": "https://doi.org/10.1001/jamacardio.2021.0185",
+          "verification": "doi_resolved"
+        },
+        {
+          "description": "AFI with Easy AFI LV (the reference for Venue AFI/AI Auto ROI) was previously cleared on Vivid S70N (K223832) and EchoPAC (K220940); those summaries were not read in this session.",
+          "source_url": null,
+          "verification": "unverified"
+        }
+      ],
+      "papers": [
+        {
+          "title": "Artificial Intelligence (AI) versus POCUS Expert: A Validation Study of Three Automatic AI-Based, Real-Time, Hemodynamic Echocardiographic Assessment Tools",
+          "first_author": "Gohar E",
+          "journal": "Journal of Clinical Medicine",
+          "year": 2023,
+          "doi": "10.3390/jcm12041352",
+          "pmid": "36835888",
+          "url": "https://doi.org/10.3390/jcm12041352",
+          "relation": "external-validation",
+          "n_subjects": null,
+          "key_result": "GE Venue automatic EF, VTI and IVC tools vs blinded POCUS expert; auto LVEF kappa 0.498 (p<0.001) for high-quality views; authors conclude auto tools give reliable real-time assistance but do not reduce the need for good acquisition. Number of exams not stated in abstract.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Utility of a Deep-Learning Algorithm to Guide Novices to Acquire Echocardiograms for Limited Diagnostic Use",
+          "first_author": "Narang A",
+          "journal": "JAMA Cardiology",
+          "year": 2021,
+          "doi": "10.1001/jamacardio.2021.0185",
+          "pmid": "33599681",
+          "url": "https://doi.org/10.1001/jamacardio.2021.0185",
+          "relation": "pivotal-validation",
+          "n_subjects": 240,
+          "key_result": "8 nurses without echo experience, each scanning 30 patients with the DL guidance algorithm, produced studies judged diagnostic-quality for LV size, function and pericardial effusion in 237/240 (98.8%) and RV size in 222/240 (92.5%); 2 academic hospitals. Algorithm is the Caption Guidance software (K201992), not run on GE hardware in this study.",
+          "verification": "doi_resolved"
+        }
+      ],
+      "clinical_trials": [
+        {
+          "nct_id": "NCT03897140",
+          "title": "Point-of-Care Echocardiography With Assistance Technology",
+          "status": "COMPLETED",
+          "url": "https://clinicaltrials.gov/study/NCT03897140"
+        }
+      ],
+      "open_questions": [
+        "Which clearance first introduced Real-Time EF: the 2022 summaries attribute it to predicates Venue Go K202233, Venue K202132 and Venue Fit K203137 (adults only), none of which is in this batch; those summaries were not read.",
+        "Whether Real-Time EF is an ML/deep-learning algorithm: no FDA summary in the batch says so; only the vendor page calls it 'AI in ultrasound'.",
+        "No FDA-reported performance, training-set size or validation-set size exists for Real-Time EF, Caption Guidance on Venue, Auto Depth, or AFI/AI Auto ROI in any of the five summaries; the only cardiac performance numbers are a vendor claim (86% within +/-10 points, n not disclosed) and one single-center paper (Gohar 2023, kappa 0.498, n not in abstract).",
+        "The K251322 pediatric scope of Real-Time EF and the K261668 clearance's QIH product-code addition were not explained in the summaries.",
+        "The GE Real-Time EF white paper (pocushub.net PDF) returned HTTP 403 and could not be read; it may contain the study n behind the 86% claim.",
+        "Whether Caption Guidance on Venue uses the same model version as K243065 or an earlier K201992 version is not stated.",
+        "Page numbers in quotes refer to PDF page indices of the FDA document (letter pages included), matching the triage file convention."
+      ],
+      "sources": [
+        {
+          "fact": "K220800 decision date 2022-06-21, product code IYN, applicant, device name",
+          "url_or_file": "openfda_records.json",
+          "verification": "openfda"
+        },
+        {
+          "fact": "K220851 decision date 2022-06-27, IYN; K220848 decision date 2022-06-27, IYN; K251322 2025-07-25, IYN; K261668 2026-08-07, IYN",
+          "url_or_file": "openfda_records.json",
+          "verification": "openfda"
+        },
+        {
+          "fact": "Real-Time EF expansion to pediatrics and predicate K202233 (PDF page 9)",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K220800.txt",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "Real-Time EF expansion and predicate K202132 (PDF page 9)",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K220851.txt",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "Real-Time EF expansion and predicate K203137 (PDF page 9)",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K220848.txt",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "Caption Guidance expansion to Vscan Air SL probe (PDF page 9); AFI with AI Auto ROI (PDF pages 9-10); intended use (PDF page 7); ABV AI testing (PDF pages 11-13)",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K251322.txt",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "Auto Depth on Caption Guidance with PCCP K243065 (PDF pages 8-9); product codes incl. QIH (PDF pages 1, 5); AGV and cNeedle AI testing (PDF pages 10-16)",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K261668.txt",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "Vendor description of Real-Time EF (A4CH view, LV wall tracing, 86% within +/-10 points, quality indicator)",
+          "url_or_file": "https://www.gehealthcare.com/insights/article/realtime-ef-with-ai-in-ultrasound",
+          "verification": "company"
+        },
+        {
+          "fact": "Vendor description of AFI on Venue (LV/RV/LA longitudinal strain, under three minutes)",
+          "url_or_file": "https://www.gehealthcare.com/en-us/products/ultrasound/point-of-care-ultrasound/venue/venue-family-innovation",
+          "verification": "company"
+        },
+        {
+          "fact": "Gohar 2023 abstract and DOI",
+          "url_or_file": "https://pubmed.ncbi.nlm.nih.gov/36835888/",
+          "verification": "pmid_resolved"
+        },
+        {
+          "fact": "Narang 2021 abstract and DOI",
+          "url_or_file": "https://pubmed.ncbi.nlm.nih.gov/33599681/",
+          "verification": "pmid_resolved"
+        },
+        {
+          "fact": "NCT03897140 record (n=240, Bay Labs EchoGPS = Caption Guidance predecessor)",
+          "url_or_file": "https://clinicaltrials.gov/study/NCT03897140",
+          "verification": "news"
+        }
+      ]
+    },
+    {
+      "id": "ge-vscan-air-caption-ai",
+      "product_name": "Vscan Air SL with Caption AI (Caption Guidance + Caption Interpretation AutoEF)",
+      "company": "GE HealthCare (GE Medical Systems Ultrasound and Primary Care Diagnostics)",
+      "company_website": "https://www.gehealthcare.com",
+      "product_url": "https://www.gehealthcare.com/en-us/products/ultrasound/handheld-ultrasound/vscan-air-caption-ai",
+      "category": "system-embedded",
+      "tags": [
+        "Caption AI",
+        "Caption Guidance",
+        "AutoEF",
+        "LVEF",
+        "view acquisition guidance",
+        "quality meter",
+        "AutoCapture",
+        "Auto Depth",
+        "handheld"
+      ],
+      "modality_scope": [
+        "handheld",
+        "POCUS",
+        "TTE"
+      ],
+      "deployment": [
+        "ultrasound-system-embedded"
+      ],
+      "summary": "K250087 adds Caption AI compatibility to the GE HealthCare Vscan Air wireless handheld ultrasound (app plus dual-headed probes). Caption AI combines two separately cleared Caption Health software features, Caption Guidance (K201992; real-time acquisition guidance for standard cardiac views) and Caption Interpretation AutoEF (K210747; automated left ventricular ejection fraction from PLAX, AP2 and/or AP4 views). The K250087 summary reports no performance, training or validation data for Caption AI; its only AI testing section covers the non-cardiac Auto bladder volume feature. Caption AI on Vscan Air SL was announced by GE HealthCare on 2024-04-03, before this clearance date of 2025-05-01.",
+      "intended_use_quote": "Vscan Air is a battery-operated software-based general-purpose ultrasound imaging system for use by qualified and trained healthcare professionals or practitioners that are legally authorized or licensed by law in the country, state or other local municipality in which he or she practices. The users may or may not be working under supervision or authority of a physician. Users may also include medical students working under the supervision or authority of a physician during their education / training. The device is enabling visualization and measurement of anatomical structures and fluid including blood flow.",
+      "indications_for_use_quote": "With the sector array transducer of the dual headed probe solution, the specific clinical applications and exam types include: cardiac (adult and pediatric, 40 kg and above), abdominal, fetal/obstetrics, gynecological, urology, thoracic/ lung, pediatrics, adult cephalic, interventional guidance (includes free hand needle/catheter placement, fluid drainage, nerve block and biopsy).",
+      "embedded_ai_features": [
+        {
+          "name": "Caption AI (Caption Guidance + Caption Interpretation AutoEF)",
+          "function": "Real-time user guidance for acquisition of standard cardiac ultrasound views (Caption Guidance, K201992) and automated estimation of left ventricular ejection fraction from the captured views (Caption Interpretation AutoEF, K210747), running with the Vscan Air handheld system.",
+          "first_k_number": "K250087",
+          "quote": "Added compatibility with Caption AI which provides real-time user guidance to assist medical professionals in the acquisition of cardiac ultrasound images and provides an automated estimation of left ventricular ejection fraction. Caption AI incorporates two separately cleared software features: Caption Guidance (K201992) and Caption Interpretation AutoEF (K210747)."
+        },
+        {
+          "name": "Auto Depth on Caption Guidance (Vscan Air implementation)",
+          "function": "Automatic real-time imaging-depth adjustment during Caption-guided scanning. Not mentioned in the K250087 summary text; asserted by the later K261668 summary to be 'identical to Auto Depth on Caption guidance as implemented on cleared Vscan Air K250087'.",
+          "first_k_number": "K250087",
+          "quote": "Adding Auto Depth on Caption guidance: automatically adjusts the imaging depth in real time to optimize visualization. Caption Guidance has its own FDA clearance with approved PCCP (K243065) and cleared instructions for use which is also provided to customers who order this optional application. Caption guidance feature is already cleared on predicate Venue Go K251322. On the proposed Venue Go, we are expanding SW scanning capability to support Auto Depth. This is identical to Auto Depth on Caption guidance as implemented on cleared Vscan Air K250087."
+        }
+      ],
+      "clearances": [
+        {
+          "k_number": "K250087",
+          "decision_date": "2025-05-01",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K231301",
+            "K161588"
+          ],
+          "changes_summary": "Vscan Air: adds Caption AI compatibility (Caption Guidance K201992 + Caption Interpretation AutoEF K210747) and a deep-learning Auto bladder volume tool (non-cardiac); indications, imaging modes, transducers and accessories identical to predicate Vscan Air K231301.",
+          "notable_flags": [
+            "Primary predicate K231301; reference K161588 (Vscan Extend)",
+            "Summary is dated April 30, 2024 although the letter is dated May 1, 2025 (received January 14, 2025)",
+            "Caption AI is incorporated by reference to its own clearances; no Caption AI performance data in this summary",
+            "AI testing section covers Auto bladder volume only: 1,817 verification images from 142 individuals, caliper placement success 92.24% at 90% confidence; total dataset 4,014 images from 301 individuals",
+            "No clinical studies"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K250087.pdf"
+        }
+      ],
+      "performance_claims": [],
+      "training_data": {
+        "disclosed": false,
+        "n_studies": null,
+        "n_patients": null,
+        "n_sites": null,
+        "description": "K250087 discloses no training data for Caption Guidance or AutoEF (only for the non-cardiac Auto bladder volume: 4,014 images from 301 individuals total, 1,817 held for verification). Published algorithm papers report Caption Guidance trained on 'more than 5 million examples' of probe-movement outcomes (Narang 2021) and AutoEF trained on '>50 000 echocardiographic studies' (Asch 2019); these relate to the underlying Caption software, not to Vscan Air-specific data.",
+        "source": "https://doi.org/10.1001/jamacardio.2021.0185; https://doi.org/10.1161/CIRCIMAGING.119.009303",
+        "verification": "peer_reviewed"
+      },
+      "validation_data": {
+        "n_studies": null,
+        "n_patients": null,
+        "n_sites": null,
+        "description": "No verification or clinical validation of Caption AI on Vscan Air is reported in K250087; the summary states the device 'did not require clinical studies to support substantial equivalence.'",
+        "independent_of_training": null,
+        "source": null,
+        "verification": "unverified"
+      },
+      "prior_validations": [
+        {
+          "description": "Caption Guidance pivotal study (Narang 2021, JAMA Cardiology): 240 patients, 8 novice nurses, 2 hospitals; 98.8% diagnostic-quality for LV size/function/pericardial effusion. Hardware was Terason uSmart 3200t (per NCT03897140), not Vscan Air.",
+          "source_url": "https://doi.org/10.1001/jamacardio.2021.0185",
+          "verification": "doi_resolved"
+        },
+        {
+          "description": "AutoEF algorithm development and validation (Asch 2019, 99 patients; Asch 2021, 166 exams plus nurse-acquired point-of-care protocol) under the BayLabs/Caption Health name, prior to K210747.",
+          "source_url": "https://doi.org/10.1161/CIRCIMAGING.120.012293",
+          "verification": "doi_resolved"
+        }
+      ],
+      "papers": [
+        {
+          "title": "Utility of a Deep-Learning Algorithm to Guide Novices to Acquire Echocardiograms for Limited Diagnostic Use",
+          "first_author": "Narang A",
+          "journal": "JAMA Cardiology",
+          "year": 2021,
+          "doi": "10.1001/jamacardio.2021.0185",
+          "pmid": "33599681",
+          "url": "https://doi.org/10.1001/jamacardio.2021.0185",
+          "relation": "pivotal-validation",
+          "n_subjects": 240,
+          "key_result": "8 nurses without echo experience, each scanning 30 patients with the DL guidance algorithm, produced studies judged diagnostic-quality for LV size, function and pericardial effusion in 237/240 (98.8%) and RV size in 222/240 (92.5%); 2 academic hospitals. Algorithm is the Caption Guidance software (K201992), not run on GE hardware in this study.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Automated Echocardiographic Quantification of Left Ventricular Ejection Fraction Without Volume Measurements Using a Machine Learning Algorithm Mimicking a Human Expert",
+          "first_author": "Asch FM",
+          "journal": "Circulation: Cardiovascular Imaging",
+          "year": 2019,
+          "doi": "10.1161/CIRCIMAGING.119.009303",
+          "pmid": "31522550",
+          "url": "https://doi.org/10.1161/CIRCIMAGING.119.009303",
+          "relation": "algorithm-development",
+          "n_subjects": 99,
+          "key_result": "AutoEF (BayLabs, later Caption Interpretation) trained on >50,000 echo studies; tested in 99 independent patients vs 3-expert volume-based reference; feasible in all 99; mean absolute deviation across view combinations 2.9%.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Deep Learning-Based Automated Echocardiographic Quantification of Left Ventricular Ejection Fraction: A Point-of-Care Solution",
+          "first_author": "Asch FM",
+          "journal": "Circulation: Cardiovascular Imaging",
+          "year": 2021,
+          "doi": "10.1161/CIRCIMAGING.120.012293",
+          "pmid": "34126754",
+          "url": "https://doi.org/10.1161/CIRCIMAGING.120.012293",
+          "relation": "external-validation",
+          "n_subjects": 166,
+          "key_result": "AutoEF adapted to A4C/A2C/PLAX views: protocol 1 (166 clinical exams) ICC 0.86-0.95 vs biplane reference with bias <2%; protocol 2 (nurse-acquired images on a portable system, n not stated in abstract) ICC 0.84, bias 2.5+/-6.4%.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Leveraging the Capabilities of AI: Novice Neurology-Trained Operators Performing Cardiac POCUS in Patients with Acute Brain Injury",
+          "first_author": "Mears J",
+          "journal": "Neurocritical Care",
+          "year": 2024,
+          "doi": "10.1007/s12028-024-01953-z",
+          "pmid": "38506968",
+          "url": "https://doi.org/10.1007/s12028-024-01953-z",
+          "relation": "real-world",
+          "n_subjects": 153,
+          "key_result": "184 Caption AI-guided cPOCUS scans by neurology-trained novices in 153 NICU patients: 63.4% interpretable for LV size/function, 52.6% for RV, 47.2% for pericardial effusion; 37% of screening scans changed management. Ultrasound hardware not stated in abstract.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "The Use of Artificial Intelligence Guidance for Rheumatic Heart Disease Screening by Novices",
+          "first_author": "Peck D",
+          "journal": "Journal of the American Society of Echocardiography",
+          "year": 2023,
+          "doi": "10.1016/j.echo.2023.03.001",
+          "pmid": "36906047",
+          "url": "https://doi.org/10.1016/j.echo.2023.03.001",
+          "relation": "external-validation",
+          "n_subjects": 50,
+          "key_result": "36 novices scanned 50 patients in Uganda with AI guidance (362 studies) vs 2 expert sonographers (100 studies); novice images diagnostic in >90% for presence/absence of RHD and mitral regurgitation vs 99% by experts. Ultrasound hardware not stated in abstract.",
+          "verification": "doi_resolved"
+        }
+      ],
+      "clinical_trials": [
+        {
+          "nct_id": "NCT03897140",
+          "title": "Point-of-Care Echocardiography With Assistance Technology",
+          "status": "COMPLETED",
+          "url": "https://clinicaltrials.gov/study/NCT03897140"
+        },
+        {
+          "nct_id": "NCT03705650",
+          "title": "SHAPE: Seeing the Heart With AI Powered Echo",
+          "status": "COMPLETED",
+          "url": "https://clinicaltrials.gov/study/NCT03705650"
+        },
+        {
+          "nct_id": "NCT06717373",
+          "title": "Point-of-Care Echocardiography in Patients With Known or Suspected Aortic Stenosis",
+          "status": "COMPLETED",
+          "url": "https://clinicaltrials.gov/study/NCT06717373"
+        }
+      ],
+      "open_questions": [
+        "No performance data for Caption Guidance or AutoEF on Vscan Air hardware exists in K250087 or in any paper found this session; all Caption evidence predates the Vscan Air integration and used other ultrasound hardware.",
+        "The K261668 summary says Auto Depth on Caption Guidance was implemented on 'cleared Vscan Air K250087', but the K250087 summary text never mentions Auto Depth; whether it was part of K250087 or added under the K243065 PCCP is unresolved.",
+        "The K250087 summary is dated April 30, 2024 while the FDA letter is dated May 1, 2025; GE announced Caption AI on Vscan Air SL on 2024-04-03, so the regulatory basis for the 2024 US launch (possibly the standalone Caption clearances K201992/K210747 or the 2024 K243065) is unclear.",
+        "NCT06717373 (Caption Health sponsor, n=63) was returned by a ClinicalTrials.gov search for 'Vscan Air' but concerns an investigational AutoAS aortic-stenosis algorithm, not Caption Guidance/AutoEF; NCT03705650 (SHAPE, n=55) and NCT03897140 (n=240) used the earlier Bay Labs EchoGPS name for Caption Guidance on Terason hardware.",
+        "Whether the AutoEF version on Vscan Air is the K210747 version or a later one is not stated."
+      ],
+      "sources": [
+        {
+          "fact": "K250087 decision date 2025-05-01, product code IYN, applicant GE Medical Systems Ultrasound and Primary Care Diagnostics, device name Vscan Air",
+          "url_or_file": "openfda_records.json",
+          "verification": "openfda"
+        },
+        {
+          "fact": "Caption AI compatibility with K201992 and K210747 (PDF page 8); intended use and cardiac indications (PDF pages 7-8); predicate K231301 and reference K161588 (PDF page 6); Auto bladder volume AI testing (PDF pages 10-11); no clinical studies (PDF page 11)",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K250087.txt",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K261668 statement that Auto Depth on Caption guidance is identical to Vscan Air K250087 implementation (PDF pages 8-9)",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K261668.txt",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "GE HealthCare press release 2024-04-03 introducing Caption AI on Vscan Air SL (guidance with quality meter; AutoEF calculates LVEF; Caption Health acquired 2023)",
+          "url_or_file": "https://www.gehealthcare.com/en/about/newsroom/press-releases/ge-healthcare-introduces-caption-ai-on-vscan-air-sl-wireless-handheld-ultrasound-system-to-help-more-clinicians-capture-diagnostic-quality-cardiac-images",
+          "verification": "news"
+        },
+        {
+          "fact": "Vendor product page: AutoEF from PLAX, AP2, AP4; quality meter; AutoCapture",
+          "url_or_file": "https://www.gehealthcare.com/en-us/products/ultrasound/handheld-ultrasound/vscan-air-caption-ai",
+          "verification": "company"
+        },
+        {
+          "fact": "Narang 2021, Asch 2019, Asch 2021, Mears 2024, Peck 2023 titles/DOIs confirmed via PubMed esummary and Crossref",
+          "url_or_file": "https://api.crossref.org/works/10.1001/jamacardio.2021.0185",
+          "verification": "doi_resolved"
+        },
+        {
+          "fact": "NCT03897140, NCT03705650, NCT06717373 records",
+          "url_or_file": "https://clinicaltrials.gov/api/v2/studies",
+          "verification": "news"
+        }
+      ]
+    }
+  ],
+  "notes": "Two families kept as designed: the five Venue-family clearances (K220800, K220851, K220848, K251322, K261668) form 'ge-venue-real-time-ef' and K250087 forms 'ge-vscan-air-caption-ai'. The FDA text supports the split: the Venue summaries never reference Vscan Air Caption AI except K261668's cross-reference for Auto Depth, and K250087 references only Caption's standalone clearances. All six summary text files were read in full (the three 2022 files were diffed against each other and are near-identical apart from trade name, predicate and device description). Key finding: none of the six summaries reports any performance metric, training-set size or validation-set size for a cardiac AI feature; every 'AI Summary of Testing' section concerns non-cardiac tools (cNerve in the 2022 trio; Auto Bladder Volume in K251322 and K250087; Auto Gastric Volume and cNeedle 2.0 in K261668). Those non-cardiac numbers are recorded only in notable_flags/training_data descriptions for context and are excluded from performance_claims. The only cardiac performance numbers are one vendor claim (Real-Time EF within +/-10 points of experts in 86% of cases; n undisclosed) and one peer-reviewed single-center paper (Gohar 2023, GE Venue auto LVEF kappa 0.498 vs POCUS expert). Caption Guidance/AutoEF literature (Narang 2021 n=240; Asch 2019 n=99; Asch 2021 n=166; Mears 2024; Peck 2023) validates the Caption software on non-GE or unstated hardware and is included as prior/external validation, not as Vscan Air- or Venue-specific evidence. Page numbers are PDF page indices of the FDA document (same convention as the triage file). Decision dates and product codes were copied from openFDA. The Real-Time EF white paper PDF (pocushub.net) and the MDPI full text returned HTTP 403 and were not read."
+}

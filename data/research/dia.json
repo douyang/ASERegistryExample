@@ -1,0 +1,1078 @@
+{
+ "batch_id": "dia",
+ "families": [
+  {
+   "id": "lvivo",
+   "product_name": "LVivo Software Application (LVivo EF / LVivo Toolbox: EF, SG/SWM, Strain, SAX, RV, PLAX, CE-EF, Bladder)",
+   "company": "DiA Imaging Analysis Ltd. (a Philips company since May 2023; earlier trade name DiACardio Ltd.)",
+   "company_website": "http://www.dia-analysis.com",
+   "product_url": null,
+   "category": "lv-function-quantification",
+   "tags": [
+    "LVEF",
+    "GLS",
+    "segmental wall motion",
+    "WMSI",
+    "RV function",
+    "FAC",
+    "TAPSE",
+    "PLAX",
+    "fractional shortening",
+    "contrast echo",
+    "bladder volume",
+    "handheld",
+    "vendor-neutral",
+    "Philips"
+   ],
+   "modality_scope": [
+    "TTE",
+    "POCUS",
+    "handheld",
+    "contrast-enhanced echo (K243235)",
+    "abdominal ultrasound (bladder module)"
+   ],
+   "deployment": [
+    "workstation (Windows/Linux)",
+    "on-device (Android option for LVivo EF; GE Vscan Extend app; Philips Lumify Auto EF)",
+    "ultrasound-system-embedded (Philips EPIQ CVx / Affiniti CVx per Philips 2024 release)",
+    "vendor-neutral DICOM offline analysis",
+    "OEM-licensed software component"
+   ],
+   "summary": "Fully automated software that segments and tracks the left ventricular endocardium in DICOM echo clips to compute biplane (4CH/2CH) ejection fraction and volumes, with later modules adding segmental wall motion and longitudinal strain (2016), right-ventricular function via a deep-learning model and bladder volume (2020), a neural-network update to LVivo EF (2021), a parasternal long-axis module (2024), a contrast-enhanced EF module (2025), and a revised segmental wall-motion algorithm with an Age >18 indication (2025). First cleared in 2013 as LVivo EF (DiACardio) under product code LLZ; reclassified to QIH from 2020. DiA was acquired by Philips in May 2023; the LVivo EF algorithm is the basis of the Lumify Auto EF feature (K232500).",
+   "intended_use_quote": "LVivo platform is intended for non-invasive processing of ultrasound images to detect, measure, and calculate relevant medical parameters of structures and function of patients with suspected disease.",
+   "indications_for_use_quote": "LVivo platform is intended for non-invasive processing of ultrasound images to detect, measure, and calculate relevant medical parameters of structures and function of patients with suspected disease and Age >18. In addition, it has the ability to provide Quality Score feedback.",
+   "embedded_ai_features": [
+    "Automated LV endocardial border detection and frame-by-frame tracking (image segmentation; neural network added to LVivo EF in K210053)",
+    "Automated ED/ES frame selection and biplane Simpson's EF/volumes",
+    "Automated rejection of false results",
+    "Global and segmental longitudinal strain (LVivo SG / LVivo Strain)",
+    "Segmental wall-motion scoring (machine-learning classifier; revised in K243862)",
+    "LVivo SAX (short-axis global/segmental LV evaluation)",
+    "LVivo RV: deep-learning neural-network identification of RV endocardium and tricuspid annulus; EDA, ESA, FAC, TAPSE, S', free-wall strain",
+    "LVivo PLAX: automated LV size/function from parasternal long axis (fractional shortening)",
+    "LVivo CE-EF: EF from contrast-enhanced clips",
+    "LVivo Bladder: machine learning + active contour bladder segmentation and volume"
+   ],
+   "clearances": [
+    {
+     "k_number": "K130779",
+     "decision_date": "2013-08-15",
+     "pathway": "510(k)",
+     "product_code": "LLZ",
+     "predicates": [
+      "K072090",
+      "K070792"
+     ],
+     "changes_summary": "Initial clearance of LVivo EF Software Application (DiACardio): fully automated biplane (4CH + 2CH) LV ejection fraction from DICOM echo clips.",
+     "notable_flags": [
+      "Traditional 510(k)",
+      "applicant name DiACardio Ltd."
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf13/K130779.pdf"
+    },
+    {
+     "k_number": "K161382",
+     "decision_date": "2016-07-28",
+     "pathway": "510(k)",
+     "product_code": "LLZ",
+     "predicates": [
+      "K072090",
+      "K091286",
+      "K130779"
+     ],
+     "changes_summary": "Renamed LVivo Software Application; adds LVivoSG module for segmental wall-motion scoring, segmental longitudinal strain and global longitudinal strain (3 apical views); Linux support added.",
+     "notable_flags": [
+      "Traditional 510(k)"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf16/K161382.pdf"
+    },
+    {
+     "k_number": "K200232",
+     "decision_date": "2020-06-23",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K132544"
+     ],
+     "changes_summary": "New predicate TomTec-Arena (K132544); reference devices K161382, K130779, K180995. Product code moves to QIH. Adds LVivo RV (deep-learning neural network for RV endocardium and tricuspid annulus; ESA, EDA, FAC, TAPSE, S', free-wall strain), LVivo SAX, LVivo Bladder (non-cardiac), and an Android mobile option for LVivo EF. Indications broadened from LV-only to general ultrasound structures/function.",
+     "notable_flags": [
+      "Traditional 510(k)",
+      "deep learning (RV module)",
+      "Android mobile option"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200232.pdf"
+    },
+    {
+     "k_number": "K210053",
+     "decision_date": "2021-02-05",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K200232"
+     ],
+     "changes_summary": "Special 510(k): LVivo EF algorithm modified by addition of a neural network; all other modules and indications unchanged.",
+     "notable_flags": [
+      "Special 510(k)",
+      "neural network added to LVivo EF"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K210053.pdf"
+    },
+    {
+     "k_number": "K240553",
+     "decision_date": "2024-10-04",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K222970"
+     ],
+     "changes_summary": "Special 510(k) using LVivo IQS (K222970) as predicate. Adds LVivo PLAX module (automated LV size/function incl. fractional shortening from the parasternal long-axis view) with manual ED/ES frame selection for PLAX; IFU now includes Quality Score feedback. Module list: PLAX, IQS, EF, SG, SAX, RV, Seamless, Bladder.",
+     "notable_flags": [
+      "Special 510(k)"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240553.pdf"
+    },
+    {
+     "k_number": "K243235",
+     "decision_date": "2025-03-03",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K240553"
+     ],
+     "changes_summary": "Traditional 510(k); reference device Siemens ACUSON Sequoia (K232145). Adds LVivo CE-EF (Contrast EF) module for processing clips acquired with an ultrasound enhancing agent. OS listed as Windows 10 or higher.",
+     "notable_flags": [
+      "Traditional 510(k)",
+      "contrast-enhanced echo"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243235.pdf"
+    },
+    {
+     "k_number": "K243862",
+     "decision_date": "2025-03-17",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K240553"
+     ],
+     "changes_summary": "Special 510(k): LVivo SWM (segmental wall motion) module modified ('Based on the same machine learning algorithm, multiple processing steps were added and the calculated features revised'); indications add 'Age >18'. Cybersecurity (SBOM, threat modelling) documented.",
+     "notable_flags": [
+      "Special 510(k)",
+      "cybersecurity/SBOM"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243862.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K130779",
+     "endpoint": "Biplane LVEF agreement vs manual biplane (MBP)",
+     "metric": "Pearson r",
+     "value": "r=0.88, p<0.001",
+     "comparator": "Manual biplane Simpson's by sonographers",
+     "n_studies": null,
+     "n_patients": 83,
+     "n_sites": null,
+     "dataset_description": "Blinded clinical trial; 83 subjects (OCR of the 2013 summary is imperfect: 'r-0.88, p<OO0l')",
+     "subgroup_notes": null,
+     "quote": "In the blinded clinical trial, ultrasound clips of 83 subjects were evaluated with the LVivoEF System. Average values were calculated for each variable measured by Manual Biplane Method (MBP) and Pearson correlation coefficients were calculated between MBP and L-VivolEF results. The primary end point defined for this study was met with a correlation coefficient calculated for biplane EF (r-0.88, p<OO0l).",
+     "page": 2,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K161382",
+     "endpoint": "Biplane LVEF agreement vs manual biplane (MBP)",
+     "metric": "Pearson r",
+     "value": "r=0.88, p<0.001",
+     "comparator": "Manual biplane method by sonographers",
+     "n_studies": null,
+     "n_patients": 100,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "In the blinded clinical trial, ultrasound clips of 100 subjects were evaluated with the LVivo System. Average values were calculated for each variable measured by Manual Biplane Method (MBP) and Pearson correlation coefficients were calculated between MBP and LVivoEF results. The primary end point defined for this study was met with a correlation coefficient calculated for biplane EF (r=0.88, p<0001).",
+     "page": 5,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K161382",
+     "endpoint": "GLS by LVivoSG vs Siemens Velocity Vector Imaging (VVI)",
+     "metric": "Pearson r / ICC / kappa / sensitivity / specificity",
+     "value": "r=0.85 (p<0.0001); ICC=0.92; kappa=0.77 (Normal/Abnormal, cutoff -12% LVivoSG vs -15% VVI); specificity 0.86, sensitivity 0.95; mean difference -3%",
+     "comparator": "Semi-automated VVI (Siemens syngo) applied by an expert echocardiologist",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": 1,
+     "dataset_description": "Retrospective, single-center study (Soroka University Medical Center, Israel); exams collected prospectively under protocol 100 rev 03; 3 apical views (4CH, 2CH, 3CH). Number of subjects in the LVivoSG analysis not stated.",
+     "subgroup_notes": null,
+     "quote": "The results showed that the primary end point was successfully met with a very good correlation between LVivoSG and VVI for GLS ( r=0.85, p<0.0001). Excellent inter -observer reliability between methods for GLS, was also demonstrated by intraclass correlation ( ICC=0.92). ... The agreement by kappa coefficient was also very good ( kappa=0.77) and specificity and sensitivity were high (0.86 and 0.95 respectively) emphasizing the similari ty between methods. Average difference of -3% between VVI and LVivoSG was found.",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K161382",
+     "endpoint": "Wall-motion score index (WMSI) by LVivoSG vs visual estimation by physicians",
+     "metric": "ICC / AUC / sensitivity / specificity",
+     "value": "ICC=0.86; AUC=0.86; specificity 0.80, sensitivity 0.78 (LVivoSG cutoff 0.51 by ROC)",
+     "comparator": "Visual segmental wall-motion scoring by echo-department physicians",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": 1,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "WM score index was calculated as average of segmental wall motion scores and compared between LVivoSG and Visual estimation . The agreement calculated by ICC was very good (ICC=0.86). ... The accuracy indicated by AUC=0.86 was very good and the specificity and  sensitivity were 0.8 and 0.78 respectively.",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K161382",
+     "endpoint": "Coronary-territory strain (LVivoSG vs VVI) and wall motion (LVivoSG vs visual)",
+     "metric": "ICC / kappa / AUC",
+     "value": "Strain ICC LAD 0.86, RCA 0.84, CX 0.90 (CX kappa 0.71, spec 0.80, sens 0.94); WM ICC LAD 0.80, RCA 0.82, CX 0.83; AUC LAD 0.86, RCA 0.82, CX 0.81; LAD kappa 0.65 (cutoff 0.34), CX kappa 0.51",
+     "comparator": "VVI strain; physician visual wall-motion scores",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": 1,
+     "dataset_description": null,
+     "subgroup_notes": "Per-segment ICC vs VVI best for mid-lateral (0.83) and mid-anterior (0.79), lowest for basal segments; Normal/Akinetic separation error <=15% for most segments",
+     "quote": "Good agreement was demonstrated comparing territories of coronary arteries between strain by LVivoSG and strain by VVI with ICC =0.86, 0.84 and 0.9 for LAD, RCA and CX respectively. ... The ICC comparing LAD, RCA and CX was 0.8, 0.82 and 0.83  respectively. ... The accuracy by AUC for LAD, RCA and CX was  0.86, 0.82 and 0.81  respectively.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K161382",
+     "endpoint": "GLS from LVivoEF (2-view wall average) vs GLS from LVivoSG (segmental average); WMSI vs GLS within LVivoSG",
+     "metric": "Pearson r",
+     "value": "r=0.92 (LVivoEF GLS vs LVivoSG GLS); r=0.87 (WMSI vs GLS)",
+     "comparator": "Internal cross-method comparison",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "Very high correlation ( r=0.87) was obtain between method s, showing that both GLS and WM score index calculated by LVivoSG are comparable. ... The results showed very high  correlation between methods (r=0.92).",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K200232",
+     "endpoint": "LVivo RV fractional area change (FAC) vs manual",
+     "metric": "Pearson r",
+     "value": "r=0.79, p<0.0001 (acceptance criterion: 75% correlation)",
+     "comparator": "Average of 2 sonographers' manual ED/ES area tracing",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": 1,
+     "dataset_description": "Retrospective, single-center; exams retrieved from PACS over 22 months; routine ASE-guideline exams on Philips systems (EPIQ, Affiniti, iE33); apical 4CH/modified 4CH RV clips with 2-3 stable beats and reported TAPSE/S'. Number of patients not stated.",
+     "subgroup_notes": null,
+     "quote": "The results showed that the primary end point was successfully met with a very good correlation of FAC between LVivoRV and manual measurements (r=0.79, p<0.0001).",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K200232",
+     "endpoint": "LVivo RV EDA and ESA vs manual",
+     "metric": "Pearson r",
+     "value": "EDA r=0.92; ESA r=0.93 (p<0.0001)",
+     "comparator": "Average of 2 sonographers",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": 1,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "The correlations between the sonographer's average for EDA and ESA and the LVivoRV EDA and ESA were excellent with r=0.92 and r=0.93 respectively (p<0.0001).",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K200232",
+     "endpoint": "LVivo RV TAPSE vs M-mode; RV free-wall strain vs VVI",
+     "metric": "Pearson r",
+     "value": "TAPSE r=0.62 (r=0.72 excluding 5 outliers; VVI vs M-mode r=0.66); free-wall strain r=0.60 (r=0.78 excluding 6 outliers)",
+     "comparator": "M-mode TAPSE by sonographer; 2D VVI strain by echocardiologist",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": 1,
+     "dataset_description": null,
+     "subgroup_notes": "Inter-observer reliability between sonographers: EDA 0.85, ESA 0.90, FAC 0.77; intra-observer FAC 0.95 [0.80-0.98] and 0.94 [0.72-0.98] (n=10)",
+     "quote": "For the TAPSE, we saw that the correlation of the LVivoRV to the manual measurement using M -Mode was 0.62, similarly to the correlation found between VVI and M-Mode that was r=0.66. ... When looking at the TAPSE correlation without 5 outlier cases, we got r=0.72. The Free Wall Strain correlation between 2D VVI and LVivoRV was evaluated and found to be a positive correlation of R=0.6. When omitting 6 outlier cases from the correlation analysis, we obtained r= 0.78.",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K200232",
+     "endpoint": "LVivo Bladder volume vs manual (200 mL threshold and continuous)",
+     "metric": "kappa / % agreement / sensitivity / specificity / Pearson r",
+     "value": "kappa=0.84; agreement 0.93; sensitivity 100%, specificity 80% (>200 mL); r=0.94 vs manual tracing",
+     "comparator": "Expert sonographer manual 3-dimension measurement",
+     "n_studies": 226,
+     "n_patients": null,
+     "n_sites": 1,
+     "dataset_description": "226 bladder images (113 pairs, sagittal + transverse) from Terem clinic PACS; Siemens and Mindray systems; enriched for volumes >200 mL and <200 mL",
+     "subgroup_notes": null,
+     "quote": "The results showed that the primary end point was successfully met- excellent agreement between methods was obtained by differentiating between post voiding volume , which is considered to be large (200ml) and is indicative for catheter placement, with excellent Kappa of 0.84, as well as very high agreement (0.93) and high sensitivity and specificity (100 and 80 respectively). ... with very high correlation (r=0.94).",
+     "page": 12,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K210053",
+     "endpoint": "LVivo EF (neural-network update) biplane EF; GLS; SWM",
+     "metric": "acceptance criteria only (results not reported in summary)",
+     "value": "Acceptance: biplane EF correlation >=80% and similar-or-better correlation/specificity/sensitivity/kappa vs prior version; GLS cutoff < -17, sensitivity >=75% vs WMSI reference; SWM sensitivity >=75%. Numeric results not given.",
+     "comparator": "Manual reference EF; reference WMSI",
+     "n_studies": null,
+     "n_patients": 100,
+     "n_sites": null,
+     "dataset_description": "100 patients (59% male, mean age 60.6±17.7); sinus rhythm, LBBB excluded; 27 normal LV, 47 CAD; 96 exams for EF, 98 for SWM/GLS",
+     "subgroup_notes": null,
+     "quote": "A data set of 100 ambulatory and hospitalized patients referred for routine transthoracic echocardiography was previously collected according to GCP standards. The population was comprised of 59% male, mean age of 60.6 ±17.727. ... Total of 96 examinations were used for the EF analysis (due to missing ref). Acceptance criteria for EF analysis: biplane EF correlation >=80%, similar or better EF biplane results in terms of correlation, specificity, sensitivity, and kappa with respect to subject device.",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240553",
+     "endpoint": "LVivo PLAX fractional shortening vs manual",
+     "metric": "Pearson r / sensitivity / specificity / automation rate",
+     "value": "r=0.79 (criterion >=0.75); sensitivity 85%, specificity 85% at FS cutoff 28%; 99/121 exams (82%) auto-analyzed",
+     "comparator": "Average of two sonographers' manual measurements",
+     "n_studies": null,
+     "n_patients": 121,
+     "n_sites": null,
+     "dataset_description": "121 patients referred for routine TTE (60% male, mean age 66.5±17); sinus rhythm, LBBB excluded; 49% normal LV function, 27% dilated LV, 24% LVH, 17% CAD",
+     "subgroup_notes": null,
+     "quote": "A total of 99 exams (82%) were automatically analyzed. The correlation vs average manual measurements of two sonographers was r=0.79, the primary end point was met. Specificity and sensitivity using cutoff value of 28% were 85% and 85% respectively.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240553",
+     "endpoint": "LVivo PLAX additional US dataset",
+     "metric": "automation rate (bias/LOA/correlation table not extractable from text)",
+     "value": "36/40 exams (90%) auto-analyzed; results table present in PDF as image only",
+     "comparator": "Manual measurements",
+     "n_studies": null,
+     "n_patients": 40,
+     "n_sites": 1,
+     "dataset_description": "US medical center; 40 patients; 16.7% normal, 25% mild, 33.3% moderate, 25% severe LV dysfunction; 25% dilated LV; 25% LVH",
+     "subgroup_notes": "BMI 31.6±9.1 (range 18.3-67)",
+     "quote": "The data set included 40 patients with similar inclusion\\exclusion criteria as described above. The patient population comprised 67.5% (27) male, average age was 60±14 ranging from 27 to 87 years of age. BMI measurement was available for 95% (38) of patients with an average BMI of 31.6± 9.1 ranging from 18.3 to 67. ... The LVivo PLAX was applied automatically to the clips from the 40 exams. 90% of exams were automatically analyzed.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K243235",
+     "endpoint": "LVivo CE-EF biplane EF vs manual (contrast clips)",
+     "metric": "Pearson r / Bland-Altman bias / LOA",
+     "value": "r=0.96, CI [0.94, 0.97]; bias 0.39 % points, LOA (-8.26, 9.05)",
+     "comparator": "Ground truth = measurements by 3 sonographers, reviewed by cardiologist",
+     "n_studies": null,
+     "n_patients": 101,
+     "n_sites": 4,
+     "dataset_description": "101 patient exams from Beth Israel, Soroka, Hadassah (47) and UCMC (47); 91/101 (90%) processed automatically; 58% normal LV, 40% abnormal (10% mild, 14% moderate, 16% severe); 26% enlarged LV; 32% LVH",
+     "subgroup_notes": "Age 20-100; BMI 28±8 (Israel/BIDMC subset) and 31.98 (UCMC); race available for 69 US exams: 30% Black, 67% White, 3% Asian. Sex figures in the summary are internally inconsistent (52/94 female 55% and 59/94 male 62%).",
+     "quote": "BP EF correlation of r=0.96, CI [0.94, 0.97] was obtained between automated and manual results, BA: 0.39% points, LOA (-8.26, 9.05)",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K243235",
+     "endpoint": "LVivo CE-EF single-plane EF and volumes vs manual",
+     "metric": "Pearson r / bias / LOA",
+     "value": "4CH: EDV r=0.96 bias -2.68 mL LOA(-36.02,30.66); ESV r=0.98 bias -3.87 mL LOA(-25.58,17.82); EF r=0.95 bias 1.26 LOA(-8.42,10.96). 2CH: EDV r=0.96 bias -5.69 LOA(-36.02,24.44); ESV r=0.98; EF r=0.93 bias -0.54 LOA(-12.18,11.1). Biplane EDV r=0.98 bias -4.1 LOA(-29.04,20.84); biplane ESV r=0.98 bias -2.77 LOA(-19.67,14.13)",
+     "comparator": "3 sonographers",
+     "n_studies": null,
+     "n_patients": 101,
+     "n_sites": 4,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "EDV 4CH correlation of r=0.96, CI [0.94, 0.97] was obtained between automated and manual results, BA: -2.68ml, LOA (-36.02, 30.66). ESV 4CH correlation of r=0.98, CI [0.97, 0.99] ... BA: -3.87ml, LOA (-25.58, 17.82). EF 4CH correlation of r=0.95, CI [0.93, 0.97] ... BA: 1.26% points, LOA (-8.42, 10.96).",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K243862",
+     "endpoint": "Revised LVivo SWM wall-motion score index (WMSI) vs 3-cardiologist ground truth (primary set)",
+     "metric": "sensitivity / specificity / accuracy / Pearson r / ICC / automation rate",
+     "value": "specificity 79%, sensitivity 82%, accuracy 82%; r=0.89; 139/166 (84%) auto-analyzed; ICC GT vs LVivo SWM 0.85 vs expert pairs 0.64 / 0.74 / 0.81 (table placement ambiguous in text extraction)",
+     "comparator": "WMSI averaged across three echo cardiologists",
+     "n_studies": 170,
+     "n_patients": null,
+     "n_sites": 3,
+     "dataset_description": "170 echo exams (GE and Philips); 101 from a US center, 69 from two Israeli centers; 66% male, mean age 60.5±14.9; BMI 30.9±8 (US); 28% normal global LV function; RWMA in 42.9%; LBBB and >1/3 endocardium not visible excluded",
+     "subgroup_notes": null,
+     "quote": "A total of 166 exams were processed, automated analysis was possible in 139 exams (84%). The Specificity and sensitivity of WMSI were 79% and 82% respectively and the accuracy was found to be 82%. The Pearson correlation coefficient between automatically calculated WMSI was 0.89",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K243862",
+     "endpoint": "Revised LVivo SWM WMSI, second validation set (Taiwan)",
+     "metric": "sensitivity / specificity / accuracy / Pearson r",
+     "value": "specificity 82%, sensitivity 82%, accuracy 82%, r=0.856, n=78",
+     "comparator": "Expert ground truth WMSI",
+     "n_studies": null,
+     "n_patients": 101,
+     "n_sites": 1,
+     "dataset_description": "101 patients from a hospital in Taiwan, Philips device; 62% male, age 70.1±16 (29-99); BMI 23±3.7; all Asian; 64% normal LV, 28% mild/moderate, 8% severe; 64% LVH; 11% dilated; RWMA 33%; n=78 analysed",
+     "subgroup_notes": "All-Asian cohort; lower BMI than US set",
+     "quote": "Specificity 82%  Sensitivity 82%  Accuracy 82%  Correlation 0.856 n 78 Specificity, Sensitivity accuracy  and correlation  between automated results and ground truth running on the second clinical validation set.",
+     "page": 10,
+     "verification": "fda_summary"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "No FDA summary in this family states training-set size. The Philips Lumify K232500 summary (Auto EF = LVivo EF) states the 80-patient test set 'were completely distinct from that used during training of the algorithm' but gives no training size.",
+    "source": "K232500 summary (Philips Lumify Auto EF), https://www.accessdata.fda.gov/cdrh_docs/pdf23/K232500.pdf",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "Per-clearance validation sets: 83 subjects (K130779); 100 subjects EF + single-center Soroka SG study (K161382); single-center Philips-system RV set of unstated size and 226 bladder images (K200232); 100 patients (K210053); 121 + 40 patients (K240553 PLAX); 101 exams from 4 sites (K243235 CE-EF); 170 exams from 3 sites plus 101-patient Taiwan set (K243862 SWM).",
+    "independent_of_training": null,
+    "source": "FDA 510(k) summaries listed in clearances",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Philips Lumify Auto EF (K232500, 2023-10-26): 'Auto EF is a new Artificial Intelligence (AI) feature ... based on the LVivo EF algorithm developed by DiA. Lumify Auto EF Quantification feature is a subset of LVivo platform.' Clinical performance: 80 patients (29% female, age 64±14, BMI 26.4), A4CH clips on Lumify; EF r=0.82 (95% CI 0.72-0.88) vs average manual tracing; EDV r=0.95, ESV r=0.94; 76/80 clips (95%) processed; test data stated to be distinct from training data.",
+     "source_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K232500.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "description": "GE Vscan Extend LVivo EF app support page: 'This app has been developed by and licensed from DiA Imaging Analysis Ltd.'; apical 4CH only, modified Simpson's; manufacturer-stated accuracy EF ±15 percentage points (-3 point bias), EDV/ESV ±35 mL; valid ranges EF 20-80%, EDV 60-240 mL, ESV 15-140 mL; not for pediatric cardiology.",
+     "source_url": "https://vscanextend-support.gehealthcare.com/support/solutions/articles/47001179851-lvivo-ef-app",
+     "verification": "company"
+    },
+    {
+     "description": "DiA press release 2018-09-18: LVivo EF available on GE Healthcare Vscan Extend handheld; described as first AI-powered automated EF app running in the low-memory environment of mobile ultrasound; no performance data in the release.",
+     "source_url": "https://www.prnewswire.com/news-releases/dia-imaging-analysis-ai-powered-lvivo-ef-cardiac-tool-now-available-for-the-ge--healthcare-vscan-extend-handheld-mobile-ultrasound-300714234.html",
+     "verification": "news"
+    },
+    {
+     "description": "Philips press release 2021-03-02: partnership to integrate DiA's FDA-cleared/CE-marked LVivo Toolbox; Philips owns a minority interest in DiA; 'thousands of end users worldwide'.",
+     "source_url": "https://www.philips.com/a-w/about/news/archive/standard/news/press/2021/20210302-philips-partners-with-dia-imaging-analysis-to-enhance-ultrasound-with-ai-based-image-quantification.html",
+     "verification": "company"
+    },
+    {
+     "description": "Philips press release 2024-06-04: EPIQ CVx / Affiniti CVx AI platform includes 'FDA-cleared and CE-marked software solutions from DiA Imaging Analysis' including an automated segmental wall motion scoring tool.",
+     "source_url": "https://www.usa.philips.com/a-w/about/news/archive/standard/news/press/2024/ai-in-cardiovascular-ultrasound-to-diagnose-more-patients.html",
+     "verification": "company"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Assessment and validation of a novel fast fully automated artificial intelligence left ventricular ejection fraction quantification software",
+     "first_author": "Samtani R",
+     "journal": "Echocardiography",
+     "year": 2022,
+     "doi": "10.1111/echo.15318",
+     "pmid": "35178746",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35178746/",
+     "relation": "external-validation",
+     "n_subjects": 242,
+     "key_result": "LVivoEF (non-contrast A4CH, no manual correction) vs cardiac MRI in 242 of 273 consecutive patients: r=0.890 (physician EF vs cMRI r=0.891); bias 3.63±7.40 EF points (underestimation) vs 0.33±7.52 for physician EF; similar in 126 UEA and 116 unenhanced studies.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial Intelligence-Powered Measurement of Left Ventricular Ejection Fraction Using a Handheld Ultrasound Device",
+     "first_author": "Filipiak-Strzecka D",
+     "journal": "Ultrasound in Medicine & Biology",
+     "year": 2021,
+     "doi": "10.1016/j.ultrasmedbio.2020.12.003",
+     "pmid": "33451814",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/33451814/",
+     "relation": "external-validation",
+     "n_subjects": 112,
+     "key_result": "LVivo on a handheld device (A4CH) vs 3D LVEF on a stationary echocardiograph in 112 cardiology inpatients: r=0.92 (95% CI 0.87-0.95); mean difference -0.61% (95% CI -1.89 to 0.68); accurate when image quality at least good.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial Intelligence-Powered Left Ventricular Ejection Fraction Analysis Using the LVivoEF Tool for COVID-19 Patients",
+     "first_author": "Dadon Z",
+     "journal": "Journal of Clinical Medicine",
+     "year": 2023,
+     "doi": "10.3390/jcm12247571",
+     "pmid": "38137638",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38137638/",
+     "relation": "real-world",
+     "n_subjects": 42,
+     "key_result": "Real-time LVivoEF on a handheld device vs blinded echocardiographer in 42 COVID-19 inpatients: correlation 0.774, kappa 0.797 for LVEF<50%; sensitivity 72.7%, specificity 100%; AI-based LVEF<50% associated with composite adverse outcome (adjusted OR 6.40).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Empowering Medical Students: Harnessing Artificial Intelligence for Precision Point-of-Care Echocardiography Assessment of Left Ventricular Ejection Fraction",
+     "first_author": "Dadon Z",
+     "journal": "International Journal of Clinical Practice",
+     "year": 2023,
+     "doi": "10.1155/2023/5225872",
+     "pmid": "38078051",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38078051/",
+     "relation": "real-world",
+     "n_subjects": 88,
+     "key_result": "Medical students using a handheld device with an AI-based automatic LVEF tool (abstract does not name the tool; same group's companion paper names LVivoEF): students+AI vs cardiologists correlation 0.83 vs 0.51 for students' visual estimate; AI failed in 6/88 cases.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial Intelligence-Based Left Ventricular Ejection Fraction by Medical Students for Mortality and Readmission Prediction",
+     "first_author": "Dadon Z",
+     "journal": "Diagnostics (Basel)",
+     "year": 2024,
+     "doi": "10.3390/diagnostics14070767",
+     "pmid": "38611680",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38611680/",
+     "relation": "real-world",
+     "n_subjects": 82,
+     "key_result": "AI-based reduced LVEF (<50%) obtained by medical students on a handheld device (tool not named in abstract) independently predicted 1-year mortality/cardiovascular readmission (HR 2.717, 95% CI 1.083-6.817).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Pragmatic Evaluation of a Deep-Learning Algorithm to Automate Ejection Fraction on Hand-Held, Point-of-Care Echocardiography in a Cardiac Surgical Operating Room",
+     "first_author": "MacKay EJ",
+     "journal": "Journal of Cardiothoracic and Vascular Anesthesia",
+     "year": 2024,
+     "doi": "10.1053/j.jvca.2024.01.005",
+     "pmid": "38307740",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38307740/",
+     "relation": "external-validation",
+     "n_subjects": 54,
+     "key_result": "Philips Lumify Auto EF (LVivo EF per K232500) vs Simpson's method in 54 A4CH clips from cardiac surgical patients: r=0.56 overall (bias -10.17%), r=0.86 in 27 adequate-quality clips, r=0.46 in inadequate clips; expert visual EF r=0.80.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "The measurement of the left ventricle ejection fraction by a bedside FoCUS examination",
+     "first_author": "Martocchia A",
+     "journal": "Internal and Emergency Medicine",
+     "year": 2023,
+     "doi": "10.1007/s11739-023-03414-5",
+     "pmid": "37690107",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37690107/",
+     "relation": "real-world",
+     "n_subjects": 59,
+     "key_result": "Bedside FoCUS in 59 emergency-medicine patients: 'Lvivo app' EF 39.5±12.0% vs standard echo 53.7±11.1%; r=0.571, Bland-Altman mean -13.3% (Quinones-equation EF r=0.694, bias -2.3%); authors attribute the app's underestimation to unselected image quality.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [
+    {
+     "nct_id": "NCT01515267",
+     "title": "Automated Left Ventricular Function Evaluation by LVivoEF",
+     "status": "UNKNOWN (last known ACTIVE_NOT_RECRUITING, verified 2012-01); sponsor DiA Imaging Analysis Ltd; prospective observational, estimated enrollment 100; start 2011-11",
+     "url": "https://clinicaltrials.gov/study/NCT01515267"
+    }
+   ],
+   "open_questions": [
+    "K161382: number of subjects in the LVivoSG (strain/wall motion) validation is not stated in the summary; only the 100-subject EF cohort is quantified.",
+    "K200232: number of patients in the LVivo RV validation is not stated (only '22 months' of retrospective collection, single center).",
+    "K210053: summary gives acceptance criteria but no numeric results for the neural-network LVivo EF update.",
+    "K240553: bias/LOA/correlation table for the 40-patient US PLAX dataset is an embedded image and not present in the extracted text.",
+    "K243235: sex breakdown is internally inconsistent in the summary (52/94 female 55% and 59/94 male 62%).",
+    "K243862: the ICC table (GT vs LVivo SWM 0.85; expert pairs 0.64/0.74/0.81) sits under the 'Second Validation Set' header in the text extraction but the prose attributes an ICC analysis to the primary set; which set it belongs to is ambiguous.",
+    "Training-set size for any LVivo module is not disclosed in any FDA summary or in the papers read; K232500 only states test data were distinct from training data.",
+    "product_url: DiA's site (dia-analysis.com, cited in press releases) did not resolve from this session's network; no Philips-hosted LVivo product page was located.",
+    "Dadon 2023 (Int J Clin Pract) and Dadon 2024 (Diagnostics) abstracts do not name LVivo; inclusion rests on the same group's LVivoEF COVID paper using the same handheld+AI setup.",
+    "Whether the 2014-2019 handheld deployments (GE Vscan Extend) correspond to K130779/K161382 or K200232 (Android option) is not stated in the summaries."
+   ],
+   "sources": [
+    {
+     "fact": "K130779 IFU, predicates, 83-subject r=0.88",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K130779.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K161382 predicates, LVivoSG study results",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K161382.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K200232 predicate/reference devices, RV and Bladder validation",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K200232.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K210053 neural-network change and acceptance criteria",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K210053.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K240553 PLAX module validation",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K240553.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K243235 CE-EF validation",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K243235.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K243862 SWM revision validation",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K243862.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "decision dates, product codes, applicant names",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Lumify Auto EF is a subset of the LVivo platform; 80-patient Lumify study r=0.82",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K232500.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Philips completed acquisition of DiA 2023-05-24; ~US$100M reported; DiA founded 2009 (Goldman-Aslan, Yaacobi); nine FDA clearances by Feb 2023",
+     "url_or_file": "https://en.globes.co.il/en/article-philips-buys-israeli-co-dia-imaging-analysis-1001445789",
+     "verification": "news"
+    },
+    {
+     "fact": "Philips-DiA partnership and minority interest (2021-03-02)",
+     "url_or_file": "https://www.philips.com/a-w/about/news/archive/standard/news/press/2021/20210302-philips-partners-with-dia-imaging-analysis-to-enhance-ultrasound-with-ai-based-image-quantification.html",
+     "verification": "company"
+    },
+    {
+     "fact": "GE Vscan Extend LVivo EF app details",
+     "url_or_file": "https://vscanextend-support.gehealthcare.com/support/solutions/articles/47001179851-lvivo-ef-app",
+     "verification": "company"
+    },
+    {
+     "fact": "Company website www.dia-analysis.com (stated in DiA press releases)",
+     "url_or_file": "https://www.prnewswire.com/news-releases/dia-granted-fda-clearance-for-its-cardiac-ultrasound-ai-auto-views-selection-301162991.html",
+     "verification": "news"
+    },
+    {
+     "fact": "PubMed/Crossref resolution of listed papers",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ ; https://api.crossref.org/works/",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "NCT01515267 registration",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies/NCT01515267",
+     "verification": "company"
+    }
+   ]
+  },
+  {
+   "id": "lvivo-seamless",
+   "product_name": "LVivo Seamless",
+   "company": "DiA Imaging Analysis Ltd. (a Philips company since May 2023; earlier trade name DiACardio Ltd.)",
+   "company_website": "http://www.dia-analysis.com",
+   "product_url": null,
+   "category": "lv-function-quantification",
+   "tags": [
+    "LVEF",
+    "GLS",
+    "automated view selection",
+    "server",
+    "PACS",
+    "vendor-neutral",
+    "TomTec integration"
+   ],
+   "modality_scope": [
+    "TTE"
+   ],
+   "deployment": [
+    "server-based offline application in the healthcare environment",
+    "PACS-integrated (results sent to PACS)",
+    "vendor-neutral DICOM input",
+    "can invoke third-party (TomTec) Auto EF / Auto Strain (K243331)"
+   ],
+   "summary": "Standalone server application that receives complete echo exams in DICOM, automatically identifies the apical 4-, 2- and 3-chamber clips, runs the cleared LVivo EF and (from v2.0) LVivo Strain modules without user interaction, and sends EF/GLS results to PACS for clinician review. The 2025 version can alternatively invoke FDA-cleared TomTec Auto EF and Auto Strain. Indications added 'Age >18' in 2021.",
+   "intended_use_quote": "LVivo platform is intended for non-invasive processing of ultrasound images to detect, measure, and calculate relevant medical parameters of structures and function of patients with suspected disease.",
+   "indications_for_use_quote": "LVivo platform is intended for non-invasive processing of ultrasound images to detect, measure, and calculate relevant medical parameters of structures and function of patients with suspected disease of patients and Age >18.",
+   "embedded_ai_features": [
+    "Automatic view classification/selection of apical 4CH, 2CH, 3CH clips from a full exam",
+    "Automated biplane EF via LVivo EF module",
+    "Automated GLS (per view and global) via LVivo Strain module",
+    "Optional invocation of TomTec Auto EF / Auto Strain (K243331)"
+   ],
+   "clearances": [
+    {
+     "k_number": "K202546",
+     "decision_date": "2020-09-29",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K200232"
+     ],
+     "changes_summary": "Special 510(k): new standalone server configuration that auto-selects clips and runs the cleared LVivo EF module offline; no manual adjustment/editing, no volume curve, EF module only.",
+     "notable_flags": [
+      "Special 510(k)",
+      "server/PACS workflow",
+      "no performance data in summary"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K202546.pdf"
+    },
+    {
+     "k_number": "K212466",
+     "decision_date": "2021-12-09",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K202546"
+     ],
+     "changes_summary": "LVivo Seamless v2.0: adds LVivo Strain module (segmental and global longitudinal strain, GLS per view) and 3CH view selection; adds editing of output results; indications add 'Age >18'. Reference device K210053. Summary header says Special 510(k); openFDA lists Traditional.",
+     "notable_flags": [
+      "Age >18 indication"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K212466.pdf"
+    },
+    {
+     "k_number": "K243331",
+     "decision_date": "2025-03-06",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K212466"
+     ],
+     "changes_summary": "Special 510(k): adds the ability to run automated EF and strain analysis by another FDA-cleared third-party software (TomTec Auto EF / Auto Strain) in addition to LVivo EF/Strain.",
+     "notable_flags": [
+      "Special 510(k)",
+      "third-party (TomTec) analysis integration"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243331.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K212466",
+     "endpoint": "Automatic identification of 4CH, 2CH and 3CH clips",
+     "metric": "% exams with all three views recognized",
+     "value": "95% (criterion 90%)",
+     "comparator": "Manual view labeling (implied)",
+     "n_studies": null,
+     "n_patients": 100,
+     "n_sites": null,
+     "dataset_description": "100 patient examinations, age >18, with GE Automated Functional Imaging (AFI) GLS available; no exclusion criteria",
+     "subgroup_notes": null,
+     "quote": "The system was able to recognize all three 4CH, 2CH and 3CH clips in 95% of the examinations.",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K212466",
+     "endpoint": "GLS by LVivo Strain (on auto-selected clips) vs GE AFI",
+     "metric": "Bland-Altman mean ± 1.96SD / Pearson r / sensitivity / specificity",
+     "value": "-1.4% ± 3.93% (data range -4% to -24%); r=0.88 (criterion 0.80); sensitivity 0.90, specificity 0.83 at GLS threshold -18%",
+     "comparator": "GE Automated Functional Imaging (AFI) GLS measured routinely in the echo lab",
+     "n_studies": null,
+     "n_patients": 100,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "GLS  -1.4% ± 3.93%  -4% - -24% 0.88 sensitivity and specificity and of 0.90, and 0.83 respectively. The Normal\\Abnormal threshold used for GLS was -18%",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K243331",
+     "endpoint": "Automatic identification of 4CH, 2CH, 3CH views",
+     "metric": "% exams processed automatically",
+     "value": "139/166 (84%) (criterion 85%)",
+     "comparator": null,
+     "n_studies": 166,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "166 exams: 71 Philips EPIQ (age 61.0±16.3, 53.5% male, BMI 29.7±6.6, 62.0% Black or African American; 64.8% normal LV, 7.0% mild, 14.1% moderate, 14.1% severe dysfunction) and 96 GE Vivid E95/S70/E9 (age 64±17, 59% male, BMI 26.6±4.9; 53% normal, 47% impaired)",
+     "subgroup_notes": "Note: the 84% automatic-processing rate is below the stated 85% success criterion; summary nonetheless concludes performance comparable to predicate",
+     "quote": "The analysis (e.g Pearson's Correlation and Bland Altman) results are provided for 139 exams (84%) in which the system correctly identified 4, 2 and 3 chamber views",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K243331",
+     "endpoint": "Biplane EF vs ground truth",
+     "metric": "Bland-Altman bias (LOA) / Pearson r",
+     "value": "bias 1.22 % points, LOA (-8.49, 10.93); data range 8.8-73.6%; r=0.95 (criterion 0.80)",
+     "comparator": "Ground-truth biplane EF measurements (method not specified)",
+     "n_studies": 139,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "Biplane EF 1.22, (-8.49, 10.93) 8.8 – 73.6 0.95",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K243331",
+     "endpoint": "GLS vs ground truth",
+     "metric": "Bland-Altman bias (LOA) / Pearson r",
+     "value": "bias -1.27 % points, LOA (-5.16, 2.62); data range -3.35 to -25.41; r=0.92 (criterion 0.80)",
+     "comparator": "Ground-truth GLS measurements (method not specified)",
+     "n_studies": 139,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "GLS  -1.27 (-5.16, 2.62) -3.35 - -25.41  0.92",
+     "page": 8,
+     "verification": "fda_summary"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "No training-set information in any Seamless summary.",
+    "source": null,
+    "verification": "unverified"
+   },
+   "validation_data": {
+    "n_studies": 166,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "K212466: 100 exams with GE AFI reference. K243331: 166 exams (71 Philips EPIQ, 96 GE Vivid) from at least two acquisition-vendor cohorts; 139 analysed. K202546: none reported.",
+    "independent_of_training": null,
+    "source": "K212466 and K243331 summaries",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "DiA press release 2020-10-29 announcing FDA clearance of LVivo Seamless for automatic view selection from the 40-60 views of a standard echo; described as DiA's 7th FDA clearance; vendor-neutral, works with any radiology viewer.",
+     "source_url": "https://www.prnewswire.com/news-releases/dia-granted-fda-clearance-for-its-cardiac-ultrasound-ai-auto-views-selection-301162991.html",
+     "verification": "news"
+    }
+   ],
+   "papers": [],
+   "clinical_trials": [],
+   "open_questions": [
+    "K202546 summary contains no performance testing data at all (Special 510(k) relying on K200232 EF module).",
+    "K212466 pathway: summary header reads 'Special 510(k)' while openFDA lists 'Traditional'; openFDA value recorded.",
+    "K243331: ground-truth method for EF and GLS (manual tracing vs vendor package) is not specified; number of sites not stated.",
+    "No peer-reviewed publication specific to LVivo Seamless was found on PubMed (queries: 'LVivo Seamless', 'LVivo', 'DiA Imaging Analysis')."
+   ],
+   "sources": [
+    {
+     "fact": "K202546 description and comparison table",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K202546.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K212466 strain addition and GLS vs AFI validation",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K212466.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K243331 TomTec integration and 166-exam validation",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K243331.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "decision dates, product codes, applicant",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Clearance press release",
+     "url_or_file": "https://www.prnewswire.com/news-releases/dia-granted-fda-clearance-for-its-cardiac-ultrasound-ai-auto-views-selection-301162991.html",
+     "verification": "news"
+    }
+   ]
+  },
+  {
+   "id": "lvivo-iqs",
+   "product_name": "LVivo IQS (Image Quality Score)",
+   "company": "DiA Imaging Analysis Ltd. (a Philips company since May 2023; earlier trade name DiACardio Ltd.)",
+   "company_website": "http://www.dia-analysis.com",
+   "product_url": null,
+   "category": "image-quality",
+   "tags": [
+    "image quality score",
+    "real-time feedback",
+    "acquisition guidance",
+    "POCUS",
+    "LV 4CH",
+    "RV 4CH",
+    "OEM API accessory",
+    "Lumify"
+   ],
+   "modality_scope": [
+    "POCUS",
+    "handheld",
+    "TTE (apical 4CH)"
+   ],
+   "deployment": [
+    "on-device real-time (software component/API integrated by OEMs into ultrasound systems)",
+    "medical device accessory",
+    "validated on Philips Lumify"
+   ],
+   "summary": "Real-time AI image-quality scoring for the apical 4-chamber view: an algorithm plus API supplied as a software component for OEM integration that grades the left ventricle (2023) and, from 2024, the right ventricle on a 0-100% scale (0-60 poor/red, 60-80 medium/orange, 80-100 good/green) while the user scans. Validated retrospectively against sonographer quality tags and prospectively with point-of-care physicians on Lumify. Concept compared by the sponsor to Caption Guidance.",
+   "intended_use_quote": "LVivo platform is intended for non-invasive processing of ultrasound images to detect, measure, and calculate relevant medical parameters of structures and function of patients with suspected disease. In addition, it has the ability to provide Quality Score feedback.",
+   "indications_for_use_quote": "LVivo platform is intended for non-invasive processing of ultrasound images to detect, measure, and calculate relevant medical parameters of structures and function of patients with suspected disease. In addition, it has the ability to provide Quality Score feedback.",
+   "embedded_ai_features": [
+    "AI-based real-time image quality score for LV from apical 4CH (K222970)",
+    "AI-based real-time image quality score for RV from apical 4CH (K240769)",
+    "Color/numeric grading 0-60% poor, 60-80% medium, 80-100% good",
+    "I/O via API for OEM integration"
+   ],
+   "clearances": [
+    {
+     "k_number": "K222970",
+     "decision_date": "2023-02-01",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K210053"
+     ],
+     "changes_summary": "Initial clearance: adds an IQS algorithm + API to the LVivo platform providing a real-time quality score for the LV from the apical 4CH view; provided as a software component for integration into OEM ultrasound devices (medical device accessory). Indications add 'the ability to provide Quality Score feedback'. (Comparison table cites predicate as 'K219953', an apparent typo for K210053.)",
+     "notable_flags": [
+      "Traditional 510(k)",
+      "OEM software component / accessory",
+      "real-time acquisition feedback"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K222970.pdf"
+    },
+    {
+     "k_number": "K240769",
+     "decision_date": "2024-05-24",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K222970"
+     ],
+     "changes_summary": "Special 510(k): extends IQS to the right ventricle from the apical 4CH view; same grading ranges and API; minimum spec 8 GB RAM, Windows 10+, Intel i3.",
+     "notable_flags": [
+      "Special 510(k)"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240769.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K222970",
+     "endpoint": "LV IQS agreement with sonographer quality tagging (retrospective)",
+     "metric": "% overall agreement",
+     "value": "81% (criterion 75%); 22,663 frames",
+     "comparator": "Quality tagging by experienced sonographers",
+     "n_studies": null,
+     "n_patients": 100,
+     "n_sites": null,
+     "dataset_description": "100 exams acquired with different ultrasound devices and various cardiac pathologies (per NCT05563701: drawn from 424 exams collected at two centers, each with 10 clips representing typical scanning errors)",
+     "subgroup_notes": null,
+     "quote": "100 patient examinations were used for the validation. Inclusion criteria: Age>18, patients referred to routine Echo examination . Exclusion criteria: Subjects who fail to meet any inclusion criteria . Total of 22,663 frames were analyzed. The overall agreement was agreement between the LVivo IQS and quality tagging by the experienced sonographers was 81%",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K222970",
+     "endpoint": "Prospective POC use of LV IQS by interns (Lumify)",
+     "metric": "% exams reaching at least 'Medium' score / % clinically interpretable",
+     "value": "90% of patients with visual image quality 3-5 (ACEP) reached at least Medium (criterion 80%); 93% of those clips clinically interpretable (criterion 90%)",
+     "comparator": "Visual ACEP quality score; expert echocardiologist interpretability review",
+     "n_studies": null,
+     "n_patients": 64,
+     "n_sites": null,
+     "dataset_description": "64 patients with POCUS indication scanned by POC interns; ACEP image quality 1-2 excluded",
+     "subgroup_notes": null,
+     "quote": "a. In 90% of the patients with image quality 3-5 by visual estimation it was possible to obtain at least \"Medium\" quality score by LVivo IQS b. 93% of the above saved clips were clinically interpretable",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240769",
+     "endpoint": "RV IQS agreement with sonographer quality tagging (retrospective)",
+     "metric": "% overall agreement",
+     "value": "77% (criterion 75%); 49,623 frames",
+     "comparator": "Quality tagging by experienced sonographers",
+     "n_studies": null,
+     "n_patients": 100,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "100 patient examinations were used for the validation. ... A total of 49,623 frames were analyzed. The overall agreement was agreement between the LVivo IQS  (RV) and quality tagging by the experienced sonographers was 77%",
+     "page": 6,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240769",
+     "endpoint": "Prospective POC use of RV IQS by intern physicians",
+     "metric": "% exams reaching at least 'Medium' / % clinically interpretable",
+     "value": "85% of ACEP 3-5 exams reached at least Medium (criterion 80%); 92% clinically interpretable by majority of three expert cardiologists (criterion 90%)",
+     "comparator": "ACEP score; majority of three echo cardiologists",
+     "n_studies": null,
+     "n_patients": 182,
+     "n_sites": null,
+     "dataset_description": "182 patients with POCUS indication, scanned in point-of-care settings by physicians in internship",
+     "subgroup_notes": null,
+     "quote": "a. In 85% of the patients with image quality 3-5 by visual estimation it was possible to obtain at least \"Medium\" quality score by LVivo IQS b. 92% of the above saved clips were clinically interpretable",
+     "page": 6,
+     "verification": "fda_summary"
+    }
+   ],
+   "training_data": {
+    "disclosed": true,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": 2,
+    "description": "ClinicalTrials.gov NCT05563701 (sponsor DiA): 424 examinations (10 clips each) collected at two medical centers with sonographer quality tags were 'randomly split into training and clinical validation sets' with the validation set fixed at 100 examinations; the training-set count is not stated explicitly (arithmetically at most 324 exams). FDA summaries do not mention training data.",
+    "source": "https://clinicaltrials.gov/study/NCT05563701",
+    "verification": "company"
+   },
+   "validation_data": {
+    "n_studies": 100,
+    "n_patients": null,
+    "n_sites": 2,
+    "description": "Retrospective: 100 exams (22,663 frames LV; 49,623 frames RV). Prospective: 64 patients (LV, K222970) and 182 patients (RV, K240769) scanned on Lumify by POC physicians at two centers per NCT05563701.",
+    "independent_of_training": true,
+    "source": "K222970/K240769 summaries; NCT05563701 states random train/validation split",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "DiA press release 2023-02-06 on LVivo IQS clearance: 91% of images saved by point-of-care residents were clinically interpretable per cardiologists; PI Dr. Lior Fuchs, Soroka Medical Center; described as first of DiA's 9 FDA-cleared solutions to give real-time feedback.",
+     "source_url": "https://www.prnewswire.com/news-releases/dia-secures-fda-clearance-for-new-ai-powered-software-assisting-ultrasound-users-to-capture-high-quality-images-301739306.html",
+     "verification": "news"
+    }
+   ],
+   "papers": [],
+   "clinical_trials": [
+    {
+     "nct_id": "NCT05563701",
+     "title": "Evaluation of the LVivo Image Quality Scoring (IQS)",
+     "status": "COMPLETED; observational prospective; actual enrollment 164; sponsor DiA Imaging Analysis Ltd; Part 1 retrospective 100-exam validation vs sonographer tagging, Part 2 live POC scans on Lumify at two centers",
+     "url": "https://clinicaltrials.gov/study/NCT05563701"
+    }
+   ],
+   "open_questions": [
+    "No peer-reviewed publication of the LVivo IQS validation was found on PubMed (queries: 'LVivo IQS', 'LVivo', real-time quality score terms).",
+    "Ultrasound device mix for the 100-exam retrospective sets is described only as 'different ultrasound devices'.",
+    "Exact training-set size is not stated; NCT05563701 gives only the total (424) and validation (100) counts.",
+    "Number of sites for the K240769 prospective RV study is not stated in the summary.",
+    "Press release states 91% interpretability vs 93% in the K222970 summary; discrepancy unexplained."
+   ],
+   "sources": [
+    {
+     "fact": "K222970 description, predicate, validation",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K222970.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K240769 RV extension and validation",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K240769.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "decision dates, product codes, applicant",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "NCT05563701 design, enrollment, train/validation split",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies/NCT05563701",
+     "verification": "company"
+    },
+    {
+     "fact": "Clearance press release details",
+     "url_or_file": "https://www.prnewswire.com/news-releases/dia-secures-fda-clearance-for-new-ai-powered-software-assisting-ultrasound-users-to-capture-high-quality-images-301739306.html",
+     "verification": "news"
+    }
+   ]
+  }
+ ],
+ "notes": "All 12 K-numbers read in full from the extracted FDA summary text. Decision dates/product codes taken from openFDA. K130779 text is OCR of a scanned 2013 letter (values transcribed as printed, e.g. 'r-0.88, p<OO0l'). K212466 is labeled Special 510(k) in the summary but Traditional in openFDA; openFDA retained. Lumify Auto EF (Philips K232500) was confirmed to be 'a subset of LVivo platform' and is cited as a prior validation, not as a clearance of this family. Papers included only where the abstract names LVivo/LVivoEF or (MacKay 2024) uses Lumify Auto EF; two Dadon papers are included with a caveat that their abstracts do not name the tool. Sveric 2024 (Int J Cardiol) and Kane 2026 (EHJ Digital Health) were reviewed and excluded (no LVivo attribution / different vendor). Company site dia-analysis.com was unreachable from this session; URL recorded as stated in DiA press releases."
+}

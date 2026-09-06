@@ -1,0 +1,154 @@
+{
+  "group_id": "ge-vivid-b",
+  "records": [
+    {
+      "k_number": "K220619",
+      "device_name": "Vivid S60N, Vivid S70N",
+      "decision_date": "2022-07-15",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "Easy Auto EF (Auto EF 3.0 with AI Auto ROI algorithm)",
+          "function": "Automated left-ventricular ejection fraction; AI algorithm automatically places the region of interest / delineates the LV endocardial border on 2D echo views.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Added Easy Auto EF -based on AutoEF 3.0 (includes AI Auto ROI algorithm)",
+          "page": 7
+        },
+        {
+          "name": "Easy AFI LV (AFI 3.0 with AI Auto ROI algorithm)",
+          "function": "Automated Function Imaging for LV longitudinal strain; AI algorithm automatically places the LV region of interest for speckle-tracking strain.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Added Easy AFI LV-based on AFI 3.0 (includes AI Auto ROI algorithm)",
+          "page": 7
+        }
+      ],
+      "performance_summary": "AI Auto ROI segmentation accuracy reported as average Dice score: >=92% across datasets from different countries, >=91% across different scanning views, >=92% across different LV volumes. Test set: 45 exams (assumed 45 patients), 135 images, adult, Europe/Asia/US, 5 probes and 4 console variants; ground truth by two certified cardiologists with expert-panel adjudication; test sites independent of training sites. No clinical study. Quote (p.8): \"The accuracy of the AI algorithm (average dice score) as tested on datasets from different countries, is 92% or higher; as tested on datasets from different scanning views, is 91% or higher; as tested on dataset from different left ventricle volumes, is 92% or higher.\"",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K221148",
+      "device_name": "Vivid iq",
+      "decision_date": "2022-07-18",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "Easy Auto EF (Auto EF 3.0 with AI Auto ROI algorithm)",
+          "function": "Automated left-ventricular ejection fraction; AI algorithm automatically places the LV region of interest on 2D echo views.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Added Easy Auto EF -based on Auto EF 3.0 (includes AI Auto ROI algorithm)",
+          "page": 6
+        },
+        {
+          "name": "Easy AFI LV (AFI 3.0 with AI Auto ROI algorithm)",
+          "function": "Automated Function Imaging for LV longitudinal strain; AI algorithm automatically places the LV region of interest for speckle-tracking strain.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Added Easy AFI LV -based on AFI 3.0 (includes AI Auto ROI algorithm)",
+          "page": 6
+        }
+      ],
+      "performance_summary": "Identical AI test summary to K220619: average Dice score >=92% (different countries), >=91% (different scanning views), >=92% (different LV volumes); 45 exams / 135 images, adult, Europe/Asia/US, 5 probes and 4 console variants; two-cardiologist consensus ground truth with expert-panel adjudication; test sites independent of training sites. No clinical study. Quote (p.7): \"The accuracy of the AI algorithm (average dice score) as tested on datasets from different countries, is 92% or higher; as tested on datasets from different scanning views, is 91% or higher; as tested on dataset from different left ventricle volumes, is 92% or higher.\"",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K221147",
+      "device_name": "Vivid T8, Vivid T9",
+      "decision_date": "2022-07-18",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "Easy Auto EF (Auto EF 3.0 with AI Auto ROI algorithm)",
+          "function": "Automated left-ventricular ejection fraction; AI algorithm automatically places the LV region of interest on 2D echo views.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Added Easy Auto EF -based on Auto EF 3.0 (includes AI Auto ROI algorithm)",
+          "page": 7
+        },
+        {
+          "name": "Easy AFI LV (AFI 3.0 with AI Auto ROI algorithm)",
+          "function": "Automated Function Imaging for LV longitudinal strain; AI algorithm automatically places the LV region of interest for speckle-tracking strain.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Added Easy AFI LV -based on AFI 3.0 (includes AI Auto ROI algorithm)",
+          "page": 7
+        }
+      ],
+      "performance_summary": "Identical AI test summary to K220619: average Dice score >=92% (different countries), >=91% (different scanning views), >=92% (different LV volumes); 45 exams / 135 images, adult, Europe/Asia/US, 5 probes and 4 console variants; two-cardiologist consensus ground truth with expert-panel adjudication; test sites independent of training sites. No clinical study. Quote (p.8): \"The accuracy of the AI algorithm (average dice score) as tested on datasets from different countries, is 92% or higher; as tested on datasets from different scanning views, is 91% or higher; as tested on dataset from different left ventricle volumes, is 92% or higher.\"",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K220882",
+      "device_name": "Vivid E80, Vivid E90, Vivid E95",
+      "decision_date": "2022-07-22",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "Easy Auto EF (Auto EF 3.0 with AI Auto ROI algorithm)",
+          "function": "Automated left-ventricular ejection fraction; AI algorithm automatically places the LV region of interest on 2D echo views.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Added Easy Auto EF -based on Auto EF 3.0 (includes AI Auto ROI algorithm)",
+          "page": 7
+        },
+        {
+          "name": "Easy AFI LV (AFI 3.0 with AI Auto ROI algorithm)",
+          "function": "Automated Function Imaging for LV longitudinal strain; AI algorithm automatically places the LV region of interest for speckle-tracking strain.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "Added Easy AFI LV -based on AFI 3.0 (includes AI Auto ROI algorithm)",
+          "page": 7
+        }
+      ],
+      "performance_summary": "Identical AI test summary to K220619: average Dice score >=92% (different countries), >=91% (different scanning views), >=92% (different LV volumes); 45 exams / 135 images, adult, Europe/Asia/US, 5 probes and 4 console variants; two-cardiologist consensus ground truth with expert-panel adjudication; test sites independent of training sites. No clinical study. Quote (p.8): \"The accuracy of the AI algorithm (average dice score) as tested on datasets from different countries, is 92% or higher; as tested on datasets from different scanning views, is 91% or higher; as tested on dataset from different left ventricle volumes, is 92% or higher.\" Note: this K also lists updates to 4D Auto LVQ, 4D Auto TVQ and Auto Tissue, but the summary does not describe those as AI.",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K243628",
+      "device_name": "Vivid T9/Vivid T8",
+      "decision_date": "2025-02-11",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [],
+      "performance_summary": null,
+      "exclusion_reason": "AI feature not identifiable in summary. The 510(k) summary lists only Clarity+ (SRI-HD-like speckle-reduction filter, described as 'a real-time image processing/filtering technique', p.8), DICOM Encapsulated PDF reports, Remote Viewing, One-click QuickApps, and Vascular Access indication; none is described as AI/ML and there is no AI testing section. The predicate K221147 cleared Easy Auto EF / Easy AFI LV (AI Auto ROI), so the FDA AI-list entry most likely reflects carried-over features, but this summary text does not name them."
+    },
+    {
+      "k_number": "K243620",
+      "device_name": "Vivid iq",
+      "decision_date": "2025-02-11",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [],
+      "performance_summary": null,
+      "exclusion_reason": "AI feature not identifiable in summary. The 510(k) summary lists only Sleep mode, Clarity+ (SRI-HD-like speckle-reduction filter, 'a real-time image processing/filtering technique', p.7), DICOM Encapsulated PDF, Remote Viewing, Carto 3 digital video streaming, One-click QuickApps, two OEM ICE catheters, and Vascular Access indication; none is described as AI/ML and there is no AI testing section. The predicate K221148 cleared Easy Auto EF / Easy AFI LV (AI Auto ROI), so the FDA AI-list entry most likely reflects carried-over features, but this summary text does not name them."
+    },
+    {
+      "k_number": "K251169",
+      "device_name": "Vivid Pioneer",
+      "decision_date": "2025-07-10",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "AI Cardiac Auto Doppler (Tissue Doppler and Doppler Trace algorithms)",
+          "function": "AI-based auto-tracing of cardiac Doppler spectra (tissue Doppler and flow Doppler) with automatic measurement of peak velocities and additional heart-valve-related measurements, extending the predicate Cardiac Auto Doppler / Spectrum Recognition.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "AI Cardiac Auto Doppler: AI based algorithm for auto-tracing of additional doppler spectrums added to the predicate Cardiac Auto Doppler available in the predicate Vivid E95 (K220882), introducing additional heart valve related measurements compared to the predicate Spectrum Recognition algorithm available in Vivid E95 (K220882).",
+          "page": 8
+        },
+        {
+          "name": "AI FlexiViews LAA",
+          "function": "AI-based workflow tool that localizes the left atrial appendage and extracts landmarks in real-time 2D or biplane TEE images (6VT probe) with a single button press.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "AI FlexiViews LAA: AI based workflow tool to help localize the LAA (Left Atrial Appendage) anatomical structure in real-time 2D or Biplane images with a single button press.",
+          "page": 9
+        }
+      ],
+      "performance_summary": "AI Cardiac Auto Doppler (pp.11-13): testing sets of 4106 recordings from 805 individuals (Tissue Doppler) and 3390 recordings from 1369 individuals (Doppler Trace); adult and pediatric, male/female, USA/Australia/France/Spain/Norway/Italy/Germany/Thailand/Philippines, 8 Vivid console types and 14 probes. Acceptance: feasibility score >95% and mean absolute percent error per parameter under a threshold; 'All clinical parameters, as performed by AI Cardiac Auto Doppler without user edits passed this check'. BMI subgroup (41 patients, 433 Doppler measurements): agreement metric between manual and AI peak velocities for tissue Doppler mean -0.002 (SD 0.077) BMI<25 and -0.006 (SD 0.081) BMI>=25; flow Doppler 0.021 (SD 0.073) and 0.003 (SD 0.057). Development sets: 1482 (Tissue Doppler) and 2070 (Doppler Trace) recordings from 4 sites not used for testing; ground truth by two cardiologists per ASE guidelines with 5-expert review panel. AI FlexiViews LAA (pp.14-15): verification set 342 recordings from 84 adults (USA, Norway, Italy, France, Philippines; BMI 18.5->30; 6VT probe on Vivid E95/S70N/iq/Pioneer); expected >80% success; 'The model achieved a verification success rate of 85%, with a sensitivity of 84.91% and a specificity of 91.82%'; success >=80% across TEE angles 0-100 degrees; >85% accuracy for BMI>25. Development set 612 recordings from 5 sites independent of verification. No clinical studies.",
+      "exclusion_reason": null
+    }
+  ],
+  "notes": "All seven summaries read in full from the local text files; no web search was needed. The four July 2022 clearances (K220619, K221148, K221147, K220882) share a verbatim AI testing section for Easy Auto EF and Easy AFI LV (AI Auto ROI algorithm, average Dice >=91-92%, 45 exams/135 images). 'Introduced in this K' is set true for those because each summary lists the features under 'Added' software relative to its predicate; they were cleared in parallel across the Vivid line, not sequentially. K251169 (Vivid Pioneer) introduces two new cardiac AI features (AI Cardiac Auto Doppler and AI FlexiViews LAA) with the most detailed performance reporting in the group; it also lists Auto Tissue (automatic gain optimization) and cSound Pioneer reconstruction, which are described as image-processing algorithms, not AI. K243628 and K243620 (Feb 2025 Vivid T9/T8 and Vivid iq) contain no AI-designated feature or AI test section; their only new image-processing feature is Clarity+ (speckle reduction). Because their predicates (K221147, K221148) carried Easy Auto EF / Easy AFI LV, the parent may reasonably treat those two as carry-over cardiac-AI platform clearances, but per the grounding rule they are flagged false with 'AI feature not identifiable in summary'. Page numbers refer to the PDF page markers in the extracted text files."
+}

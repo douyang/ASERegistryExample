@@ -1,0 +1,145 @@
+{
+  "group_id": "philips-epiq-c",
+  "records": [
+    {
+      "k_number": "K253595",
+      "device_name": "EPIQ Series Diagnostic Ultrasound System, Affiniti Series Diagnostic Ultrasound System",
+      "decision_date": "2026-03-27",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "AI Auto Measure Abdomen",
+          "function": "Semi-automated, editable measurements of kidney (sagittal length, transverse width, transverse height) and spleen length on C5-1 and C9-2 transducers during abdominal/renal exams; user can adjust caliper endpoints.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "The purpose of this Traditional 510(k) Pre-Market Notification is to introduce the addition of the Artificial Intelligence (AI) Auto Measure Abdomen feature software application onto the EPIQ Series Diagnostic Ultrasound Systems and Affiniti Series Diagnostic Ultrasound Systems.",
+          "page": 7
+        },
+        {
+          "name": "Auto Measure (cardiac) - predicate reference only",
+          "function": "Referenced only as the predicate K243794's cardiac Auto Measure feature; not the subject of this clearance and not described or tested here.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "The major difference between proposed device and predicate is Auto Measure feature used in predicate device (K243794) is used for cardiac indication. The proposed device Auto Measure Abdomen feature will be available under previously cleared abdominal indication (K132304) for EPIQ and Affiniti Series Diagnostic Ultrasound Systems.",
+          "page": 9
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "The AI feature cleared in this K is AI Auto Measure Abdomen (kidney and spleen measurements, abdominal indication, C5-1/C9-2 transducers). Non-cardiac. Performance study (150 subjects, 3 expert sonographers ground truth, Bland-Altman LoA within acceptance criteria) is for abdominal measurements only. The cardiac Auto Measure is mentioned only as belonging to the predicate K243794."
+    },
+    {
+      "k_number": "K260123",
+      "device_name": "EPIQ Series Diagnostic Ultrasound System",
+      "decision_date": "2026-05-27",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [],
+      "performance_summary": null,
+      "exclusion_reason": "AI feature not identifiable in summary. This submission introduces only the eV14-2v endocavitary 3D/4D transducer (Fetal/OB, Fetal Echo, GYN, Urology, Transvaginal indications). No artificial intelligence, machine learning, deep learning, neural network, or automated-measurement feature is named anywhere in the summary; the QIH product code is simply carried over from the predicate system. No cardiac AI feature is identified."
+    },
+    {
+      "k_number": "K260680",
+      "device_name": "EPIQ Series Diagnostic Ultrasound Systems; Affiniti Series Diagnostic Ultrasound Systems",
+      "decision_date": "2026-05-27",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "Koios Decision Support (DS) v3.7.1",
+          "function": "AI/ML computer-aided diagnosis (CADx) adjunct for ultrasound images of lesions or nodules suspicious for breast or thyroid cancer; integrated into EPIQ/Affiniti VM14.0 software, results displayed on the ultrasound system.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "The purpose of this Special 510(k) Notification is to integrate the Koios Decision Support (DS), an artificial intelligence (AI)/machine learning (ML)-based computer-aided diagnosis (CADx) software application into the EPIQ and Affiniti Series Diagnostic Ultrasound Systems (VM14.0 software). Koios DS was cleared under K242130.",
+          "page": 7
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "The only AI feature is Koios DS, a breast/thyroid lesion CADx application (product code POK, 21 CFR 892.2060). Non-cardiac. No performance data reported in this Special 510(k) beyond software integration verification."
+    },
+    {
+      "k_number": "K261211",
+      "device_name": "Philips EPIQ Series Diagnostic Ultrasound System; Philips Affiniti Series Diagnostic Ultrasound System",
+      "decision_date": "2026-07-27",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "2D and Color/PW Auto/Cine Select",
+          "function": "Automatically selects representative frames or cine loops in 2D, Color, and PW Doppler modes for workflow efficiency; not described as AI/ML and not scoped to cardiac imaging.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "2D and Color/PW Auto/Cine Select - Subject Device: Automatically selects representative frames or cine loops in 2D, Color, and PW Doppler modes to support workflow efficiency. Predicate Device: Supports manual selection and review of cine loops and frames.",
+          "page": 12
+        },
+        {
+          "name": "EdgeBoost",
+          "function": "Grayscale boundary-delineation image-processing refinement (successor to XRes); general image quality, not described as AI/ML.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "EdgeBoost - Subject Device: Provides enhanced boundary delineation in grayscale imaging through refined imaging-processing algorithms that improve visualization of anatomical edges.",
+          "page": 11
+        },
+        {
+          "name": "SuperRes MVI 2.0",
+          "function": "Refined microvascular imaging reconstruction algorithms for low-flow vascular structures; not described as AI/ML.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "SuperRes MVI 2.0 - Subject Device: Provides refined microvascular imaging reconstruction algorithms to enhance visualization of low-flow vascular structures.",
+          "page": 12
+        },
+        {
+          "name": "Quad AFI",
+          "function": "Quadrant-based amniotic fluid index workflow tool for obstetric assessment (AFI here means amniotic fluid index, not automated function imaging).",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "Quad AFI - Subject Device: Provides quadrant-based amniotic fluid index (AFI) workflow tools to support obstetric assessment.",
+          "page": 13
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "AI feature not identifiable in summary. This software-only update (Collaboration Live browser client, EdgeBoost, adaptive fundamental frequency blending, color gain post-processing, Auto/Cine Select, SuperRes MVI 2.0, CEUS workflow, Quad AFI, UI updates) never uses the terms artificial intelligence, machine learning, deep learning, or neural network, and none of the listed features is cardiac-specific. The only automation (Auto/Cine Select) is generic frame selection across 2D/Color/PW modes. No cardiac AI feature is named."
+    },
+    {
+      "k_number": "K260667",
+      "device_name": "Alturion Series Diagnostic Ultrasound System",
+      "decision_date": "2026-06-29",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "AI Auto Measure Abdomen",
+          "function": "Semi-automated, editable kidney and spleen measurements on C5-1 and C9-2 transducers for routine abdominal exams; carried onto the new Alturion platform (shared codebase with EPIQ/Affiniti, most recently cleared in K253595).",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "The AI Auto Measure Abdomen feature in the Alturion Series aims to improve workflow efficiency by automating selected measurements required for routine abdominal exams. The Auto Measure Abdomen feature is designed to provide semi-automated and editable measures of abdominal organs such as kidney and spleen.",
+          "page": 6
+        },
+        {
+          "name": "AI Auto Measure (cardiac) - predicate reference only",
+          "function": "Referenced only as previously cleared in the predicate Affiniti K243794; not described, tested, or claimed as new in this submission.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "The AI Auto Measure Abdomen feature was most recently cleared in K253595. The AI Auto Measure feature is for cardiac was cleared in the predicate device (K243794). A performance study for validation was conducted for Auto Measure Abdomen that includes patients scanned by both C5-1 and C9-2.",
+          "page": 7
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "New Alturion platform (Affiniti refresh) plus eV14-2v transducer plus AI Auto Measure Abdomen. The only AI feature described and validated is the abdominal (kidney/spleen) measurement tool, with the same 150-subject performance study as K253595. The cardiac Auto Measure is cited only as a predicate (K243794) feature. Non-cardiac."
+    },
+    {
+      "k_number": "K242800",
+      "device_name": "The 5000 Compact Series Ultrasound Systems",
+      "decision_date": "2024-11-15",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "Auto Measure Version 2 (adult echocardiography 2D and Doppler)",
+          "function": "Machine-learning (CNN detector) semi-automated adult transthoracic echocardiography measurements with editable calipers: 2D (IVSd, LVIDd, LVPWd, LVIDs, Asc Ao Diam, LVOT Diam, Ao Sinus Diam, Ao STJ Diam, RV Base, RV Mid, RV Length, TV Annulus) and Doppler (MV Peak E/A Vel, MV Dec Time, LVOT VTI/Vmax, AV VTI/Vmax, PV VTI/Vmax, TR Vmax, lateral and medial e'/a' velocities, RV S velocity). Locked algorithm; requires adult cardiology transthoracic transducer (S5-1, S4-2) with ECG. Version 2 retrained a subset of detectors with additional data; Version 1 was first cleared on EPIQ/Affiniti VM9.0 under K211597.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "The purpose of this Traditional 510(k) Pre-Market Notification is to introduce the Auto Measure Artificial Intelligence-Machine Learning software feature onto the 5000 Compact Series Ultrasound Systems. The Auto Measure feature utilizes machine learning to provide a subset of semi-automated and editable measures during an echocardiography or when reviewing an already acquired echocardiography.",
+          "page": 6
+        }
+      ],
+      "performance_summary": "Detector validation on 500 previously unseen TTE studies (one per subject; 200 known normal, 300 patients of whom 198 had confirmed pathology), automated output vs. clinical-expert ground truth, Bland-Altman limits of agreement (Carkeet exact CIs) checked against acceptance limits derived from published human inter-observer variability. All detectors met criteria. 2D detectors (acceptance +/-35%): Ao Sinus N=308 [-11.0%, 11.3%]; Ao STJ N=301 [-11.4%, 13.1%]; Asc Ao N=204 [-14.8%, 16.0%]; IVSd N=305 [-33.2%, 28.2%]; LVIDd N=457 [-14.2%, 12.4%]; LVIDs N=469 [-23.5%, 26.0%]; LVOT Diam N=453 [-17.7%, 16.2%]; LVPWd N=305 [-33.1%, 30.0%]; RV Base N=302 [-16.1%, 25.9%]; RV Mid N=243 [-25.1%, 30.3%]; RV Length N=117 [-14.6%, 13.4%]; TV Annulus N=53 [-19.4%, 18.0%]. Doppler detectors: MV Decel Time N=136 [-23.6%, 22.9%] (limit +/-25%); MV Peak A N=229 [-12.4%, 15.2%] and MV Peak E N=136 [-9.2%, 9.1%] (limit +/-24%); AV VTI N=247 [-21.5%, 19.9%], LVOT VTI N=234 [-17.3%, 17.2%], PV VTI N=66 [-20.6%, 21.1%] (limit +/-22%). Validation demographics: age 52.4 +/- 15.5 y; 49.6% male; Asian 30.2%, Black 26.4%, White 36.2%, Other 7.3%; BSA 1.9 +/- 0.2 m2. Training: detectors trained from scratch (no pretrained weights) on manual expert measurements from a pool of >6000 TTE studies acquired 2010-2021 at 20 centers in 16 countries, with validation data randomly sampled and separated before development. Quote (p.17): 'All measurement detectors met the acceptance criteria informed by clinical literature, supporting the accuracy and reliability of the Auto Measure feature.' Quote (p.19-20): 'Performance validation data have been extracted from a total auf 500 studies, one study per subject. Of these 500 studies, 200 are known normal subjects and 300 patients (198 patients had a confirmed pathology).' No clinical investigation; software-only change.",
+      "exclusion_reason": null
+    }
+  ],
+  "notes": "All six FDA summary text files were read in full; no web search was needed because every AI feature was named explicitly in the FDA text. Only K242800 (5000 Compact Series, Auto Measure Version 2) contains a cardiac ultrasound AI feature: ML/CNN-based semi-automated adult TTE 2D and Doppler measurements, with a full detector-level performance table. K253595 and K260667 both clear the same AI Auto Measure Abdomen (kidney/spleen) feature; each mentions in passing that the predicate K243794 carries a cardiac Auto Measure, but that cardiac feature is not the subject of, described in, or tested in either submission, so both are marked non-cardiac (the parent may wish to link the cardiac lineage to K243794/K211597 instead). K260680 is the Koios DS breast/thyroid CADx integration. K260123 is a transducer-only clearance (eV14-2v, OB/GYN) with no AI feature named. K261211 is a general software update (image quality, workflow, tele-ultrasound, obstetric Quad AFI, generic Auto/Cine Select) that never uses AI/ML terminology and names no cardiac AI; note that 'AFI' in K261211 means amniotic fluid index, not automated function imaging. Page numbers refer to the '===== PAGE n =====' markers of the extracted PDF text. Files: /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/{K253595,K260123,K260680,K261211,K260667,K242800}.txt"
+}

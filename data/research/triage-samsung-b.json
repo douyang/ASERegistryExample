@@ -1,0 +1,368 @@
+{
+  "group_id": "samsung-b",
+  "records": [
+    {
+      "k_number": "K233112",
+      "device_name": "HM70 EVO Diagnostic Ultrasound System",
+      "decision_date": "2023-12-21",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "NerveTrack",
+          "function": "Deep-learning real-time detection of peripheral nerves (10 nerve types) for regional anesthesia; migrated from V8 (K223387) with expanded nerve coverage.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "The proposed HM70 EVO has added SW functions NerveTrack and UterineAssist based on AI technology, previously cleared in V8 (K223387).",
+          "page": 6
+        },
+        {
+          "name": "UterineAssist",
+          "function": "Deep-learning segmentation of uterus/endometrium, feature-point extraction and automated size measurement on sagittal/transverse uterus images.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "A deep learning based segmentation algorithm was validated using 450 sagittal uterus images and 150 transverse uterus images collected at three hospitals.",
+          "page": 7
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "Only AI features named are NerveTrack (peripheral nerve detection) and UterineAssist (gynecologic uterus segmentation/measurement); no cardiac AI feature is described."
+    },
+    {
+      "k_number": "K240516",
+      "device_name": "RS85 Diagnostic Ultrasound System",
+      "decision_date": "2024-06-12",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "NerveTrack (detection and segmentation)",
+          "function": "Deep-learning nerve detection (3,999 images, 89.6% accuracy) and expanded nerve segmentation (1,753 images, Dice 90.44%) for peripheral nerve imaging; migrated from V8 (K231772).",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "The proposed RS85 has included NerveTrack previously cleared in the predicate V8 (K231772) based on AI technology, expanding the application of Segmentation and adding a sub-function, EzNerveMeasure.",
+          "page": 5
+        },
+        {
+          "name": "EzNerveMeasure (NerveTrack sub-function)",
+          "function": "Deep-learning automated flattening ratio and cross-sectional area measurement of the median nerve (FR error 6.11%, CSA error 9.75%).",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "We tested on Flattening Ratio (FR) and Cross-sectional Area (CSA) of NerveTrack EzNerveMeasure.",
+          "page": 8
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "All AI features are NerveTrack nerve detection/segmentation/measurement (musculoskeletal/anesthesia); no cardiac AI feature is described."
+    },
+    {
+      "k_number": "K240631",
+      "device_name": "V8/XV8/XH8, V7/XV7/XH7, V6/XV6/XH6 Diagnostic Ultrasound System",
+      "decision_date": "2024-06-21",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "NerveTrack Segmentation (expanded)",
+          "function": "Deep-learning contour segmentation of nine additional nerve types plus surrounding bone, vessel, muscle and ligament; detection accuracy 90.3%, segmentation accuracy 98.42%.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "The proposed V8/XV8/XH8, V7/XV7/XH7, V6/XV6/XH6 diagnostic ultrasound system has expanded the applications of NerveTrack Segmentation previously cleared in the predicate V8/H8, V7/H7, V6/H6(K231772) diagnostic ultrasound system based on AI technology.",
+          "page": 5
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "Only AI change is expansion of NerveTrack nerve segmentation; no cardiac AI feature is described. (HeartAssist is later stated by K242511 to have been cleared on this K, but this summary text does not mention it.)"
+    },
+    {
+      "k_number": "K241971",
+      "device_name": "HERA Z20, R20, HERA Z30, R30 Diagnostic Ultrasound System",
+      "decision_date": "2024-10-11",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "HeartAssist",
+          "function": "Deep-learning FETAL heart view recognition (4CV/LVOT/RVOT subdivided by cardiac phase), segmentation and automated size measurement of fetal cardiac structures; carried from HERA W10/W9 (K230084) with subdivided view items. Fetal echocardiography only in this K.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "HeartAssist, a cleared feature in the HERA W10/W9(K230084), has subdivided view recognition items as below. . 4CV -> 4CV(Early diastole), 4CV(End diastole), 4CV(End systole) . LVOT -> LVOT(Systole), LVOT(End diastole) . RVOT -> RVOT(Systole), RVOT(End diastole)",
+          "page": 7
+        },
+        {
+          "name": "ViewAssist",
+          "function": "Deep-learning fetal (OB) standard-view recognition and anatomy annotation across 40 views (includes fetal cardiac views 4CV/LVOT/RVOT among OB views); carried from K230084 with added annotation parts.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "ViewAssist, a cleared feature in the HERA W10/W9(K230 084), has added additional annotation parts (profile, bladder, spine) and has subdivided the view recognitions items as below.",
+          "page": 6
+        },
+        {
+          "name": "BiometryAssist",
+          "function": "Deep-learning fetal biometry segmentation and measurement; expanded to nasal bone (NB) and intracranial translucency (IT).",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "BiometryAssist, a cleared feature in the HERA W10/W9(K230084), has expanded the measurement items (NB, IT)",
+          "page": 7
+        },
+        {
+          "name": "Live ViewAssist",
+          "function": "Deep-learning real-time fetal view quality assessment (acceptable/not-acceptable), Cohen's kappa 0.818, 30 FPS.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "The proposed HERA Z20, R20, HERA Z30, R30 have included Live ViewAssist, an AI feature with the similar indications for use of SonoLyst Live of Voluson Expert 22/20/18(K231965).",
+          "page": 7
+        },
+        {
+          "name": "EzVolume",
+          "function": "AI segmentation of fetal 3D volumes (fetus, head, body, limbs, fluid, umbilical cord, placenta, uterus).",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "The proposed HERA Z20, R20, HERA Z30, R30 have included EzVolume, an AI feature with the similar indications for use of Fibroid Mapping of Voluson Expert 22/20/18(K231965).",
+          "page": 7
+        },
+        {
+          "name": "UterineContour",
+          "function": "Deep-learning uterus/endometrium segmentation with 3D coronal view adaptation.",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "The proposed HERA Z20, R20, HERA Z30, R30 have included UterineContour, an AI feature with the similar indications for use of BiometryAssist of V8/XV8/XH8, V7/XV7/XH7, V6/XV6/XH6, the primary predicate(K240631).",
+          "page": 7
+        }
+      ],
+      "performance_summary": "FETAL echocardiography only. HeartAssist (page 14): view recognition validated on 440 fetal heart images across 11 fetal heart views (AIUM), average recognition accuracy 95.00% (threshold 89%); segmentation Dice 0.876 (threshold 0.8); automated measurement error rates: area <=8%, angle <=4%, circumference <=11%, diameter <=11%. Dataset: Americans and Koreans, maternal BMI 17-45.4; ground truth by an obstetrician (>20 y) and two sonographers (>10 y) in fetal cardiology, supervised by an obstetrician (>25 y). Quote: \"A deep learning based view recognition algorithm was validated using 440 fetal heart at the hospitals. The average recognition accuracy is 95.00% (threshold 89%)\" (page 14). No adult/pediatric postnatal cardiac AI performance is reported.",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K242444",
+      "device_name": "HERA W10 Diagnostic Ultrasound System; HERA W9 Diagnostic Ultrasound System",
+      "decision_date": "2024-11-27",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "HeartAssist",
+          "function": "Deep-learning FETAL heart view recognition (7 fetal heart views), segmentation and automated cardiac size measurement; algorithm improved in this K. Fetal echocardiography only.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "The proposed HERA W9/ HERA W10 have improved the performance of Heart Assist through algorithm change based on the AI technology.",
+          "page": 6
+        },
+        {
+          "name": "BiometryAssist",
+          "function": "Deep-learning fetal biometry segmentation/measurement; NB and IT items added in the mid-sagittal plane.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "The proposed HERA W9/ HERA W10 have expanded the measurement items of NB(Nasal Bone), IT(Intracranial Translucency) in the MSP(Mid-Sagittal Plane) view of BiometryAssist based on the AI technology.",
+          "page": 6
+        },
+        {
+          "name": "ViewAssist",
+          "function": "Deep-learning fetal view recognition (33 views, includes fetal heart and biometry views) and anatomy annotation; algorithm improved.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "The proposed HERA W9/ HERA W10 have improved the performance of ViewAssist through algorithm change based on the AI technology.",
+          "page": 6
+        }
+      ],
+      "performance_summary": "FETAL echocardiography only. HeartAssist (pages 8-9): validated on 280 fetal heart images (315 static images from 69 individuals) collected at two hospitals (US and South Korea), 7 fetal heart views per ISUOG/AIUM, gestational age 11-38 weeks, maternal BMI 14.88-49.2. View recognition accuracy 96.07% (threshold 89%); segmentation Dice 0.88 (threshold 0.8); measurement error rates: area <=8%, angle <=4%, circumference <=11%, diameter <=11%. Quote: \"A deep learning based view recognition algorithm was validated using 280 fetal heart images collected at two hospitals. The average recognition accuracy is 96.07% (threshold 89%)\" (page 8). No adult cardiac AI performance reported.",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K242511",
+      "device_name": "V5 Diagnostic Ultrasound System, H5 Diagnostic Ultrasound System, XV5 Diagnostic Ultrasound System, XH5 Diagnostic Ultrasound System, V4 Diagnostic Ultrasound System, H4 Diagnostic Ultrasound System, XV4 Diagnostic Ultrasound System, XH4 Diagnostic Ultrasound System",
+      "decision_date": "2024-12-10",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "HeartAssist (adult and fetal)",
+          "function": "Deep-learning cardiac view recognition (18 ADULT heart views per ASE/AIUM plus 7 fetal heart views), segmentation of cardiac structures, and automated cardiac measurements in B-mode, M-mode and Doppler-mode compared against cardiologist measurements. Carried over from V8/XV8/XH8 (K240631) without changes.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "We tested adult and fetal hearts individually in three areas: view recognition, segmentation and size measurement. [...] A deep learning based view recognition algorithm was validated using 280 fetal heart and 540 adult heart images collected at five hospitals.",
+          "page": 8
+        },
+        {
+          "name": "BiometryAssist",
+          "function": "Deep-learning fetal biometry segmentation and measurement (Dice 0.919).",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "The proposed V5/H5/XV5/XH5, V4/H4/XV4/XH4 have included BiometryAssist, HeartAssist, ViewAssist, UterineAssist, NerveTrack already cleared in the V8/XV8/XH8, V7/XV7/XH7, V6/XV6/XH6 (K240631) without changes.",
+          "page": 7
+        },
+        {
+          "name": "ViewAssist",
+          "function": "Deep-learning fetal view recognition (13 views) and anatomy annotation.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "A deep learning based view recognition algorithm was validated using 680 fetal ultrasound images and fetal biometry images collected at two hospitals. The average recognition accuracy is 94.26% (threshold 89%)",
+          "page": 12
+        },
+        {
+          "name": "UterineAssist",
+          "function": "Deep-learning uterus/endometrium segmentation, feature points and measurement.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "[ The Summary of Testing for UterineAssist] ... A deep learning based segmentation algorithm was validated using 450 sagittal uterus images and 150 transverse uterus images collected at three hospitals.",
+          "page": 13
+        },
+        {
+          "name": "NerveTrack (detection and segmentation)",
+          "function": "Deep-learning peripheral nerve detection (89.91% accuracy) and segmentation (98.30% accuracy).",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "A deep learning-based detection algorithm was validated using a total of 3,999 images collected at eight hospitals.",
+          "page": 14
+        }
+      ],
+      "performance_summary": "ADULT echo AI performance reported (pages 8-10). HeartAssist adult arm: 540 adult heart static images from 30 individuals (age 20+, stratified 20-40/40-60/60+; BMI 14.88-49.2; Americans and Koreans), 18 adult heart views per ASE/AIUM guidelines. View recognition accuracy 98.31% (threshold 84%); segmentation Dice 0.93 (threshold 0.9); automated measurement: \"(Adult, B-mode) Pass if the PCC value is 0.8 or more of spec / (Adult, M-mode) Pass if the PCC value is 0.8 or more of spec / (Adult, Doppler-mode) Pass if the PCC value is 0.8 or more of spec\" where \"The HeartAssist's PCC was calculated to evaluate the auto measurement using the ground truth, defined as the cardiologist's measurements\" (page 9); no actual PCC values are reported. Adult ground truth by two cardiologists and two sonographers with >=10 years' experience who manually traced heart contours and signal outlines (page 10). Fetal arm: 280 fetal heart images from 80 individuals, 7 fetal views, recognition accuracy 93.21%, Dice 0.88, measurement error area <=8%, angle <=4%, circumference/diameter <=11%. Training/validation data independence asserted.",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K243702",
+      "device_name": "V8 Diagnostic Ultrasound System; cV8 Diagnostic Ultrasound System; V7 Diagnostic Ultrasound System; cV7 Diagnostic Ultrasound System; V6 Diagnostic Ultrasound System; cV6 Diagnostic Ultrasound System",
+      "decision_date": "2025-02-12",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "EzNerveMeasure (NerveTrack sub-function)",
+          "function": "Deep-learning segmentation-based flattening ratio and cross-sectional area measurement of the median nerve (FR error 8.31%, CSA error 13.12%; 100 images, 10 patients); migrated from RS85 (K240516).",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "The proposed V8/cV8, V7/cV7, V6/cV6 have included 'EzNerveMeasure' previously cleared in the predicate RS85 (K240516), as a sub-function of NerveTrack based on AI technology.",
+          "page": 6
+        },
+        {
+          "name": "AutoEF (updated; GLS added)",
+          "function": "Automated left-ventricular ejection fraction tool expanded to report Global Longitudinal Strain. Cardiac, but the summary does NOT characterize AutoEF as AI/ML-based and provides no AI validation for it.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "The proposed V8/cV8, V7/cV7, V6/cV6 have updated 'AutoEF', a cleared function in the primary predicate V8/XV8/XH8, V7/XV7/XH7, V6/XV6/XH6 (K240631). It has expanded a 'Global Longitudinal Strain(GLS)' measurement item.",
+          "page": 7
+        },
+        {
+          "name": "Strain+ (updated; LA and RV added)",
+          "function": "Speckle-tracking strain package expanded to left atrium and right ventricle. Cardiac, but NOT characterized as AI/ML-based in the summary.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "The proposed V8/cV8, V7/cV7, V6/cV6 have updated 'Strain+', a cleared function in the primary predicate V8/XV8/XH8, V7/XV7/XH7, V6/XV6/XH6 (K240631). It has expanded 'left atrium(LA), and right ventricle(RV)' measurement items.",
+          "page": 7
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "The only feature the summary identifies as AI-based is EzNerveMeasure (NerveTrack, peripheral nerve). AutoEF (+GLS) and Strain+ (+LA/RV) are cardiac tools updated in this K, but the summary does not describe them as AI/ML and reports no AI validation for them; K252018 likewise lists AutoEF separately from its 'AI-ML based' features. Flagged for parent review: if AutoEF/Strain+ are treated as AI, this K would be cardiac-positive. HeartAssist is not mentioned in this summary although K250999 states it was a cleared feature on this device."
+    },
+    {
+      "k_number": "K250999",
+      "device_name": "V8 Diagnostic Ultrasound System; cV8 Diagnostic Ultrasound System; V7 Diagnostic Ultrasound System; cV7 Diagnostic Ultrasound System; V6 Diagnostic Ultrasound System; cV6 Diagnostic Ultrasound System; V5 Diagnostic Ultrasound System; cV5 Diagnostic Ultrasound System; V4 Diagnostic Ultrasound System; cV4 Diagnostic Ultrasound System",
+      "decision_date": "2025-07-18",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "HeartAssist (AI model updated)",
+          "function": "Deep-learning cardiac view recognition, segmentation and automated measurement; AI models updated in this K. Validation reported in this summary is titled 'HeartAssist(fetus)' and covers fetal heart images only (7 fetal views); the adult component validated in K242511 is not re-validated here.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "The proposed V8/cV8, V7/cV7, V6/cV6 have updated 'BiometryAssist', 'ViewAssist', and 'HeartAssist', the cleared features in the predicate V8/cV8, V7/cV7, V6/cV6 (K243702). The AI models for these features have been updated.",
+          "page": 7
+        },
+        {
+          "name": "BiometryAssist (AI model updated)",
+          "function": "Deep-learning fetal biometry segmentation (Dice 0.869) and measurement; 320 images, 52 patients (KR/US).",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "A deep learning based view recognition algorithm was validated using 320 fetal biometry images collected at hospitals (South Korea and United States). The average dice-score is 0.869 (threshold 0.8)",
+          "page": 10
+        },
+        {
+          "name": "ViewAssist (AI model updated)",
+          "function": "Deep-learning fetal view recognition (17 views; sensitivity 93.97%, specificity 99.62%) and segmentation (Dice 0.863); 680 images, 102 patients.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "The achieved sensitivity is 93.97% and specificity is 99.62% (thresholds: 75.9%, 88.2%, respectively)",
+          "page": 11
+        },
+        {
+          "name": "EzNerveMeasure (NerveTrack sub-function)",
+          "function": "Deep-learning median nerve FR/CSA measurement, migrated to V5/cV5, V4/cV4 (FR error 8.05%, CSA error 13.11%; 200 images, 20 patients KR/US).",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "The proposed V5/cV5, V4/cV4 have included 'EzNerveMeasure' previously cleared in the predicate V8/cV8, V7/cV7, V6/cV6 (K243702), as a sub-function of NerveTrack based on AI technology.",
+          "page": 8
+        },
+        {
+          "name": "AutoEF (GLS) and Strain+ (LA/RV) migrated to V5/V4",
+          "function": "Cardiac automated EF/strain tools migrated from K243702 to V5/cV5, V4/cV4; NOT characterized as AI/ML in the summary.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "The proposed V5/cV5, V4/cV4 have updated 'AutoEF' function, which was previously cleared in the predicate, by expanding its measurement item to include 'Global Longitudinal Strain(GLS)'. This change has already been cleared in the predicate device V8/cV8, V7/cV7, V6/cV6 (K243702), and it has been migrated to V5/cV5, V4/cV4.",
+          "page": 9
+        }
+      ],
+      "performance_summary": "Reported cardiac AI performance is FETAL only. HeartAssist(fetus) (page 13): 280 fetal heart static images from 70 patients (26 South Korea, 44 US), 7 fetal views per ISUOG/AIUM, GA 11-38 weeks; view recognition sensitivity 94.29% and specificity 99.62% (thresholds 75.9% and 88.2%); segmentation Dice 0.865 (threshold 0.8); measurement error rates area <=8%, angle <=4%, circumference <=11%, diameter <=11%. Quote: \"[The AI Summary of Testing for HeartAssist(fetus)] ... The achieved sensitivity is 94.29% and specificity is 99.62% (thresholds: 75.9%, 88.2%, respectively)\" (page 13). Validation ground truth established on the target device by expert reviewers (obstetrician >20 y in fetal cardiology, two sonographers >10 y, supervised by senior obstetrician >25 y). No adult HeartAssist validation is included in this summary even though the HeartAssist AI models were updated.",
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K252018",
+      "device_name": "HERA Z20 Diagnostic Ultrasound System; HERA Z20e Diagnostic Ultrasound System; HERA Z20s Diagnostic Ultrasound System; R20 Diagnostic Ultrasound System; HERA Z30 Diagnostic Ultrasound System; R30 Diagnostic Ultrasound System",
+      "decision_date": "2026-01-05",
+      "is_cardiac_ultrasound_ai": false,
+      "ai_features": [
+        {
+          "name": "AbdomenAssist",
+          "function": "AI-ML automated kidney and spleen length measurement (success rate 100% and 96.77%; 62 patients, US/Germany).",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "have included new AI-ML based software features: AbdomenAssist, BladderAssist, QualityCheck, PelvicAssist.",
+          "page": 7
+        },
+        {
+          "name": "BladderAssist",
+          "function": "AI-ML automated bladder size measurement (success rate 95.24%/96.83%; 63 patients).",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "BladderAssist: a feature based on AI-ML technology, measures the size of the bladder, thereby reducing user variability and simplifying workflow",
+          "page": 7
+        },
+        {
+          "name": "QualityCheck",
+          "function": "AI-ML prenatal (obstetric) view quality classification and required-structure detection across 40 standard OB views / 65 structures; 43,737 images from 283 patients (US).",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "QualityCheck: a feature based on AI-ML technology to assess whether the views acquired during prenatal ultrasound examinations meet clinical standards.",
+          "page": 7
+        },
+        {
+          "name": "PelvicAssist",
+          "function": "AI-ML pelvic floor volume alignment and levator hiatus measurement (ICC 0.94-0.99; 40 patients).",
+          "cardiac": false,
+          "introduced_in_this_k": true,
+          "quote": "PelvicAssist: a feature based on AI-ML technology, helps identify anatomical structures of the Pelvic floor through structural analysis and automatic measurement.",
+          "page": 7
+        },
+        {
+          "name": "NerveTrack (detection)",
+          "function": "AI-ML peripheral nerve detection migrated from V8 (K243702); localization success rate 92.19%.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "have migrated the detection sub-function of NerveTrack, the AI-ML based software feature from the predicate device V8 (K243702).",
+          "page": 7
+        },
+        {
+          "name": "EzVolume (measurement added) and UterineAssist (segmentation updated)",
+          "function": "Updated AI-ML fetal 3D volume segmentation with volume measurement, and updated uterus/endometrium segmentation.",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "have updated its cleared AI-ML based software features EzVolume, UterineAssist.",
+          "page": 8
+        },
+        {
+          "name": "AutoEF (additional measurement item) and TMAD",
+          "function": "Cardiac tools: AutoEF expanded per K243702 (i.e., GLS) and TMAD (annular displacement) migrated from V8; NOT characterized as AI-ML in the summary, which lists AI-ML features separately.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "have expanded its cleared software feature, AutoEF to include an additional measurement item. This update has been already cleared in the predicate V8 (K243702).",
+          "page": 9
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": "The features the summary explicitly labels 'AI-ML based' are AbdomenAssist, BladderAssist, QualityCheck (obstetric), PelvicAssist, NerveTrack, EzVolume and UterineAssist; none is cardiac. AutoEF and TMAD are cardiac but are listed separately from the AI-ML features and are not described as AI. HeartAssist (fetal, cleared on predicate K241971) is not mentioned in this summary."
+    }
+  ],
+  "notes": "Method: all nine FDA summary text files read in full; no web search used, all decisions grounded in the FDA summary text. Dates and device names from the openFDA records file. Key findings: (1) K242511 is the only K in this group whose summary reports ADULT echocardiography AI validation (HeartAssist adult arm: 540 images, 18 ASE/AIUM adult views, cardiologist ground truth, recognition accuracy 98.31%, Dice 0.93, auto-measurement acceptance PCC>=0.8 in B/M/Doppler modes with no actual PCC values reported). The summary says HeartAssist was carried over 'without changes' from K240631, but the K240631 summary itself does not mention HeartAssist. (2) K241971, K242444 and K250999 are marked cardiac-positive on the basis of HeartAssist, but the validation reported in each is FETAL echocardiography only (fetal heart view recognition, segmentation, measurement); parent should decide whether fetal-only cardiac AI belongs in an ASE adult-echo inventory. K250999 titles its section 'HeartAssist(fetus)' and states the HeartAssist AI models were updated, but includes no adult validation. (3) K243702 and K252018 update AutoEF (adds GLS) and, in K243702, Strain+ (adds LA/RV); these are cardiac quantification tools but the Samsung summaries never label them AI/ML, and K252018 explicitly lists its AI-ML features separately from AutoEF. They are therefore marked cardiac-negative with the caveat recorded in exclusion_reason; if the parent treats AutoEF as an AI feature, K243702 (and K252018, K250999 as carriers) should be revisited. (4) K233112, K240516, K240631 are NerveTrack/UterineAssist only. Product code QIH (AI image acquisition/optimization) appears from K241971 onward. Output file: /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/research/out/triage-samsung-b.json"
+}

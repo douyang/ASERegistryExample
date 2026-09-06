@@ -1,0 +1,450 @@
+{
+  "batch_id": "canon-aplio",
+  "families": [
+    {
+      "id": "canon-aplio-cardiac-ai",
+      "product_name": "Aplio i-series cardiac AI features (2D WMT with Full-assist, Auto EF with Full-assist, Auto Plane Detection, Quick Strain, Auto LVOT, Auto AoV); UltraExtend NX offline workstation",
+      "company": "Canon Medical Systems Corporation",
+      "company_website": "https://global.medical.canon/",
+      "product_url": "https://us.medical.canon/products/ultrasound/clinical-segments/cardiology/",
+      "category": "system-embedded",
+      "tags": [
+        "Auto EF",
+        "Full-assist",
+        "2D Wall Motion Tracking",
+        "LV contour tracing",
+        "GLS",
+        "Quick Strain",
+        "Auto Plane Detection",
+        "view recognition",
+        "Auto LVOT",
+        "Auto AoV",
+        "Doppler auto-trace",
+        "VTI",
+        "EDV",
+        "ESV",
+        "UltraExtend NX",
+        "offline analysis"
+      ],
+      "modality_scope": [
+        "TTE"
+      ],
+      "deployment": [
+        "ultrasound-system-embedded",
+        "offline-workstation-software"
+      ],
+      "summary": "Canon's Aplio i900/i800/i700 cardiac AI functions comprise AI/ML-supported automated initial left-ventricular contour tracing for 2D Wall Motion Tracking and Auto EF (marketed as 'Full-assist', first labeled as AI/ML in K212333 as a marketing-language expansion of previously cleared features), and four deep-learning features added in K241582 (software V7.0): Auto Plane Detection (A4C/A2C/A3C/SAX view selection for 2D WMT), Quick Strain (simultaneous 2D WMT LV on three apical views yielding EDV, ESV, EF, GLS), Auto LVOT and Auto AoV (automatic Doppler waveform tracing). K241582 validated these on sequestered data from 239 U.S. patients at one site (subsets of 50/50/45/45 patients) against three sonographers; K250328 cleared the UltraExtend NX V2.0 offline workstation carrying 2D WMT Full-assist and Auto EF Full-assist migrated unchanged from K223017, with no numeric results reported.",
+      "intended_use_quote": null,
+      "indications_for_use_quote": "The Diagnostic Ultrasound System Aplio i900 Model TUS-AI900, Aplio i800 Model TUS-AI800, and Aplio i700 Model TUS-AI700 are indicated for the visualization of structures, and dynamic processes with the human body using ultrasound and to provide image information for diagnosis in the following clinical applications: fetal, abdominal, intra-operative (abdominal), pediatric, small organs (thyroid, breast and testicle), trans-vaginal, trans-rectal, neonatal cephalic, adult cephalic, cardiac (both adult and pediatric), peripheral vascular, transesophageal, musculo-skeletal (both conventional and superficial), laparoscopic and Thoracic/Pleural. This system provides high-quality ultrasound images in the following modes: B mode, M mode, Continuous Wave, Color Doppler, Pulsed Wave Doppler, Power Doppler and Combination Doppler, as well as Speckle-tracking, Tissue Harmonic Imaging, Combined Modes, Shear wave, Elastography, and Acoustic attenuation mapping. This system is suitable for use in hospital and clinical settings by physicians or legally qualified persons who have received the appropriate training.",
+      "embedded_ai_features": [
+        {
+          "name": "2D Wall Motion Tracking (2D WMT) with Full-assist function (LV)",
+          "function": "AI/ML-supported automated initial endocardial contour tracing of the left ventricle for 2D speckle-tracking wall motion (strain) analysis",
+          "first_k_number": "K212333",
+          "quote": "the promotion of the support by artificial intelligence (AI) and/or machine learning (ML) of the automated initial contour tracing capability of 2D Wall Motion Tracking for left ventricle (2D WMT) and Auto Ejection Fraction for left ventricle (Auto EF), marketed by Canon as 2D WMT with Full-assist function and Auto EF with Full-assist function, respectively."
+        },
+        {
+          "name": "Auto EF with Full-assist function (LV)",
+          "function": "AI/ML-supported automated initial LV contour tracing for automated left ventricular ejection fraction and volumes",
+          "first_k_number": "K212333",
+          "quote": "The expansion of marketing language for several previously 510(k) cleared features is also proposed in the subject submission, including the promotion of the support by artificial intelligence (AI) and/or machine learning (ML) of the automated initial contour tracing capability of 2D Wall Motion Tracking for left ventricle (2D WMT) and Auto Ejection Fraction for left ventricle (Auto EF)"
+        },
+        {
+          "name": "Auto Plane Detection",
+          "function": "Deep-learning automatic selection of candidate cardiac views (A4C/A2C/A3C/SAX) for 2D Wall Motion Tracking",
+          "first_k_number": "K241582",
+          "quote": "Auto Plane Detection, which introduces a deep learning method to the existing 2D Wall Motion Tracking (WMT) feature for the automatic selection of appropriate candidate cardiac views (A4C/A2C/A3C/SAX)"
+        },
+        {
+          "name": "Quick Strain",
+          "function": "Uses Auto Plane Detection to launch 2D WMT LV simultaneously on A4C, A3C and A2C views, producing EDV, ESV, EF and GLS",
+          "first_k_number": "K241582",
+          "quote": "Quick Strain, which operates in conjunction with Auto Plane Detection to enable 2D WMT LV to be launched simultaneously for A4C, A3C, and A2C cardiac views"
+        },
+        {
+          "name": "Auto LVOT",
+          "function": "Deep-learning automatic tracing of LVOT pulsed-wave Doppler waveforms for Doppler trace measurements (e.g., VTI)",
+          "first_k_number": "K241582",
+          "quote": "Auto LVOT, an improvement to existing non-AI Doppler trace measurement methods, by introducing a deep learning method to trace LVOT Doppler waveforms"
+        },
+        {
+          "name": "Auto AoV",
+          "function": "Deep-learning automatic tracing of aortic valve Doppler waveforms for Doppler trace measurements",
+          "first_k_number": "K241582",
+          "quote": "Auto AoV, an improvement to existing non-AI Doppler trace measurement methods, by introducing a deep learning method to trace AV Doppler waveforms"
+        }
+      ],
+      "clearances": [
+        {
+          "k_number": "K212333",
+          "decision_date": "2022-01-24",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K201972"
+          ],
+          "changes_summary": "Aplio i900/i800/i700 Software V6.5. Added Tissue Shift Tracking (non-cardiac) and improvements to non-cardiac features; expanded marketing language to promote AI/ML support of the previously cleared automated initial contour tracing in 2D WMT (LV) and Auto EF (LV), marketed as 'Full-assist function'. No performance data for the AI/ML features reported; 'No clinical studies were required'.",
+          "notable_flags": [
+            "marketing-language expansion only; AI features previously cleared under unnamed prior K",
+            "no AI performance data in summary",
+            "no clinical studies required",
+            "letter also lists product codes IYO, ITX"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K212333.pdf"
+        },
+        {
+          "k_number": "K241582",
+          "decision_date": "2024-09-12",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K223017"
+          ],
+          "changes_summary": "Aplio i900/i800/i700 Software V7.0 (modification). Added deep-learning Auto Plane Detection, Quick Strain, Auto LVOT and Auto AoV; also expanded 2D WMT to RV and RA (not described as AI). Validation on sequestered U.S. single-site data (239-patient pool) against three sonographers with subgroup analyses.",
+          "notable_flags": [
+            "single U.S. site validation",
+            "test data sequestered from training data",
+            "training set size not disclosed",
+            "ICC/NRMSE reported only as thresholds met",
+            "letter also lists product codes IYO, ITX, QIH"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K241582.pdf"
+        },
+        {
+          "k_number": "K250328",
+          "decision_date": "2025-04-30",
+          "pathway": "510(k)",
+          "product_code": "QIH",
+          "predicates": [
+            "K121076",
+            "K223017"
+          ],
+          "changes_summary": "New device: UltraExtend NX CUW-U001S V2.0 offline Ultrasound Image Analysis Program for Aplio i900/i800/i700 raw data. Carries 2D WMT with Full-assist (LV, plus LA analysis) and Auto EF LV with Full-assist migrated without modification from reference device K223017 (Aplio i-series V7.0); primary predicate is UltraExtend FX V2.02 (K121076). Re-tested on a representative subset of the original validation data with the same acceptance criteria; all passed; no numeric results.",
+          "notable_flags": [
+            "no numeric performance results",
+            "AI features migrated unchanged from K223017",
+            "reference device K223017 not in this batch",
+            "letter also lists product codes IYN, IYO"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K250328.pdf"
+        }
+      ],
+      "performance_claims": [
+        {
+          "k_number": "K241582",
+          "endpoint": "Cardiac view selection agreement (A4C/A3C/A2C/SAX) vs sonographer-selected views",
+          "metric": "agreement (average pass rate)",
+          "value": ">90% for each of four views; average 97% across four views",
+          "comparator": "three clinical sonographers (manual view selection)",
+          "n_studies": null,
+          "n_patients": 50,
+          "n_sites": 1,
+          "dataset_description": "Auto Plane Detection test set: representative images from 50 patients selected from 239-patient pool (one U.S. site, two-month acquisition); gender roughly balanced; age 20-98 y; BMI 16.4-71.6 kg/m2 equally distributed across underweight/healthy, overweight, obese; LVEF severity normal/mild/moderate/severe equivalently represented. Truth: one licensed sonographer selected representative images per view; two other licensed sonographers independently identified the view; discrepancies resolved by consensus.",
+          "subgroup_notes": "Binary logistic regression subgroup analysis: no evaluated variable had a significant effect. Age, gender, BMI and disease severity evaluated as potential confounders/effect modifiers; none had a significant effect (p.8).",
+          "quote": "Auto Plane Detection achieved these criteria for each of the four views, with an average pass rate of 97% across these four views.",
+          "page": 8,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K241582",
+          "endpoint": "Quick Strain operation time vs conventional 2D WMT LV workflow (A4C, A2C, A3C)",
+          "metric": "mean reduction in operation time",
+          "value": "68% average reduction (acceptance: reduced time, significance level 5%, 2-way ANOVA)",
+          "comparator": "conventional 2D WMT LV workflow, three clinical sonographers",
+          "n_studies": null,
+          "n_patients": 50,
+          "n_sites": 1,
+          "dataset_description": "Quick Strain test set: images from 50 patients selected from 239-patient pool (one U.S. site); age 20-98 y; BMI 16.4-71.6 kg/m2; LVEF severity strata equivalently represented. Truth: median of manual measurements by three licensed sonographers using the existing 2D WMT LV feature without Quick Strain.",
+          "subgroup_notes": "Multiple linear regression subgroup analysis: no evaluated variable had a significant effect. Age, gender, BMI and disease severity evaluated as potential confounders/effect modifiers; none had a significant effect (p.8).",
+          "quote": "All prespecified performance criteria were passed by Quick Strain which achieved an average 68% reduction in operation time",
+          "page": 9,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K241582",
+          "endpoint": "Quick Strain inter-operator variability (EDV, ESV, EF, GLS)",
+          "metric": "ICC(2,1)",
+          "value": "all ICC(2,1) > 0.75 (acceptance criterion met; exact values not reported)",
+          "comparator": "three clinical sonographers",
+          "n_studies": null,
+          "n_patients": 50,
+          "n_sites": 1,
+          "dataset_description": "Quick Strain test set: images from 50 patients selected from 239-patient pool (one U.S. site); age 20-98 y; BMI 16.4-71.6 kg/m2; LVEF severity strata equivalently represented. Truth: median of manual measurements by three licensed sonographers using the existing 2D WMT LV feature without Quick Strain.",
+          "subgroup_notes": "Age, gender, BMI and disease severity evaluated as potential confounders/effect modifiers; none had a significant effect (p.8).",
+          "quote": "The acceptance criteria established for these evaluated parameters were a reduced operation time by Quick Strain with a significance level of 5%, all ICC(2,1) values by Quick Strain greater than 0.75, and calculated NRMSE for EDV, ESV, EF and GLS by three clinical sonographers of less than 10%. All prespecified performance criteria were passed by Quick Strain",
+          "page": 9,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K241582",
+          "endpoint": "Quick Strain agreement with conventional 2D WMT LV for EDV, ESV, EF and GLS",
+          "metric": "NRMSE",
+          "value": "< 10% for EDV, ESV, EF and GLS (exact values not reported)",
+          "comparator": "median of three sonographers' manual 2D WMT LV results",
+          "n_studies": null,
+          "n_patients": 50,
+          "n_sites": 1,
+          "dataset_description": "Quick Strain test set: images from 50 patients selected from 239-patient pool (one U.S. site); age 20-98 y; BMI 16.4-71.6 kg/m2; LVEF severity strata equivalently represented. Truth: median of manual measurements by three licensed sonographers using the existing 2D WMT LV feature without Quick Strain.",
+          "subgroup_notes": "Age, gender, BMI and disease severity evaluated as potential confounders/effect modifiers; none had a significant effect (p.8).",
+          "quote": "calculated NRMSE results for EDV, ESV, EF and GLS within 10% of the results using existing workflow",
+          "page": 9,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K241582",
+          "endpoint": "Auto LVOT operation time vs manual LVOT Doppler trace",
+          "metric": "mean reduction in operation time",
+          "value": "78% average reduction over 3 consecutive heart cycles (acceptance: reduced time, significance level 5%, 2-way ANOVA)",
+          "comparator": "manual LVOT Doppler waveform tracing, three clinical sonographers",
+          "n_studies": null,
+          "n_patients": 45,
+          "n_sites": 1,
+          "dataset_description": "Auto LVOT test set: representative images from 45 patients selected from 239-patient pool (one U.S. site); age 36-89 y (age and gender unavailable for 20 patients due to anonymization); BMI 18.8-71.6 kg/m2; LVOT VTI severity normal/low/high equivalently represented. Truth: median of manual LVOT measurements by three licensed sonographers.",
+          "subgroup_notes": "Multiple linear regression subgroup analysis: no evaluated variable had a significant effect. Age, gender, BMI and disease severity evaluated as potential confounders/effect modifiers; none had a significant effect (p.8).",
+          "quote": "In passing all prespecified performance criteria, Auto LVOT demonstrated an average 78% reduction in operation time (3 consecutive heart cycles)",
+          "page": 10,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K241582",
+          "endpoint": "Auto LVOT inter-operator variability",
+          "metric": "ICC(2,1)",
+          "value": "all ICC(2,1) > 0.75 (acceptance criterion met; exact values not reported)",
+          "comparator": "three clinical sonographers",
+          "n_studies": null,
+          "n_patients": 45,
+          "n_sites": 1,
+          "dataset_description": "Auto LVOT test set: representative images from 45 patients selected from 239-patient pool (one U.S. site); age 36-89 y (age and gender unavailable for 20 patients due to anonymization); BMI 18.8-71.6 kg/m2; LVOT VTI severity normal/low/high equivalently represented. Truth: median of manual LVOT measurements by three licensed sonographers.",
+          "subgroup_notes": "Age, gender, BMI and disease severity evaluated as potential confounders/effect modifiers; none had a significant effect (p.8).",
+          "quote": "all ICC(2,1) values by Auto LVOT greater than 0.75, and calculated NRMSE results by three clinical sonographers of less than 10%. In passing all prespecified performance criteria",
+          "page": 10,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K241582",
+          "endpoint": "Auto LVOT trace measurement agreement with manual trace",
+          "metric": "NRMSE",
+          "value": "< 10% for each of three sonographers (exact values not reported)",
+          "comparator": "median of three sonographers' manual LVOT measurements",
+          "n_studies": null,
+          "n_patients": 45,
+          "n_sites": 1,
+          "dataset_description": "Auto LVOT test set: representative images from 45 patients selected from 239-patient pool (one U.S. site); age 36-89 y (age and gender unavailable for 20 patients due to anonymization); BMI 18.8-71.6 kg/m2; LVOT VTI severity normal/low/high equivalently represented. Truth: median of manual LVOT measurements by three licensed sonographers.",
+          "subgroup_notes": "Age, gender, BMI and disease severity evaluated as potential confounders/effect modifiers; none had a significant effect (p.8).",
+          "quote": "calculated NRMSE results by each of the three sonographers within 10% of the results using existing workflow",
+          "page": 10,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K241582",
+          "endpoint": "Auto AoV operation time vs manual AV Doppler trace",
+          "metric": "mean reduction in operation time",
+          "value": "71% average reduction over 3 consecutive heart cycles (acceptance: reduced time, significance level 5%, 2-way ANOVA)",
+          "comparator": "manual AV Doppler waveform tracing, three clinical sonographers",
+          "n_studies": null,
+          "n_patients": 45,
+          "n_sites": 1,
+          "dataset_description": "Auto AoV test set: representative images from 45 patients selected from 239-patient pool (one U.S. site); age 36-89 y (age and gender unavailable for 21 patients due to anonymization); BMI 18.8-71.6 kg/m2; AV VTI severity normal/low/high equivalently represented. Truth: median of manual AV measurements by three licensed sonographers.",
+          "subgroup_notes": "Multiple linear regression subgroup analysis: no evaluated variable had a significant effect. Age, gender, BMI and disease severity evaluated as potential confounders/effect modifiers; none had a significant effect (p.8).",
+          "quote": "All prespecified performance criteria were passed with demonstration by Auto AoV of an average 71% reduction in operation time (3 consecutive heart cycles)",
+          "page": 11,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K241582",
+          "endpoint": "Auto AoV inter-operator variability",
+          "metric": "ICC(2,1)",
+          "value": "all ICC(2,1) > 0.75 (acceptance criterion met; exact values not reported)",
+          "comparator": "three clinical sonographers",
+          "n_studies": null,
+          "n_patients": 45,
+          "n_sites": 1,
+          "dataset_description": "Auto AoV test set: representative images from 45 patients selected from 239-patient pool (one U.S. site); age 36-89 y (age and gender unavailable for 21 patients due to anonymization); BMI 18.8-71.6 kg/m2; AV VTI severity normal/low/high equivalently represented. Truth: median of manual AV measurements by three licensed sonographers.",
+          "subgroup_notes": "Age, gender, BMI and disease severity evaluated as potential confounders/effect modifiers; none had a significant effect (p.8).",
+          "quote": "all ICC(2,1) values by Auto AoV greater than 0.75, and calculated Doppler trace measurement results by three clinical sonographers of less than 10%. All prespecified performance criteria were passed",
+          "page": 11,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K241582",
+          "endpoint": "Auto AoV trace measurement agreement with manual trace",
+          "metric": "NRMSE",
+          "value": "< 10% for each of three sonographers (exact values not reported)",
+          "comparator": "median of three sonographers' manual AV measurements",
+          "n_studies": null,
+          "n_patients": 45,
+          "n_sites": 1,
+          "dataset_description": "Auto AoV test set: representative images from 45 patients selected from 239-patient pool (one U.S. site); age 36-89 y (age and gender unavailable for 21 patients due to anonymization); BMI 18.8-71.6 kg/m2; AV VTI severity normal/low/high equivalently represented. Truth: median of manual AV measurements by three licensed sonographers.",
+          "subgroup_notes": "Age, gender, BMI and disease severity evaluated as potential confounders/effect modifiers; none had a significant effect (p.8).",
+          "quote": "calculated NRMSE results by each of the three sonographers within 10% of the results using existing workflow",
+          "page": 11,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K250328",
+          "endpoint": "2D WMT Full-assist (LV) and Auto EF Full-assist (LV) performance after migration to UltraExtend NX V2.0",
+          "metric": "pass/fail against original acceptance criteria",
+          "value": "passed (no numeric results reported)",
+          "comparator": "same ground truth as original reference-device (K223017) validation",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Representative subset of the clinical data acquired for the original performance testing of these features with reference device K223017; subset size not stated.",
+          "subgroup_notes": null,
+          "quote": "these studies utilized a representative subset of the clinical data acquired for the original performance testing of these features; additionally these studies applied the same acceptance criteria to evaluate the performance of these features compared to the same ground truth as utilized in the original performance evaluation of these features with the reference device. The results of this testing demonstrate that both features perform as intended when integrated into the subject device, and with substantial equivalence as with the reference device.",
+          "page": 8,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K241582",
+          "endpoint": "Auto AoV measurement time and keystrokes vs manual (vendor marketing claim)",
+          "metric": "mean reduction in measurement time; reduction in keystrokes",
+          "value": "71% time reduction; 82% keystroke reduction",
+          "comparator": "manual methods",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Not described on vendor page.",
+          "subgroup_notes": null,
+          "quote": "Auto AoV cuts measurement time by an average of 71% and reduces keystrokes by 82%",
+          "page": null,
+          "verification": "company"
+        }
+      ],
+      "training_data": {
+        "disclosed": false,
+        "n_studies": null,
+        "n_patients": null,
+        "n_sites": null,
+        "description": "K241582 states only that test data were 'entirely independent and sequestered from the data used for training'; no training set size, source, or site count is given for any feature. K212333 and K250328 give no training information.",
+        "source": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K241582.txt (p.7)",
+        "verification": "fda_summary"
+      },
+      "validation_data": {
+        "n_studies": null,
+        "n_patients": 239,
+        "n_sites": 1,
+        "description": "Images from 239 demographically diverse patients acquired over a two-month period at a U.S. clinical site; test data entirely independent and sequestered from training data; acquired with predicate device (Aplio i-series V7.0). Ground truth by three licensed clinical sonographers. Feature-level test subsets: Auto Plane Detection 50 patients; Quick Strain 50; Auto LVOT 45; Auto AoV 45. K250328: representative subset of the original K223017 validation data (size not stated). K212333: no validation data described.",
+        "independent_of_training": true,
+        "source": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K241582.txt (p.7-11)",
+        "verification": "fda_summary"
+      },
+      "prior_validations": [
+        {
+          "description": "K250328 states that 2D WMT Full-assist (LV) and Auto EF Full-assist (LV) were originally validated with clinical data under reference device K223017 (Aplio i-series V7.0, cleared 2023-03-31); that summary was not part of this batch and its results were not read.",
+          "source_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K250328.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "description": "Canon US cardiology page repeats the K241582 figures (Quick Strain 97% plane recognition accuracy and 68% time reduction; Auto Plane Detection 97% accuracy) and adds an Auto AoV 82% keystroke-reduction claim.",
+          "source_url": "https://us.medical.canon/products/ultrasound/clinical-segments/cardiology/",
+          "verification": "company"
+        }
+      ],
+      "papers": [
+        {
+          "title": "Accuracy and reliability of novel semi-automated two-dimensional layer specific speckle tracking software for quantifying left ventricular volumes and function",
+          "first_author": "Kitano T",
+          "journal": "PLOS ONE",
+          "year": 2019,
+          "doi": "10.1371/journal.pone.0221204",
+          "pmid": "31469858",
+          "url": "https://doi.org/10.1371/journal.pone.0221204",
+          "relation": "other",
+          "n_subjects": 84,
+          "key_result": "Canon Aplio 300 with vendor-dependent PROTOTYPE automated contour trace (ACT) layer-strain software, not the cleared Full-assist feature: feasibility 96% (81/84); vs CMR, coverage probability for LVEF 0.77 (disk-area) and GLS 0.95 with mid-myocardial tracking; intra-observer ICC 0.991 (LVEF) and 0.989 (GLS).",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Effect of cross-platform variations on transthoracic echocardiography measurements and clinical diagnosis",
+          "first_author": "Hashemi MS",
+          "journal": "European Heart Journal - Imaging Methods and Practice",
+          "year": 2024,
+          "doi": "10.1093/ehjimp/qyae097",
+          "pmid": null,
+          "url": "https://doi.org/10.1093/ehjimp/qyae097",
+          "relation": "other",
+          "n_subjects": null,
+          "key_result": "Cross-vendor comparison study; Canon Auto EF was used for single-plane A2C/A4C volume calculations on the Canon system but was not itself evaluated (Canon single-plane LVEF 61.68 +/- 6.32%; biplane 60.06 +/- 8.50%).",
+          "verification": "doi_resolved"
+        }
+      ],
+      "clinical_trials": [],
+      "open_questions": [
+        "Training data size, source, and number of sites are not disclosed for any of the six AI features in K212333, K241582, or K250328.",
+        "K212333 states 2D WMT Full-assist and Auto EF Full-assist were 'previously 510(k) cleared' but does not name the original clearance; the earliest K carrying the automated contour tracing is unknown (predicate K201972, V5.1, not read).",
+        "Numeric performance of 2D WMT Full-assist and Auto EF Full-assist is not reported in any included summary; K250328 attributes the original validation to reference device K223017 (Aplio i-series V7.0, 2023-03-31), which is outside this batch.",
+        "K241582 reports ICC(2,1) and NRMSE only as thresholds met (>0.75, <10%); exact values, bias, and per-view agreement percentages for Auto Plane Detection are not given.",
+        "K241582 validation is single-site (one U.S. clinical site); generalizability beyond that site is not tested.",
+        "K250328 does not state whether Auto Plane Detection, Quick Strain, Auto LVOT, or Auto AoV are available in UltraExtend NX V2.0; only the two Full-assist features are named.",
+        "No peer-reviewed validation of the cleared Full-assist, Quick Strain, Auto Plane Detection, Auto LVOT, or Auto AoV features was found via PubMed this session; the Kitano 2019 paper evaluates a Canon prototype ACT software, not the cleared feature.",
+        "Canon-hosted clinical report 'Objective Echocardiography with Superior Reproducibility Based on Artificial Intelligence Technology' (Tokushima University, Kusunose) appears in search results but the URL returned 404; its relation to the cleared features is unconfirmed.",
+        "Vendor claim of 82% keystroke reduction for Auto AoV has no counterpart in the FDA summary and its study basis is not described.",
+        "Whether the Aplio a-series, Aplio beyond/me (K253597), and V8.x/V9.0 Aplio i-series (K233195, K242808, K252074) carry these cardiac AI features unchanged is not stated in the included summaries."
+      ],
+      "sources": [
+        {
+          "fact": "K212333 decision date 2022-01-24, product code IYN, applicant Canon Medical Systems Corporation",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K241582 decision date 2024-09-12, product code IYN",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K250328 decision date 2025-04-30, product code QIH",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K212333 predicate K201972; AI/ML marketing-language expansion for 2D WMT / Auto EF Full-assist; no clinical studies",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K212333.txt",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K241582 predicate K223017; four deep-learning features; validation design, demographics, and results",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K241582.txt",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K250328 predicates K121076 (primary) and K223017 (reference); Full-assist features migrated unchanged; no numeric results",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K250328.txt",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "Canon US cardiology page: Auto AoV 71% time / 82% keystroke reduction; Quick Strain 97% accuracy, 68% time reduction; Auto Plane Detection 97%",
+          "url_or_file": "https://us.medical.canon/products/ultrasound/clinical-segments/cardiology/",
+          "verification": "company"
+        },
+        {
+          "fact": "UltraExtend NX is offline analysis software compatible with Aplio i- and a-series",
+          "url_or_file": "https://uk.medical.canon/products/ultrasound/software/ultraextend_nx",
+          "verification": "company"
+        },
+        {
+          "fact": "Kitano 2019 PLOS ONE DOI and metadata confirmed",
+          "url_or_file": "https://api.crossref.org/works/10.1371/journal.pone.0221204",
+          "verification": "doi_resolved"
+        },
+        {
+          "fact": "Kitano 2019 used Canon Aplio 300 with vendor-dependent prototype ACT software; n=84; feasibility 96%; ICC 0.991/0.989",
+          "url_or_file": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6716624/",
+          "verification": "peer_reviewed"
+        },
+        {
+          "fact": "Hashemi 2024 EHJ-IMP DOI confirmed; Canon Auto EF used for single-plane volumes",
+          "url_or_file": "https://api.crossref.org/works/10.1093/ehjimp/qyae097",
+          "verification": "doi_resolved"
+        },
+        {
+          "fact": "PubMed searches for Aplio/Canon Auto EF, Full-assist, Quick Strain, Auto Plane Detection, Auto LVOT returned no matching validation papers",
+          "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+          "verification": "unverified"
+        }
+      ]
+    }
+  ],
+  "notes": "Three included clearances read in full. K212333 contributes only the AI/ML labeling of previously cleared Full-assist features (no data). All quantitative FDA performance data come from K241582 (pages per '===== PAGE n =====' markers in the extracted text). K250328 is a workstation migration with pass/fail only. Reference device K223017 (original Full-assist validation) was not in the batch and was not read. Several Canon regional product pages (global/ANZ) returned 404 to WebFetch; the US cardiology page was readable and is used for company claims. No peer-reviewed validation of the cleared features was found; two tangential papers are listed with relation 'other' and explicit caveats."
+}

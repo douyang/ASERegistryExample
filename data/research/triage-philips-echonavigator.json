@@ -1,0 +1,84 @@
+{
+  "group_id": "philips-echonavigator",
+  "records": [
+    {
+      "k_number": "K200713",
+      "device_name": "EchoNavigator R3.0.3",
+      "decision_date": "2020-04-09",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "Automatic Annotations (echo anatomical structure annotation with tissue contours)",
+          "function": "Automatically identifies anatomical structures in the live 3D echo (TEE) modality and proposes annotations and tissue contours for the user during X-ray/echo fused guidance of structural heart interventions; annotations are transposed to the X-ray modality. Summary does not use the terms AI/ML/deep learning; it describes the feature as automated annotation 'as proposed by the device'.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "the proposed device extends this functionality with Automatic Annotations. This functionality is allowing the user to identify anatomical structures in the echo modality and annotate them with annotations and tissue contours as proposed by the device.",
+          "page": 6
+        },
+        {
+          "name": "Probe (transducer) detection algorithm",
+          "function": "Software algorithm that localizes the TEE probe in live X-ray images to register echo to X-ray; operates on X-ray, not on ultrasound images. Carried over unchanged from predicate EchoNavigator R1 (K121781).",
+          "cardiac": false,
+          "introduced_in_this_k": false,
+          "quote": "the core algorithm for probe (transducer) detection is fundamentally unchanged compared to the predicate device.",
+          "page": 5
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K221270",
+      "device_name": "EchoNavigator R4.0",
+      "decision_date": "2022-05-31",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "AutoViews (automatic alignment of 3D echo volume and MPR planes to automatic annotations)",
+          "function": "Uses the positions of the automatically detected anatomical annotations to automatically align the 3D echo volume and MPR planes to a clinically relevant orientation; new in R4.0 (in R3.0.3 positioning was manual).",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "In the subject device, automatic annotations can be used to automatically align the 3D echo volume and the MPR planes with the position of these automatic annotations (called 'AutoViews'). In the predicate device (EchoNavigator R3.0.3, K200713), the automatic annotations were already present, however, positioning of 3D echo volume and the MPR planes was done manually.",
+          "page": 5
+        },
+        {
+          "name": "Automatic Annotations / 3D heart model",
+          "function": "Automatic identification and annotation of cardiac anatomical structures in the echo volume using a 3D heart model; carried over from K200713 with minor model updates (mitral valve leaflets and transseptal zone added as context information). Summary does not use AI/ML terminology.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "Minor updates to the existing 3D heart model (Adding mitral valve leaflets and transseptal zone area). These are solely intended to be used by the user as context information for the patient's anatomy. These changes are not fundamental changes to the technological characteristics of automatic annotations.",
+          "page": 5
+        }
+      ],
+      "performance_summary": null,
+      "exclusion_reason": null
+    },
+    {
+      "k_number": "K253614",
+      "device_name": "EchoNavigator R5.0",
+      "decision_date": "2026-03-17",
+      "is_cardiac_ultrasound_ai": true,
+      "ai_features": [
+        {
+          "name": "DeviceGuide (M-TEER therapy device detection, tracking and 3D pose estimation)",
+          "function": "Deep-learning-based real-time detection, tracking and 3D pose estimation (position, orientation, openness angle) of a mitral transcatheter edge-to-edge repair device (Edwards PASCAL Ace) in live 3D TEE volumes and live X-ray, with overlay of device shape/trajectory/orientation on echo and X-ray and automatic device-focused echo views. Only new feature in R5.0; on-demand function for the interventional imager/operator.",
+          "cardiac": true,
+          "introduced_in_this_k": true,
+          "quote": "DeviceGuide offers real-time automatic device detection, tracking and 3D pose-estimation in live Echo and live X-ray enabled by Artificial Intelligence which is built with Deep Learning technology.",
+          "page": 7
+        },
+        {
+          "name": "AutoViews / automatic annotations",
+          "function": "Automatic alignment of echo views (including MPRs) to a clinically relevant orientation after the user selects an anatomical preset, or based on the therapy device position; carried over from K221270/K200713.",
+          "cardiac": true,
+          "introduced_in_this_k": false,
+          "quote": "Automatically aligning the Echo views (including MPRs) to a clinically relevant orientation after the user selects the required anatomical preset (so called AutoViews) or based upon the position of the therapy device.",
+          "page": 8
+        }
+      ],
+      "performance_summary": "DeviceGuide AI algorithm verified/validated on procedural image data from 72 unique patients plus 41 patients for out-of-domain testing, from U.S. and European academic and community sites (at least 50% U.S. data), acquired on a range of Philips X-ray and ultrasound systems; algorithm frozen before testing, no overlap between development and test data. Outputs compared against manually annotated images and a ground truth from pre-clinical high-resolution imaging; performance met specification limits of <=5 mm positional accuracy and <=10 degrees trajectory/orientation accuracy; latency met specification with detection and localization within 100 ms of echo image reception; in a clinical review five physicians rated algorithm output sufficient in 93.1% of evaluated cases. Quote (p. 11): 'Overall performance met predefined specification limits, including ≤5 mm positional accuracy and ≤10° trajectory/orientation accuracy. Algorithm latency met predefined specification, including detection and localization of the therapy device within 100ms of reception of the echo image. In a clinical review, five physicians assessed the algorithm output as sufficient in 93.1% of evaluated cases.' No clinical study was performed.",
+      "exclusion_reason": null
+    }
+  ],
+  "notes": "EchoNavigator is a Philips interventional echo/X-ray fusion software (product code LLZ; K253614 adds QIH) used with TEE during structural heart procedures, so every feature in this lineage operates on cardiac ultrasound. Caveat for K200713 and K221270: the summaries never use the words 'artificial intelligence', 'machine learning', 'deep learning' or 'trained'; the only candidate AI-enabled functions are the 'Automatic Annotations' (automated detection/contouring of cardiac anatomical structures in the 3D echo volume, backed by a '3D heart model') introduced in K200713 and the derived 'AutoViews' auto-alignment introduced in K221270. These were classified as cardiac ultrasound AI because they are clearly named, clearly operate on echo, and are the only plausible basis for FDA's AI listing; downgrade to 'AI feature not identifiable in summary' if the registry requires explicit AI/ML language. The X-ray-based probe-detection algorithm (present in all three) is not an ultrasound-image algorithm. K253614 is unambiguous: DeviceGuide is explicitly deep-learning-enabled, takes the 3D echo volume as input, and has quantified performance; note it detects the TEER therapy device rather than cardiac anatomy or function, so it is an interventional-guidance AI rather than a diagnostic echo measurement tool. No web searches were used; all decisions are grounded in the FDA summary text."
+}

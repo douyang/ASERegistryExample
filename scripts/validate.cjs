@@ -59,6 +59,11 @@ const server = http.createServer((req, res) => {
   // table view
   await d.locator('.view-toggle button[data-view=table]').click(); await d.waitForTimeout(150);
   expect((await d.locator('#table tbody tr').count()) === nCards, 'table rows match');
+  expect((await d.locator('#cards').evaluate((el) => el.offsetHeight)) === 0, 'card grid hidden in table view');
+  expect(await d.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth), 'no horizontal page scroll (desktop table view)');
+  await d.setViewportSize({ width: 1024, height: 900 }); await d.waitForTimeout(150);
+  expect(await d.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth), 'no horizontal page scroll (1024px table view)');
+  await d.setViewportSize({ width: 1400, height: 900 }); await d.waitForTimeout(150);
   await d.screenshot({ path: path.join(shots, 'products-table-desktop.png'), fullPage: false });
   await d.locator('.view-toggle button[data-view=cards]').click();
   // registry

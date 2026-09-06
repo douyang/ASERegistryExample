@@ -1,0 +1,1223 @@
+{
+  "batch_id": "philips-systems",
+  "families": [
+    {
+      "id": "philips-epiq-affiniti-cardiac-ai",
+      "product_name": "Philips EPIQ / Affiniti / Compact 5000 cardiac AI features (Auto Measure, Smart Doppler View ID, Smart View Select, Segmental Wall Motion, 3D Auto TV, 3D Auto CFQ, Auto EF with contrast, R-Trigger)",
+      "company": "Philips Ultrasound LLC (Philips Medical Systems)",
+      "company_website": "https://www.usa.philips.com/healthcare/ultrasound/cardiovascular-ultrasound",
+      "product_url": "https://www.usa.philips.com/healthcare/product/HC795231/epiq-cvx-premium-cardiology-ultrasound-system",
+      "category": "system-embedded",
+      "tags": [
+        "Auto Measure",
+        "AutoMeasure V3",
+        "2D measurements",
+        "Doppler measurements",
+        "M-mode TAPSE",
+        "Smart Doppler View ID",
+        "Doppler spectrum classification",
+        "Smart View Select",
+        "view recognition",
+        "apical view selection",
+        "Segmental Wall Motion",
+        "WMSI",
+        "AutoStrain LV",
+        "GLS",
+        "2D Auto LV",
+        "3D Auto TV",
+        "tricuspid annulus",
+        "3D Auto CFQ",
+        "mitral regurgitation volume",
+        "Auto EF with contrast",
+        "2D Auto EF Adv",
+        "contrast LVEF",
+        "R-Trigger",
+        "ECG-free R-wave detection"
+      ],
+      "modality_scope": [
+        "TTE",
+        "TEE",
+        "3D",
+        "contrast echo"
+      ],
+      "deployment": [
+        "ultrasound-system-embedded"
+      ],
+      "summary": "Series of ten 510(k) clearances (2021-2025) adding AI/ML cardiac features to the Philips EPIQ and Affiniti cart-based ultrasound systems (software VM9-VM13) and the 5000 Compact Series: semi-automated 2D/Doppler/M-mode adult TTE measurements (Auto Measure V1-V3), Doppler-spectrum classification for calculation-package navigation (Smart Doppler View ID), deep-learning apical view selection for AutoStrain LV / 2D Auto LV / contrast EF (Smart View Select v1, v2, v2 Contrast), ML segmental wall-motion scoring (SWM, SWM v2), ML model-based 3D tricuspid annulus quantification (3D Auto TV), fluid-dynamic 3D color-flow MR quantification using an ML-generated mitral model (3D Auto CFQ), AI contrast-enhanced biplane LVEF (Auto EF with contrast), and an AI R-wave timing backup for clips without ECG (R-Trigger). Several features integrate DiA Imaging Analysis LVivo algorithms (K212466, K161382, K243862, K243235). All clearances relied on retrospective standalone performance studies; nine of the ten summaries state that no clinical investigation was needed, and K211597 reports only a non-clinical Performance Validation Study without results.",
+      "intended_use_quote": "The intended use of EPIQ Ultrasound Diagnostic System is diagnostic ultrasound imaging and fluid flow analysis of the human body.",
+      "indications_for_use_quote": "The intended use of EPIQ Ultrasound Diagnostic System is diagnostic ultrasound imaging and fluid flow analysis of the human body, with the following indications for use: Abdominal, Cardiac Adult, Cardiac other (Fetal), Cardiac Pediatric, Cerebral Vascular, Cephalic (Adult), Cephalic (Neonatal), Fetal/Obstetric, Gynecological, Intraoperative (Vascular), Intraoperative (Cardiac), intra-luminal, intra-cardiac echo, Musculoskeletal (Conventional), Musculoskeletal (Superficial), Ophthalmic, Other: Urology, Pediatric, Peripheral Vessel, Small Organ (Breast, Thyroid, Testicle), Transesophageal (Cardiac), Transrectal, Transvaginal, Lung.",
+      "embedded_ai_features": [
+        {
+          "name": "Auto Measure (AutoMeasure V1 / V2 / V3)",
+          "function": "AI/ML detection algorithm that initializes caliper positions for a subset of adult TTE 2D, Doppler and (V3) M-mode measurements (e.g., IVSd, LVIDd, LVIDs, LVPWd, aortic diameters, LVOT diam, RV dimensions, TV annulus, MV E/A, decel time, LVOT/AV/PV VTI and Vmax, TR Vmax, TDI e'/a', RV S', TAPSE, LA/RA volumes, MR/TR VTI); user edits, accepts or rejects. Requires ECG (until R-Trigger) and an adult cardiology TTE transducer.",
+          "first_k_number": "K211597",
+          "quote": "The Philips Auto Measure feature provides the end user with semi-automated functionality for a subset of 2D and Doppler measurements currently available on the Philips EPIQ and Affiniti systems when performing or reviewing an adult transthoracic echocardiography (TTE) with simultaneously acquired electrocardiogram (ECG). The AI/ML-enabled algorithm is designed to produce semi-automated and editable measures."
+        },
+        {
+          "name": "Smart Doppler View ID",
+          "function": "AI classification of an acquired adult-TTE Doppler spectrum (PW/CW/TDI) to automatically select one of six Doppler calculation-package touch-screen groups (Aortic Valve, Mitral Valve, Tricuspid Valve, Pulmonic Valve, Venous Flow, TDI Vel & Ratio). Performs no measurements itself.",
+          "first_k_number": "K233788",
+          "quote": "The Smart Doppler View ID feature automates this navigation and selects the associated calculation package group for the user based on the provided Doppler Spectrum acquired by the user using an artificial intelligence-based algorithm."
+        },
+        {
+          "name": "Smart View Select (SVS v1, v2, v2 Contrast)",
+          "function": "Deep-learning view classification of each acquired adult TTE image (LVivo Seamless neural network, DiA K212466) plus a non-AI depth heuristic to select the optimal A4C/A2C/A3C triplet for AutoStrain LV or 2D Auto LV (v1, EPIQ only); v2 revised the network and depth logic and extended to Affiniti; v2 Contrast selects the optimal contrast-enhanced A4C/A2C pair for 2D Auto EF Adv.",
+          "first_k_number": "K240850",
+          "quote": "Smart View Select is an automated software feature that assists the user in selection of images for analysis with the existing Philips AutoStrain LV or 2D Auto LV application in Adult Echo Transthoracic (TTE) examination. This feature automatically classif ies each acquired image by view and selects an appropriate set of images for left ventricle (LV) analysis. The classification is based on a Deep Learning AI interface engine; the selection is a non-AI algorithm that considers the view classification and image depth to select the optimal set of images."
+        },
+        {
+          "name": "Segmental Wall Motion (SWM, SWM v2)",
+          "function": "Machine-learning semi-automated evaluation of LV regional function from A4C/A2C/A3C: border detection and tracking, per-segment wall-motion score for 17 LV segments and Wall Motion Score Index; users edit scores via drop-down. Integrates DiA LVivo SG (K161382; v2 = K243862) with AutoStrain LV border initialization as backup.",
+          "first_k_number": "K240850",
+          "quote": "The application then provides segmental wall motion scores for each of the 17 segments of the LV by using machine learning algorithms and an overall wall motion score index (WMSI) is calculated as the average of the segmental scores."
+        },
+        {
+          "name": "3D Auto TV (Tricuspid Valve)",
+          "function": "Semi-automated 3D TTE/TEE tricuspid annulus quantification via machine-learning model-based segmentation (same method as QLAB 3D Auto MV, K200974, retrained on tricuspid images); outputs TV annulus perimeter (2D/3D), max/min diameter, perimeter-derived diameter, height and area; user edits/accepts/rejects landmark proposals. Note: the contour-generation text for 3D Auto TV in K240980 (pp. 8-9) reads 'mitral valve anatomical locations' verbatim, apparently carried over from the 3D Auto MV reference device; the comparison column states the TV algorithm is 'trained on tricuspid valve images'.",
+          "first_k_number": "K240980",
+          "quote": "3D surface model is created semi-automatically using machine learning algorithm without user interaction. User is able to edit, accept, or reject the initial landmark proposals of the mitral valve anatomical locations."
+        },
+        {
+          "name": "3D Auto CFQ (Color Flow Quantification)",
+          "function": "Semi-automated quantification of mitral regurgitant volume and peak flow rate from 3D color-flow TEE (X8-2t) using an iterative fluid-dynamic flow model; the 3D mitral valve model input is generated by the machine-learning segmentation of 3D Auto MV (K200974).",
+          "first_k_number": "K240980",
+          "quote": "The 3D Auto CFQ software provides semi-automated quantification of Mitral Regurgitation (MR) volume and peak flow rate based on 3D color flow images. This application uses a known fluid dynamic model of flow that is adapted to the acquired color information."
+        },
+        {
+          "name": "Auto EF with contrast (2D Auto EF Advanced)",
+          "function": "AI-based automated LVEF from contrast-enhanced A4C and A2C adult TTE clips (single-plane EF each plus biplane Simpson's EF) with manual border edit on ED/ES frames; DiA LVivo CE-EF algorithm (K243235) integrated unmodified into VM13.",
+          "first_k_number": "K251110",
+          "quote": "Auto EF with contrast is an AI based automated software feature that assists clinicians with assessing Left Ventricular Ejection Fraction ( LVEF) from images acquired with contrast agent as part of an adult transthoracic echo (TTE) examination. The feature is located within the Philips Auto EF Adv application."
+        },
+        {
+          "name": "R-Trigger (AI, non-ECG R-wave detection)",
+          "function": "AI algorithm that detects the R-wave peak timestamp directly from acquired TTE clips when the ECG physio signal is unavailable or unusable, serving as backup input for AutoStrain LV, AutoEF, 2D Auto LV and AutoMeasure; runs in the background (VM13).",
+          "first_k_number": "K243793",
+          "quote": "The R-Trigger AI software feature on Philips EPIQ and Affiniti Ultrasound System is intended to support detection of R-wave peak (R-trigger) as an input to AutoStrain and AutoMeasure applications, as well as other cardiac clinical applications."
+        },
+        {
+          "name": "AutoStrain LV / 2D Auto LV (downstream LV EF and GLS applications)",
+          "function": "Existing Philips LV strain (GLS) and biplane EF applications that consume clips selected by Smart View Select and R-Trigger timing; cleared under K190913 (outside this batch) and referenced as previously cleared in K240850 and K243793.",
+          "first_k_number": "K190913",
+          "quote": "The Auto-Measure and AutoStrain features, cleared on Philips EPIQ and Affiniti systems (K211597, K190913 resp.) support users during B -mode (2D), CW -, PW-  and TDI -Doppler measurements by automating some of the measurements needed to complete a routine transthoracic echo (TTE) exam for adult patients."
+        }
+      ],
+      "clearances": [
+        {
+          "k_number": "K211597",
+          "decision_date": "2021-09-08",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K202216",
+            "K201012",
+            "K200974"
+          ],
+          "changes_summary": "Introduced Auto Measure (V1) AI/ML semi-automated 2D and Doppler adult TTE measurements on EPIQ and Affiniti (software release 9.0). Reference device K200974 (QLAB 3D Auto MV). No performance numbers in summary.",
+          "notable_flags": [
+            "Traditional 510(k)",
+            "no quantitative performance results in summary",
+            "applicant listed as Philips Medical Systems in openFDA"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K211597.pdf"
+        },
+        {
+          "k_number": "K233788",
+          "decision_date": "2024-02-13",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K211597",
+            "K231190"
+          ],
+          "changes_summary": "Introduced Smart Doppler View ID: AI classification of Doppler spectra to auto-select the Doppler calculation-package group (software 11.0+). Standalone accuracy study on 1100 clips from 400 subjects.",
+          "notable_flags": [
+            "Traditional 510(k)",
+            "workflow-automation feature, no measurements performed"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233788.pdf"
+        },
+        {
+          "k_number": "K240850",
+          "decision_date": "2024-04-24",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K233788",
+            "K212466",
+            "K161382"
+          ],
+          "changes_summary": "Introduced Smart View Select v1 (EPIQ; DiA LVivo Seamless network) and Segmental Wall Motion (EPIQ and Affiniti; DiA LVivo SG) on VM11. Two retrospective studies with Pearson r endpoints; sample sizes not stated.",
+          "notable_flags": [
+            "Special 510(k)",
+            "sample sizes not stated in summary",
+            "third-party (DiA) algorithms integrated"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240850.pdf"
+        },
+        {
+          "k_number": "K240980",
+          "decision_date": "2024-10-07",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K233788",
+            "K213544",
+            "K200974"
+          ],
+          "changes_summary": "Introduced 3D Auto TV (ML model-based tricuspid annulus quantification, TTE and TEE) and 3D Auto CFQ (3D color-flow MR volume and peak flow rate, TEE X8-2t) on EPIQ VM11. Validation vs TOMTEC 4D Cardio-View (TV) and cardiac MRI / 2D PISA (CFQ); sample sizes not stated.",
+          "notable_flags": [
+            "Traditional 510(k)",
+            "EPIQ only",
+            "sample sizes not stated in summary"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240980.pdf"
+        },
+        {
+          "k_number": "K242800",
+          "decision_date": "2024-11-15",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K222648",
+            "K211597"
+          ],
+          "changes_summary": "Introduced Auto Measure Version 2 (subset of CNN detectors retrained with additional data; locked algorithm) onto the 5000 Compact Series (Compact 2.0 / VM11.0); adds QIH product code to Compact. Per-detector Bland-Altman results on 500 unseen studies and training-pool description (>6000 studies, 20 centers, 16 countries).",
+          "notable_flags": [
+            "Traditional 510(k)",
+            "only clearance in batch that discloses training-data size",
+            "per-parameter LoA table reported"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242800.pdf"
+        },
+        {
+          "k_number": "K243794",
+          "decision_date": "2025-02-06",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K240850"
+          ],
+          "changes_summary": "AutoMeasure V3 on EPIQ and Affiniti VM13: adds M-mode TAPSE, new 2D (LA Vol A2C/A4C, LA diameter PLAX, RA volume, aortic annulus diameter) and Doppler (MR VTI, TR VTI) measurements, new detectors, and retrained existing detectors. Validation on 7127 clips from 3964 subjects (32 hypotheses); no per-parameter values in summary.",
+          "notable_flags": [
+            "Traditional 510(k)",
+            "multi-region validation (USA, Asia, Europe)",
+            "per-parameter results not reported in summary"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243794.pdf"
+        },
+        {
+          "k_number": "K251110",
+          "decision_date": "2025-05-09",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K240850",
+            "K243862",
+            "K243235"
+          ],
+          "changes_summary": "VM13: replaced SWM with SWM v2 (DiA K243862, unmodified) and introduced Auto EF with contrast (DiA LVivo CE-EF, K243235, unmodified) within the Auto EF Adv application on EPIQ and Affiniti. Philips-data sub-analysis r=0.952 for contrast biplane EF; SWM v2 sensitivity/specificity not numerically reported.",
+          "notable_flags": [
+            "Special 510(k)",
+            "sample size not stated in summary",
+            "third-party (DiA) algorithms integrated"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251110.pdf"
+        },
+        {
+          "k_number": "K243793",
+          "decision_date": "2025-05-21",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K240850"
+          ],
+          "changes_summary": "Introduced R-Trigger AI (non-ECG R-wave timestamp detection) as backup input for AutoStrain LV / AutoEF / 2D Auto LV and AutoMeasure on EPIQ and Affiniti VM13. 35 hypotheses on 7309 clips from 3964 subjects; full per-parameter LoA table and race/region/age/BMI stratification reported.",
+          "notable_flags": [
+            "Traditional 510(k)",
+            "most detailed performance table in batch",
+            "stratified subgroup performance reported"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243793.pdf"
+        },
+        {
+          "k_number": "K250886",
+          "decision_date": "2025-06-18",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K240850"
+          ],
+          "changes_summary": "Smart View Select v2: revised neural network and depth heuristic (12-20 cm) on EPIQ and expansion to Affiniti (VM13). EF r=0.891, GLS r=0.906 vs expert-selected clips; total N not stated (demographics for a 71-patient US subset).",
+          "notable_flags": [
+            "Special 510(k)",
+            "total study N not stated in summary"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K250886.pdf"
+        },
+        {
+          "k_number": "K251455",
+          "decision_date": "2025-07-24",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K240850",
+            "K243235"
+          ],
+          "changes_summary": "SVS v2 Contrast: view-selection algorithm revised to pick the optimal contrast-enhanced A4C/A2C pair for 2D Auto EF Adv (and feed 2D Auto EF, AutoStrain LV, 2D Auto LV) on EPIQ and Affiniti VM13. Sub-analysis of K240850/K243235 data: 46 evaluable subjects, r=0.953.",
+          "notable_flags": [
+            "Special 510(k)",
+            "small evaluable sample (n=46)",
+            "10 of 56 samples non-reportable"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251455.pdf"
+        }
+      ],
+      "performance_claims": [
+        {
+          "k_number": "K233788",
+          "endpoint": "Smart Doppler View ID touch-screen group classification accuracy vs ground truth",
+          "metric": "accuracy",
+          "value": "97.5% (95% CI 96.3%, 98.3%), p<0.0001",
+          "comparator": "Ground-truth touch-screen group derived from ASE standard-of-care Doppler measurements by board-certified cardiologists and cardiac sonographers",
+          "n_studies": 1100,
+          "n_patients": 400,
+          "n_sites": 1,
+          "dataset_description": "1100 previously collected adult TTE Doppler clips from 400 subjects at a large US-based hospital; 56.3% female; age 61.9 +/- 16.6 y; 53.8% Black or African American, 31.3% White; test data distinct from training data",
+          "subgroup_notes": "Demographics reported; no subgroup performance reported",
+          "quote": "The results of the primary endpoint analysis demonstrated algorithm accuracy of 97.5% (95%CI 96.3%, 98.3%), p-value <0.0001, thereby meeting the acceptance criteria for the study.",
+          "page": 11,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K240850",
+          "endpoint": "GLS from AutoStrain LV on SVS-selected clips vs expert-selected clips",
+          "metric": "Pearson r",
+          "value": "0.911 (95% CI 0.855, 0.946)",
+          "comparator": "Average of three clinical expert reviewers' manual clip selection followed by AutoStrain LV",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Retrospective adult TTE exams; sample size not stated",
+          "subgroup_notes": null,
+          "quote": "Specifically, for the Pearsons’ correlation coefficient was 0.911 (95%CI 0.855,0.946) and 0.941 (95%CI 0.903,0.965), for GLS and EF, respectively.",
+          "page": 15,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K240850",
+          "endpoint": "Biplane EF from AutoStrain LV on SVS-selected clips vs expert-selected clips",
+          "metric": "Pearson r",
+          "value": "0.941 (95% CI 0.903, 0.965)",
+          "comparator": "Average of three clinical expert reviewers' manual clip selection followed by AutoStrain LV",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Retrospective adult TTE exams; sample size not stated",
+          "subgroup_notes": null,
+          "quote": "Specifically, for the Pearsons’ correlation coefficient was 0.911 (95%CI 0.855,0.946) and 0.941 (95%CI 0.903,0.965), for GLS and EF, respectively.",
+          "page": 15,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K240850",
+          "endpoint": "WMSI from integrated SWM (manual clip selection) vs LVivo SWM ground truth",
+          "metric": "Pearson r",
+          "value": "0.957 (95% CI 0.933, 0.972)",
+          "comparator": "LVivo SWM (DiA Imaging Analysis) WMSI averaged across three clinical expert reviewers",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Two-phase retrospective study with 7-day washout; sample size not stated",
+          "subgroup_notes": null,
+          "quote": "Specifically, the Pearsons’ correlation coefficien t was 0.957 (95%CI 0.933,0.972) and 0.913 (95%CI 0.857,0.948), for the manual and SVS workflows, respectively.",
+          "page": 15,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K240850",
+          "endpoint": "WMSI from integrated SWM (SVS-selected clips) vs LVivo SWM ground truth",
+          "metric": "Pearson r",
+          "value": "0.913 (95% CI 0.857, 0.948)",
+          "comparator": "LVivo SWM (DiA Imaging Analysis) WMSI averaged across three clinical expert reviewers",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Two-phase retrospective study with 7-day washout; sample size not stated",
+          "subgroup_notes": null,
+          "quote": "Specifically, the Pearsons’ correlation coefficien t was 0.957 (95%CI 0.933,0.972) and 0.913 (95%CI 0.857,0.948), for the manual and SVS workflows, respectively.",
+          "page": 15,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K240980",
+          "endpoint": "3D Auto TV annulus size and shape vs manual TOMTEC 4D Cardio-View",
+          "metric": "Bland-Altman limits of agreement (acceptance criteria)",
+          "value": "CIs for LoA within +/-46% (annulus size) and +/-52% (annulus shape) in both TEE and TTE arms",
+          "comparator": "Manual measurement by the same 3 clinical experts in TOMTEC 4D Cardio-View (K213544)",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "TTE and TEE clips; subjects with a range of tricuspid regurgitation severity; sample size not stated",
+          "subgroup_notes": null,
+          "quote": "Confidence intervals for the limits of agreement were within the acceptance criteria ± 46% and ± 52% for annulus size and annulus shape, respectively, within TEE and TTE arms.",
+          "page": 14,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K240980",
+          "endpoint": "3D Auto TV relative bias",
+          "metric": "relative bias",
+          "value": "within +/-17.37% for distance (size) and +/-23.68% for circumference (shape)",
+          "comparator": "Manual measurement in TOMTEC 4D Cardio-View",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "TTE and TEE clips; sample size not stated",
+          "subgroup_notes": null,
+          "quote": "Bias was also evaluated for automation performance, where relative bias based on inter -observer variability was met, specifically within +/ - 17.37% for distance  (size) and +/ - 23.68% for circumference (shape).",
+          "page": 14,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K240980",
+          "endpoint": "3D Auto TV measurement primitives on in-silico phantoms",
+          "metric": "mean relative error / LoA",
+          "value": "mean relative error within +/-1%; LoA within +/-5%",
+          "comparator": "Known phantom dimensions",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "In-silico phantoms",
+          "subgroup_notes": null,
+          "quote": "Mean relative error of the measurement primitives on the in -silico phantoms were within +/ - 1%, with limits of agreement within acceptance criteria of +/- 5%.",
+          "page": 14,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K240980",
+          "endpoint": "3D Auto CFQ mitral regurgitant volume vs cardiac MRI",
+          "metric": "Bland-Altman limits of agreement (mL)",
+          "value": "lower LoA -49.29 (95% CI -58.37, -40.20); upper LoA 25.09 (95% CI 16.01, 34.18); acceptance: max allowable difference 61.6 mL; bias criterion +/-19.2 mL met",
+          "comparator": "Cardiac magnetic resonance regurgitant volume",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "3D color-flow TEE exams; sample size not stated",
+          "subgroup_notes": null,
+          "quote": "This study produced limits of agreement (Lo A) of -49.29 (lower LoA) and 25.09 (upper LoA) and associated confidence intervals: lower end of 95% LoA (-58.37,-40.20) and upper end of 95% LoA (16.01,34.18). The acceptance criteria set for the study was defined as maximum allowable difference (Δ) of 61.6ml.",
+          "page": 14,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K240980",
+          "endpoint": "3D Auto CFQ peak regurgitant flow rate vs 2D PISA",
+          "metric": "Pearson r (95% CI bounds)",
+          "value": "both bounds of 95% CI > 0.8 for fully-automated and semi-automated modes (numeric r not reported)",
+          "comparator": "2D PISA on the same subjects",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Sample size not stated",
+          "subgroup_notes": null,
+          "quote": "For both fully-automated and semi-automated 3D Auto CFQ, the upper and lower bounds of the 95% confidence interval for Pearson’s correlation exceeded the acceptance criteria of > 0.8 when compared to 2D PISA.",
+          "page": 14,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K243794",
+          "endpoint": "AutoMeasure V3 agreement with standard-of-care measurements (32 parameters)",
+          "metric": "Bland-Altman LoA confidence intervals vs pre-defined acceptance criteria",
+          "value": "All 32 hypotheses met acceptance criteria (numeric values not reported in summary)",
+          "comparator": "Standard-of-care measurements by qualified healthcare professionals at the initial exam",
+          "n_studies": 7127,
+          "n_patients": 3964,
+          "n_sites": null,
+          "dataset_description": "7127 TTE clips from 3964 adult subjects enrolled 2015-June 2024 at multiple institutions in USA, Asia and Europe; age 59.0 +/- 16.7; 48.6% male; 45.2% Black or African American, 30.3% White, 2.7% Asian, 21.9% Other/Mixed; BMI 28.9 +/- 7.1",
+          "subgroup_notes": "Stratified by age, BMI, gender, race and clinical status (healthy vs suspected disease); stratified results not reported in summary",
+          "quote": "The results of the 32 hypotheses tested, demonstrated high agreement of AutoMeasure V3 software with Standard of Care Measurements (ground truth) obtained during initial subject exam, by producing confidence intervals for the limits of agreement, for each parameter (hypothesis) tested, meeting the pre-defined acceptance criteria for the study.",
+          "page": 16,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K242800",
+          "endpoint": "Auto Measure V2 detector agreement with expert ground truth, LVIDd",
+          "metric": "Bland-Altman LoA (relative)",
+          "value": "[-14.16%, 12.42%] vs acceptance [-35%, 35%], N=457",
+          "comparator": "Manual measurements by clinical experts during routine care",
+          "n_studies": 500,
+          "n_patients": 500,
+          "n_sites": null,
+          "dataset_description": "500 previously unseen TTE studies (one per subject): 200 known normals and 300 patients (198 with confirmed pathology); age 52.4 +/- 15.5; 49.6% male; Asian 30.2%, Black 26.4%, White 36.2%, Other 7.3%",
+          "subgroup_notes": null,
+          "quote": "LVIDd DETECTOR_ID_BMOD E_LV_LVDISTANCE_S AME_LINE 457 2.0984 [-14.1564%, 12.4223%] [-35.0%, 35.0%]",
+          "page": 18,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K242800",
+          "endpoint": "Auto Measure V2 detector agreement, LVIDs",
+          "metric": "Bland-Altman LoA (relative)",
+          "value": "[-23.48%, 26.02%] vs acceptance [-35%, 35%], N=469",
+          "comparator": "Manual expert ground truth",
+          "n_studies": 500,
+          "n_patients": 500,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "LVIDs DETECTOR_ID_BMOD E_LV_LVID_ES 469 2.0965 [-23.4752%, 26.0242%] [-35.0%, 35.0%]",
+          "page": 18,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K242800",
+          "endpoint": "Auto Measure V2 detector agreement, IVSd",
+          "metric": "Bland-Altman LoA (relative)",
+          "value": "[-33.21%, 28.16%] vs acceptance [-35%, 35%], N=305",
+          "comparator": "Manual expert ground truth",
+          "n_studies": 500,
+          "n_patients": 500,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "IVSd DETECTOR_ID_BMOD E_LV_LVDISTANCE_S AME_LINE 305 2.1330 [-33.2114%, 28.1632%] [-35.0%, 35.0%]",
+          "page": 18,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K242800",
+          "endpoint": "Auto Measure V2 detector agreement, LVPWd",
+          "metric": "Bland-Altman LoA (relative)",
+          "value": "[-33.14%, 29.95%] vs acceptance [-35%, 35%], N=305",
+          "comparator": "Manual expert ground truth",
+          "n_studies": 500,
+          "n_patients": 500,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "LVPWd DETECTOR_ID_BMOD E_LV_LVDISTANCE_S AME_LINE 305 2.1330 [-33.1364%, 29.9544%] [-35.0%, 35.0%]",
+          "page": 18,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K242800",
+          "endpoint": "Auto Measure V2 detector agreement, LVOT diameter",
+          "metric": "Bland-Altman LoA (relative)",
+          "value": "[-17.73%, 16.16%] vs acceptance [-35%, 35%], N=453",
+          "comparator": "Manual expert ground truth",
+          "n_studies": 500,
+          "n_patients": 500,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "LVOT Diameter DETECTOR_ID_BMOD E_LV_LVOT 453 2.0991 [-17.729%, 16.1588%] [-35.0%, 35.0%]",
+          "page": 18,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K242800",
+          "endpoint": "Auto Measure V2 detector agreement, Ao sinus / STJ / ascending Ao diameters",
+          "metric": "Bland-Altman LoA (relative)",
+          "value": "Ao Sinus [-11.00%, 11.28%] N=308; Ao STJ [-11.42%, 13.11%] N=301; Asc Ao [-14.78%, 15.96%] N=204; acceptance [-35%, 35%]",
+          "comparator": "Manual expert ground truth",
+          "n_studies": 500,
+          "n_patients": 500,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "Ao Sinus Diameter DETECTOR_ID_BMOD E_AO_AOSV 308 2.1320 [-11.0022%, 11.2816%] [-35.0%, 35.0%] Ao STJ Diameter DETECTOR_ID_BMOD E_AO_AOSTJ 301 2.1342 [-11.4181%, 13.1139%] [-35.0%, 35.0%] Asc Ao Diameter DETECTOR_ID_BMOD E_AO_AOASC 204 2.1769 [-14.7794%, 15.9598%] [-35.0%, 35.0%]",
+          "page": 18,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K242800",
+          "endpoint": "Auto Measure V2 detector agreement, RV base / mid / length, TV annulus",
+          "metric": "Bland-Altman LoA (relative)",
+          "value": "RV Base [-16.14%, 25.91%] N=302; RV Mid [-25.09%, 30.26%] N=243; RV Length [-14.61%, 13.39%] N=117; TV Annulus [-19.36%, 18.03%] N=53; acceptance [-35%, 35%]",
+          "comparator": "Manual expert ground truth",
+          "n_studies": 500,
+          "n_patients": 500,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "RV Base DETECTOR_ID_BMOD E_RV_RVD_BASE 302 2.1339 [-16.1373%, 25.9079%] [-35.0%, 35.0%] RV Mid DETECTOR_ID_BMOD E_RV_RVD_MID 243 2.1564 [-25.0913%, 30.2573%] [-35.0%, 35.0%] RV Length DETECTOR_ID_BMOD E_RV_RVL 117 2.2599 [-14.6089%, 13.3871%] [-35.0%, 35.0%] TV Annulus DETECTOR_ID_BMOD E_RV_TVANN 53 2.4511 [-19.3628%, 18.0347%] [-35.0%, 35.0%]",
+          "page": 18,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K242800",
+          "endpoint": "Auto Measure V2 Doppler detectors: MV decel time, MV peak A, MV peak E",
+          "metric": "Bland-Altman LoA (relative)",
+          "value": "MV Decel Time [-23.57%, 22.86%] N=136 (acceptance +/-25%); MV Peak A [-12.37%, 15.24%] N=229 (+/-24%); MV Peak E [-9.21%, 9.12%] N=136 (+/-24%)",
+          "comparator": "Manual expert ground truth",
+          "n_studies": 500,
+          "n_patients": 500,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "MV Decel. Time DETECTOR_ID_DOPPL ER_MV_DECEL_E_DU RATION 136 2.2343 [-23.5717%, 22.8591%] [-25.0%, 25.0%] MV Peak A Vel DETECTOR_ID_DOPPL ER_MV_VMAX_A_VE LOCITY 229 2.1631 [-12.3694%, 15.2363%] [-24.0%, 24.0%] MV Peak E Vel DETECTOR_ID_DOPPL ER_MV_VMAX_E_VEL OCITY 136 2.2343 [ -9.2081%, 9.1223%] [-24.0%, 24.0%]",
+          "page": 19,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K242800",
+          "endpoint": "Auto Measure V2 Doppler detectors: AV VTI, LVOT VTI, PV VTI",
+          "metric": "Bland-Altman LoA (relative)",
+          "value": "AV VTI [-21.54%, 19.89%] N=247; LVOT VTI [-17.27%, 17.21%] N=234; PV VTI [-20.61%, 21.06%] N=66; acceptance +/-22%",
+          "comparator": "Manual expert ground truth",
+          "n_studies": 500,
+          "n_patients": 500,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "AV VTI DETECTOR_ID_DOPPL ER_AV_VTI 247 2.1546 [-21.5393%, 19.8925%] [-22.0%, 22.0%] LVOT VTI DETECTOR_ID_DOPPL ER_LVOT_VTI 234 2.1607 [-17.267%, 17.2093%] [-22.0%, 22.0%] PV VTI DETECTOR_ID_DOPPL ER_PV_VTI 66 2.3864 [-20.6140%, 21.0567%] [-22.0%, 22.0%]",
+          "page": 19,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K242800",
+          "endpoint": "Auto Measure V2 all detectors vs acceptance criteria",
+          "metric": "pass/fail",
+          "value": "All measurement detectors met acceptance criteria derived from published human inter-observer variability",
+          "comparator": "Manual expert ground truth; acceptance LoA derived from published inter-observer variability",
+          "n_studies": 500,
+          "n_patients": 500,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "All measurement detectors met the acceptance criteria informed by clinical literature, supporting the accuracy and reliability of the Auto Measure feature.",
+          "page": 17,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K251110",
+          "endpoint": "Auto EF with contrast biplane EF vs consensus manual Simpson's biplane EF (Philips-acquired data sub-analysis)",
+          "metric": "Pearson r",
+          "value": "0.952 (95% CI 0.919, 0.972); acceptance LCB > 0.75",
+          "comparator": "Consensus manual Simpson's method-of-disks EF by 3 qualified sonographers, reviewed by an echo cardiologist",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Retrospective contrast-enhanced adult TTE clips acquired on Philips systems; sample size not stated",
+          "subgroup_notes": null,
+          "quote": "The acceptance criteria for the primary endpoint were met, specifically, the Pearson’s correlation coefficient and associated confidence intervals are 0.952 (95%CI 0.919, 0.972).",
+          "page": 12,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K251110",
+          "endpoint": "SWM v2 WMSI sensitivity/specificity vs visual estimation by 3 expert cardiologists",
+          "metric": "sensitivity / specificity",
+          "value": "Not numerically reported; stated to align with K243862 performance (acceptance for K243862: LCB of sensitivity and specificity > 0.675)",
+          "comparator": "Visual WMSI estimation by 3 expert cardiologists (averaged and 2/3 majority ground truths)",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Retrospective Philips TTE clips; sample size not stated",
+          "subgroup_notes": null,
+          "quote": "Importantly, regardless of the methodology used for the ground truth definition, the SWM v2 software applied to Philips data shows performance that aligns with previously reported assessment of the algorithm (K243862).",
+          "page": 12,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K243793",
+          "endpoint": "R-Trigger AI R-wave timestamp vs ECG-based R-trigger",
+          "metric": "Bland-Altman LoA (ms)",
+          "value": "lower LoA -58.06 ms (95% CI -59.34, -56.78); upper LoA 69.69 ms (95% CI 68.41, 70.97); acceptance [-99.5, 99.5] ms",
+          "comparator": "ECG-derived R-trigger from the on-cart physio board",
+          "n_studies": null,
+          "n_patients": 1894,
+          "n_sites": null,
+          "dataset_description": "R-trigger time-stamp cohort (Table 3): 1894 subjects (age 58.5 +/- 17.0; 47.3% male; 42.8% Black, 31.4% White, 3.3% Asian, 22.6% Other/Mixed; BMI 28.5 +/- 6.8). The summary states 7309 cardiac TTE clips from 3964 subjects were used across all three endpoints; the clip count for endpoint 1 alone is not stated.",
+          "subgroup_notes": "Bias and LoA reported by ethnicity (black/other/white), cardiac health status, region (North America vs rest of world), age band and BMI band per imaging mode (Tables 6-7, pp. 18-19)",
+          "quote": "Endpoint 1: R-trigger 1 R-wave peak time stamp -58.06ms (-59.34, -56.78) 69.69ms (68.41, 70.97) Time Stamp [-99.5ms, 99.5ms]",
+          "page": 16,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K243793",
+          "endpoint": "AutoStrain EF with AI R-trigger vs ECG R-trigger",
+          "metric": "Pearson r",
+          "value": "0.892 (95% CI 0.853, 0.922); acceptance LCB > 0.8; LoA -6.64% (-7.60, -5.68) to 6.52% (5.56, 7.49)",
+          "comparator": "AutoStrain with ECG-based R-trigger",
+          "n_studies": null,
+          "n_patients": 82,
+          "n_sites": null,
+          "dataset_description": "AutoStrain cohort n=82 (age 48.9 +/- 18.6; 45.1% male; Asian 24.4%, Black 7.3%, White 36.6%, Other/Mixed 31.7%; BMI 24.4 +/- 3.5)",
+          "subgroup_notes": null,
+          "quote": "2 EF 0.892 (0.853,0.922) LCB >0.8",
+          "page": 18,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K243793",
+          "endpoint": "AutoStrain GLS with AI R-trigger vs ECG R-trigger",
+          "metric": "Pearson r",
+          "value": "0.992 (95% CI 0.990, 0.994); acceptance LCB > 0.8; LoA -5.25% (-5.72, -4.79) to 4.63% (4.16, 5.10)",
+          "comparator": "AutoStrain with ECG-based R-trigger",
+          "n_studies": null,
+          "n_patients": 82,
+          "n_sites": null,
+          "dataset_description": "AutoStrain cohort n=82",
+          "subgroup_notes": null,
+          "quote": "3 GLS 0.992 (0.990,0.994) LCB >0.8",
+          "page": 18,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K243793",
+          "endpoint": "AutoMeasure parameters with AI R-trigger vs ECG R-trigger (32 parameters), examples",
+          "metric": "Bland-Altman LoA (relative)",
+          "value": "LVIDd -9.33% (-9.84, -8.81) to 9.33% (8.82, 9.85), acceptance +/-30%; MV E Vel -12.00% to 12.98%, acceptance +/-25%; TAPSE -19.65% to 18.23%, acceptance +/-34%; RA Volume (A4C) -27.08% to 32.89%, acceptance +/-46%; all 32 met",
+          "comparator": "AutoMeasure with ECG-based R-trigger",
+          "n_studies": null,
+          "n_patients": 3964,
+          "n_sites": null,
+          "dataset_description": "AutoMeasure cohort (Table 1): 3964 subjects (age 59.0 +/- 16.7; 48.6% male; 45.2% Black, 30.3% White, 2.7% Asian, 21.9% Other/Mixed; BMI 28.9 +/- 7.1). 7309 clips were used across all three endpoints; clips for endpoint 2 alone are not stated.",
+          "subgroup_notes": "Full table of 32 AutoMeasure parameters on pp. 16-18",
+          "quote": "5 LVIDd -9.33 % (-9.84%, -8.81 %) 9.33 % (8.82 %, 9.85%) Distance [-30%, 30%]",
+          "page": 16,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K250886",
+          "endpoint": "SVS v2: AutoStrain LV EF on SVS-selected clips vs expert-selected clips",
+          "metric": "Pearson r",
+          "value": "0.891 (95% CI 0.851, 0.920); acceptance LCB > 0.8",
+          "comparator": "Average of three clinical experts' manual clip selection with AutoStrain LV",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Retrospective adult TTE exams; total N not stated; demographics for a 71-patient US-center subset (53.5% male; age 61.0 +/- 16.4; 60.6% Black, 35.2% White; BMI 29.7 +/- 6.7; LV systolic function normal 64.8%, mild 5.6%, moderate 14.1%, severe 15.5%)",
+          "subgroup_notes": null,
+          "quote": "Specifically, for the Pearsons’ correlation coefficient was 0.891 (95%CI 0.851, 0.920) for the EF and 0.906 (95%CI 0.871, 0.931) for the GLS measurement.",
+          "page": 20,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K250886",
+          "endpoint": "SVS v2: AutoStrain LV GLS on SVS-selected clips vs expert-selected clips",
+          "metric": "Pearson r",
+          "value": "0.906 (95% CI 0.871, 0.931); acceptance LCB > 0.8",
+          "comparator": "Average of three clinical experts' manual clip selection with AutoStrain LV",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "As above; total N not stated",
+          "subgroup_notes": null,
+          "quote": "Specifically, for the Pearsons’ correlation coefficient was 0.891 (95%CI 0.851, 0.920) for the EF and 0.906 (95%CI 0.871, 0.931) for the GLS measurement.",
+          "page": 20,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K251455",
+          "endpoint": "SVS v2 Contrast: contrast biplane EF on SVS-selected clips vs Contrast EF on manually selected clips",
+          "metric": "Pearson r",
+          "value": "0.953 (95% CI 0.917, 0.974), p<0.0001, N=46; acceptance LCB > 0.8",
+          "comparator": "Contrast EF output on clips manually selected by one sonographer (ground truth generated in K243235)",
+          "n_studies": null,
+          "n_patients": 46,
+          "n_sites": 2,
+          "dataset_description": "Sub-analysis of K240850/K243235 data on Philips-acquired contrast TTE exams: 60 subjects enrolled, 56 in sample, 10 non-reportable, 46 evaluable; 62.3% male of 53 with sex data; age 20-87; US site mean age 63 +/- 15.8, BMI 31.9 +/- 8; race (47 US exams): 40.4% Black, 42.6% White, 4.3% Asian, 12.8% unknown; 7 exams from one non-US site",
+          "subgroup_notes": "Male r 0.943 (0.885, 0.972) n=32; female 0.973 (0.915, 0.992) n=14; normal systolic function 0.926 (0.833, 0.968) n=24; abnormal 0.923 (0.822, 0.968) n=22",
+          "quote": "Biplane EF - SVS Selected (Automated) vs Biplane EF - Manually Selected (Ground Truth) 46 0.953 (0.917, 0.974)  <.0001",
+          "page": 13,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K251455",
+          "endpoint": "SVS v2 Contrast: Bland-Altman agreement of biplane EF, SVS-selected vs manually selected clips",
+          "metric": "mean difference / LoA (EF points)",
+          "value": "0.71 +/- 4.36 (95% CI -0.58, 2.01); LoA -7.83 (-10.06, -5.60) to 9.26 (7.03, 11.49); n=46",
+          "comparator": "Contrast EF on manually selected clips",
+          "n_studies": null,
+          "n_patients": 46,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "EF - SVS Selected (Automated) vs EF - Manually Selected (Ground Truth) 0.71 ± 4.36 (46) -0.58 , 2.01 -7.83 (-10.06, -5.60) 9.26 (7.03, 11.49)",
+          "page": 13,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K251455",
+          "endpoint": "SVS v2 Contrast: biplane EF on SVS-selected clips vs manual tracing ground truth",
+          "metric": "Pearson r; Bland-Altman",
+          "value": "r 0.938 (95% CI 0.890, 0.965), p<0.0001; mean difference 1.22 +/- 5.22 (95% CI -0.33, 2.77); LoA -9.01 (-11.67, -6.34) to 11.45 (8.78, 14.11); n=46",
+          "comparator": "Manual tracing by 3 sonographers following physician review (ground truth created in K243235)",
+          "n_studies": null,
+          "n_patients": 46,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "EF–SVS Selected (Automated) vs EF–Manually Tracing (Ground Truth) 46 0.938 (0.890, 0.965) <.0001",
+          "page": 13,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": null,
+          "endpoint": "Auto Measure time savings for standard 2D echo measurements (vendor claim)",
+          "metric": "time reduction",
+          "value": "51%",
+          "comparator": "manual measurement workflow",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Press-release footnote [2]: 'Based on Philips external testing as compared to manual measurement methods.' No sample size, sites, or study design given; not traceable to a citable study.",
+          "subgroup_notes": null,
+          "quote": "Using Auto Measure on Philips EPIQ CVx and Affiniti CVx ultrasound systems can reduce the time for standard 2D echo measurements by 51%",
+          "page": null,
+          "verification": "company"
+        },
+        {
+          "k_number": "K243793",
+          "endpoint": "R-Trigger study: all 35 pre-specified hypotheses across 3 endpoints vs acceptance criteria",
+          "metric": "pass/fail",
+          "value": "All 35 hypotheses (1 R-wave timestamp, 32 AutoMeasure parameters, EF and GLS) met pre-defined acceptance criteria",
+          "comparator": "ECG-based R-trigger workflow (ground truth)",
+          "n_studies": null,
+          "n_patients": 3964,
+          "n_sites": null,
+          "dataset_description": "7309 cardiac TTE clips from 3964 subjects across the three endpoints",
+          "subgroup_notes": null,
+          "quote": "Total of 35 hypotheses covering 3 endpoints were tested in this study in a pre- defined order with pre-defined acceptance criteria.  Study produced confidence intervals for the limits of agreement and correlation, for each parameter (hypothesis) tested, meeting the pre- defined acceptance criteria for the study.",
+          "page": 20,
+          "verification": "fda_summary"
+        }
+      ],
+      "training_data": {
+        "disclosed": true,
+        "n_studies": 6000,
+        "n_patients": null,
+        "n_sites": 20,
+        "description": "Auto Measure detectors (K242800): training pool of more than 6000 anonymized TTE studies (n_studies = 6000 is a stated lower bound) from cardially healthy individuals and patients with echo indications, acquired 2010-2021 in 20 centers and 16 countries; annotated by qualified echocardiography professionals using TTA software or Philips systems; all detectors trained from scratch (no pretrained weights); validation data randomly sampled and separated before development. Training-set sizes for Smart Doppler View ID, SVS, SWM, 3D Auto TV, 3D Auto CFQ, Auto EF with contrast and R-Trigger are not disclosed in the FDA summaries (SVS/SWM/contrast EF algorithms originate from DiA LVivo clearances).",
+        "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242800.pdf (pp. 19-20)",
+        "verification": "fda_summary"
+      },
+      "validation_data": {
+        "n_studies": 7127,
+        "n_patients": 3964,
+        "n_sites": null,
+        "description": "Largest validation set in the batch: AutoMeasure V3 (K243794) 7127 TTE clips from 3964 adult subjects, multi-institution (USA, Asia, Europe), enrolled 2015-June 2024; the R-Trigger study (K243793) reports 7309 clips from 3964 subjects with a demographic table identical to K243794 (AutoMeasure cohort), plus an 82-subject AutoStrain cohort and an 1894-subject R-wave time-stamp cohort. Other feature validations: Smart Doppler View ID 1100 clips / 400 subjects, one US hospital (K233788); Auto Measure V2 detectors 500 studies (K242800); SVS v2 Contrast 46 evaluable subjects from 2 sites (K251455); SVS v1/v2, SWM, SWM v2, 3D Auto TV, 3D Auto CFQ and Auto EF with contrast sample sizes not stated (K240850, K240980, K250886, K251110).",
+        "independent_of_training": true,
+        "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243794.pdf (pp. 15-16); https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233788.pdf (p. 10: 'completely distinct from that used during training'); https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242800.pdf (p. 20); https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251455.pdf (p. 12)",
+        "verification": "fda_summary"
+      },
+      "prior_validations": [
+        {
+          "description": "Smart View Select v1 uses the unchanged LVivo Seamless deep neural network cleared as DiA LVivo Seamless (K212466); SWM integrates the LVivo SG module (K161382) and SWM v2 the K243862 LVivo algorithm; Auto EF with contrast integrates the LVivo CE-EF algorithm (K243235) without modification.",
+          "source_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251110.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "description": "3D Auto TV uses the same machine-learning model-based contour generation as QLAB 3D Auto MV (K200974), retrained on tricuspid valve images; 3D Auto CFQ uses the K200974 mitral model as input.",
+          "source_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240980.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "description": "Acceptance criteria for SVS and contrast-EF studies were informed by prior clearances K130779 and K232500 (Lumify Auto EF) and Maret et al. 2008 (Cardiovasc Ultrasound).",
+          "source_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251455.pdf",
+          "verification": "fda_summary"
+        }
+      ],
+      "papers": [
+        {
+          "title": "Mitral Regurgitation Assessment Using a Novel Automated Three-Dimensional Color-Flow Quantification: Comparison with Two-Dimensional Proximal Isovelocity Surface Area and Cardiac Magnetic Resonance",
+          "first_author": "Kim K",
+          "journal": "Journal of the American Society of Echocardiography",
+          "year": 2026,
+          "doi": "10.1016/j.echo.2026.05.042",
+          "pmid": "42242568",
+          "url": "https://doi.org/10.1016/j.echo.2026.05.042",
+          "relation": "external-validation",
+          "n_subjects": 185,
+          "key_result": "3D Auto CFQ on 185 consecutive TEE MR patients: feasibility 97.3%; intra/inter-observer ICC 0.96/0.91; RVol lower than 2D PISA (36.3 vs 65.9 mL) with fewer severe classifications (16.2% vs 53.3%); in a 29-patient CMR subgroup, agreement with CMR r=0.860 (ICC 0.92) vs 2D PISA r=0.694 (ICC 0.64). Abstract names the tool as '3D Auto CFQ'.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Initial Experience With Automated 3D Color Flow Quantification of Mitral Regurgitation",
+          "first_author": "Harb SC",
+          "journal": "Structural Heart",
+          "year": 2026,
+          "doi": "10.1016/j.shj.2026.100830",
+          "pmid": "42389550",
+          "url": "https://doi.org/10.1016/j.shj.2026.100830",
+          "relation": "real-world",
+          "n_subjects": null,
+          "key_result": "Technical/practical description of the Philips 3D Automated Color Flow Quantification tool in severe-MR patients undergoing TEER; states further validation is needed and accuracy depends on 3D color acquisition quality. No numeric accuracy result in abstract.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "A Novel Approach for Semiautomated Three-Dimensional Quantification of Mitral Regurgitant Volume Reflects a More Physiologic Approach to Mitral Regurgitation",
+          "first_author": "Singh A",
+          "journal": "Journal of the American Society of Echocardiography",
+          "year": 2022,
+          "doi": "10.1016/j.echo.2022.05.005",
+          "pmid": "35605896",
+          "url": "https://doi.org/10.1016/j.echo.2022.05.005",
+          "relation": "algorithm-development",
+          "n_subjects": 50,
+          "key_result": "50 TEE patients (25 primary, 25 secondary MR): semiautomated 3D color-flow RVol with dynamic flow curves vs 2D PISA, r=0.60; 3D RVol significantly lower than 2D PISA. Abstract does not name the vendor; relation to 3D Auto CFQ inferred from method description only (see open_questions).",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Three-Dimensional Transthoracic Echocardiography for Semiautomated Analysis of the Tricuspid Annulus: Validation and Normal Values",
+          "first_author": "Cotella JI",
+          "journal": "Journal of the American Society of Echocardiography",
+          "year": 2025,
+          "doi": "10.1016/j.echo.2024.09.007",
+          "pmid": "39304089",
+          "url": "https://doi.org/10.1016/j.echo.2024.09.007",
+          "relation": "external-validation",
+          "n_subjects": 113,
+          "key_result": "New semiautomated 3D TTE tricuspid annulus software vs multiplanar reconstruction in 113 patients (3 readers): all r > 0.8, minimal bias, better reproducibility (ICC 0.94-0.96 vs 0.82-0.90); normal values from 789 WASE subjects. Abstract does not name the software vendor (see open_questions).",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Feasibility, Reproducibility, and Clinical Implications of the Novel Fully Automated Assessment for Global Longitudinal Strain",
+          "first_author": "Kawakami H",
+          "journal": "Journal of the American Society of Echocardiography",
+          "year": 2021,
+          "doi": "10.1016/j.echo.2020.09.011",
+          "pmid": "33293202",
+          "url": "https://doi.org/10.1016/j.echo.2020.09.011",
+          "relation": "external-validation",
+          "n_subjects": 561,
+          "key_result": "Fully automated AutoStrain GLS feasible in 99.5% of 561 community subjects; 0.5 min/patient vs 4.5 min manual; about 40% of automated traces judged to need manual correction; automated GLS predictive value inferior to semi-automated GLS. Applies to AutoStrain LV (K190913), the downstream application for Smart View Select and R-Trigger.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Reference change value of global longitudinal strain in clinical practice: A test-retest quality implementation project",
+          "first_author": "Tuzovic M",
+          "journal": "Echocardiography",
+          "year": 2022,
+          "doi": "10.1111/echo.15482",
+          "pmid": "36376263",
+          "url": "https://doi.org/10.1111/echo.15482",
+          "relation": "other",
+          "n_subjects": 41,
+          "key_result": "Test-retest study of Philips AutoStrain vs aCMQ GLS in 41 of 44 screened subjects: AutoStrain median total CV 7.4% vs 17.6% for aCMQ (p<.001) with 80% less analysis time; reference change value for GLS about 15% (17-21% in all comers). Applies to AutoStrain LV (K190913), the downstream application for Smart View Select and R-Trigger; not a study of the SVS/R-Trigger features themselves.",
+          "verification": "doi_resolved"
+        }
+      ],
+      "clinical_trials": [],
+      "open_questions": [
+        "K211597 (Auto Measure V1) summary reports no quantitative performance results and no sample sizes; only that a Performance Validation Study was conducted.",
+        "K240850, K240980, K250886 (total N) and K251110 do not state validation sample sizes; K243794 does not report per-parameter numeric results despite 32 hypotheses.",
+        "Training-set sizes are disclosed only for Auto Measure V2 (K242800, >6000 studies); none disclosed for Smart Doppler View ID, SVS, SWM, 3D Auto TV, 3D Auto CFQ, Auto EF with contrast, or R-Trigger.",
+        "Number of validation sites for AutoMeasure V3 / R-Trigger is described only as 'multiple institutions, including USA, Asia and Europe'; exact count not stated.",
+        "No PubMed-indexed peer-reviewed validation of Philips Auto Measure / AutoMeasure, Smart Doppler View ID, Smart View Select, R-Trigger, or the on-cart Auto EF with contrast was found by feature-name search (researcher pass and verification pass, 2026-09-05); the vendor 51% time-savings claim rests on press-release footnote 'Philips external testing' with no citable study.",
+        "Cotella 2025 (tricuspid annulus) and Singh 2022 (3D MR volume) abstracts do not name the software vendor; their mapping to 3D Auto TV / 3D Auto CFQ is inferred and unconfirmed.",
+        "AutoStrain LV / 2D Auto LV (K190913) and QLAB 3D Auto MV (K200974) are referenced as previously cleared but are outside this batch; their own summaries were not reviewed here.",
+        "openFDA lists the K211597 applicant as 'Philips Medical Systems' while the summary names Philips Ultrasound, Inc.; later clearances list Philips Ultrasound, LLC.",
+        "K242800 training-pool figure is stated as 'more than 6000 studies'; n_studies=6000 is recorded as a lower bound, not an exact count.",
+        "K243793 reports a single pooled clip count (7309 clips / 3964 subjects) across three endpoints; per-endpoint clip counts are not stated, and the R-wave time-stamp endpoint cohort is 1894 subjects (Table 3)."
+      ],
+      "sources": [
+        {
+          "fact": "K211597 summary: Auto Measure description, predicates, absence of performance numbers",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K211597.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K233788 summary: Smart Doppler View ID, accuracy 97.5%, 1100 clips/400 subjects, demographics",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233788.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K240850 summary: SVS and SWM descriptions, Pearson r results, DiA reference devices",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240850.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K240980 summary: 3D Auto TV and 3D Auto CFQ descriptions and validation results",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240980.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K242800 summary: Auto Measure V2 on Compact 5000, detector LoA table, 500-study validation, >6000-study training pool",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242800.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K243794 summary: AutoMeasure V3 scope, 7127 clips/3964 subjects, 32 hypotheses",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243794.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K251110 summary: SWM v2 and Auto EF with contrast, r=0.952",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251110.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K243793 summary: R-Trigger, 35 hypotheses, LoA tables, stratified performance",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243793.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K250886 summary: SVS v2, EF r=0.891, GLS r=0.906, 71-patient subset demographics",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K250886.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K251455 summary: SVS v2 Contrast, n=46, r=0.953, Bland-Altman, subgroups",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251455.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "Decision dates, product codes, applicants for all clearances",
+          "url_or_file": "https://api.fda.gov/device/510k.json (openFDA 510(k) endpoint)",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "Vendor claim: Auto Measure reduces time for standard 2D echo measurements by 51% (footnote [2]: 'Based on Philips external testing as compared to manual measurement methods'); Auto Measure AI, AutoStrain LA/RV available across CVx portfolio (press release 2021-12-09, fetched 2026-09-05)",
+          "url_or_file": "https://www.usa.philips.com/a-w/about/news/archive/standard/news/press/2021/20211209-philips-introduces-fully-integrated-echocardiography-experience-bringing-together-new-transducer-technology-ai-driven-automated-measurements-and-remote-access-at-euroecho-2021.html",
+          "verification": "company"
+        },
+        {
+          "fact": "EPIQ CVx product page names AutoStrain LV, Smart View Select, 2D Auto EF, 2D Auto EF Advanced (contrast and non-contrast), Segmental Wall Motion Scoring, 3D Auto RV/TV/CFQ, Auto LAA, Auto Measure RV / MV Inflow (fetched 2026-09-05)",
+          "url_or_file": "https://www.usa.philips.com/healthcare/product/HC795231/epiq-cvx-premium-cardiology-ultrasound-system",
+          "verification": "company"
+        },
+        {
+          "fact": "PubMed E-utilities esearch/esummary/efetch and Crossref works API used to identify and confirm papers (researcher queries: AutoStrain, 3D Auto CFQ, tricuspid annulus semiautomated, Auto Measure, Smart View Select, LVivo; verification queries: feature names + Philips; Philips + EPIQ/Affiniti + automated/AI echocardiography 2019-2026)",
+          "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ ; https://api.crossref.org/works/",
+          "verification": "peer_reviewed"
+        }
+      ]
+    },
+    {
+      "id": "philips-lumify-auto-ef",
+      "product_name": "Philips Lumify Auto EF Quantification (DiA LVivo EF on handheld)",
+      "company": "Philips Ultrasound",
+      "company_website": "https://www.usa.philips.com/healthcare/sites/lumify-handheld-ultrasound/",
+      "product_url": "https://www.usa.philips.com/healthcare/sites/lumify-handheld-ultrasound/products/whats-new",
+      "category": "system-embedded",
+      "tags": [
+        "Auto EF",
+        "LVEF",
+        "EDV",
+        "ESV",
+        "single-view A4C",
+        "LV border tracing",
+        "neural network segmentation",
+        "LVivo EF",
+        "handheld",
+        "POCUS"
+      ],
+      "modality_scope": [
+        "handheld",
+        "POCUS",
+        "TTE"
+      ],
+      "deployment": [
+        "ultrasound-system-embedded"
+      ],
+      "summary": "Auto EF Quantification on the Philips Lumify handheld ultrasound (Android, Lumify 5.0, S4-1 transducer, Cardiac preset) is a subset of the DiA Imaging Analysis LVivo EF algorithm (K210053) that automatically traces and tracks the LV endocardial border in an apical four-chamber clip, selects ED/ES frames, and reports EF, EDV and ESV by Simpson's method of discs with automatic rejection of failed results and user contour editing. Cleared under K232500 (2023-10-26) on a retrospective study of 80 Lumify-acquired A4C clips (EF r=0.82 vs averaged manual tracing; 76/80 clips processed).",
+      "intended_use_quote": "The intended use of the product is to collect ultrasound image data that may be used by clinicians for diagnostic and procedural purposes. The product shall provide the ability for gathering clinically acceptable images and ultrasound data for the clinical presets and anatomies listed under the indications for use.",
+      "indications_for_use_quote": "The Philips Lumify Diagnostic Ultrasound System is intended for diagnostic ultrasound imaging in B(2D), Color Doppler, Combined (B+Color), Pulsed Wave Doppler, and M-modes. It is indicated for diagnostic ultrasound imaging and fluid flow analysis in the following applications: Fetal/Obstetric, Abdominal, Pediatric, Cephalic, Urology, Gynecological, Cardiac Fetal Echo, Small Organ, Musculoskeletal, Peripheral Vessel, Carotid, Cardiac, Lung.",
+      "embedded_ai_features": [
+        {
+          "name": "Auto EF Quantification",
+          "function": "AI (neural-network segmentation) automated LV border tracing and tracking across the cardiac cycle from a single A4C clip, automated ED/ES frame selection, Simpson's method-of-discs volumes; outputs EF, EDV and ESV for the default beat; automatic rejection of false results; user can edit the LV contour before accepting.",
+          "first_k_number": "K232500",
+          "quote": "Auto EF is a new Artificial Intelligence (AI) feature available on the S4-1 transducer in the Cardiac Preset on the Lumify application based on the LVivo EF algorithm developed by DiA. Lumify Auto EF Quantification feature is a subset of LVivo platform. It provides automated assessment of the LV EF supporting evaluation from only apical four chamber (A4CH) view. The software automatically traces and tracks LV borders in each frame of the cardiac cycle and provides only the results for Ejection Fraction (EF), End Diastolic Volume (EDV), and End Systolic Volumes (ESV)."
+        }
+      ],
+      "clearances": [
+        {
+          "k_number": "K232500",
+          "decision_date": "2023-10-26",
+          "pathway": "510(k)",
+          "product_code": "IYN",
+          "predicates": [
+            "K162549",
+            "K210053",
+            "K223771",
+            "K203406"
+          ],
+          "changes_summary": "Introduced Auto EF Quantification (DiA LVivo EF subset) on Lumify 5.0 Android, S4-1 transducer, Cardiac preset; adds QIH as secondary product code. Retrospective clinical performance study on 80 Lumify-acquired A4C clips.",
+          "notable_flags": [
+            "Traditional 510(k)",
+            "Android only",
+            "single-view (A4C) EF",
+            "third-party (DiA) algorithm",
+            "openFDA applicant 'Philips Ultrasound'"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K232500.pdf"
+        }
+      ],
+      "performance_claims": [
+        {
+          "k_number": "K232500",
+          "endpoint": "Auto EF (LVivo EF) ejection fraction vs average manual tracing",
+          "metric": "Pearson r",
+          "value": "0.82 (95% CI 0.72, 0.88)",
+          "comparator": "Average EF from manual tracing by sonographers",
+          "n_studies": 80,
+          "n_patients": 80,
+          "n_sites": null,
+          "dataset_description": "A4C clips from 80 subjects referred for cardiac evaluation, acquired with Lumify; 57 male / 23 female; age 19-92 (mean 64 +/- 14); BMI 15.9-43.0 (mean 26.4, n=74); LV function normal 37.5%, mild 16.25%, moderate 25%, severe 21.25% dysfunction; CAD 42%; acquired consecutively for normal then impaired LV function; test data distinct from training data",
+          "subgroup_notes": "LV-function distribution reported; no subgroup accuracy reported",
+          "quote": "Strong correlation was demonstrated between LVivo EF ejection fraction (EF) measurements and the average results by manual tracing, r=0.82, 95% CI (0.72, 0.88), meeting the end point criteria.",
+          "page": 13,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K232500",
+          "endpoint": "Auto EF end-diastolic volume vs manual tracing",
+          "metric": "Pearson r",
+          "value": "0.95 (95% CI 0.91, 0.96)",
+          "comparator": "Manual tracing by sonographers",
+          "n_studies": 80,
+          "n_patients": 80,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "Additionally, strong correlations were demonstrated for end-diastolic volume (EDV) and end-systolic volume (ESV) with r=0.95, 95% CI (0.91, 0.96) and r= 0.94, 95% CI (0.90, 0.96), respectively.",
+          "page": 13,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K232500",
+          "endpoint": "Auto EF end-systolic volume vs manual tracing",
+          "metric": "Pearson r",
+          "value": "0.94 (95% CI 0.90, 0.96)",
+          "comparator": "Manual tracing by sonographers",
+          "n_studies": 80,
+          "n_patients": 80,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "Additionally, strong correlations were demonstrated for end-diastolic volume (EDV) and end-systolic volume (ESV) with r=0.95, 95% CI (0.91, 0.96) and r= 0.94, 95% CI (0.90, 0.96), respectively.",
+          "page": 13,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K232500",
+          "endpoint": "Automatic processing success rate",
+          "metric": "proportion of clips processed",
+          "value": "76/80 (95%)",
+          "comparator": null,
+          "n_studies": 80,
+          "n_patients": 80,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "The LVivoEF automatically processed 76 out of 80 clips (95%).",
+          "page": 13,
+          "verification": "fda_summary"
+        }
+      ],
+      "training_data": {
+        "disclosed": false,
+        "n_studies": null,
+        "n_patients": null,
+        "n_sites": null,
+        "description": "Not disclosed in the K232500 summary; the summary states only that the test data were completely distinct from the algorithm training data. The algorithm is the DiA LVivo EF (K210053), whose training data are not described here.",
+        "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K232500.pdf (p. 11)",
+        "verification": "fda_summary"
+      },
+      "validation_data": {
+        "n_studies": 80,
+        "n_patients": 80,
+        "n_sites": null,
+        "description": "Retrospective clinical performance study: A4C clips from 80 subjects referred for cardiac evaluation, acquired consecutively with the Lumify device (normal LV function then impaired LV function); number of sites not stated.",
+        "independent_of_training": true,
+        "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K232500.pdf (pp. 11-13)",
+        "verification": "fda_summary"
+      },
+      "prior_validations": [
+        {
+          "description": "Auto EF Quantification is a derivative of the previously cleared DiA LVivo EF module (K210053); AI/ML functionality stated to be the same as the reference device.",
+          "source_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K232500.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "description": "K232500 is cited in later Philips EPIQ/Affiniti clearances (K240850, K250886, K251455) as a basis for the Pearson-r lower-confidence-bound > 0.8 acceptance criterion.",
+          "source_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251455.pdf",
+          "verification": "fda_summary"
+        }
+      ],
+      "papers": [
+        {
+          "title": "Pragmatic Evaluation of a Deep-Learning Algorithm to Automate Ejection Fraction on Hand-Held, Point-of-Care Echocardiography in a Cardiac Surgical Operating Room",
+          "first_author": "MacKay EJ",
+          "journal": "Journal of Cardiothoracic and Vascular Anesthesia",
+          "year": 2024,
+          "doi": "10.1053/j.jvca.2024.01.005",
+          "pmid": "38307740",
+          "url": "https://doi.org/10.1053/j.jvca.2024.01.005",
+          "relation": "external-validation",
+          "n_subjects": 54,
+          "key_result": "Prospective single-center (Hospital of the University of Pennsylvania) study of Lumify Auto EF on 54 A4C clips in cardiac surgical patients: vs Simpson's method, Auto EF bias -10.17% and r=0.56 (experienced reader visual EF r=0.80); r=0.86 in 27 adequate-quality acquisitions vs 0.46 in 27 inadequate ones.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Artificial Intelligence-Powered Measurement of Left Ventricular Ejection Fraction Using a Handheld Ultrasound Device",
+          "first_author": "Filipiak-Strzecka D",
+          "journal": "Ultrasound in Medicine & Biology",
+          "year": 2021,
+          "doi": "10.1016/j.ultrasmedbio.2020.12.003",
+          "pmid": "33451814",
+          "url": "https://doi.org/10.1016/j.ultrasmedbio.2020.12.003",
+          "relation": "other",
+          "n_subjects": 112,
+          "key_result": "LVivo software LVEF from A4C on a handheld device vs 3D LVEF on a stationary echocardiograph in 112 cardiology inpatients: r=0.92 (95% CI 0.87-0.95); mean difference -0.61% (NS). Handheld device vendor is not named in the abstract, so applicability to Lumify specifically is unconfirmed; same LVivo (DiA) algorithm family.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "The measurement of the left ventricle ejection fraction by a bedside FoCUS examination",
+          "first_author": "Martocchia A",
+          "journal": "Internal and Emergency Medicine",
+          "year": 2023,
+          "doi": "10.1007/s11739-023-03414-5",
+          "pmid": "37690107",
+          "url": "https://doi.org/10.1007/s11739-023-03414-5",
+          "relation": "other",
+          "n_subjects": 59,
+          "key_result": "Bedside FoCUS in 59 emergency-medicine patients: LVEF 50.2 +/- 15.1% (Quinones), 39.5 +/- 12.0% (LVivo app) vs 53.7 +/- 11.1% by standard echocardiography; abstract reports r=0.694 for FoCUS vs standard echo but the available abstract text is truncated and does not make clear whether this applies to the LVivo or Quinones estimate. Handheld device not named in abstract.",
+          "verification": "doi_resolved"
+        }
+      ],
+      "clinical_trials": [],
+      "open_questions": [
+        "Number of sites for the 80-subject K232500 validation study is not stated.",
+        "Training-data size and composition for LVivo EF (K210053) are not disclosed in the K232500 summary.",
+        "Bland-Altman bias / limits of agreement for EF are not reported in the K232500 summary (only Pearson r).",
+        "Kagiyama 2024 (Sci Rep, PMID 38965290) multicenter handheld AI-EF study used the EchoNous KOSMOS, not Lumify, and was therefore excluded.",
+        "Filipiak-Strzecka 2021 and Martocchia 2023 use LVivo software on unnamed handheld devices; whether the device was Lumify could not be confirmed from abstracts (full text not accessible this session).",
+        "iOS availability: vendor page states Auto EF is available only on Lumify for Android; no later clearance for iOS was reviewed in this batch.",
+        "Martocchia 2023 abstract (as indexed) is truncated; the r=0.694 correlation cannot be confidently attributed to the LVivo estimate rather than the Quinones estimate."
+      ],
+      "sources": [
+        {
+          "fact": "K232500 summary: device description, predicates/reference devices, study design, demographics, results",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K232500.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "Decision date 2023-10-26, product code IYN, applicant Philips Ultrasound",
+          "url_or_file": "https://api.fda.gov/device/510k.json (openFDA 510(k) endpoint)",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "Vendor page: 'Calculate ejection fraction (EF) using a single 4-chamber apical view of the heart without manual editing'; 'Available only on Lumify for Android.'",
+          "url_or_file": "https://www.usa.philips.com/healthcare/sites/lumify-handheld-ultrasound/products/whats-new",
+          "verification": "company"
+        },
+        {
+          "fact": "PMC11224326 (Kagiyama 2024) device identified as KOSMOS (EchoNous) and excluded",
+          "url_or_file": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11224326/",
+          "verification": "peer_reviewed"
+        },
+        {
+          "fact": "PubMed E-utilities and Crossref used to confirm MacKay 2024, Filipiak-Strzecka 2021, Martocchia 2023; verification queries (Lumify + ejection fraction/Auto EF; Philips + Lumify + echocardiography) returned no additional Auto EF validation studies (other hits used UltraSight guidance or telemedicine, not Auto EF)",
+          "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ ; https://api.crossref.org/works/",
+          "verification": "peer_reviewed"
+        }
+      ]
+    }
+  ],
+  "notes": "All 11 included clearances were read in full from the FDA summary text files. Family (a) groups ten EPIQ/Affiniti/Compact 5000 clearances (K211597, K233788, K240850, K240980, K242800, K243794, K251110, K243793, K250886, K251455); family (b) is the single Lumify clearance K232500. Dates and product codes copied from openFDA. Performance numbers are verbatim from the summaries with PDF page numbers (PAGE markers in the txt files). Papers: 6 resolved for family (a) and 3 for family (b) via PubMed/Crossref; no peer-reviewed validation found by name for Auto Measure, Smart Doppler View ID, Smart View Select, or R-Trigger. Vendor claims (51% time saving) carry verification 'company'. 3D Auto RV, Auto LAA and Auto Measure RV / MV Inflow appear on the EPIQ CVx product page and AutoStrain LA/RV in the 2021 press release, but are not subjects of the included K-numbers and are not recorded as embedded features; QLAB 3D Auto MV (K200974) and AutoStrain LV (K190913) appear only as reference/predicate devices. Verification pass (2026-09-05): every performance quote located on its cited page; all 11 decision dates, product codes and clearance types match openFDA; predicates/reference devices confirmed in each summary; all 9 DOIs/PMIDs resolved via Crossref and PubMed esummary with matching titles; local file paths in sources replaced with public FDA URLs."
+}

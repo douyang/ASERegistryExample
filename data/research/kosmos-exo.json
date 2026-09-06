@@ -1,0 +1,1014 @@
+{
+ "batch_id": "kosmos-exo",
+ "families": [
+  {
+   "id": "kosmos",
+   "product_name": "Kosmos (Auto EF, AI FAST, AI Trio)",
+   "company": "EchoNous, Inc.",
+   "company_website": "https://echonous.com",
+   "product_url": "https://echonous.com/product/kosmos-ai/",
+   "category": "system-embedded",
+   "tags": [
+    "LVEF",
+    "Auto EF",
+    "AI FAST",
+    "anatomical labeling",
+    "view identification",
+    "AI Trio",
+    "handheld",
+    "POCUS",
+    "CW Doppler",
+    "ECG",
+    "digital auscultation"
+   ],
+   "modality_scope": [
+    "TTE",
+    "POCUS",
+    "handheld",
+    "lung",
+    "abdominal"
+   ],
+   "deployment": [
+    "ultrasound-system-embedded",
+    "on-device",
+    "handheld tablet (Kosmos Bridge / Android / iOS)"
+   ],
+   "summary": "Kosmos is a handheld/ultraportable diagnostic ultrasound system (phased-array Torso/Torso-One and linear Lexsa probes) first cleared in March 2020 with integrated ECG and digital auscultation. The 2024 clearance K233826 added product code QIH and an Indications for Use that names the AI-assisted automated ejection fraction software (Auto EF) and Auto Anatomical Structure Labeling and View Identification (AI FAST); K242321 (2025) covers the Kosmos-on-Android configuration with OB/GYN, TDI and color power Doppler. No FDA-summary performance data are public for the AI features because K233826 and K242321 were filed with 510(k) Statements rather than Summaries.",
+   "intended_use_quote": "Kosmos is intended to be used by qualified and trained healthcare professionals in the clinical assessment for the following clinical applications by acquiring, processing, displaying, measuring, and storing ultrasound images, or synchronized ultrasound images, electrocardiogram (ECG) rhythms, and digital auscultation (DA) sounds and waveforms.",
+   "indications_for_use_quote": "Kosmos is intended to be used by qualified and trained healthcare professionals in the clinical assessment for the following clinical applications by acquiring, processing, displaying, measuring, and storing ultrasound images, or synchronized ultrasound images, electrocardiogram (ECG) rhythms, and digital auscultation (DA) sounds and waveforms. With respect to its ultrasound imaging capability, Kosmos is a general-purpose diagnostic ultrasound system used in the following clinical applications and modes of operation: Clinical Applications: Cardiac, Thoracic/Lung, Abdominal, Vascular/Peripheral Vascular, Musculoskeletal, and interventional guidance (includes free hand needle / catheter placement fluid drainage, and nerve block) Modes of Operation: B-mode, M-mode, Color Doppler, Pulsed Wave (PW) Doppler, Continuous Wave (CW) Doppler, Combined Modes of B+M, and B+CD, B+PW, B+CW, and Harmonic Imaging. Kosmos is intended to be used in clinical care and medical education settings on adult and pediatric patient populations. Kosmos includes the AI-assisted automated ejection fraction software, known as Auto EF, which is used to process previously acquired transthoracic cardiac ultrasound images, to store images, and to manipulate and make measurements on images using the Kosmos. Auto EF provides automated estimation of left ventricular ejection fraction. This measurement can be used to assist the clinician in a cardiac evaluation. Auto EF is indicated for use on adult patients only in healthcare facilities. The Kosmos includes the Auto Anatomical Structure Labeling and View Identification, also referred to as AI FAST, software, which is intended for use only by qualified and trained medical professionals for automatic real-time detection and labeling of anatomical structures during image acquisition during cardiac, thoracic/lung, or abdominal ultrasound imaging. This feature is only indicated for use on adult patients in healthcare facilities. The device is non-invasive, reusable, and intended to be used on one patient at a time.",
+   "embedded_ai_features": [
+    "Auto EF: AI-assisted automated left ventricular ejection fraction from previously acquired transthoracic clips (adults; named in K233826 IFU)",
+    "AI FAST: automatic real-time detection and labeling of anatomical structures and view identification during cardiac, lung, or abdominal imaging (adults; named in K233826 IFU)",
+    "AI Trio: real-time guidance, image grading and anatomical labeling for cardiac views (described in K212100 as 'not yet cleared', marketed under the COVID-19 imaging enforcement policy; company site lists Trio under Kosmos EDU; clearance status not confirmed in any IFU read)",
+    "Auto Doppler (PW/TDI sample-gate placement) and Auto Preset (company-described features; not named in IFU)",
+    "Kosmos Bladder AI volume (company-described; clearance not covered by the K-numbers in this batch)"
+   ],
+   "clearances": [
+    {
+     "k_number": "K193518",
+     "decision_date": "2020-03-26",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K180995",
+      "K170874"
+     ],
+     "changes_summary": "Original Kosmos clearance: tablet + phased-array probe with integrated 3-lead single-channel ECG and digital auscultation; B-mode, M-mode, color Doppler, harmonic imaging; cardiac, lung, abdominal, peripheral vascular, needle guidance. No AI features. 'An assessment of clinical performance data for KOSMOS was not required to support a determination of substantial equivalence.' (p. 9)",
+     "notable_flags": [
+      "no clinical data required",
+      "additional product codes IYO, ITX, DQD, DPS"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf19/K193518.pdf"
+    },
+    {
+     "k_number": "K212100",
+     "decision_date": "2021-08-06",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K193518",
+      "K202035"
+     ],
+     "changes_summary": "Added Kosmos Lexsa linear-array probe, Torso-One and Torso-One USB ultrasound-only probes, Kosmos on Android (off-the-shelf tablet) configuration, PW and CW Doppler, musculoskeletal/vascular/nerve-block applications. Summary states: 'Kosmos is an FDA-cleared medical device; however, the new AI-assisted EF Workflow and Trio tool are not yet cleared by the FDA. Instead, EchoNous is following the Enforcement Policy for Imaging Systems During the Coronavirus Disease 2019 (COVID-19) Public Health Emergency' (p. 6). Clinical performance data not required (p. 14).",
+     "notable_flags": [
+      "third-party reviewed (openFDA third_party_flag Y)",
+      "AI EF/Trio marketed under COVID-19 enforcement policy, not cleared in this K",
+      "reference device Vscan Air K202035"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K212100.pdf"
+    },
+    {
+     "k_number": "K233826",
+     "decision_date": "2024-08-29",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [],
+     "changes_summary": "510(k) Statement (no public summary). Product codes expanded to IYN, IYO, ITX, DQD, DPS, QIH. The Indications for Use adds the AI-assisted automated ejection fraction software (Auto EF) for previously acquired transthoracic images in adults and the Auto Anatomical Structure Labeling and View Identification software (AI FAST) for real-time labeling during cardiac, lung or abdominal imaging in adults. Predicates and performance data are not public.",
+     "notable_flags": [
+      "510(k) Statement (no summary)",
+      "QIH product code added",
+      "AI features first named in IFU",
+      "received 2023-12-01, decided 2024-08-29"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233826.pdf"
+    },
+    {
+     "k_number": "K242321",
+     "decision_date": "2025-04-25",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [],
+     "changes_summary": "510(k) Statement (no public summary). IFU covers 'Clinical Applications and Modes of Operation for Kosmos on Android': Torso-One for Cardiac, Thoracic/Lung, Abdominal and Obstetrics/Gynecology; Lexsa for Lung, Vascular, MSK, Nerve and needle guidance; adds Color Power Doppler and TDI. Product codes IYN, IYO, ITX only; the ECG/auscultation and Auto EF / AI FAST language of K233826 is not present in this IFU.",
+     "notable_flags": [
+      "510(k) Statement (no summary)",
+      "Android configuration",
+      "OB/GYN added",
+      "TDI and color power Doppler added"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242321.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K233826",
+     "endpoint": "Kosmos autoEF vs cardiac MRI LVEF",
+     "metric": "Pearson r / bias",
+     "value": "r = 0.99; bias 1.1%; median LVEF 57% (CMR) vs 55% (AI-Echo), p = 0.51",
+     "comparator": "cardiac magnetic resonance LVEF",
+     "n_studies": 49,
+     "n_patients": 49,
+     "n_sites": 1,
+     "dataset_description": "49 adult patients undergoing clinically indicated CMR, single Italian center, prospective",
+     "subgroup_notes": null,
+     "quote": "Median LVEF was 57% (CMR) vs. 55% (AI-Echo), with no significant difference (p = 0.51). Strong correlation (r = 0.99) and minimal bias (1.1%) were observed.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K233826",
+     "endpoint": "Kosmos autoEF (TRIO AI + KOSMOS EF) vs standard echo biplane Simpson's LVEF, by operator",
+     "metric": "Pearson r",
+     "value": "cardiologist r = 0.90; junior oncologist r = 0.82; nurse r = 0.84; senior oncologist r = 0.79",
+     "comparator": "biplane Simpson's LVEF on standard echocardiography by cardiologist",
+     "n_studies": 115,
+     "n_patients": 115,
+     "n_sites": 1,
+     "dataset_description": "115 patients referred for echocardiographic LVEF estimation (chemotherapy/oncology setting); each scanned by cardiologist, senior oncologist, oncology resident and nurse with Kosmos HUD",
+     "subgroup_notes": "Bland-Altman showed small underestimation by autoEF vs SE-EF",
+     "quote": "The correlation between autoEF and SE-ejection fraction (EF) was excellent for the cardiologist (r = 0.90), the junior oncologist (r = 0.82), and the nurse (r = 0.84), and good for the senior oncologist (r = 0.79).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K233826",
+     "endpoint": "Detection of LVEF < 50% with Kosmos autoEF, by operator",
+     "metric": "sensitivity / specificity",
+     "value": "cardiologist 95%/94%; senior oncologist 86%/93%; junior oncologist 95%/91%; nurse 94%/87%",
+     "comparator": "biplane Simpson's LVEF on standard echocardiography",
+     "n_studies": 115,
+     "n_patients": 115,
+     "n_sites": 1,
+     "dataset_description": "same cohort as above",
+     "subgroup_notes": null,
+     "quote": "Detection of impaired LVEF < 50% was feasible with a sensitivity of 95% and specificity of 94% for the cardiologist; sensitivity of 86% and specificity of 93% for the senior oncologist; sensitivity of 95% and specificity of 91% for the junior oncologist; and sensitivity of 94% and specificity of 87% for the nurse.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K233826",
+     "endpoint": "AI-enhanced novice pathway (Kosmos AI-guided acquisition by novices + Us2.ai automated reporting) for detecting LVEF < 50%",
+     "metric": "AUC / sensitivity / specificity",
+     "value": "AUC 0.880 (95% CI 0.802-0.958); sensitivity 84.6%, specificity 91.4%, PPV 78.5%, NPV 94.1%; median absolute LVEF deviation 6.03%",
+     "comparator": "standard echo by trained sonographers interpreted by cardiologists",
+     "n_studies": 100,
+     "n_patients": 100,
+     "n_sites": 1,
+     "dataset_description": "100 symptomatic patients with suspected HF (mean age 61 +/- 15, 56% men); novices with 2 weeks' training; interpretable in 96 patients",
+     "subgroup_notes": "LVEF reported by Us2.ai software, not Kosmos Auto EF; Kosmos supplied AI acquisition guidance",
+     "quote": "The area under the curve (AUC) of the AI novice pathway was 0.880 (95% CI 0.802, 0.958). The sensitivity, specificity, positive predictive and negative predictive values of the AI-enhanced novice pathway in detecting LVEF < 50% were 84.6%, 91.4%, 78.5% and 94.1% respectively.",
+     "page": null,
+     "verification": "peer_reviewed"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "No training-set size or composition is stated in K193518 or K212100; K233826 and K242321 are 510(k) Statements with no public summary. No peer-reviewed algorithm-development paper for Auto EF or AI FAST was found.",
+    "source": null,
+    "verification": "unverified"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "FDA test-set description not public (Statements). Company pivotal registrations: NCT06027164 'Kosmos Trio and Ejection Fraction Pivotal Study' (n=153 actual, nurses vs sonographers, LVEF vs cardiologist panel; collaborators UCSF, Revival Research Institute, Centaur Labs) and NCT06468787 'Kosmos Anatomical Object Labeling and View Identification Pivotal Study' (n=32, multi-site, false discovery rate endpoints). Linkage of these studies to K233826 is inferred from timing, not confirmed by FDA documents.",
+    "independent_of_training": null,
+    "source": "https://clinicaltrials.gov/study/NCT06027164; https://clinicaltrials.gov/study/NCT06468787",
+    "verification": "fda_database"
+   },
+   "prior_validations": [
+    {
+     "description": "Company 'Kosmos AI EF clinical validation' landing page: prospective study of 78 patients at Mercy Med Clinic (Columbus, GA), four echocardiographers, reference = average of two independent echo core labs (Massachusetts General Hospital and UCSF); results gated behind a download form and not read.",
+     "source_url": "https://echonous.com/ai_ef_lp/",
+     "verification": "company"
+    },
+    {
+     "description": "Company clinical-benchmarking page: AI-based EF in n=100 (mean age 57+/-15, BMI 28+/-4, 61% male) vs cart-based Simpson's biplane: correlation 0.87 (p<0.0001), bias 1.42%, RMSD 7.51%; CW Doppler velocities in n=50 vs high-end cart: correlation 0.98, bias 0.15 m/s, RMSD 0.26 m/s. Unpublished company data.",
+     "source_url": "https://echonous.com/clinical-benchmarking-kosmos-platform/",
+     "verification": "company"
+    },
+    {
+     "description": "Hardware (non-AI) validation of Kosmos CW Doppler for aortic stenosis: 101 patients, mean gradient ICC 0.87, r = 0.89, kappa 0.81 for severe AS (Zubiaur 2024); TAVI prosthesis assessment in 64 patients, mean gradient ICC 0.76, Vmax ICC 0.83 (Margarida de Castro 2026).",
+     "source_url": "https://doi.org/10.1007/s10554-024-03320-7",
+     "verification": "peer_reviewed"
+    }
+   ],
+   "papers": [
+    {
+     "title": "AI-Assisted LVEF Assessment Using a Handheld Ultrasound Device: A Single-Center Comparative Study Against Cardiac Magnetic Resonance Imaging",
+     "first_author": "Bisignani G",
+     "journal": "J Clin Med",
+     "year": 2025,
+     "doi": "10.3390/jcm14134708",
+     "pmid": "40649081",
+     "url": "https://doi.org/10.3390/jcm14134708",
+     "relation": "external-validation",
+     "n_subjects": 49,
+     "key_result": "Kosmos autoEF vs CMR: r = 0.99, bias 1.1%, median LVEF 55% vs 57% (p = 0.51)",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Artificial intelligence-assisted evaluation of cardiac function by oncology staff in chemotherapy patients",
+     "first_author": "Papadopoulou SL",
+     "journal": "Eur Heart J Digit Health",
+     "year": 2024,
+     "doi": "10.1093/ehjdh/ztae017",
+     "pmid": "38774364",
+     "url": "https://doi.org/10.1093/ehjdh/ztae017",
+     "relation": "external-validation",
+     "n_subjects": 115,
+     "key_result": "autoEF (TRIO AI + KOSMOS EF) vs biplane Simpson's: r 0.79-0.90 by operator; LVEF<50% sens 86-95%, spec 87-94%",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Point-of-care AI-enhanced novice echocardiography for screening heart failure (PANES-HF)",
+     "first_author": "Huang W",
+     "journal": "Sci Rep",
+     "year": 2024,
+     "doi": "10.1038/s41598-024-62467-4",
+     "pmid": "38866831",
+     "url": "https://doi.org/10.1038/s41598-024-62467-4",
+     "relation": "real-world",
+     "n_subjects": 100,
+     "key_result": "Novices with Kosmos AI guidance + Us2.ai reporting: AUC 0.880 for LVEF<50%; sens 84.6%, spec 91.4%; LVEF reported by Us2.ai, not Kosmos Auto EF",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Effectiveness of traditional, artificial intelligence-assisted, and virtual reality training modalities for focused cardiac ultrasound skill acquisition: a randomised controlled study",
+     "first_author": "Lau YH",
+     "journal": "Ultrasound J",
+     "year": 2025,
+     "doi": "10.1186/s13089-025-00469-7",
+     "pmid": "41269495",
+     "url": "https://doi.org/10.1186/s13089-025-00469-7",
+     "relation": "clinical-trial",
+     "n_subjects": 66,
+     "key_result": "RCT of 66 medical students: Kosmos AI-enabled training non-inferior to instructor-led teaching on RACE score (mean 13.39 vs 15.77; non-inferiority p<0.001); shortest time to optimal A4C in AI arm (158 s, n.s.)",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Army Medic Performance in Trauma Sonography: The Impact of Artificial Intelligence Assistance in Focused Assessments With Sonography in Trauma-A Prospective Randomized Controlled Trial",
+     "first_author": "Hartline CPTAD",
+     "journal": "Mil Med",
+     "year": 2025,
+     "doi": "10.1093/milmed/usaf215",
+     "pmid": "40886703",
+     "url": "https://doi.org/10.1093/milmed/usaf215",
+     "relation": "clinical-trial",
+     "n_subjects": 60,
+     "key_result": "60 Army medics, Kosmos with vs without AI (FAST): no time difference (142.6 vs 143.9 s); higher adequacy for LUQ and pelvic views (p=.008, .004); higher confidence (median 4.0 vs 2.5)",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Validation of a hand-held ultrasound device in the evaluation of aortic stenosis",
+     "first_author": "Zubiaur J",
+     "journal": "Int J Cardiovasc Imaging",
+     "year": 2024,
+     "doi": "10.1007/s10554-024-03320-7",
+     "pmid": "39739253",
+     "url": "https://doi.org/10.1007/s10554-024-03320-7",
+     "relation": "external-validation",
+     "n_subjects": 101,
+     "key_result": "Kosmos CW Doppler mean aortic gradient vs reference echo: r 0.89, ICC 0.87; kappa 0.81 for severe AS (non-AI hardware validation)",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Feasibility and agreement study of a handheld ultrasound device with continuous-wave doppler in transcatheter aortic valve implantation patients",
+     "first_author": "Margarida de Castro A",
+     "journal": "Int J Cardiovasc Imaging",
+     "year": 2026,
+     "doi": "10.1007/s10554-026-03622-y",
+     "pmid": "41549199",
+     "url": "https://doi.org/10.1007/s10554-026-03622-y",
+     "relation": "external-validation",
+     "n_subjects": 64,
+     "key_result": "Kosmos CW Doppler in TAVI patients: mean gradient ICC 0.76, Vmax ICC 0.83, VTI ICC 0.87, LVOT VTI ICC 0.80 (non-AI hardware validation)",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Handheld Echocardiography Measurements Concordance and Findings Agreement: An Exploratory Study",
+     "first_author": "Haji-Hassan M",
+     "journal": "Diagnostics (Basel)",
+     "year": 2023,
+     "doi": "10.3390/diagnostics13050853",
+     "pmid": "36899997",
+     "url": "https://doi.org/10.3390/diagnostics13050853",
+     "relation": "real-world",
+     "n_subjects": 42,
+     "key_result": "Resident with Kosmos Torso-One vs expert on high-end system: measurement differences <=0.4 mm (n.s.); mitral regurgitation agreement kappa 0.53 (non-AI)",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [
+    {
+     "nct_id": "NCT06027164",
+     "title": "Kosmos Trio and Ejection Fraction Pivotal Study",
+     "status": "COMPLETED (n=153 actual; start 2023-08-04, completion 2024-05-16)",
+     "url": "https://clinicaltrials.gov/study/NCT06027164"
+    },
+    {
+     "nct_id": "NCT06468787",
+     "title": "Kosmos Anatomical Object Labeling and View Identification Pivotal Study",
+     "status": "COMPLETED (n=32 actual; Feb 2024)",
+     "url": "https://clinicaltrials.gov/study/NCT06468787"
+    },
+    {
+     "nct_id": "NCT07771231",
+     "title": "Kosmos PLAX EF Pivotal Study",
+     "status": "ACTIVE_NOT_RECRUITING (n=416; retrospective PLAX clips, Teichholz LVEF non-inferiority vs expert readers; 2026)",
+     "url": "https://clinicaltrials.gov/study/NCT07771231"
+    },
+    {
+     "nct_id": "NCT07771270",
+     "title": "Kosmos Guidance Performance Evaluation Data Annotation",
+     "status": "ACTIVE_NOT_RECRUITING (n=81 estimated; supplements ECHO-020 Trio guidance testing; 2026)",
+     "url": "https://clinicaltrials.gov/study/NCT07771270"
+    },
+    {
+     "nct_id": "NCT06355557",
+     "title": "Human vs Machine: a RCT Comparing Traditional In-person Instruction, AI Versus VR for Learning Basic CCE",
+     "status": "UNKNOWN (Tan Tock Seng Hospital; corresponds to Lau 2025 publication)",
+     "url": "https://clinicaltrials.gov/study/NCT06355557"
+    }
+   ],
+   "open_questions": [
+    "K233826 and K242321 were filed as 510(k) Statements: predicate devices, test-set size, sites, comparator and all performance metrics for Auto EF and AI FAST are not public.",
+    "Whether NCT06027164 (n=153) and NCT06468787 (n=32) are the pivotal datasets behind K233826 is inferred from sponsor and timing only; not confirmed by FDA documents.",
+    "Training-set size and composition for Auto EF / AI FAST / Trio are undisclosed in every source read.",
+    "Company AI EF validation (n=78, MGH and UCSF core labs) results are behind a download gate and were not read; metrics unknown.",
+    "AI Trio guidance/grading clearance status is unclear: K212100 says 'not yet cleared' (COVID-19 enforcement policy); the K233826 IFU names Auto EF and AI FAST but not Trio guidance; company lists Trio under Kosmos EDU. NCT07771270 (2026) is still evaluating Trio guidance.",
+    "K242321 IFU (Kosmos on Android) omits the Auto EF and AI FAST language and the ECG/DA text; whether the Android configuration carries the AI features under K233826 is not stated.",
+    "Kosmos PLAX EF (Teichholz) is under pivotal study in 2026 (NCT07771231) and is not covered by any K-number in this batch.",
+    "No peer-reviewed paper reports Kosmos Auto EF performance against the FDA reference standard; published validations are single-center (n=49 vs CMR; n=115 vs biplane Simpson's)."
+   ],
+   "sources": [
+    {
+     "fact": "K193518 IFU, predicates K180995/K170874, no clinical data required",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K193518.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K212100 predicates K193518/K202035; Lexsa, Torso-One, PW/CW added; AI EF workflow and Trio 'not yet cleared' (p. 6)",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K212100.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K233826 IFU naming Auto EF and AI FAST (page 3 image of the FDA PDF, read visually; not in extracted text)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233826.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K242321 IFU (Kosmos on Android; OB/GYN, TDI, color power Doppler)",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K242321.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Decision dates, product codes, applicant, third-party flag, statement/summary type",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Pivotal study registrations NCT06027164, NCT06468787, NCT07771231, NCT07771270",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies/NCT06027164",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Company AI feature list (Auto EF, AI FAST, Auto Doppler, Auto Preset, Bladder AI, Trio under Kosmos EDU) and 'AI tools running in real-time' on device",
+     "url_or_file": "https://echonous.com/product/kosmos-ultraportable-ultrasound/",
+     "verification": "company"
+    },
+    {
+     "fact": "Company benchmarking numbers (n=100 EF correlation 0.87, RMSD 7.51%)",
+     "url_or_file": "https://echonous.com/clinical-benchmarking-kosmos-platform/",
+     "verification": "company"
+    },
+    {
+     "fact": "Company AI EF validation design (n=78, MGH/UCSF core labs)",
+     "url_or_file": "https://echonous.com/ai_ef_lp/",
+     "verification": "company"
+    },
+    {
+     "fact": "Kosmos 2.2 iOS release with Auto Doppler / Auto Preset (April 2024)",
+     "url_or_file": "https://www.itnonline.com/content/echonous-announces-revolutionary-ai-enhancements-upcoming-kosmos-release-apple-ios",
+     "verification": "news"
+    },
+    {
+     "fact": "Feb 2026 OB/GYN and vascular expansion press release",
+     "url_or_file": "https://echonous.com/kosmos-ob-gyn-vascular-expansion/",
+     "verification": "company"
+    },
+    {
+     "fact": "Paper metadata and abstracts (PubMed E-utilities) and DOI resolution (Crossref) for all listed papers",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+     "verification": "peer_reviewed"
+    }
+   ]
+  },
+  {
+   "id": "exo-ai-platform",
+   "product_name": "Exo AI Platform (AIP001 / AIP002) and Strain AI (SAI001)",
+   "company": "Exo Imaging (Exo, Inc.)",
+   "company_website": "https://www.exo.inc",
+   "product_url": "https://www.exo.inc/ai",
+   "category": "lv-function-quantification",
+   "tags": [
+    "LVEF",
+    "GLS",
+    "IVC",
+    "wall thickness",
+    "IVSd",
+    "PWd",
+    "B-lines",
+    "A-lines",
+    "image quality",
+    "Quality AI",
+    "PCCP",
+    "SweepAI",
+    "handheld",
+    "POCUS",
+    "SaMD",
+    "API/module"
+   ],
+   "modality_scope": [
+    "TTE",
+    "POCUS",
+    "handheld",
+    "lung",
+    "abdominal (quality only)"
+   ],
+   "deployment": [
+    "on-device (Exo Iris handheld, 'on-edge, no Wi-Fi required')",
+    "software module / API integrated into a legally marketed ultrasound system",
+    "DICOM-input SaMD",
+    "Exo Works cloud/PACS for storage"
+   ],
+   "summary": "Exo's AI Platform is a DICOM-input software-as-a-medical-device (product code QIH) first cleared in November 2023 with LVEF AI (AP4, AP2, biplane and PLAX views) and Lung AI (A-line presence, B-line count). AI Platform 2.0 (August 2024) added interventricular septum and posterior wall thickness, IVC minimum/maximum diameter, real-time frame and clip Quality AI, delivery of the algorithms as an accessory API for integration into ultrasound systems, and a Predetermined Change Control Plan. Strain AI (November 2024) adds global longitudinal strain from the apical 4-chamber view with the Us2.v2 output as reference standard, and AI Platform 2.2 (Special 510(k), February 2026) extends Quality AI to abdominal upper-quadrant and pelvic views. The company markets these on the Exo Iris handheld as SweepAI running on-device.",
+   "intended_use_quote": "Exo AI Platform is a software as a medical device (SaMD) that helps qualified users with image-based assessment of ultrasound examinations in adult patients. It is designed to simplify workflow by helping trained healthcare providers evaluate, quantify, and generate reports for ultrasound images.",
+   "indications_for_use_quote": "AI Platform 2.2 is intended for noninvasive processing of ultrasound images to detect, measure, and calculate relevant medical parameters of structures and function of patients with suspected disease. In addition, it can provide Quality Score feedback to assist healthcare professionals, trained and qualified to conduct echocardiography, abdominal, and lung ultrasound scans in the current standard of care while acquiring ultrasound images. The device is intended to be used on images of adult patients.",
+   "embedded_ai_features": [
+    "LVEF AI: AI-assisted ejection fraction from AP4, AP2, biplane and PLAX views (K232501)",
+    "Lung AI: presence/absence of A-lines and B-line count, with per-frame and per-clip quality score (K232501; quality in K240953)",
+    "Cardiac AI wall thickness: IVSd and PWd from PLAX (K240953)",
+    "IVC AI: minimum diameter on inspiration and maximum diameter on expiration (K240953)",
+    "Quality AI: real-time per-frame and per-clip quality score for A4C, PLAX, lung (K240953) and abdominal upper-quadrant and pelvic views (K260217); retrospective recording of diagnostic-quality clip",
+    "Strain AI: global longitudinal strain from A4C clips, user can accept or reject (K242359)",
+    "Stroke volume (company-described output derived from LVEF module; not separately named in FDA summaries)"
+   ],
+   "clearances": [
+    {
+     "k_number": "K232501",
+     "decision_date": "2023-11-17",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K210053",
+      "K223771"
+     ],
+     "changes_summary": "Initial clearance of AI Platform (AIP001): DICOM-input SaMD with LVEF AI (AP4, AP2, biplane, PLAX) and Lung AI (A-lines, B-lines). Predicate LVivo Software Application (DiA, K210053); reference Philips Lumify (K223771). Deep CNNs for segmentation/landmark detection; manual editing allowed.",
+     "notable_flags": [
+      "SaMD",
+      "DICOM input",
+      "first Exo cardiac/lung AI clearance",
+      "PLAX-view EF"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K232501.pdf"
+    },
+    {
+     "k_number": "K240953",
+     "decision_date": "2024-08-05",
+     "pathway": "510(k) with PCCP",
+     "product_code": "QIH",
+     "predicates": [
+      "K222970",
+      "DEN190040",
+      "K232501"
+     ],
+     "changes_summary": "AI Platform 2.0 (AIP002): adds myocardial wall thickness (IVSd, PWd from PLAX), IVC Dmin/Dmax, real-time per-frame and per-clip Quality AI for A4C, PLAX and lung with retrospective capture of diagnostic-quality clips, and packaging of the algorithms/API as accessory modules for integration into legally marketed ultrasound systems. 'The A-Line, B-line and LVEF algorithms did not change during the development of the AI Platform 2.0 product and remain as per the cleared algorithms in K232501.' (p. 12). PCCP covers (A) architecture/pre-post-processing modifications and (B) new training data, with non-inferiority testing and manual (not automatic) retraining.",
+     "notable_flags": [
+      "PCCP",
+      "accessory API modules",
+      "real-time quality feedback",
+      "predicate LVivo IQS K222970",
+      "reference Caption Guidance DEN190040"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240953.pdf"
+    },
+    {
+     "k_number": "K242359",
+     "decision_date": "2024-11-20",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K210053",
+      "K233676"
+     ],
+     "changes_summary": "Strain AI (SAI001): new SaMD module computing global longitudinal strain from A4C clips, delivered as a module without built-in viewer for integration into a third-party ultrasound device; post-processing; user may accept or reject. Predicate LVivo (K210053); reference Us2.v2 (K233676), which also served as ground truth.",
+     "notable_flags": [
+      "GLS",
+      "ground truth from reference device Us2.v2",
+      "module for third-party integration"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242359.pdf"
+    },
+    {
+     "k_number": "K260217",
+     "decision_date": "2026-02-24",
+     "pathway": "510(k) with PCCP",
+     "product_code": "QIH",
+     "predicates": [
+      "K240953"
+     ],
+     "changes_summary": "Special 510(k) for AI Platform 2.2 (AIP002): extends Quality AI to abdominal upper-quadrant and pelvic views; intended use, architecture, workflow unchanged. The K240953 PCCP is retained but 'the subject modifications described in this submission are outside the scope of the PCCP' (p. 7). Lung and cardiac functionalities unchanged from K240953.",
+     "notable_flags": [
+      "Special 510(k)",
+      "PCCP retained",
+      "abdominal quality AI",
+      "QMSR cited in letter"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf26/K260217.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K232501",
+     "endpoint": "LVEF agreement vs expert reference, parasternal long-axis view",
+     "metric": "ICC / RMSD",
+     "value": "ICC 0.93 (0.89-0.96); RMSD 6.12 (5.30-8.36)",
+     "comparator": "average ejection fraction of three experts",
+     "n_studies": null,
+     "n_patients": 151,
+     "n_sites": null,
+     "dataset_description": "LVEF function evaluated in 151 subjects; cart-based and portable devices, 1.2-4 MHz; multiple clinical sites in metropolitan cities; gender, age 20-96, BMI 15.3-52.8, ethnicity",
+     "subgroup_notes": "Performance reported as consistent across ultrasound manufacturer, gender, BMI and clinical confounders (HFrEF, COVID-19, COPD, pneumonia, pulmonary edema, CAD, cardiomyopathy); no subgroup numbers given",
+     "quote": "Ejection Fraction Parasternal Long-axis 0.93 (0.89 – 0.96) 6.12 (5.30 – 8.36)",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232501",
+     "endpoint": "LVEF agreement vs expert reference, apical biplane",
+     "metric": "ICC / RMSD",
+     "value": "ICC 0.95 (0.90-0.98); RMSD 4.81 (3.99-7.25)",
+     "comparator": "average ejection fraction of three experts",
+     "n_studies": null,
+     "n_patients": 151,
+     "n_sites": null,
+     "dataset_description": "as above",
+     "subgroup_notes": null,
+     "quote": "Ejection Fraction Apical Biplane 0.95 (0.90 – 0.98) 4.81 (3.99 – 7.25)",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232501",
+     "endpoint": "LVEF agreement vs expert reference, apical 4-chamber single plane",
+     "metric": "ICC / RMSD",
+     "value": "ICC 0.92 (0.88-0.95); RMSD 6.06 (5.27-8.20)",
+     "comparator": "average ejection fraction of three experts",
+     "n_studies": null,
+     "n_patients": 151,
+     "n_sites": null,
+     "dataset_description": "as above",
+     "subgroup_notes": null,
+     "quote": "Ejection Fraction Apical (AP4) Single Plane 0.92 (0.88 – 0.95) 6.06 (5.27 – 8.20)",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232501",
+     "endpoint": "LVEF agreement vs expert reference, apical 2-chamber single plane",
+     "metric": "ICC / RMSD",
+     "value": "ICC 0.92 (0.87-0.95); RMSD 6.25 (5.33-8.82)",
+     "comparator": "average ejection fraction of three experts",
+     "n_studies": null,
+     "n_patients": 151,
+     "n_sites": null,
+     "dataset_description": "as above",
+     "subgroup_notes": null,
+     "quote": "Ejection Fraction Apical (AP2) Single Plane 0.92 (0.87 – 0.95) 6.25 (5.33 – 8.82)",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232501",
+     "endpoint": "LVEF agreement vs expert reference, all views pooled",
+     "metric": "ICC / RMSD",
+     "value": "ICC 0.93 (0.91-0.95); RMSD 5.90 (5.35-7.23)",
+     "comparator": "average ejection fraction of three experts",
+     "n_studies": null,
+     "n_patients": 151,
+     "n_sites": null,
+     "dataset_description": "as above",
+     "subgroup_notes": null,
+     "quote": "All 0.93 (0.91 – 0.95) 5.90 (5.35 – 7.23)",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232501",
+     "endpoint": "A-line presence agreement",
+     "metric": "Cohen's kappa",
+     "value": "kappa = 0.84",
+     "comparator": "consensus of two or more experts",
+     "n_studies": null,
+     "n_patients": 125,
+     "n_sites": null,
+     "dataset_description": "Lung function evaluated in 125 subjects, routine clinical practice, cart-based and portable devices, 1.5-7 MHz",
+     "subgroup_notes": null,
+     "quote": "A-lines Kappa = 0.84",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232501",
+     "endpoint": "B-line count agreement",
+     "metric": "ICC",
+     "value": "ICC = 0.97",
+     "comparator": "average B-line count of three experts",
+     "n_studies": null,
+     "n_patients": 125,
+     "n_sites": null,
+     "dataset_description": "as above",
+     "subgroup_notes": null,
+     "quote": "B-lines ICC = 0.97",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240953",
+     "endpoint": "Interventricular septal thickness (IVSd) agreement",
+     "metric": "ICC",
+     "value": "0.93 (0.89-0.96)",
+     "comparator": "average measurement of three experts",
+     "n_studies": null,
+     "n_patients": 100,
+     "n_sites": null,
+     "dataset_description": "scans of 100 subjects, cart-based and portable devices, multiple metropolitan clinical sites; test data separate from training/tuning",
+     "subgroup_notes": null,
+     "quote": "InterVentricular Septum (IVSd) 0.93 (0.89 – 0.96)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240953",
+     "endpoint": "Posterior wall thickness (PWd) agreement",
+     "metric": "ICC",
+     "value": "0.94 (0.89-0.97)",
+     "comparator": "average measurement of three experts",
+     "n_studies": null,
+     "n_patients": 100,
+     "n_sites": null,
+     "dataset_description": "as above",
+     "subgroup_notes": null,
+     "quote": "Posterior Wall (PWd) 0.94 (0.89 – 0.97)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240953",
+     "endpoint": "IVC minimum diameter agreement",
+     "metric": "ICC",
+     "value": "0.93 (0.90-0.95)",
+     "comparator": "average measurement of three experts",
+     "n_studies": null,
+     "n_patients": 100,
+     "n_sites": null,
+     "dataset_description": "IVC AI evaluated on scans of 100 subjects",
+     "subgroup_notes": null,
+     "quote": "IVC Dmin 0.93 (0.90 – 0.95)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240953",
+     "endpoint": "IVC maximum diameter agreement",
+     "metric": "ICC",
+     "value": "0.94 (0.90-0.96)",
+     "comparator": "average measurement of three experts",
+     "n_studies": null,
+     "n_patients": 100,
+     "n_sites": null,
+     "dataset_description": "as above",
+     "subgroup_notes": null,
+     "quote": "IVC Dmax 0.94 (0.90 – 0.96)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240953",
+     "endpoint": "Quality AI agreement with sonographer quality rating (retrospective, cardiac/lung)",
+     "metric": "ICC",
+     "value": "frames ICC 0.94 (95% CI 0.94-0.95); clips ICC 0.94 (95% CI 0.92-0.95)",
+     "comparator": "quality rating by experienced sonographers per frame and per clip",
+     "n_studies": 226,
+     "n_patients": 184,
+     "n_sites": null,
+     "dataset_description": "226 clips (29,732 frames) from 184 patients, various ultrasound devices and cardiac pathologies",
+     "subgroup_notes": null,
+     "quote": "Total of 226 clips (29,732 frames) were used in this test. The overall agreement between the Quality AI and quality rated by the experienced sonographers was ICC = 0.94 (95% CI .94 – .95) for frames and ICC = 0.94 (95% CI .92 – .95) for clips.",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K240953",
+     "endpoint": "Prospective real-time Quality AI vs expert ACEP score >= 3 (lung, A4C, PLAX)",
+     "metric": "% agreement",
+     "value": "98.3% of expert-diagnostic clips rated at least 'Minimum criteria met' by Clip Quality AI; 98.0% of AI-acceptable scans deemed diagnostic by experts",
+     "comparator": "expert readers, ACEP image quality score >= 3",
+     "n_studies": 396,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "396 lung and cardiac scans by 26 users of varied experience in POC settings, including 18 novices with two hours of training",
+     "subgroup_notes": "novice subgroup not reported separately",
+     "quote": "In total, 396 lung and cardiac scans were done by 26 users with a wide range of ultrasound experience in POC settings, including 18 novice users who received two hours of training. 98.3% of the clips rated as ACEP quality of 3 or above by expert readers, also received at least “Minimum criteria met for diagnosis” image quality by Clip Quality AI. Additionally, 98.0% of scans that were considered as “Minimal criteria met for diagnosis” or “good” by Quality AI were also deemed diagnostic by experts (ACEP score of 3 or higher).",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242359",
+     "endpoint": "Global longitudinal strain agreement vs reference device",
+     "metric": "ICC / RMSD",
+     "value": "ICC 0.95 (0.91-0.97); RMSD 2.76 (2.44-3.17) [strain units not stated]",
+     "comparator": "Us2.v2 (K233676) GLS output as ground truth",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Subject count missing from the summary text ('evaluated with subjects'); routine clinical practice, cart-based and portable devices 1.2-4 MHz; age 21-96; multiple metropolitan sites; test data from independent clinical sites separate from training",
+     "subgroup_notes": "Consistency claimed across manufacturer, gender, image source, age and BMI; no subgroup numbers",
+     "quote": "Global Longitudinal Strain (GLS) 0.95 (0.91 – 0.97) 2.76 (2.44 – 3.17)",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K260217",
+     "endpoint": "Abdominal Quality AI agreement with sonographer quality rating (retrospective)",
+     "metric": "ICC",
+     "value": "frames ICC 0.94 (0.94-0.95); clips ICC 0.95 (0.94-0.96)",
+     "comparator": "quality rating by experienced sonographers per frame and per clip",
+     "n_studies": 200,
+     "n_patients": 184,
+     "n_sites": null,
+     "dataset_description": "200 clips (29,371 frames) from 184 patients, various ultrasound devices and abdominal pathologies",
+     "subgroup_notes": null,
+     "quote": "A total of 200 clips (29,371 frames) were used in this test. The overall agreement between the Quality AI and quality rated by the experienced sonographers was ICC = 0.94 (.94 – .95) for frames and ICC = 0.95 (.94 – .96) for clips.",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K260217",
+     "endpoint": "Prospective real-time abdominal Quality AI vs expert ACEP score >= 3 (pelvic, upper quadrants)",
+     "metric": "% agreement",
+     "value": "96.6% of expert-diagnostic clips rated at least 'Minimum criteria met' by Clip Quality AI; 96.1% of AI-acceptable scans deemed diagnostic by experts",
+     "comparator": "expert readers, ACEP image quality score >= 3",
+     "n_studies": 186,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "186 abdominal scans by 12 users in POC settings, including 8 novices with two hours of training",
+     "subgroup_notes": null,
+     "quote": "In total, 186 abdomen scans were acquired by 12 users with a wide range of ultrasound experience in POC settings, including 8 novice users who received two hours of training. 96.6% of the clips rated as ACEP quality of 3 or above by expert readers, also received at least “Minimum criteria met for diagnosis” image quality by Clip Quality AI. Additionally, 96.1% of scans that were considered as “Minimal criteria met for diagnosis” or “good” by Quality AI were also deemed diagnostic by experts (ACEP score of 3 or higher).",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K232501",
+     "endpoint": "ExoAI LVEF vs clinical-report LVEF, by view (retrospective)",
+     "metric": "RMSE / correlation / accuracy for EF<50%",
+     "value": "RMSE 7.58% (A2C), 7.45% (A4C), 7.29% (PLAX); r 0.79, 0.75, 0.89; low-EF accuracy 83%, 80%, 91%",
+     "comparator": "ejection fraction from the clinical echocardiography report",
+     "n_studies": null,
+     "n_patients": 441,
+     "n_sites": null,
+     "dataset_description": "441 patients (70% male, age 67.3 +/- 15.3, BMI 29.5 +/- 7.4), retrospective",
+     "subgroup_notes": null,
+     "quote": "ExoAI achieved a root mean squared error of 7.58% in A2C, 7.45% in A4C, and 7.29% in PLAX, and correlations of 0.79, 0.75, and 0.89, respectively. As for the detection of low EF values (EF < 50%), ExoAI achieved an accuracy of 83% in A2C, 80% in A4C, and 91% in PLAX.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K232501",
+     "endpoint": "ExoLungAI A-line and B-line detection/quantification (ICU COVID-19 cohort)",
+     "metric": "sensitivity / specificity / weighted kappa / ICC",
+     "value": "A-line sens 91%, spec 81%; B-line sens 84%, spec 86%; B-line count weighted kappa 0.77 (95% CI 0.74-0.80), ICC 0.87 (0.85-0.89)",
+     "comparator": "expert ground truth",
+     "n_studies": 692,
+     "n_patients": 48,
+     "n_sites": 1,
+     "dataset_description": "692 lung ultrasound scans from 48 ICU patients admitted for COVID-19 symptoms",
+     "subgroup_notes": null,
+     "quote": "ExoLungAI achieved a sensitivity of 91% and specificity of 81% for A-line detection. For B-line detection, it attained a sensitivity of 84% and specificity of 86%. In quantifying B-lines, the algorithm achieved a weighted kappa score of 0.77 (95% CI 0.74 to 0.80) and an ICC of 0.87 (95% CI 0.85 to 0.89)",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K240953",
+     "endpoint": "Novice-acquired Exo Iris POCUS-AI LVEF in ICU: reliability and detection of LVEF <= 40%",
+     "metric": "ICC / sensitivity / specificity",
+     "value": "inter-rater ICC 0.88-0.94; specificity 90% (PLAX) for LVEF <= 40%; sensitivity 56-70%; images sufficient in 96% of patients within 5 min",
+     "comparator": "expert echo sonographer LVEF",
+     "n_studies": 80,
+     "n_patients": 75,
+     "n_sites": 1,
+     "dataset_description": "30 novices scanned 10 ICU patients (80 scans) with Exo Iris AI guidance; sonographer scanned 65 further patients with POCUS-AI vs conventional protocol",
+     "subgroup_notes": "PLAX views acquired faster than A4C (1.5 vs 2.3 min)",
+     "quote": "Inter-rater reliability of LVEF estimation was very high (ICC 0.88-0.94) whether images were obtained by novices or experts. In n = 65 patients, POCUS-AI LVEF was highly specific for a decreased LVEF ≤ 40% (SP = 90% for PLAX) but only moderately sensitive (SN = 56-70%).",
+     "page": null,
+     "verification": "peer_reviewed"
+    }
+   ],
+   "training_data": {
+    "disclosed": true,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "FDA summaries give no training-set size; they state only that test data were 'entirely separated from the training/validation datasets' and drawn from data sources different from the training sources (K232501 p. 7; K242359 p. 7 adds 'acquired from independent clinical sites'). Company press release (April 23, 2024) states the AI was trained on 'over 100,000 images from point-of-care ultrasound (POCUS) exams performed by users in real-world settings, including emergency rooms and critical care units.' The K240953 PCCP permits augmenting training data with manual retraining.",
+    "source": "https://www.exo.inc/article/exo-launches-fda-cleared-ai-on-exo-iris-to-address-heart-failure",
+    "verification": "company"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": 151,
+    "n_sites": null,
+    "description": "K232501: LVEF tested on 151 subjects and lung on 125 subjects from 'multiple clinical sites in metropolitan cities with diverse racial patient populations', gender, age 20-96, BMI 15.3-52.8, cart-based and portable scanners; ground truth = mean of three experts. K240953: wall thickness and IVC on 100 subjects each; Quality AI on 184 patients/226 clips retrospective plus 396 prospective scans by 26 users. K242359: GLS subject count not legible in summary; ground truth = Us2.v2. K260217: abdominal Quality AI on 184 patients/200 clips plus 186 prospective scans by 12 users.",
+    "independent_of_training": true,
+    "source": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K232501.txt (p. 7); K240953.txt (p. 9-10); K242359.txt (p. 7); K260217.txt (p. 9-10)",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Company AI page reproduces the Vega 2024 Diagnostics LVEF results (RMSE 7.58% A2C, 7.45% A4C, 7.29% PLAX; low-EF accuracy 83/80/91%) as its published validation; states SweepAI runs 'without internet or cloud reliance' while Thyroid AI is cloud-based.",
+     "source_url": "https://www.exo.inc/ai",
+     "verification": "company"
+    },
+    {
+     "description": "Press release April 23, 2024: cardiac (LVEF, stroke volume; PLAX and A4C) and lung (B-lines) AI launched on Exo Iris; 'five different applications—cardiac, lung, bladder, hip and thyroid' cleared; trained on 'over 100,000 images' from real-world POCUS exams.",
+     "source_url": "https://www.exo.inc/article/exo-launches-fda-cleared-ai-on-exo-iris-to-address-heart-failure",
+     "verification": "company"
+    },
+    {
+     "description": "Press release December 4, 2024: IVC collapsibility and posterior/septal wall thickness added to Exo Iris (SweepAI); 'Exo's AI runs on-edge—no Wi-Fi required'; no performance data.",
+     "source_url": "https://www.exo.inc/article/breakthrough-AI-for-hemodynamics-and-hypertension-added-to-ExoIris",
+     "verification": "company"
+    },
+    {
+     "description": "Press release April 2, 2025: 510(k)-cleared GLS on Exo Iris described as the company's 10th FDA-cleared AI application and 'first and only handheld ultrasound to have real-time, on-device GLS'; no performance data.",
+     "source_url": "https://www.exo.inc/article/breakthrough-ai-indicator-for-hfpef-and-cardiotoxicity-added-to-exo-iris",
+     "verification": "company"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Assessment of an Artificial Intelligence Tool for Estimating Left Ventricular Ejection Fraction in Echocardiograms from Apical and Parasternal Long-Axis Views",
+     "first_author": "Vega R",
+     "journal": "Diagnostics (Basel)",
+     "year": 2024,
+     "doi": "10.3390/diagnostics14161719",
+     "pmid": "39202209",
+     "url": "https://doi.org/10.3390/diagnostics14161719",
+     "relation": "algorithm-development",
+     "n_subjects": 441,
+     "key_result": "ExoAI LVEF vs clinical report: RMSE 7.58% A2C, 7.45% A4C, 7.29% PLAX; r 0.79/0.75/0.89; EF<50% accuracy 83/80/91%",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Enhancing Lung Ultrasound Diagnostics: A Clinical Study on an Artificial Intelligence Tool for the Detection and Quantification of A-Lines and B-Lines",
+     "first_author": "Nekoui M",
+     "journal": "Diagnostics (Basel)",
+     "year": 2024,
+     "doi": "10.3390/diagnostics14222526",
+     "pmid": "39594192",
+     "url": "https://doi.org/10.3390/diagnostics14222526",
+     "relation": "external-validation",
+     "n_subjects": 48,
+     "key_result": "ExoLungAI on 692 ICU COVID-19 scans: A-line sens 91%/spec 81%; B-line sens 84%/spec 86%; B-line count kappa 0.77, ICC 0.87",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "AI-Augmented Point of Care Ultrasound in Intensive Care Unit Patients: Can Novices Perform a \"Basic Echo\" to Estimate Left Ventricular Ejection Fraction in This Acute-Care Setting?",
+     "first_author": "Gallant C",
+     "journal": "J Clin Med",
+     "year": 2025,
+     "doi": "10.3390/jcm14092899",
+     "pmid": "40363931",
+     "url": "https://doi.org/10.3390/jcm14092899",
+     "relation": "real-world",
+     "n_subjects": 75,
+     "key_result": "30 novices with Exo Iris AI guidance obtained LVEF-sufficient images in 96% of ICU patients; ICC 0.88-0.94; LVEF<=40% specificity 90% (PLAX), sensitivity 56-70%",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "AI Enhances Lung Ultrasound Interpretation Across Clinicians with Varying Expertise Levels",
+     "first_author": "Seyed Bolouri SE",
+     "journal": "Diagnostics (Basel)",
+     "year": 2025,
+     "doi": "10.3390/diagnostics15172145",
+     "pmid": "40941633",
+     "url": "https://doi.org/10.3390/diagnostics15172145",
+     "relation": "other",
+     "n_subjects": 359,
+     "key_result": "Exo-affiliated MRMC study of pleural effusion/consolidation AI (AUC 0.917 to 0.960 and 0.870 to 0.941 with AI); this pleural effusion AI is a separate Exo clearance not among the K-numbers in this batch",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Overcoming barriers in the use of artificial intelligence in point of care ultrasound",
+     "first_author": "Vega R",
+     "journal": "NPJ Digit Med",
+     "year": 2025,
+     "doi": "10.1038/s41746-025-01633-y",
+     "pmid": "40253547",
+     "url": "https://doi.org/10.1038/s41746-025-01633-y",
+     "relation": "review",
+     "n_subjects": null,
+     "key_result": "Exo-authored perspective on population bias, explainability and training for POCUS AI; no performance data",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [],
+   "open_questions": [
+    "K242359 (Strain AI): the number of test subjects is missing from the summary text ('The Strain function was evaluated with subjects'); n unknown. RMSD 2.76 is reported without units.",
+    "Training-set sizes are absent from all four FDA summaries; the 'over 100,000 images' figure is a company press-release claim and its split across LVEF, lung, wall-thickness, IVC, GLS and quality models is unknown.",
+    "Number of test sites is never stated ('multiple clinical sites in metropolitan cities'); ultrasound vendors are not named.",
+    "K240953 and K260217 both cite retrospective Quality AI cohorts of '184 patients'; whether these are the same patients is not stated.",
+    "Whether the 441-patient Vega 2024 dataset overlaps the 151-subject FDA LVEF test set is unknown.",
+    "GLS ground truth is the Us2.v2 algorithm output rather than expert speckle-tracking; no expert-reference GLS validation was found.",
+    "Subgroup performance (gender, BMI, image quality, vendor) is asserted as 'consistent' but no subgroup numbers are given in any summary.",
+    "Company counts of 9-10 cleared AI applications include bladder, hip, thyroid and pleural effusion/consolidation clearances that are not among the K-numbers in this batch; their K-numbers were not researched here.",
+    "No registered clinical trial specific to the Exo AI Platform or Strain AI was identified on clinicaltrials.gov (searches for Exo Iris / Exo Imaging returned only hip-dysplasia and unrelated studies)."
+   ],
+   "sources": [
+    {
+     "fact": "K232501 IFU, predicates, LVEF/lung performance tables, dataset description",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K232501.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K240953 wall thickness, IVC, Quality AI results, PCCP, accessory modules",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K240953.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K242359 Strain AI IFU, predicates, GLS ICC/RMSD, ground truth = reference device",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K242359.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K260217 Special 510(k), abdominal Quality AI results, PCCP scope statement",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K260217.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "Decision dates, product codes, applicants, clearance type (Special for K260217)",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Company AI application list, on-device vs cloud statements",
+     "url_or_file": "https://www.exo.inc/ai",
+     "verification": "company"
+    },
+    {
+     "fact": "Exo Iris on-device SweepAI statement",
+     "url_or_file": "https://www.exo.inc/iris",
+     "verification": "company"
+    },
+    {
+     "fact": "April 2024 launch press release; '100,000 images' training claim; five cleared applications",
+     "url_or_file": "https://www.exo.inc/article/exo-launches-fda-cleared-ai-on-exo-iris-to-address-heart-failure",
+     "verification": "company"
+    },
+    {
+     "fact": "December 2024 IVC / wall thickness press release; 'on-edge' statement",
+     "url_or_file": "https://www.exo.inc/article/breakthrough-AI-for-hemodynamics-and-hypertension-added-to-ExoIris",
+     "verification": "company"
+    },
+    {
+     "fact": "April 2025 GLS press release; 10th cleared AI application",
+     "url_or_file": "https://www.exo.inc/article/breakthrough-ai-indicator-for-hfpef-and-cardiotoxicity-added-to-exo-iris",
+     "verification": "company"
+    },
+    {
+     "fact": "Paper metadata and abstracts (PubMed E-utilities) and DOI resolution (Crossref) for all listed papers",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "clinicaltrials.gov v2 searches for Exo Iris / Exo Imaging / Exo Inc returned no product-specific trials",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies?query.term=%22Exo+Iris%22+OR+%22Exo+Imaging%22+OR+%22Exo+Inc%22",
+     "verification": "fda_database"
+    }
+   ]
+  }
+ ],
+ "notes": "All eight FDA text files were read in full. K233826 and K242321 (EchoNous) are 510(k) Statements: only the FDA letter and Indications for Use are public, so predicates and performance data for Kosmos Auto EF / AI FAST are unavailable; the K233826 IFU page did not extract as text and was read from a rendered image of the FDA PDF (page 3). Exo summaries were extracted one word per line; quotes are reproduced with normalized whitespace. All 13 papers were confirmed via both PubMed esummary/efetch and Crossref (verification recorded as doi_resolved; PMIDs also resolved). Performance claims are limited to FDA-summary and peer-reviewed sources; company-reported numbers are kept in prior_validations with 'company' verification. Training-set size is disclosed only by an Exo press release ('over 100,000 images'), not by any FDA summary."
+}

@@ -1,0 +1,1032 @@
+{
+  "batch_id": "caption",
+  "families": [
+    {
+      "id": "caption-guidance",
+      "product_name": "Caption Guidance / Cardiac Guidance (marketed as Caption AI)",
+      "company": "GE HealthCare (Caption Health, Inc.; originally Bay Labs, Inc.)",
+      "company_website": "https://www.gehealthcare.com",
+      "product_url": "https://www.gehealthcare.com/en-us/products/ultrasound/handheld-ultrasound/vscan-air-caption-ai",
+      "category": "acquisition-guidance",
+      "tags": [
+        "acquisition guidance",
+        "prescriptive guidance",
+        "quality meter",
+        "auto-capture",
+        "novice users",
+        "POCUS",
+        "Breakthrough Device",
+        "De Novo",
+        "PCCP",
+        "10 standard 2D-TTE views"
+      ],
+      "modality_scope": [
+        "TTE",
+        "POCUS",
+        "handheld"
+      ],
+      "deployment": [
+        "ultrasound-system-embedded",
+        "on-device",
+        "handheld (Vscan Air SL mobile app)",
+        "GE Venue family",
+        "Terason uSmart 3200t Plus (original platform)"
+      ],
+      "summary": "Software accessory that gives real-time prescriptive probe-movement guidance, a quality meter, auto-capture and save-best-clip for 10 standard 2D-TTE views on a compatible ultrasound system. First AI acquisition-guidance device authorized by FDA (De Novo DEN190040, 2020-02-07, Breakthrough-designated, product code QJU) with an authorized PCCP that was revised in K201992 and K243065; pivotal prospective study of 8 nurses scanning 240 patients at 2 US sites met all 4 primary endpoints (LV size/function and pericardial effusion 98.8%, RV size 92.5%). Renamed Cardiac Guidance in K243065 after GE HealthCare acquired Caption Health in 2023.",
+      "intended_use_quote": "The Caption Guidance software is intended to assist medical professionals in the acquisition of cardiac ultrasound images. Caption Guidance software is an accessory to compatible general purpose diagnostic ultrasound systems.",
+      "indications_for_use_quote": "The Caption Guidance software is intended to assist medical professionals in the acquisition of cardiac ultrasound images. Caption Guidance software is an accessory to compatible general purpose diagnostic ultrasound systems. The Caption Guidance software is indicated for use in two-dimensional transthoracic echocardiography (2D-TTE) for adult patients, specifically in the acquisition of the following standard views: Parasternal Long-Axis (PLAX), Parasternal Short-Axis at the Aortic Valve (PSAX-AV), Parasternal Short-Axis at the Mitral Valve (PSAX-MV), Parasternal Short-Axis at the Papillary Muscle (PSAX-PM), Apical 4-Chamber (AP4), Apical 5-Chamber (AP5), Apical 2-Chamber (AP2), Apical 3-Chamber (AP3), Subcostal 4-Chamber (SubC4), and Subcostal Inferior Vena Cava (SC-IVC).",
+      "embedded_ai_features": [
+        "Quality Meter (real-time predicted diagnostic quality of the clip)",
+        "Prescriptive Guidance (probe maneuver instructions emulating a sonographer)",
+        "Auto-Capture (automatic clip recording when predicted diagnostic)",
+        "Save Best Clip (retrospective recording of highest-quality clip)",
+        "PCCP-planned: additional 2D TTE views, patient positioning/breathing guidance, prescriptive guidance audio, mobile-platform UI (K243065)"
+      ],
+      "clearances": [
+        {
+          "k_number": "DEN190040",
+          "decision_date": "2020-02-07",
+          "pathway": "De Novo",
+          "product_code": "QJU",
+          "predicates": [],
+          "changes_summary": "Initial authorization. Created 21 CFR 892.2100 (radiological acquisition and/or optimization guidance system) with special controls. Labeled for the Terason uSmart 3200t Plus (K150533) with the 4V2A probe. Included an initial predetermined change control plan for future algorithm improvements. Breakthrough Device designated (granted 2018 per company press release).",
+          "notable_flags": [
+            "De Novo",
+            "Breakthrough Device",
+            "PCCP",
+            "special controls",
+            "on-device",
+            "prescription use"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf19/DEN190040.pdf"
+        },
+        {
+          "k_number": "K200755",
+          "decision_date": "2020-04-16",
+          "pathway": "510(k)",
+          "product_code": "QJU",
+          "predicates": [
+            "DEN190040"
+          ],
+          "changes_summary": "Updated version with device enhancements: additional prescriptive guidance for the users, information for users via the UI, optimized quality meter and automated image capture, ability to set the scanning convention to that of the user's facility, ability to set custom protocols and skip portions of protocols. Summative human-factors testing with 16 users. Company press release describes the review as completed in 25 days during the COVID-19 pandemic.",
+          "notable_flags": [
+            "expedited review during COVID-19 (news)",
+            "on-device"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200755.pdf"
+        },
+        {
+          "k_number": "K201992",
+          "decision_date": "2020-09-18",
+          "pathway": "510(k) with PCCP",
+          "product_code": "QJU",
+          "predicates": [
+            "K200755"
+          ],
+          "changes_summary": "Device identical to predicate; the purpose of the submission was to modify the predetermined change control plan (PCCP) outlining anticipated modifications to the software. All algorithm modifications are trained, tuned and locked before release; no adaptive/continuous learning.",
+          "notable_flags": [
+            "PCCP",
+            "locked algorithm"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K201992.pdf"
+        },
+        {
+          "k_number": "K243065",
+          "decision_date": "2025-01-15",
+          "pathway": "510(k) with PCCP",
+          "product_code": "QJU",
+          "predicates": [
+            "K201992"
+          ],
+          "changes_summary": "Trade name changed to Cardiac Guidance. Focused review of an updated PCCP expanding on K201992: additional standard cardiac subset views, compatibility with additional ultrasound systems and screen sizes including mobile platforms, new prescriptive-guidance types (patient positioning, breathing, combined probe movements, pressure, audio guidance), plus two new validation tests (non-expert validation protocol and human factors testing). Intended use and indications unchanged.",
+          "notable_flags": [
+            "PCCP",
+            "renamed Cardiac Guidance",
+            "mobile platforms"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243065.pdf"
+        }
+      ],
+      "performance_claims": [
+        {
+          "k_number": "DEN190040",
+          "endpoint": "Auto-Capture clip diagnostic quality, sonographer (specialist) study",
+          "metric": "specificity (% of auto-captured clips rated diagnostic)",
+          "value": "97.85%",
+          "comparator": "3 expert cardiologists grading each clip on the ACEP echo quality scale",
+          "n_studies": null,
+          "n_patients": 50,
+          "n_sites": null,
+          "dataset_description": "Prospective descriptive (non-pivotal) study: 50 patients scanned by sonographers with Caption Guidance (study exam) followed by unassisted reference scan on the same equipment",
+          "subgroup_notes": null,
+          "quote": "Importantly, the high specificity of the auto-capture feature (97.85% of auto-captured clips were diagnostic) demonstrated that a registered sonographer can rely on the auto-capture feature when using Caption Guidance.",
+          "page": 5,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "DEN190040",
+          "endpoint": "Pivotal nurse study primary endpoints: % of RN-acquired exams of sufficient quality for qualitative visual assessment",
+          "metric": "% of scans of sufficient quality (MRMC CI)",
+          "value": "LV size 98.8% (96.7%, 100%); global LV function 98.8% (96.7%, 100%); RV size 92.5% (88.1%, 96.9%); non-trivial pericardial effusion 98.8% (96.7%, 100%)",
+          "comparator": "Panel of 5 expert cardiologist readers, blinded; paired sonographer control exam without Caption Guidance",
+          "n_studies": null,
+          "n_patients": 240,
+          "n_sites": 2,
+          "dataset_description": "Prospective pivotal study; 8 registered nurses without echo experience each scanned 30 patients (10-view 2D-TTE protocol) on a Terason system with Caption Guidance; site count (2: Northwestern Memorial Hospital, Minneapolis Heart Institute) from the JAMA Cardiology publication, not the FDA summary",
+          "subgroup_notes": "No subgroup results reported in the FDA decision summary",
+          "quote": "The four primary endpoints were satisfied and demonstrated the clinical utility of Caption Guidance for users without specialized echocardiography training. Specifically, the eight (8) RNs acquired echocardiographic exams of sufficient image quality to make clinical assessments in the following proportion of study exams conducted: ... Qualitative Visual Assessment of Left Ventricular Size 98.8% (96.7%, 100%) ... Global Left Ventricular Function 98.8% (96.7%, 100%) ... Right Ventricular Size 92.5% (88.1%, 96.9%) ... Non-Trivial Pericardial Effusion 98.8% (96.7%, 100%)",
+          "page": 6,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "DEN190040",
+          "endpoint": "Pivotal nurse study secondary endpoints: % of RN-acquired exams of sufficient quality",
+          "metric": "% of scans of sufficient quality (MRMC 95% CI)",
+          "value": "IVC size 57.5% (41.5%, 73.5%); RV function 91.3% (85.7%, 96.8%); LA size 94.6% (90.7%, 98.5%); aortic valve 91.7% (88.0%, 95.3%); mitral valve 96.3% (93.9%, 98.6%); tricuspid valve 83.3% (77.0%, 89.7%)",
+          "comparator": "Panel of 5 expert cardiologists",
+          "n_studies": null,
+          "n_patients": 240,
+          "n_sites": 2,
+          "dataset_description": "Same pivotal dataset; secondary endpoints descriptive, no hypothesis testing",
+          "subgroup_notes": null,
+          "quote": "Qualitative visual assessment of inferior vena cava size 57.5% (41.5%, 73.5%) ... right ventricular function 91.3% (85.7%, 96.8%) ... left atrial size 94.6% (90.7%, 98.5%) ... aortic valve 91.7% (88.0%, 95.3%) ... mitral valve 96.3% (93.9%, 98.6%) ... tricuspid valve 83.3% (77.0%, 89.7%)",
+          "page": 6,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "DEN190040",
+          "endpoint": "Agreement of qualitative diagnostic decision between nurse (study) and sonographer (control) exams",
+          "metric": "% agreement (range across parameters)",
+          "value": "Primary clinical parameters 92.5% to 99.6%; secondary parameters 83.2% to 95.2%",
+          "comparator": "Sonographer-acquired control exam read by the same cardiologist panel",
+          "n_studies": null,
+          "n_patients": 240,
+          "n_sites": 2,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "For primary clinical parameters, the range of agreement in qualitative visual assessment was 92.5% to 99.6%. Similarly, for secondary clinical parameters, the range was 83.2% to 95.2%.",
+          "page": 7,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "DEN190040",
+          "endpoint": "Per-view diagnostic-quality clip rate for RN-acquired clips",
+          "metric": "% of clips of diagnostic quality (MRMC CI)",
+          "value": "PLAX 92.1% (87.9, 96.3); PSAX-AV 66.3% (59.0, 73.5); PSAX-MV 75.8% (70.7, 80.9); PSAX-PM 92.9% (89.1, 96.7); AP4 88.8% (81.5, 96.0); AP5 78.8% (66.9, 90.6); AP3 80.0% (70.4, 89.7); AP2 71.3% (61.6, 80.9); SubC4 76.3% (70.2, 82.3); SC-IVC 59.2% (43.1, 75.2)",
+          "comparator": "Panel of 5 expert cardiologists, ACEP scale",
+          "n_studies": null,
+          "n_patients": 240,
+          "n_sites": 2,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "the eight (8) RNs acquired echocardiographic clips of diagnostic image quality for each of the standard views in the following proportion of study exams conducted: PLAX 92.1% (87.9%, 96.3%) PSAX-AV 66.3% (59.0%, 73.5%) PSAX-MV 75.8% (70.7%, 80.9%) PSAX-PM 92.9% (89.1%, 96.7%) AP4 88.8% (81.5%, 96.0%) AP5 78.8% (66.9%, 90.6%) AP3 80.0% (70.4%, 89.7%) AP2 71.3% (61.6%, 80.9%) SubC4 76.3% (70.2%, 82.3%) SC-IVC 59.2% (43.1%, 75.2%)",
+          "page": 7,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "DEN190040",
+          "endpoint": "Auto-Capture utilization and diagnostic yield in pivotal study",
+          "metric": "% of clips auto-captured; % of auto-captured clips rated diagnostic",
+          "value": "Auto-Capture used in 46.2% of clips; 93.8% of auto-captured clips rated diagnostic",
+          "comparator": "Panel of 5 expert cardiologists",
+          "n_studies": null,
+          "n_patients": 240,
+          "n_sites": 2,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "The Auto-Capture feature was utilized in 46.2% of the clips acquired by the RNs. In addition, 93.8% of clips acquired via the Auto-Capture feature were rated diagnostic by the panel of cardiologists, indicating high effectiveness of the feature.",
+          "page": 7,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "DEN190040",
+          "endpoint": "Safety: adverse events in pivotal study",
+          "metric": "count",
+          "value": "1 adverse event (pain at skin site from elevated transducer temperature), judged unrelated to the guidance software",
+          "comparator": null,
+          "n_studies": null,
+          "n_patients": 240,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "One adverse event was reported (pain at skin site due to elevated temperature of the transducer), but determined to be unrelated to the guidance software.",
+          "page": 7,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "DEN190040",
+          "endpoint": "Objective metric: AutoEF (K173780) yield and agreement on nurse- vs sonographer-acquired exams",
+          "metric": "% exams with EF returned; mean absolute deviation",
+          "value": "EF returned in 65.5% of nurse (study) exams vs 85.1% of sonographer (control) exams; cardiologist panel rated 70.4% of study exams as having diagnostic AP2 and AP4; mean absolute deviation between nurse- and sonographer-exam AutoEF = 3.96 EF%",
+          "comparator": "AutoEF estimates from sonographer-acquired control exams",
+          "n_studies": null,
+          "n_patients": 240,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "AutoEF returned an EF estimate in 65.5% of study exams and 85.1% of control exams. The panel of cardiologists rated 70.4% of study exams as having a diagnostic quality AP2 and AP4 clips ... Mean absolute deviation between AutoEF estimates from nurse- and sonographer-acquired exams was 3.96 EF%, which is well within the inter-physician variability for calculation of EF observed in the literature.",
+          "page": 8,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "DEN190040",
+          "endpoint": "Objective metric: measurability of nurse-acquired PLAX clips for linear measurements",
+          "metric": "% of clips measurable (majority of 3 sonographers)",
+          "value": "89.17% (aortic root) to 92.08% (septal wall, posterior wall, LVIDd, LVIDs); RMSD between study and control clip measurements comparable to inter-sonographer variability",
+          "comparator": "3 blinded registered cardiac sonographers; sonographer-acquired control clips",
+          "n_studies": null,
+          "n_patients": 240,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "Measurability of study exam clips (defined as a majority of the three (3) sonographers assessing a clip to be suitable for measurement) ranged from 89.17% (aortic root) to 92.08% (the remaining four measurements). In analyzing the correspondence of actual measurements, the results demonstrated that variability (RMSD) between study and control clip measurements was comparable to the observed inter-sonographer measurement variability.",
+          "page": 8,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "DEN190040",
+          "endpoint": "Human factors validation: critical-task pass rate and auto-capture rate across 5 user groups",
+          "metric": "% critical tasks passed; mean % of views auto-captured",
+          "value": "100% of critical tasks passed; average 76% of views auto-captured per user across all 5 user groups; no significant differences among user types",
+          "comparator": null,
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": 1,
+          "dataset_description": "Human Factors Validation Study at Northwestern Memorial Hospital; user groups: hospitalists, NPs/PAs, RNs, medical residents, certified medical assistants; scanning on a model after 1.5 h (non-RN) or 5-6 h (RN) training",
+          "subgroup_notes": null,
+          "quote": "The human factors usability validation testing demonstrated 100% of critical tasks passed across all user types. No use errors were found that could cause harm for the scanner or patient. ... An average of 76% of views were auto-captured per user across all 5 user groups. The results did not indicate significant differences in performance amongst user types.",
+          "page": 9,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K200755",
+          "endpoint": "Summative human factors testing of modified prescriptive guidance",
+          "metric": "use errors on critical tasks",
+          "value": "No use errors associated with critical tasks likely to lead to patient injury (16 users: 7 without and 9 with prior scanning experience)",
+          "comparator": null,
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "Summative testing has been completed with 16 users (7 users without prior scanning experience and 9 users with prior experience). The summative human factors testing concluded that there were no use errors associated with critical tasks likely to lead to patient injury.",
+          "page": 6,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K200755",
+          "endpoint": "Algorithm verification of modified Auto-Capture and Prescriptive Guidance",
+          "metric": "qualitative (no metrics reported)",
+          "value": "Not reported numerically; frame-level and clip-level PG prediction tasks tested; verification data separated from training",
+          "comparator": null,
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "Images and cases used for verification testing were carefully separated from training algorithms. The Caption Guidance algorithm was tested for the performance of the modified Auto-Capture feature in recording clinically-acceptable images and clips.",
+          "page": 6,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "DEN190040",
+          "endpoint": "Pivotal study (peer-reviewed report): diagnostic-quality studies by novice nurses",
+          "metric": "% of studies of diagnostic quality",
+          "value": "LV size, LV function and pericardial effusion 237/240 (98.8%); RV size 222/240 (92.5%)",
+          "comparator": "5 level-3 echocardiographers, blinded; paired sonographer scans",
+          "n_studies": null,
+          "n_patients": 240,
+          "n_sites": 2,
+          "dataset_description": "Narang et al., JAMA Cardiol 2021 (PMID 33599681): 240 patients, mean age 61 (SD 16), 139 men (57.9%), 79 (32.9%) with BMI >30; Northwestern Memorial Hospital and Minneapolis Heart Institute, March-May 2019",
+          "subgroup_notes": null,
+          "quote": "Eight nurses each scanned 30 patients using the DL algorithm, producing studies judged to be of diagnostic quality for left ventricular size, function, and pericardial effusion in 237 of 240 cases (98.8%) and right ventricular size in 222 of 240 cases (92.5%).",
+          "page": null,
+          "verification": "peer_reviewed"
+        },
+        {
+          "k_number": "DEN190040",
+          "endpoint": "External pilot: ultrasound-naive medical students acquiring diagnostic loops with Caption guidance, and AutoEF agreement",
+          "metric": "% diagnostic-quality acquisitions; LVEF bias / correlation",
+          "value": "Diagnostic-quality images in 33/57 (58%) PLAX, 49/57 (86%) AP4, 39/57 (68%) AP2; at least one view in 91% of attempts; best-LVEF bias 3.5% +/- 5.6, r = 0.92",
+          "comparator": "Three experts' LVEF (ground truth) from expert-acquired images",
+          "n_studies": null,
+          "n_patients": 57,
+          "n_sites": 1,
+          "dataset_description": "Schneider et al., Int J Cardiovasc Imaging 2021 (PMID 33029699): 19 first-year medical students, 3 patients each, Medical University of Vienna; Terason uSmart 3200t; Caption Health software",
+          "subgroup_notes": null,
+          "quote": "The novices acquired diagnostic-quality images in 33/57 (58%), 49/57 (86%), and 39/57 (68%) patients in the PLAX, AP4, and AP2, respectively. At least one of the three views was obtained in 91% of the attempts. We found an excellent agreement between the machine's LVEF calculations from images acquired by the novices with the GT-EF (bias of 3.5% +/- 5.6 and r = 0.92, p < 0.001 in the \"best-LVEF\" algorithm).",
+          "page": null,
+          "verification": "peer_reviewed"
+        },
+        {
+          "k_number": "DEN190040",
+          "endpoint": "Real-world: neurology-trained novices performing Caption AI-guided cardiac POCUS in a neuro-ICU",
+          "metric": "% of scans interpretable",
+          "value": "LV size/function 63.4%; RV size/function 52.6%; IVC 34.8%; pericardial effusion 47.2%; 37% of screening scans changed management; time to first adequate cardiac images 3.1 to 1.7 days (p<0.001)",
+          "comparator": "3 certified echocardiographers",
+          "n_studies": 184,
+          "n_patients": 153,
+          "n_sites": 1,
+          "dataset_description": "Mears et al., Neurocrit Care 2024 (PMID 38506968): 184 scans in 153 patients, academic tertiary NICU, Sept 2020-Nov 2021",
+          "subgroup_notes": null,
+          "quote": "Three certified echocardiographers deemed 63.4% of scans as interpretable for a qualitative assessment of left ventricular size and function, 52.6% of scans as interpretable for right ventricular size and function, 34.8% of scans as interpretable for inferior vena cava size and variability, and 47.2% of scans as interpretable for the presence of pericardial effusion.",
+          "page": null,
+          "verification": "peer_reviewed"
+        }
+      ],
+      "training_data": {
+        "disclosed": true,
+        "n_studies": null,
+        "n_patients": 12000,
+        "n_sites": null,
+        "description": "FDA De Novo decision summary states only that the software 'was trained using echocardiographic clips from [number redacted] studies performed by trained sonographers' (p3). Peer-reviewed: Narang 2021 (JAMA Cardiol) describes the algorithm as 'trained on more than 5 million examples of the outcome of ultrasonographic probe movement on image quality'; Schneider 2021 (Int J Cardiovasc Imaging) states the image-quality-score first-stage algorithm 'was trained on a very large and diversified dataset of more than 400,000 clips from 12,000 unique patients (totaling approximately 17.7 million frames)' balanced over sex, age, BMI and ultrasound equipment, with a second-stage regressor trained on over 1000 clips per view. Company press release (2020-03-03) cites 'over 4,000,000 images, representing 9,000 patients'. Figures differ across sources and software versions; the n_patients value is the Schneider 2021 figure.",
+        "source": "DEN190040 decision summary p3; Narang 2021 PMID 33599681; Schneider 2021 PMID 33029699 (PMC7541096); PR Newswire 2020-03-03",
+        "verification": "peer_reviewed"
+      },
+      "validation_data": {
+        "n_studies": 240,
+        "n_patients": 240,
+        "n_sites": 2,
+        "description": "Pivotal prospective study: 8 registered nurses without echo experience each scanned 30 patients (240 total) using a Terason uSmart 3200t Plus with Caption Guidance; paired sonographer control exam; 5 blinded expert cardiologists. Demographics (from JAMA Cardiol 2021): mean age 61 (SD 16), 57.9% men, 32.9% BMI >30; sites Northwestern Memorial Hospital and Minneapolis Heart Institute. Supplemental: 50-patient sonographer study; human-factors study with 5 user groups at Northwestern. K200755 states verification images were separated from training data. No sex/BMI/image-quality subgroup performance reported in the FDA summaries.",
+        "independent_of_training": true,
+        "source": "DEN190040 decision summary pp4-9; K200755 p6; Narang 2021 PMID 33599681",
+        "verification": "fda_summary"
+      },
+      "prior_validations": [
+        {
+          "description": "Breakthrough Device designation granted by FDA in 2018 (company press release).",
+          "source_url": "https://www.prnewswire.com/news-releases/fda-grants-caption-health-landmark-authorization-for-first-ai-guided-image-acquisition-system-301001106.html",
+          "verification": "company"
+        },
+        {
+          "description": "Commercial launch (2020-03-03): Caption AI integrated on Terason uSmart 3200T Plus, subscription pricing; press release cites training on 'over 4,000,000 images, representing 9,000 patients'.",
+          "source_url": "https://www.prnewswire.com/news-releases/ai-guided-ultrasound-system-from-caption-health-now-commercially-available-in-us-301015605.html",
+          "verification": "company"
+        },
+        {
+          "description": "K200755 update (press release 2020-05-12) cleared in 25 days; '88 percent more types of guidance, improved algorithm performance, and optimized workflow'; over 90 types of real-time instructions.",
+          "source_url": "https://www.prnewswire.com/news-releases/fda-expedites-clearance-of-caption-health-ultrasound-software-to-aid-frontline-healthcare-workers-in-fight-against-covid-19-pandemic-301057147.html",
+          "verification": "company"
+        },
+        {
+          "description": "Butterfly Network and Caption Health announced an exclusive strategic partnership (August 2021) to bring Caption AI to Butterfly iQ+ (search snippet; press release not fetched).",
+          "source_url": "https://www.businesswire.com/news/home/20210812005104/en/Butterfly-Network-and-Caption-Health-Announce-Exclusive-Strategic-Partnership-to-Enable-Earlier-Disease-Detection-and-",
+          "verification": "news"
+        },
+        {
+          "description": "GE HealthCare announced agreement to acquire Caption Health on 2023-02-09.",
+          "source_url": "https://www.gehealthcare.com/about/newsroom/press-releases/ge-healthcare-to-acquire-caption-health-expanding-ultrasound-to-support-new-users-through-fda-cleared-ai-powered-image-guidance-",
+          "verification": "company"
+        },
+        {
+          "description": "GE HealthCare added Caption Guidance to the Venue family point-of-care ultrasound systems (trade press; page not fetched, date not confirmed).",
+          "source_url": "https://axisimagingnews.com/radiology-products/imaging-equipment/ultrasound/ge-healthcare-adds-ai-powered-caption-guidance-to-venue-family-ultrasound",
+          "verification": "news"
+        },
+        {
+          "description": "Caption AI (Caption Guidance + AutoEF) launched on Vscan Air SL wireless handheld on 2024-04-03 at ACC.24; product page lists the 10 guided views plus six optional color sub-views and states the device 'has been verified for limited use outside of professional healthcare facilities'.",
+          "source_url": "https://www.gehealthcare.com/en-us/products/ultrasound/handheld-ultrasound/vscan-air-caption-ai",
+          "verification": "company"
+        }
+      ],
+      "papers": [
+        {
+          "title": "Utility of a Deep-Learning Algorithm to Guide Novices to Acquire Echocardiograms for Limited Diagnostic Use",
+          "first_author": "Narang A",
+          "journal": "JAMA Cardiology",
+          "year": 2021,
+          "doi": "10.1001/jamacardio.2021.0185",
+          "pmid": "33599681",
+          "url": "https://doi.org/10.1001/jamacardio.2021.0185",
+          "relation": "pivotal-validation",
+          "n_subjects": 240,
+          "key_result": "8 novice nurses x 30 patients at 2 academic hospitals; diagnostic quality for LV size, LV function and pericardial effusion in 237/240 (98.8%) and RV size in 222/240 (92.5%); algorithm trained on >5 million examples of probe-movement outcomes.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "A machine learning algorithm supports ultrasound-naive novices in the acquisition of diagnostic echocardiography loops and provides accurate estimation of LVEF",
+          "first_author": "Schneider M",
+          "journal": "The International Journal of Cardiovascular Imaging",
+          "year": 2021,
+          "doi": "10.1007/s10554-020-02046-6",
+          "pmid": "33029699",
+          "url": "https://doi.org/10.1007/s10554-020-02046-6",
+          "relation": "external-validation",
+          "n_subjects": 57,
+          "key_result": "19 first-year medical students (Vienna) using Caption Health software on Terason uSmart 3200t: diagnostic-quality PLAX 58%, AP4 86%, AP2 68%; AutoEF best-LVEF bias 3.5% +/- 5.6, r=0.92 vs experts; reports IQS training set of >400,000 clips from 12,000 patients.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Artificial Intelligence-Enabled POCUS in the COVID-19 ICU: A New Spin on Cardiac Ultrasound",
+          "first_author": "Cheema BS",
+          "journal": "JACC: Case Reports",
+          "year": 2021,
+          "doi": "10.1016/j.jaccas.2020.12.013",
+          "pmid": "33619470",
+          "url": "https://doi.org/10.1016/j.jaccas.2020.12.013",
+          "relation": "real-world",
+          "n_subjects": null,
+          "key_result": "Case series describing use of deep-learning guidance (trained on sonographer hand movements) by novices at the bedside in a COVID-19 ICU.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Leveraging the Capabilities of AI: Novice Neurology-Trained Operators Performing Cardiac POCUS in Patients with Acute Brain Injury",
+          "first_author": "Mears J",
+          "journal": "Neurocritical Care",
+          "year": 2024,
+          "doi": "10.1007/s12028-024-01953-z",
+          "pmid": "38506968",
+          "url": "https://doi.org/10.1007/s12028-024-01953-z",
+          "relation": "real-world",
+          "n_subjects": 153,
+          "key_result": "184 Caption AI-guided scans in 153 neuro-ICU patients; 63.4% interpretable for LV size/function, 52.6% RV, 34.8% IVC, 47.2% pericardial effusion; 37% of screening scans changed management; time to first adequate cardiac imaging fell from 3.1 to 1.7 days.",
+          "verification": "doi_resolved"
+        }
+      ],
+      "clinical_trials": [
+        {
+          "nct_id": "NCT03897140",
+          "title": "Study for Point-of-Care Echocardiography With Assistance Technology (pivotal RN study; Bay Labs EchoGPS = Caption Guidance; enrollment 240)",
+          "status": "COMPLETED",
+          "url": "https://clinicaltrials.gov/study/NCT03897140"
+        },
+        {
+          "nct_id": "NCT03705650",
+          "title": "SHAPE: Seeing the Heart With AI Powered Echo (primary-care TTE with EchoGPS guidance vs unassisted Terason uSmart 3200t; enrollment 55)",
+          "status": "COMPLETED",
+          "url": "https://clinicaltrials.gov/study/NCT03705650"
+        },
+        {
+          "nct_id": "NCT04203251",
+          "title": "Evaluation of TTE Utilization in Medical Surgery Step-Down Unit: Use of AI Assisted Point-of-Care Echo With Guidance Technology (Caption Health; estimated 100)",
+          "status": "UNKNOWN",
+          "url": "https://clinicaltrials.gov/study/NCT04203251"
+        },
+        {
+          "nct_id": "NCT04336774",
+          "title": "Use of Caption AI to Perform a Clinically Indicated Transthoracic Echocardiogram in Patients Being Evaluated for or Positive for COVID-19 (Duke)",
+          "status": "WITHDRAWN",
+          "url": "https://clinicaltrials.gov/study/NCT04336774"
+        },
+        {
+          "nct_id": "NCT03936413",
+          "title": "Artificial Intelligence in Echocardiography: a Pilot Study of Bay Labs Technology in Image Acquisition, Education, and Analysis (NewYork-Presbyterian)",
+          "status": "WITHDRAWN",
+          "url": "https://clinicaltrials.gov/study/NCT03936413"
+        },
+        {
+          "nct_id": "NCT06717373",
+          "title": "Point-of-Care Echocardiography in Patients With Known or Suspected Aortic Stenosis (Caption Health, Inc.; data collection to test an AI aortic stenosis algorithm; enrollment 63)",
+          "status": "COMPLETED",
+          "url": "https://clinicaltrials.gov/study/NCT06717373"
+        }
+      ],
+      "open_questions": [
+        "Training set size is redacted in the DEN190040 decision summary ('clips from [blank] studies'); published figures differ (>5 million probe-movement examples, Narang 2021; >400,000 clips / 12,000 patients / 17.7 M frames for the IQS model, Schneider 2021; 4 M images / 9,000 patients, company press release 2020) and likely refer to different sub-models and versions.",
+        "No FDA summary reports subgroup performance by sex, BMI, or image quality for the pivotal study; only aggregate MRMC estimates are given.",
+        "Specialist (sonographer) study: only the auto-capture specificity (97.85%) is reported; overall diagnostic-quality proportions are described qualitatively.",
+        "K200755, K201992 and K243065 report no quantitative algorithm performance metrics; PCCP acceptance criteria are not enumerated in the public summaries.",
+        "Which ultrasound systems are currently labeled as compatible (GE Venue models, Vscan Air SL, Butterfly iQ+) is drawn from company/news pages, not from the FDA summaries; whether Caption AI on Butterfly iQ+ was ever commercially released is not confirmed.",
+        "Whether guidance inference runs fully on the handheld/mobile device or a paired device for Vscan Air SL is not stated on the product page.",
+        "Peck et al. 2023 (JASE, PMID 36906047; AI-guided RHD screening by novices in Uganda) and Baloescu et al. 2025 (JAMA Cardiol, AI-guided lung ultrasound) are plausibly Caption AI studies but the vendor could not be confirmed from accessible text, so they are not listed.",
+        "NCT05558605 (Baker Heart and Diabetes Institute, AI-guided echocardiography in rural Australia) may use Caption AI but the device is not named in the registry record; not listed.",
+        "Trost et al. 2025 (JACC Adv) was initially a candidate but its COI statement identifies DESKi HeartFocus, not Caption; excluded.",
+        "Date GE HealthCare completed (vs announced) the Caption Health acquisition was not confirmed."
+      ],
+      "sources": [
+        {
+          "fact": "Indications for use, special controls, Breakthrough designation statement, PCCP, pivotal and specialist study results",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/reviews/DEN190040.pdf (local: /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/DEN190040_review.txt)",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "DEN190040 order letter: classification, special controls",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf19/DEN190040.pdf (local: /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/DEN190040.txt)",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K200755 changes and human factors testing",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200755.pdf (local: /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K200755.txt)",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K201992 PCCP modification, locked algorithms",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K201992.pdf (local: /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K201992.txt)",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K243065 renamed Cardiac Guidance; updated PCCP contents",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243065.pdf (local: /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K243065.txt)",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "Decision dates, product codes, applicants",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+          "verification": "fda_database"
+        },
+        {
+          "fact": "Pivotal study demographics, sites, training-set description",
+          "url_or_file": "https://pubmed.ncbi.nlm.nih.gov/33599681/",
+          "verification": "peer_reviewed"
+        },
+        {
+          "fact": "IQS model training set (400,000 clips / 12,000 patients), Vienna novice study",
+          "url_or_file": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7541096/",
+          "verification": "peer_reviewed"
+        },
+        {
+          "fact": "Neuro-ICU real-world results",
+          "url_or_file": "https://pubmed.ncbi.nlm.nih.gov/38506968/",
+          "verification": "peer_reviewed"
+        },
+        {
+          "fact": "Breakthrough designation 2018; pivotal study description",
+          "url_or_file": "https://www.prnewswire.com/news-releases/fda-grants-caption-health-landmark-authorization-for-first-ai-guided-image-acquisition-system-301001106.html",
+          "verification": "company"
+        },
+        {
+          "fact": "Vscan Air SL Caption AI features and views",
+          "url_or_file": "https://www.gehealthcare.com/en-us/products/ultrasound/handheld-ultrasound/vscan-air-caption-ai",
+          "verification": "company"
+        },
+        {
+          "fact": "Caption AI on Vscan Air SL launch date 2024-04-03",
+          "url_or_file": "https://www.massdevice.com/ge-healthcare-caption-ai-handheld-ultrasound/",
+          "verification": "news"
+        },
+        {
+          "fact": "GE HealthCare acquisition announcement 2023-02-09",
+          "url_or_file": "https://www.gehealthcare.com/about/newsroom/press-releases/ge-healthcare-to-acquire-caption-health-expanding-ultrasound-to-support-new-users-through-fda-cleared-ai-powered-image-guidance-",
+          "verification": "company"
+        },
+        {
+          "fact": "Clinical trial registrations",
+          "url_or_file": "https://clinicaltrials.gov/api/v2/studies?query.term=Caption+Health",
+          "verification": "fda_database"
+        }
+      ]
+    },
+    {
+      "id": "caption-autoef",
+      "product_name": "Caption Interpretation Automated Ejection Fraction Software (AutoEF; originally EchoMD AutoEF)",
+      "company": "GE HealthCare (Caption Health, Inc.; originally Bay Labs, Inc.)",
+      "company_website": "https://www.gehealthcare.com",
+      "product_url": "https://www.gehealthcare.com/en-us/products/ultrasound/handheld-ultrasound/vscan-air-caption-ai",
+      "category": "lv-function-quantification",
+      "tags": [
+        "LVEF",
+        "AutoEF",
+        "automated clip selection",
+        "image quality score",
+        "confidence metric",
+        "PLAX single-view EF",
+        "De Novo",
+        "PCCP",
+        "QVD",
+        "first PCCP-based device type (21 CFR 892.2055)"
+      ],
+      "modality_scope": [
+        "TTE",
+        "POCUS",
+        "handheld"
+      ],
+      "deployment": [
+        "PACS-integrated",
+        "workstation",
+        "ultrasound-system-embedded",
+        "vendor-neutral (DICOM)",
+        "handheld (Vscan Air SL Caption AI)"
+      ],
+      "summary": "Machine-learning software that automatically selects AP4, AP2 and PLAX clips, scores image quality, and estimates LVEF as a regression without endocardial tracing, reporting a confidence metric and ASE qualitative bin. First cleared as Bay Labs EchoMD AutoEF (K173780, 2018; RMSD 8.29% vs biplane MOD on >300 studies); K200621 added PLAX/single-view estimation and on-ultrasound deployment; K210747 (AutoEF 2.5) retrained with 30% more data (RMSD 7.21% [6.62-7.74] vs expert biplane EF on 186 studies from 3 US sites, 9 scanner models). DEN220063 (2023) created 21 CFR 892.2055 / product code QVD by adding an FDA-authorized PCCP to the K210747 device without new performance data.",
+      "intended_use_quote": "The Caption Interpretation Automated Ejection Fraction software is used to process previously acquired transthoracic cardiac ultrasound images, to store images, and to manipulate and make measurements on images using an ultrasound device, personal computer, or a compatible DICOM-compliant PACS system in order to provide automated estimation of left ventricular ejection fraction. This measurement can be used to assist the clinician in a cardiac evaluation. The Caption Interpretation Automated Ejection Fraction Software is indicated for use in adult patients.",
+      "indications_for_use_quote": "The Caption Interpretation Automated Ejection Fraction software is used to process previously acquired transthoracic cardiac ultrasound images, to store images, and to manipulate and make measurements on images using an ultrasound device, personal computer, or a compatible DICOM-compliant PACS system in order to provide automated estimation of left ventricular ejection fraction. This measurement can be used to assist the clinician in a cardiac evaluation. The Caption Interpretation Automated Ejection Fraction Software is indicated for use in adult patients.",
+      "embedded_ai_features": [
+        "Clip Annotation and Selection (CNN view classifier for PLAX/AP4/AP2 plus Image Quality Score thresholds)",
+        "EF Estimator (deep-learning regression on 3-view, 2-view or single AP4/AP2 views; no endocardial tracing)",
+        "Confidence Metric (predicted standard error, e.g. +/-6%) and qualitative ASE bin with likelihood",
+        "PCCP-authorized modifications: training on additional data, additional 2D TTE views, core-algorithm implementation optimization, operating-speed improvements"
+      ],
+      "clearances": [
+        {
+          "k_number": "K173780",
+          "decision_date": "2018-06-14",
+          "pathway": "510(k)",
+          "product_code": "LLZ",
+          "predicates": [
+            "K130779"
+          ],
+          "changes_summary": "Initial clearance as Bay Labs EchoMD Automated Ejection Fraction Software. Versus predicate DiaCardio LVivo EF (K130779): fully automated clip selection (predicate manual), CNN estimates EF without endocardial traces (predicate uses segmentation), runs as a PACS microservice between DICOM source and destination. Original IFU limited to personal computer / DICOM PACS.",
+          "notable_flags": [
+            "PACS-integrated",
+            "vendor-neutral DICOM",
+            "prescription use"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf17/K173780.pdf"
+        },
+        {
+          "k_number": "K200621",
+          "decision_date": "2020-07-22",
+          "pathway": "510(k)",
+          "product_code": "QIH",
+          "predicates": [
+            "K173780"
+          ],
+          "changes_summary": "Renamed Caption Interpretation AutoEF (AutoEF 2.0). IFU updated to allow the software to be located on an ultrasound device. EF can be estimated from AP4, AP2 or PLAX views or combinations; modified clip selection; algorithms further optimized through additional training; output includes an indication of confidence. Pivotal retrospective validation with RMSD primary endpoint plus Clip Annotator study.",
+          "notable_flags": [
+            "product code changed LLZ to QIH",
+            "ultrasound-system-embedded"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200621.pdf"
+        },
+        {
+          "k_number": "K210747",
+          "decision_date": "2022-01-19",
+          "pathway": "510(k)",
+          "product_code": "QIH",
+          "predicates": [
+            "K200621"
+          ],
+          "changes_summary": "AutoEF 2.5: an additional 30% of training data from three ultrasound devices and two clinical sites; network simplified via simple pooling layers and quantization; image-quality algorithms simplified to linear SVMs (from RBF SVM); image-quality thresholds re-optimized; runtime speed optimization. Same test protocol and endpoints as predicate; RMSD 7.21 vs 7.94 EF% for predicate on a >186-study dataset.",
+          "notable_flags": [
+            "retrained algorithm",
+            "lower-compute deployment"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K210747.pdf"
+        },
+        {
+          "k_number": "DEN220063",
+          "decision_date": "2023-02-24",
+          "pathway": "De Novo",
+          "product_code": "QVD",
+          "predicates": [],
+          "changes_summary": "Only change versus K210747 is the addition of an FDA-authorized PCCP ('Caption Interpretation Core Algorithms Predetermined Change Control Plan', Rev 8) covering four modification categories: training on additional data, additional 2D TTE views, optimization of core-algorithm implementation, and operating-speed improvements. Created new regulation 21 CFR 892.2055 (radiological machine learning-based quantitative imaging software with predetermined change control plan) with special controls. No new performance testing; K210747 data re-summarized with demographics and subgroup statements.",
+          "notable_flags": [
+            "De Novo",
+            "PCCP",
+            "special controls",
+            "new regulation 892.2055",
+            "locked algorithm"
+          ],
+          "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/DEN220063.pdf"
+        }
+      ],
+      "performance_claims": [
+        {
+          "k_number": "K173780",
+          "endpoint": "LVEF agreement vs reported biplane method-of-disks EF",
+          "metric": "RMSD (primary endpoint)",
+          "value": "8.290% RMSD, p-value 0.00052 (threshold not stated)",
+          "comparator": "Reported biplane method of disks ejection fraction",
+          "n_studies": 300,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "Over 300 previously acquired studies; balanced for gender, EF range and BMI; multiple ultrasound manufacturers; test data strictly segregated from training; additional study with a different set of cardiologists on a subset for generalizability",
+          "subgroup_notes": "Balanced by gender, EF and BMI but no subgroup metrics reported",
+          "quote": "A formal retrospective, non-interventional validation study was conducted using over 300 previously-acquired studies where the biplane method of disks ejection fraction was reported. This patient dataset was constructed to provide a balanced range of gender, ejection fraction values, and body mass index levels. Testing included a wide array of ultrasound system manufacturers to verify that EchoMD AutoEF performs acceptably across multiple scanner platforms. ... The primary endpoint was met (results: 8.290% RMSD, p-value 0.00052).",
+          "page": 6,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K200621",
+          "endpoint": "Clip Annotator view/mode identification vs expert panel",
+          "metric": "PPV; sensitivity",
+          "value": "PPV point estimates >97% for imaging mode and view; sensitivity point estimates >90% across views and imaging mode",
+          "comparator": "Panel of expert readers",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "That study met the pre-defined acceptance criteria and found that the observed PPV point estimates for the Clip Annotator were greater than 97% for identification of the imaging mode and the view. Similarly, observed sensitivity point estimates were greater than 90% across views and imaging mode.",
+          "page": 6,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K200621",
+          "endpoint": "LVEF agreement (best available view combination) vs reference EF; view-combination and single-view analyses",
+          "metric": "RMSD vs predetermined acceptance criterion (values not disclosed in summary)",
+          "value": "Primary (best available view combination) met criterion; two-or-more-view combinations met criterion; AP4-only below criterion; AP2-only and PLAX-only did not meet criterion but AP2-only and PLAX-only RMSD lower than sonographers' biplane tracing before cardiologist overread",
+          "comparator": "Conventional EF calculation (reference method)",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "Specifically, the primary endpoint evaluating the relationship (RMSD) between AutoEF derived values based on the best available view combination and the reference method met the predetermined acceptance criteria. Secondary hypothesis testing evaluating combinations of views (i.e., EF estimation based on two or more views of AP2, AP4 or PLAX) met the same predetermined acceptance criteria. Single-view EF estimation based on the AP4 view was also observed to be less than the acceptance criterion, and superior to physicians in making a qualitative and quantitative visual assessment. The AP2 and PLAX views observed results did not meet the acceptance criteria, but performed superior on a quantitative visual assessment. Furthermore, the AP2-only and PLAX-only RMSD was observed to be lower than the RMSD of sonographers' biplane tracing before a cardiologist overread.",
+          "page": 6,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K210747",
+          "endpoint": "LVEF agreement vs biplane method-of-disks EF (subject vs predicate on same protocol)",
+          "metric": "RMSD (primary endpoint)",
+          "value": "Subject device 7.21 RMSD EF%; predicate 7.94 RMSD EF% (CIs referenced but not printed)",
+          "comparator": "Biplane method of disks ejection fraction",
+          "n_studies": 186,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": "186 studies balanced for gender, EF range and BMI; multiple scanner manufacturers; test data separated from training",
+          "subgroup_notes": null,
+          "quote": "A formal retrospective, non-interventional validation study was conducted using over 186 acquired studies where the biplane method of disks ejection fraction was reported. ... The primary endpoint for the subject device was met (results: 7.21 RMSD EF% [95% CI]), and demonstrated slightly improved performance compared to the predicate device (results: 7.94 RMSD EF % [95% CI]).",
+          "page": 6,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K210747",
+          "endpoint": "Large-error outlier rate",
+          "metric": "% of cases with |EF error| >15% and >20%",
+          "value": "Subject 1.09% (>15%), 0.55% (>20%); predicate 1.61% (>15%), 0% (>20%)",
+          "comparator": "Biplane method of disks ejection fraction",
+          "n_studies": 186,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "Performance improvements between the subject device and the predicate device did not lead to significant differences in the outlier rate, with comparable performance between the subject device [1.09% for EF error >15%, 0.55% for EF error >20%] and the predicate [1.61% for EF error >15%, 0% for EF error >20%].",
+          "page": 6,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "DEN220063",
+          "endpoint": "Clip Annotator view/mode identification vs expert panel (K210747 data)",
+          "metric": "PPV; sensitivity (goal 80%/80%)",
+          "value": "PPV >97%; sensitivity >96%",
+          "comparator": "Panel of expert readers",
+          "n_studies": 186,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "That study met the pre-defined acceptance criteria and found that the observed PPV point estimates for the Clip Annotator were greater than 97% for identification of the imaging mode and the view. Similarly, observed sensitivity point estimates were greater than 96% across views and imaging mode.",
+          "page": 5,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "DEN220063",
+          "endpoint": "LVEF agreement, best available view (K210747 pivotal data)",
+          "metric": "RMSD [95% CI] (acceptance criterion 9.2% for view combinations)",
+          "value": "7.21 [6.62, 7.74] EF%, p < 0.0001",
+          "comparator": "Expert cardiologist biplane modified Simpson's method of disks",
+          "n_studies": 186,
+          "n_patients": null,
+          "n_sites": 3,
+          "dataset_description": "186 patient studies from Minneapolis Heart Institute (60), Duke University (66), Northwestern University (60); male 104 (56%) / female 82 (44%); BMI <25 68 (37%), 25-30 64 (34%), >30 54 (29%); EF <30% 33 (18%), 30-53% 80 (43%), >53% 73 (39%); scanners: Philips iE33 90 (48%), GE Vivid E95 24 (13%), Acuson SEQUOIA 23 (12%), GE Vivid i 20 (11%), GE Vivid E9 9 (5%), GE Vivid 7 8 (5%), Siemens SC2000 6 (3%), Philips CX50 4 (2%), Philips EPIQ 7C 2 (1%)",
+          "subgroup_notes": "Subgroup analyses were provided for range of EF, BMI, gender, institution, and ultrasound systems with statistically insignificant differences in RMSD across the subgroups (p8); values referred to labeling, not printed",
+          "quote": "The primary endpoint for the subject device was met with RMSD EF%[95% CIs]: 7.21[6.62, 7.74] for the best available view.",
+          "page": 7,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "DEN220063",
+          "endpoint": "LVEF agreement by view combination",
+          "metric": "RMSD [95% CI], p-value vs 9.2% criterion",
+          "value": "AP4+AP2 7.27 [6.55, 7.92] p<0.0001; AP4+PLAX 7.50 [6.85, 8.09] p<0.0001; AP4+AP2+PLAX 7.24 [6.64, 7.80] p<0.0001; AP2+PLAX 8.04 [7.32, 8.7] p=0.0002; best available 7.21 [6.62, 7.74] p<0.0001",
+          "comparator": "Expert biplane modified Simpson's EF",
+          "n_studies": 186,
+          "n_patients": null,
+          "n_sites": 3,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "View Combination RMSD EF% [95% CI] p-value 1 AP4 and AP2 7.27 [6.55, 7.92] <0.0001 2 AP4 and PLAX 7.50 [6.85, 8.09] <0.0001 3 AP4, AP2, and PLAX 7.24 [6.64, 7.80] <0.0001 4 AP2 and PLAX 8.04 [7.32, 8.7] 0.0002 5 Best available 7.21 [6.62, 7.74] < 0.0001",
+          "page": 7,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "DEN220063",
+          "endpoint": "LVEF agreement, single views",
+          "metric": "RMSD [95% CI], p-value vs 11.024% criterion",
+          "value": "AP4 only 7.76 [7.01, 8.45] p<0.0001; AP2 only 8.27 [7.44, 9.03] p<0.0001",
+          "comparator": "Expert biplane modified Simpson's EF",
+          "n_studies": 186,
+          "n_patients": null,
+          "n_sites": 3,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "View RMSD EF% [95% CI] p-value 1 AP4 only 7.76 [7.01, 8.45] <0.0001 2 AP2 only 8.27 [7.44, 9.03] <0.0001",
+          "page": 8,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "DEN220063",
+          "endpoint": "Confidence metric calibration",
+          "metric": "equivalence to expected error range; normality of error distribution",
+          "value": "Met equivalence criteria; EF minus reference EF normally distributed (no numbers given)",
+          "comparator": "Reference EF",
+          "n_studies": 186,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "Finally, testing of the confidence metric functionality verified successful performance of the Confidence Metric in estimating the error range of the EF estimates around the reference EF using equivalence criteria and the evidence that the difference between the estimated EF and the reference EF is normally distributed.",
+          "page": 8,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "DEN220063",
+          "endpoint": "PCCP acceptance criteria for future modifications",
+          "metric": "pre-specified thresholds",
+          "value": "80% PPV and 80% sensitivity for view/mode/frame-count; 80% of clips meet expert suitability criteria; overall and combined-view AutoEF within 9.2% RMSD of expert EF; new views superior to 11.024% RMSD individually; confidence metric equivalence per view",
+          "comparator": "Expert EF",
+          "n_studies": null,
+          "n_patients": null,
+          "n_sites": null,
+          "dataset_description": null,
+          "subgroup_notes": null,
+          "quote": "1. 80% positive predictive value and 80% sensitivity for correct mode, view, and minimum number of frames. 2. 80% of clips meet expert criteria for suitability for EF estimation. 3. Overall (all views) and all combined views Auto EF is within 9.2% RMSD of expert EF. 4. New views superior to 11.024% RMSD individually. 5. For each standard view, the Confidence Metric must meet the equivalence to expert EF criteria as defined in PCCP.",
+          "page": 4,
+          "verification": "fda_summary"
+        },
+        {
+          "k_number": "K173780",
+          "endpoint": "Peer-reviewed validation of Bay Labs AutoEF vs 3-expert reference (volume-based)",
+          "metric": "r; bias; limits of agreement; sensitivity/specificity for EF <=35%; mean absolute deviation across view combinations",
+          "value": "r=0.95, bias=1.0%, LoA +/-11.8%, sensitivity 0.90, specificity 0.92 for EF <=35%; MAD among view combinations 2.9%; clinicians: r=0.94, bias 1.4%, LoA +/-13.4%, sens 0.93, spec 0.87",
+          "comparator": "Average of 3 experts' conventional volume-based EF",
+          "n_studies": null,
+          "n_patients": 99,
+          "n_sites": null,
+          "dataset_description": "Asch et al., Circ Cardiovasc Imaging 2019 (PMID 31522550): independent test group of 99 patients; algorithm trained on >50,000 echo studies",
+          "subgroup_notes": null,
+          "quote": "Automated estimation of LVEF was feasible in all 99 patients. AutoEF values showed high consistency (mean absolute deviation =2.9%) and excellent agreement with the reference values: r=0.95, bias=1.0%, limits of agreement =+/-11.8%, with sensitivity 0.90 and specificity 0.92 for detection of EF <=35%. This was similar to clinicians' measurements: r=0.94, bias=1.4%, limits of agreement =+/-13.4%, sensitivity 0.93, specificity 0.87.",
+          "page": null,
+          "verification": "peer_reviewed"
+        },
+        {
+          "k_number": "K200621",
+          "endpoint": "Peer-reviewed validation of multi-view/PLAX AutoEF (point-of-care version)",
+          "metric": "ICC; bias",
+          "value": "Protocol 1 (166 exams): ICC 0.86-0.95, biases <2%; LV-function classification accuracy similar to 10 physicians in most views (10-15% of cases less accurate). Protocol 2 (nurse-acquired portable images): ICC 0.84, bias 2.5 +/- 6.4%",
+          "comparator": "Conventional biplane EF by experienced echocardiographers",
+          "n_studies": null,
+          "n_patients": 166,
+          "n_sites": null,
+          "dataset_description": "Asch et al., Circ Cardiovasc Imaging 2021 (PMID 34126754): 166 clinical exams (protocol 1) plus nurse-acquired portable-system images (protocol 2; n not stated in abstract)",
+          "subgroup_notes": null,
+          "quote": "Protocol 1: the agreement with the reference EF values was good (intraclass correlation, 0.86-0.95), with biases <2%. Machine-learning classification of LV function showed similar accuracy to that by physicians in most views, with only 10% to 15% cases where it was less accurate. Protocol 2: the agreement with the reference values was excellent (intraclass correlation=0.84) with a minimal bias of 2.5+/-6.4%.",
+          "page": null,
+          "verification": "peer_reviewed"
+        },
+        {
+          "k_number": "K200621",
+          "endpoint": "External pilot: AutoEF on novice-acquired loops vs expert LVEF",
+          "metric": "bias; correlation",
+          "value": "best-LVEF bias 3.5% +/- 5.6, r=0.92 (p<0.001)",
+          "comparator": "Three experts' averaged LVEF (ground truth)",
+          "n_studies": null,
+          "n_patients": 57,
+          "n_sites": 1,
+          "dataset_description": "Schneider et al. 2021 (PMID 33029699), Medical University of Vienna, 19 medical students x 3 patients",
+          "subgroup_notes": null,
+          "quote": "We found an excellent agreement between the machine's LVEF calculations from images acquired by the novices with the GT-EF (bias of 3.5% +/- 5.6 and r = 0.92, p < 0.001 in the \"best-LVEF\" algorithm).",
+          "page": null,
+          "verification": "peer_reviewed"
+        }
+      ],
+      "training_data": {
+        "disclosed": true,
+        "n_studies": 50000,
+        "n_patients": null,
+        "n_sites": null,
+        "description": "FDA summaries do not give an absolute training-set size. K210747 states the AutoEF 2.5 retraining used 'an additional 30% of training data from three ultrasound devices and two clinical sites' (p5); DEN220063 says the model 'is trained with a dataset from a large number of patients, representative of the intended patient population and variety of contemporary cardiac ultrasound scanners' (p3). Peer-reviewed: Asch 2019 (Circ Cardiovasc Imaging) states the original AutoEF was 'developed and trained to automatically estimate LVEF on a database of >50 000 echocardiographic studies, including multiple apical 2- and 4-chamber views'. Schneider 2021 reports the shared image-quality-score model trained on >400,000 clips from 12,000 patients. n_studies is the >50,000 figure for the 2018-era algorithm.",
+        "source": "K210747 p5; DEN220063 decision summary p3; Asch 2019 PMID 31522550; Schneider 2021 PMID 33029699",
+        "verification": "peer_reviewed"
+      },
+      "validation_data": {
+        "n_studies": 186,
+        "n_patients": 186,
+        "n_sites": 3,
+        "description": "K210747/DEN220063 pivotal retrospective multicenter dataset: 186 patient studies from Minneapolis Heart Institute (60), Duke University (66) and Northwestern University (60); 56% male; BMI <25 37%, 25-30 34%, >30 29%; EF <30% 18%, 30-53% 43%, >53% 39%; 9 scanner models across Philips, GE, Siemens/Acuson (Philips iE33 48%). Reference standard: expert-cardiologist biplane modified Simpson's EF. Earlier K173780 validation used >300 studies balanced for gender, EF and BMI across multiple manufacturers. Subgroup analyses by EF, BMI, sex, institution and scanner reported as not significantly different (values in labeling only).",
+        "independent_of_training": true,
+        "source": "DEN220063 decision summary pp5-8; K210747 p6 ('Images and cases used for verification and validation testing were carefully separated from training datasets'); K173780 p6",
+        "verification": "fda_summary"
+      },
+      "prior_validations": [
+        {
+          "description": "K173780 AutoEF was applied to the Caption Guidance pivotal-study exams (DEN190040): EF returned in 65.5% of nurse-acquired vs 85.1% of sonographer-acquired exams; mean absolute deviation between the two 3.96 EF%.",
+          "source_url": "https://www.accessdata.fda.gov/cdrh_docs/reviews/DEN190040.pdf",
+          "verification": "fda_summary"
+        },
+        {
+          "description": "Company press release (2020-05-12) states Caption Interpretation added automated EF from the PLAX view in addition to apical views (corresponds to K200621).",
+          "source_url": "https://www.prnewswire.com/news-releases/fda-expedites-clearance-of-caption-health-ultrasound-software-to-aid-frontline-healthcare-workers-in-fight-against-covid-19-pandemic-301057147.html",
+          "verification": "company"
+        },
+        {
+          "description": "AutoEF ships as part of Caption AI on GE Vscan Air SL (launched 2024-04-03); product page: 'AutoEF ... automatically calculates left ventricular ejection fraction from standard cardiac views, with accuracy improving as additional views are acquired' and notes it 'is intended to assist the clinician'.",
+          "source_url": "https://www.gehealthcare.com/en-us/products/ultrasound/handheld-ultrasound/vscan-air-caption-ai",
+          "verification": "company"
+        },
+        {
+          "description": "Caption Interpretation AutoEF 2.0 operator's manual (June 2020) is publicly hosted; not reviewed in this session.",
+          "source_url": "https://assets.website-files.com/61951b6ccd2d8355ab7a9d8a/61a24dff3305d3d73c85db05_EN_-Released-June-22-2020-v0.11-CaptionAI_Interpretation_AutoEF-2.0-.pdf",
+          "verification": "company"
+        }
+      ],
+      "papers": [
+        {
+          "title": "Automated Echocardiographic Quantification of Left Ventricular Ejection Fraction Without Volume Measurements Using a Machine Learning Algorithm Mimicking a Human Expert",
+          "first_author": "Asch FM",
+          "journal": "Circulation: Cardiovascular Imaging",
+          "year": 2019,
+          "doi": "10.1161/CIRCIMAGING.119.009303",
+          "pmid": "31522550",
+          "url": "https://doi.org/10.1161/CIRCIMAGING.119.009303",
+          "relation": "algorithm-development",
+          "n_subjects": 99,
+          "key_result": "AutoEF (BayLabs) trained on >50,000 studies; in 99 independent patients r=0.95, bias 1.0%, LoA +/-11.8%, sensitivity 0.90 / specificity 0.92 for EF <=35%, comparable to clinicians' volume-based measurements.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "Deep Learning-Based Automated Echocardiographic Quantification of Left Ventricular Ejection Fraction: A Point-of-Care Solution",
+          "first_author": "Asch FM",
+          "journal": "Circulation: Cardiovascular Imaging",
+          "year": 2021,
+          "doi": "10.1161/CIRCIMAGING.120.012293",
+          "pmid": "34126754",
+          "url": "https://doi.org/10.1161/CIRCIMAGING.120.012293",
+          "relation": "external-validation",
+          "n_subjects": 166,
+          "key_result": "Algorithm adapted to AP4, AP2, PLAX or any combination: ICC 0.86-0.95 and bias <2% in 166 exams; ICC 0.84, bias 2.5 +/- 6.4% on nurse-acquired portable images; LV-function classification accuracy similar to 10 physicians.",
+          "verification": "doi_resolved"
+        },
+        {
+          "title": "A machine learning algorithm supports ultrasound-naive novices in the acquisition of diagnostic echocardiography loops and provides accurate estimation of LVEF",
+          "first_author": "Schneider M",
+          "journal": "The International Journal of Cardiovascular Imaging",
+          "year": 2021,
+          "doi": "10.1007/s10554-020-02046-6",
+          "pmid": "33029699",
+          "url": "https://doi.org/10.1007/s10554-020-02046-6",
+          "relation": "external-validation",
+          "n_subjects": 57,
+          "key_result": "Caption Health AutoEF on medical-student-acquired loops: best-LVEF bias 3.5% +/- 5.6, r=0.92 vs three-expert reference.",
+          "verification": "doi_resolved"
+        }
+      ],
+      "clinical_trials": [],
+      "open_questions": [
+        "Absolute training-set size for AutoEF 2.0/2.5 is not disclosed in any FDA summary (only 'an additional 30% of training data' in K210747); the >50,000-study figure is from the 2019 paper describing the original Bay Labs algorithm.",
+        "K173780: exact n (stated only as 'over 300'), the RMSD acceptance threshold, and the results of the additional cardiologist-panel generalizability study are not given.",
+        "K200621: no numeric RMSD values are printed for the primary endpoint or view combinations; only pass/fail statements.",
+        "K210747: confidence intervals are referenced ('[95% CI]') but not printed in the 510(k) summary; the DEN220063 decision summary supplies them.",
+        "DEN220063: subgroup RMSD values by sex, BMI, EF range, institution and scanner are referred to the labeling and not printed in the decision summary.",
+        "Whether any PCCP-authorized modification (e.g., new views) has been implemented since 2023, and the current software version on GE Venue / Vscan Air SL, is not publicly documented in sources reviewed.",
+        "WASE-COVID papers (Karagodin 2021, Asch 2022) were candidates but their methods identify Ultromics EchoGo Core for automated LVEF; excluded.",
+        "No registered clinical trial specific to AutoEF was found on ClinicalTrials.gov; the DEN190040 review reports AutoEF applied to NCT03897140 data."
+      ],
+      "sources": [
+        {
+          "fact": "K173780 predicate, device description, >300-study validation, RMSD 8.290%",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf17/K173780.pdf (local: /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K173780.txt)",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K200621 changes (PLAX, on-ultrasound), Clip Annotator PPV/sensitivity, endpoint pass/fail",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200621.pdf (local: /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K200621.txt)",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "K210747 changes (30% more training data, architecture), RMSD 7.21 vs 7.94, outlier rates",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K210747.pdf (local: /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K210747.txt)",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "DEN220063 order: new regulation 892.2055, special controls, PCCP title",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/DEN220063.pdf (local: /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/DEN220063.txt)",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "DEN220063 decision summary: dataset demographics, scanners, RMSD by view with CIs, PCCP acceptance criteria",
+          "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/reviews/DEN220063.pdf (local: /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/DEN220063_review.txt)",
+          "verification": "fda_summary"
+        },
+        {
+          "fact": "Decision dates, product codes, applicants",
+          "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+          "verification": "fda_database"
+        },
+        {
+          "fact": "Original AutoEF trained on >50,000 studies; 99-patient validation",
+          "url_or_file": "https://pubmed.ncbi.nlm.nih.gov/31522550/",
+          "verification": "peer_reviewed"
+        },
+        {
+          "fact": "Point-of-care multi-view AutoEF validation",
+          "url_or_file": "https://pubmed.ncbi.nlm.nih.gov/34126754/",
+          "verification": "peer_reviewed"
+        },
+        {
+          "fact": "WASE-COVID AI analysis used Ultromics EchoGo Core (exclusion rationale)",
+          "url_or_file": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9293371/",
+          "verification": "peer_reviewed"
+        },
+        {
+          "fact": "AutoEF on Vscan Air SL product page",
+          "url_or_file": "https://www.gehealthcare.com/en-us/products/ultrasound/handheld-ultrasound/vscan-air-caption-ai",
+          "verification": "company"
+        }
+      ]
+    }
+  ],
+  "notes": "All eight K/DEN numbers covered from the full FDA texts; dates match openFDA. Performance numbers carry page numbers from the extracted text files (page = '===== PAGE n =====' index). For DEN190040 and DEN220063 the performance data live in the De Novo decision summaries (reviews/DENxxxxxx.pdf); the order letters carry only IFU and special controls. Papers listed are only those whose Caption/Bay Labs attribution was confirmed (abstract, full text or COI); Trost 2025 (DESKi), Kane 2026 (UltraSight), WASE-COVID (Ultromics), Szasz 2026 (Us2.ai/Philips) and Lee 2026 (vendor unnamed) were reviewed and excluded. Company/product pages fetched: GE Vscan Air Caption AI page, GE acquisition release, Caption Health PR Newswire releases (De Novo, commercial launch, COVID expedited clearance). Several publisher and trade-press pages returned 403 and could not be read."
+}

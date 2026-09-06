@@ -1,0 +1,1625 @@
+{
+ "batch_id": "fetal-rv",
+ "families": [
+  {
+   "id": "ventripoint-vms",
+   "product_name": "Ventripoint Medical System Plus (VMS+)",
+   "company": "Ventripoint Diagnostics Ltd.",
+   "company_website": "https://www.ventripoint.com/",
+   "product_url": "https://ventripoint.com/products/vms/",
+   "category": "comprehensive-measurement",
+   "tags": [
+    "RV volumes",
+    "LV volumes",
+    "LA volumes",
+    "RA volumes",
+    "ejection fraction",
+    "knowledge-based reconstruction",
+    "3D reconstruction",
+    "congenital heart disease",
+    "pulmonary hypertension"
+   ],
+   "modality_scope": [
+    "TTE",
+    "2D echo with magnetic tracking",
+    "3D"
+   ],
+   "deployment": [
+    "workstation",
+    "adjunct to existing ultrasound system",
+    "vendor-neutral"
+   ],
+   "summary": "VMS+ (K173810, 2018) is a Windows-based adjunct analysis system that reconstructs 3D chamber models from freehand 2D ultrasound images tracked by a pulsed-DC 6DOF magnetic tracker with ECG trigger, using a knowledge-based reconstruction (KBR) catalog of heart models. K173810 extended the predicate VMS (K150628, RV only) to LV, LA and RA volumes and ejection fractions by adding KBR catalogs; FDA clearance rested on bench testing of reconstruction accuracy with no clinical study. Later clearances (VMS+ 3.0, K191493, 2019-10-16; VMS+ 4.0, K241222, 2025-02-26, product code QIH) are outside this K-number and not extracted here.",
+   "intended_use_quote": "The VMS+ system is an adjunct to existing ultrasound imaging systems and is intended to record, analyze, store and retrieve digital ultrasound images for computerized 3-dimensional image processing.",
+   "indications_for_use_quote": "The VMS+ is an adjunct to existing ultrasound imaging systems and is intended to record, analyze, store and retrieve digital ultrasound images for computerized 3-dimensional image processing.\n\nThe VMS+ is indicated for use where Left Ventricle (LV), Right Ventricle (RV), Left Atrium (LA), and Right Atrium (RA) volumes and ejection fractions are warranted or desired.",
+   "embedded_ai_features": [
+    "Knowledge-based reconstruction (KBR) of LV, RV, LA and RA 3D surfaces from tracked 2D echo landmarks against a catalog of heart models",
+    "Chamber volumes and ejection fractions for all four chambers"
+   ],
+   "clearances": [
+    {
+     "k_number": "K173810",
+     "decision_date": "2018-05-14",
+     "pathway": "510(k)",
+     "product_code": "IYN",
+     "predicates": [
+      "K150628"
+     ],
+     "changes_summary": "Expanded the predicate VMS (K150628; RV volumes and EF only) to LV, RA and LA volumes and ejection fractions by adding KBR heart catalogs for each chamber; same fundamental technology (freehand 2D scanning with 6DOF magnetic tracking, ECG trigger, video capture card, KBR database).",
+     "notable_flags": [
+      "no clinical study",
+      "bench testing only",
+      "Tier II review"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf17/K173810.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K173810",
+     "endpoint": "LV/LA/RA catalog reconstruction accuracy",
+     "metric": "bench testing (no numeric result reported)",
+     "value": "not reported",
+     "comparator": "n/a",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "Performance bench testing of the LV, LA, and RA catalogues was completed to verify suitability for left ventricle, left atrium, and right atrium evaluation.  Testing of the LV, LA, and RA catalogs consisted of a robust series of automated and manual testing to verify reconstruction accuracy.",
+     "page": 6,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K173810",
+     "endpoint": "Clinical testing",
+     "metric": "none",
+     "value": "no clinical studies",
+     "comparator": "n/a",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "The VMS+, subject of this submission, did not require clinical studies to support the determination of substantial equivalence.",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": null,
+     "endpoint": "RV EDV agreement (2D KBR vs CMR) in pulmonary hypertension",
+     "metric": "Bland-Altman bias ± 95% LoA",
+     "value": "EDV 3.5 ± 25.0 mL; ESV 0.9 ± 19.9 mL; SV 2.6 ± 23.1 mL; EF 0.4 ± 10.2%",
+     "comparator": "cardiac MRI",
+     "n_studies": null,
+     "n_patients": 28,
+     "n_sites": null,
+     "dataset_description": "28 PH patients, same-day echo and CMR (Knight 2015, JASE; PMID 25857546)",
+     "subgroup_notes": null,
+     "quote": "Bland-Altman analysis (mean bias ± 95% limits of agreement) showed good agreement for end-diastolic volume (3.5 ± 25.0 mL), end-systolic volume (0.9 ± 19.9 mL), stroke volume (2.6 ± 23.1 mL), and ejection fraction (0.4 ± 10.2%) measured by 2D KBR and cardiac magnetic resonance imaging.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": null,
+     "endpoint": "RV EDV agreement (2D KBR vs MRI) in repaired TOF children",
+     "metric": "mean difference ± SD",
+     "value": "3DR underestimated EDV by 6.6 ± 10 mL (P<0.001); feasibility 98%",
+     "comparator": "cardiac MRI",
+     "n_studies": null,
+     "n_patients": 70,
+     "n_sites": null,
+     "dataset_description": "70 children after TOF repair; MRI available in 41 (Dragulescu 2012, EHJ-CI; PMID 22194094)",
+     "subgroup_notes": null,
+     "quote": "Compared with MRI volumes, 3DR and 3D underestimated EDV by 6.6 ± 10 and 18.2 ± 17.8 mL, respectively, (P < 0.001), while the 4C area method overestimated the EDV by 9.6 ± 33 mL, not significant due to a wide range.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": null,
+     "endpoint": "RV EDV/EF agreement (KBR vs CMR) in adult CHD",
+     "metric": "ICC",
+     "value": "EDV ICC 0.84; EF ICC 0.89; reconstruction feasible in 16/19 (85%)",
+     "comparator": "cardiac MRI",
+     "n_studies": null,
+     "n_patients": 19,
+     "n_sites": null,
+     "dataset_description": "19 consecutive adult congenital right-heart patients, single tertiary center (Trzebiatowska-Krzynska 2015, Echo Res Pract; PMID 26796613)",
+     "subgroup_notes": null,
+     "quote": "The correlation between the methods was good with an intraclass correlation of 0.84 for EDV and 0.89 for EF, P value <0.001 in both cases.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": null,
+     "endpoint": "LV/LA volume agreement (VMS3.0+ vs TomTec 3D) in healthy children",
+     "metric": "ICC",
+     "value": "LV systolic ICC .89 (95% CI .81, .94); LV diastolic ICC .90 (.77, .95); LA diastolic ICC .89 (.81, .93); LA systolic ICC .91 (.78, .96)",
+     "comparator": "TomTec Image Arena 3D LV analysis",
+     "n_studies": null,
+     "n_patients": 98,
+     "n_sites": null,
+     "dataset_description": "98 healthy controls aged 0-18 y, prospective, 3D DICOM datasets; software labelled VMS3.0+ (Ahmad 2022, Echocardiography; PMID 36029116)",
+     "subgroup_notes": "Quote verified against the full abstract via Europe PMC/Crossref (PubMed abstract rendering is truncated).",
+     "quote": "There was a very good correlation between Ventripoint Medical System (VMS) and Tomtec LV systolic (r2  = .88, ICC .89 [95% CI .81, .94]), and diastolic (r2  = .88, ICC .90 [95% CI .77, .95]) volumes, and between VMS and Tomtec LA diastolic (r2  = .75, ICC .89 [95% CI .81, .93]) and systolic (r2  = .88, ICC .91 [95% CI .78, .96]) volumes on linear regression models.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": null,
+     "endpoint": "RV volumes (TTE-KBR vs CMR) in pulmonary sarcoidosis",
+     "metric": "Bland-Altman bias ± 95% LoA",
+     "value": "RVEDV 5.67 ± 55.4 mL (good); RVESV 21.6 ± 34.1 mL, RVSV -16.1 ± 42.9 mL, RVEF -12.9 ± 16.4% (poor)",
+     "comparator": "cardiac MRI within 90 days",
+     "n_studies": null,
+     "n_patients": 122,
+     "n_sites": null,
+     "dataset_description": "122 pulmonary sarcoidosis patients with CMR within 90 days of TTE-KBR, of 281 scanned (Mathijssen 2022, Int J Cardiovasc Imaging; PMID 34586530)",
+     "subgroup_notes": "Quote verified against the full abstract via Europe PMC/Crossref (PubMed abstract rendering is truncated).",
+     "quote": "Bland-Altman analyses (mean bias ± 95% limits of agreement), showed good agreement for RVEDV (ΔRVEDVKBR-CMR, 5.67 ± 55.4 mL), while RVESV, RVSV and RVEF showed poor agreement (ΔRVESVKBR-CMR, 21.6 ± 34.1 mL; ΔRVSVKBR-CMR, - 16.1 ± 42.9 mL; ΔRVEFKBR-CMR, - 12.9 ± 16.4%).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": null,
+     "endpoint": "Systemic RV volumes (2DE-KBR vs CMR) in atrial-switch d-TGA",
+     "metric": "correlation",
+     "value": "EDV r = 0.80; ESV r = 0.82; EF r = 0.86",
+     "comparator": "cardiac MRI",
+     "n_studies": null,
+     "n_patients": 15,
+     "n_sites": null,
+     "dataset_description": "15 young adults with atrially switched d-TGA, same-day 2DE-KBR and CMR (Kutty 2012, Am J Cardiol; PMID 22196781)",
+     "subgroup_notes": null,
+     "quote": "Mean RV end-diastolic volume was 221 ± 39 ml with 2DE-KBR and 231 ± 35 ml with CMR (r = 0.80); mean end-systolic volume was 129 ± 35 ml with KBR and 132 ± 30 ml with CMR (r = 0.82), and EF was 42 ± 10% with KBR and 43 ± 7% with CMR (r = 0.86).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": null,
+     "endpoint": "RV volumes (2D KBR vs CMR) in pulmonary arterial hypertension",
+     "metric": "correlation",
+     "value": "EDV R = 0.87; ESV R = 0.88; EF R = 0.75",
+     "comparator": "cardiac MRI (method of disks)",
+     "n_studies": null,
+     "n_patients": 27,
+     "n_sites": null,
+     "dataset_description": "27 PAH patients, prospective same-day echo and CMR (Bhave 2013, JASE; PMID 23768691)",
+     "subgroup_notes": null,
+     "quote": "Echocardiographic RV volumes correlated well with CMR (EDV, R = 0.87; ESV, R = 0.88; EF, R = 0.75).",
+     "page": null,
+     "verification": "peer_reviewed"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "K173810 summary describes KBR 'heart catalogs' of heart models but gives no catalog/training set size or source. Company product page states the KBR algorithm 'leverages a MRI shape catalogue and anatomical landmarks from standard 2D echocardiography'; the Ahmad 2022 abstract (PMID 36029116) describes 'a validated Magnetic resonance imaging (MRI) database of normal ventricular and atrial morphologies'. Neither gives numbers.",
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf17/K173810.pdf",
+    "verification": "unverified"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "FDA summary reports only bench testing of LV/LA/RA catalogs ('automated and manual testing to verify reconstruction accuracy'); no dataset size, no clinical study.",
+    "independent_of_training": null,
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf17/K173810.pdf",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Predicate VentriPoint Medical System (K150628, 2015-05-22, IYN) cleared for RV volumes and EF; peer-reviewed 2D-KBR RV validations against CMR in TOF, PAH, d-TGA, adult CHD and sarcoidosis (2011-2022) listed under papers.",
+     "source_url": "https://api.fda.gov/device/510k.json?search=k_number:K150628",
+     "verification": "fda_database"
+    },
+    {
+     "description": "Sponsor-run comparison studies vs cMRI registered on ClinicalTrials.gov: NCT01419756 (repaired TOF, n=109, completed) and NCT01557582 (PAH, n=103, completed, primary endpoint mean VMS-cMRI percent difference within ±10% for RVEDV/RVESV).",
+     "source_url": "https://clinicaltrials.gov/study/NCT01557582",
+     "verification": "fda_database"
+    },
+    {
+     "description": "Later clearances per openFDA: VMS+ 3.0 (K191493, 2019-10-16, product code LLZ) and VMS+ 4.0 (K241222, 2025-02-26, product code QIH). An earlier VMS clearance K140153 (2014-03-06, IYN) also exists. Company site markets VMS+ 4.0 as software installable on a personal workstation that builds 3D chamber models from 3D echo or MRI images using KBR. Not extracted here.",
+     "source_url": "https://api.fda.gov/device/510k.json?search=applicant:ventripoint",
+     "verification": "fda_database"
+    },
+    {
+     "description": "Company press release (GlobeNewswire, 2026-08-12) reportedly describes a subscription model, a 2025 FDA clearance and a VMS+ 3.0 usability study (13 sonographers, 98% task completion). The release could not be retrieved in the verification session; the usability-study figures remain unconfirmed.",
+     "source_url": "https://www.globenewswire.com/news-release/2026/08/12/3343713/0/en/ventripoint-expands-subscription-access-for-fda-cleared-ai-cardiac-imaging.html",
+     "verification": "unverified"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Echocardiographic assessment of right ventricular volumes after surgical repair of tetralogy of Fallot: clinical validation of a new echocardiographic method.",
+     "first_author": "Dragulescu A",
+     "journal": "J Am Soc Echocardiogr",
+     "year": 2011,
+     "doi": "10.1016/j.echo.2011.08.006",
+     "pmid": "21920701",
+     "url": "https://doi.org/10.1016/j.echo.2011.08.006",
+     "relation": "external-validation",
+     "n_subjects": 30,
+     "key_result": "2D-based 3D KBR (Ventripoint) vs cardiac MRI in 30 repaired-TOF patients (mean age 13.7 y); highly feasible with low intra/interobserver variability for EDV.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Echocardiographic assessment of right ventricular volumes: a comparison of different techniques in children after surgical repair of tetralogy of Fallot.",
+     "first_author": "Dragulescu A",
+     "journal": "Eur Heart J Cardiovasc Imaging",
+     "year": 2012,
+     "doi": "10.1093/ejechocard/jer278",
+     "pmid": "22194094",
+     "url": "https://doi.org/10.1093/ejechocard/jer278",
+     "relation": "external-validation",
+     "n_subjects": 70,
+     "key_result": "KBR (3DR) feasibility 98%; underestimated EDV vs MRI by 6.6 ± 10 mL (MRI in 41 patients), better than 3D echo (18.2 ± 17.8 mL).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Echocardiographic knowledge-based reconstruction for quantification of the systemic right ventricle in young adults with repaired D-transposition of great arteries.",
+     "first_author": "Kutty S",
+     "journal": "Am J Cardiol",
+     "year": 2012,
+     "doi": "10.1016/j.amjcard.2011.11.012",
+     "pmid": "22196781",
+     "url": "https://doi.org/10.1016/j.amjcard.2011.11.012",
+     "relation": "external-validation",
+     "n_subjects": 15,
+     "key_result": "2DE-KBR vs CMR: EDV r=0.80, ESV r=0.82, EF r=0.86; interobserver variability 4.6%/2.6%/4.3%.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Three-dimensional modeling of the right ventricle from two-dimensional transthoracic echocardiographic images: utility of knowledge-based reconstruction in pulmonary arterial hypertension.",
+     "first_author": "Bhave NM",
+     "journal": "J Am Soc Echocardiogr",
+     "year": 2013,
+     "doi": "10.1016/j.echo.2013.05.007",
+     "pmid": "23768691",
+     "url": "https://doi.org/10.1016/j.echo.2013.05.007",
+     "relation": "external-validation",
+     "n_subjects": 27,
+     "key_result": "KBR RV volumes vs CMR: EDV R=0.87, ESV R=0.88, EF R=0.75; interobserver CoV 7.8% EDV.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Right ventricular volumes assessed by echocardiographic three-dimensional knowledge-based reconstruction compared with magnetic resonance imaging in a clinical setting.",
+     "first_author": "Neukamm C",
+     "journal": "Congenit Heart Dis",
+     "year": 2014,
+     "doi": "10.1111/chd.12146",
+     "pmid": "25247215",
+     "url": "https://doi.org/10.1111/chd.12146",
+     "relation": "external-validation",
+     "n_subjects": 30,
+     "key_result": "30 TOF patients after PVR; feasibility 97%; correlation with MRI r=0.91 (EDV), 0.91 (ESV), 0.38 (EF); echo volumes significantly higher than MRI.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Knowledge-based reconstruction of right ventricular volumes using real-time three-dimensional echocardiographic as well as cardiac magnetic resonance images: comparison with a cardiac magnetic resonance standard.",
+     "first_author": "Laser KT",
+     "journal": "J Am Soc Echocardiogr",
+     "year": 2014,
+     "doi": "10.1016/j.echo.2014.05.008",
+     "pmid": "24969839",
+     "url": "https://doi.org/10.1016/j.echo.2014.05.008",
+     "relation": "external-validation",
+     "n_subjects": 60,
+     "key_result": "KBR applied to RT3DE datasets vs CMR method-of-disks in 20 healthy + 40 CHD: EDV 1.1 ± 7.4% (r=0.990), EF 0.8 ± 9.2% (r=0.871); echo feasibility 88%.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Accuracy and Test-Retest Reproducibility of Two-Dimensional Knowledge-Based Volumetric Reconstruction of the Right Ventricle in Pulmonary Hypertension.",
+     "first_author": "Knight DS",
+     "journal": "J Am Soc Echocardiogr",
+     "year": 2015,
+     "doi": "10.1016/j.echo.2015.02.020",
+     "pmid": "25857546",
+     "url": "https://doi.org/10.1016/j.echo.2015.02.020",
+     "relation": "external-validation",
+     "n_subjects": 28,
+     "key_result": "2D KBR vs CMR bias ± LoA: EDV 3.5 ± 25.0 mL, ESV 0.9 ± 19.9 mL, EF 0.4 ± 10.2%; no significant test-retest differences.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Knowledge-based 3D reconstruction of the right ventricle: comparison with cardiac magnetic resonance in adults with congenital heart disease.",
+     "first_author": "Trzebiatowska-Krzynska A",
+     "journal": "Echo Res Pract",
+     "year": 2015,
+     "doi": "10.1530/ERP-15-0029",
+     "pmid": "26796613",
+     "url": "https://doi.org/10.1530/ERP-15-0029",
+     "relation": "external-validation",
+     "n_subjects": 19,
+     "key_result": "Reconstruction feasible in 16/19; RV volumes smaller than CMR (indexed EDV 114±17 vs 121±19 mL); ICC 0.84 EDV, 0.89 EF.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Right Ventricular Assessment in Adult Congenital Heart Disease Patients with Right Ventricle-to-Pulmonary Artery Conduits.",
+     "first_author": "Wheeler M",
+     "journal": "J Am Soc Echocardiogr",
+     "year": 2015,
+     "doi": "10.1016/j.echo.2014.11.016",
+     "pmid": "25648672",
+     "url": "https://doi.org/10.1016/j.echo.2014.11.016",
+     "relation": "external-validation",
+     "n_subjects": 17,
+     "key_result": "TTE-3DKBR (Ventripoint unit) vs CMR in 17 adults with RV-PA conduits: EDV R=0.77 (P=.0004), ESV R=0.93 (P<.0001), EF R=0.75 (P<.0005); CMR EDV slightly larger than 3DKBR, EF slightly higher by 3DKBR; RV shape diversity characterized on 43 separate CMR datasets.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Two-dimensional knowledge-based volumetric reconstruction of the right ventricle documents short-term improvement in pulmonary hypertension.",
+     "first_author": "Schwaiger JP",
+     "journal": "Echocardiography",
+     "year": 2017,
+     "doi": "10.1111/echo.13541",
+     "pmid": "28612517",
+     "url": "https://doi.org/10.1111/echo.13541",
+     "relation": "real-world",
+     "n_subjects": 25,
+     "key_result": "Longitudinal 2DKBR in 25 PH patients: RVEDVi 111±29 to 100±36 mL/m² (P=.038), RVEF 35±10% to 40±9% (P=.030) over 6.1 months; ESVi change correlated with NT-proBNP (r=-.77).",
+     "verification": "pmid_resolved"
+    },
+    {
+     "title": "Real-time 3D-echocardiography of the right ventricle-paediatric reference values for right ventricular volumes using knowledge-based reconstruction: a multicentre study.",
+     "first_author": "Herberg U",
+     "journal": "Quant Imaging Med Surg",
+     "year": 2021,
+     "doi": "10.21037/qims-20-1155",
+     "pmid": "34249622",
+     "url": "https://doi.org/10.21037/qims-20-1155",
+     "relation": "real-world",
+     "n_subjects": 545,
+     "key_result": "545 healthy children (Philips iE33 / GE Vivid 7), VMS KBR analysis; adequate quality in 406/545 (74.5%); sex-specific BSA-indexed RV volume centiles; excellent intra/interobserver ICCs.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Value of echocardiography using knowledge-based reconstruction in determining right ventricular volumes in pulmonary sarcoidosis: comparison with cardiac magnetic resonance imaging.",
+     "first_author": "Mathijssen H",
+     "journal": "Int J Cardiovasc Imaging",
+     "year": 2022,
+     "doi": "10.1007/s10554-021-02405-x",
+     "pmid": "34586530",
+     "url": "https://doi.org/10.1007/s10554-021-02405-x",
+     "relation": "external-validation",
+     "n_subjects": 122,
+     "key_result": "TTE-KBR vs CMR: RVEDV bias 5.67 ± 55.4 mL (good); RVESV, RVSV and RVEF poor agreement (RVEF -12.9 ± 16.4%).",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Comparing a knowledge-based 3D reconstruction algorithm to TomTec 3D echocardiogram algorithm in measuring left cardiac chamber volumes in the pediatric population.",
+     "first_author": "Ahmad A",
+     "journal": "Echocardiography",
+     "year": 2022,
+     "doi": "10.1111/echo.15427",
+     "pmid": "36029116",
+     "url": "https://doi.org/10.1111/echo.15427",
+     "relation": "external-validation",
+     "n_subjects": 98,
+     "key_result": "VMS3.0+ vs TomTec 3D in 98 healthy children: LV systolic/diastolic ICC .89/.90, LA ICC .89/.91; VMS analysis faster (LV 2.3 vs 3.3 min).",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [
+    {
+     "nct_id": "NCT01419756",
+     "title": "Assessment of Right Ventricular Volume Using the Ventripoint Medical System in Patients With Tetralogy of Fallott Following Repair; A Comparison Study to cMRI",
+     "status": "COMPLETED",
+     "url": "https://clinicaltrials.gov/study/NCT01419756"
+    },
+    {
+     "nct_id": "NCT01557582",
+     "title": "Assessment of Right Ventricular Volume Using the Ventripoint Medical System in Patients With Pulmonary Arterial Hypertension",
+     "status": "COMPLETED",
+     "url": "https://clinicaltrials.gov/study/NCT01557582"
+    },
+    {
+     "nct_id": "NCT01907971",
+     "title": "Left Ventricular Function in Ebstein Anomaly: Assessment by 3D Echocardiography and Speckle Tracking. Assessment and Validation of the Right Ventricle by VentriPoint Method.",
+     "status": "COMPLETED",
+     "url": "https://clinicaltrials.gov/study/NCT01907971"
+    },
+    {
+     "nct_id": "NCT05262907",
+     "title": "Assessment of Ventricular Volumes and Function in Single Ventricle Patients Using Ventripoint 3D Echocardiography",
+     "status": "RECRUITING",
+     "url": "https://clinicaltrials.gov/study/NCT05262907"
+    },
+    {
+     "nct_id": "NCT07093918",
+     "title": "Echocardiographic Detection of Cardiotoxicity Using the Ventripoint (VMS) 3D AI Echocardiography System Versus Conventional Echo Analyses and Cardiac MRI in Patients Receiving Chemotherapy",
+     "status": "NOT_YET_RECRUITING",
+     "url": "https://clinicaltrials.gov/study/NCT07093918"
+    }
+   ],
+   "open_questions": [
+    "K173810 summary reports no numeric performance results (bench testing only, no clinical study); no dataset sizes, sites, or accuracy figures for the LV/LA/RA catalogs.",
+    "Size and provenance of the KBR heart-model catalogs (training data) are not disclosed in the FDA summary or company pages.",
+    "The peer-reviewed validations listed mostly concern the RV-only predicate VMS (K150628) and 2D-KBR with magnetic tracking; only Ahmad 2022 (VMS3.0+, LV/LA) addresses the chambers added in K173810, and that version corresponds to K191493 (VMS+ 3.0), which was not in scope for extraction.",
+    "Results of sponsor trials NCT01419756 (n=109) and NCT01557582 (n=103) were not located as publications in this session.",
+    "Ventripoint's Aug 2026 press release references a '2025' FDA clearance for VMS+ 4.0; openFDA lists K241222 (VMS+ 4.0, 2025-02-26, QIH); its summary was not extracted."
+   ],
+   "sources": [
+    {
+     "fact": "IFU, predicate, device description, bench-only testing",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf17/K173810.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "decision_date 2018-05-14, product code IYN, applicant",
+     "url_or_file": "openfda_records.json[K173810]",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "K150628 (2015-05-22, IYN), K191493 (2019-10-16, LLZ, VMS+ 3.0), K241222 (2025-02-26, QIH, VMS+ 4.0), K140153 (2014-03-06, IYN)",
+     "url_or_file": "https://api.fda.gov/device/510k.json",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Company site: VMS+ 4.0, KBR, four chambers, workstation install",
+     "url_or_file": "https://ventripoint.com/products/vms/",
+     "verification": "company"
+    },
+    {
+     "fact": "VMS+ 3.0 FDA clearance press release Oct 17 2019",
+     "url_or_file": "https://www.thenewswire.com/press-releases/1L5PFqz6a-ventripoint-diagnostics-announces-us-fda-clearance-for-vms-30-whole-heart-analysis-system.html",
+     "verification": "news"
+    },
+    {
+     "fact": "Aug 2026 subscription press release; AIRES study; usability study (page not retrievable in verification session)",
+     "url_or_file": "https://www.globenewswire.com/news-release/2026/08/12/3343713/0/en/ventripoint-expands-subscription-access-for-fda-cleared-ai-cardiac-imaging.html",
+     "verification": "unverified"
+    },
+    {
+     "fact": "PubMed abstracts and Crossref DOI resolution for listed papers",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ ; https://api.crossref.org/works/",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "ClinicalTrials.gov records",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies",
+     "verification": "fda_database"
+    }
+   ]
+  },
+  {
+   "id": "brightheart-fetal-echoscan",
+   "product_name": "Fetal EchoScan (marketed as B-Right Screen)",
+   "company": "BrightHeart",
+   "company_website": "https://www.brightheart.ai/",
+   "product_url": "https://www.brightheart.ai/",
+   "category": "fetal-echo",
+   "tags": [
+    "fetal CHD",
+    "CADx",
+    "second trimester",
+    "MRMC",
+    "overriding artery",
+    "septal defect",
+    "cardiothoracic ratio",
+    "cardiac axis",
+    "cloud",
+    "POK"
+   ],
+   "modality_scope": [
+    "fetal",
+    "2D grayscale cine clips",
+    "TA obstetric ultrasound"
+   ],
+   "deployment": [
+    "cloud",
+    "PACS-integrated (annotated DICOM)",
+    "web interface (v1.1)",
+    "third-party user interface (v1.2)",
+    "cart-side tablet (company)",
+    "vendor-limited: Fujifilm, GE, Philips, Samsung, Toshiba"
+   ],
+   "summary": "Cloud-based CADx software that analyzes all 2D grayscale cine clips of a second-trimester (18-24 wk) fetal anatomy exam and labels eight morphologic findings suggestive of CHD as present/absent/inconclusive, output as annotated DICOM. Cleared Nov 2024 (K242342) with an EchoGo Pro (K201555) predicate under product code POK; standalone testing on 877 exams from 11 U.S./French centers and a 14-reader x 200-exam MRMC study. K251071 (v1.1, May 2025) added an optional web interface; K252294 (v1.2, Dec 2025) added a validated third-party UI, a clip-of-fetal-heart detector, and re-ran standalone testing.",
+   "intended_use_quote": "Fetal EchoScan is a machine learning-based computer-assisted diagnosis (CADx) software device indicated as an adjunct to fetal heart ultrasound examination in pregnant women aged 18 or older undergoing second-trimester anatomic ultrasound exams.\nWhen utilized by an interpreting physician, Fetal EchoScan provides information regarding the presence of any of the following suspicious radiographic findings:\n- overriding artery\n- septal defect at the cardiac crux\n- abnormal relationship of the outflow tracts\n- enlarged cardiothoracic ratio\n- right ventricular to left ventricular size discrepancy\n- tricuspid valve to mitral valve annular size discrepancy\n- pulmonary valve to aortic valve annular size discrepancy\n- cardiac axis deviation\nFetal EchoScan is to be used with cardiac fetal ultrasound video clips containing interpretable 4-chamber, left ventricular outflow tract, right ventricular outflow tract standard views.\nFetal EchoScan is intended for use as a concurrent reading aid for interpreting physicians (OB-GYN, MFM). It does not replace the role of the physician or of other diagnostic testing in the standard of care. When utilized by an interpreting physician, this device provides information that may be useful in rendering an accurate diagnosis regarding the potential presence of morphological abnormalities that might be suggestive of fetal congenital heart defects that may be useful in determining the need for additional exams.\nFetal EchoScan is not intended for use in multiple pregnancies, cases of heterotaxy, and postnatal ultrasound exams.",
+   "indications_for_use_quote": "Fetal EchoScan is a machine learning-based computer-assisted diagnosis (CADx) software device indicated as an adjunct to fetal heart ultrasound examination in pregnant women aged 18 or older undergoing second-trimester anatomic ultrasound exams.\nWhen utilized by an interpreting physician, Fetal EchoScan provides information regarding the presence of any of the following suspicious radiographic findings:\n- overriding artery\n- septal defect at the cardiac crux\n- abnormal relationship of the outflow tracts\n- enlarged cardiothoracic ratio\n- right ventricular to left ventricular size discrepancy\n- tricuspid valve to mitral valve annular size discrepancy\n- pulmonary valve to aortic valve annular size discrepancy\n- cardiac axis deviation\nFetal EchoScan is to be used with cardiac fetal ultrasound video clips containing interpretable 4-chamber, left ventricular outflow tract, right ventricular outflow tract standard views.\nFetal EchoScan is intended for use as a concurrent reading aid for interpreting physicians (OB-GYN, MFM). It does not replace the role of the physician or of other diagnostic testing in the standard of care. When utilized by an interpreting physician, this device provides information that may be useful in rendering an accurate diagnosis regarding the potential presence of morphological abnormalities that might be suggestive of fetal congenital heart defects that may be useful in determining the need for additional exams.\nFetal EchoScan is not intended for use in multiple pregnancies, cases of heterotaxy, and postnatal ultrasound exams.",
+   "embedded_ai_features": [
+    "Classification features (morphology in video clip): overriding artery, septal defect at cardiac crux, abnormal outflow-tract relationship",
+    "Measurement features (detection/segmentation of anatomic points): enlarged cardiothoracic ratio, RV/LV size discrepancy, TV/MV annular size discrepancy, PV/AV annular size discrepancy, cardiac axis deviation",
+    "Per-frame present/absent/inconclusive with record- and exam-level summary tables",
+    "v1.2: model also trained to identify video clips featuring the fetal heart"
+   ],
+   "clearances": [
+    {
+     "k_number": "K242342",
+     "decision_date": "2024-11-14",
+     "pathway": "510(k)",
+     "product_code": "POK",
+     "predicates": [
+      "K201555"
+     ],
+     "changes_summary": "Initial clearance. Predicate EchoGo Pro (Ultromics, stress-echo CAD CADx) differs in modality and population; FDA accepted as same fundamental technology (ML model assisting physician diagnosis).",
+     "notable_flags": [
+      "cloud",
+      "CADx",
+      "POK regulation 892.2060 (lesions suspicious for cancer) applied to fetal CHD",
+      "MRMC reader study",
+      "standalone testing",
+      "vendor-limited labeling"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242342.pdf"
+    },
+    {
+     "k_number": "K251071",
+     "decision_date": "2025-05-02",
+     "pathway": "510(k)",
+     "product_code": "POK",
+     "predicates": [
+      "K242342"
+     ],
+     "changes_summary": "Special 510(k). Same algorithm; outputs may optionally be displayed on a device web interface in addition to annotated DICOMs in the PACS viewer. No new performance testing; K242342 results restated.",
+     "notable_flags": [
+      "cloud",
+      "Special 510(k)",
+      "web interface"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251071.pdf"
+    },
+    {
+     "k_number": "K252294",
+     "decision_date": "2025-12-08",
+     "pathway": "510(k)",
+     "product_code": "POK",
+     "predicates": [
+      "K251071"
+     ],
+     "changes_summary": "v1.2: outputs may be displayed on a validated third-party user interface (device web interface dropped from output display list); model additionally trained to identify video clips featuring the fetal heart; record-level summary table dropped (exam summary retained); IFU form wording changed to 'interpreting physicians' (no OB-GYN/MFM parenthetical) and 'fetal heterotaxy'. Standalone testing re-run on the 877-exam dataset with slightly different values; reader study not repeated.",
+     "notable_flags": [
+      "cloud",
+      "third-party UI",
+      "standalone re-test"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K252294.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K242342",
+     "endpoint": "Conclusive-output rate (any finding)",
+     "metric": "% of exams with conclusive output",
+     "value": "98.8% (95% CI 97.8; 99.3)",
+     "comparator": "n/a",
+     "n_studies": 877,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "877 clinically acquired 2nd-trimester (18-24 wk) fetal ultrasound exams from 11 centers (U.S.A. and France); all images and video clips per exam; reference standard = majority vote of three pediatric cardiologists, independent of device; test exams entirely distinct from training/validation exams",
+     "subgroup_notes": null,
+     "quote": "The AI system had a conclusive output regarding the presence of any finding for 98.8% (95% CI, 97.8 ; 99.3) of exams.",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242342",
+     "endpoint": "Any suspicious finding, standalone (inconclusive counted negative)",
+     "metric": "sensitivity (worst-case) / specificity (best-case)",
+     "value": "Sens 0.977 (0.954; 0.989); Spec 0.977 (0.961; 0.987)",
+     "comparator": "majority of 3 pediatric cardiologists",
+     "n_studies": 877,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "877 clinically acquired 2nd-trimester (18-24 wk) fetal ultrasound exams from 11 centers (U.S.A. and France); all images and video clips per exam; reference standard = majority vote of three pediatric cardiologists, independent of device; test exams entirely distinct from training/validation exams",
+     "subgroup_notes": "Stratified analysis by gestational age, mother's age, BMI, race, ultrasound make/model and image quality reported as consistent; validated only with Fujifilm, GE, Philips, Samsung and Toshiba devices",
+     "quote": "Any suspicious findings 0.977 (0.954 ; 0.989) 0.977 (0.961 ; 0.987) 0.987 (0.967 ; 0.995) 0.963 (0.944 ; 0.976)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242342",
+     "endpoint": "Any suspicious finding, standalone (inconclusive counted positive)",
+     "metric": "sensitivity (best-case) / specificity (worst-case)",
+     "value": "Sens 0.987 (0.967; 0.995); Spec 0.963 (0.944; 0.976)",
+     "comparator": "majority of 3 pediatric cardiologists",
+     "n_studies": 877,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "877 clinically acquired 2nd-trimester (18-24 wk) fetal ultrasound exams from 11 centers (U.S.A. and France); all images and video clips per exam; reference standard = majority vote of three pediatric cardiologists, independent of device; test exams entirely distinct from training/validation exams",
+     "subgroup_notes": "Stratified analysis by gestational age, mother's age, BMI, race, ultrasound make/model and image quality reported as consistent; validated only with Fujifilm, GE, Philips, Samsung and Toshiba devices",
+     "quote": "Any suspicious findings 0.977 (0.954 ; 0.989) 0.977 (0.961 ; 0.987) 0.987 (0.967 ; 0.995) 0.963 (0.944 ; 0.976)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242342",
+     "endpoint": "Overriding artery, standalone",
+     "metric": "sensitivity / specificity (worst-case sens, best-case spec | best-case sens, worst-case spec)",
+     "value": "0.894 (0.820; 0.940) / 0.989 (0.977; 0.995) | 0.942 (0.880; 0.973) / 0.979 (0.963; 0.988)",
+     "comparator": "majority of 3 pediatric cardiologists",
+     "n_studies": 877,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "877 clinically acquired 2nd-trimester (18-24 wk) fetal ultrasound exams from 11 centers (U.S.A. and France); all images and video clips per exam; reference standard = majority vote of three pediatric cardiologists, independent of device; test exams entirely distinct from training/validation exams",
+     "subgroup_notes": "Per-finding specificity computed on exams negative to all findings",
+     "quote": "Overriding artery 0.894 (0.820 ; 0.940) 0.989 (0.977 ; 0.995) 0.942 (0.880 ; 0.973) 0.979 (0.963 ; 0.988)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242342",
+     "endpoint": "Cardiac crux septal defect, standalone",
+     "metric": "sensitivity / specificity (worst-case sens, best-case spec | best-case sens, worst-case spec)",
+     "value": "0.905 (0.823; 0.951) / 0.995 (0.985; 0.998) | 0.917 (0.838; 0.959) / 0.989 (0.977; 0.995)",
+     "comparator": "majority of 3 pediatric cardiologists",
+     "n_studies": 877,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "877 clinically acquired 2nd-trimester (18-24 wk) fetal ultrasound exams from 11 centers (U.S.A. and France); all images and video clips per exam; reference standard = majority vote of three pediatric cardiologists, independent of device; test exams entirely distinct from training/validation exams",
+     "subgroup_notes": null,
+     "quote": "Cardiac crux septal defect 0.905 (0.823 ; 0.951) 0.995 (0.985 ; 0.998) 0.917 (0.838 ; 0.959) 0.989 (0.977 ; 0.995)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242342",
+     "endpoint": "Abnormal outflow-tract relationship, standalone",
+     "metric": "sensitivity / specificity (worst-case sens, best-case spec | best-case sens, worst-case spec)",
+     "value": "0.869 (0.781; 0.925) / 0.991 (0.979; 0.996) | 0.952 (0.884; 0.981) / 0.989 (0.977; 0.995)",
+     "comparator": "majority of 3 pediatric cardiologists",
+     "n_studies": 877,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "877 clinically acquired 2nd-trimester (18-24 wk) fetal ultrasound exams from 11 centers (U.S.A. and France); all images and video clips per exam; reference standard = majority vote of three pediatric cardiologists, independent of device; test exams entirely distinct from training/validation exams",
+     "subgroup_notes": null,
+     "quote": "Abn. OT relationship 0.869 (0.781 ; 0.925) 0.991 (0.979 ; 0.996) 0.952 (0.884 ; 0.981) 0.989 (0.977 ; 0.995)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242342",
+     "endpoint": "Enlarged cardiothoracic ratio, standalone",
+     "metric": "sensitivity / specificity",
+     "value": "0.955 (0.876; 0.985) / 1.000 (0.993; 1.000) (both scenarios)",
+     "comparator": "majority of 3 pediatric cardiologists",
+     "n_studies": 877,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "877 clinically acquired 2nd-trimester (18-24 wk) fetal ultrasound exams from 11 centers (U.S.A. and France); all images and video clips per exam; reference standard = majority vote of three pediatric cardiologists, independent of device; test exams entirely distinct from training/validation exams",
+     "subgroup_notes": null,
+     "quote": "Enlarged CTR 0.955 (0.876 ; 0.985) 1.000 (0.993 ; 1.000) 0.955 (0.876 ; 0.985) 1.000 (0.993 ; 1.000)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242342",
+     "endpoint": "Cardiac axis deviation, standalone",
+     "metric": "sensitivity / specificity",
+     "value": "0.945 (0.851; 0.981) / 1.000 (0.993; 1.000) (both scenarios)",
+     "comparator": "majority of 3 pediatric cardiologists",
+     "n_studies": 877,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "877 clinically acquired 2nd-trimester (18-24 wk) fetal ultrasound exams from 11 centers (U.S.A. and France); all images and video clips per exam; reference standard = majority vote of three pediatric cardiologists, independent of device; test exams entirely distinct from training/validation exams",
+     "subgroup_notes": null,
+     "quote": "Cardiac axis deviation 0.945 (0.851 ; 0.981) 1.000 (0.993 ; 1.000) 0.945 (0.851 ; 0.981) 1.000 (0.993 ; 1.000)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242342",
+     "endpoint": "PV/AV annular size discrepancy, standalone",
+     "metric": "sensitivity / specificity",
+     "value": "0.954 (0.914; 0.975) / 0.989 (0.977; 0.995) (both scenarios)",
+     "comparator": "majority of 3 pediatric cardiologists",
+     "n_studies": 877,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "877 clinically acquired 2nd-trimester (18-24 wk) fetal ultrasound exams from 11 centers (U.S.A. and France); all images and video clips per exam; reference standard = majority vote of three pediatric cardiologists, independent of device; test exams entirely distinct from training/validation exams",
+     "subgroup_notes": null,
+     "quote": "PV/AV size discrepancy 0.954 (0.914 ; 0.975) 0.989 (0.977 ; 0.995) 0.954 (0.914 ; 0.975) 0.989 (0.977 ; 0.995)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242342",
+     "endpoint": "RV/LV size discrepancy, standalone",
+     "metric": "sensitivity / specificity",
+     "value": "0.950 (0.900; 0.975) / 1.000 (0.993; 1.000) (both scenarios)",
+     "comparator": "majority of 3 pediatric cardiologists",
+     "n_studies": 877,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "877 clinically acquired 2nd-trimester (18-24 wk) fetal ultrasound exams from 11 centers (U.S.A. and France); all images and video clips per exam; reference standard = majority vote of three pediatric cardiologists, independent of device; test exams entirely distinct from training/validation exams",
+     "subgroup_notes": null,
+     "quote": "RV/LV size discrepancy 0.950 (0.900 ; 0.975) 1.000 (0.993 ; 1.000) 0.950 (0.900 ; 0.975) 1.000 (0.993 ; 1.000)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242342",
+     "endpoint": "TV/MV annular size discrepancy, standalone",
+     "metric": "sensitivity / specificity",
+     "value": "0.943 (0.896; 0.970) / 1.000 (0.993; 1.000) (both scenarios)",
+     "comparator": "majority of 3 pediatric cardiologists",
+     "n_studies": 877,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "877 clinically acquired 2nd-trimester (18-24 wk) fetal ultrasound exams from 11 centers (U.S.A. and France); all images and video clips per exam; reference standard = majority vote of three pediatric cardiologists, independent of device; test exams entirely distinct from training/validation exams",
+     "subgroup_notes": null,
+     "quote": "TV/MV size discrepancy 0.943 (0.896 ; 0.970) 1.000 (0.993 ; 1.000) 0.943 (0.896 ; 0.970) 1.000 (0.993 ; 1.000)",
+     "page": 10,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242342",
+     "endpoint": "Reader detection of any suspicious finding, aided vs unaided (MRMC)",
+     "metric": "ROC AUC",
+     "value": "aided 0.974 (95% CI 0.957-0.990) vs unaided 0.825 (0.741-0.908); difference 0.149 (0.066; 0.232), p=0.002 (DBM-OR)",
+     "comparator": "truth from 3 pediatric cardiologists; unaided readers",
+     "n_studies": 200,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "Fully-crossed MRMC: 14 readers (OB-GYN and MFM) x 200 exams (18-24 wk), aided vs unaided, randomized order, 30-day washout; same truthing (3 pediatric cardiologists, majority vote); U.S.A. and France",
+     "subgroup_notes": "Stratified by gestational age, mother's age, BMI, race, ultrasound make/model, image quality, reader specialty, reader country and each finding: consistent",
+     "quote": "The ROC AUC for detection of any suspicious radiographic finding was significantly higher in the aided compared to the unaided reading condition (see Figure 1 ): 0.974 (95% CI 0.957-0.990) vs 0.825 (0.741-0.908), p=0.002 (using the Dorfman-Berbaum-Metz and Obuchowski-Rockette method): +14.9% increase in AUC .",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242342",
+     "endpoint": "Reader sensitivity for any suspicious finding, aided vs unaided (MRMC)",
+     "metric": "mean sensitivity",
+     "value": "aided 0.935 (0.892-0.978) vs unaided 0.782 (0.686-0.878)",
+     "comparator": "truth from 3 pediatric cardiologists",
+     "n_studies": 200,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Fully-crossed MRMC: 14 readers (OB-GYN and MFM) x 200 exams (18-24 wk), aided vs unaided, randomized order, 30-day washout; same truthing (3 pediatric cardiologists, majority vote); U.S.A. and France",
+     "subgroup_notes": null,
+     "quote": "The mean sensitivity for identification of any claimed suspicious finding was 0.935 (0.892-0.978) in the aided reading condition vs 0.782 (0.686-0.878) in the unaided reading condition: +15.3% increase in sensitivity .",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242342",
+     "endpoint": "Reader specificity for any suspicious finding, aided vs unaided (MRMC)",
+     "metric": "mean specificity",
+     "value": "aided 0.970 (0.949-0.991) vs unaided 0.759 (0.630-0.887)",
+     "comparator": "truth from 3 pediatric cardiologists",
+     "n_studies": 200,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Fully-crossed MRMC: 14 readers (OB-GYN and MFM) x 200 exams (18-24 wk), aided vs unaided, randomized order, 30-day washout; same truthing (3 pediatric cardiologists, majority vote); U.S.A. and France",
+     "subgroup_notes": null,
+     "quote": "The mean specificity for identification of any claimed suspicious finding was 0.970 (0.949-0.991) in the aided reading condition vs 0.759 (0.630-0.887) in the unaided reading condition: +21.1% increase in specificity .",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K242342",
+     "endpoint": "Per-finding reader AUC, aided vs unaided (MRMC)",
+     "metric": "ROC AUC difference (aided minus unaided), 95% CI, DBM-OR p",
+     "value": "Overriding artery 0.150 (0.063; 0.237) p=0.002; crux septal defect 0.114 (0.042; 0.186) p=0.004; abn. OT relationship 0.140 (0.048; 0.232) p=0.005; enlarged CTR 0.214 (0.131; 0.297) p<0.001; axis deviation 0.181 (0.106; 0.256) p<0.001; PV/AV 0.140 (0.060; 0.221) p=0.002; RV/LV 0.123 (0.055; 0.190) p=0.001; TV/MV 0.114 (0.048; 0.179) p=0.002",
+     "comparator": "unaided readers",
+     "n_studies": 200,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Fully-crossed MRMC: 14 readers (OB-GYN and MFM) x 200 exams (18-24 wk), aided vs unaided, randomized order, 30-day washout; same truthing (3 pediatric cardiologists, majority vote); U.S.A. and France",
+     "subgroup_notes": null,
+     "quote": "Overriding artery 0.953 (0.916 ; 0.990) 0.803 (0.719 ; 0.888) 0.150 (0.063 ; 0.237) 0.002 Cardiac crux septal defect 0.971 (0.943 ; 0.999) 0.857 (0.782 ; 0.933) 0.114 (0.042 ; 0.186) 0.004 Abn. OT relationship 0.972 (0.953 ; 0.992) 0.832 (0.738 ; 0.927) 0.140 (0.048 ; 0.232) 0.005 Enlarged CTR 0.960 (0.930 ; 0.989) 0.746 (0.666 ; 0.826) 0.214 (0.131 ; 0.297) <0.001 Cardiac axis deviation 0.967 (0.932 ; 1.000) 0.786 (0.704 ; 0.867) 0.181 (0.106 ; 0.256) <0.001 PV/AV size discrepancy 0.979 (0.962 ; 0.997) 0.839 (0.756 ; 0.921) 0.140 (0.060 ; 0.221) 0.002 RV/LV size discrepancy 0.991 (0.983 ; 0.999) 0.868 (0.801 ; 0.936) 0.123 (0.055 ; 0.190) 0.001 TV/MV size discrepancy 0.964 (0.938 ; 0.990) 0.850 (0.779 ; 0.921) 0.114 (0.048 ; 0.179) 0.002",
+     "page": 11,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K251071",
+     "endpoint": "Standalone and reader-study performance (v1.1)",
+     "metric": "identical to K242342 (same algorithm)",
+     "value": "Standalone: any-finding sens 0.977 (0.954; 0.989) / spec 0.977 (0.961; 0.987) [inconclusive=negative]; MRMC AUC 0.974 vs 0.825, p=0.002",
+     "comparator": "see K242342",
+     "n_studies": 877,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "Re-statement of the K242342 standalone (877 exams, 11 centers) and MRMC (14 readers x 200 exams) results",
+     "subgroup_notes": null,
+     "quote": "The algorithm for the detection of suspicious findings is exactly the same between the subject and predicate devices, therefore bench testing for the subject device remains valid for the predicate device. We remind here the corresponding Bench testing results:",
+     "page": 7,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K252294",
+     "endpoint": "Conclusive-output rate (any finding), v1.2",
+     "metric": "% of exams with conclusive output",
+     "value": "99.0% (95% CI 98.1; 99.5)",
+     "comparator": "n/a",
+     "n_studies": 877,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "877 clinically acquired 2nd-trimester (18-24 wk) fetal ultrasound exams from 11 centers (U.S.A. and France); all images and video clips per exam; reference standard = majority vote of three pediatric cardiologists, independent of device; test exams entirely distinct from training/validation exams",
+     "subgroup_notes": null,
+     "quote": "The AI system had a conclusive output regarding the presence of any finding for 99.0% (95% CI, 98.1 ; 99.5) of exams.",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K252294",
+     "endpoint": "Any suspicious finding, standalone v1.2 (inconclusive counted negative)",
+     "metric": "sensitivity (worst-case) / specificity (best-case)",
+     "value": "Sens 0.984 (0.963; 0.993); Spec 0.970 (0.952; 0.981)",
+     "comparator": "majority of 3 pediatric cardiologists",
+     "n_studies": 877,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "877 clinically acquired 2nd-trimester (18-24 wk) fetal ultrasound exams from 11 centers (U.S.A. and France); all images and video clips per exam; reference standard = majority vote of three pediatric cardiologists, independent of device; test exams entirely distinct from training/validation exams",
+     "subgroup_notes": "Stratified analysis by gestational age, mother's age, BMI, race, ultrasound make/model and image quality reported as consistent; validated only with Fujifilm, GE, Philips, Samsung and Toshiba devices",
+     "quote": "Any suspicious findings 0.984 (0.963 ; 0.993) 0.970 (0.952 ; 0.981) 0.990 (0.972 ; 0.997) 0.958 (0.938 ; 0.971)",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K252294",
+     "endpoint": "Any suspicious finding, standalone v1.2 (inconclusive counted positive)",
+     "metric": "sensitivity (best-case) / specificity (worst-case)",
+     "value": "Sens 0.990 (0.972; 0.997); Spec 0.958 (0.938; 0.971)",
+     "comparator": "majority of 3 pediatric cardiologists",
+     "n_studies": 877,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "877 clinically acquired 2nd-trimester (18-24 wk) fetal ultrasound exams from 11 centers (U.S.A. and France); all images and video clips per exam; reference standard = majority vote of three pediatric cardiologists, independent of device; test exams entirely distinct from training/validation exams",
+     "subgroup_notes": "Stratified analysis by gestational age, mother's age, BMI, race, ultrasound make/model and image quality reported as consistent; validated only with Fujifilm, GE, Philips, Samsung and Toshiba devices",
+     "quote": "Any suspicious findings 0.984 (0.963 ; 0.993) 0.970 (0.952 ; 0.981) 0.990 (0.972 ; 0.997) 0.958 (0.938 ; 0.971)",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K252294",
+     "endpoint": "Per-finding standalone v1.2 (worst-case sens / best-case spec | best-case sens / worst-case spec)",
+     "metric": "sensitivity / specificity",
+     "value": "Overriding artery 0.933 (0.868; 0.967)/0.988 (0.975; 0.994) | 0.942/0.979; crux septal defect 0.917 (0.838; 0.959)/0.995 (0.985; 0.998) | same; abn. OT 0.869 (0.781; 0.925)/0.988 (0.975; 0.994) | 0.952/0.982; enlarged CTR 0.955 (0.876; 0.985)/0.996 (0.987; 0.999); axis deviation 0.945 (0.851; 0.981)/1.000 | 0.964 (0.877; 0.990)/1.000; PV/AV 0.959 (0.921; 0.979)/0.986 (0.972; 0.993); RV/LV 0.950 (0.900; 0.975)/1.000; TV/MV 0.950 (0.904; 0.974)/1.000 (0.993; 1.000)",
+     "comparator": "majority of 3 pediatric cardiologists",
+     "n_studies": 877,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "877 clinically acquired 2nd-trimester (18-24 wk) fetal ultrasound exams from 11 centers (U.S.A. and France); all images and video clips per exam; reference standard = majority vote of three pediatric cardiologists, independent of device; test exams entirely distinct from training/validation exams",
+     "subgroup_notes": "Table spans pages 9-10; v1.2 re-ran standalone testing on the same 877-exam dataset with 'minor variations of device performance'; reader study not repeated (K242342 MRMC results restated on pp.10-11)",
+     "quote": "Overriding artery 0.933 (0.868 ; 0.967) 0.988 (0.975 ; 0.994) 0.942 (0.880 ; 0.973) 0.979 (0.963 ; 0.988) Cardiac crux septal defect 0.917 (0.838 ; 0.959) 0.995 (0.985 ; 0.998) 0.917 (0.838 ; 0.959) 0.995 (0.985 ; 0.998) Abn. OT relationship 0.869 (0.781 ; 0.925) 0.988 (0.975 ; 0.994) 0.952 (0.884 ; 0.981) 0.982 (0.968 ; 0.990) Enlarged CTR 0.955 (0.876 ; 0.985) 0.996 (0.987 ; 0.999) 0.955 (0.876 ; 0.985) 0.996 (0.987 ; 0.999) Cardiac axis deviation 0.945 (0.851 ; 0.981) 1.000 (0.993 ; 1.000) 0.964 (0.877 ; 0.990) 1.000 (0.993 ; 1.000) PV/AV size discrepancy 0.959 (0.921 ; 0.979) 0.986 (0.972 ; 0.993) 0.959 (0.921 ; 0.979) 0.986 (0.972 ; 0.993) RV/LV size discrepancy 0.950 (0.900 ; 0.975) 1.000 (0.993 ; 1.000) 0.950 (0.900 ; 0.975) 1.000 (0.993 ; 1.000) [p.9] ... TV/MV size discrepancy 0.950 (0.904 ; 0.974) 1.000 (0.993 ; 1.000) 0.950 (0.904 ; 0.974) 1.000 (0.993 ; 1.000) [p.10]",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": null,
+     "endpoint": "Severe CHD detection, standalone (peer-reviewed)",
+     "metric": "sensitivity",
+     "value": "0.968 (95% CI 0.940-0.983) for severe CHD (271/280 with ≥1 finding present; 5 all-absent; 4 inconclusive)",
+     "comparator": "expert pediatric cardiologist panel / known severe CHD",
+     "n_studies": 877,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "877 exams from 11 centers; 311 with ≥1 suspicious finding per expert panel; 280 with known severe CHD (Zelop 2025/2026, Obstet Gynecol; PMID 40773751)",
+     "subgroup_notes": null,
+     "quote": "We then evaluated the performance of the AI software, which identified at least one finding as present in 271 examinations, that all eight findings were absent in five examinations, and was inconclusive in four of the 280 examinations with severe congenital heart defects, yielding a sensitivity of 0.968 (95% CI, 0.940-0.983) for severe congenital heart defects.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": null,
+     "endpoint": "Any suspicious finding vs fetal cardiologists, standalone (peer-reviewed, inconclusive excluded)",
+     "metric": "sensitivity / specificity",
+     "value": "Sens 0.987 (0.967-0.995); Spec 0.977 (0.961-0.986); decision rendered in 98.7% of exams",
+     "comparator": "expert pediatric cardiologist panel",
+     "n_studies": 877,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "Same 877-exam, 11-center dataset (Zelop; PMID 40773751)",
+     "subgroup_notes": null,
+     "quote": "When comparing the AI to the determination of findings by fetal cardiologists, the detection of any finding by the AI had a sensitivity of 0.987 (95% CI, 0.967-0.995) and a specificity of 0.977 (95% CI, 0.961-0.986) after exclusion of inconclusive examinations. The AI rendered a decision for any finding (either present or absent) in 98.7% of examinations.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": null,
+     "endpoint": "Reader AUROC, aided vs unaided (peer-reviewed MRMC)",
+     "metric": "AUROC / sensitivity / specificity",
+     "value": "AUROC 0.974 (0.957-0.990) vs 0.825 (0.741-0.908), P=.002; sens 0.935 vs 0.782; spec 0.970 vs 0.759",
+     "comparator": "unaided readers; truth from expert panel",
+     "n_studies": 200,
+     "n_patients": null,
+     "n_sites": 11,
+     "dataset_description": "200 exams (100 with ≥1 finding) from 11 centers; 7 ob-gyns + 7 MFMs (Lam-Rachlin 2025/2026, Obstet Gynecol; PMID 41100866)",
+     "subgroup_notes": null,
+     "quote": "The detection of any suspicious finding significantly improved for AI-aided compared with unaided readers with a significantly higher AUROC (0.974 [95% CI, 0.957-0.990] vs 0.825 [95% CI, 0.741-0.908], P =.002), sensitivity (0.935 [95% CI, 0.892-0.978] vs 0.782 [95% CI, 0.686-0.878]), and specificity (0.970 [95% CI, 0.949-0.991] vs 0.759 [95% CI, 0.630-0.887]).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": null,
+     "endpoint": "Interpretation time and confidence, aided vs unaided (peer-reviewed MRMC)",
+     "metric": "mean seconds; confidence score",
+     "value": "226 s (218-234) vs 274 s (265-283), P<.001; confidence 4.63 (4.60-4.66) vs 3.90 (3.85-3.95), P<.001",
+     "comparator": "unaided readers",
+     "n_studies": 200,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Same MRMC dataset (Lam-Rachlin; PMID 41100866)",
+     "subgroup_notes": null,
+     "quote": "AI assistance also resulted in a significant decrease in clinician interpretation time and increase in clinician confidence score (226 seconds [95% CI, 218-234] vs 274 seconds [95% CI, 265-283], P <.001; 4.63 [95% CI, 4.60-4.66] vs 3.90 [95% CI, 3.85-3.95], P <.001, respectively).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K252294",
+     "endpoint": "Reader study (MRMC) for v1.2",
+     "metric": "not repeated; K242342 MRMC results restated",
+     "value": "AUC 0.974 (0.957-0.990) aided vs 0.825 (0.741-0.908) unaided, p=0.002 (restated)",
+     "comparator": "see K242342",
+     "n_studies": 200,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Restatement of the K242342 fully-crossed MRMC (14 readers x 200 exams); no new reader study for v1.2",
+     "subgroup_notes": "Note the summary calls the v1.1/v1.2 algorithms 'similar' here but 'the exact same algorithm' on p.8",
+     "quote": "The predicate and subject devices share similar device output displays and similar algorithms, resulting in minor variations of device performance, as presented above. Therefore, bench testing for the predicate device remains valid for the subject device. We remind here the corresponding Reader study results:",
+     "page": 10,
+     "verification": "fda_summary"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "FDA summaries state only that 'The ultrasound examinations used for training and validation are entirely distinct from the examinations used in standalone testing.' No training set size, sites or dates given; peer-reviewed abstracts also do not report training size.",
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242342.pdf (p.9)",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": 877,
+    "n_patients": null,
+    "n_sites": 11,
+    "description": "Standalone: 877 clinically acquired 2nd-trimester (18-24 wk) exams from 11 centers, U.S.A. and France, women aged ≥18; truth by majority of three pediatric cardiologists. MRMC: 200 exams (per Lam-Rachlin: 100 with ≥1 finding), 14 readers (7 OB-GYN, 7 MFM). Validated only with Fujifilm, GE, Philips, Samsung and Toshiba scanners. Per Zelop et al., 311/877 exams had ≥1 suspicious finding and 280 had known severe CHD.",
+    "independent_of_training": true,
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242342.pdf (pp.9-12); PMID 40773751; PMID 41100866",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "MRMC reader study registered as NCT06392555 (BrightHeart sponsor, n=200 exams, started 2024-05-03, completed).",
+     "source_url": "https://clinicaltrials.gov/study/NCT06392555",
+     "verification": "fda_database"
+    },
+    {
+     "description": "Company homepage claims for B-Right Screen: '96% Detection of major CHDs', '88% Reduction in false-positive errors', '70% Reduction in false-negative errors', '98.7% AI sensitivity for detecting severe CHD indicators', '97.7% AI specificity in confirming normality'; also CE marked Class IIa (Notified Body 3022).",
+     "source_url": "https://www.brightheart.ai/",
+     "verification": "company"
+    },
+    {
+     "description": "Press: first 510(k) (B-Right Screen) Nov 2024; second clearance May 2025 adds cart-side tablet access to B-Right Screen feedback (per DAIC coverage of the May 14, 2025 announcement). The BusinessWire Nov 2024 release could not be retrieved in the verification session.",
+     "source_url": "https://www.dicardiology.com/content/brightheart-receives-fda-clearance-b-right-views",
+     "verification": "news"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Artificial Intelligence for the Detection of Fetal Ultrasound Findings Concerning for Major Congenital Heart Defects.",
+     "first_author": "Zelop CM",
+     "journal": "Obstet Gynecol",
+     "year": 2025,
+     "doi": "10.1097/AOG.0000000000006027",
+     "pmid": "40773751",
+     "url": "https://doi.org/10.1097/AOG.0000000000006027",
+     "relation": "pivotal-validation",
+     "n_subjects": 877,
+     "key_result": "Standalone on 877 exams/11 centers: any-finding sens 0.987, spec 0.977 vs fetal cardiologists (inconclusive excluded); sens 0.968 for 280 severe CHD; decision in 98.7% of exams. Crossref issued year 2025; PubMed lists 2026 issue.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Use of Artificial Intelligence-Based Software to Aid in the Identification of Ultrasound Findings Associated With Fetal Congenital Heart Defects.",
+     "first_author": "Lam-Rachlin J",
+     "journal": "Obstet Gynecol",
+     "year": 2025,
+     "doi": "10.1097/AOG.0000000000006087",
+     "pmid": "41100866",
+     "url": "https://doi.org/10.1097/AOG.0000000000006087",
+     "relation": "pivotal-validation",
+     "n_subjects": 200,
+     "key_result": "MRMC, 14 readers x 200 exams: AUROC 0.974 vs 0.825 aided vs unaided (P=.002); reading time 226 vs 274 s; confidence 4.63 vs 3.90. Crossref issued year 2025; PubMed lists 2026 issue.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [
+    {
+     "nct_id": "NCT06392555",
+     "title": "Fetal Heart Ultrasound Suspicious Radiographic Finding Identification - Reader Study",
+     "status": "COMPLETED",
+     "url": "https://clinicaltrials.gov/study/NCT06392555"
+    }
+   ],
+   "open_questions": [
+    "Training dataset size, number of sites and vendor mix are not disclosed in any FDA summary or the two peer-reviewed papers' abstracts.",
+    "Number of unique patients in the 877-exam standalone set is not stated (assumed one exam per pregnancy but not confirmed).",
+    "K252294 comparison table lists the predicate 510(k) number as K242342 while section 3 names Fetal EchoScan v1.1 [K251071] as predicate; recorded as K251071.",
+    "K252294 says the v1.1 and v1.2 devices 'share the exact same algorithm' yet reports 'minor variations of device performance' on re-run standalone testing (e.g., any-finding worst-case sensitivity 0.977 -> 0.984, best-case specificity 0.977 -> 0.970); the nature of the change (e.g., new fetal-heart clip detector) is not explained.",
+    "Company homepage figures ('96% detection of major CHDs', '88%/70% reduction in FP/FN errors') could not be tied to a specific table in the FDA summaries or paper abstracts.",
+    "Company press describes cart-side tablet display; the K251071 summary describes a 'device web interface' — mapping of tablet to web interface is inferred from press, not the FDA summary.",
+    "No December 2025 press release for K252294 (v1.2) was located; the 'third-party user interface' vendor is not named.",
+    "Journal year discrepancy: Crossref issued-date 2025 vs PubMed 2026 for both Obstet Gynecol papers (online-first vs issue).",
+    "BrightHeart-affiliated abstracts appear in the ISUOG 2026 World Congress supplement (Ultrasound Obstet Gynecol 68 S1; PMIDs 42673407, 42673166) but are not itemized to product level and were not added as papers."
+   ],
+   "sources": [
+    {
+     "fact": "IFU, predicate, standalone and MRMC results, vendor limitation (K242342)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242342.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "v1.1 web interface change; restated results (K251071)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251071.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "v1.2 third-party UI, re-run standalone values (K252294)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K252294.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "decision dates, product code POK, clearance types (Traditional/Special/Traditional)",
+     "url_or_file": "openfda_records.json[K242342,K251071,K252294]",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Zelop 2025/2026 abstract and DOI",
+     "url_or_file": "https://pubmed.ncbi.nlm.nih.gov/40773751/ ; https://api.crossref.org/works/10.1097/AOG.0000000000006027",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "Lam-Rachlin 2025/2026 abstract and DOI",
+     "url_or_file": "https://pubmed.ncbi.nlm.nih.gov/41100866/ ; https://api.crossref.org/works/10.1097/AOG.0000000000006087",
+     "verification": "peer_reviewed"
+    },
+    {
+     "fact": "NCT06392555 registration",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies/NCT06392555",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Company product names (B-Right Screen/B-Right Views), deployment claims, CE mark",
+     "url_or_file": "https://www.brightheart.ai/",
+     "verification": "company"
+    },
+    {
+     "fact": "Press: first, second, third clearances; tablet access; PCCP",
+     "url_or_file": "https://www.dicardiology.com/content/brightheart-receives-fda-clearance-b-right-views",
+     "verification": "news"
+    }
+   ]
+  },
+  {
+   "id": "brightheart-view-classifier",
+   "product_name": "BrightHeart View Classifier (marketed as B-Right Views)",
+   "company": "BrightHeart",
+   "company_website": "https://www.brightheart.ai/",
+   "product_url": "https://www.brightheart.ai/",
+   "category": "fetal-echo",
+   "tags": [
+    "view classification",
+    "acquisition guidance",
+    "protocol completeness",
+    "PCCP",
+    "fetal heart",
+    "second trimester",
+    "third trimester",
+    "cloud",
+    "QIH"
+   ],
+   "modality_scope": [
+    "fetal",
+    "2D grayscale images and video clips",
+    "transabdominal"
+   ],
+   "deployment": [
+    "cloud",
+    "PACS-integrated (annotated DICOM)",
+    "web interface (v1.1)",
+    "cart-side tablet (company)",
+    "vendor-limited: GE, Philips, Samsung, Siemens"
+   ],
+   "summary": "Cloud-based software that classifies fetal 2D ultrasound images and video clips into standard fetal heart (and abdomen) views, extracts example frames, and checks whether each standard view satisfies a center-defined acquisition protocol, for second/third-trimester transabdominal exams. Cleared May 2025 (K243684) with Sonix Health (K230209) predicate and Samsung HeartAssist (K223387) reference, including a PCCP for retraining, new scanner makes (Canon, Fujifilm, SIUI), added short-axis views and new gestational ages. Standalone testing: 2290 images from 579 exams at 8 centers, mean view sensitivity 0.939 and specificity 0.984. K251456 (v1.1, Jun 2025) added an optional web interface with no algorithm change.",
+   "intended_use_quote": "The BrightHeart View Classifier device is intended to analyze fetal 2D ultrasound images and video clips using machine learning techniques to automatically detect standard views during fetal heart scanning.\nThe BrightHeart View Classifier device is intended to be used as an adjunct to the acquisition and interpretation of fetal anatomic ultrasound examinations at the second or third trimester of pregnancy performed with transabdominal probes.",
+   "indications_for_use_quote": "The BrightHeart View Classifier device is intended to analyze fetal 2D ultrasound images and video clips using machine learning techniques to automatically detect standard views during fetal heart scanning.\nThe BrightHeart View Classifier device is intended to be used as an adjunct to the acquisition and interpretation of fetal anatomic ultrasound examinations at the second or third trimester of pregnancy performed with transabdominal probes.",
+   "embedded_ai_features": [
+    "Neural-network classification of images/clips into standard fetal heart and abdomen views",
+    "Automatic extraction of example frames of standard views from video clips",
+    "Automatic assessment of whether documentation of each standard view satisfies a center-defined acquisition protocol",
+    "PCCP-planned: short-axis views at ventricles and AV valves; Canon/Fujifilm/SIUI scanners; additional gestational ages"
+   ],
+   "clearances": [
+    {
+     "k_number": "K243684",
+     "decision_date": "2025-05-07",
+     "pathway": "510(k) with PCCP",
+     "product_code": "QIH",
+     "predicates": [
+      "K230209"
+     ],
+     "changes_summary": "Initial clearance. Predicate Sonix Health (Ontact Health, adult echo view classifier, K230209); reference device (not predicate) Samsung HeartAssist in V8/V7 (K223387). Includes PCCP covering (1) retraining/threshold updates with new data, (2) new ultrasound makes Canon, Fujifilm, SIUI, (3) addition of short-axis views at ventricles and AV valves, (4) new gestational ages.",
+     "notable_flags": [
+      "PCCP",
+      "cloud",
+      "standalone testing only",
+      "vendor-limited labeling",
+      "race subgroup caveat"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243684.pdf"
+    },
+    {
+     "k_number": "K251456",
+     "decision_date": "2025-06-05",
+     "pathway": "510(k) with PCCP",
+     "product_code": "QIH",
+     "predicates": [
+      "K243684"
+     ],
+     "changes_summary": "Special 510(k); v1.1 adds optional display on a device web interface in addition to annotated DICOM in a DICOM viewer. Exact same algorithm and identical PCCP; K243684 bench results restated. Comparison table adds intended population 'Pregnant women aged 18 or older ... not intended for use in multiple pregnancies'.",
+     "notable_flags": [
+      "PCCP",
+      "cloud",
+      "Special 510(k)",
+      "web interface"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251456.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K243684",
+     "endpoint": "Standard view recognition",
+     "metric": "mean sensitivity",
+     "value": "0.939 (95% CI 0.917; 0.960)",
+     "comparator": "sonographer + MFM truthing",
+     "n_studies": 579,
+     "n_patients": null,
+     "n_sites": 8,
+     "dataset_description": "2290 clinically acquired images and frames from video clips from 579 fetal ultrasound examinations (transabdominal, ≥18 wk gestation) from 8 centers, U.S.A. and France; truth by a sonographer and an MFM specialist; test exams entirely distinct from training/validation",
+     "subgroup_notes": "Consistent by geographic region, ultrasound make, gestational age, maternal BMI, age and record type; specificity 95% CI lower bound slightly lower for Asian and Black mothers (small samples). Validated only with General Electric, Philips, Samsung and Siemens devices",
+     "quote": "The performance testing demonstrated that BrightHeart View Classifier identifies standard views with a mean standard view recognition sensitivity of 0.939 (95% CI, 0.917 ; 0.960) and a mean standard view recognition specificity of 0.984 (95% CI, 0.973 ; 0.996).",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K243684",
+     "endpoint": "Standard view recognition",
+     "metric": "mean specificity",
+     "value": "0.984 (95% CI 0.973; 0.996)",
+     "comparator": "sonographer + MFM truthing",
+     "n_studies": 579,
+     "n_patients": null,
+     "n_sites": 8,
+     "dataset_description": "2290 clinically acquired images and frames from video clips from 579 fetal ultrasound examinations (transabdominal, ≥18 wk gestation) from 8 centers, U.S.A. and France; truth by a sonographer and an MFM specialist; test exams entirely distinct from training/validation",
+     "subgroup_notes": "Consistent by geographic region, ultrasound make, gestational age, maternal BMI, age and record type; specificity 95% CI lower bound slightly lower for Asian and Black mothers (small samples). Validated only with General Electric, Philips, Samsung and Siemens devices",
+     "quote": "The performance testing demonstrated that BrightHeart View Classifier identifies standard views with a mean standard view recognition sensitivity of 0.939 (95% CI, 0.917 ; 0.960) and a mean standard view recognition specificity of 0.984 (95% CI, 0.973 ; 0.996).",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K243684",
+     "endpoint": "Subgroup consistency (race)",
+     "metric": "qualitative",
+     "value": "specificity 95% CI lower bound slightly lower for Asian and Black mothers",
+     "comparator": "n/a",
+     "n_studies": 579,
+     "n_patients": null,
+     "n_sites": 8,
+     "dataset_description": "2290 clinically acquired images and frames from video clips from 579 fetal ultrasound examinations (transabdominal, ≥18 wk gestation) from 8 centers, U.S.A. and France; truth by a sonographer and an MFM specialist; test exams entirely distinct from training/validation",
+     "subgroup_notes": null,
+     "quote": "Stratified analysis by geographical region, by ultrasound machine make, by gestational age, by mother’s BMI, and age, and by record type indicated that performance was consistent across subgroups, while analysis by mother’s race showed that the specificity 95% CI lower bound was slightly lower for Asian and Black mothers, possibly due to large confidence intervals and small sample size.",
+     "page": 9,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K251456",
+     "endpoint": "Standard view recognition (v1.1, same algorithm)",
+     "metric": "mean sensitivity / specificity",
+     "value": "0.939 (0.917; 0.960) / 0.984 (0.973; 0.996)",
+     "comparator": "sonographer + MFM truthing",
+     "n_studies": 579,
+     "n_patients": null,
+     "n_sites": 8,
+     "dataset_description": "Restatement of K243684 testing: 'The algorithm for the identification of standard views is exactly the same between the subject and predicate devices'",
+     "subgroup_notes": null,
+     "quote": "The performance testing demonstrated that BrightHeart View Classifier identifies standard views with a mean standard view recognition sensitivity of 0.939 (95% CI, 0.917 ; 0.960) and a mean standard view recognition specificity of 0.984 (95% CI, 0.973 ; 0.996).",
+     "page": 8,
+     "verification": "fda_summary"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "Only statement: 'The ultrasound examinations used for training and validation are entirely distinct from the examinations used in performance testing.' No sizes.",
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243684.pdf (p.8)",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": 579,
+    "n_patients": null,
+    "n_sites": 8,
+    "description": "2290 images and video-clip frames from 579 exams, transabdominal, ≥18 weeks, 8 centers in U.S.A. and France, women ≥18; truth by one sonographer and one MFM. Validated on GE, Philips, Samsung, Siemens scanners only.",
+    "independent_of_training": true,
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243684.pdf (pp.8-9)",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Company homepage claims for B-Right Views: '47% Reduction in incomplete fetal heart scans', '18% Faster reading times', '19% Confidence improvement'; CE marked Class IIa.",
+     "source_url": "https://www.brightheart.ai/",
+     "verification": "company"
+    },
+    {
+     "description": "Press (May 14, 2025): third 510(k) for B-Right Views with PCCP allowing 'pre-authorized future improvements to the AI at the core of the device, without requiring separate FDA submissions'.",
+     "source_url": "https://www.dicardiology.com/content/brightheart-receives-fda-clearance-b-right-views",
+     "verification": "news"
+    }
+   ],
+   "papers": [],
+   "clinical_trials": [],
+   "open_questions": [
+    "No peer-reviewed publication specific to the View Classifier was found on PubMed (searches: BrightHeart[Affiliation], 'BrightHeart fetal', view-classification terms); the 2026 ISUOG World Congress abstract supplement (UOG 68 S1) may contain related abstracts but was not itemized.",
+    "Training set size and sites undisclosed.",
+    "Per-view sensitivity/specificity and the list/number of standard views classified are not given in the FDA summary (only means).",
+    "Number of unique patients (vs 579 exams) not stated.",
+    "Company homepage workflow figures (47%/18%/19%) have no identified source study.",
+    "Whether any PCCP modification (Canon/Fujifilm/SIUI, short-axis views) has been deployed post-clearance is unknown."
+   ],
+   "sources": [
+    {
+     "fact": "IFU, predicates, PCCP contents, performance (K243684)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243684.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "v1.1 web interface; restated performance and PCCP (K251456)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251456.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "decision dates 2025-05-07 and 2025-06-05, product code QIH, Traditional/Special",
+     "url_or_file": "openfda_records.json[K243684,K251456]",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "B-Right Views naming, homepage claims, CE mark",
+     "url_or_file": "https://www.brightheart.ai/",
+     "verification": "company"
+    },
+    {
+     "fact": "Third-clearance press coverage and PCCP quote",
+     "url_or_file": "https://www.dicardiology.com/content/brightheart-receives-fda-clearance-b-right-views",
+     "verification": "news"
+    },
+    {
+     "fact": "PubMed searches returned no View Classifier-specific paper",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=BrightHeart%5BAffiliation%5D",
+     "verification": "peer_reviewed"
+    }
+   ]
+  },
+  {
+   "id": "fetoly-heart",
+   "product_name": "FETOLY-HEART",
+   "company": "Diagnoly",
+   "company_website": "https://www.diagnoly.com/",
+   "product_url": "https://www.diagnoly.com/fetoly-application/",
+   "category": "fetal-echo",
+   "tags": [
+    "view detection",
+    "quality criteria",
+    "exam completeness",
+    "ISUOG",
+    "real-time",
+    "on-device",
+    "PCCP",
+    "fetal heart",
+    "HDMI"
+   ],
+   "modality_scope": [
+    "fetal",
+    "2D ultrasound real-time stream",
+    "second and third trimester (17-40 wk)"
+   ],
+   "deployment": [
+    "on-device (local software on a hardware device/tablet connected to the ultrasound machine by HDMI)",
+    "vendor-neutral within validated GE, Samsung, Canon",
+    "no cloud",
+    "Voluson Solution Store app (news report, unverified)"
+   ],
+   "summary": "FETOLY-HEART is an edge/on-device deep-learning application that receives the ultrasound video stream over HDMI and, in real time, detects the five ISUOG fetal cardiac screening views (abdomen, 4CH, LVOT, RVOT, 3VX) and 52 anatomical quality criteria within them, displaying exam completeness and an illustrative image set; users can override outputs. Cleared Sept 2024 (K241380) with Sonio Detect (K240406) predicate and GE SonoLystLive (K220358) reference, with a PCCP for retraining, hyperparameter changes and criteria addition/removal. Standalone testing used 2,288 images from 480 cases at 7 U.S./French sites; per-view sensitivity 0.976-0.987 and specificity ≥0.983.",
+   "intended_use_quote": "FETOLY-HEART is intended to analyse fetal ultrasound images and clips using machine learning techniques to automatically detect heart views and quality criteria within the views. The device is intended for use as a concurrent reading aid during the acquisition and interpretation of fetal ultrasound images.",
+   "indications_for_use_quote": "Fetoly-Heart is intended to analyze fetal ultrasound image sequences using machine learning techniques to automatically detect heart views and quality criteria within the views.\nThe device is intended for use as a concurrent reading aid during the acquisition and interpretation of fetal ultrasound images.\nFetoly-Heart is indicated for use during routine fetal heart examination of 2nd and 3rd trimester pregnancy (gestational age: from 17 to 40 weeks).",
+   "embedded_ai_features": [
+    "Real-time detection of 5 fetal heart views (Abdomen, 4CH, LVOT, RVOT, 3VX)",
+    "Detection and optional bounding-box localization of 52 quality criteria (8 ABD, 19 4CH, 6 LVOT, 10 RVOT, 9 3VX) incl. zoom level",
+    "Completeness overview (views/criteria verified) and completeness illustration (auto-selected image subset)",
+    "User can review and override outputs",
+    "Frozen supervised deep-learning model; PCCP excludes adaptive/continuous learning"
+   ],
+   "clearances": [
+    {
+     "k_number": "K241380",
+     "decision_date": "2024-09-11",
+     "pathway": "510(k) with PCCP",
+     "product_code": "IYN",
+     "predicates": [
+      "K240406"
+     ],
+     "changes_summary": "Initial clearance. Versus predicate Sonio Detect (cardiac features): 52 vs 28 quality criteria, local/edge platform vs cloud, adds automatic image extraction (covered by reference device, not predicate, SonoLystLive in Voluson Expert 22/20/18, K220358), GE/Samsung/Canon compatibility (predicate also Philips). PCCP: retraining with new data, hyperparameter changes, addition/removal of heart quality criteria within the 5 views.",
+     "notable_flags": [
+      "PCCP",
+      "on-device / edge",
+      "real-time",
+      "secondary product codes IYO, QIH",
+      "no clinical study"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K241380.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K241380",
+     "endpoint": "Abdomen view detection",
+     "metric": "sensitivity / specificity (bootstrap 95% CI)",
+     "value": "Sens 0.976 (0.960,0.990) (N pos 428); Spec 0.998 (0.996,1.000) (N neg 1860)",
+     "comparator": "2+1 expert annotation (sonographers/OB-GYNs + adjudicator)",
+     "n_studies": 480,
+     "n_patients": null,
+     "n_sites": 7,
+     "dataset_description": "2,288 fetal ultrasound images across 480 patient cases (full-exam still images 60.0%, cardiac clip frames 33.7%, full-exam video frames 6.3%) from 7 clinical sites in the U.S. (48.8% of cases) and France/EU (51.2%); scanners GE 34.0%, Samsung 61.9%, Canon 4.2%; 2nd trimester 48.5%, 3rd 50.6%; BMI ≥30 32.7%; abnormal fetal heart 6.7% of cases; race: White 57.7%, Black 26.0%, Hispanic 9.0%, Asian/PI 4.8%; image quality bad/average/good ~31/36/33%; sites distinct from model development sites; 2+1 truthing (paired annotators from 3 sonographers + 3 OB/GYNs with adjudicator)",
+     "subgroup_notes": "Acceptance criterion: lower 95% CI bound >85% per view; met for all views",
+     "quote": "Abdomen view 428 0.976 (0.960,0.990) 1860 0.998 (0.996,1.000)",
+     "page": 15,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241380",
+     "endpoint": "Four chamber view detection",
+     "metric": "sensitivity / specificity (bootstrap 95% CI)",
+     "value": "Sens 0.987 (0.974,0.997) (N pos 391); Spec 1.00 (1.000,1.000) (N neg 1897)",
+     "comparator": "2+1 expert annotation (sonographers/OB-GYNs + adjudicator)",
+     "n_studies": 480,
+     "n_patients": null,
+     "n_sites": 7,
+     "dataset_description": "2,288 fetal ultrasound images across 480 patient cases (full-exam still images 60.0%, cardiac clip frames 33.7%, full-exam video frames 6.3%) from 7 clinical sites in the U.S. (48.8% of cases) and France/EU (51.2%); scanners GE 34.0%, Samsung 61.9%, Canon 4.2%; 2nd trimester 48.5%, 3rd 50.6%; BMI ≥30 32.7%; abnormal fetal heart 6.7% of cases; race: White 57.7%, Black 26.0%, Hispanic 9.0%, Asian/PI 4.8%; image quality bad/average/good ~31/36/33%; sites distinct from model development sites; 2+1 truthing (paired annotators from 3 sonographers + 3 OB/GYNs with adjudicator)",
+     "subgroup_notes": "Acceptance criterion: lower 95% CI bound >85% per view; met for all views",
+     "quote": "Four chamber view 391 0.987 (0.974,0.997) 1897 1.00 (1.000,1.000)",
+     "page": 16,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241380",
+     "endpoint": "Left ventricular outflow tract view detection",
+     "metric": "sensitivity / specificity (bootstrap 95% CI)",
+     "value": "Sens 0.983 (0.969,0.994) (N pos 360); Spec 0.999 (0.998,1.000) (N neg 1928)",
+     "comparator": "2+1 expert annotation (sonographers/OB-GYNs + adjudicator)",
+     "n_studies": 480,
+     "n_patients": null,
+     "n_sites": 7,
+     "dataset_description": "2,288 fetal ultrasound images across 480 patient cases (full-exam still images 60.0%, cardiac clip frames 33.7%, full-exam video frames 6.3%) from 7 clinical sites in the U.S. (48.8% of cases) and France/EU (51.2%); scanners GE 34.0%, Samsung 61.9%, Canon 4.2%; 2nd trimester 48.5%, 3rd 50.6%; BMI ≥30 32.7%; abnormal fetal heart 6.7% of cases; race: White 57.7%, Black 26.0%, Hispanic 9.0%, Asian/PI 4.8%; image quality bad/average/good ~31/36/33%; sites distinct from model development sites; 2+1 truthing (paired annotators from 3 sonographers + 3 OB/GYNs with adjudicator)",
+     "subgroup_notes": "Acceptance criterion: lower 95% CI bound >85% per view; met for all views",
+     "quote": "Left ventricular outflow tract view 360 0.983 (0.969,0.994) 1928 0.999 (0.998,1.000)",
+     "page": 16,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241380",
+     "endpoint": "Right ventricular outflow tract view detection",
+     "metric": "sensitivity / specificity (bootstrap 95% CI)",
+     "value": "Sens 0.987 (0.974,0.996) (N pos 313); Spec 0.998 (0.996,1.000) (N neg 1975)",
+     "comparator": "2+1 expert annotation (sonographers/OB-GYNs + adjudicator)",
+     "n_studies": 480,
+     "n_patients": null,
+     "n_sites": 7,
+     "dataset_description": "2,288 fetal ultrasound images across 480 patient cases (full-exam still images 60.0%, cardiac clip frames 33.7%, full-exam video frames 6.3%) from 7 clinical sites in the U.S. (48.8% of cases) and France/EU (51.2%); scanners GE 34.0%, Samsung 61.9%, Canon 4.2%; 2nd trimester 48.5%, 3rd 50.6%; BMI ≥30 32.7%; abnormal fetal heart 6.7% of cases; race: White 57.7%, Black 26.0%, Hispanic 9.0%, Asian/PI 4.8%; image quality bad/average/good ~31/36/33%; sites distinct from model development sites; 2+1 truthing (paired annotators from 3 sonographers + 3 OB/GYNs with adjudicator)",
+     "subgroup_notes": "Acceptance criterion: lower 95% CI bound >85% per view; met for all views",
+     "quote": "Right ventricular outflow tract view 313 0.987 (0.974,0.996) 1975 0.998 (0.996,1.000)",
+     "page": 16,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241380",
+     "endpoint": "Three vessels view detection",
+     "metric": "sensitivity / specificity (bootstrap 95% CI)",
+     "value": "Sens 0.981 (0.965,0.993) (N pos 316); Spec 0.998 (0.997,1.000) (N neg 1972)",
+     "comparator": "2+1 expert annotation (sonographers/OB-GYNs + adjudicator)",
+     "n_studies": 480,
+     "n_patients": null,
+     "n_sites": 7,
+     "dataset_description": "2,288 fetal ultrasound images across 480 patient cases (full-exam still images 60.0%, cardiac clip frames 33.7%, full-exam video frames 6.3%) from 7 clinical sites in the U.S. (48.8% of cases) and France/EU (51.2%); scanners GE 34.0%, Samsung 61.9%, Canon 4.2%; 2nd trimester 48.5%, 3rd 50.6%; BMI ≥30 32.7%; abnormal fetal heart 6.7% of cases; race: White 57.7%, Black 26.0%, Hispanic 9.0%, Asian/PI 4.8%; image quality bad/average/good ~31/36/33%; sites distinct from model development sites; 2+1 truthing (paired annotators from 3 sonographers + 3 OB/GYNs with adjudicator)",
+     "subgroup_notes": "Acceptance criterion: lower 95% CI bound >85% per view; met for all views",
+     "quote": "Three vessels view 316 0.981 (0.965,0.993) 1972 0.998 (0.997,1.000)",
+     "page": 16,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241380",
+     "endpoint": "Other view detection",
+     "metric": "sensitivity / specificity (bootstrap 95% CI)",
+     "value": "Sens 0.985 (0.972,0.995) (N pos 480); Spec 0.983 (0.977,0.989) (N neg 1808)",
+     "comparator": "2+1 expert annotation (sonographers/OB-GYNs + adjudicator)",
+     "n_studies": 480,
+     "n_patients": null,
+     "n_sites": 7,
+     "dataset_description": "2,288 fetal ultrasound images across 480 patient cases (full-exam still images 60.0%, cardiac clip frames 33.7%, full-exam video frames 6.3%) from 7 clinical sites in the U.S. (48.8% of cases) and France/EU (51.2%); scanners GE 34.0%, Samsung 61.9%, Canon 4.2%; 2nd trimester 48.5%, 3rd 50.6%; BMI ≥30 32.7%; abnormal fetal heart 6.7% of cases; race: White 57.7%, Black 26.0%, Hispanic 9.0%, Asian/PI 4.8%; image quality bad/average/good ~31/36/33%; sites distinct from model development sites; 2+1 truthing (paired annotators from 3 sonographers + 3 OB/GYNs with adjudicator)",
+     "subgroup_notes": "Acceptance criterion: lower 95% CI bound >85% per view; met for all views",
+     "quote": "Other view 480 0.985 (0.972,0.995) 1808 0.983 (0.977,0.989)",
+     "page": 16,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241380",
+     "endpoint": "Quality-criteria detection (52 criteria across 5 views) and localization",
+     "metric": "sensitivity / specificity / mean IoU, acceptance criteria",
+     "value": "All 52 criteria reported individually (pp.16-17): sensitivity point estimates range 0.903 (abdomen view left rib) to 0.990 (4CH left atrium/right ventricle); specificity 0.990 to 1.00; mIoU 0.512 (inferior vena cava) to 0.792 (3VX spine). Stated acceptance criteria: sens ≥90%, spec ≥90%, mIoU ≥50%.",
+     "comparator": "2+1 expert bounding-box annotation with adjudicator",
+     "n_studies": 480,
+     "n_patients": null,
+     "n_sites": 7,
+     "dataset_description": "2,288 fetal ultrasound images across 480 patient cases (full-exam still images 60.0%, cardiac clip frames 33.7%, full-exam video frames 6.3%) from 7 clinical sites in the U.S. (48.8% of cases) and France/EU (51.2%); scanners GE 34.0%, Samsung 61.9%, Canon 4.2%; 2nd trimester 48.5%, 3rd 50.6%; BMI ≥30 32.7%; abnormal fetal heart 6.7% of cases; race: White 57.7%, Black 26.0%, Hispanic 9.0%, Asian/PI 4.8%; image quality bad/average/good ~31/36/33%; sites distinct from model development sites; 2+1 truthing (paired annotators from 3 sonographers + 3 OB/GYNs with adjudicator)",
+     "subgroup_notes": "Ranges computed by the researcher from the per-criterion table on pp.16-17; per-criterion N positives range 113 (foramen ovale flap) to 417. Subgroup analyses (maternal age, GA, territory, BMI, scanner, heart abnormality, race, image quality, image type) stated as performed; numeric subgroup results not reported",
+     "quote": "The results of the standalone performance testing demonstrate that FETOLY-HEART automatically detects fetal heart ultrasound views with a sensitivity ≥ 85%  (acceptance criterion) and specificity ≥ 85% (acceptance criterion), detects quality criteria within heart views with a sensitivity ≥ 90% (acceptance criterion) and a specificity ≥ 90% (acceptance criterion), and localizes bounding boxes of quality criteria with a mean intersection over union (IoU) of ≥ 50% (acceptance criterion).",
+     "page": 15,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241380",
+     "endpoint": "Example per-criterion result: 4CH left ventricle",
+     "metric": "sensitivity / specificity / mIoU",
+     "value": "0.987 (0.975,0.997) / 1.00 (1.000,1.000) / 0.748 (0.734,0.761)",
+     "comparator": "2+1 expert annotation",
+     "n_studies": 480,
+     "n_patients": null,
+     "n_sites": 7,
+     "dataset_description": "2,288 fetal ultrasound images across 480 patient cases (full-exam still images 60.0%, cardiac clip frames 33.7%, full-exam video frames 6.3%) from 7 clinical sites in the U.S. (48.8% of cases) and France/EU (51.2%); scanners GE 34.0%, Samsung 61.9%, Canon 4.2%; 2nd trimester 48.5%, 3rd 50.6%; BMI ≥30 32.7%; abnormal fetal heart 6.7% of cases; race: White 57.7%, Black 26.0%, Hispanic 9.0%, Asian/PI 4.8%; image quality bad/average/good ~31/36/33%; sites distinct from model development sites; 2+1 truthing (paired annotators from 3 sonographers + 3 OB/GYNs with adjudicator)",
+     "subgroup_notes": null,
+     "quote": "Left ventricle 389 0.987 (0.975,0.997) 1899 1.00 (1.000,1.000) 0.748 (0.734,0.761)",
+     "page": 17,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241380",
+     "endpoint": "Example per-criterion result: abdomen view left rib (lowest sensitivity)",
+     "metric": "sensitivity / specificity / mIoU",
+     "value": "0.903 (0.873,0.933) / 0.997 (0.995,0.999) / 0.651 (0.631,0.673)",
+     "comparator": "2+1 expert annotation",
+     "n_studies": 480,
+     "n_patients": null,
+     "n_sites": 7,
+     "dataset_description": "2,288 fetal ultrasound images across 480 patient cases (full-exam still images 60.0%, cardiac clip frames 33.7%, full-exam video frames 6.3%) from 7 clinical sites in the U.S. (48.8% of cases) and France/EU (51.2%); scanners GE 34.0%, Samsung 61.9%, Canon 4.2%; 2nd trimester 48.5%, 3rd 50.6%; BMI ≥30 32.7%; abnormal fetal heart 6.7% of cases; race: White 57.7%, Black 26.0%, Hispanic 9.0%, Asian/PI 4.8%; image quality bad/average/good ~31/36/33%; sites distinct from model development sites; 2+1 truthing (paired annotators from 3 sonographers + 3 OB/GYNs with adjudicator)",
+     "subgroup_notes": null,
+     "quote": "Left rib 401 0.903 (0.873,0.933) 1887 0.997 (0.995,0.999) 0.651 (0.631,0.673)",
+     "page": 16,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K241380",
+     "endpoint": "Clinical performance data",
+     "metric": "none",
+     "value": "Not applicable (no clinical study)",
+     "comparator": "n/a",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": null,
+     "subgroup_notes": null,
+     "quote": "8 Clinical performance data\nNot applicable.",
+     "page": 19,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": null,
+     "endpoint": "LVOT view presence in screening report files (Diagnoly-affiliated study)",
+     "metric": "Cohen κ; sensitivity / specificity; ICC for 0-7 quality score",
+     "value": "κ = 0.768 for LVOT presence; sens 97.7%, spec 90.0%; ICC 0.902 for summary score; criteria κ 0.657-0.957",
+     "comparator": "single expert file-level labels",
+     "n_studies": 180,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "180 randomly selected low-risk screening report files (number of distinct patients not stated) (90 second-trimester 20-25 wk, 90 third-trimester 30-35 wk), 1,097 images (Turan 2026, J Ultrasound Med; PMID 41808587); Diagnoly affiliation confirmed for co-authors Voznyuk and Quarello; relation to the cleared FETOLY-HEART device version not stated in abstract",
+     "subgroup_notes": null,
+     "quote": "Agreement for LVOT presence was substantial (κ = 0.768). Agreement across criteria ranged from κ = 0.657 to 0.957, and agreement for the 0-7 summary score was excellent (ICC = 0.902). For LVOT presence, sensitivity was 97.7% and specificity was 90.0%.",
+     "page": null,
+     "verification": "peer_reviewed"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "Summary states test sites were 'distinct clinical sites from which the data used during model development (training/validation) was sourced'; no training size, site count or dates given.",
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K241380.pdf (p.15)",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": 480,
+    "n_patients": 480,
+    "n_sites": 7,
+    "description": "2,288 fetal ultrasound images across 480 patient cases (full-exam still images 60.0%, cardiac clip frames 33.7%, full-exam video frames 6.3%) from 7 clinical sites in the U.S. (48.8% of cases) and France/EU (51.2%); scanners GE 34.0%, Samsung 61.9%, Canon 4.2%; 2nd trimester 48.5%, 3rd 50.6%; BMI ≥30 32.7%; abnormal fetal heart 6.7% of cases; race: White 57.7%, Black 26.0%, Hispanic 9.0%, Asian/PI 4.8%; image quality bad/average/good ~31/36/33%; sites distinct from model development sites; 2+1 truthing (paired annotators from 3 sonographers + 3 OB/GYNs with adjudicator). Cases collected retrospectively in reverse chronological order to ≥20 per subgroup and ≥275 files overall; one image max per view per case selected from 12,934 categorized images.",
+    "independent_of_training": true,
+    "source": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K241380.pdf (pp.15-19)",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Company product page (retrieved 2026-09-05): 'Connect via HDMI in seconds', AI 'embedded directly within a standard tablet. No cloud processing', 'CE 0197 Marked and FDA Cleared', 'Trusted by clinicians across 20+ countries', 'exam completeness based on 100+ anatomical structures'; supported tablets listed as iPad Air (5th gen+), iPad (10th gen+), iPad mini (7th gen+), iPad Pro (3rd gen+) and Samsung Galaxy Tab S8/S9/S11. Figures previously noted from this page ('99.5% Mean Specificity', '96% Mean Sensitivity') and a K251368.pdf citation were not present on the page at verification and are dropped.",
+     "source_url": "https://www.diagnoly.com/fetoly-application/",
+     "verification": "company"
+    },
+    {
+     "description": "GE HealthCare collaboration (Feb 2026): Fetoly to be integrated within Voluson women's health ultrasound systems; available as free trial on the Voluson Solution Store; 'Fetoly has 510(k) clearance ... and is CE marked.' (AuntMinnie page returned HTTP 403 in the verification session; not re-verified.)",
+     "source_url": "https://www.auntminnie.com/clinical-news/ultrasound/news/15816441/ge-healthcare-gehc-collaborates-with-diagnoly-to-integrate-ai-into-prenatal-ultrasound",
+     "verification": "unverified"
+    },
+    {
+     "description": "Later Diagnoly clearance K251368 'FETOLY' (2025-09-12, IYN, Traditional) exists in openFDA; summary not retrieved (FDA site rate-limited this session) and not in scope for this family.",
+     "source_url": "https://api.fda.gov/device/510k.json?search=k_number:K251368",
+     "verification": "fda_database"
+    }
+   ],
+   "papers": [
+    {
+     "title": "AI-Driven Analysis of the Fetal Left Ventricular Outflow Tract: Diagnostic Value and Applications.",
+     "first_author": "Turan S",
+     "journal": "J Ultrasound Med",
+     "year": 2026,
+     "doi": "10.1002/jum.70230",
+     "pmid": "41808587",
+     "url": "https://doi.org/10.1002/jum.70230",
+     "relation": "other",
+     "n_subjects": 180,
+     "key_result": "Diagnoly-affiliated deep-learning pipeline for LVOT view detection and 7 quality criteria in 180 screening report files (1,097 images): LVOT presence κ=0.768, sens 97.7%, spec 90.0%; summary score ICC 0.902. Whether this is the cleared FETOLY-HEART model is not stated.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [],
+   "open_questions": [
+    "Training/validation dataset size and sites for model development are not disclosed.",
+    "Numeric subgroup results (by site, BMI, scanner, race, image quality, cardiac abnormality) are stated to have been analyzed but not reported.",
+    "Whether the 4.2% Canon share (20 cases) is sufficient to support the Canon compatibility claim is not addressed.",
+    "Hardware platform in K241380 ('hardware device ... connected through an HDMI connection', 'Tablet compatibility testing') is not named; company site lists iPad and Samsung Galaxy Tab models.",
+    "No ClinicalTrials.gov registration found for Diagnoly/FETOLY.",
+    "Relationship between K241380 (FETOLY-HEART) and the later K251368 (FETOLY, 2025-09-12) — e.g., addition of brain module marketed as 'Fetoly' — was not verified because the FDA PDF could not be retrieved this session.",
+    "Turan 2026 (J Ultrasound Med) uses report still images rather than the real-time stream; its link to the cleared algorithm version is unstated."
+   ],
+   "sources": [
+    {
+     "fact": "IFU, device description, predicates, PCCP, standalone results and subgroup table (K241380)",
+     "url_or_file": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K241380.pdf",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "decision_date 2024-09-11, product code IYN, applicant Diagnoly",
+     "url_or_file": "openfda_records.json[K241380]",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "K251368 FETOLY 2025-09-12",
+     "url_or_file": "https://api.fda.gov/device/510k.json?search=k_number:K251368",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Company FDA clearance blog post",
+     "url_or_file": "https://www.diagnoly.com/blog/fda-clearance",
+     "verification": "company"
+    },
+    {
+     "fact": "Product page deployment claims (HDMI, on-tablet/no cloud, CE 0197, tablet models)",
+     "url_or_file": "https://www.diagnoly.com/fetoly-application/",
+     "verification": "company"
+    },
+    {
+     "fact": "GE HealthCare–Diagnoly Voluson integration (Feb 5, 2026)",
+     "url_or_file": "https://www.auntminnie.com/clinical-news/ultrasound/news/15816441/ge-healthcare-gehc-collaborates-with-diagnoly-to-integrate-ai-into-prenatal-ultrasound",
+     "verification": "unverified"
+    },
+    {
+     "fact": "Turan 2026 abstract, affiliation Diagnoly, DOI",
+     "url_or_file": "https://pubmed.ncbi.nlm.nih.gov/41808587/ ; https://api.crossref.org/works/10.1002/jum.70230",
+     "verification": "peer_reviewed"
+    }
+   ]
+  }
+ ],
+ "notes": "All seven FDA summary text files were read in full. Page numbers refer to the '===== PAGE n =====' markers of the extracted PDF text. No family discloses training-set size in its FDA summary; validation sets are described for BrightHeart (877 exams/11 centers; 2290 images/579 exams/8 centers) and Diagnoly (2,288 images/480 cases/7 sites) with explicit statements of independence from training data. Ventripoint K173810 contains no numeric performance data (bench only); peer-reviewed KBR validations listed largely pertain to the RV-only predicate VMS (K150628). Both BrightHeart Obstet Gynecol papers resolve on PubMed and Crossref (Crossref year 2025, PubMed issue 2026). FDA accessdata PDFs for adjacent K-numbers (K191493, K251368) were blocked by FDA rate limiting this session; those clearances are documented from openFDA only. Product codes: POK (892.2060) for Fetal EchoScan, QIH (892.2050) for View Classifier, IYN (892.1550) for FETOLY-HEART and VMS+. VERIFICATION (2026-09-05): every FDA quote was located on its cited page in the extracted text; decision dates and product codes for all seven K-numbers match openFDA; all 16 DOIs resolve on Crossref with matching titles and first authors; PubMed abstracts confirm every peer-reviewed quote (Ahmad 2022 and Mathijssen 2022 via Crossref/Europe PMC full abstracts). openFDA applicant search found VMS+ 4.0 = K241222 (2025-02-26, QIH) and an earlier VMS K140153 (2014-03-06). Reference devices (K223387, K220358) were moved out of the predicate lists. GlobeNewswire, BusinessWire and AuntMinnie pages were unreachable in this session; claims resting only on them are marked unverified. Extra PubMed searches (ventripoint; ventripoint AND echocardiography; knowledge-based reconstruction AND ventricle; brightheart; 'Fetal EchoScan'/'B-Right'; fetoly; diagnoly; diagnoly AND ultrasound) surfaced no additional product-specific papers."
+}

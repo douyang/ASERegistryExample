@@ -533,6 +533,27 @@
     return lines.join('\n');
   }
 
+  // Two hosts, two mechanisms. A plain anchor download works when the page is served normally
+  // (GitHub Pages, a local file). Inside the artifact viewer the frame may not download at all, so
+  // the host's own save prompt is used when it is available.
+  const FILENAME = 'imageguideecho-site-quality.csv';
+  let downloads; // undefined = not asked yet, null = not available here
+  async function exportCsv(btn) {
+    const csv = qcCsv();
+    const say = (t) => { const was = btn.textContent; btn.textContent = t; setTimeout(() => { btn.textContent = was; }, 2200); };
+    if (downloads === undefined && window.claude && typeof window.claude.use === 'function') {
+      try { downloads = await window.claude.use('downloads'); } catch (e) { downloads = null; }
+    }
+    if (downloads) {
+      try { await downloads.save({ filename: FILENAME, data: csv }); }
+      catch (e) { if (e && e.code !== 'declined') say('Export unavailable'); }
+      return;
+    }
+    const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv' }));
+    const a = document.createElement('a'); a.href = url; a.download = FILENAME;
+    document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+
   function renderQcPickers() {
     const box = (host, items, set, key) => {
       $(host).innerHTML = `<details class="f-drop" data-key="${key}"><summary>${key === 'qcm' ? 'Metrics' : 'Sites'} <span class="badge">${set.size}</span></summary><div class="f-pop"><ul>${items.map((it) => `<li><label><input type="checkbox" data-qc="${key}" value="${esc(it.id)}"${set.has(it.id) ? ' checked' : ''}> ${esc(it.label)}</label></li>`).join('')}</ul></div></details>`;
@@ -585,12 +606,7 @@
 
   // ---------- events ----------
   document.addEventListener('click', (ev) => {
-    if (ev.target.id === 'qc-export') {
-      const url = URL.createObjectURL(new Blob([qcCsv()], { type: 'text/csv' }));
-      const a = document.createElement('a'); a.href = url; a.download = 'imageguideecho-site-quality.csv';
-      document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
-      return;
-    }
+    if (ev.target.id === 'qc-export') { exportCsv(ev.target); return; }
     const open = ev.target.closest('[data-open]'); if (open) { openPanel(open.dataset.open); return; }
     const card = ev.target.closest('.card'); if (card && !ev.target.closest('a')) { openPanel(card.dataset.id); return; }
     if (ev.target.closest('#panel-close') || ev.target.closest('#panel-backdrop')) { closePanel(); return; }

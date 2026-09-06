@@ -24,13 +24,13 @@
   const byId = new Map(fams.map((f) => [f.id, f]));
 
   // ---------- state ----------
-  const state = { tab: 'products', view: 'cards', q: '', sort: 'latest', sel: {}, regSel: null, open: { category: true, pathway: true, evidence: true }, opener: null };
+  const state = { tab: 'products', view: 'cards', q: '', sort: 'latest', sel: {}, regSel: null, open: { category: true, mode: true, pathway: true, evidence: true }, opener: null };
   const FILTERS = [
     { key: 'category', label: 'Function', get: (f) => [f.research_pending ? 'pending' : f.category], name: (v) => (v === 'pending' ? 'Research pending' : CAT[v] || v) },
+    { key: 'mode', label: 'Imaging mode', get: (f) => f.modes || [], order: ['TTE', 'TEE', 'POCUS', 'ICE', 'Fetal echo', 'Stress echo'] },
     { key: 'pathway', label: 'Regulatory pathway', get: (f) => f.pathways },
     { key: 'evidence', label: 'Evidence', get: (f) => evidenceFlags(f) },
     { key: 'company', label: 'Company', get: (f) => [companyShort(f.company)] },
-    { key: 'modality', label: 'Modality', get: (f) => f.modality_scope || [] },
     { key: 'deployment', label: 'Deployment', get: (f) => f.deployment || [] },
     { key: 'code', label: 'Product code', get: (f) => f.product_codes },
     { key: 'year', label: 'Latest clearance year', get: (f) => [f.latest_cleared.slice(0, 4)] },
@@ -56,7 +56,7 @@
       for (const f of fams) for (const v of F.get(f)) if (v) counts.set(v, (counts.get(v) || 0) + 0);
       const base = fams.filter((f) => matchesFacets(f, F.key) && searchOk(f));
       for (const f of base) for (const v of F.get(f)) if (v) counts.set(v, (counts.get(v) || 0) + 1);
-      const vals = [...counts.keys()].sort((a, b) => (F.key === 'year' ? b.localeCompare(a) : a.localeCompare(b)));
+      const vals = [...counts.keys()].sort((a, b) => (F.order ? F.order.indexOf(a) - F.order.indexOf(b) : F.key === 'year' ? b.localeCompare(a) : a.localeCompare(b)));
       const sel = state.sel[F.key] || new Set();
       const open = sel.size > 0 || !!state.open[F.key];
       return `<details class="filter-group" data-key="${esc(F.key)}" ${open ? 'open' : ''}><summary>${esc(F.label)}</summary><ul>${vals.map((v) => {
@@ -78,7 +78,7 @@
   }
   function searchOk(f) {
     if (!state.q) return true;
-    const hay = [f.product_name, f.company, f.summary, (f.tags || []).join(' '), (f.modality_scope || []).join(' '), f.clearances.map((c) => c.k_number + ' ' + c.device_name_fda).join(' '), (f.embedded_ai_features || []).map((e) => e.name).join(' ')].join(' ').toLowerCase();
+    const hay = [f.product_name, f.company, f.summary, (f.tags || []).join(' '), (f.modes || []).join(' '), (f.modality_scope || []).join(' '), f.clearances.map((c) => c.k_number + ' ' + c.device_name_fda).join(' '), (f.embedded_ai_features || []).map((e) => e.name).join(' ')].join(' ').toLowerCase();
     return state.q.split(/\s+/).every((t) => hay.includes(t));
   }
   const matches = (f) => matchesFacets(f, null) && searchOk(f);
@@ -111,7 +111,13 @@
     if (f.training_data && f.training_data.disclosed) out.push('<span class="chip on">Training n disclosed</span>');
     if (f.pathways.some((p) => /PCCP/.test(p))) out.push('<span class="chip flag">PCCP</span>');
     if (f.pathways.includes('De Novo')) out.push('<span class="chip flag">De Novo</span>');
-    for (const t of (f.tags || []).slice(0, 4)) if (t && t.trim()) out.push(`<span class="chip">${esc(t.trim())}</span>`);
+    const seenChip = new Set();
+    for (const m of f.modes || []) { seenChip.add(m.toLowerCase()); out.push(`<span class="chip mode">${esc(m)}</span>`); }
+    for (const t of f.tags || []) {
+      const v = String(t || '').trim(); if (!v || seenChip.has(v.toLowerCase())) continue;
+      seenChip.add(v.toLowerCase()); out.push(`<span class="chip">${esc(v)}</span>`);
+      if (out.length >= 11) break;
+    }
     return out.join('');
   }
   function renderCards(list) {
@@ -173,6 +179,7 @@
   function panelChips(f) {
     const seen = new Set(); const out = [];
     const add = (v, cls) => { const k = String(v || '').trim().toLowerCase(); if (!k || seen.has(k)) return; seen.add(k); out.push(`<span class="chip ${cls}">${esc(String(v).trim())}</span>`); };
+    for (const m of f.modes || []) add(m, 'mode');
     for (const m of f.modality_scope || []) add(m, '');
     for (const d of f.deployment || []) add(d, '');
     for (const t of (f.tags || []).slice(0, 10)) add(t, 'on');

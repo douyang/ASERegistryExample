@@ -160,6 +160,7 @@ select { font: inherit; padding: 7px 8px; border: 1px solid var(--line-2); borde
 .chip.on { border-color: transparent; background: var(--chip-bg); color: var(--chip-ink); }
 .chip.flag { border-color: transparent; background: var(--crimson); color: var(--on-red); }
 .chip.muted { color: var(--ink-3); border-style: dashed; }
+.chip.mode { border-color: var(--indigo); color: var(--indigo); font-weight: 600; }
 
 .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
 table { border-collapse: collapse; width: 100%; font-size: 13.5px; }

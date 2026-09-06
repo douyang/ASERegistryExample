@@ -397,6 +397,10 @@ window.AIECHO_PRODUCTS = {
     "IYN"
    ],
    "n_performance_claims": 2,
+   "modes": [
+    "TTE",
+    "POCUS"
+   ],
    "n_fda_claims": 0,
    "n_other_claims": 2,
    "n_papers_resolved": 2,
@@ -1137,6 +1141,11 @@ window.AIECHO_PRODUCTS = {
     "IYN"
    ],
    "n_performance_claims": 26,
+   "modes": [
+    "TTE",
+    "TEE",
+    "ICE"
+   ],
    "n_fda_claims": 16,
    "n_other_claims": 10,
    "n_papers_resolved": 4,
@@ -1401,6 +1410,9 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 7,
+   "modes": [
+    "TEE"
+   ],
    "n_fda_claims": 7,
    "n_other_claims": 0,
    "n_papers_resolved": 0,
@@ -1848,6 +1860,10 @@ window.AIECHO_PRODUCTS = {
     "QJU"
    ],
    "n_performance_claims": 15,
+   "modes": [
+    "TTE",
+    "POCUS"
+   ],
    "n_fda_claims": 14,
    "n_other_claims": 1,
    "n_papers_resolved": 1,
@@ -2379,6 +2395,10 @@ window.AIECHO_PRODUCTS = {
     "IYN"
    ],
    "n_performance_claims": 18,
+   "modes": [
+    "TTE",
+    "TEE"
+   ],
    "n_fda_claims": 18,
    "n_other_claims": 0,
    "n_papers_resolved": 0,
@@ -2726,6 +2746,9 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 9,
+   "modes": [
+    "TTE"
+   ],
    "n_fda_claims": 9,
    "n_other_claims": 0,
    "n_papers_resolved": 0,
@@ -3098,6 +3121,9 @@ window.AIECHO_PRODUCTS = {
     "IYN"
    ],
    "n_performance_claims": 5,
+   "modes": [
+    "TTE"
+   ],
    "n_fda_claims": 5,
    "n_other_claims": 0,
    "n_papers_resolved": 4,
@@ -3386,6 +3412,10 @@ window.AIECHO_PRODUCTS = {
     "POK"
    ],
    "n_performance_claims": 9,
+   "modes": [
+    "TTE",
+    "POCUS"
+   ],
    "n_fda_claims": 9,
    "n_other_claims": 0,
    "n_papers_resolved": 0,
@@ -3825,6 +3855,9 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 4,
+   "modes": [
+    "TEE"
+   ],
    "n_fda_claims": 4,
    "n_other_claims": 0,
    "n_papers_resolved": 7,
@@ -4026,6 +4059,10 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 4,
+   "modes": [
+    "TTE",
+    "POCUS"
+   ],
    "n_fda_claims": 4,
    "n_other_claims": 0,
    "n_papers_resolved": 0,
@@ -4374,6 +4411,9 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 3,
+   "modes": [
+    "TTE"
+   ],
    "n_fda_claims": 3,
    "n_other_claims": 0,
    "n_papers_resolved": 8,
@@ -5002,6 +5042,10 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 19,
+   "modes": [
+    "TTE",
+    "POCUS"
+   ],
    "n_fda_claims": 16,
    "n_other_claims": 3,
    "n_papers_resolved": 5,
@@ -5364,6 +5408,9 @@ window.AIECHO_PRODUCTS = {
     "DQK"
    ],
    "n_performance_claims": 4,
+   "modes": [
+    "ICE"
+   ],
    "n_fda_claims": 0,
    "n_other_claims": 4,
    "n_papers_resolved": 6,
@@ -5565,6 +5612,10 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 4,
+   "modes": [
+    "TTE",
+    "POCUS"
+   ],
    "n_fda_claims": 4,
    "n_other_claims": 0,
    "n_papers_resolved": 0,
@@ -6027,6 +6078,10 @@ window.AIECHO_PRODUCTS = {
     "QJU"
    ],
    "n_performance_claims": 11,
+   "modes": [
+    "TTE",
+    "POCUS"
+   ],
    "n_fda_claims": 10,
    "n_other_claims": 1,
    "n_papers_resolved": 5,
@@ -6658,6 +6713,9 @@ window.AIECHO_PRODUCTS = {
     "POK"
    ],
    "n_performance_claims": 25,
+   "modes": [
+    "Fetal echo"
+   ],
    "n_fda_claims": 21,
    "n_other_claims": 4,
    "n_papers_resolved": 2,
@@ -6956,6 +7014,9 @@ window.AIECHO_PRODUCTS = {
     "QUO"
    ],
    "n_performance_claims": 8,
+   "modes": [
+    "TTE"
+   ],
    "n_fda_claims": 8,
    "n_other_claims": 0,
    "n_papers_resolved": 2,
@@ -7613,6 +7674,9 @@ window.AIECHO_PRODUCTS = {
     "IYN"
    ],
    "n_performance_claims": 25,
+   "modes": [
+    "Fetal echo"
+   ],
    "n_fda_claims": 24,
    "n_other_claims": 1,
    "n_papers_resolved": 3,
@@ -8656,6 +8720,10 @@ window.AIECHO_PRODUCTS = {
     "IYN"
    ],
    "n_performance_claims": 34,
+   "modes": [
+    "TTE",
+    "TEE"
+   ],
    "n_fda_claims": 33,
    "n_other_claims": 1,
    "n_papers_resolved": 6,
@@ -9578,6 +9646,10 @@ window.AIECHO_PRODUCTS = {
     "IYN"
    ],
    "n_performance_claims": 28,
+   "modes": [
+    "TTE",
+    "Fetal echo"
+   ],
    "n_fda_claims": 25,
    "n_other_claims": 3,
    "n_papers_resolved": 3,
@@ -10040,6 +10112,13 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 6,
+   "modes": [
+    "TTE",
+    "TEE",
+    "ICE",
+    "Fetal echo",
+    "Stress echo"
+   ],
    "n_fda_claims": 6,
    "n_other_claims": 0,
    "n_papers_resolved": 12,
@@ -11051,6 +11130,10 @@ window.AIECHO_PRODUCTS = {
     "IYN"
    ],
    "n_performance_claims": 23,
+   "modes": [
+    "TTE",
+    "TEE"
+   ],
    "n_fda_claims": 13,
    "n_other_claims": 10,
    "n_papers_resolved": 11,
@@ -11230,6 +11313,9 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 2,
+   "modes": [
+    "TTE"
+   ],
    "n_fda_claims": 2,
    "n_other_claims": 0,
    "n_papers_resolved": 0,
@@ -11570,6 +11656,9 @@ window.AIECHO_PRODUCTS = {
     "SDJ"
    ],
    "n_performance_claims": 10,
+   "modes": [
+    "TTE"
+   ],
    "n_fda_claims": 8,
    "n_other_claims": 2,
    "n_papers_resolved": 2,
@@ -11807,6 +11896,9 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 4,
+   "modes": [
+    "Fetal echo"
+   ],
    "n_fda_claims": 4,
    "n_other_claims": 0,
    "n_papers_resolved": 0,
@@ -12158,6 +12250,9 @@ window.AIECHO_PRODUCTS = {
     "SDJ"
    ],
    "n_performance_claims": 8,
+   "modes": [
+    "TTE"
+   ],
    "n_fda_claims": 4,
    "n_other_claims": 4,
    "n_papers_resolved": 3,
@@ -12402,6 +12497,10 @@ window.AIECHO_PRODUCTS = {
     "IYN"
    ],
    "n_performance_claims": 0,
+   "modes": [
+    "TTE",
+    "POCUS"
+   ],
    "n_fda_claims": 0,
    "n_other_claims": 0,
    "n_papers_resolved": 5,
@@ -12962,6 +13061,9 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 13,
+   "modes": [
+    "TTE"
+   ],
    "n_fda_claims": 12,
    "n_other_claims": 1,
    "n_papers_resolved": 3,
@@ -13478,6 +13580,10 @@ window.AIECHO_PRODUCTS = {
     "IYN"
    ],
    "n_performance_claims": 5,
+   "modes": [
+    "TTE",
+    "POCUS"
+   ],
    "n_fda_claims": 0,
    "n_other_claims": 5,
    "n_papers_resolved": 12,
@@ -14310,6 +14416,10 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 18,
+   "modes": [
+    "TTE",
+    "POCUS"
+   ],
    "n_fda_claims": 18,
    "n_other_claims": 0,
    "n_papers_resolved": 15,
@@ -14591,6 +14701,9 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 5,
+   "modes": [
+    "TTE"
+   ],
    "n_fda_claims": 5,
    "n_other_claims": 0,
    "n_papers_resolved": 2,
@@ -15284,6 +15397,9 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 14,
+   "modes": [
+    "TTE"
+   ],
    "n_fda_claims": 7,
    "n_other_claims": 7,
    "n_papers_resolved": 14,
@@ -15595,6 +15711,12 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 8,
+   "modes": [
+    "TTE",
+    "TEE",
+    "ICE",
+    "Fetal echo"
+   ],
    "n_fda_claims": 8,
    "n_other_claims": 0,
    "n_papers_resolved": 2,
@@ -16274,6 +16396,10 @@ window.AIECHO_PRODUCTS = {
     "QJU"
    ],
    "n_performance_claims": 18,
+   "modes": [
+    "TTE",
+    "POCUS"
+   ],
    "n_fda_claims": 13,
    "n_other_claims": 5,
    "n_papers_resolved": 6,
@@ -16696,6 +16822,9 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 9,
+   "modes": [
+    "TTE"
+   ],
    "n_fda_claims": 9,
    "n_other_claims": 0,
    "n_papers_resolved": 8,
@@ -17251,6 +17380,9 @@ window.AIECHO_PRODUCTS = {
     "SDJ"
    ],
    "n_performance_claims": 23,
+   "modes": [
+    "TTE"
+   ],
    "n_fda_claims": 20,
    "n_other_claims": 3,
    "n_papers_resolved": 3,
@@ -17671,6 +17803,9 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 18,
+   "modes": [
+    "TTE"
+   ],
    "n_fda_claims": 18,
    "n_other_claims": 0,
    "n_papers_resolved": 0,
@@ -17993,6 +18128,9 @@ window.AIECHO_PRODUCTS = {
     "POK"
    ],
    "n_performance_claims": 6,
+   "modes": [
+    "TTE"
+   ],
    "n_fda_claims": 6,
    "n_other_claims": 0,
    "n_papers_resolved": 5,
@@ -18463,6 +18601,9 @@ window.AIECHO_PRODUCTS = {
     "QUO"
    ],
    "n_performance_claims": 14,
+   "modes": [
+    "TTE"
+   ],
    "n_fda_claims": 11,
    "n_other_claims": 3,
    "n_papers_resolved": 5,
@@ -18940,6 +19081,10 @@ window.AIECHO_PRODUCTS = {
     "POK"
    ],
    "n_performance_claims": 16,
+   "modes": [
+    "TTE",
+    "POCUS"
+   ],
    "n_fda_claims": 16,
    "n_other_claims": 0,
    "n_papers_resolved": 4,
@@ -19165,6 +19310,10 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 4,
+   "modes": [
+    "TTE",
+    "POCUS"
+   ],
    "n_fda_claims": 4,
    "n_other_claims": 0,
    "n_papers_resolved": 0,
@@ -19489,6 +19638,9 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 9,
+   "modes": [
+    "TTE"
+   ],
    "n_fda_claims": 5,
    "n_other_claims": 4,
    "n_papers_resolved": 2,
@@ -20573,6 +20725,10 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 33,
+   "modes": [
+    "TTE",
+    "POCUS"
+   ],
    "n_fda_claims": 20,
    "n_other_claims": 13,
    "n_papers_resolved": 26,
@@ -20827,6 +20983,10 @@ window.AIECHO_PRODUCTS = {
     "IYN"
    ],
    "n_performance_claims": 4,
+   "modes": [
+    "TTE",
+    "POCUS"
+   ],
    "n_fda_claims": 4,
    "n_other_claims": 0,
    "n_papers_resolved": 3,
@@ -21341,6 +21501,10 @@ window.AIECHO_PRODUCTS = {
     "QVD"
    ],
    "n_performance_claims": 15,
+   "modes": [
+    "TTE",
+    "POCUS"
+   ],
    "n_fda_claims": 12,
    "n_other_claims": 3,
    "n_papers_resolved": 3,
@@ -21531,6 +21695,9 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 3,
+   "modes": [
+    "TTE"
+   ],
    "n_fda_claims": 3,
    "n_other_claims": 0,
    "n_papers_resolved": 0,
@@ -21991,6 +22158,12 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 3,
+   "modes": [
+    "TTE",
+    "TEE",
+    "Fetal echo",
+    "Stress echo"
+   ],
    "n_fda_claims": 0,
    "n_other_claims": 3,
    "n_papers_resolved": 17,
@@ -22522,6 +22695,9 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 16,
+   "modes": [
+    "TTE"
+   ],
    "n_fda_claims": 13,
    "n_other_claims": 3,
    "n_papers_resolved": 8,
@@ -22900,6 +23076,10 @@ window.AIECHO_PRODUCTS = {
     "POK"
    ],
    "n_performance_claims": 9,
+   "modes": [
+    "TTE",
+    "Stress echo"
+   ],
    "n_fda_claims": 5,
    "n_other_claims": 4,
    "n_papers_resolved": 6,
@@ -23378,6 +23558,9 @@ window.AIECHO_PRODUCTS = {
     "QIH"
    ],
    "n_performance_claims": 11,
+   "modes": [
+    "TTE"
+   ],
    "n_fda_claims": 5,
    "n_other_claims": 6,
    "n_papers_resolved": 9,

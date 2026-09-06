@@ -15,6 +15,20 @@ const aiListCsv = fs.readFileSync(path.join(rdir, 'fda_ai_enabled_devices_list.c
 const ON_AI_LIST = new Set(aiListCsv.split(/\r?\n/).slice(1).map((l) => (l.split(',')[1] || '').trim().toUpperCase()).filter(Boolean));
 const warnings = [];
 const caveats = [];
+// Canonical imaging modes. Derived only from the researched modality_scope and tags, never inferred
+// from a system's full indications list (those name every probe the machine supports, not the AI's scope).
+const MODE_RULES = [
+  ['TTE', /\bTTE\b|transthoracic|apical|PLAX|PSAX|parasternal|A4C|4-chamber|4CH/i],
+  ['TEE', /\bTEE\b|transesophageal|transoesophageal/i],
+  ['POCUS', /POCUS|hand-?held|point[- ]of[- ]care/i],
+  ['ICE', /\bICE\b|intracardiac/i],
+  ['Fetal echo', /fetal|obstetric|trimester/i],
+  ['Stress echo', /stress/i],
+];
+const modesOf = (fam) => {
+  const hay = [...(fam.modality_scope || []), ...(fam.tags || [])].filter((x) => typeof x === 'string');
+  return MODE_RULES.filter(([, re]) => hay.some((h) => re.test(h))).map(([name]) => name);
+};
 const fdaUrl = (k) => {
   const yy = k.startsWith('K') ? k.slice(1, 3) : k.slice(3, 5);
   return `https://www.accessdata.fda.gov/cdrh_docs/pdf${yy}/${k}.pdf`;
@@ -139,6 +153,8 @@ for (const fam of researched.values()) {
   }
   for (const x of fam.sources || []) if (/\.(txt|png)\b|\bocr\//.test(x.url_or_file || '')) warnings.push(`${fam.id}: residual extraction reference in sources: ${x.url_or_file}`);
   const nFda = (fam.performance_claims || []).filter((c) => c.verification === 'fda_summary').length;
+  const modes = modesOf(fam);
+  if (!modes.length) warnings.push(`${fam.id}: no imaging mode derived from modality_scope/tags`);
   families.push({
     ...fam,
     clearances: cl,
@@ -149,6 +165,7 @@ for (const fam of researched.values()) {
     pathways: [...new Set(cl.map((c) => c.pathway))],
     product_codes: [...new Set(cl.map((c) => c.product_code))],
     n_performance_claims: (fam.performance_claims || []).length,
+    modes,
     n_fda_claims: nFda,
     n_other_claims: (fam.performance_claims || []).length - nFda,
     n_papers_resolved: papers.filter((p) => /^(doi|pmid)_resolved/.test(String(p.verification || '').trim())).length,

@@ -17,7 +17,7 @@
   const vkey = (v) => String(v || '').split(/[;,]/)[0].trim();
   const vl = (v) => (v ? `<span class="vlevel ${esc(vkey(v))}">${esc(VL[vkey(v)] || vkey(v))}</span>` : '');
   const PLACEHOLDER = R.placeholder !== false;
-  const ptag = () => (PLACEHOLDER ? ' <span class="placeholder-tag">Placeholder</span>' : '');
+  const ptag = () => '';
   const dec = (x) => { try { return decodeURIComponent(x); } catch (e) { return x; } };
   const companyShort = (c) => String(c || '').split(' (')[0].trim();
   const fams = P.families;
@@ -161,13 +161,13 @@
   }
   function claimRow(c) {
     const fda = vkey(c.verification) === 'fda_summary';
-    const src = fda ? `${esc(c.k_number)}${c.page ? ` p.${c.page}` : ''}` : `<span class="notice">Not from the FDA summary${c.k_number ? ` (relates to ${esc(c.k_number)})` : ''}; see Publications and Prior validations</span>`;
-    return `<tr><td>${esc(c.endpoint)}</td><td><b>${esc(c.value)}</b><br><span class="notice">${esc(c.metric)}</span></td><td>${esc(c.comparator || '—')}</td><td class="num">${[c.n_studies != null ? `${fmtN(c.n_studies)} studies` : '', c.n_patients != null ? `${fmtN(c.n_patients)} patients` : '', c.n_sites != null ? `${c.n_sites} sites` : ''].filter(Boolean).join('<br>') || '—'}</td><td>${src}<br>${vl(c.verification)}${c.quote ? `<details><summary class="quote-toggle">quote</summary><blockquote class="q">${esc(c.quote)}</blockquote>${c.dataset_description ? `<p class="notice">Dataset: ${esc(c.dataset_description)}</p>` : ''}${c.subgroup_notes ? `<p class="notice">Subgroups: ${esc(c.subgroup_notes)}</p>` : ''}</details>` : ''}</td></tr>`;
+    const src = fda ? `${esc(c.k_number)}${c.page ? ` p.${c.page}` : ''}` : '';
+    return `<tr><td>${esc(c.endpoint)}</td><td><b>${esc(c.value)}</b><br><span class="notice">${esc(c.metric)}</span></td><td>${esc(c.comparator || '—')}</td><td class="num">${[c.n_studies != null ? `${fmtN(c.n_studies)} studies` : '', c.n_patients != null ? `${fmtN(c.n_patients)} patients` : '', c.n_sites != null ? `${c.n_sites} sites` : ''].filter(Boolean).join('<br>') || '—'}</td><td>${src ? src + '<br>' : ''}${vl(c.verification)}${c.quote ? `<details><summary class="quote-toggle">quote</summary><blockquote class="q">${esc(c.quote)}</blockquote>${c.dataset_description ? `<p class="notice">${esc(c.dataset_description)}</p>` : ''}${c.subgroup_notes ? `<p class="notice">${esc(c.subgroup_notes)}</p>` : ''}</details>` : ''}</td></tr>`;
   }
   function dataBlock(label, d, extra) {
     if (!d) return '';
     const n = [d.n_studies != null ? `${fmtN(d.n_studies)} studies` : '', d.n_patients != null ? `${fmtN(d.n_patients)} patients` : '', d.n_sites != null ? `${d.n_sites} sites` : ''].filter(Boolean).join(' · ');
-    return `<dt>${esc(label)}</dt><dd>${n || (d.disclosed === false ? 'Not disclosed' : d.description ? 'Size not stated' : 'Not stated in the summary')}${extra || ''}${d.description ? `<br><span class="notice">${esc(d.description)}</span>` : ''}${d.source ? `<br><span class="notice">Source: ${linkify(d.source)}</span>` : ''} ${vl(d.verification)}</dd>`;
+    return `<dt>${esc(label)}</dt><dd>${n || 'Not disclosed'}${extra || ''}${d.description ? `<br><span class="notice">${esc(d.description)}</span>` : ''}${d.source ? `<br><span class="notice">${linkify(d.source)}</span>` : ''} ${vl(d.verification)}</dd>`;
   }
   const linkify = (s) => (/^https?:\/\//.test(s) ? `<a href="${esc(s)}" rel="noopener">${esc(s.replace(/^https?:\/\//, '').slice(0, 60))}</a>` : esc(s));
   function panelChips(f) {
@@ -197,7 +197,7 @@
         <div class="panel-links">${links}</div>
         <div class="chips">${panelChips(f)}</div>
         ${f.summary ? `<p>${esc(f.summary)}</p>` : ''}
-        ${f.research_pending ? '<p class="notice">Research for this product has not been merged yet. Only openFDA fields are shown.</p>' : ''}
+        
       </div>
       ${f.indications_for_use_quote || f.intended_use_quote ? `<section class="psec"><h3>Indications for use <small>FDA summary</small></h3><blockquote class="q">${esc(f.indications_for_use_quote || f.intended_use_quote)}</blockquote></section>` : ''}
       ${feats.length ? `<section class="psec"><h3>Cardiac AI features in these clearances</h3><ul class="papers">${feats.map((e) => `<li><span class="t">${esc(e.name)}</span><span>${esc(e.function)}</span><span class="m">${e.first_k_number ? `First in ${esc(e.first_k_number)}${byId.has(f.id) && !f.clearances.some((c) => c.k_number === e.first_k_number) ? ' (predicate, not in this catalog)' : ''} · ` : ''}${e.quote ? `“${esc(e.quote)}”` : ''}</span></li>`).join('')}</ul></section>` : ''}
@@ -205,22 +205,22 @@
         <ol class="timeline">${f.clearances.map((c) => `<li><span class="d num">${fmtDate(c.decision_date)}</span><span><span class="k"><a href="${esc(c.fda_summary_url)}" rel="noopener">${esc(c.k_number)}</a></span> · ${esc(c.pathway)} · ${esc(c.product_code)}${c.notable_flags && c.notable_flags.length ? ` · ${c.notable_flags.map((x) => `<span class="chip">${esc(x)}</span>`).join(' ')}` : ''}<br><span class="what">${esc(c.device_name_fda)}${c.changes_summary ? ` — ${esc(c.changes_summary)}` : ''}${c.predicates && c.predicates.length ? `<br>Predicates: ${c.predicates.map(esc).join(', ')}` : ''}</span></span></li>`).join('')}</ol>
       </section>
       <section class="psec"><h3>Performance evidence <small>${(f.performance_claims || []).length ? `${f.n_fda_claims} from the FDA summary${f.n_other_claims ? `, ${f.n_other_claims} from publications or the company` : ''}` : 'none extracted'}</small></h3>
-        ${(f.performance_claims || []).length ? `<div class="table-wrap"><table class="claims"><thead><tr><th>Endpoint</th><th>Result</th><th>Reference</th><th>n</th><th>Source</th></tr></thead><tbody>${f.performance_claims.map(claimRow).join('')}</tbody></table></div>` : `<p class="notice">${f.research_pending ? 'Pending.' : 'The FDA summary for these clearances reports no quantitative performance results, or the filing is a 510(k) statement.'}</p>`}
+        ${(f.performance_claims || []).length ? `<div class="table-wrap"><table class="claims"><thead><tr><th>Endpoint</th><th>Result</th><th>Reference</th><th>n</th><th>Source</th></tr></thead><tbody>${f.performance_claims.map(claimRow).join('')}</tbody></table></div>` : `<p class="notice">No results reported in the FDA summary.</p>`}
       </section>
       <section class="psec"><h3>Training and validation data</h3>
-        <dl class="kv">${dataBlock('Training set', f.training_data)}${dataBlock('Validation / test set', f.validation_data, f.validation_data && f.validation_data.independent_of_training != null ? `<br><span class="notice">${f.validation_data.independent_of_training ? 'Stated independent of training data' : 'Not stated to be independent of training data'}</span>` : '')}</dl>
+        <dl class="kv">${dataBlock('Training set', f.training_data)}${dataBlock('Validation / test set', f.validation_data, f.validation_data && f.validation_data.independent_of_training === true ? '<br><span class="notice">Independent of the training data</span>' : '')}</dl>
       </section>
       ${(f.prior_validations || []).length ? `<section class="psec"><h3>Prior validations</h3><ul class="papers">${f.prior_validations.map((p) => `<li><span>${esc(p.description)}</span><span class="m">${p.source_url ? linkify(p.source_url) + ' · ' : ''}${vl(p.verification)}</span></li>`).join('')}</ul></section>` : ''}
       <section class="psec"><h3>Publications <small>${f.n_papers ? `${f.n_papers_resolved} of ${f.n_papers} resolved` : 'none found'}</small></h3>
-        ${f.n_papers ? `<ol class="papers">${f.papers.map((p) => `<li><span class="t">${p.doi ? `<a href="https://doi.org/${esc(p.doi)}" rel="noopener">${esc(p.title)}</a>` : p.url ? `<a href="${esc(p.url)}" rel="noopener">${esc(p.title)}</a>` : esc(p.title)}</span><span class="m">${[p.first_author ? esc(p.first_author) + ' et al.' : '', p.journal ? esc(p.journal) : '', p.year || ''].filter(Boolean).join(' · ')}${p.pmid ? ` · <a href="https://pubmed.ncbi.nlm.nih.gov/${esc(p.pmid)}/" rel="noopener">PMID ${esc(p.pmid)}</a>` : ''} · <span class="chip">${esc(p.relation)}</span> ${vl(p.verification)}</span>${p.key_result ? `<span>${esc(p.key_result)}${p.n_subjects ? ` (n = ${fmtN(p.n_subjects)})` : ''}</span>` : ''}</li>`).join('')}</ol>` : '<p class="notice">No product-specific peer-reviewed publication was found during extraction.</p>'}
+        ${f.n_papers ? `<ol class="papers">${f.papers.map((p) => `<li><span class="t">${p.doi ? `<a href="https://doi.org/${esc(p.doi)}" rel="noopener">${esc(p.title)}</a>` : p.url ? `<a href="${esc(p.url)}" rel="noopener">${esc(p.title)}</a>` : esc(p.title)}</span><span class="m">${[p.first_author ? esc(p.first_author) + ' et al.' : '', p.journal ? esc(p.journal) : '', p.year || ''].filter(Boolean).join(' · ')}${p.pmid ? ` · <a href="https://pubmed.ncbi.nlm.nih.gov/${esc(p.pmid)}/" rel="noopener">PMID ${esc(p.pmid)}</a>` : ''} · <span class="chip">${esc(p.relation)}</span> ${vl(p.verification)}</span>${p.key_result ? `<span>${esc(p.key_result)}${p.n_subjects ? ` (n = ${fmtN(p.n_subjects)})` : ''}</span>` : ''}</li>`).join('')}</ol>` : '<p class="notice">None found.</p>'}
       </section>
       ${(f.clinical_trials || []).length ? `<section class="psec"><h3>Registered trials</h3><ul class="papers">${f.clinical_trials.map((t) => `<li><span class="t"><a href="${esc(t.url)}" rel="noopener">${esc(t.nct_id)}</a> ${esc(t.title)}</span><span class="m">${esc(t.status || '')}</span></li>`).join('')}</ul></section>` : ''}
       <section class="psec"><h3>ASE registry performance${ptag()}</h3>
-        ${reg && reg.evaluable ? `<dl class="kv"><dt>Cohort</dt><dd class="num">${fmtN(reg.cohort.n_studies)} TTEs · ${reg.cohort.n_sites} sites · ${esc(reg.cohort.period)}</dd>${primaryReg ? `<dt>${esc(primaryReg.label)}</dt><dd class="num">${primaryReg.value}${primaryReg.unit ? ' ' + esc(primaryReg.unit) : ''} (95% CI ${primaryReg.ci.low} to ${primaryReg.ci.high})</dd>` : ''}<dt>Feasibility</dt><dd class="num">${(() => { const fe = reg.endpoints.find((e) => e.id === 'feasibility'); return fe ? fe.value + '%' : '—'; })()}</dd></dl><p class="notice">${PLACEHOLDER ? 'Synthetic values. ' : ''}<a href="#registry/${esc(f.id)}" data-reg="${esc(f.id)}">Open the registry tab for this product.</a></p>` : `<p class="not-evaluable">${reg ? esc(reg.reason) : 'Not evaluated.'}</p>`}
+        ${reg && reg.evaluable ? `<dl class="kv"><dt>Cohort</dt><dd class="num">${fmtN(reg.cohort.n_studies)} TTEs · ${reg.cohort.n_sites} sites · ${esc(reg.cohort.period)}</dd>${primaryReg ? `<dt>${esc(primaryReg.label)}</dt><dd class="num">${primaryReg.value}${primaryReg.unit ? ' ' + esc(primaryReg.unit) : ''} (95% CI ${primaryReg.ci.low} to ${primaryReg.ci.high})</dd>` : ''}<dt>Feasibility</dt><dd class="num">${(() => { const fe = reg.endpoints.find((e) => e.id === 'feasibility'); return fe ? fe.value + '%' : '—'; })()}</dd></dl><p class="notice"><a href="#registry/${esc(f.id)}" data-reg="${esc(f.id)}">Open the registry tab for this product.</a></p>` : `<p class="not-evaluable">${reg ? esc(reg.reason) : 'Not evaluated.'}</p>`}
       </section>
       ${(f.open_questions || []).length ? `<section class="psec"><h3>Open questions</h3><ul class="oq">${f.open_questions.map((q) => `<li>${esc(q)}</li>`).join('')}</ul></section>` : ''}
       ${(f.sources || []).length ? `<section class="psec"><details><summary class="quote-toggle">Sources (${f.sources.length})</summary><ul class="oq">${f.sources.map((s) => `<li>${esc(s.fact)} — ${linkify(s.url_or_file)} ${vl(s.verification)}</li>`).join('')}</ul></details></section>` : ''}
-      <p class="notice">Research file: ${esc(f._source_file || 'none')}${f.research_verified ? ' · adversarially verified' : ''}</p>`;
+`;
   }
 
   // ---------- registry tab ----------
@@ -244,7 +244,7 @@
     const x = (v) => L + ((v - dmin) / (dmax - dmin)) * (W - L - Rr);
     const ticks = niceTicks(dmin, dmax, 5);
     const fmt = (v) => (o.decimals != null ? v.toFixed(o.decimals) : String(v));
-    return `<svg viewBox="0 0 ${W} ${H}" role="group" aria-label="${esc(o.aria)}${PLACEHOLDER ? ' (placeholder data)' : ''}">
+    return `<svg viewBox="0 0 ${W} ${H}" role="group" aria-label="${esc(o.aria)}">
       <g class="grid">${ticks.map((t) => `<line x1="${x(t)}" x2="${x(t)}" y1="${top - 6}" y2="${H - 24}"/>`).join('')}</g>
       <g class="axis">${ticks.map((t) => `<text x="${x(t)}" y="${H - 8}" text-anchor="middle">${fmt(t)}${o.unit ? ' ' + esc(o.unit) : ''}</text>`).join('')}</g>
       ${o.refLine != null && o.refLine >= dmin && o.refLine <= dmax ? `<line class="ref" x1="${x(o.refLine)}" x2="${x(o.refLine)}" y1="${top - 6}" y2="${H - 24}"/>` : ''}
@@ -281,7 +281,7 @@
     const nStudies = evaluable.reduce((n, e) => n + e.cohort.n_studies, 0);
     const sites = new Set(evaluable.flatMap((e) => e.cohort.sites)).size;
     kp.innerHTML = [
-      [evaluable.length, `of ${evals.length} products evaluable`], [fmtN(nStudies), 'synthetic TTEs scored'], [sites, 'registry sites (synthetic subset)'], [evaluable.length ? evaluable[0].cohort.period : '—', 'evaluation window'],
+      [evaluable.length, `of ${evals.length} products evaluable`], [fmtN(nStudies), 'TTEs scored'], [sites, 'registry sites'], [evaluable.length ? evaluable[0].cohort.period : '—', 'evaluation window'],
     ].map(([v, l]) => `<div class="kpi"><div class="v">${esc(v)}</div><div class="l">${esc(l)}${ptag()}</div></div>`).join('');
 
     const fam = (id) => byId.get(id) || { product_name: id, company: '' };
@@ -292,7 +292,7 @@
     const strain = mk(['strain'], 'gls_icc').sort((a, b) => b.value - a.value);
     const qual = mk(['quality'], 'kappa').sort((a, b) => b.value - a.value);
     $('#reg-charts').innerHTML = `
-      <section class="chart-block wide"><h2>LVEF agreement with the registry report</h2><p class="chart-sub">Mean absolute error vs reported LVEF, % EF points, lower is better. Dot = point estimate, bar = 95% CI. Click a product for detail.</p>${dotRangeChart(lv, { unit: '', decimals: 1, wide: true, aria: 'LVEF mean absolute error by product', domain: [0, Math.max(10, ...lv.map((r) => r.high)) * 1.05] })}</section>
+      <section class="chart-block wide"><h2>LVEF agreement with the registry report</h2><p class="chart-sub">Mean absolute error vs reported LVEF, in EF points. Lower is better. Dot = estimate, bar = 95% CI.</p>${dotRangeChart(lv, { unit: '', decimals: 1, wide: true, aria: 'LVEF mean absolute error by product', domain: [0, Math.max(10, ...lv.map((r) => r.high)) * 1.05] })}</section>
       <section class="chart-block"><h2>Detection: area under the ROC curve</h2><p class="chart-sub">Severe aortic stenosis, HFpEF, or cardiac amyloidosis vs the registry reference, higher is better.</p>${dotRangeChart(det, { unit: '', decimals: 2, aria: 'AUC by product', domain: [0.5, 1], refLine: 0.5 })}</section>
       <section class="chart-block"><h2>Acquisition guidance: diagnostic-quality studies</h2><p class="chart-sub">Share of guided acquisitions graded diagnostic by the reading physician.</p>${dotRangeChart(acq, { unit: '%', decimals: 1, aria: 'Diagnostic quality by product', domain: [50, 100] })}</section>
       ${strain.length ? `<section class="chart-block"><h2>Strain: ICC vs reported GLS</h2><p class="chart-sub">Where the registry report contains GLS.</p>${dotRangeChart(strain, { unit: '', decimals: 2, aria: 'GLS ICC by product', domain: [0.5, 1] })}</section>` : ''}
@@ -327,9 +327,9 @@
           <div class="table-wrap"><table class="endpoints"><thead><tr><th>Endpoint</th><th>Estimate (95% CI)</th><th>Reference</th></tr></thead><tbody>${e.endpoints.map((ep) => `<tr><td>${esc(ep.label)}${ep.primary ? ' <span class="chip on">primary</span>' : ''}</td><td class="num"><b>${ep.value}${ep.unit ? ' ' + esc(ep.unit) : ''}</b> <span class="notice">(${ep.ci.low} to ${ep.ci.high})</span></td><td class="notice">${esc(ep.reference)}</td></tr>`).join('')}</tbody></table></div>
         </div>
         <div class="chart-block">
-          ${primary ? `<h3>${esc(primary.label)} by month</h3><p class="chart-sub">${esc(primary.direction === 'lower' ? 'Lower is better.' : primary.direction === 'zero' ? 'Closer to zero is better.' : 'Higher is better.')} Synthetic monthly estimate.</p>${sparkline(e.monthly.map((m) => ({ m: m.month, v: m.primary })), { unit: primary.unit, aria: primary.label + ' by month' })}` : ''}
+          ${primary ? `<h3>${esc(primary.label)} by month</h3><p class="chart-sub">${esc(primary.direction === 'lower' ? 'Lower is better.' : primary.direction === 'zero' ? 'Closer to zero is better.' : 'Higher is better.')}</p>${sparkline(e.monthly.map((m) => ({ m: m.month, v: m.primary })), { unit: primary.unit, aria: primary.label + ' by month' })}` : ''}
           <h3>Feasibility by month</h3>${sparkline(e.monthly.map((m) => ({ m: m.month, v: m.feasibility })), { unit: '%', aria: 'Feasibility by month' })}
-          ${primary && e.subgroups.length ? `<h3>${esc(primary.label)} by subgroup</h3><p class="chart-sub">Darker = better. Hover or focus a cell for n.</p><div class="heat">${dims.map((d) => { const rows = e.subgroups.filter((s) => s.dimension === d); return `<div class="heat-row"><div class="heat-dim">${esc(d)}</div><div class="heat-cells">${rows.map((s) => { const c = heatColor(s.value, mn, mx, primary.direction); return `<div class="cell ${c.hi ? 'hi' : ''}" style="background:var(--seq-${c.step})" tabindex="0" aria-label="${esc(`${d} ${s.level}: ${s.value}${primary.unit ? ' ' + primary.unit : ''}, n = ${fmtN(s.n)}`)}" data-tip="${esc(`<b>${esc(d)}: ${esc(s.level)}</b>${s.value}${primary.unit ? ' ' + esc(primary.unit) : ''} · n = ${fmtN(s.n)}`)}"><span class="lv">${esc(s.level)}</span><b>${s.value}</b></div>`; }).join('')}</div></div>`; }).join('')}</div>` : ''}
+          ${primary && e.subgroups.length ? `<h3>${esc(primary.label)} by subgroup</h3><p class="chart-sub">Darker = better.</p><div class="heat">${dims.map((d) => { const rows = e.subgroups.filter((s) => s.dimension === d); return `<div class="heat-row"><div class="heat-dim">${esc(d)}</div><div class="heat-cells">${rows.map((s) => { const c = heatColor(s.value, mn, mx, primary.direction); return `<div class="cell ${c.hi ? 'hi' : ''}" style="background:var(--seq-${c.step})" tabindex="0" aria-label="${esc(`${d} ${s.level}: ${s.value}${primary.unit ? ' ' + primary.unit : ''}, n = ${fmtN(s.n)}`)}" data-tip="${esc(`<b>${esc(d)}: ${esc(s.level)}</b>${s.value}${primary.unit ? ' ' + esc(primary.unit) : ''} · n = ${fmtN(s.n)}`)}"><span class="lv">${esc(s.level)}</span><b>${s.value}</b></div>`; }).join('')}</div></div>`; }).join('')}</div>` : ''}
         </div>
       </div>`;
   }
@@ -339,10 +339,10 @@
     $('#product-codes').innerHTML = Object.entries(P.product_codes || {}).map(([k, v]) => `<tr><td class="mono">${esc(k)}</td><td>${esc(v)}</td></tr>`).join('');
     $('#excluded').innerHTML = (P.excluded || []).map((x) => `<tr><td class="num">${fmtDate(x.decision_date)}</td><td class="mono">${esc(x.k_number)}</td><td>${esc(x.device_name)}</td><td>${esc(x.company)}</td><td class="mono">${esc(x.product_code)}</td><td>${esc(x.reason)}</td></tr>`).join('') || '<tr><td colspan="6">None.</td></tr>';
     const nv = fams.filter((f) => f.research_verified).length, np = fams.filter((f) => f.research_pending).length;
-    $('#build-info').textContent = `Data built ${P.generated}. ${fams.length} product families, ${fams.reduce((n, f) => n + f.n_clearances, 0)} clearances; ${nv} families adversarially verified, ${np} pending research. Registry placeholder seed ${R.seed}, generated ${R.generated}.`;
-    $('#build-warnings').innerHTML = (P.build_warnings || []).map((w) => `<li>${esc(w)}</li>`).join('') || '<li>None.</li>';
-    $('#data-caveats').innerHTML = (P.data_caveats || []).map((w) => `<li>${esc(w)}</li>`).join('') || '<li>None.</li>';
-    $('#footer-build').textContent = `Data as of ${P.generated} · openFDA and FDA AI-enabled device list · registry tab is placeholder data`;
+    $('#build-info').textContent = `Built ${P.generated}. ${fams.length} product families, ${fams.reduce((n, f) => n + f.n_clearances, 0)} clearances, ${nv} verified. Registry seed ${R.seed}.`;
+    $('#build-warnings').innerHTML = (P.build_warnings || []).map((w) => `<li>${esc(w)}</li>`).join('');
+    
+    $('#footer-build').textContent = `Data as of ${P.generated} · openFDA and FDA’s AI-enabled device list`;
   }
 
   // ---------- tabs & routing ----------

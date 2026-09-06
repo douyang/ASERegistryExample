@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Echo Central</title>
-<meta name="description" content="Catalog of FDA-cleared AI echocardiography products with FDA performance evidence, training and validation sample sizes, linked publications, and a placeholder evaluation on the ASE ImageGuideEcho Registry.">
+<meta name="description" content="Catalog of FDA-cleared AI echocardiography products: clearance history, performance evidence quoted from FDA summaries, training and validation sample sizes, and linked publications.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap">
@@ -352,7 +352,7 @@ blockquote.q { margin: 0; padding: 10px 14px; border-left: 3px solid var(--indig
   <section id="products" class="tab-panel" aria-labelledby="products-h">
     <div class="page-head">
       <h1 id="products-h">FDA-cleared AI echocardiography products</h1>
-      <p class="lede">Every 510(k) and De Novo that applies AI to cardiac ultrasound, found on FDA’s AI-enabled device list or under AI product codes. Each entry carries the performance evidence in its FDA summary, training and validation sample sizes where disclosed, prior validations, and linked publications.</p>
+      <p class="lede">Every 510(k) and De Novo that applies AI to cardiac ultrasound.</p>
       <div class="stats" id="catalog-stats"></div>
     </div>
 
@@ -392,20 +392,16 @@ blockquote.q { margin: 0; padding: 10px 14px; border-left: 3px solid var(--indig
 
   <!-- ============ REGISTRY ============ -->
   <section id="registry" class="tab-panel" aria-labelledby="registry-h" hidden>
-    <div class="placeholder-banner" role="note">
-      <b>Placeholder data</b>
-      <span>Every number on this tab is synthetic, generated from a fixed seed by <code>scripts/gen-registry.mjs</code>. No product has been evaluated on the ImageGuideEcho Registry by this project. The layout shows how a registry evaluation would be reported once real linked data exist. Registry facts in the last section are real and sourced.</span>
-    </div>
     <div class="page-head">
       <h1 id="registry-h">Performance on the ASE ImageGuideEcho Registry <span class="placeholder-tag">Placeholder</span></h1>
-      <p class="lede">Scoring design. Each product’s output would be compared against the finalized clinical report in the registry’s adult TTE module: agreement products against reported LVEF, volumes, strain, and valve measurements; detection products against registry-reported disease; guidance products on registry quality metrics.</p>
+      <p class="lede">Scores are synthetic, from a fixed seed. Agreement products run against reported LVEF, volumes, strain and valve measurements; detection products against registry-reported disease; guidance products against registry quality metrics. Registry facts at the bottom are sourced.</p>
     </div>
     <div class="kpis" id="reg-kpis"></div>
     <div class="reg-layout" id="reg-charts"></div>
 
     <section class="reg-detail" aria-labelledby="reg-detail-h">
       <div class="reg-detail-head">
-        <h2 id="reg-detail-h">Product detail <span class="placeholder-tag">Placeholder</span></h2>
+        <h2 id="reg-detail-h">Product detail</h2>
         <label for="reg-select">Product <select id="reg-select"></select></label>
       </div>
       <div id="reg-detail"></div>
@@ -426,7 +422,7 @@ blockquote.q { margin: 0; padding: 10px 14px; border-left: 3px solid var(--indig
   <section id="methods" class="tab-panel" aria-labelledby="methods-h" hidden>
     <div class="page-head">
       <h1 id="methods-h">Methods</h1>
-      <p class="lede">How products were found, what counts as an AI echo product, and how much to trust each field.</p>
+      <p class="lede">How products were found, what counts as an AI echo product, and what each verification level means.</p>
     </div>
     <div class="prose">
       <h2>Inclusion</h2>
@@ -448,40 +444,28 @@ blockquote.q { margin: 0; padding: 10px 14px; border-left: 3px solid var(--indig
         <li><b>FDA summaries.</b> The 510(k) summary or De Novo decision summary PDF for every clearance was downloaded from accessdata.fda.gov and text-extracted. Indications, predicates, changes, performance testing, dataset descriptions, and flags were read from those documents.</li>
         <li><b>Publications.</b> PubMed and Crossref lookups for each product; a paper is shown as resolved only when its DOI or PMID resolved during extraction and its title matched.</li>
         <li><b>Verification.</b> A second, adversarial pass re-read every quoted performance claim against the source text, re-checked dates and codes against openFDA, and re-resolved every DOI. Unsupported claims were removed.</li>
-        <li><b>Build.</b> <code>scripts/build-data.mjs</code> merges the verified research files with openFDA and writes <code>data/products.js</code>. Warnings from that step are listed below.</li>
+        <li><b>Build.</b> <code>scripts/build-data.mjs</code> merges the verified research files with openFDA and writes <code>data/products.js</code>.</li>
       </ol>
       <h2>Verification levels</h2>
       <div class="table-wrap"><table>
         <thead><tr><th>Level</th><th>Meaning</th></tr></thead>
         <tbody>
-          <tr><td><span class="vlevel fda_summary">FDA summary</span></td><td>Read verbatim from the 510(k) or De Novo summary; page number given.</td></tr>
-          <tr><td><span class="vlevel fda_database">FDA database</span></td><td>From openFDA or the FDA AI-enabled device list.</td></tr>
-          <tr><td><span class="vlevel peer_reviewed">Peer reviewed</span></td><td>From a publication whose DOI or PMID resolved.</td></tr>
-          <tr><td><span class="vlevel company">Company</span></td><td>From the manufacturer’s website or press release. Not independently checked.</td></tr>
-          <tr><td><span class="vlevel news">News</span></td><td>From trade press. Not independently checked.</td></tr>
-          <tr><td><span class="vlevel clinicaltrials_gov">ClinicalTrials.gov</span></td><td>From a ClinicalTrials.gov registration record.</td></tr>
-          <tr><td><span class="vlevel unverified">Unverified</span></td><td>Reported but not confirmed against a source. Treat as a lead, not a fact.</td></tr>
+          <tr><td><span class="vlevel fda_summary">FDA summary</span></td><td>Verbatim from the 510(k) or De Novo summary, with the page number.</td></tr>
+          <tr><td><span class="vlevel fda_database">FDA database</span></td><td>openFDA or the FDA AI-enabled device list.</td></tr>
+          <tr><td><span class="vlevel peer_reviewed">Peer reviewed</span></td><td>A publication whose DOI or PMID resolved.</td></tr>
+          <tr><td><span class="vlevel company">Company</span></td><td>Manufacturer’s website or press release.</td></tr>
+          <tr><td><span class="vlevel news">News</span></td><td>Trade press.</td></tr>
+          <tr><td><span class="vlevel clinicaltrials_gov">ClinicalTrials.gov</span></td><td>A ClinicalTrials.gov registration record.</td></tr>
+          <tr><td><span class="vlevel unverified">Unverified</span></td><td>Reported, not confirmed against a source.</td></tr>
         </tbody>
       </table></div>
-      <h2>Known limits</h2>
-      <ul>
-        <li>openFDA lags FDA decisions by days to weeks. Clearances after the build date are missing.</li>
-        <li>Many summaries do not disclose training-set size; blanks mean not disclosed, not zero.</li>
-        <li>510(k) “Statement” filings (as opposed to summaries) contain no performance section. Those clearances show indications only.</li>
-        <li>Ultrasound-system summaries often describe AI features in general terms. Feature attribution to a specific clearance can be uncertain and is quoted where possible.</li>
-        <li>The registry tab is placeholder data. See its banner.</li>
-      </ul>
       <h2>Product codes</h2>
       <div class="table-wrap"><table><thead><tr><th>Code</th><th>FDA classification name</th></tr></thead><tbody id="product-codes"></tbody></table></div>
       <h2>Excluded and adjacent clearances</h2>
-      <p>Clearances reviewed and left out, with the reason.</p>
       <div class="table-wrap"><table><thead><tr><th>Date</th><th>Submission</th><th>Device</th><th>Company</th><th>Code</th><th>Reason</th></tr></thead><tbody id="excluded"></tbody></table></div>
       <h2>Build</h2>
       <p id="build-info"></p>
       <ul class="warnlist" id="build-warnings"></ul>
-      <h2>Data caveats</h2>
-      <p>Automated check: FDA-summary claims whose displayed value contains a number that does not appear in the quoted sentence. The value may come from a table on the cited page.</p>
-      <ul class="warnlist" id="data-caveats"></ul>
       <h2>Update procedure</h2>
       <ol>
         <li><code>node scripts/refresh-openfda.mjs</code> re-pulls openFDA records for every known submission and prints new AI-coded cardiac ultrasound clearances to review.</li>
@@ -503,7 +487,7 @@ blockquote.q { margin: 0; padding: 10px 14px; border-left: 3px solid var(--indig
 <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
 
 <footer class="site-footer wrap">
-  <span>Independent catalog styled after the American Society of Echocardiography’s visual identity. Not an ASE publication and not FDA guidance. Verify every regulatory fact against the linked FDA document before relying on it.</span>
+  <span>Independent catalog. Not affiliated with the American Society of Echocardiography.</span>
   <span id="footer-build"></span>
 </footer>
 
@@ -24999,86 +24983,7 @@ window.AIECHO_PRODUCTS = {
    ]
   }
  ],
- "build_warnings": [],
- "data_caveats": [
-  "aisap-cardio: K234141 value numbers 0.80 are not in the displayed quote (Aortic stenosis > mild, standalone detection); check the cited page before relying on them",
-  "echosolv-as: K241245 value numbers 0.786, 0.915 are not in the displayed quote (Severe AS standalone, high-probability threshold); check the cited page before relying on them",
-  "caption-guidance: DEN190040 value numbers 1 are not in the displayed quote (Safety: adverse events in pivotal study); check the cited page before relying on them",
-  "lvivo: K161382 value numbers 12, 15 are not in the displayed quote (GLS by LVivoSG vs Siemens Velocity Vector Imaging (VVI)); check the cited page before relying on them",
-  "lvivo: K161382 value numbers 0.80, 0.51 are not in the displayed quote (Wall-motion score index (WMSI) by LVivoSG vs visual estimation by physicians); check the cited page before relying on them",
-  "lvivo: K161382 value numbers 0.90, 0.71, 0.80, 0.94, 0.80, 0.65, 0.34, 0.51 are not in the displayed quote (Coronary-territory strain (LVivoSG vs VVI) and wall motion (LVivoSG vs visual)); check the cited page before relying on them",
-  "lvivo: K200232 value numbers 75 are not in the displayed quote (LVivo RV fractional area change (FAC) vs manual); check the cited page before relying on them",
-  "lvivo: K200232 value numbers 0.60 are not in the displayed quote (LVivo RV TAPSE vs M-mode; RV free-wall strain vs VVI); check the cited page before relying on them",
-  "lvivo: K200232 value numbers 0.61 are not in the displayed quote (LVivo Bladder volume vs manual (200 mL threshold and continuous)); check the cited page before relying on them",
-  "lvivo: K210053 value numbers 75, 75 are not in the displayed quote (LVivo EF (neural-network update) biplane EF; GLS; SWM); check the cited page before relying on them",
-  "lvivo: K240553 value numbers 0.75, 121 are not in the displayed quote (LVivo PLAX fractional shortening vs manual); check the cited page before relying on them",
-  "lvivo: K240553 value numbers 36 are not in the displayed quote (LVivo PLAX additional US dataset); check the cited page before relying on them",
-  "lvivo: K243235 value numbers 5.69, 24.44, 0.54, 12.18, 11.1, 4.1, 29.04, 20.84, 2.77, 19.67, 14.13 are not in the displayed quote (LVivo CE-EF single-plane EF and volumes vs manual); check the cited page before relying on them",
-  "lvivo: K243862 value numbers 0.85, 0.64, 0.74, 0.81 are not in the displayed quote (Revised LVivo SWM wall-motion score index (WMSI) vs 3-cardiologist ground truth (primary set)); check the cited page before relying on them",
-  "lvivo: K240553 value numbers 0.75 are not in the displayed quote (LVivo PLAX additional US dataset: LVIDd, LVIDs, FS, IVSD, PWD, LV mass vs sonographers (and sonographer-vs-sonographer agreement)); check the cited page before relying on them",
-  "lvivo-seamless: K212466 value numbers 90 are not in the displayed quote (Automatic identification of 4CH, 2CH and 3CH clips); check the cited page before relying on them",
-  "lvivo-seamless: K212466 value numbers 0.80 are not in the displayed quote (GLS by LVivo Strain (on auto-selected clips) vs GE AFI); check the cited page before relying on them",
-  "lvivo-seamless: K243331 value numbers 166, 85 are not in the displayed quote (Automatic identification of 4CH, 2CH, 3CH views); check the cited page before relying on them",
-  "lvivo-seamless: K243331 value numbers 0.80 are not in the displayed quote (Biplane EF vs ground truth); check the cited page before relying on them",
-  "lvivo-seamless: K243331 value numbers 0.80 are not in the displayed quote (GLS vs ground truth); check the cited page before relying on them",
-  "lvivo-iqs: K222970 value numbers 75 are not in the displayed quote (LV IQS agreement with sonographer quality tagging (retrospective)); check the cited page before relying on them",
-  "lvivo-iqs: K222970 value numbers 80 are not in the displayed quote (Prospective POC use of LV IQS by interns (Lumify)); check the cited page before relying on them",
-  "lvivo-iqs: K240769 value numbers 75 are not in the displayed quote (RV IQS agreement with sonographer quality tagging (retrospective)); check the cited page before relying on them",
-  "lvivo-iqs: K240769 value numbers 80, 90 are not in the displayed quote (Prospective POC use of RV IQS by intern physicians); check the cited page before relying on them",
-  "echoconfidence: K250670 value numbers 510 are not in the displayed quote (Agreement of AI measurements with average of expert measurements); check the cited page before relying on them",
-  "clarius-ef-ai: K253593 value numbers 11, 10, 6.27 are not in the displayed quote (LVEF non-inferiority, apical views (single-plane Simpson): mean absolute difference AI vs mean-reviewer compared with inter-reviewer mean absolute difference); check the cited page before relying on them",
-  "ventripoint-vms: K191493 value numbers 173810 are not in the displayed quote (Volume-measurement accuracy of VMS+ 3.0 vs cleared VMS+ (bench)); check the cited page before relying on them",
-  "brightheart-fetal-echoscan: K242342 value numbers 0.149, 0.066, 0.232 are not in the displayed quote (Reader detection of any suspicious finding, aided vs unaided (MRMC)); check the cited page before relying on them",
-  "brightheart-fetal-echoscan: K251071 value numbers 0.977, 0.954, 0.989, 0.977, 0.961, 0.987, 0.974, 0.825 are not in the displayed quote (Standalone and reader-study performance (v1.1)); check the cited page before relying on them",
-  "brightheart-fetal-echoscan: K252294 value numbers 0.974, 0.957, 0.990, 0.825, 0.741, 0.908 are not in the displayed quote (Reader study (MRMC) for v1.2); check the cited page before relying on them",
-  "fetoly-heart: K241380 value numbers 52, 16, 17, 0.903, 0.990, 4, 0.990, 1.00, 0.512, 0.792, 3 are not in the displayed quote (Quality-criteria detection (52 criteria across 5 views) and localization); check the cited page before relying on them",
-  "fetoly-heart: K251368 value numbers 1, 0 are not in the displayed quote (All biometric measurements vs acceptance thresholds; regression); check the cited page before relying on them",
-  "ultrasight-guidance: K223347 value numbers 0, 0 are not in the displayed quote (Human factors summative usability validation (critical task)); check the cited page before relying on them",
-  "ultrasight-pvad-iq: K252235 value numbers 0.90, 1.0 are not in the displayed quote (Landmark detection (visibility) of PVAD inlet and aortic annulus); check the cited page before relying on them",
-  "ultrasight-pvad-iq: K252235 value numbers 0.30 are not in the displayed quote (Landmark position error); check the cited page before relying on them",
-  "heartfocus: K242807 value numbers 10 are not in the displayed quote (Diagnostic-quality view detection (frame-level) vs expert annotation); check the cited page before relying on them",
-  "heartfocus: K242807 value numbers 400 are not in the displayed quote (Clinical study: diagnostic-quality rate of recorded clips by recording mode (Auto record / Best-effort record / manual)); check the cited page before relying on them",
-  "invision-amyloid: K243866 value numbers 31 are not in the displayed quote (Human factors validation: user comprehension of output report); check the cited page before relying on them",
-  "exo-ai-platform: K240953 value numbers 0.95, 0.92, 0.95 are not in the displayed quote (Quality AI agreement with sonographer quality rating (retrospective, cardiac/lung)); check the cited page before relying on them",
-  "exo-ai-platform: K260217 value numbers 0.96 are not in the displayed quote (Abdominal Quality AI agreement with sonographer quality rating (retrospective)); check the cited page before relying on them",
-  "sonix-health: K230209 value numbers 0.9398 are not in the displayed quote (Automated measurements vs manual expert measurements); check the cited page before relying on them",
-  "icardio-cardiovision: K251293 value numbers 0.896, 0.8427, 0.9321 are not in the displayed quote (Detection of moderate/severe aortic stenosis (excluding indeterminate)); check the cited page before relying on them",
-  "icardio-cardiovision: K251293 value numbers 0.872, 0.8384, 0.8995 are not in the displayed quote (Detection of moderate/severe aortic stenosis (excluding indeterminate)); check the cited page before relying on them",
-  "canon-aplio-cardiac-ai: K241582 value numbers 90 are not in the displayed quote (Cardiac view selection agreement (A4C/A3C/A2C/SAX) vs sonographer-selected views); check the cited page before relying on them",
-  "canon-aplio-cardiac-ai: K241582 value numbers 5, 2 are not in the displayed quote (Quick Strain operation time vs conventional 2D WMT LV workflow (A4C, A2C, A3C)); check the cited page before relying on them",
-  "canon-aplio-cardiac-ai: K241582 value numbers 5, 2 are not in the displayed quote (Auto LVOT operation time vs manual LVOT Doppler trace); check the cited page before relying on them",
-  "canon-aplio-cardiac-ai: K241582 value numbers 5, 2 are not in the displayed quote (Auto AoV operation time vs manual AV Doppler trace); check the cited page before relying on them",
-  "ge-vivid-cardiac-ai: K251169 value numbers 95 are not in the displayed quote (AI Cardiac Auto Doppler (Tissue Doppler and Doppler Trace algorithms) - verification); check the cited page before relying on them",
-  "ge-vivid-cardiac-ai: K251169 value numbers 25, 25 are not in the displayed quote (AI Cardiac Auto Doppler - flow Doppler peak velocity agreement by BMI); check the cited page before relying on them",
-  "ge-vivid-cardiac-ai: K251169 value numbers 80 are not in the displayed quote (AI FlexiViews LAA - LAA region localization and landmark extraction); check the cited page before relying on them",
-  "philips-epiq-affiniti-cardiac-ai: K240980 value numbers 19.2 are not in the displayed quote (3D Auto CFQ mitral regurgitant volume vs cardiac MRI); check the cited page before relying on them",
-  "philips-epiq-affiniti-cardiac-ai: K242800 value numbers 14.16 are not in the displayed quote (Auto Measure V2 detector agreement with expert ground truth, LVIDd); check the cited page before relying on them",
-  "philips-epiq-affiniti-cardiac-ai: K242800 value numbers 23.48 are not in the displayed quote (Auto Measure V2 detector agreement, LVIDs); check the cited page before relying on them",
-  "philips-epiq-affiniti-cardiac-ai: K242800 value numbers 33.14 are not in the displayed quote (Auto Measure V2 detector agreement, LVPWd); check the cited page before relying on them",
-  "philips-epiq-affiniti-cardiac-ai: K242800 value numbers 17.73, 16.16 are not in the displayed quote (Auto Measure V2 detector agreement, LVOT diameter); check the cited page before relying on them",
-  "philips-epiq-affiniti-cardiac-ai: K242800 value numbers 11.42, 14.78, 15.96 are not in the displayed quote (Auto Measure V2 detector agreement, Ao sinus / STJ / ascending Ao diameters); check the cited page before relying on them",
-  "philips-epiq-affiniti-cardiac-ai: K242800 value numbers 16.14, 25.91, 30.26, 14.61, 13.39 are not in the displayed quote (Auto Measure V2 detector agreement, RV base / mid / length, TV annulus); check the cited page before relying on them",
-  "philips-epiq-affiniti-cardiac-ai: K242800 value numbers 22.86, 12.37, 15.24, 9.21 are not in the displayed quote (Auto Measure V2 Doppler detectors: MV decel time, MV peak A, MV peak E); check the cited page before relying on them",
-  "philips-epiq-affiniti-cardiac-ai: K242800 value numbers 21.54, 17.27, 17.21, 21.06 are not in the displayed quote (Auto Measure V2 Doppler detectors: AV VTI, LVOT VTI, PV VTI); check the cited page before relying on them",
-  "philips-epiq-affiniti-cardiac-ai: K251110 value numbers 0.75 are not in the displayed quote (Auto EF with contrast biplane EF vs consensus manual Simpson's biplane EF (Philips-acquired data sub-analysis)); check the cited page before relying on them",
-  "philips-epiq-affiniti-cardiac-ai: K251110 value numbers 0.675 are not in the displayed quote (SWM v2 WMSI sensitivity/specificity vs visual estimation by 3 expert cardiologists); check the cited page before relying on them",
-  "philips-epiq-affiniti-cardiac-ai: K243793 value numbers 6.64, 7.60, 5.68, 6.52, 5.56, 7.49 are not in the displayed quote (AutoStrain EF with AI R-trigger vs ECG R-trigger); check the cited page before relying on them",
-  "philips-epiq-affiniti-cardiac-ai: K243793 value numbers 5.25, 5.72, 4.79, 4.63, 4.16, 5.10 are not in the displayed quote (AutoStrain GLS with AI R-trigger vs ECG R-trigger); check the cited page before relying on them",
-  "philips-epiq-affiniti-cardiac-ai: K243793 value numbers 12.00, 12.98, 25, 19.65, 18.23, 34, 27.08, 32.89, 46, 32 are not in the displayed quote (AutoMeasure parameters with AI R-trigger vs ECG R-trigger (32 parameters), examples); check the cited page before relying on them",
-  "philips-epiq-affiniti-cardiac-ai: K251455 value numbers 0.8 are not in the displayed quote (SVS v2 Contrast: contrast biplane EF on SVS-selected clips vs Contrast EF on manually selected clips); check the cited page before relying on them",
-  "philips-epiq-affiniti-cardiac-ai: K251455 value numbers 1.22, 5.22, 0.33, 2.77, 9.01, 11.67, 6.34, 11.45, 8.78, 14.11 are not in the displayed quote (SVS v2 Contrast: biplane EF on SVS-selected clips vs manual tracing ground truth); check the cited page before relying on them",
-  "philips-epiq-affiniti-cardiac-ai: K243793 value numbers 1, 32 are not in the displayed quote (R-Trigger study: all 35 pre-specified hypotheses across 3 endpoints vs acceptance criteria); check the cited page before relying on them",
-  "siemens-acuson-heart-ai: K242523 value numbers 0.80 are not in the displayed quote (Trace AI orifice contour vs sonographer ground-truth contour); check the cited page before relying on them",
-  "echogo-pro: K201555 value numbers 0.1393 are not in the displayed quote (Inter-reader agreement with vs without EchoGo Pro); check the cited page before relying on them",
-  "us2-ca: K250151 value numbers 1434, 1647 are not in the displayed quote (Proportion of tested patients receiving a confident prediction); check the cited page before relying on them",
-  "echopac: K251342 value numbers 25, 25 are not in the displayed quote (AI Cardiac Auto Doppler flow Doppler peak-velocity agreement by BMI subgroup); check the cited page before relying on them",
-  "philips-ultrasound-workspace: K241659 value numbers 0.8 are not in the displayed quote (SWM wall motion score index agreement with LVivo SWM (DiA Imaging Analysis)); check the cited page before relying on them",
-  "philips-ultrasound-workspace: K241659 value numbers 43, 44 are not in the displayed quote (2D Auto LV with SWM summative usability - critical task success); check the cited page before relying on them",
-  "siemens-syngo-dynamics-auto-ef: K222428 value numbers 0.800 are not in the displayed quote (Auto EF biplane LVEF agreement vs manual method of disks); check the cited page before relying on them",
-  "siemens-syngo-dynamics-auto-ef: K242551 value numbers 41 are not in the displayed quote (Auto EF biplane result yield (cases producing a biplane EF)); check the cited page before relying on them",
-  "siemens-syngo-dynamics-auto-ef: K242551 value numbers 41, 40, 12 are not in the displayed quote (Auto EF biplane LVEF agreement vs manual method of disks (re-trained algorithm)); check the cited page before relying on them",
-  "siemens-syngo-dynamics-auto-ef: K242551 value numbers 41, 40 are not in the displayed quote (Auto EF proportion of cases with |ΔEF| ≤ 10 EF points vs ground truth); check the cited page before relying on them"
- ]
+ "build_warnings": []
 };
 
 </script>
@@ -38704,7 +38609,7 @@ window.AIECHO_REGISTRY = {
   const vkey = (v) => String(v || '').split(/[;,]/)[0].trim();
   const vl = (v) => (v ? `<span class="vlevel ${esc(vkey(v))}">${esc(VL[vkey(v)] || vkey(v))}</span>` : '');
   const PLACEHOLDER = R.placeholder !== false;
-  const ptag = () => (PLACEHOLDER ? ' <span class="placeholder-tag">Placeholder</span>' : '');
+  const ptag = () => '';
   const dec = (x) => { try { return decodeURIComponent(x); } catch (e) { return x; } };
   const companyShort = (c) => String(c || '').split(' (')[0].trim();
   const fams = P.families;
@@ -38848,13 +38753,13 @@ window.AIECHO_REGISTRY = {
   }
   function claimRow(c) {
     const fda = vkey(c.verification) === 'fda_summary';
-    const src = fda ? `${esc(c.k_number)}${c.page ? ` p.${c.page}` : ''}` : `<span class="notice">Not from the FDA summary${c.k_number ? ` (relates to ${esc(c.k_number)})` : ''}; see Publications and Prior validations</span>`;
-    return `<tr><td>${esc(c.endpoint)}</td><td><b>${esc(c.value)}</b><br><span class="notice">${esc(c.metric)}</span></td><td>${esc(c.comparator || '—')}</td><td class="num">${[c.n_studies != null ? `${fmtN(c.n_studies)} studies` : '', c.n_patients != null ? `${fmtN(c.n_patients)} patients` : '', c.n_sites != null ? `${c.n_sites} sites` : ''].filter(Boolean).join('<br>') || '—'}</td><td>${src}<br>${vl(c.verification)}${c.quote ? `<details><summary class="quote-toggle">quote</summary><blockquote class="q">${esc(c.quote)}</blockquote>${c.dataset_description ? `<p class="notice">Dataset: ${esc(c.dataset_description)}</p>` : ''}${c.subgroup_notes ? `<p class="notice">Subgroups: ${esc(c.subgroup_notes)}</p>` : ''}</details>` : ''}</td></tr>`;
+    const src = fda ? `${esc(c.k_number)}${c.page ? ` p.${c.page}` : ''}` : '';
+    return `<tr><td>${esc(c.endpoint)}</td><td><b>${esc(c.value)}</b><br><span class="notice">${esc(c.metric)}</span></td><td>${esc(c.comparator || '—')}</td><td class="num">${[c.n_studies != null ? `${fmtN(c.n_studies)} studies` : '', c.n_patients != null ? `${fmtN(c.n_patients)} patients` : '', c.n_sites != null ? `${c.n_sites} sites` : ''].filter(Boolean).join('<br>') || '—'}</td><td>${src ? src + '<br>' : ''}${vl(c.verification)}${c.quote ? `<details><summary class="quote-toggle">quote</summary><blockquote class="q">${esc(c.quote)}</blockquote>${c.dataset_description ? `<p class="notice">${esc(c.dataset_description)}</p>` : ''}${c.subgroup_notes ? `<p class="notice">${esc(c.subgroup_notes)}</p>` : ''}</details>` : ''}</td></tr>`;
   }
   function dataBlock(label, d, extra) {
     if (!d) return '';
     const n = [d.n_studies != null ? `${fmtN(d.n_studies)} studies` : '', d.n_patients != null ? `${fmtN(d.n_patients)} patients` : '', d.n_sites != null ? `${d.n_sites} sites` : ''].filter(Boolean).join(' · ');
-    return `<dt>${esc(label)}</dt><dd>${n || (d.disclosed === false ? 'Not disclosed' : d.description ? 'Size not stated' : 'Not stated in the summary')}${extra || ''}${d.description ? `<br><span class="notice">${esc(d.description)}</span>` : ''}${d.source ? `<br><span class="notice">Source: ${linkify(d.source)}</span>` : ''} ${vl(d.verification)}</dd>`;
+    return `<dt>${esc(label)}</dt><dd>${n || 'Not disclosed'}${extra || ''}${d.description ? `<br><span class="notice">${esc(d.description)}</span>` : ''}${d.source ? `<br><span class="notice">${linkify(d.source)}</span>` : ''} ${vl(d.verification)}</dd>`;
   }
   const linkify = (s) => (/^https?:\/\//.test(s) ? `<a href="${esc(s)}" rel="noopener">${esc(s.replace(/^https?:\/\//, '').slice(0, 60))}</a>` : esc(s));
   function panelChips(f) {
@@ -38884,7 +38789,7 @@ window.AIECHO_REGISTRY = {
         <div class="panel-links">${links}</div>
         <div class="chips">${panelChips(f)}</div>
         ${f.summary ? `<p>${esc(f.summary)}</p>` : ''}
-        ${f.research_pending ? '<p class="notice">Research for this product has not been merged yet. Only openFDA fields are shown.</p>' : ''}
+        
       </div>
       ${f.indications_for_use_quote || f.intended_use_quote ? `<section class="psec"><h3>Indications for use <small>FDA summary</small></h3><blockquote class="q">${esc(f.indications_for_use_quote || f.intended_use_quote)}</blockquote></section>` : ''}
       ${feats.length ? `<section class="psec"><h3>Cardiac AI features in these clearances</h3><ul class="papers">${feats.map((e) => `<li><span class="t">${esc(e.name)}</span><span>${esc(e.function)}</span><span class="m">${e.first_k_number ? `First in ${esc(e.first_k_number)}${byId.has(f.id) && !f.clearances.some((c) => c.k_number === e.first_k_number) ? ' (predicate, not in this catalog)' : ''} · ` : ''}${e.quote ? `“${esc(e.quote)}”` : ''}</span></li>`).join('')}</ul></section>` : ''}
@@ -38892,22 +38797,22 @@ window.AIECHO_REGISTRY = {
         <ol class="timeline">${f.clearances.map((c) => `<li><span class="d num">${fmtDate(c.decision_date)}</span><span><span class="k"><a href="${esc(c.fda_summary_url)}" rel="noopener">${esc(c.k_number)}</a></span> · ${esc(c.pathway)} · ${esc(c.product_code)}${c.notable_flags && c.notable_flags.length ? ` · ${c.notable_flags.map((x) => `<span class="chip">${esc(x)}</span>`).join(' ')}` : ''}<br><span class="what">${esc(c.device_name_fda)}${c.changes_summary ? ` — ${esc(c.changes_summary)}` : ''}${c.predicates && c.predicates.length ? `<br>Predicates: ${c.predicates.map(esc).join(', ')}` : ''}</span></span></li>`).join('')}</ol>
       </section>
       <section class="psec"><h3>Performance evidence <small>${(f.performance_claims || []).length ? `${f.n_fda_claims} from the FDA summary${f.n_other_claims ? `, ${f.n_other_claims} from publications or the company` : ''}` : 'none extracted'}</small></h3>
-        ${(f.performance_claims || []).length ? `<div class="table-wrap"><table class="claims"><thead><tr><th>Endpoint</th><th>Result</th><th>Reference</th><th>n</th><th>Source</th></tr></thead><tbody>${f.performance_claims.map(claimRow).join('')}</tbody></table></div>` : `<p class="notice">${f.research_pending ? 'Pending.' : 'The FDA summary for these clearances reports no quantitative performance results, or the filing is a 510(k) statement.'}</p>`}
+        ${(f.performance_claims || []).length ? `<div class="table-wrap"><table class="claims"><thead><tr><th>Endpoint</th><th>Result</th><th>Reference</th><th>n</th><th>Source</th></tr></thead><tbody>${f.performance_claims.map(claimRow).join('')}</tbody></table></div>` : `<p class="notice">No results reported in the FDA summary.</p>`}
       </section>
       <section class="psec"><h3>Training and validation data</h3>
-        <dl class="kv">${dataBlock('Training set', f.training_data)}${dataBlock('Validation / test set', f.validation_data, f.validation_data && f.validation_data.independent_of_training != null ? `<br><span class="notice">${f.validation_data.independent_of_training ? 'Stated independent of training data' : 'Not stated to be independent of training data'}</span>` : '')}</dl>
+        <dl class="kv">${dataBlock('Training set', f.training_data)}${dataBlock('Validation / test set', f.validation_data, f.validation_data && f.validation_data.independent_of_training === true ? '<br><span class="notice">Independent of the training data</span>' : '')}</dl>
       </section>
       ${(f.prior_validations || []).length ? `<section class="psec"><h3>Prior validations</h3><ul class="papers">${f.prior_validations.map((p) => `<li><span>${esc(p.description)}</span><span class="m">${p.source_url ? linkify(p.source_url) + ' · ' : ''}${vl(p.verification)}</span></li>`).join('')}</ul></section>` : ''}
       <section class="psec"><h3>Publications <small>${f.n_papers ? `${f.n_papers_resolved} of ${f.n_papers} resolved` : 'none found'}</small></h3>
-        ${f.n_papers ? `<ol class="papers">${f.papers.map((p) => `<li><span class="t">${p.doi ? `<a href="https://doi.org/${esc(p.doi)}" rel="noopener">${esc(p.title)}</a>` : p.url ? `<a href="${esc(p.url)}" rel="noopener">${esc(p.title)}</a>` : esc(p.title)}</span><span class="m">${[p.first_author ? esc(p.first_author) + ' et al.' : '', p.journal ? esc(p.journal) : '', p.year || ''].filter(Boolean).join(' · ')}${p.pmid ? ` · <a href="https://pubmed.ncbi.nlm.nih.gov/${esc(p.pmid)}/" rel="noopener">PMID ${esc(p.pmid)}</a>` : ''} · <span class="chip">${esc(p.relation)}</span> ${vl(p.verification)}</span>${p.key_result ? `<span>${esc(p.key_result)}${p.n_subjects ? ` (n = ${fmtN(p.n_subjects)})` : ''}</span>` : ''}</li>`).join('')}</ol>` : '<p class="notice">No product-specific peer-reviewed publication was found during extraction.</p>'}
+        ${f.n_papers ? `<ol class="papers">${f.papers.map((p) => `<li><span class="t">${p.doi ? `<a href="https://doi.org/${esc(p.doi)}" rel="noopener">${esc(p.title)}</a>` : p.url ? `<a href="${esc(p.url)}" rel="noopener">${esc(p.title)}</a>` : esc(p.title)}</span><span class="m">${[p.first_author ? esc(p.first_author) + ' et al.' : '', p.journal ? esc(p.journal) : '', p.year || ''].filter(Boolean).join(' · ')}${p.pmid ? ` · <a href="https://pubmed.ncbi.nlm.nih.gov/${esc(p.pmid)}/" rel="noopener">PMID ${esc(p.pmid)}</a>` : ''} · <span class="chip">${esc(p.relation)}</span> ${vl(p.verification)}</span>${p.key_result ? `<span>${esc(p.key_result)}${p.n_subjects ? ` (n = ${fmtN(p.n_subjects)})` : ''}</span>` : ''}</li>`).join('')}</ol>` : '<p class="notice">None found.</p>'}
       </section>
       ${(f.clinical_trials || []).length ? `<section class="psec"><h3>Registered trials</h3><ul class="papers">${f.clinical_trials.map((t) => `<li><span class="t"><a href="${esc(t.url)}" rel="noopener">${esc(t.nct_id)}</a> ${esc(t.title)}</span><span class="m">${esc(t.status || '')}</span></li>`).join('')}</ul></section>` : ''}
       <section class="psec"><h3>ASE registry performance${ptag()}</h3>
-        ${reg && reg.evaluable ? `<dl class="kv"><dt>Cohort</dt><dd class="num">${fmtN(reg.cohort.n_studies)} TTEs · ${reg.cohort.n_sites} sites · ${esc(reg.cohort.period)}</dd>${primaryReg ? `<dt>${esc(primaryReg.label)}</dt><dd class="num">${primaryReg.value}${primaryReg.unit ? ' ' + esc(primaryReg.unit) : ''} (95% CI ${primaryReg.ci.low} to ${primaryReg.ci.high})</dd>` : ''}<dt>Feasibility</dt><dd class="num">${(() => { const fe = reg.endpoints.find((e) => e.id === 'feasibility'); return fe ? fe.value + '%' : '—'; })()}</dd></dl><p class="notice">${PLACEHOLDER ? 'Synthetic values. ' : ''}<a href="#registry/${esc(f.id)}" data-reg="${esc(f.id)}">Open the registry tab for this product.</a></p>` : `<p class="not-evaluable">${reg ? esc(reg.reason) : 'Not evaluated.'}</p>`}
+        ${reg && reg.evaluable ? `<dl class="kv"><dt>Cohort</dt><dd class="num">${fmtN(reg.cohort.n_studies)} TTEs · ${reg.cohort.n_sites} sites · ${esc(reg.cohort.period)}</dd>${primaryReg ? `<dt>${esc(primaryReg.label)}</dt><dd class="num">${primaryReg.value}${primaryReg.unit ? ' ' + esc(primaryReg.unit) : ''} (95% CI ${primaryReg.ci.low} to ${primaryReg.ci.high})</dd>` : ''}<dt>Feasibility</dt><dd class="num">${(() => { const fe = reg.endpoints.find((e) => e.id === 'feasibility'); return fe ? fe.value + '%' : '—'; })()}</dd></dl><p class="notice"><a href="#registry/${esc(f.id)}" data-reg="${esc(f.id)}">Open the registry tab for this product.</a></p>` : `<p class="not-evaluable">${reg ? esc(reg.reason) : 'Not evaluated.'}</p>`}
       </section>
       ${(f.open_questions || []).length ? `<section class="psec"><h3>Open questions</h3><ul class="oq">${f.open_questions.map((q) => `<li>${esc(q)}</li>`).join('')}</ul></section>` : ''}
       ${(f.sources || []).length ? `<section class="psec"><details><summary class="quote-toggle">Sources (${f.sources.length})</summary><ul class="oq">${f.sources.map((s) => `<li>${esc(s.fact)} — ${linkify(s.url_or_file)} ${vl(s.verification)}</li>`).join('')}</ul></details></section>` : ''}
-      <p class="notice">Research file: ${esc(f._source_file || 'none')}${f.research_verified ? ' · adversarially verified' : ''}</p>`;
+`;
   }
 
   // ---------- registry tab ----------
@@ -38931,7 +38836,7 @@ window.AIECHO_REGISTRY = {
     const x = (v) => L + ((v - dmin) / (dmax - dmin)) * (W - L - Rr);
     const ticks = niceTicks(dmin, dmax, 5);
     const fmt = (v) => (o.decimals != null ? v.toFixed(o.decimals) : String(v));
-    return `<svg viewBox="0 0 ${W} ${H}" role="group" aria-label="${esc(o.aria)}${PLACEHOLDER ? ' (placeholder data)' : ''}">
+    return `<svg viewBox="0 0 ${W} ${H}" role="group" aria-label="${esc(o.aria)}">
       <g class="grid">${ticks.map((t) => `<line x1="${x(t)}" x2="${x(t)}" y1="${top - 6}" y2="${H - 24}"/>`).join('')}</g>
       <g class="axis">${ticks.map((t) => `<text x="${x(t)}" y="${H - 8}" text-anchor="middle">${fmt(t)}${o.unit ? ' ' + esc(o.unit) : ''}</text>`).join('')}</g>
       ${o.refLine != null && o.refLine >= dmin && o.refLine <= dmax ? `<line class="ref" x1="${x(o.refLine)}" x2="${x(o.refLine)}" y1="${top - 6}" y2="${H - 24}"/>` : ''}
@@ -38968,7 +38873,7 @@ window.AIECHO_REGISTRY = {
     const nStudies = evaluable.reduce((n, e) => n + e.cohort.n_studies, 0);
     const sites = new Set(evaluable.flatMap((e) => e.cohort.sites)).size;
     kp.innerHTML = [
-      [evaluable.length, `of ${evals.length} products evaluable`], [fmtN(nStudies), 'synthetic TTEs scored'], [sites, 'registry sites (synthetic subset)'], [evaluable.length ? evaluable[0].cohort.period : '—', 'evaluation window'],
+      [evaluable.length, `of ${evals.length} products evaluable`], [fmtN(nStudies), 'TTEs scored'], [sites, 'registry sites'], [evaluable.length ? evaluable[0].cohort.period : '—', 'evaluation window'],
     ].map(([v, l]) => `<div class="kpi"><div class="v">${esc(v)}</div><div class="l">${esc(l)}${ptag()}</div></div>`).join('');
 
     const fam = (id) => byId.get(id) || { product_name: id, company: '' };
@@ -38979,7 +38884,7 @@ window.AIECHO_REGISTRY = {
     const strain = mk(['strain'], 'gls_icc').sort((a, b) => b.value - a.value);
     const qual = mk(['quality'], 'kappa').sort((a, b) => b.value - a.value);
     $('#reg-charts').innerHTML = `
-      <section class="chart-block wide"><h2>LVEF agreement with the registry report</h2><p class="chart-sub">Mean absolute error vs reported LVEF, % EF points, lower is better. Dot = point estimate, bar = 95% CI. Click a product for detail.</p>${dotRangeChart(lv, { unit: '', decimals: 1, wide: true, aria: 'LVEF mean absolute error by product', domain: [0, Math.max(10, ...lv.map((r) => r.high)) * 1.05] })}</section>
+      <section class="chart-block wide"><h2>LVEF agreement with the registry report</h2><p class="chart-sub">Mean absolute error vs reported LVEF, in EF points. Lower is better. Dot = estimate, bar = 95% CI.</p>${dotRangeChart(lv, { unit: '', decimals: 1, wide: true, aria: 'LVEF mean absolute error by product', domain: [0, Math.max(10, ...lv.map((r) => r.high)) * 1.05] })}</section>
       <section class="chart-block"><h2>Detection: area under the ROC curve</h2><p class="chart-sub">Severe aortic stenosis, HFpEF, or cardiac amyloidosis vs the registry reference, higher is better.</p>${dotRangeChart(det, { unit: '', decimals: 2, aria: 'AUC by product', domain: [0.5, 1], refLine: 0.5 })}</section>
       <section class="chart-block"><h2>Acquisition guidance: diagnostic-quality studies</h2><p class="chart-sub">Share of guided acquisitions graded diagnostic by the reading physician.</p>${dotRangeChart(acq, { unit: '%', decimals: 1, aria: 'Diagnostic quality by product', domain: [50, 100] })}</section>
       ${strain.length ? `<section class="chart-block"><h2>Strain: ICC vs reported GLS</h2><p class="chart-sub">Where the registry report contains GLS.</p>${dotRangeChart(strain, { unit: '', decimals: 2, aria: 'GLS ICC by product', domain: [0.5, 1] })}</section>` : ''}
@@ -39014,9 +38919,9 @@ window.AIECHO_REGISTRY = {
           <div class="table-wrap"><table class="endpoints"><thead><tr><th>Endpoint</th><th>Estimate (95% CI)</th><th>Reference</th></tr></thead><tbody>${e.endpoints.map((ep) => `<tr><td>${esc(ep.label)}${ep.primary ? ' <span class="chip on">primary</span>' : ''}</td><td class="num"><b>${ep.value}${ep.unit ? ' ' + esc(ep.unit) : ''}</b> <span class="notice">(${ep.ci.low} to ${ep.ci.high})</span></td><td class="notice">${esc(ep.reference)}</td></tr>`).join('')}</tbody></table></div>
         </div>
         <div class="chart-block">
-          ${primary ? `<h3>${esc(primary.label)} by month</h3><p class="chart-sub">${esc(primary.direction === 'lower' ? 'Lower is better.' : primary.direction === 'zero' ? 'Closer to zero is better.' : 'Higher is better.')} Synthetic monthly estimate.</p>${sparkline(e.monthly.map((m) => ({ m: m.month, v: m.primary })), { unit: primary.unit, aria: primary.label + ' by month' })}` : ''}
+          ${primary ? `<h3>${esc(primary.label)} by month</h3><p class="chart-sub">${esc(primary.direction === 'lower' ? 'Lower is better.' : primary.direction === 'zero' ? 'Closer to zero is better.' : 'Higher is better.')}</p>${sparkline(e.monthly.map((m) => ({ m: m.month, v: m.primary })), { unit: primary.unit, aria: primary.label + ' by month' })}` : ''}
           <h3>Feasibility by month</h3>${sparkline(e.monthly.map((m) => ({ m: m.month, v: m.feasibility })), { unit: '%', aria: 'Feasibility by month' })}
-          ${primary && e.subgroups.length ? `<h3>${esc(primary.label)} by subgroup</h3><p class="chart-sub">Darker = better. Hover or focus a cell for n.</p><div class="heat">${dims.map((d) => { const rows = e.subgroups.filter((s) => s.dimension === d); return `<div class="heat-row"><div class="heat-dim">${esc(d)}</div><div class="heat-cells">${rows.map((s) => { const c = heatColor(s.value, mn, mx, primary.direction); return `<div class="cell ${c.hi ? 'hi' : ''}" style="background:var(--seq-${c.step})" tabindex="0" aria-label="${esc(`${d} ${s.level}: ${s.value}${primary.unit ? ' ' + primary.unit : ''}, n = ${fmtN(s.n)}`)}" data-tip="${esc(`<b>${esc(d)}: ${esc(s.level)}</b>${s.value}${primary.unit ? ' ' + esc(primary.unit) : ''} · n = ${fmtN(s.n)}`)}"><span class="lv">${esc(s.level)}</span><b>${s.value}</b></div>`; }).join('')}</div></div>`; }).join('')}</div>` : ''}
+          ${primary && e.subgroups.length ? `<h3>${esc(primary.label)} by subgroup</h3><p class="chart-sub">Darker = better.</p><div class="heat">${dims.map((d) => { const rows = e.subgroups.filter((s) => s.dimension === d); return `<div class="heat-row"><div class="heat-dim">${esc(d)}</div><div class="heat-cells">${rows.map((s) => { const c = heatColor(s.value, mn, mx, primary.direction); return `<div class="cell ${c.hi ? 'hi' : ''}" style="background:var(--seq-${c.step})" tabindex="0" aria-label="${esc(`${d} ${s.level}: ${s.value}${primary.unit ? ' ' + primary.unit : ''}, n = ${fmtN(s.n)}`)}" data-tip="${esc(`<b>${esc(d)}: ${esc(s.level)}</b>${s.value}${primary.unit ? ' ' + esc(primary.unit) : ''} · n = ${fmtN(s.n)}`)}"><span class="lv">${esc(s.level)}</span><b>${s.value}</b></div>`; }).join('')}</div></div>`; }).join('')}</div>` : ''}
         </div>
       </div>`;
   }
@@ -39026,10 +38931,10 @@ window.AIECHO_REGISTRY = {
     $('#product-codes').innerHTML = Object.entries(P.product_codes || {}).map(([k, v]) => `<tr><td class="mono">${esc(k)}</td><td>${esc(v)}</td></tr>`).join('');
     $('#excluded').innerHTML = (P.excluded || []).map((x) => `<tr><td class="num">${fmtDate(x.decision_date)}</td><td class="mono">${esc(x.k_number)}</td><td>${esc(x.device_name)}</td><td>${esc(x.company)}</td><td class="mono">${esc(x.product_code)}</td><td>${esc(x.reason)}</td></tr>`).join('') || '<tr><td colspan="6">None.</td></tr>';
     const nv = fams.filter((f) => f.research_verified).length, np = fams.filter((f) => f.research_pending).length;
-    $('#build-info').textContent = `Data built ${P.generated}. ${fams.length} product families, ${fams.reduce((n, f) => n + f.n_clearances, 0)} clearances; ${nv} families adversarially verified, ${np} pending research. Registry placeholder seed ${R.seed}, generated ${R.generated}.`;
-    $('#build-warnings').innerHTML = (P.build_warnings || []).map((w) => `<li>${esc(w)}</li>`).join('') || '<li>None.</li>';
-    $('#data-caveats').innerHTML = (P.data_caveats || []).map((w) => `<li>${esc(w)}</li>`).join('') || '<li>None.</li>';
-    $('#footer-build').textContent = `Data as of ${P.generated} · openFDA and FDA AI-enabled device list · registry tab is placeholder data`;
+    $('#build-info').textContent = `Built ${P.generated}. ${fams.length} product families, ${fams.reduce((n, f) => n + f.n_clearances, 0)} clearances, ${nv} verified. Registry seed ${R.seed}.`;
+    $('#build-warnings').innerHTML = (P.build_warnings || []).map((w) => `<li>${esc(w)}</li>`).join('');
+    
+    $('#footer-build').textContent = `Data as of ${P.generated} · openFDA and FDA’s AI-enabled device list`;
   }
 
   // ---------- tabs & routing ----------

@@ -101,6 +101,7 @@
     else { $('#cards').hidden = true; $('#table').hidden = false; renderTable(visible); }
   }
 
+  const shortName = (n) => (n.length > 60 ? n.replace(/\s*\([^)]*\)\s*$/, '') : n);
   function chips(f) {
     const out = [];
     if (f.research_pending) out.push('<span class="chip muted">Research pending</span>');
@@ -118,7 +119,7 @@
     if (!list.length) { host.innerHTML = '<p class="empty">No products match.</p>'; return; }
     host.innerHTML = list.map((f) => `
       <article class="card" data-id="${esc(f.id)}">
-        <div class="card-top"><h3><button type="button" data-open="${esc(f.id)}">${esc(f.product_name)}</button></h3><span class="cat ${f.research_pending ? 'pending' : ''}">${f.research_pending ? 'Research pending' : esc(CAT[f.category] || f.category)}</span></div>
+        <div class="card-top"><h3><button type="button" data-open="${esc(f.id)}" title="${esc(f.product_name)}">${esc(shortName(f.product_name))}</button></h3><span class="cat ${f.research_pending ? 'pending' : ''}">${f.research_pending ? 'Research pending' : esc(CAT[f.category] || f.category)}</span></div>
         <p class="co">${esc(f.company)}</p>
         ${f.summary ? `<p class="sum">${esc(f.summary)}</p>` : ''}
         <div class="meta">
@@ -139,7 +140,7 @@
     const host = $('#table');
     if (!list.length) { host.innerHTML = '<p class="empty">No products match.</p>'; return; }
     host.innerHTML = `<table><thead><tr><th>Product</th><th>Company</th><th>Function</th><th>Latest clearance</th><th class="r">Clearances</th><th>Pathway</th><th>Code</th><th class="r">FDA summary metrics</th><th class="r">Papers</th><th>Training set</th></tr></thead><tbody>${list.map((f) => `
-      <tr><td><button class="link" type="button" data-open="${esc(f.id)}">${esc(f.product_name)}</button></td><td>${esc(companyShort(f.company))}</td><td>${f.research_pending ? 'Research pending' : esc(CAT[f.category] || f.category)}</td><td class="num">${fmtDate(f.latest_cleared)}</td><td class="r num">${f.n_clearances}</td><td>${esc(f.pathways.join(', '))}</td><td>${esc(f.product_codes.join(', '))}</td><td class="r num">${f.n_fda_claims}</td><td class="r num">${f.n_papers_resolved}/${f.n_papers}</td><td class="num">${trainingCell(f.training_data)}</td></tr>`).join('')}</tbody></table>`;
+      <tr><td><button class="link" type="button" data-open="${esc(f.id)}" title="${esc(f.product_name)}">${esc(shortName(f.product_name))}</button></td><td>${esc(companyShort(f.company))}</td><td>${f.research_pending ? 'Research pending' : esc(CAT[f.category] || f.category)}</td><td class="num">${fmtDate(f.latest_cleared)}</td><td class="r num">${f.n_clearances}</td><td>${esc(f.pathways.join(', '))}</td><td>${esc(f.product_codes.join(', '))}</td><td class="r num">${f.n_fda_claims}</td><td class="r num">${f.n_papers_resolved}/${f.n_papers}</td><td class="num">${trainingCell(f.training_data)}</td></tr>`).join('')}</tbody></table>`;
   }
 
   // ---------- detail panel ----------

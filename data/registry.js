@@ -13487,6 +13487,7 @@ window.AIECHO_REGISTRY = {
   "metrics": [
    {
     "id": "tat",
+    "code": "TAT",
     "section": "Timeliness",
     "label": "Report turnaround time",
     "short": "Turnaround time",
@@ -13509,66 +13510,66 @@ window.AIECHO_REGISTRY = {
     "monthly": [
      {
       "month": "2025-01",
-      "value": 17.5,
+      "value": 17.1,
       "d": 21124,
       "n": null,
-      "rel_pct": 27.1,
+      "rel_pct": 28.7,
       "band": 3
      },
      {
       "month": "2025-02",
-      "value": 17.2,
+      "value": 16.7,
       "d": 19613,
       "n": null,
-      "rel_pct": 28.3,
+      "rel_pct": 30.4,
       "band": 3
      },
      {
       "month": "2025-03",
-      "value": 17,
+      "value": 16.6,
       "d": 19756,
       "n": null,
-      "rel_pct": 29.2,
+      "rel_pct": 30.8,
       "band": 3
      },
      {
       "month": "2025-04",
-      "value": 17.3,
+      "value": 16.8,
       "d": 22126,
+      "n": null,
+      "rel_pct": 30,
+      "band": 3
+     },
+     {
+      "month": "2025-05",
+      "value": 15.8,
+      "d": 21120,
+      "n": null,
+      "rel_pct": 34.2,
+      "band": 3
+     },
+     {
+      "month": "2025-06",
+      "value": 17.3,
+      "d": 19513,
       "n": null,
       "rel_pct": 27.9,
       "band": 3
      },
      {
-      "month": "2025-05",
-      "value": 16.2,
-      "d": 21120,
-      "n": null,
-      "rel_pct": 32.5,
-      "band": 3
-     },
-     {
-      "month": "2025-06",
-      "value": 17.7,
-      "d": 19513,
-      "n": null,
-      "rel_pct": 26.3,
-      "band": 3
-     },
-     {
       "month": "2025-07",
-      "value": 17.5,
+      "value": 17.3,
       "d": 19748,
       "n": null,
-      "rel_pct": 27.1,
+      "rel_pct": 27.9,
       "band": 3
      },
      {
       "month": "2025-08",
-      "value": 17.5,
+      "value": 17.4,
       "d": 20384,
       "n": null,
-      "rel_pct": 27.1,
+      "rel_pct": 27.5,
       "band": 3
      },
      {
@@ -13581,80 +13582,81 @@ window.AIECHO_REGISTRY = {
      },
      {
       "month": "2025-10",
-      "value": 16.1,
+      "value": 16.3,
       "d": 21475,
       "n": null,
-      "rel_pct": 32.9,
+      "rel_pct": 32.1,
       "band": 3
      },
      {
       "month": "2025-11",
-      "value": 17.1,
+      "value": 17.4,
       "d": 19027,
+      "n": null,
+      "rel_pct": 27.5,
+      "band": 3
+     },
+     {
+      "month": "2025-12",
+      "value": 16.3,
+      "d": 22744,
+      "n": null,
+      "rel_pct": 32.1,
+      "band": 3
+     },
+     {
+      "month": "2026-01",
+      "value": 17,
+      "d": 22844,
+      "n": null,
+      "rel_pct": 29.2,
+      "band": 3
+     },
+     {
+      "month": "2026-02",
+      "value": 16.4,
+      "d": 21098,
+      "n": null,
+      "rel_pct": 31.7,
+      "band": 3
+     },
+     {
+      "month": "2026-03",
+      "value": 17.1,
+      "d": 23951,
       "n": null,
       "rel_pct": 28.7,
       "band": 3
      },
      {
-      "month": "2025-12",
-      "value": 15.9,
-      "d": 22744,
-      "n": null,
-      "rel_pct": 33.8,
-      "band": 3
-     },
-     {
-      "month": "2026-01",
-      "value": 16.5,
-      "d": 22844,
-      "n": null,
-      "rel_pct": 31.3,
-      "band": 3
-     },
-     {
-      "month": "2026-02",
-      "value": 15.9,
-      "d": 21098,
-      "n": null,
-      "rel_pct": 33.8,
-      "band": 3
-     },
-     {
-      "month": "2026-03",
-      "value": 16.6,
-      "d": 23951,
-      "n": null,
-      "rel_pct": 30.8,
-      "band": 3
-     },
-     {
       "month": "2026-04",
-      "value": 16.8,
+      "value": 17.2,
       "d": 20691,
       "n": null,
-      "rel_pct": 30,
+      "rel_pct": 28.3,
       "band": 3
      },
      {
       "month": "2026-05",
-      "value": 16.9,
+      "value": 17.2,
       "d": 22815,
       "n": null,
-      "rel_pct": 29.6,
+      "rel_pct": 28.3,
       "band": 3
      },
      {
       "month": "2026-06",
-      "value": 16.4,
+      "value": 16.5,
       "d": 19864,
       "n": null,
-      "rel_pct": 31.7,
+      "rel_pct": 31.3,
       "band": 3
      }
     ]
    },
    {
     "id": "study_completeness",
+    "code": "STU",
     "section": "Study and report completeness",
     "label": "Study completeness",
     "short": "Study completeness",
@@ -13677,152 +13679,153 @@ window.AIECHO_REGISTRY = {
     "monthly": [
      {
       "month": "2025-01",
-      "value": 88.5,
+      "value": 87.1,
       "d": 18608,
-      "n": 16468,
-      "rel_pct": -1.7,
+      "n": 16208,
+      "rel_pct": -3.2,
       "band": -1
      },
      {
       "month": "2025-02",
-      "value": 89.3,
+      "value": 87.7,
       "d": 20609,
-      "n": 18404,
-      "rel_pct": -0.8,
-      "band": 0
+      "n": 18074,
+      "rel_pct": -2.6,
+      "band": -1
      },
      {
       "month": "2025-03",
-      "value": 89.7,
+      "value": 87.7,
       "d": 18120,
-      "n": 16254,
-      "rel_pct": -0.3,
-      "band": 0
+      "n": 15891,
+      "rel_pct": -2.6,
+      "band": -1
      },
      {
       "month": "2025-04",
-      "value": 89.9,
+      "value": 87.3,
       "d": 20269,
-      "n": 18222,
-      "rel_pct": -0.1,
-      "band": 0
+      "n": 17695,
+      "rel_pct": -3,
+      "band": -1
      },
      {
       "month": "2025-05",
-      "value": 89.3,
+      "value": 86.8,
       "d": 22430,
-      "n": 20030,
-      "rel_pct": -0.8,
-      "band": 0
+      "n": 19469,
+      "rel_pct": -3.6,
+      "band": -1
      },
      {
       "month": "2025-06",
-      "value": 88.8,
+      "value": 86.4,
       "d": 21011,
-      "n": 18658,
-      "rel_pct": -1.3,
+      "n": 18154,
+      "rel_pct": -4,
       "band": -1
      },
      {
       "month": "2025-07",
-      "value": 89.7,
+      "value": 87.6,
       "d": 19284,
-      "n": 17298,
-      "rel_pct": -0.3,
-      "band": 0
+      "n": 16893,
+      "rel_pct": -2.7,
+      "band": -1
      },
      {
       "month": "2025-08",
-      "value": 87.5,
+      "value": 85.9,
       "d": 19022,
-      "n": 16644,
-      "rel_pct": -2.8,
+      "n": 16340,
+      "rel_pct": -4.6,
       "band": -1
      },
      {
       "month": "2025-09",
-      "value": 85.8,
-      "d": 21248,
-      "n": 18231,
-      "rel_pct": -4.7,
-      "band": -1
-     },
-     {
-      "month": "2025-10",
-      "value": 85.5,
-      "d": 21502,
-      "n": 18384,
-      "rel_pct": -5,
-      "band": -1
-     },
-     {
-      "month": "2025-11",
-      "value": 86,
-      "d": 22199,
-      "n": 19091,
-      "rel_pct": -4.4,
-      "band": -1
-     },
-     {
-      "month": "2025-12",
       "value": 84.9,
-      "d": 21269,
-      "n": 18057,
+      "d": 21248,
+      "n": 18040,
       "rel_pct": -5.7,
       "band": -1
      },
      {
-      "month": "2026-01",
-      "value": 84.1,
-      "d": 20776,
-      "n": 17473,
-      "rel_pct": -6.6,
+      "month": "2025-10",
+      "value": 85.3,
+      "d": 21502,
+      "n": 18341,
+      "rel_pct": -5.2,
       "band": -1
      },
      {
-      "month": "2026-02",
-      "value": 84.5,
-      "d": 18747,
-      "n": 15841,
-      "rel_pct": -6.1,
-      "band": -1
-     },
-     {
-      "month": "2026-03",
-      "value": 82.5,
-      "d": 21270,
-      "n": 17548,
-      "rel_pct": -8.3,
-      "band": -1
-     },
-     {
-      "month": "2026-04",
-      "value": 85.8,
-      "d": 20939,
-      "n": 17966,
-      "rel_pct": -4.7,
-      "band": -1
-     },
-     {
-      "month": "2026-05",
+      "month": "2025-11",
       "value": 86.3,
-      "d": 20573,
-      "n": 17754,
+      "d": 22199,
+      "n": 19158,
       "rel_pct": -4.1,
       "band": -1
      },
      {
+      "month": "2025-12",
+      "value": 85.9,
+      "d": 21269,
+      "n": 18270,
+      "rel_pct": -4.6,
+      "band": -1
+     },
+     {
+      "month": "2026-01",
+      "value": 85.9,
+      "d": 20776,
+      "n": 17847,
+      "rel_pct": -4.6,
+      "band": -1
+     },
+     {
+      "month": "2026-02",
+      "value": 87,
+      "d": 18747,
+      "n": 16310,
+      "rel_pct": -3.3,
+      "band": -1
+     },
+     {
+      "month": "2026-03",
+      "value": 85.2,
+      "d": 21270,
+      "n": 18122,
+      "rel_pct": -5.3,
+      "band": -1
+     },
+     {
+      "month": "2026-04",
+      "value": 88.3,
+      "d": 20939,
+      "n": 18489,
+      "rel_pct": -1.9,
+      "band": -1
+     },
+     {
+      "month": "2026-05",
+      "value": 88.7,
+      "d": 20573,
+      "n": 18248,
+      "rel_pct": -1.4,
+      "band": -1
+     },
+     {
       "month": "2026-06",
-      "value": 85.6,
+      "value": 87.9,
       "d": 20930,
-      "n": 17916,
-      "rel_pct": -4.9,
+      "n": 18397,
+      "rel_pct": -2.3,
       "band": -1
      }
     ]
    },
    {
     "id": "report_completeness",
+    "code": "RPT",
     "section": "Study and report completeness",
     "label": "Report completeness",
     "short": "Report completeness",
@@ -13845,152 +13848,153 @@ window.AIECHO_REGISTRY = {
     "monthly": [
      {
       "month": "2025-01",
-      "value": 89.1,
+      "value": 88.1,
       "d": 23110,
-      "n": 20591,
-      "rel_pct": -1,
+      "n": 20360,
+      "rel_pct": -2.1,
       "band": -1
      },
      {
       "month": "2025-02",
-      "value": 88.2,
+      "value": 86,
       "d": 21238,
-      "n": 18732,
-      "rel_pct": -2,
+      "n": 18265,
+      "rel_pct": -4.4,
       "band": -1
      },
      {
       "month": "2025-03",
-      "value": 89.8,
-      "d": 20953,
-      "n": 18816,
-      "rel_pct": -0.2,
-      "band": 0
-     },
-     {
-      "month": "2025-04",
-      "value": 90.5,
-      "d": 18838,
-      "n": 17048,
-      "rel_pct": 0.6,
-      "band": 0
-     },
-     {
-      "month": "2025-05",
-      "value": 90.1,
-      "d": 22015,
-      "n": 19836,
-      "rel_pct": 0.1,
-      "band": 0
-     },
-     {
-      "month": "2025-06",
-      "value": 90,
-      "d": 20965,
-      "n": 18869,
-      "rel_pct": 0,
-      "band": 0
-     },
-     {
-      "month": "2025-07",
-      "value": 88.4,
-      "d": 21122,
-      "n": 18672,
-      "rel_pct": -1.8,
-      "band": -1
-     },
-     {
-      "month": "2025-08",
-      "value": 89.1,
-      "d": 22125,
-      "n": 19713,
-      "rel_pct": -1,
-      "band": -1
-     },
-     {
-      "month": "2025-09",
-      "value": 88,
-      "d": 21582,
-      "n": 18992,
-      "rel_pct": -2.2,
-      "band": -1
-     },
-     {
-      "month": "2025-10",
-      "value": 86.7,
-      "d": 21571,
-      "n": 18702,
-      "rel_pct": -3.7,
-      "band": -1
-     },
-     {
-      "month": "2025-11",
-      "value": 87.9,
-      "d": 22087,
-      "n": 19414,
-      "rel_pct": -2.3,
-      "band": -1
-     },
-     {
-      "month": "2025-12",
-      "value": 86.4,
-      "d": 23282,
-      "n": 20116,
-      "rel_pct": -4,
-      "band": -1
-     },
-     {
-      "month": "2026-01",
-      "value": 86.3,
-      "d": 18249,
-      "n": 15749,
-      "rel_pct": -4.1,
-      "band": -1
-     },
-     {
-      "month": "2026-02",
       "value": 87.2,
-      "d": 19951,
-      "n": 17397,
+      "d": 20953,
+      "n": 18271,
       "rel_pct": -3.1,
       "band": -1
      },
      {
-      "month": "2026-03",
-      "value": 85.8,
-      "d": 24151,
-      "n": 20722,
-      "rel_pct": -4.7,
+      "month": "2025-04",
+      "value": 87.6,
+      "d": 18838,
+      "n": 16502,
+      "rel_pct": -2.7,
       "band": -1
      },
      {
-      "month": "2026-04",
-      "value": 85.7,
-      "d": 18498,
-      "n": 15853,
-      "rel_pct": -4.8,
+      "month": "2025-05",
+      "value": 86.9,
+      "d": 22015,
+      "n": 19131,
+      "rel_pct": -3.4,
       "band": -1
      },
      {
-      "month": "2026-05",
+      "month": "2025-06",
+      "value": 86.8,
+      "d": 20965,
+      "n": 18198,
+      "rel_pct": -3.6,
+      "band": -1
+     },
+     {
+      "month": "2025-07",
+      "value": 85.4,
+      "d": 21122,
+      "n": 18038,
+      "rel_pct": -5.1,
+      "band": -1
+     },
+     {
+      "month": "2025-08",
+      "value": 86.7,
+      "d": 22125,
+      "n": 19182,
+      "rel_pct": -3.7,
+      "band": -1
+     },
+     {
+      "month": "2025-09",
       "value": 86.2,
-      "d": 22698,
-      "n": 19566,
+      "d": 21582,
+      "n": 18604,
       "rel_pct": -4.2,
       "band": -1
      },
      {
-      "month": "2026-06",
+      "month": "2025-10",
+      "value": 85.6,
+      "d": 21571,
+      "n": 18465,
+      "rel_pct": -4.9,
+      "band": -1
+     },
+     {
+      "month": "2025-11",
+      "value": 87.3,
+      "d": 22087,
+      "n": 19282,
+      "rel_pct": -3,
+      "band": -1
+     },
+     {
+      "month": "2025-12",
+      "value": 86.8,
+      "d": 23282,
+      "n": 20209,
+      "rel_pct": -3.6,
+      "band": -1
+     },
+     {
+      "month": "2026-01",
+      "value": 87.4,
+      "d": 18249,
+      "n": 15950,
+      "rel_pct": -2.9,
+      "band": -1
+     },
+     {
+      "month": "2026-02",
+      "value": 88.7,
+      "d": 19951,
+      "n": 17697,
+      "rel_pct": -1.4,
+      "band": -1
+     },
+     {
+      "month": "2026-03",
+      "value": 87.9,
+      "d": 24151,
+      "n": 21229,
+      "rel_pct": -2.3,
+      "band": -1
+     },
+     {
+      "month": "2026-04",
       "value": 88.1,
-      "d": 20440,
-      "n": 18008,
+      "d": 18498,
+      "n": 16297,
       "rel_pct": -2.1,
       "band": -1
+     },
+     {
+      "month": "2026-05",
+      "value": 88.5,
+      "d": 22698,
+      "n": 20088,
+      "rel_pct": -1.7,
+      "band": -1
+     },
+     {
+      "month": "2026-06",
+      "value": 90.4,
+      "d": 20440,
+      "n": 18478,
+      "rel_pct": 0.4,
+      "band": 0
      }
     ]
    },
    {
     "id": "quant_completeness",
+    "code": "QNT",
     "section": "Study and report completeness",
     "label": "Quantitative report completeness",
     "short": "Quantitative completeness",
@@ -14013,152 +14017,153 @@ window.AIECHO_REGISTRY = {
     "monthly": [
      {
       "month": "2025-01",
-      "value": 80.8,
+      "value": 79.3,
       "d": 21347,
-      "n": 17248,
-      "rel_pct": -4.9,
+      "n": 16928,
+      "rel_pct": -6.7,
       "band": -1
      },
      {
       "month": "2025-02",
-      "value": 81.3,
+      "value": 79.4,
       "d": 19925,
-      "n": 16199,
-      "rel_pct": -4.4,
+      "n": 15820,
+      "rel_pct": -6.6,
       "band": -1
      },
      {
       "month": "2025-03",
-      "value": 82.8,
+      "value": 80.4,
       "d": 21425,
-      "n": 17740,
-      "rel_pct": -2.6,
+      "n": 17226,
+      "rel_pct": -5.4,
       "band": -1
      },
      {
       "month": "2025-04",
-      "value": 82.2,
-      "d": 21949,
-      "n": 18042,
-      "rel_pct": -3.3,
-      "band": -1
-     },
-     {
-      "month": "2025-05",
-      "value": 80.2,
-      "d": 20668,
-      "n": 16576,
-      "rel_pct": -5.6,
-      "band": -1
-     },
-     {
-      "month": "2025-06",
-      "value": 81.6,
-      "d": 22451,
-      "n": 18320,
-      "rel_pct": -4,
-      "band": -1
-     },
-     {
-      "month": "2025-07",
       "value": 79.6,
-      "d": 18915,
-      "n": 15056,
+      "d": 21949,
+      "n": 17471,
       "rel_pct": -6.4,
       "band": -1
      },
      {
-      "month": "2025-08",
-      "value": 80,
-      "d": 21471,
-      "n": 17177,
-      "rel_pct": -5.9,
+      "month": "2025-05",
+      "value": 77.5,
+      "d": 20668,
+      "n": 16018,
+      "rel_pct": -8.8,
       "band": -1
      },
      {
-      "month": "2025-09",
+      "month": "2025-06",
       "value": 79.2,
-      "d": 21821,
-      "n": 17282,
+      "d": 22451,
+      "n": 17781,
       "rel_pct": -6.8,
       "band": -1
      },
      {
-      "month": "2025-10",
-      "value": 78.6,
-      "d": 19974,
-      "n": 15700,
-      "rel_pct": -7.5,
-      "band": -1
-     },
-     {
-      "month": "2025-11",
-      "value": 78.4,
-      "d": 21791,
-      "n": 17084,
-      "rel_pct": -7.8,
-      "band": -1
-     },
-     {
-      "month": "2025-12",
-      "value": 76.7,
-      "d": 20455,
-      "n": 15689,
-      "rel_pct": -9.8,
-      "band": -1
-     },
-     {
-      "month": "2026-01",
-      "value": 76.4,
-      "d": 19936,
-      "n": 15231,
-      "rel_pct": -10.1,
-      "band": -2
-     },
-     {
-      "month": "2026-02",
-      "value": 77.3,
-      "d": 22055,
-      "n": 17049,
-      "rel_pct": -9.1,
-      "band": -1
-     },
-     {
-      "month": "2026-03",
-      "value": 77.7,
-      "d": 19432,
-      "n": 15099,
-      "rel_pct": -8.6,
-      "band": -1
-     },
-     {
-      "month": "2026-04",
-      "value": 78.7,
-      "d": 22147,
-      "n": 17430,
-      "rel_pct": -7.4,
-      "band": -1
-     },
-     {
-      "month": "2026-05",
+      "month": "2025-07",
       "value": 77.6,
-      "d": 21366,
-      "n": 16580,
+      "d": 18915,
+      "n": 14678,
       "rel_pct": -8.7,
       "band": -1
      },
      {
-      "month": "2026-06",
+      "month": "2025-08",
       "value": 78.5,
-      "d": 23162,
-      "n": 18182,
+      "d": 21471,
+      "n": 16855,
       "rel_pct": -7.6,
+      "band": -1
+     },
+     {
+      "month": "2025-09",
+      "value": 78.4,
+      "d": 21821,
+      "n": 17108,
+      "rel_pct": -7.8,
+      "band": -1
+     },
+     {
+      "month": "2025-10",
+      "value": 78.5,
+      "d": 19974,
+      "n": 15680,
+      "rel_pct": -7.6,
+      "band": -1
+     },
+     {
+      "month": "2025-11",
+      "value": 78.8,
+      "d": 21791,
+      "n": 17171,
+      "rel_pct": -7.3,
+      "band": -1
+     },
+     {
+      "month": "2025-12",
+      "value": 77.5,
+      "d": 20455,
+      "n": 15853,
+      "rel_pct": -8.8,
+      "band": -1
+     },
+     {
+      "month": "2026-01",
+      "value": 77.7,
+      "d": 19936,
+      "n": 15490,
+      "rel_pct": -8.6,
+      "band": -1
+     },
+     {
+      "month": "2026-02",
+      "value": 78.8,
+      "d": 22055,
+      "n": 17379,
+      "rel_pct": -7.3,
+      "band": -1
+     },
+     {
+      "month": "2026-03",
+      "value": 79.3,
+      "d": 19432,
+      "n": 15410,
+      "rel_pct": -6.7,
+      "band": -1
+     },
+     {
+      "month": "2026-04",
+      "value": 80.2,
+      "d": 22147,
+      "n": 17762,
+      "rel_pct": -5.6,
+      "band": -1
+     },
+     {
+      "month": "2026-05",
+      "value": 79,
+      "d": 21366,
+      "n": 16879,
+      "rel_pct": -7.1,
+      "band": -1
+     },
+     {
+      "month": "2026-06",
+      "value": 79.7,
+      "d": 23162,
+      "n": 18460,
+      "rel_pct": -6.2,
       "band": -1
      }
     ]
    },
    {
     "id": "qual_completeness",
+    "code": "QAL",
     "section": "Study and report completeness",
     "label": "Qualitative report completeness",
     "short": "Qualitative completeness",
@@ -14181,58 +14186,58 @@ window.AIECHO_REGISTRY = {
     "monthly": [
      {
       "month": "2025-01",
-      "value": 87.7,
+      "value": 85.7,
       "d": 21934,
-      "n": 19236,
-      "rel_pct": -0.3,
-      "band": 0
+      "n": 18797,
+      "rel_pct": -2.6,
+      "band": -1
      },
      {
       "month": "2025-02",
-      "value": 87.3,
+      "value": 85.1,
       "d": 23027,
-      "n": 20103,
-      "rel_pct": -0.8,
-      "band": 0
+      "n": 19596,
+      "rel_pct": -3.3,
+      "band": -1
      },
      {
       "month": "2025-03",
-      "value": 87.9,
+      "value": 85.9,
       "d": 19692,
-      "n": 17309,
-      "rel_pct": -0.1,
-      "band": 0
+      "n": 16915,
+      "rel_pct": -2.4,
+      "band": -1
      },
      {
       "month": "2025-04",
-      "value": 87.8,
+      "value": 86,
       "d": 19645,
-      "n": 17248,
-      "rel_pct": -0.2,
-      "band": 0
+      "n": 16895,
+      "rel_pct": -2.3,
+      "band": -1
      },
      {
       "month": "2025-05",
-      "value": 87,
+      "value": 85.4,
       "d": 19522,
-      "n": 16984,
-      "rel_pct": -1.1,
+      "n": 16672,
+      "rel_pct": -3,
       "band": -1
      },
      {
       "month": "2025-06",
-      "value": 87.3,
+      "value": 86.3,
       "d": 23789,
-      "n": 20768,
-      "rel_pct": -0.8,
-      "band": 0
+      "n": 20530,
+      "rel_pct": -1.9,
+      "band": -1
      },
      {
       "month": "2025-07",
-      "value": 85.8,
+      "value": 85.3,
       "d": 22389,
-      "n": 19210,
-      "rel_pct": -2.5,
+      "n": 19098,
+      "rel_pct": -3.1,
       "band": -1
      },
      {
@@ -14245,88 +14250,89 @@ window.AIECHO_REGISTRY = {
      },
      {
       "month": "2025-09",
-      "value": 86.2,
+      "value": 86.6,
       "d": 24208,
-      "n": 20867,
-      "rel_pct": -2,
+      "n": 20964,
+      "rel_pct": -1.6,
       "band": -1
      },
      {
       "month": "2025-10",
-      "value": 84.2,
+      "value": 85.2,
       "d": 22515,
-      "n": 18958,
-      "rel_pct": -4.3,
+      "n": 19183,
+      "rel_pct": -3.2,
       "band": -1
      },
      {
       "month": "2025-11",
-      "value": 83.7,
+      "value": 84.9,
       "d": 19916,
-      "n": 16670,
-      "rel_pct": -4.9,
+      "n": 16909,
+      "rel_pct": -3.5,
       "band": -1
      },
      {
       "month": "2025-12",
-      "value": 84.1,
+      "value": 85.6,
       "d": 22378,
-      "n": 18820,
-      "rel_pct": -4.4,
+      "n": 19156,
+      "rel_pct": -2.7,
       "band": -1
      },
      {
       "month": "2026-01",
-      "value": 83.8,
+      "value": 85.5,
       "d": 18575,
-      "n": 15566,
-      "rel_pct": -4.8,
+      "n": 15882,
+      "rel_pct": -2.8,
       "band": -1
      },
      {
       "month": "2026-02",
-      "value": 83.3,
+      "value": 85,
       "d": 21549,
-      "n": 17950,
-      "rel_pct": -5.3,
+      "n": 18317,
+      "rel_pct": -3.4,
       "band": -1
      },
      {
       "month": "2026-03",
-      "value": 82.7,
+      "value": 84.3,
       "d": 21256,
-      "n": 17579,
-      "rel_pct": -6,
+      "n": 17919,
+      "rel_pct": -4.2,
       "band": -1
      },
      {
       "month": "2026-04",
-      "value": 83.2,
+      "value": 84.7,
       "d": 20905,
-      "n": 17393,
-      "rel_pct": -5.5,
+      "n": 17707,
+      "rel_pct": -3.7,
       "band": -1
      },
      {
       "month": "2026-05",
-      "value": 84,
+      "value": 85.1,
       "d": 20412,
-      "n": 17146,
-      "rel_pct": -4.5,
+      "n": 17371,
+      "rel_pct": -3.3,
       "band": -1
      },
      {
       "month": "2026-06",
-      "value": 85.8,
+      "value": 86.6,
       "d": 18972,
-      "n": 16278,
-      "rel_pct": -2.5,
+      "n": 16430,
+      "rel_pct": -1.6,
       "band": -1
      }
     ]
    },
    {
     "id": "gradients",
+    "code": "GRD",
     "section": "Valvular disease reporting",
     "label": "Mean and peak gradients for valvular disease",
     "short": "Valve gradients",
@@ -14349,42 +14355,42 @@ window.AIECHO_REGISTRY = {
     "monthly": [
      {
       "month": "2025-01",
-      "value": 79.7,
+      "value": 77.6,
       "d": 3511,
-      "n": 2798,
-      "rel_pct": -6.2,
+      "n": 2725,
+      "rel_pct": -8.7,
       "band": -1
      },
      {
       "month": "2025-02",
-      "value": 79.4,
+      "value": 77.6,
       "d": 3418,
-      "n": 2714,
-      "rel_pct": -6.6,
+      "n": 2652,
+      "rel_pct": -8.7,
       "band": -1
      },
      {
       "month": "2025-03",
-      "value": 80.5,
+      "value": 78.9,
       "d": 3693,
-      "n": 2973,
-      "rel_pct": -5.3,
+      "n": 2914,
+      "rel_pct": -7.2,
       "band": -1
      },
      {
       "month": "2025-04",
-      "value": 79.6,
+      "value": 78.2,
       "d": 4061,
-      "n": 3233,
-      "rel_pct": -6.4,
+      "n": 3176,
+      "rel_pct": -8,
       "band": -1
      },
      {
       "month": "2025-05",
-      "value": 80.9,
+      "value": 80.2,
       "d": 3971,
-      "n": 3213,
-      "rel_pct": -4.8,
+      "n": 3185,
+      "rel_pct": -5.6,
       "band": -1
      },
      {
@@ -14397,104 +14403,105 @@ window.AIECHO_REGISTRY = {
      },
      {
       "month": "2025-07",
-      "value": 78.7,
+      "value": 79.3,
       "d": 3240,
-      "n": 2550,
-      "rel_pct": -7.4,
+      "n": 2569,
+      "rel_pct": -6.7,
       "band": -1
      },
      {
       "month": "2025-08",
-      "value": 79.2,
+      "value": 80.3,
       "d": 3410,
-      "n": 2701,
-      "rel_pct": -6.8,
+      "n": 2738,
+      "rel_pct": -5.5,
       "band": -1
      },
      {
       "month": "2025-09",
-      "value": 76.5,
+      "value": 78.3,
       "d": 3614,
-      "n": 2765,
-      "rel_pct": -10,
-      "band": -2
+      "n": 2830,
+      "rel_pct": -7.9,
+      "band": -1
      },
      {
       "month": "2025-10",
-      "value": 76.1,
+      "value": 78.3,
       "d": 3396,
-      "n": 2584,
-      "rel_pct": -10.5,
-      "band": -2
+      "n": 2659,
+      "rel_pct": -7.9,
+      "band": -1
      },
      {
       "month": "2025-11",
-      "value": 74.9,
+      "value": 77.1,
       "d": 3712,
-      "n": 2780,
-      "rel_pct": -11.9,
-      "band": -2
+      "n": 2862,
+      "rel_pct": -9.3,
+      "band": -1
      },
      {
       "month": "2025-12",
-      "value": 74.8,
+      "value": 76.8,
       "d": 3723,
-      "n": 2785,
-      "rel_pct": -12,
-      "band": -2
+      "n": 2859,
+      "rel_pct": -9.6,
+      "band": -1
      },
      {
       "month": "2026-01",
-      "value": 76.6,
+      "value": 78.4,
       "d": 3504,
-      "n": 2684,
-      "rel_pct": -9.9,
+      "n": 2747,
+      "rel_pct": -7.8,
       "band": -1
      },
      {
       "month": "2026-02",
-      "value": 76.9,
+      "value": 78.2,
       "d": 3619,
-      "n": 2783,
-      "rel_pct": -9.5,
+      "n": 2830,
+      "rel_pct": -8,
       "band": -1
      },
      {
       "month": "2026-03",
-      "value": 74.2,
+      "value": 75.1,
       "d": 3707,
-      "n": 2751,
-      "rel_pct": -12.7,
+      "n": 2784,
+      "rel_pct": -11.6,
       "band": -2
      },
      {
       "month": "2026-04",
-      "value": 75.9,
-      "d": 3401,
-      "n": 2581,
-      "rel_pct": -10.7,
-      "band": -2
-     },
-     {
-      "month": "2026-05",
       "value": 76.4,
-      "d": 3745,
-      "n": 2861,
+      "d": 3401,
+      "n": 2598,
       "rel_pct": -10.1,
       "band": -2
      },
      {
+      "month": "2026-05",
+      "value": 76,
+      "d": 3745,
+      "n": 2846,
+      "rel_pct": -10.6,
+      "band": -2
+     },
+     {
       "month": "2026-06",
-      "value": 76.7,
+      "value": 75.8,
       "d": 3715,
-      "n": 2849,
-      "rel_pct": -9.8,
-      "band": -1
+      "n": 2816,
+      "rel_pct": -10.8,
+      "band": -2
      }
     ]
    },
    {
     "id": "valve_areas",
+    "code": "ARE",
     "section": "Valvular disease reporting",
     "label": "Valve areas for stenotic lesions",
     "short": "Valve areas",
@@ -14517,152 +14524,153 @@ window.AIECHO_REGISTRY = {
     "monthly": [
      {
       "month": "2025-01",
-      "value": 76.6,
+      "value": 74.3,
       "d": 1709,
-      "n": 1309,
-      "rel_pct": -4.3,
+      "n": 1270,
+      "rel_pct": -7.1,
       "band": -1
      },
      {
       "month": "2025-02",
-      "value": 79.3,
+      "value": 76.8,
       "d": 1695,
-      "n": 1344,
-      "rel_pct": -0.9,
-      "band": 0
+      "n": 1302,
+      "rel_pct": -4,
+      "band": -1
      },
      {
       "month": "2025-03",
-      "value": 78.7,
+      "value": 76.1,
       "d": 1371,
-      "n": 1079,
-      "rel_pct": -1.6,
+      "n": 1043,
+      "rel_pct": -4.9,
       "band": -1
      },
      {
       "month": "2025-04",
-      "value": 76.7,
+      "value": 74.6,
       "d": 1586,
-      "n": 1216,
-      "rel_pct": -4.1,
+      "n": 1183,
+      "rel_pct": -6.8,
       "band": -1
      },
      {
       "month": "2025-05",
-      "value": 77.6,
+      "value": 75.5,
       "d": 1585,
-      "n": 1230,
-      "rel_pct": -3,
+      "n": 1197,
+      "rel_pct": -5.6,
       "band": -1
      },
      {
       "month": "2025-06",
-      "value": 78,
+      "value": 76.7,
       "d": 1626,
-      "n": 1268,
-      "rel_pct": -2.5,
+      "n": 1247,
+      "rel_pct": -4.1,
       "band": -1
      },
      {
       "month": "2025-07",
-      "value": 78.2,
+      "value": 77.4,
       "d": 1665,
-      "n": 1302,
-      "rel_pct": -2.2,
+      "n": 1289,
+      "rel_pct": -3.2,
       "band": -1
      },
      {
       "month": "2025-08",
-      "value": 77,
+      "value": 77.1,
       "d": 1387,
-      "n": 1068,
-      "rel_pct": -3.8,
+      "n": 1069,
+      "rel_pct": -3.6,
       "band": -1
      },
      {
       "month": "2025-09",
-      "value": 75.7,
+      "value": 76.6,
       "d": 1541,
-      "n": 1167,
-      "rel_pct": -5.4,
+      "n": 1180,
+      "rel_pct": -4.3,
       "band": -1
      },
      {
       "month": "2025-10",
-      "value": 74.9,
+      "value": 76.6,
       "d": 1519,
-      "n": 1138,
-      "rel_pct": -6.4,
+      "n": 1164,
+      "rel_pct": -4.3,
       "band": -1
      },
      {
       "month": "2025-11",
-      "value": 73.4,
+      "value": 75.6,
       "d": 1399,
-      "n": 1027,
-      "rel_pct": -8.2,
+      "n": 1058,
+      "rel_pct": -5.5,
       "band": -1
      },
      {
       "month": "2025-12",
-      "value": 74.7,
+      "value": 77.3,
       "d": 1435,
-      "n": 1072,
-      "rel_pct": -6.6,
+      "n": 1109,
+      "rel_pct": -3.4,
       "band": -1
      },
      {
       "month": "2026-01",
-      "value": 73.6,
+      "value": 76.5,
       "d": 1547,
-      "n": 1139,
-      "rel_pct": -8,
+      "n": 1183,
+      "rel_pct": -4.4,
       "band": -1
      },
      {
       "month": "2026-02",
-      "value": 73.3,
+      "value": 76.3,
       "d": 1547,
-      "n": 1134,
-      "rel_pct": -8.4,
+      "n": 1180,
+      "rel_pct": -4.6,
       "band": -1
      },
      {
       "month": "2026-03",
-      "value": 73.8,
+      "value": 76.4,
       "d": 1632,
-      "n": 1204,
-      "rel_pct": -7.8,
+      "n": 1247,
+      "rel_pct": -4.5,
       "band": -1
      },
      {
       "month": "2026-04",
-      "value": 73.3,
+      "value": 75.6,
       "d": 1445,
-      "n": 1059,
-      "rel_pct": -8.4,
+      "n": 1092,
+      "rel_pct": -5.5,
       "band": -1
      },
      {
       "month": "2026-05",
-      "value": 74.1,
+      "value": 75.4,
       "d": 1335,
-      "n": 989,
-      "rel_pct": -7.4,
+      "n": 1007,
+      "rel_pct": -5.7,
       "band": -1
      },
      {
       "month": "2026-06",
-      "value": 75.5,
+      "value": 76.5,
       "d": 1643,
-      "n": 1240,
-      "rel_pct": -5.6,
+      "n": 1257,
+      "rel_pct": -4.4,
       "band": -1
      }
     ]
    },
    {
     "id": "regurg",
+    "code": "REG",
     "section": "Valvular disease reporting",
     "label": "Regurgitation severity reporting",
     "short": "Regurgitation severity",
@@ -14685,152 +14693,153 @@ window.AIECHO_REGISTRY = {
     "monthly": [
      {
       "month": "2025-01",
-      "value": 85.4,
-      "d": 8245,
-      "n": 7041,
-      "rel_pct": -5.1,
-      "band": -1
-     },
-     {
-      "month": "2025-02",
-      "value": 84.6,
-      "d": 9023,
-      "n": 7633,
-      "rel_pct": -6,
-      "band": -1
-     },
-     {
-      "month": "2025-03",
-      "value": 85.2,
-      "d": 9261,
-      "n": 7890,
-      "rel_pct": -5.3,
-      "band": -1
-     },
-     {
-      "month": "2025-04",
-      "value": 87.2,
-      "d": 8263,
-      "n": 7205,
-      "rel_pct": -3.1,
-      "band": -1
-     },
-     {
-      "month": "2025-05",
-      "value": 83.7,
-      "d": 8253,
-      "n": 6908,
-      "rel_pct": -7,
-      "band": -1
-     },
-     {
-      "month": "2025-06",
-      "value": 84.5,
-      "d": 7434,
-      "n": 6282,
-      "rel_pct": -6.1,
-      "band": -1
-     },
-     {
-      "month": "2025-07",
-      "value": 85.4,
-      "d": 8232,
-      "n": 7030,
-      "rel_pct": -5.1,
-      "band": -1
-     },
-     {
-      "month": "2025-08",
-      "value": 84.4,
-      "d": 8932,
-      "n": 7539,
-      "rel_pct": -6.2,
-      "band": -1
-     },
-     {
-      "month": "2025-09",
-      "value": 83.5,
-      "d": 8712,
-      "n": 7275,
-      "rel_pct": -7.2,
-      "band": -1
-     },
-     {
-      "month": "2025-10",
       "value": 82.2,
-      "d": 8952,
-      "n": 7359,
+      "d": 8245,
+      "n": 6777,
       "rel_pct": -8.7,
       "band": -1
      },
      {
-      "month": "2025-11",
-      "value": 81.3,
-      "d": 7950,
-      "n": 6463,
-      "rel_pct": -9.7,
+      "month": "2025-02",
+      "value": 81.2,
+      "d": 9023,
+      "n": 7327,
+      "rel_pct": -9.8,
       "band": -1
      },
      {
-      "month": "2025-12",
-      "value": 80.6,
-      "d": 8757,
-      "n": 7058,
-      "rel_pct": -10.4,
-      "band": -2
-     },
-     {
-      "month": "2026-01",
-      "value": 81,
-      "d": 8746,
-      "n": 7084,
-      "rel_pct": -10,
-      "band": -2
-     },
-     {
-      "month": "2026-02",
-      "value": 80.9,
-      "d": 8148,
-      "n": 6592,
-      "rel_pct": -10.1,
-      "band": -2
-     },
-     {
-      "month": "2026-03",
-      "value": 82.8,
-      "d": 8386,
-      "n": 6944,
-      "rel_pct": -8,
+      "month": "2025-03",
+      "value": 82,
+      "d": 9261,
+      "n": 7594,
+      "rel_pct": -8.9,
       "band": -1
      },
      {
-      "month": "2026-04",
-      "value": 81.5,
-      "d": 8631,
-      "n": 7034,
-      "rel_pct": -9.4,
+      "month": "2025-04",
+      "value": 84.1,
+      "d": 8263,
+      "n": 6949,
+      "rel_pct": -6.6,
       "band": -1
      },
      {
-      "month": "2026-05",
+      "month": "2025-05",
       "value": 81.6,
-      "d": 8723,
-      "n": 7118,
+      "d": 8253,
+      "n": 6734,
       "rel_pct": -9.3,
       "band": -1
      },
      {
+      "month": "2025-06",
+      "value": 82.8,
+      "d": 7434,
+      "n": 6155,
+      "rel_pct": -8,
+      "band": -1
+     },
+     {
+      "month": "2025-07",
+      "value": 84.7,
+      "d": 8232,
+      "n": 6973,
+      "rel_pct": -5.9,
+      "band": -1
+     },
+     {
+      "month": "2025-08",
+      "value": 84.7,
+      "d": 8932,
+      "n": 7565,
+      "rel_pct": -5.9,
+      "band": -1
+     },
+     {
+      "month": "2025-09",
+      "value": 85,
+      "d": 8712,
+      "n": 7405,
+      "rel_pct": -5.6,
+      "band": -1
+     },
+     {
+      "month": "2025-10",
+      "value": 84.8,
+      "d": 8952,
+      "n": 7591,
+      "rel_pct": -5.8,
+      "band": -1
+     },
+     {
+      "month": "2025-11",
+      "value": 84.4,
+      "d": 7950,
+      "n": 6710,
+      "rel_pct": -6.2,
+      "band": -1
+     },
+     {
+      "month": "2025-12",
+      "value": 84.3,
+      "d": 8757,
+      "n": 7382,
+      "rel_pct": -6.3,
+      "band": -1
+     },
+     {
+      "month": "2026-01",
+      "value": 85.1,
+      "d": 8746,
+      "n": 7443,
+      "rel_pct": -5.4,
+      "band": -1
+     },
+     {
+      "month": "2026-02",
+      "value": 85,
+      "d": 8148,
+      "n": 6926,
+      "rel_pct": -5.6,
+      "band": -1
+     },
+     {
+      "month": "2026-03",
+      "value": 87,
+      "d": 8386,
+      "n": 7296,
+      "rel_pct": -3.3,
+      "band": -1
+     },
+     {
+      "month": "2026-04",
+      "value": 85,
+      "d": 8631,
+      "n": 7336,
+      "rel_pct": -5.6,
+      "band": -1
+     },
+     {
+      "month": "2026-05",
+      "value": 84.6,
+      "d": 8723,
+      "n": 7380,
+      "rel_pct": -6,
+      "band": -1
+     },
+     {
       "month": "2026-06",
-      "value": 82.3,
+      "value": 83.9,
       "d": 7717,
-      "n": 6351,
-      "rel_pct": -8.6,
+      "n": 6475,
+      "rel_pct": -6.8,
       "band": -1
      }
     ]
    },
    {
     "id": "strain_util",
+    "code": "STR",
     "section": "Advanced imaging utilization",
     "label": "Strain utilization for chemotherapy, heart failure, or cardiomyopathy",
     "short": "Strain utilization",
@@ -14853,146 +14862,146 @@ window.AIECHO_REGISTRY = {
     "monthly": [
      {
       "month": "2025-01",
-      "value": 51.6,
+      "value": 50.1,
       "d": 1755,
-      "n": 906,
+      "n": 879,
+      "rel_pct": 0.2,
+      "band": 0
+     },
+     {
+      "month": "2025-02",
+      "value": 51.6,
+      "d": 1922,
+      "n": 992,
       "rel_pct": 3.2,
       "band": 1
      },
      {
-      "month": "2025-02",
-      "value": 53.4,
-      "d": 1922,
-      "n": 1026,
-      "rel_pct": 6.8,
-      "band": 1
-     },
-     {
       "month": "2025-03",
-      "value": 52.4,
+      "value": 50.7,
       "d": 1907,
-      "n": 999,
-      "rel_pct": 4.8,
+      "n": 967,
+      "rel_pct": 1.4,
       "band": 1
      },
      {
       "month": "2025-04",
-      "value": 54.8,
+      "value": 53,
       "d": 2007,
-      "n": 1100,
-      "rel_pct": 9.6,
+      "n": 1064,
+      "rel_pct": 6,
       "band": 1
      },
      {
       "month": "2025-05",
-      "value": 54,
+      "value": 52.5,
       "d": 1720,
-      "n": 929,
-      "rel_pct": 8,
+      "n": 903,
+      "rel_pct": 5,
       "band": 1
      },
      {
       "month": "2025-06",
-      "value": 51.4,
+      "value": 50.4,
       "d": 1715,
-      "n": 882,
-      "rel_pct": 2.8,
-      "band": 1
+      "n": 864,
+      "rel_pct": 0.8,
+      "band": 0
      },
      {
       "month": "2025-07",
-      "value": 53.2,
+      "value": 52.8,
       "d": 1734,
-      "n": 922,
-      "rel_pct": 6.4,
+      "n": 916,
+      "rel_pct": 5.6,
       "band": 1
      },
      {
       "month": "2025-08",
-      "value": 53.4,
+      "value": 53.3,
       "d": 1993,
-      "n": 1064,
-      "rel_pct": 6.8,
+      "n": 1062,
+      "rel_pct": 6.6,
       "band": 1
      },
      {
       "month": "2025-09",
-      "value": 52,
+      "value": 52.4,
       "d": 1861,
-      "n": 968,
-      "rel_pct": 4,
+      "n": 975,
+      "rel_pct": 4.8,
       "band": 1
      },
      {
       "month": "2025-10",
-      "value": 52.3,
+      "value": 53.4,
       "d": 1714,
-      "n": 896,
-      "rel_pct": 4.6,
+      "n": 915,
+      "rel_pct": 6.8,
       "band": 1
      },
      {
       "month": "2025-11",
-      "value": 51.1,
+      "value": 52.6,
       "d": 1924,
-      "n": 983,
-      "rel_pct": 2.2,
+      "n": 1012,
+      "rel_pct": 5.2,
       "band": 1
      },
      {
       "month": "2025-12",
-      "value": 51.1,
+      "value": 52.6,
       "d": 1894,
-      "n": 968,
-      "rel_pct": 2.2,
+      "n": 996,
+      "rel_pct": 5.2,
       "band": 1
      },
      {
       "month": "2026-01",
-      "value": 50.6,
+      "value": 52.1,
       "d": 1684,
-      "n": 852,
-      "rel_pct": 1.2,
+      "n": 877,
+      "rel_pct": 4.2,
       "band": 1
      },
      {
       "month": "2026-02",
-      "value": 49.8,
+      "value": 51.1,
       "d": 1622,
-      "n": 808,
-      "rel_pct": -0.4,
-      "band": 0
+      "n": 829,
+      "rel_pct": 2.2,
+      "band": 1
      },
      {
       "month": "2026-03",
-      "value": 51.1,
+      "value": 52.4,
       "d": 1939,
-      "n": 991,
-      "rel_pct": 2.2,
+      "n": 1016,
+      "rel_pct": 4.8,
       "band": 1
      },
      {
       "month": "2026-04",
-      "value": 51.4,
+      "value": 52.5,
       "d": 1836,
-      "n": 944,
-      "rel_pct": 2.8,
+      "n": 964,
+      "rel_pct": 5,
       "band": 1
      },
      {
       "month": "2026-05",
-      "value": 51.1,
+      "value": 51.7,
       "d": 1839,
-      "n": 940,
-      "rel_pct": 2.2,
+      "n": 951,
+      "rel_pct": 3.4,
       "band": 1
      },
      {
       "month": "2026-06",
-      "value": 52.6,
+      "value": 52.9,
       "d": 1771,
-      "n": 932,
-      "rel_pct": 5.2,
+      "n": 937,
+      "rel_pct": 5.8,
       "band": 1
      }
     ]
@@ -15054,122 +15063,122 @@ window.AIECHO_REGISTRY = {
        },
        {
         "month": "2025-04",
-        "value": 12.5,
-        "d": 2829,
-        "n": null,
-        "rel_pct": 47.9,
-        "band": 3
-       },
-       {
-        "month": "2025-05",
-        "value": 11.9,
-        "d": 3394,
-        "n": null,
-        "rel_pct": 50.4,
-        "band": 4
-       },
-       {
-        "month": "2025-06",
-        "value": 12.7,
-        "d": 2387,
-        "n": null,
-        "rel_pct": 47.1,
-        "band": 3
-       },
-       {
-        "month": "2025-07",
-        "value": 12.5,
-        "d": 2098,
-        "n": null,
-        "rel_pct": 47.9,
-        "band": 3
-       },
-       {
-        "month": "2025-08",
         "value": 12.4,
-        "d": 2845,
+        "d": 2829,
         "n": null,
         "rel_pct": 48.3,
         "band": 3
        },
        {
-        "month": "2025-09",
-        "value": 12.2,
-        "d": 2529,
-        "n": null,
-        "rel_pct": 49.2,
-        "band": 3
-       },
-       {
-        "month": "2025-10",
-        "value": 11.9,
-        "d": 2650,
-        "n": null,
-        "rel_pct": 50.4,
-        "band": 4
-       },
-       {
-        "month": "2025-11",
+        "month": "2025-05",
         "value": 11.7,
-        "d": 2073,
+        "d": 3394,
         "n": null,
         "rel_pct": 51.3,
         "band": 4
        },
        {
-        "month": "2025-12",
+        "month": "2025-06",
+        "value": 12.5,
+        "d": 2387,
+        "n": null,
+        "rel_pct": 47.9,
+        "band": 3
+       },
+       {
+        "month": "2025-07",
+        "value": 12.3,
+        "d": 2098,
+        "n": null,
+        "rel_pct": 48.8,
+        "band": 3
+       },
+       {
+        "month": "2025-08",
         "value": 12.1,
-        "d": 3478,
+        "d": 2845,
         "n": null,
         "rel_pct": 49.6,
         "band": 3
        },
        {
-        "month": "2026-01",
+        "month": "2025-09",
+        "value": 11.9,
+        "d": 2529,
+        "n": null,
+        "rel_pct": 50.4,
+        "band": 4
+       },
+       {
+        "month": "2025-10",
+        "value": 11.6,
+        "d": 2650,
+        "n": null,
+        "rel_pct": 51.7,
+        "band": 4
+       },
+       {
+        "month": "2025-11",
         "value": 11.4,
-        "d": 3299,
+        "d": 2073,
         "n": null,
         "rel_pct": 52.5,
         "band": 4
        },
        {
+        "month": "2025-12",
+        "value": 11.9,
+        "d": 3478,
+        "n": null,
+        "rel_pct": 50.4,
+        "band": 4
+       },
+       {
+        "month": "2026-01",
+        "value": 11.3,
+        "d": 3299,
+        "n": null,
+        "rel_pct": 52.9,
+        "band": 4
+       },
+       {
         "month": "2026-02",
-        "value": 11.5,
+        "value": 11.6,
         "d": 3384,
+        "n": null,
+        "rel_pct": 51.7,
+        "band": 4
+       },
+       {
+        "month": "2026-03",
+        "value": 11.4,
+        "d": 3456,
+        "n": null,
+        "rel_pct": 52.5,
+        "band": 4
+       },
+       {
+        "month": "2026-04",
+        "value": 12,
+        "d": 2270,
+        "n": null,
+        "rel_pct": 50,
+        "band": 4
+       },
+       {
+        "month": "2026-05",
+        "value": 11.5,
+        "d": 3239,
         "n": null,
         "rel_pct": 52.1,
         "band": 4
        },
        {
-        "month": "2026-03",
-        "value": 11.2,
-        "d": 3456,
-        "n": null,
-        "rel_pct": 53.3,
-        "band": 4
-       },
-       {
-        "month": "2026-04",
-        "value": 11.7,
-        "d": 2270,
-        "n": null,
-        "rel_pct": 51.3,
-        "band": 4
-       },
-       {
-        "month": "2026-05",
-        "value": 11.1,
-        "d": 3239,
-        "n": null,
-        "rel_pct": 53.8,
-        "band": 4
-       },
-       {
         "month": "2026-06",
-        "value": 11.3,
+        "value": 11.7,
         "d": 2801,
         "n": null,
-        "rel_pct": 52.9,
+        "rel_pct": 51.3,
         "band": 4
        }
       ],
@@ -15186,114 +15195,114 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 93.3,
-        "d": 2220,
-        "n": 2071,
-        "rel_pct": 3.7,
-        "band": 1
-       },
-       {
-        "month": "2025-02",
-        "value": 90.2,
-        "d": 2515,
-        "n": 2269,
-        "rel_pct": 0.2,
-        "band": 0
-       },
-       {
-        "month": "2025-03",
-        "value": 96.2,
-        "d": 2193,
-        "n": 2110,
-        "rel_pct": 6.9,
-        "band": 1
-       },
-       {
-        "month": "2025-04",
-        "value": 96.6,
-        "d": 2712,
-        "n": 2620,
-        "rel_pct": 7.3,
-        "band": 1
-       },
-       {
-        "month": "2025-05",
-        "value": 98,
-        "d": 3107,
-        "n": 3045,
-        "rel_pct": 8.9,
-        "band": 1
-       },
-       {
-        "month": "2025-06",
-        "value": 97.5,
-        "d": 2527,
-        "n": 2464,
-        "rel_pct": 8.3,
-        "band": 1
-       },
-       {
-        "month": "2025-07",
-        "value": 94.3,
-        "d": 2577,
-        "n": 2430,
-        "rel_pct": 4.8,
-        "band": 1
-       },
-       {
-        "month": "2025-08",
-        "value": 92.1,
-        "d": 2377,
-        "n": 2189,
-        "rel_pct": 2.3,
-        "band": 1
-       },
-       {
-        "month": "2025-09",
-        "value": 91.7,
-        "d": 3252,
-        "n": 2982,
-        "rel_pct": 1.9,
-        "band": 1
-       },
-       {
-        "month": "2025-10",
         "value": 95.6,
-        "d": 2941,
-        "n": 2812,
+        "d": 2220,
+        "n": 2122,
         "rel_pct": 6.2,
         "band": 1
        },
        {
+        "month": "2025-02",
+        "value": 92,
+        "d": 2515,
+        "n": 2314,
+        "rel_pct": 2.2,
+        "band": 1
+       },
+       {
+        "month": "2025-03",
+        "value": 97.4,
+        "d": 2193,
+        "n": 2136,
+        "rel_pct": 8.2,
+        "band": 1
+       },
+       {
+        "month": "2025-04",
+        "value": 97,
+        "d": 2712,
+        "n": 2631,
+        "rel_pct": 7.8,
+        "band": 1
+       },
+       {
+        "month": "2025-05",
+        "value": 97.6,
+        "d": 3107,
+        "n": 3032,
+        "rel_pct": 8.4,
+        "band": 1
+       },
+       {
+        "month": "2025-06",
+        "value": 96.3,
+        "d": 2527,
+        "n": 2434,
+        "rel_pct": 7,
+        "band": 1
+       },
+       {
+        "month": "2025-07",
+        "value": 92.4,
+        "d": 2577,
+        "n": 2381,
+        "rel_pct": 2.7,
+        "band": 1
+       },
+       {
+        "month": "2025-08",
+        "value": 89.7,
+        "d": 2377,
+        "n": 2132,
+        "rel_pct": -0.3,
+        "band": 0
+       },
+       {
+        "month": "2025-09",
+        "value": 89,
+        "d": 3252,
+        "n": 2894,
+        "rel_pct": -1.1,
+        "band": -1
+       },
+       {
+        "month": "2025-10",
+        "value": 92.8,
+        "d": 2941,
+        "n": 2729,
+        "rel_pct": 3.1,
+        "band": 1
+       },
+       {
         "month": "2025-11",
-        "value": 94.7,
+        "value": 92,
         "d": 2585,
-        "n": 2448,
-        "rel_pct": 5.2,
+        "n": 2378,
+        "rel_pct": 2.2,
         "band": 1
        },
        {
         "month": "2025-12",
-        "value": 89.2,
+        "value": 86.9,
         "d": 3058,
-        "n": 2728,
-        "rel_pct": -0.9,
-        "band": 0
+        "n": 2657,
+        "rel_pct": -3.4,
+        "band": -1
        },
        {
         "month": "2026-01",
-        "value": 91.3,
+        "value": 89.6,
         "d": 2111,
-        "n": 1927,
-        "rel_pct": 1.4,
-        "band": 1
+        "n": 1891,
+        "rel_pct": -0.4,
+        "band": 0
        },
        {
         "month": "2026-02",
-        "value": 91.8,
+        "value": 90.9,
         "d": 2833,
-        "n": 2601,
-        "rel_pct": 2,
+        "n": 2575,
+        "rel_pct": 1,
         "band": 1
        },
        {
@@ -15306,27 +15315,27 @@ window.AIECHO_REGISTRY = {
        },
        {
         "month": "2026-04",
-        "value": 88.2,
+        "value": 89.1,
         "d": 2502,
-        "n": 2207,
-        "rel_pct": -2,
+        "n": 2229,
+        "rel_pct": -1,
         "band": -1
        },
        {
         "month": "2026-05",
-        "value": 88.4,
+        "value": 90.1,
         "d": 2908,
-        "n": 2571,
-        "rel_pct": -1.8,
-        "band": -1
+        "n": 2620,
+        "rel_pct": 0.1,
+        "band": 0
        },
        {
         "month": "2026-06",
-        "value": 88,
+        "value": 90.4,
         "d": 3466,
-        "n": 3050,
-        "rel_pct": -2.2,
-        "band": -1
+        "n": 3133,
+        "rel_pct": 0.4,
+        "band": 0
        }
       ],
       "delta": 6.6,
@@ -15342,146 +15351,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 95.3,
-        "d": 2608,
-        "n": 2485,
-        "rel_pct": 5.9,
-        "band": 1
-       },
-       {
-        "month": "2025-02",
-        "value": 93.4,
-        "d": 2065,
-        "n": 1929,
-        "rel_pct": 3.8,
-        "band": 1
-       },
-       {
-        "month": "2025-03",
-        "value": 95.6,
-        "d": 2037,
-        "n": 1947,
-        "rel_pct": 6.2,
-        "band": 1
-       },
-       {
-        "month": "2025-04",
-        "value": 94.2,
-        "d": 2182,
-        "n": 2055,
-        "rel_pct": 4.7,
-        "band": 1
-       },
-       {
-        "month": "2025-05",
-        "value": 95.3,
-        "d": 2026,
-        "n": 1931,
-        "rel_pct": 5.9,
-        "band": 1
-       },
-       {
-        "month": "2025-06",
-        "value": 98.5,
-        "d": 3398,
-        "n": 3347,
-        "rel_pct": 9.4,
-        "band": 1
-       },
-       {
-        "month": "2025-07",
         "value": 99,
-        "d": 2305,
-        "n": 2282,
+        "d": 2608,
+        "n": 2582,
         "rel_pct": 10,
         "band": 2
        },
        {
-        "month": "2025-08",
-        "value": 95.5,
-        "d": 3034,
-        "n": 2897,
-        "rel_pct": 6.1,
-        "band": 1
-       },
-       {
-        "month": "2025-09",
-        "value": 96.9,
-        "d": 2704,
-        "n": 2620,
-        "rel_pct": 7.7,
-        "band": 1
-       },
-       {
-        "month": "2025-10",
+        "month": "2025-02",
         "value": 96.6,
-        "d": 3267,
-        "n": 3156,
+        "d": 2065,
+        "n": 1995,
         "rel_pct": 7.3,
         "band": 1
        },
        {
-        "month": "2025-11",
-        "value": 98.5,
-        "d": 3376,
-        "n": 3325,
-        "rel_pct": 9.4,
+        "month": "2025-03",
+        "value": 97.6,
+        "d": 2037,
+        "n": 1988,
+        "rel_pct": 8.4,
         "band": 1
        },
        {
-        "month": "2025-12",
-        "value": 97.7,
-        "d": 2641,
-        "n": 2580,
-        "rel_pct": 8.6,
+        "month": "2025-04",
+        "value": 95,
+        "d": 2182,
+        "n": 2073,
+        "rel_pct": 5.6,
         "band": 1
        },
        {
-        "month": "2026-01",
-        "value": 94,
-        "d": 3088,
-        "n": 2903,
-        "rel_pct": 4.4,
+        "month": "2025-05",
+        "value": 94.9,
+        "d": 2026,
+        "n": 1923,
+        "rel_pct": 5.4,
         "band": 1
        },
        {
-        "month": "2026-02",
+        "month": "2025-06",
+        "value": 97,
+        "d": 3398,
+        "n": 3296,
+        "rel_pct": 7.8,
+        "band": 1
+       },
+       {
+        "month": "2025-07",
+        "value": 97.9,
+        "d": 2305,
+        "n": 2257,
+        "rel_pct": 8.8,
+        "band": 1
+       },
+       {
+        "month": "2025-08",
+        "value": 92.3,
+        "d": 3034,
+        "n": 2800,
+        "rel_pct": 2.6,
+        "band": 1
+       },
+       {
+        "month": "2025-09",
         "value": 93.3,
-        "d": 2916,
-        "n": 2721,
+        "d": 2704,
+        "n": 2523,
         "rel_pct": 3.7,
         "band": 1
        },
        {
+        "month": "2025-10",
+        "value": 92.8,
+        "d": 3267,
+        "n": 3032,
+        "rel_pct": 3.1,
+        "band": 1
+       },
+       {
+        "month": "2025-11",
+        "value": 94.8,
+        "d": 3376,
+        "n": 3200,
+        "rel_pct": 5.3,
+        "band": 1
+       },
+       {
+        "month": "2025-12",
+        "value": 94.3,
+        "d": 2641,
+        "n": 2490,
+        "rel_pct": 4.8,
+        "band": 1
+       },
+       {
+        "month": "2026-01",
+        "value": 91.2,
+        "d": 3088,
+        "n": 2816,
+        "rel_pct": 1.3,
+        "band": 1
+       },
+       {
+        "month": "2026-02",
+        "value": 91.3,
+        "d": 2916,
+        "n": 2662,
+        "rel_pct": 1.4,
+        "band": 1
+       },
+       {
         "month": "2026-03",
-        "value": 89.5,
+        "value": 88.1,
         "d": 3540,
-        "n": 3168,
-        "rel_pct": -0.6,
-        "band": 0
+        "n": 3119,
+        "rel_pct": -2.1,
+        "band": -1
        },
        {
         "month": "2026-04",
-        "value": 93.4,
+        "value": 92.9,
         "d": 2188,
-        "n": 2044,
-        "rel_pct": 3.8,
+        "n": 2033,
+        "rel_pct": 3.2,
         "band": 1
        },
        {
         "month": "2026-05",
-        "value": 89.9,
+        "value": 90.1,
         "d": 3472,
-        "n": 3121,
-        "rel_pct": -0.1,
+        "n": 3128,
+        "rel_pct": 0.1,
         "band": 0
        },
        {
         "month": "2026-06",
-        "value": 94.7,
+        "value": 95.5,
         "d": 2893,
-        "n": 2740,
-        "rel_pct": 5.2,
+        "n": 2763,
+        "rel_pct": 6.1,
         "band": 1
        }
       ],
@@ -15498,147 +15507,147 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 86.8,
+        "value": 88.5,
         "d": 2610,
-        "n": 2265,
-        "rel_pct": 2.1,
+        "n": 2310,
+        "rel_pct": 4.1,
         "band": 1
        },
        {
         "month": "2025-02",
-        "value": 88.3,
+        "value": 88.9,
         "d": 3140,
-        "n": 2773,
-        "rel_pct": 3.9,
+        "n": 2791,
+        "rel_pct": 4.6,
         "band": 1
        },
        {
         "month": "2025-03",
-        "value": 85.8,
-        "d": 2999,
-        "n": 2573,
-        "rel_pct": 0.9,
-        "band": 0
-       },
-       {
-        "month": "2025-04",
-        "value": 84.7,
-        "d": 2230,
-        "n": 1889,
-        "rel_pct": -0.4,
-        "band": 0
-       },
-       {
-        "month": "2025-05",
-        "value": 85.3,
-        "d": 2286,
-        "n": 1950,
-        "rel_pct": 0.4,
-        "band": 0
-       },
-       {
-        "month": "2025-06",
         "value": 85.4,
-        "d": 3096,
-        "n": 2644,
+        "d": 2999,
+        "n": 2561,
         "rel_pct": 0.5,
         "band": 0
        },
        {
+        "month": "2025-04",
+        "value": 83.4,
+        "d": 2230,
+        "n": 1860,
+        "rel_pct": -1.9,
+        "band": -1
+       },
+       {
+        "month": "2025-05",
+        "value": 83.3,
+        "d": 2286,
+        "n": 1904,
+        "rel_pct": -2,
+        "band": -1
+       },
+       {
+        "month": "2025-06",
+        "value": 82.9,
+        "d": 3096,
+        "n": 2567,
+        "rel_pct": -2.5,
+        "band": -1
+       },
+       {
         "month": "2025-07",
-        "value": 89.3,
+        "value": 86.4,
         "d": 2510,
-        "n": 2241,
-        "rel_pct": 5.1,
+        "n": 2169,
+        "rel_pct": 1.6,
         "band": 1
        },
        {
         "month": "2025-08",
-        "value": 87.8,
+        "value": 84.9,
         "d": 3523,
-        "n": 3093,
-        "rel_pct": 3.3,
-        "band": 1
-       },
-       {
-        "month": "2025-09",
-        "value": 85.8,
-        "d": 2467,
-        "n": 2117,
-        "rel_pct": 0.9,
+        "n": 2991,
+        "rel_pct": -0.1,
         "band": 0
        },
        {
-        "month": "2025-10",
-        "value": 88.6,
-        "d": 2244,
-        "n": 1988,
-        "rel_pct": 4.2,
-        "band": 1
-       },
-       {
-        "month": "2025-11",
+        "month": "2025-09",
         "value": 83,
-        "d": 2357,
-        "n": 1956,
+        "d": 2467,
+        "n": 2048,
         "rel_pct": -2.4,
         "band": -1
        },
        {
-        "month": "2025-12",
-        "value": 82.7,
-        "d": 2510,
-        "n": 2076,
-        "rel_pct": -2.7,
+        "month": "2025-10",
+        "value": 86.2,
+        "d": 2244,
+        "n": 1934,
+        "rel_pct": 1.4,
+        "band": 1
+       },
+       {
+        "month": "2025-11",
+        "value": 81.2,
+        "d": 2357,
+        "n": 1914,
+        "rel_pct": -4.5,
         "band": -1
        },
        {
-        "month": "2026-01",
+        "month": "2025-12",
         "value": 81.5,
-        "d": 2269,
-        "n": 1849,
+        "d": 2510,
+        "n": 2046,
         "rel_pct": -4.1,
         "band": -1
        },
        {
+        "month": "2026-01",
+        "value": 81,
+        "d": 2269,
+        "n": 1838,
+        "rel_pct": -4.7,
+        "band": -1
+       },
+       {
         "month": "2026-02",
-        "value": 81.9,
+        "value": 82.1,
         "d": 2977,
-        "n": 2438,
-        "rel_pct": -3.6,
+        "n": 2444,
+        "rel_pct": -3.4,
         "band": -1
        },
        {
         "month": "2026-03",
-        "value": 84.5,
+        "value": 85.2,
         "d": 3405,
-        "n": 2877,
-        "rel_pct": -0.6,
+        "n": 2901,
+        "rel_pct": 0.2,
         "band": 0
        },
        {
         "month": "2026-04",
-        "value": 79.5,
+        "value": 80.7,
         "d": 3550,
-        "n": 2822,
-        "rel_pct": -6.5,
+        "n": 2865,
+        "rel_pct": -5.1,
         "band": -1
        },
        {
         "month": "2026-05",
-        "value": 79.4,
+        "value": 80.9,
         "d": 3412,
-        "n": 2709,
-        "rel_pct": -6.6,
+        "n": 2760,
+        "rel_pct": -4.8,
         "band": -1
        },
        {
         "month": "2026-06",
-        "value": 82.6,
+        "value": 84.2,
         "d": 3175,
-        "n": 2623,
-        "rel_pct": -2.8,
-        "band": -1
+        "n": 2673,
+        "rel_pct": -0.9,
+        "band": 0
        }
       ],
       "delta": 6.7,
@@ -15654,146 +15663,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 93.6,
+        "value": 90.7,
         "d": 3006,
-        "n": 2814,
-        "rel_pct": 6.4,
+        "n": 2726,
+        "rel_pct": 3.1,
         "band": 1
        },
        {
         "month": "2025-02",
-        "value": 96.1,
+        "value": 92.3,
         "d": 3194,
-        "n": 3069,
-        "rel_pct": 9.2,
+        "n": 2948,
+        "rel_pct": 4.9,
         "band": 1
        },
        {
         "month": "2025-03",
-        "value": 96.5,
+        "value": 92.2,
         "d": 2427,
-        "n": 2342,
-        "rel_pct": 9.7,
+        "n": 2238,
+        "rel_pct": 4.8,
         "band": 1
        },
        {
         "month": "2025-04",
-        "value": 97,
+        "value": 93.1,
         "d": 2594,
-        "n": 2516,
-        "rel_pct": 10.2,
-        "band": 2
+        "n": 2415,
+        "rel_pct": 5.8,
+        "band": 1
        },
        {
         "month": "2025-05",
-        "value": 96.3,
+        "value": 92.5,
         "d": 2953,
-        "n": 2844,
-        "rel_pct": 9.4,
+        "n": 2732,
+        "rel_pct": 5.1,
         "band": 1
        },
        {
         "month": "2025-06",
-        "value": 96.5,
+        "value": 93.6,
         "d": 2931,
-        "n": 2828,
-        "rel_pct": 9.7,
+        "n": 2743,
+        "rel_pct": 6.4,
         "band": 1
        },
        {
         "month": "2025-07",
-        "value": 94,
+        "value": 92.2,
         "d": 3365,
-        "n": 3163,
-        "rel_pct": 6.8,
+        "n": 3103,
+        "rel_pct": 4.8,
         "band": 1
        },
        {
         "month": "2025-08",
-        "value": 95.9,
+        "value": 95.3,
         "d": 3372,
-        "n": 3234,
-        "rel_pct": 9,
+        "n": 3214,
+        "rel_pct": 8.3,
         "band": 1
        },
        {
         "month": "2025-09",
-        "value": 94.4,
+        "value": 94.9,
         "d": 3531,
-        "n": 3333,
-        "rel_pct": 7.3,
+        "n": 3351,
+        "rel_pct": 7.8,
         "band": 1
        },
        {
         "month": "2025-10",
-        "value": 95.8,
+        "value": 97,
         "d": 2965,
-        "n": 2840,
-        "rel_pct": 8.9,
-        "band": 1
+        "n": 2876,
+        "rel_pct": 10.2,
+        "band": 2
        },
        {
         "month": "2025-11",
-        "value": 93.2,
+        "value": 95.3,
         "d": 2404,
-        "n": 2241,
-        "rel_pct": 5.9,
+        "n": 2291,
+        "rel_pct": 8.3,
         "band": 1
        },
        {
         "month": "2025-12",
-        "value": 89.8,
+        "value": 92,
         "d": 3495,
-        "n": 3139,
-        "rel_pct": 2,
+        "n": 3215,
+        "rel_pct": 4.5,
         "band": 1
        },
        {
         "month": "2026-01",
-        "value": 93.9,
+        "value": 96.1,
         "d": 2656,
-        "n": 2494,
-        "rel_pct": 6.7,
+        "n": 2552,
+        "rel_pct": 9.2,
         "band": 1
        },
        {
         "month": "2026-02",
-        "value": 87.4,
+        "value": 89.3,
         "d": 2238,
-        "n": 1956,
-        "rel_pct": -0.7,
-        "band": 0
+        "n": 1999,
+        "rel_pct": 1.5,
+        "band": 1
        },
        {
         "month": "2026-03",
-        "value": 88.2,
+        "value": 89.6,
         "d": 2737,
-        "n": 2414,
-        "rel_pct": 0.2,
-        "band": 0
+        "n": 2452,
+        "rel_pct": 1.8,
+        "band": 1
        },
        {
         "month": "2026-04",
-        "value": 87.9,
+        "value": 88.8,
         "d": 2442,
-        "n": 2147,
-        "rel_pct": -0.1,
+        "n": 2168,
+        "rel_pct": 0.9,
         "band": 0
        },
        {
         "month": "2026-05",
-        "value": 90,
+        "value": 90.5,
         "d": 3569,
-        "n": 3212,
-        "rel_pct": 2.3,
+        "n": 3230,
+        "rel_pct": 2.8,
         "band": 1
        },
        {
         "month": "2026-06",
-        "value": 90.2,
+        "value": 90.3,
         "d": 2158,
-        "n": 1947,
-        "rel_pct": 2.5,
+        "n": 1949,
+        "rel_pct": 2.6,
         "band": 1
        }
       ],
@@ -15810,147 +15819,147 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 86.8,
+        "value": 83.1,
         "d": 285,
-        "n": 247,
-        "rel_pct": 2.1,
-        "band": 1
+        "n": 237,
+        "rel_pct": -2.2,
+        "band": -1
        },
        {
         "month": "2025-02",
-        "value": 89.7,
+        "value": 85,
         "d": 275,
-        "n": 247,
-        "rel_pct": 5.5,
-        "band": 1
+        "n": 234,
+        "rel_pct": 0,
+        "band": 0
        },
        {
         "month": "2025-03",
-        "value": 91.3,
+        "value": 86,
         "d": 362,
-        "n": 331,
-        "rel_pct": 7.4,
+        "n": 311,
+        "rel_pct": 1.2,
         "band": 1
        },
        {
         "month": "2025-04",
-        "value": 90.4,
+        "value": 84.9,
         "d": 443,
-        "n": 400,
-        "rel_pct": 6.4,
-        "band": 1
+        "n": 376,
+        "rel_pct": -0.1,
+        "band": 0
        },
        {
         "month": "2025-05",
-        "value": 90.5,
+        "value": 85.3,
         "d": 323,
-        "n": 292,
-        "rel_pct": 6.5,
-        "band": 1
+        "n": 276,
+        "rel_pct": 0.4,
+        "band": 0
        },
        {
         "month": "2025-06",
-        "value": 89.8,
+        "value": 85.4,
         "d": 298,
-        "n": 268,
-        "rel_pct": 5.6,
-        "band": 1
+        "n": 254,
+        "rel_pct": 0.5,
+        "band": 0
        },
        {
         "month": "2025-07",
-        "value": 90.4,
+        "value": 87.2,
         "d": 329,
-        "n": 297,
-        "rel_pct": 6.4,
+        "n": 287,
+        "rel_pct": 2.6,
         "band": 1
        },
        {
         "month": "2025-08",
-        "value": 90.7,
+        "value": 88.9,
         "d": 432,
-        "n": 392,
-        "rel_pct": 6.7,
+        "n": 384,
+        "rel_pct": 4.6,
         "band": 1
        },
        {
         "month": "2025-09",
-        "value": 89.9,
+        "value": 89.7,
         "d": 318,
-        "n": 286,
-        "rel_pct": 5.8,
+        "n": 285,
+        "rel_pct": 5.5,
         "band": 1
        },
        {
         "month": "2025-10",
-        "value": 89.1,
+        "value": 90.5,
         "d": 335,
-        "n": 298,
-        "rel_pct": 4.8,
+        "n": 303,
+        "rel_pct": 6.5,
         "band": 1
        },
        {
         "month": "2025-11",
-        "value": 86.2,
+        "value": 89.1,
         "d": 299,
-        "n": 258,
-        "rel_pct": 1.4,
+        "n": 266,
+        "rel_pct": 4.8,
         "band": 1
        },
        {
         "month": "2025-12",
-        "value": 88.4,
+        "value": 92.4,
         "d": 353,
-        "n": 312,
-        "rel_pct": 4,
+        "n": 326,
+        "rel_pct": 8.7,
         "band": 1
        },
        {
         "month": "2026-01",
-        "value": 88.2,
+        "value": 93.1,
         "d": 310,
-        "n": 273,
-        "rel_pct": 3.8,
+        "n": 289,
+        "rel_pct": 9.5,
         "band": 1
        },
        {
         "month": "2026-02",
-        "value": 83.5,
+        "value": 88.8,
         "d": 439,
-        "n": 367,
-        "rel_pct": -1.8,
-        "band": -1
+        "n": 390,
+        "rel_pct": 4.5,
+        "band": 1
        },
        {
         "month": "2026-03",
-        "value": 85.8,
+        "value": 91,
         "d": 294,
-        "n": 252,
-        "rel_pct": 0.9,
-        "band": 0
+        "n": 268,
+        "rel_pct": 7.1,
+        "band": 1
        },
        {
         "month": "2026-04",
-        "value": 81.5,
+        "value": 86.2,
         "d": 462,
-        "n": 377,
-        "rel_pct": -4.1,
-        "band": -1
+        "n": 398,
+        "rel_pct": 1.4,
+        "band": 1
        },
        {
         "month": "2026-05",
-        "value": 83.7,
+        "value": 87.5,
         "d": 331,
-        "n": 277,
-        "rel_pct": -1.5,
-        "band": -1
+        "n": 290,
+        "rel_pct": 2.9,
+        "band": 1
        },
        {
         "month": "2026-06",
-        "value": 84.3,
+        "value": 86.7,
         "d": 390,
-        "n": 329,
-        "rel_pct": -0.8,
-        "band": 0
+        "n": 338,
+        "rel_pct": 2,
+        "band": 1
        }
       ],
       "delta": 9.7,
@@ -15966,147 +15975,147 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 81.2,
+        "value": 79.7,
         "d": 114,
-        "n": 93,
-        "rel_pct": 1.5,
-        "band": 1
-       },
-       {
-        "month": "2025-02",
-        "value": 82.4,
-        "d": 114,
-        "n": 94,
-        "rel_pct": 3,
-        "band": 1
-       },
-       {
-        "month": "2025-03",
-        "value": 80.2,
-        "d": 140,
-        "n": 112,
-        "rel_pct": 0.3,
+        "n": 91,
+        "rel_pct": -0.4,
         "band": 0
        },
        {
+        "month": "2025-02",
+        "value": 80,
+        "d": 114,
+        "n": 91,
+        "rel_pct": 0,
+        "band": 0
+       },
+       {
+        "month": "2025-03",
+        "value": 77,
+        "d": 140,
+        "n": 108,
+        "rel_pct": -3.8,
+        "band": -1
+       },
+       {
         "month": "2025-04",
-        "value": 83.2,
+        "value": 79.6,
         "d": 139,
-        "n": 116,
-        "rel_pct": 4,
-        "band": 1
+        "n": 111,
+        "rel_pct": -0.5,
+        "band": 0
        },
        {
         "month": "2025-05",
-        "value": 81.2,
+        "value": 77.4,
         "d": 136,
-        "n": 110,
-        "rel_pct": 1.5,
-        "band": 1
+        "n": 105,
+        "rel_pct": -3.2,
+        "band": -1
        },
        {
         "month": "2025-06",
-        "value": 83.5,
+        "value": 79.7,
         "d": 86,
-        "n": 72,
-        "rel_pct": 4.4,
-        "band": 1
+        "n": 69,
+        "rel_pct": -0.4,
+        "band": 0
        },
        {
         "month": "2025-07",
-        "value": 83.3,
+        "value": 79.9,
         "d": 124,
-        "n": 103,
-        "rel_pct": 4.1,
-        "band": 1
+        "n": 99,
+        "rel_pct": -0.1,
+        "band": 0
        },
        {
         "month": "2025-08",
-        "value": 84.1,
+        "value": 81.4,
         "d": 93,
-        "n": 78,
-        "rel_pct": 5.1,
+        "n": 76,
+        "rel_pct": 1.8,
         "band": 1
        },
        {
         "month": "2025-09",
-        "value": 80.2,
+        "value": 78.3,
         "d": 115,
-        "n": 92,
-        "rel_pct": 0.3,
-        "band": 0
+        "n": 90,
+        "rel_pct": -2.1,
+        "band": -1
        },
        {
         "month": "2025-10",
-        "value": 82.6,
+        "value": 81.8,
         "d": 128,
-        "n": 106,
-        "rel_pct": 3.2,
+        "n": 105,
+        "rel_pct": 2.2,
         "band": 1
        },
        {
         "month": "2025-11",
-        "value": 79.4,
+        "value": 79.7,
         "d": 93,
         "n": 74,
-        "rel_pct": -0.7,
+        "rel_pct": -0.4,
         "band": 0
        },
        {
         "month": "2025-12",
-        "value": 82.6,
+        "value": 84,
         "d": 114,
-        "n": 94,
-        "rel_pct": 3.2,
+        "n": 96,
+        "rel_pct": 5,
         "band": 1
        },
        {
         "month": "2026-01",
-        "value": 77.2,
+        "value": 79.7,
         "d": 123,
-        "n": 95,
-        "rel_pct": -3.5,
-        "band": -1
-       },
-       {
-        "month": "2026-02",
-        "value": 77.1,
-        "d": 86,
-        "n": 66,
-        "rel_pct": -3.6,
-        "band": -1
-       },
-       {
-        "month": "2026-03",
-        "value": 80.3,
-        "d": 105,
-        "n": 84,
-        "rel_pct": 0.4,
+        "n": 98,
+        "rel_pct": -0.4,
         "band": 0
        },
        {
+        "month": "2026-02",
+        "value": 80.5,
+        "d": 86,
+        "n": 69,
+        "rel_pct": 0.6,
+        "band": 0
+       },
+       {
+        "month": "2026-03",
+        "value": 84.2,
+        "d": 105,
+        "n": 88,
+        "rel_pct": 5.3,
+        "band": 1
+       },
+       {
         "month": "2026-04",
-        "value": 76.2,
+        "value": 80.4,
         "d": 98,
-        "n": 75,
-        "rel_pct": -4.7,
-        "band": -1
+        "n": 79,
+        "rel_pct": 0.5,
+        "band": 0
        },
        {
         "month": "2026-05",
-        "value": 78.6,
+        "value": 82.8,
         "d": 95,
-        "n": 75,
-        "rel_pct": -1.8,
-        "band": -1
+        "n": 79,
+        "rel_pct": 3.5,
+        "band": 1
        },
        {
         "month": "2026-06",
-        "value": 78.9,
+        "value": 82.8,
         "d": 147,
-        "n": 116,
-        "rel_pct": -1.4,
-        "band": -1
+        "n": 122,
+        "rel_pct": 3.5,
+        "band": 1
        }
       ],
       "delta": 7.2,
@@ -16122,147 +16131,147 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 94.9,
+        "value": 92.2,
         "d": 1277,
-        "n": 1212,
-        "rel_pct": 5.4,
+        "n": 1177,
+        "rel_pct": 2.4,
         "band": 1
        },
        {
         "month": "2025-02",
-        "value": 90,
+        "value": 86.2,
         "d": 1468,
-        "n": 1321,
-        "rel_pct": 0,
-        "band": 0
-       },
-       {
-        "month": "2025-03",
-        "value": 90.7,
-        "d": 1113,
-        "n": 1009,
-        "rel_pct": 0.8,
-        "band": 0
-       },
-       {
-        "month": "2025-04",
-        "value": 95,
-        "d": 1655,
-        "n": 1572,
-        "rel_pct": 5.6,
-        "band": 1
-       },
-       {
-        "month": "2025-05",
-        "value": 92,
-        "d": 942,
-        "n": 867,
-        "rel_pct": 2.2,
-        "band": 1
-       },
-       {
-        "month": "2025-06",
-        "value": 93.1,
-        "d": 1049,
-        "n": 977,
-        "rel_pct": 3.4,
-        "band": 1
-       },
-       {
-        "month": "2025-07",
-        "value": 94.5,
-        "d": 1154,
-        "n": 1091,
-        "rel_pct": 5,
-        "band": 1
-       },
-       {
-        "month": "2025-08",
-        "value": 92.3,
-        "d": 1226,
-        "n": 1132,
-        "rel_pct": 2.6,
-        "band": 1
-       },
-       {
-        "month": "2025-09",
-        "value": 92.8,
-        "d": 1481,
-        "n": 1374,
-        "rel_pct": 3.1,
-        "band": 1
-       },
-       {
-        "month": "2025-10",
-        "value": 90.5,
-        "d": 1126,
-        "n": 1019,
-        "rel_pct": 0.6,
-        "band": 0
-       },
-       {
-        "month": "2025-11",
-        "value": 94.1,
-        "d": 1329,
-        "n": 1251,
-        "rel_pct": 4.6,
-        "band": 1
-       },
-       {
-        "month": "2025-12",
-        "value": 90.2,
-        "d": 1379,
-        "n": 1244,
-        "rel_pct": 0.2,
-        "band": 0
-       },
-       {
-        "month": "2026-01",
-        "value": 88.9,
-        "d": 1514,
-        "n": 1346,
-        "rel_pct": -1.2,
+        "n": 1265,
+        "rel_pct": -4.2,
         "band": -1
        },
        {
-        "month": "2026-02",
+        "month": "2025-03",
+        "value": 86,
+        "d": 1113,
+        "n": 957,
+        "rel_pct": -4.4,
+        "band": -1
+       },
+       {
+        "month": "2025-04",
+        "value": 89.7,
+        "d": 1655,
+        "n": 1485,
+        "rel_pct": -0.3,
+        "band": 0
+       },
+       {
+        "month": "2025-05",
+        "value": 86.4,
+        "d": 942,
+        "n": 814,
+        "rel_pct": -4,
+        "band": -1
+       },
+       {
+        "month": "2025-06",
+        "value": 87.6,
+        "d": 1049,
+        "n": 919,
+        "rel_pct": -2.7,
+        "band": -1
+       },
+       {
+        "month": "2025-07",
         "value": 89.5,
-        "d": 1295,
-        "n": 1159,
+        "d": 1154,
+        "n": 1033,
         "rel_pct": -0.6,
         "band": 0
        },
        {
+        "month": "2025-08",
+        "value": 88.1,
+        "d": 1226,
+        "n": 1080,
+        "rel_pct": -2.1,
+        "band": -1
+       },
+       {
+        "month": "2025-09",
+        "value": 89.8,
+        "d": 1481,
+        "n": 1330,
+        "rel_pct": -0.2,
+        "band": 0
+       },
+       {
+        "month": "2025-10",
+        "value": 88.8,
+        "d": 1126,
+        "n": 1000,
+        "rel_pct": -1.3,
+        "band": -1
+       },
+       {
+        "month": "2025-11",
+        "value": 93.9,
+        "d": 1329,
+        "n": 1248,
+        "rel_pct": 4.3,
+        "band": 1
+       },
+       {
+        "month": "2025-12",
+        "value": 91.6,
+        "d": 1379,
+        "n": 1263,
+        "rel_pct": 1.8,
+        "band": 1
+       },
+       {
+        "month": "2026-01",
+        "value": 91.7,
+        "d": 1514,
+        "n": 1388,
+        "rel_pct": 1.9,
+        "band": 1
+       },
+       {
+        "month": "2026-02",
+        "value": 93.6,
+        "d": 1295,
+        "n": 1212,
+        "rel_pct": 4,
+        "band": 1
+       },
+       {
         "month": "2026-03",
-        "value": 91.4,
+        "value": 96.5,
         "d": 1575,
-        "n": 1440,
-        "rel_pct": 1.6,
+        "n": 1520,
+        "rel_pct": 7.2,
         "band": 1
        },
        {
         "month": "2026-04",
-        "value": 87.8,
+        "value": 93.6,
         "d": 1264,
-        "n": 1110,
-        "rel_pct": -2.4,
-        "band": -1
+        "n": 1183,
+        "rel_pct": 4,
+        "band": 1
        },
        {
         "month": "2026-05",
-        "value": 90,
+        "value": 96.1,
         "d": 1040,
-        "n": 936,
-        "rel_pct": 0,
-        "band": 0
+        "n": 999,
+        "rel_pct": 6.8,
+        "band": 1
        },
        {
         "month": "2026-06",
-        "value": 87.4,
+        "value": 93.4,
         "d": 1216,
-        "n": 1063,
-        "rel_pct": -2.9,
-        "band": -1
+        "n": 1136,
+        "rel_pct": 3.8,
+        "band": 1
        }
       ],
       "delta": 9.2,
@@ -16278,146 +16287,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 58.7,
-        "d": 252,
-        "n": 148,
-        "rel_pct": 17.4,
-        "band": 2
-       },
-       {
-        "month": "2025-02",
-        "value": 60.9,
-        "d": 208,
-        "n": 127,
-        "rel_pct": 21.8,
-        "band": 2
-       },
-       {
-        "month": "2025-03",
-        "value": 62.2,
-        "d": 254,
-        "n": 158,
-        "rel_pct": 24.4,
-        "band": 2
-       },
-       {
-        "month": "2025-04",
-        "value": 64.3,
-        "d": 310,
-        "n": 199,
-        "rel_pct": 28.6,
-        "band": 3
-       },
-       {
-        "month": "2025-05",
-        "value": 60.9,
-        "d": 200,
-        "n": 122,
-        "rel_pct": 21.8,
-        "band": 2
-       },
-       {
-        "month": "2025-06",
-        "value": 60.7,
-        "d": 260,
-        "n": 158,
-        "rel_pct": 21.4,
-        "band": 2
-       },
-       {
-        "month": "2025-07",
-        "value": 63.2,
-        "d": 247,
-        "n": 156,
-        "rel_pct": 26.4,
-        "band": 3
-       },
-       {
-        "month": "2025-08",
-        "value": 63,
-        "d": 287,
-        "n": 181,
-        "rel_pct": 26,
-        "band": 3
-       },
-       {
-        "month": "2025-09",
-        "value": 60.5,
-        "d": 324,
-        "n": 196,
-        "rel_pct": 21,
-        "band": 2
-       },
-       {
-        "month": "2025-10",
-        "value": 62.5,
-        "d": 217,
-        "n": 136,
-        "rel_pct": 25,
-        "band": 3
-       },
-       {
-        "month": "2025-11",
-        "value": 61.7,
-        "d": 233,
-        "n": 144,
-        "rel_pct": 23.4,
-        "band": 2
-       },
-       {
-        "month": "2025-12",
         "value": 60,
-        "d": 277,
-        "n": 166,
+        "d": 252,
+        "n": 151,
         "rel_pct": 20,
         "band": 2
        },
        {
-        "month": "2026-01",
-        "value": 61.3,
-        "d": 227,
-        "n": 139,
-        "rel_pct": 22.6,
+        "month": "2025-02",
+        "value": 60.6,
+        "d": 208,
+        "n": 126,
+        "rel_pct": 21.2,
         "band": 2
+       },
+       {
+        "month": "2025-03",
+        "value": 60.3,
+        "d": 254,
+        "n": 153,
+        "rel_pct": 20.6,
+        "band": 2
+       },
+       {
+        "month": "2025-04",
+        "value": 61,
+        "d": 310,
+        "n": 189,
+        "rel_pct": 22,
+        "band": 2
+       },
+       {
+        "month": "2025-05",
+        "value": 56.7,
+        "d": 200,
+        "n": 113,
+        "rel_pct": 13.4,
+        "band": 2
+       },
+       {
+        "month": "2025-06",
+        "value": 55.9,
+        "d": 260,
+        "n": 145,
+        "rel_pct": 11.8,
+        "band": 2
+       },
+       {
+        "month": "2025-07",
+        "value": 58.5,
+        "d": 247,
+        "n": 144,
+        "rel_pct": 17,
+        "band": 2
+       },
+       {
+        "month": "2025-08",
+        "value": 59,
+        "d": 287,
+        "n": 169,
+        "rel_pct": 18,
+        "band": 2
+       },
+       {
+        "month": "2025-09",
+        "value": 57.5,
+        "d": 324,
+        "n": 186,
+        "rel_pct": 15,
+        "band": 2
+       },
+       {
+        "month": "2025-10",
+        "value": 61,
+        "d": 217,
+        "n": 132,
+        "rel_pct": 22,
+        "band": 2
+       },
+       {
+        "month": "2025-11",
+        "value": 61.8,
+        "d": 233,
+        "n": 144,
+        "rel_pct": 23.6,
+        "band": 2
+       },
+       {
+        "month": "2025-12",
+        "value": 61.7,
+        "d": 277,
+        "n": 171,
+        "rel_pct": 23.4,
+        "band": 2
+       },
+       {
+        "month": "2026-01",
+        "value": 64.3,
+        "d": 227,
+        "n": 146,
+        "rel_pct": 28.6,
+        "band": 3
        },
        {
         "month": "2026-02",
-        "value": 59.3,
+        "value": 63.3,
         "d": 188,
-        "n": 111,
-        "rel_pct": 18.6,
-        "band": 2
+        "n": 119,
+        "rel_pct": 26.6,
+        "band": 3
        },
        {
         "month": "2026-03",
-        "value": 57.2,
+        "value": 61.6,
         "d": 238,
-        "n": 136,
-        "rel_pct": 14.4,
+        "n": 147,
+        "rel_pct": 23.2,
         "band": 2
        },
        {
         "month": "2026-04",
-        "value": 58.3,
+        "value": 62.6,
         "d": 302,
-        "n": 176,
-        "rel_pct": 16.6,
-        "band": 2
+        "n": 189,
+        "rel_pct": 25.2,
+        "band": 3
        },
        {
         "month": "2026-05",
-        "value": 56.5,
+        "value": 60.2,
         "d": 272,
-        "n": 154,
-        "rel_pct": 13,
+        "n": 164,
+        "rel_pct": 20.4,
         "band": 2
        },
        {
         "month": "2026-06",
-        "value": 59.6,
+        "value": 62.3,
         "d": 280,
-        "n": 167,
-        "rel_pct": 19.2,
+        "n": 174,
+        "rel_pct": 24.6,
         "band": 2
        }
       ],
@@ -16461,98 +16470,98 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 11.9,
+        "value": 12,
         "d": 3047,
         "n": null,
-        "rel_pct": 50.4,
+        "rel_pct": 50,
         "band": 4
        },
        {
         "month": "2025-02",
-        "value": 12.5,
-        "d": 2924,
-        "n": null,
-        "rel_pct": 47.9,
-        "band": 3
-       },
-       {
-        "month": "2025-03",
-        "value": 12.3,
-        "d": 3249,
-        "n": null,
-        "rel_pct": 48.8,
-        "band": 3
-       },
-       {
-        "month": "2025-04",
-        "value": 12.2,
-        "d": 4063,
-        "n": null,
-        "rel_pct": 49.2,
-        "band": 3
-       },
-       {
-        "month": "2025-05",
-        "value": 12.6,
-        "d": 4232,
-        "n": null,
-        "rel_pct": 47.5,
-        "band": 3
-       },
-       {
-        "month": "2025-06",
-        "value": 12.8,
-        "d": 2755,
-        "n": null,
-        "rel_pct": 46.7,
-        "band": 3
-       },
-       {
-        "month": "2025-07",
-        "value": 12.5,
-        "d": 2819,
-        "n": null,
-        "rel_pct": 47.9,
-        "band": 3
-       },
-       {
-        "month": "2025-08",
-        "value": 12.7,
-        "d": 2980,
-        "n": null,
-        "rel_pct": 47.1,
-        "band": 3
-       },
-       {
-        "month": "2025-09",
-        "value": 12.6,
-        "d": 4337,
-        "n": null,
-        "rel_pct": 47.5,
-        "band": 3
-       },
-       {
-        "month": "2025-10",
         "value": 12.4,
-        "d": 4738,
+        "d": 2924,
         "n": null,
         "rel_pct": 48.3,
         "band": 3
        },
        {
+        "month": "2025-03",
+        "value": 12.2,
+        "d": 3249,
+        "n": null,
+        "rel_pct": 49.2,
+        "band": 3
+       },
+       {
+        "month": "2025-04",
+        "value": 12,
+        "d": 4063,
+        "n": null,
+        "rel_pct": 50,
+        "band": 4
+       },
+       {
+        "month": "2025-05",
+        "value": 12.4,
+        "d": 4232,
+        "n": null,
+        "rel_pct": 48.3,
+        "band": 3
+       },
+       {
+        "month": "2025-06",
+        "value": 12.5,
+        "d": 2755,
+        "n": null,
+        "rel_pct": 47.9,
+        "band": 3
+       },
+       {
+        "month": "2025-07",
+        "value": 12.1,
+        "d": 2819,
+        "n": null,
+        "rel_pct": 49.6,
+        "band": 3
+       },
+       {
+        "month": "2025-08",
+        "value": 12.4,
+        "d": 2980,
+        "n": null,
+        "rel_pct": 48.3,
+        "band": 3
+       },
+       {
+        "month": "2025-09",
+        "value": 12.3,
+        "d": 4337,
+        "n": null,
+        "rel_pct": 48.8,
+        "band": 3
+       },
+       {
+        "month": "2025-10",
+        "value": 12.1,
+        "d": 4738,
+        "n": null,
+        "rel_pct": 49.6,
+        "band": 3
+       },
+       {
         "month": "2025-11",
-        "value": 11.9,
+        "value": 11.7,
         "d": 3097,
         "n": null,
-        "rel_pct": 50.4,
+        "rel_pct": 51.3,
         "band": 4
        },
        {
         "month": "2025-12",
-        "value": 11.7,
+        "value": 11.6,
         "d": 4427,
         "n": null,
-        "rel_pct": 51.3,
+        "rel_pct": 51.7,
         "band": 4
        },
        {
@@ -16565,43 +16574,43 @@ window.AIECHO_REGISTRY = {
        },
        {
         "month": "2026-02",
-        "value": 11.5,
+        "value": 11.7,
         "d": 3900,
         "n": null,
-        "rel_pct": 52.1,
+        "rel_pct": 51.3,
         "band": 4
        },
        {
         "month": "2026-03",
-        "value": 12.1,
+        "value": 12.5,
         "d": 4752,
         "n": null,
-        "rel_pct": 49.6,
+        "rel_pct": 47.9,
         "band": 3
        },
        {
         "month": "2026-04",
-        "value": 11.6,
+        "value": 12,
         "d": 3814,
         "n": null,
-        "rel_pct": 51.7,
+        "rel_pct": 50,
         "band": 4
        },
        {
         "month": "2026-05",
-        "value": 11.3,
+        "value": 11.9,
         "d": 3002,
         "n": null,
-        "rel_pct": 52.9,
+        "rel_pct": 50.4,
         "band": 4
        },
        {
         "month": "2026-06",
-        "value": 12,
+        "value": 12.6,
         "d": 3087,
         "n": null,
-        "rel_pct": 50,
-        "band": 4
+        "rel_pct": 47.5,
+        "band": 3
        }
       ],
       "delta": -3.3,
@@ -16617,147 +16626,147 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 94.1,
-        "d": 2751,
-        "n": 2589,
-        "rel_pct": 4.6,
-        "band": 1
-       },
-       {
-        "month": "2025-02",
         "value": 96,
-        "d": 3872,
-        "n": 3717,
+        "d": 2751,
+        "n": 2641,
         "rel_pct": 6.7,
         "band": 1
        },
        {
+        "month": "2025-02",
+        "value": 97.1,
+        "d": 3872,
+        "n": 3760,
+        "rel_pct": 7.9,
+        "band": 1
+       },
+       {
         "month": "2025-03",
-        "value": 94.4,
+        "value": 94.6,
         "d": 3378,
-        "n": 3189,
-        "rel_pct": 4.9,
+        "n": 3196,
+        "rel_pct": 5.1,
         "band": 1
        },
        {
         "month": "2025-04",
-        "value": 93.1,
+        "value": 92.4,
         "d": 2930,
-        "n": 2728,
-        "rel_pct": 3.4,
+        "n": 2707,
+        "rel_pct": 2.7,
         "band": 1
        },
        {
         "month": "2025-05",
-        "value": 93.1,
+        "value": 91.4,
         "d": 4250,
-        "n": 3957,
-        "rel_pct": 3.4,
+        "n": 3885,
+        "rel_pct": 1.6,
         "band": 1
        },
        {
         "month": "2025-06",
-        "value": 93.5,
+        "value": 91,
         "d": 3301,
-        "n": 3086,
-        "rel_pct": 3.9,
+        "n": 3004,
+        "rel_pct": 1.1,
         "band": 1
        },
        {
         "month": "2025-07",
-        "value": 97.2,
+        "value": 94.2,
         "d": 4110,
-        "n": 3995,
-        "rel_pct": 8,
+        "n": 3872,
+        "rel_pct": 4.7,
         "band": 1
        },
        {
         "month": "2025-08",
-        "value": 95.1,
+        "value": 91.8,
         "d": 3945,
-        "n": 3752,
-        "rel_pct": 5.7,
+        "n": 3622,
+        "rel_pct": 2,
         "band": 1
        },
        {
         "month": "2025-09",
-        "value": 90.4,
+        "value": 87.1,
         "d": 3750,
-        "n": 3390,
-        "rel_pct": 0.4,
-        "band": 0
+        "n": 3266,
+        "rel_pct": -3.2,
+        "band": -1
        },
        {
         "month": "2025-10",
-        "value": 89.8,
+        "value": 86.7,
         "d": 2924,
-        "n": 2626,
-        "rel_pct": -0.2,
-        "band": 0
+        "n": 2535,
+        "rel_pct": -3.7,
+        "band": -1
        },
        {
         "month": "2025-11",
-        "value": 92.8,
+        "value": 90.3,
         "d": 4744,
-        "n": 4402,
-        "rel_pct": 3.1,
-        "band": 1
-       },
-       {
-        "month": "2025-12",
-        "value": 89.5,
-        "d": 4503,
-        "n": 4030,
-        "rel_pct": -0.6,
+        "n": 4284,
+        "rel_pct": 0.3,
         "band": 0
        },
        {
+        "month": "2025-12",
+        "value": 87.8,
+        "d": 4503,
+        "n": 3954,
+        "rel_pct": -2.4,
+        "band": -1
+       },
+       {
         "month": "2026-01",
-        "value": 90,
+        "value": 89.2,
         "d": 4217,
-        "n": 3795,
-        "rel_pct": 0,
+        "n": 3762,
+        "rel_pct": -0.9,
         "band": 0
        },
        {
         "month": "2026-02",
-        "value": 88,
+        "value": 88.3,
         "d": 2872,
-        "n": 2527,
-        "rel_pct": -2.2,
+        "n": 2536,
+        "rel_pct": -1.9,
         "band": -1
        },
        {
         "month": "2026-03",
-        "value": 88.6,
+        "value": 89.9,
         "d": 3280,
-        "n": 2906,
-        "rel_pct": -1.6,
-        "band": -1
+        "n": 2949,
+        "rel_pct": -0.1,
+        "band": 0
        },
        {
         "month": "2026-04",
-        "value": 90.8,
+        "value": 93,
         "d": 3562,
-        "n": 3234,
-        "rel_pct": 0.9,
-        "band": 0
+        "n": 3313,
+        "rel_pct": 3.3,
+        "band": 1
        },
        {
         "month": "2026-05",
-        "value": 89.7,
+        "value": 92.6,
         "d": 3326,
-        "n": 2983,
-        "rel_pct": -0.3,
-        "band": 0
+        "n": 3080,
+        "rel_pct": 2.9,
+        "band": 1
        },
        {
         "month": "2026-06",
-        "value": 89.2,
+        "value": 92.7,
         "d": 4510,
-        "n": 4023,
-        "rel_pct": -0.9,
-        "band": 0
+        "n": 4181,
+        "rel_pct": 3,
+        "band": 1
        }
       ],
       "delta": 6,
@@ -16773,147 +16782,147 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 93.5,
+        "value": 96.5,
         "d": 4160,
-        "n": 3890,
-        "rel_pct": 3.9,
+        "n": 4014,
+        "rel_pct": 7.2,
         "band": 1
        },
        {
         "month": "2025-02",
-        "value": 94,
+        "value": 95.7,
         "d": 3076,
-        "n": 2891,
-        "rel_pct": 4.4,
+        "n": 2944,
+        "rel_pct": 6.3,
         "band": 1
        },
        {
         "month": "2025-03",
-        "value": 97.3,
+        "value": 97.7,
         "d": 3505,
-        "n": 3410,
-        "rel_pct": 8.1,
+        "n": 3424,
+        "rel_pct": 8.6,
         "band": 1
        },
        {
         "month": "2025-04",
-        "value": 96.4,
-        "d": 4535,
-        "n": 4372,
-        "rel_pct": 7.1,
-        "band": 1
-       },
-       {
-        "month": "2025-05",
-        "value": 99,
-        "d": 4020,
-        "n": 3980,
-        "rel_pct": 10,
-        "band": 2
-       },
-       {
-        "month": "2025-06",
-        "value": 95.9,
-        "d": 3605,
-        "n": 3457,
-        "rel_pct": 6.6,
-        "band": 1
-       },
-       {
-        "month": "2025-07",
-        "value": 95.8,
-        "d": 2789,
-        "n": 2672,
-        "rel_pct": 6.4,
-        "band": 1
-       },
-       {
-        "month": "2025-08",
-        "value": 99,
-        "d": 4362,
-        "n": 4318,
-        "rel_pct": 10,
-        "band": 2
-       },
-       {
-        "month": "2025-09",
-        "value": 99,
-        "d": 3130,
-        "n": 3099,
-        "rel_pct": 10,
-        "band": 2
-       },
-       {
-        "month": "2025-10",
-        "value": 96.9,
-        "d": 3058,
-        "n": 2963,
-        "rel_pct": 7.7,
-        "band": 1
-       },
-       {
-        "month": "2025-11",
-        "value": 93.2,
-        "d": 3917,
-        "n": 3651,
-        "rel_pct": 3.6,
-        "band": 1
-       },
-       {
-        "month": "2025-12",
-        "value": 93.3,
-        "d": 4621,
-        "n": 4311,
-        "rel_pct": 3.7,
-        "band": 1
-       },
-       {
-        "month": "2026-01",
-        "value": 93.1,
-        "d": 2726,
-        "n": 2538,
-        "rel_pct": 3.4,
-        "band": 1
-       },
-       {
-        "month": "2026-02",
         "value": 95.4,
-        "d": 4411,
-        "n": 4208,
+        "d": 4535,
+        "n": 4326,
         "rel_pct": 6,
         "band": 1
        },
        {
+        "month": "2025-05",
+        "value": 98,
+        "d": 4020,
+        "n": 3940,
+        "rel_pct": 8.9,
+        "band": 1
+       },
+       {
+        "month": "2025-06",
+        "value": 92.7,
+        "d": 3605,
+        "n": 3342,
+        "rel_pct": 3,
+        "band": 1
+       },
+       {
+        "month": "2025-07",
+        "value": 91.8,
+        "d": 2789,
+        "n": 2560,
+        "rel_pct": 2,
+        "band": 1
+       },
+       {
+        "month": "2025-08",
+        "value": 96.5,
+        "d": 4362,
+        "n": 4209,
+        "rel_pct": 7.2,
+        "band": 1
+       },
+       {
+        "month": "2025-09",
+        "value": 94.9,
+        "d": 3130,
+        "n": 2970,
+        "rel_pct": 5.4,
+        "band": 1
+       },
+       {
+        "month": "2025-10",
+        "value": 92.8,
+        "d": 3058,
+        "n": 2838,
+        "rel_pct": 3.1,
+        "band": 1
+       },
+       {
+        "month": "2025-11",
+        "value": 89.5,
+        "d": 3917,
+        "n": 3506,
+        "rel_pct": -0.6,
+        "band": 0
+       },
+       {
+        "month": "2025-12",
+        "value": 90.4,
+        "d": 4621,
+        "n": 4177,
+        "rel_pct": 0.4,
+        "band": 0
+       },
+       {
+        "month": "2026-01",
+        "value": 91.1,
+        "d": 2726,
+        "n": 2483,
+        "rel_pct": 1.2,
+        "band": 1
+       },
+       {
+        "month": "2026-02",
+        "value": 94.3,
+        "d": 4411,
+        "n": 4160,
+        "rel_pct": 4.8,
+        "band": 1
+       },
+       {
         "month": "2026-03",
-        "value": 95.3,
+        "value": 95.1,
         "d": 3867,
-        "n": 3685,
-        "rel_pct": 5.9,
+        "n": 3678,
+        "rel_pct": 5.7,
         "band": 1
        },
        {
         "month": "2026-04",
-        "value": 94.4,
+        "value": 95.2,
         "d": 3014,
-        "n": 2845,
-        "rel_pct": 4.9,
+        "n": 2869,
+        "rel_pct": 5.8,
         "band": 1
        },
        {
         "month": "2026-05",
-        "value": 91.4,
+        "value": 92.9,
         "d": 4125,
-        "n": 3770,
-        "rel_pct": 1.6,
+        "n": 3832,
+        "rel_pct": 3.2,
         "band": 1
        },
        {
         "month": "2026-06",
-        "value": 89.6,
+        "value": 91.7,
         "d": 4781,
-        "n": 4284,
-        "rel_pct": -0.4,
-        "band": 0
+        "n": 4384,
+        "rel_pct": 1.9,
+        "band": 1
        }
       ],
       "delta": 9.7,
@@ -16929,146 +16938,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 89.2,
-        "d": 3115,
-        "n": 2779,
-        "rel_pct": 4.9,
-        "band": 1
-       },
-       {
-        "month": "2025-02",
-        "value": 88.4,
-        "d": 3418,
-        "n": 3022,
-        "rel_pct": 4,
-        "band": 1
-       },
-       {
-        "month": "2025-03",
-        "value": 93.1,
-        "d": 4617,
-        "n": 4298,
-        "rel_pct": 9.5,
-        "band": 1
-       },
-       {
-        "month": "2025-04",
-        "value": 90.7,
-        "d": 4491,
-        "n": 4073,
-        "rel_pct": 6.7,
-        "band": 1
-       },
-       {
-        "month": "2025-05",
         "value": 89.7,
-        "d": 3304,
-        "n": 2964,
+        "d": 3115,
+        "n": 2794,
         "rel_pct": 5.5,
         "band": 1
        },
        {
-        "month": "2025-06",
-        "value": 93.8,
-        "d": 4074,
-        "n": 3821,
-        "rel_pct": 10.4,
-        "band": 2
-       },
-       {
-        "month": "2025-07",
-        "value": 92.7,
-        "d": 2825,
-        "n": 2619,
-        "rel_pct": 9.1,
+        "month": "2025-02",
+        "value": 87.9,
+        "d": 3418,
+        "n": 3004,
+        "rel_pct": 3.4,
         "band": 1
        },
        {
-        "month": "2025-08",
-        "value": 89.4,
-        "d": 2952,
-        "n": 2639,
-        "rel_pct": 5.2,
+        "month": "2025-03",
+        "value": 91.5,
+        "d": 4617,
+        "n": 4225,
+        "rel_pct": 7.6,
         "band": 1
        },
        {
-        "month": "2025-09",
-        "value": 91.2,
-        "d": 3889,
-        "n": 3547,
-        "rel_pct": 7.3,
+        "month": "2025-04",
+        "value": 88.4,
+        "d": 4491,
+        "n": 3970,
+        "rel_pct": 4,
         "band": 1
        },
        {
-        "month": "2025-10",
-        "value": 85.9,
-        "d": 3203,
-        "n": 2751,
-        "rel_pct": 1.1,
-        "band": 1
-       },
-       {
-        "month": "2025-11",
-        "value": 89.2,
-        "d": 3861,
-        "n": 3444,
-        "rel_pct": 4.9,
-        "band": 1
-       },
-       {
-        "month": "2025-12",
-        "value": 86.1,
-        "d": 4100,
-        "n": 3530,
-        "rel_pct": 1.3,
-        "band": 1
-       },
-       {
-        "month": "2026-01",
-        "value": 83.6,
-        "d": 2979,
-        "n": 2490,
-        "rel_pct": -1.6,
-        "band": -1
-       },
-       {
-        "month": "2026-02",
-        "value": 87.4,
-        "d": 4498,
-        "n": 3931,
-        "rel_pct": 2.8,
-        "band": 1
-       },
-       {
-        "month": "2026-03",
+        "month": "2025-05",
         "value": 86.7,
-        "d": 2840,
-        "n": 2462,
+        "d": 3304,
+        "n": 2865,
         "rel_pct": 2,
         "band": 1
        },
        {
+        "month": "2025-06",
+        "value": 90.6,
+        "d": 4074,
+        "n": 3691,
+        "rel_pct": 6.6,
+        "band": 1
+       },
+       {
+        "month": "2025-07",
+        "value": 89.4,
+        "d": 2825,
+        "n": 2526,
+        "rel_pct": 5.2,
+        "band": 1
+       },
+       {
+        "month": "2025-08",
+        "value": 86.3,
+        "d": 2952,
+        "n": 2548,
+        "rel_pct": 1.5,
+        "band": 1
+       },
+       {
+        "month": "2025-09",
+        "value": 88.5,
+        "d": 3889,
+        "n": 3442,
+        "rel_pct": 4.1,
+        "band": 1
+       },
+       {
+        "month": "2025-10",
+        "value": 83.9,
+        "d": 3203,
+        "n": 2687,
+        "rel_pct": -1.3,
+        "band": -1
+       },
+       {
+        "month": "2025-11",
+        "value": 87.9,
+        "d": 3861,
+        "n": 3394,
+        "rel_pct": 3.4,
+        "band": 1
+       },
+       {
+        "month": "2025-12",
+        "value": 85.5,
+        "d": 4100,
+        "n": 3506,
+        "rel_pct": 0.6,
+        "band": 0
+       },
+       {
+        "month": "2026-01",
+        "value": 83.8,
+        "d": 2979,
+        "n": 2496,
+        "rel_pct": -1.4,
+        "band": -1
+       },
+       {
+        "month": "2026-02",
+        "value": 88.2,
+        "d": 4498,
+        "n": 3967,
+        "rel_pct": 3.8,
+        "band": 1
+       },
+       {
+        "month": "2026-03",
+        "value": 88.1,
+        "d": 2840,
+        "n": 2502,
+        "rel_pct": 3.6,
+        "band": 1
+       },
+       {
         "month": "2026-04",
-        "value": 87,
+        "value": 88.7,
         "d": 4613,
-        "n": 4013,
-        "rel_pct": 2.4,
+        "n": 4092,
+        "rel_pct": 4.4,
         "band": 1
        },
        {
         "month": "2026-05",
-        "value": 85.3,
+        "value": 87.2,
         "d": 3995,
-        "n": 3408,
-        "rel_pct": 0.4,
-        "band": 0
+        "n": 3484,
+        "rel_pct": 2.6,
+        "band": 1
        },
        {
         "month": "2026-06",
-        "value": 88.7,
+        "value": 90.5,
         "d": 4287,
-        "n": 3803,
-        "rel_pct": 4.4,
+        "n": 3880,
+        "rel_pct": 6.5,
         "band": 1
        }
       ],
@@ -17085,146 +17094,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 93.4,
+        "value": 89.8,
         "d": 3647,
-        "n": 3406,
-        "rel_pct": 6.1,
+        "n": 3275,
+        "rel_pct": 2,
         "band": 1
        },
        {
         "month": "2025-02",
-        "value": 91.7,
+        "value": 87.9,
         "d": 4434,
-        "n": 4066,
-        "rel_pct": 4.2,
-        "band": 1
+        "n": 3897,
+        "rel_pct": -0.1,
+        "band": 0
        },
        {
         "month": "2025-03",
-        "value": 97,
+        "value": 93.6,
         "d": 2902,
-        "n": 2815,
-        "rel_pct": 10.2,
-        "band": 2
+        "n": 2716,
+        "rel_pct": 6.4,
+        "band": 1
        },
        {
         "month": "2025-04",
-        "value": 93.3,
-        "d": 2749,
-        "n": 2565,
-        "rel_pct": 6,
-        "band": 1
-       },
-       {
-        "month": "2025-05",
-        "value": 93.5,
-        "d": 3408,
-        "n": 3186,
-        "rel_pct": 6.3,
-        "band": 1
-       },
-       {
-        "month": "2025-06",
-        "value": 92.6,
-        "d": 4183,
-        "n": 3873,
-        "rel_pct": 5.2,
-        "band": 1
-       },
-       {
-        "month": "2025-07",
-        "value": 94.6,
-        "d": 3472,
-        "n": 3285,
-        "rel_pct": 7.5,
-        "band": 1
-       },
-       {
-        "month": "2025-08",
-        "value": 96.1,
-        "d": 3414,
-        "n": 3281,
-        "rel_pct": 9.2,
-        "band": 1
-       },
-       {
-        "month": "2025-09",
-        "value": 96.9,
-        "d": 4744,
-        "n": 4597,
-        "rel_pct": 10.1,
-        "band": 2
-       },
-       {
-        "month": "2025-10",
-        "value": 90.4,
-        "d": 4233,
-        "n": 3827,
-        "rel_pct": 2.7,
-        "band": 1
-       },
-       {
-        "month": "2025-11",
-        "value": 89.2,
-        "d": 3330,
-        "n": 2970,
-        "rel_pct": 1.4,
-        "band": 1
-       },
-       {
-        "month": "2025-12",
-        "value": 94.4,
-        "d": 3376,
-        "n": 3187,
-        "rel_pct": 7.3,
-        "band": 1
-       },
-       {
-        "month": "2026-01",
-        "value": 90.7,
-        "d": 3262,
-        "n": 2959,
-        "rel_pct": 3.1,
-        "band": 1
-       },
-       {
-        "month": "2026-02",
-        "value": 92.7,
-        "d": 3551,
-        "n": 3292,
-        "rel_pct": 5.3,
-        "band": 1
-       },
-       {
-        "month": "2026-03",
-        "value": 91.4,
-        "d": 4282,
-        "n": 3914,
-        "rel_pct": 3.9,
-        "band": 1
-       },
-       {
-        "month": "2026-04",
         "value": 90.2,
-        "d": 2931,
-        "n": 2644,
+        "d": 2749,
+        "n": 2480,
         "rel_pct": 2.5,
         "band": 1
        },
        {
+        "month": "2025-05",
+        "value": 91.3,
+        "d": 3408,
+        "n": 3112,
+        "rel_pct": 3.7,
+        "band": 1
+       },
+       {
+        "month": "2025-06",
+        "value": 91.5,
+        "d": 4183,
+        "n": 3827,
+        "rel_pct": 4,
+        "band": 1
+       },
+       {
+        "month": "2025-07",
+        "value": 94.4,
+        "d": 3472,
+        "n": 3278,
+        "rel_pct": 7.3,
+        "band": 1
+       },
+       {
+        "month": "2025-08",
+        "value": 96.8,
+        "d": 3414,
+        "n": 3305,
+        "rel_pct": 10,
+        "band": 1
+       },
+       {
+        "month": "2025-09",
+        "value": 97,
+        "d": 4744,
+        "n": 4602,
+        "rel_pct": 10.2,
+        "band": 2
+       },
+       {
+        "month": "2025-10",
+        "value": 92,
+        "d": 4233,
+        "n": 3894,
+        "rel_pct": 4.5,
+        "band": 1
+       },
+       {
+        "month": "2025-11",
+        "value": 90.8,
+        "d": 3330,
+        "n": 3024,
+        "rel_pct": 3.2,
+        "band": 1
+       },
+       {
+        "month": "2025-12",
+        "value": 95.9,
+        "d": 3376,
+        "n": 3238,
+        "rel_pct": 9,
+        "band": 1
+       },
+       {
+        "month": "2026-01",
+        "value": 91.8,
+        "d": 3262,
+        "n": 2995,
+        "rel_pct": 4.3,
+        "band": 1
+       },
+       {
+        "month": "2026-02",
+        "value": 93.5,
+        "d": 3551,
+        "n": 3320,
+        "rel_pct": 6.3,
+        "band": 1
+       },
+       {
+        "month": "2026-03",
+        "value": 91.8,
+        "d": 4282,
+        "n": 3931,
+        "rel_pct": 4.3,
+        "band": 1
+       },
+       {
+        "month": "2026-04",
+        "value": 90.5,
+        "d": 2931,
+        "n": 2653,
+        "rel_pct": 2.8,
+        "band": 1
+       },
+       {
         "month": "2026-05",
-        "value": 88.1,
+        "value": 88.3,
         "d": 3133,
-        "n": 2760,
-        "rel_pct": 0.1,
+        "n": 2766,
+        "rel_pct": 0.3,
         "band": 0
        },
        {
         "month": "2026-06",
-        "value": 92.5,
+        "value": 92.8,
         "d": 4723,
-        "n": 4369,
-        "rel_pct": 5.1,
+        "n": 4383,
+        "rel_pct": 5.5,
         "band": 1
        }
       ],
@@ -17241,146 +17250,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 94.4,
+        "value": 89.6,
         "d": 426,
-        "n": 402,
-        "rel_pct": 11.1,
-        "band": 2
+        "n": 382,
+        "rel_pct": 5.4,
+        "band": 1
        },
        {
         "month": "2025-02",
-        "value": 92.8,
+        "value": 87.6,
         "d": 418,
-        "n": 388,
-        "rel_pct": 9.2,
+        "n": 366,
+        "rel_pct": 3.1,
         "band": 1
        },
        {
         "month": "2025-03",
-        "value": 90.2,
+        "value": 85,
         "d": 555,
-        "n": 501,
-        "rel_pct": 6.1,
-        "band": 1
+        "n": 472,
+        "rel_pct": 0,
+        "band": 0
        },
        {
         "month": "2025-04",
-        "value": 92.5,
+        "value": 87.8,
         "d": 609,
-        "n": 563,
-        "rel_pct": 8.8,
+        "n": 535,
+        "rel_pct": 3.3,
         "band": 1
        },
        {
         "month": "2025-05",
-        "value": 93.8,
+        "value": 90,
         "d": 581,
-        "n": 545,
-        "rel_pct": 10.4,
-        "band": 2
+        "n": 523,
+        "rel_pct": 5.9,
+        "band": 1
        },
        {
         "month": "2025-06",
-        "value": 93,
+        "value": 90.4,
         "d": 400,
-        "n": 372,
-        "rel_pct": 9.4,
+        "n": 362,
+        "rel_pct": 6.4,
         "band": 1
        },
        {
         "month": "2025-07",
-        "value": 93.6,
+        "value": 92.5,
         "d": 419,
-        "n": 392,
-        "rel_pct": 10.1,
-        "band": 2
+        "n": 388,
+        "rel_pct": 8.8,
+        "band": 1
        },
        {
         "month": "2025-08",
-        "value": 94.2,
+        "value": 94.7,
         "d": 424,
-        "n": 399,
-        "rel_pct": 10.8,
+        "n": 402,
+        "rel_pct": 11.4,
         "band": 2
        },
        {
         "month": "2025-09",
-        "value": 91.5,
+        "value": 93.4,
         "d": 614,
-        "n": 562,
-        "rel_pct": 7.6,
+        "n": 573,
+        "rel_pct": 9.9,
         "band": 1
        },
        {
         "month": "2025-10",
-        "value": 88.5,
+        "value": 91.8,
         "d": 573,
-        "n": 507,
-        "rel_pct": 4.1,
+        "n": 526,
+        "rel_pct": 8,
         "band": 1
        },
        {
         "month": "2025-11",
-        "value": 91.1,
+        "value": 95.4,
         "d": 475,
-        "n": 433,
-        "rel_pct": 7.2,
-        "band": 1
+        "n": 453,
+        "rel_pct": 12.2,
+        "band": 2
        },
        {
         "month": "2025-12",
-        "value": 86.5,
+        "value": 91.4,
         "d": 442,
-        "n": 382,
-        "rel_pct": 1.8,
+        "n": 404,
+        "rel_pct": 7.5,
         "band": 1
        },
        {
         "month": "2026-01",
-        "value": 91.5,
+        "value": 96,
         "d": 513,
-        "n": 469,
-        "rel_pct": 7.6,
-        "band": 1
+        "n": 492,
+        "rel_pct": 12.9,
+        "band": 2
        },
        {
         "month": "2026-02",
-        "value": 86.8,
+        "value": 91.6,
         "d": 504,
-        "n": 437,
-        "rel_pct": 2.1,
+        "n": 462,
+        "rel_pct": 7.8,
         "band": 1
        },
        {
         "month": "2026-03",
-        "value": 85.8,
+        "value": 89.9,
         "d": 488,
-        "n": 419,
-        "rel_pct": 0.9,
-        "band": 0
-       },
-       {
-        "month": "2026-04",
-        "value": 90.6,
-        "d": 372,
-        "n": 337,
-        "rel_pct": 6.6,
+        "n": 439,
+        "rel_pct": 5.8,
         "band": 1
        },
        {
+        "month": "2026-04",
+        "value": 93.6,
+        "d": 372,
+        "n": 348,
+        "rel_pct": 10.1,
+        "band": 2
+       },
+       {
         "month": "2026-05",
-        "value": 89.1,
+        "value": 90.9,
         "d": 402,
-        "n": 358,
-        "rel_pct": 4.8,
+        "n": 365,
+        "rel_pct": 6.9,
         "band": 1
        },
        {
         "month": "2026-06",
-        "value": 87.3,
+        "value": 87.6,
         "d": 559,
-        "n": 488,
-        "rel_pct": 2.7,
+        "n": 490,
+        "rel_pct": 3.1,
         "band": 1
        }
       ],
@@ -17397,147 +17406,147 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 87.5,
+        "value": 84.9,
         "d": 435,
-        "n": 381,
-        "rel_pct": 9.4,
+        "n": 369,
+        "rel_pct": 6.1,
         "band": 1
        },
        {
         "month": "2025-02",
-        "value": 91.7,
+        "value": 88.3,
         "d": 525,
-        "n": 481,
-        "rel_pct": 14.6,
+        "n": 464,
+        "rel_pct": 10.4,
         "band": 2
        },
        {
         "month": "2025-03",
-        "value": 91.1,
+        "value": 87.2,
         "d": 304,
-        "n": 277,
-        "rel_pct": 13.9,
-        "band": 2
+        "n": 265,
+        "rel_pct": 9,
+        "band": 1
        },
        {
         "month": "2025-04",
-        "value": 89.2,
+        "value": 85.2,
         "d": 298,
-        "n": 266,
-        "rel_pct": 11.5,
-        "band": 2
+        "n": 254,
+        "rel_pct": 6.5,
+        "band": 1
        },
        {
         "month": "2025-05",
-        "value": 89.7,
+        "value": 85.8,
         "d": 404,
-        "n": 362,
-        "rel_pct": 12.1,
-        "band": 2
+        "n": 347,
+        "rel_pct": 7.2,
+        "band": 1
        },
        {
         "month": "2025-06",
-        "value": 92.5,
-        "d": 428,
-        "n": 396,
-        "rel_pct": 15.6,
-        "band": 2
-       },
-       {
-        "month": "2025-07",
-        "value": 91.4,
-        "d": 506,
-        "n": 462,
-        "rel_pct": 14.3,
-        "band": 2
-       },
-       {
-        "month": "2025-08",
         "value": 89,
-        "d": 373,
-        "n": 332,
+        "d": 428,
+        "n": 381,
         "rel_pct": 11.3,
         "band": 2
        },
        {
+        "month": "2025-07",
+        "value": 88.7,
+        "d": 506,
+        "n": 449,
+        "rel_pct": 10.9,
+        "band": 2
+       },
+       {
+        "month": "2025-08",
+        "value": 87.2,
+        "d": 373,
+        "n": 325,
+        "rel_pct": 9,
+        "band": 1
+       },
+       {
         "month": "2025-09",
-        "value": 88.8,
+        "value": 88.2,
         "d": 426,
-        "n": 378,
-        "rel_pct": 11,
+        "n": 376,
+        "rel_pct": 10.3,
         "band": 2
        },
        {
         "month": "2025-10",
-        "value": 89.6,
+        "value": 90.2,
         "d": 313,
-        "n": 280,
-        "rel_pct": 12,
+        "n": 282,
+        "rel_pct": 12.8,
         "band": 2
        },
        {
         "month": "2025-11",
-        "value": 85.4,
+        "value": 87.1,
         "d": 357,
-        "n": 305,
-        "rel_pct": 6.8,
+        "n": 311,
+        "rel_pct": 8.9,
         "band": 1
        },
        {
         "month": "2025-12",
-        "value": 86.3,
+        "value": 89.1,
         "d": 325,
-        "n": 280,
-        "rel_pct": 7.9,
-        "band": 1
+        "n": 290,
+        "rel_pct": 11.4,
+        "band": 2
        },
        {
         "month": "2026-01",
-        "value": 86.6,
+        "value": 90.3,
         "d": 436,
-        "n": 378,
-        "rel_pct": 8.2,
-        "band": 1
+        "n": 394,
+        "rel_pct": 12.9,
+        "band": 2
        },
        {
         "month": "2026-02",
-        "value": 84,
+        "value": 88.2,
         "d": 468,
-        "n": 393,
-        "rel_pct": 5,
-        "band": 1
+        "n": 413,
+        "rel_pct": 10.3,
+        "band": 2
        },
        {
         "month": "2026-03",
-        "value": 81.4,
+        "value": 85.9,
         "d": 398,
-        "n": 324,
-        "rel_pct": 1.8,
+        "n": 342,
+        "rel_pct": 7.4,
         "band": 1
        },
        {
         "month": "2026-04",
-        "value": 83.6,
+        "value": 88,
         "d": 337,
-        "n": 282,
-        "rel_pct": 4.5,
-        "band": 1
+        "n": 297,
+        "rel_pct": 10,
+        "band": 2
        },
        {
         "month": "2026-05",
-        "value": 84,
+        "value": 88,
         "d": 299,
-        "n": 251,
-        "rel_pct": 5,
-        "band": 1
+        "n": 263,
+        "rel_pct": 10,
+        "band": 2
        },
        {
         "month": "2026-06",
-        "value": 85.1,
+        "value": 88.3,
         "d": 447,
-        "n": 380,
-        "rel_pct": 6.4,
-        "band": 1
+        "n": 395,
+        "rel_pct": 10.4,
+        "band": 2
        }
       ],
       "delta": 14.4,
@@ -17553,147 +17562,147 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 88.1,
+        "value": 84.4,
         "d": 1093,
-        "n": 963,
-        "rel_pct": -2.1,
+        "n": 922,
+        "rel_pct": -6.2,
         "band": -1
        },
        {
         "month": "2025-02",
-        "value": 87.4,
+        "value": 82.9,
         "d": 1917,
-        "n": 1675,
-        "rel_pct": -2.9,
+        "n": 1589,
+        "rel_pct": -7.9,
         "band": -1
        },
        {
         "month": "2025-03",
-        "value": 87.5,
+        "value": 82.5,
         "d": 1829,
-        "n": 1600,
-        "rel_pct": -2.8,
+        "n": 1509,
+        "rel_pct": -8.3,
         "band": -1
        },
        {
         "month": "2025-04",
-        "value": 91.5,
+        "value": 86.3,
         "d": 1375,
-        "n": 1258,
-        "rel_pct": 1.7,
-        "band": 1
-       },
-       {
-        "month": "2025-05",
-        "value": 89.4,
-        "d": 1515,
-        "n": 1354,
-        "rel_pct": -0.7,
-        "band": 0
-       },
-       {
-        "month": "2025-06",
-        "value": 89.9,
-        "d": 1408,
-        "n": 1266,
-        "rel_pct": -0.1,
-        "band": 0
-       },
-       {
-        "month": "2025-07",
-        "value": 90.1,
-        "d": 1690,
-        "n": 1523,
-        "rel_pct": 0.1,
-        "band": 0
-       },
-       {
-        "month": "2025-08",
-        "value": 91.5,
-        "d": 1645,
-        "n": 1505,
-        "rel_pct": 1.7,
-        "band": 1
-       },
-       {
-        "month": "2025-09",
-        "value": 89.7,
-        "d": 1293,
-        "n": 1160,
-        "rel_pct": -0.3,
-        "band": 0
-       },
-       {
-        "month": "2025-10",
-        "value": 87.1,
-        "d": 1458,
-        "n": 1270,
-        "rel_pct": -3.2,
+        "n": 1187,
+        "rel_pct": -4.1,
         "band": -1
        },
        {
-        "month": "2025-11",
+        "month": "2025-05",
+        "value": 84.4,
+        "d": 1515,
+        "n": 1279,
+        "rel_pct": -6.2,
+        "band": -1
+       },
+       {
+        "month": "2025-06",
+        "value": 85.5,
+        "d": 1408,
+        "n": 1204,
+        "rel_pct": -5,
+        "band": -1
+       },
+       {
+        "month": "2025-07",
+        "value": 86.5,
+        "d": 1690,
+        "n": 1462,
+        "rel_pct": -3.9,
+        "band": -1
+       },
+       {
+        "month": "2025-08",
+        "value": 89,
+        "d": 1645,
+        "n": 1464,
+        "rel_pct": -1.1,
+        "band": -1
+       },
+       {
+        "month": "2025-09",
+        "value": 88.5,
+        "d": 1293,
+        "n": 1144,
+        "rel_pct": -1.7,
+        "band": -1
+       },
+       {
+        "month": "2025-10",
         "value": 87.3,
-        "d": 1151,
-        "n": 1005,
+        "d": 1458,
+        "n": 1273,
         "rel_pct": -3,
         "band": -1
        },
        {
-        "month": "2025-12",
-        "value": 86.5,
-        "d": 1529,
-        "n": 1323,
-        "rel_pct": -3.9,
+        "month": "2025-11",
+        "value": 89,
+        "d": 1151,
+        "n": 1024,
+        "rel_pct": -1.1,
         "band": -1
+       },
+       {
+        "month": "2025-12",
+        "value": 89.6,
+        "d": 1529,
+        "n": 1370,
+        "rel_pct": -0.4,
+        "band": 0
        },
        {
         "month": "2026-01",
-        "value": 87,
+        "value": 91.3,
         "d": 1168,
-        "n": 1016,
-        "rel_pct": -3.3,
-        "band": -1
+        "n": 1066,
+        "rel_pct": 1.4,
+        "band": 1
        },
        {
         "month": "2026-02",
-        "value": 85.7,
+        "value": 90.8,
         "d": 1159,
-        "n": 993,
-        "rel_pct": -4.8,
-        "band": -1
+        "n": 1052,
+        "rel_pct": 0.9,
+        "band": 0
        },
        {
         "month": "2026-03",
-        "value": 85,
+        "value": 90.7,
         "d": 1328,
-        "n": 1129,
-        "rel_pct": -5.6,
-        "band": -1
+        "n": 1204,
+        "rel_pct": 0.8,
+        "band": 0
        },
        {
         "month": "2026-04",
-        "value": 86.5,
+        "value": 92.4,
         "d": 1521,
-        "n": 1316,
-        "rel_pct": -3.9,
-        "band": -1
+        "n": 1405,
+        "rel_pct": 2.7,
+        "band": 1
        },
        {
         "month": "2026-05",
-        "value": 86.1,
+        "value": 91.8,
         "d": 1850,
-        "n": 1593,
-        "rel_pct": -4.3,
-        "band": -1
+        "n": 1698,
+        "rel_pct": 2,
+        "band": 1
        },
        {
         "month": "2026-06",
-        "value": 84.3,
+        "value": 89.4,
         "d": 1225,
-        "n": 1033,
-        "rel_pct": -6.3,
-        "band": -1
+        "n": 1095,
+        "rel_pct": -0.7,
+        "band": 0
        }
       ],
       "delta": 5.3,
@@ -17709,146 +17718,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 68,
+        "value": 66.8,
         "d": 212,
-        "n": 144,
-        "rel_pct": 36,
+        "n": 142,
+        "rel_pct": 33.6,
         "band": 3
        },
        {
         "month": "2025-02",
-        "value": 69.2,
+        "value": 66.3,
         "d": 292,
-        "n": 202,
-        "rel_pct": 38.4,
+        "n": 194,
+        "rel_pct": 32.6,
         "band": 3
        },
        {
         "month": "2025-03",
-        "value": 69.4,
+        "value": 65.1,
         "d": 206,
-        "n": 143,
-        "rel_pct": 38.8,
+        "n": 134,
+        "rel_pct": 30.2,
         "band": 3
        },
        {
         "month": "2025-04",
-        "value": 73.1,
+        "value": 67.9,
         "d": 305,
-        "n": 223,
-        "rel_pct": 46.2,
+        "n": 207,
+        "rel_pct": 35.8,
         "band": 3
        },
        {
         "month": "2025-05",
-        "value": 71.6,
+        "value": 66.2,
         "d": 314,
-        "n": 225,
-        "rel_pct": 43.2,
+        "n": 208,
+        "rel_pct": 32.4,
         "band": 3
        },
        {
         "month": "2025-06",
-        "value": 70.2,
+        "value": 65.1,
         "d": 190,
-        "n": 133,
-        "rel_pct": 40.4,
+        "n": 124,
+        "rel_pct": 30.2,
         "band": 3
        },
        {
         "month": "2025-07",
-        "value": 69.5,
+        "value": 65.5,
         "d": 213,
-        "n": 148,
-        "rel_pct": 39,
+        "n": 140,
+        "rel_pct": 31,
         "band": 3
        },
        {
         "month": "2025-08",
-        "value": 72.8,
-        "d": 326,
-        "n": 237,
-        "rel_pct": 45.6,
-        "band": 3
-       },
-       {
-        "month": "2025-09",
-        "value": 69.8,
-        "d": 222,
-        "n": 155,
-        "rel_pct": 39.6,
-        "band": 3
-       },
-       {
-        "month": "2025-10",
-        "value": 72.3,
-        "d": 219,
-        "n": 158,
-        "rel_pct": 44.6,
-        "band": 3
-       },
-       {
-        "month": "2025-11",
-        "value": 69.6,
-        "d": 235,
-        "n": 164,
-        "rel_pct": 39.2,
-        "band": 3
-       },
-       {
-        "month": "2025-12",
         "value": 70.1,
-        "d": 274,
-        "n": 192,
+        "d": 326,
+        "n": 229,
         "rel_pct": 40.2,
         "band": 3
        },
        {
+        "month": "2025-09",
+        "value": 68.9,
+        "d": 222,
+        "n": 153,
+        "rel_pct": 37.8,
+        "band": 3
+       },
+       {
+        "month": "2025-10",
+        "value": 73.2,
+        "d": 219,
+        "n": 160,
+        "rel_pct": 46.4,
+        "band": 3
+       },
+       {
+        "month": "2025-11",
+        "value": 72.2,
+        "d": 235,
+        "n": 170,
+        "rel_pct": 44.4,
+        "band": 3
+       },
+       {
+        "month": "2025-12",
+        "value": 73.9,
+        "d": 274,
+        "n": 202,
+        "rel_pct": 47.8,
+        "band": 3
+       },
+       {
         "month": "2026-01",
-        "value": 67.5,
+        "value": 72.1,
         "d": 199,
-        "n": 134,
-        "rel_pct": 35,
+        "n": 143,
+        "rel_pct": 44.2,
         "band": 3
        },
        {
         "month": "2026-02",
-        "value": 65.8,
+        "value": 70.5,
         "d": 196,
-        "n": 129,
-        "rel_pct": 31.6,
+        "n": 138,
+        "rel_pct": 41,
         "band": 3
        },
        {
         "month": "2026-03",
-        "value": 67.8,
+        "value": 72.2,
         "d": 292,
-        "n": 198,
-        "rel_pct": 35.6,
+        "n": 211,
+        "rel_pct": 44.4,
         "band": 3
        },
        {
         "month": "2026-04",
-        "value": 66.1,
+        "value": 69.6,
         "d": 268,
-        "n": 177,
-        "rel_pct": 32.2,
+        "n": 187,
+        "rel_pct": 39.2,
         "band": 3
        },
        {
         "month": "2026-05",
-        "value": 67.5,
+        "value": 69.8,
         "d": 242,
-        "n": 163,
-        "rel_pct": 35,
+        "n": 169,
+        "rel_pct": 39.6,
         "band": 3
        },
        {
         "month": "2026-06",
-        "value": 69.6,
+        "value": 70.4,
         "d": 303,
-        "n": 211,
-        "rel_pct": 39.2,
+        "n": 213,
+        "rel_pct": 40.8,
         "band": 3
        }
       ],
@@ -17900,74 +17909,74 @@ window.AIECHO_REGISTRY = {
        },
        {
         "month": "2025-02",
-        "value": 14.3,
+        "value": 14.2,
         "d": 2348,
         "n": null,
-        "rel_pct": 40.4,
+        "rel_pct": 40.8,
         "band": 3
        },
        {
         "month": "2025-03",
-        "value": 14.5,
+        "value": 14.3,
         "d": 2536,
         "n": null,
-        "rel_pct": 39.6,
+        "rel_pct": 40.4,
         "band": 3
        },
        {
         "month": "2025-04",
-        "value": 14.6,
+        "value": 14.3,
         "d": 3524,
         "n": null,
-        "rel_pct": 39.2,
+        "rel_pct": 40.4,
         "band": 3
        },
        {
         "month": "2025-05",
-        "value": 14.3,
-        "d": 3341,
-        "n": null,
-        "rel_pct": 40.4,
-        "band": 3
-       },
-       {
-        "month": "2025-06",
-        "value": 14.3,
-        "d": 2349,
-        "n": null,
-        "rel_pct": 40.4,
-        "band": 3
-       },
-       {
-        "month": "2025-07",
-        "value": 14.5,
-        "d": 2382,
-        "n": null,
-        "rel_pct": 39.6,
-        "band": 3
-       },
-       {
-        "month": "2025-08",
         "value": 13.9,
-        "d": 3423,
+        "d": 3341,
         "n": null,
         "rel_pct": 42.1,
         "band": 3
        },
        {
+        "month": "2025-06",
+        "value": 13.8,
+        "d": 2349,
+        "n": null,
+        "rel_pct": 42.5,
+        "band": 3
+       },
+       {
+        "month": "2025-07",
+        "value": 14,
+        "d": 2382,
+        "n": null,
+        "rel_pct": 41.7,
+        "band": 3
+       },
+       {
+        "month": "2025-08",
+        "value": 13.5,
+        "d": 3423,
+        "n": null,
+        "rel_pct": 43.8,
+        "band": 3
+       },
+       {
         "month": "2025-09",
-        "value": 14.3,
+        "value": 13.9,
         "d": 3309,
         "n": null,
-        "rel_pct": 40.4,
+        "rel_pct": 42.1,
         "band": 3
        },
        {
         "month": "2025-10",
-        "value": 14,
+        "value": 13.8,
         "d": 2926,
         "n": null,
-        "rel_pct": 41.7,
+        "rel_pct": 42.5,
         "band": 3
        },
        {
@@ -17980,58 +17989,58 @@ window.AIECHO_REGISTRY = {
        },
        {
         "month": "2025-12",
-        "value": 13.6,
+        "value": 13.8,
         "d": 3937,
         "n": null,
-        "rel_pct": 43.3,
+        "rel_pct": 42.5,
         "band": 3
        },
        {
         "month": "2026-01",
-        "value": 13.7,
+        "value": 14,
         "d": 3353,
         "n": null,
-        "rel_pct": 42.9,
+        "rel_pct": 41.7,
         "band": 3
        },
        {
         "month": "2026-02",
-        "value": 13.3,
+        "value": 13.8,
         "d": 3524,
         "n": null,
-        "rel_pct": 44.6,
+        "rel_pct": 42.5,
         "band": 3
        },
        {
         "month": "2026-03",
-        "value": 13.6,
+        "value": 14.2,
         "d": 2894,
         "n": null,
-        "rel_pct": 43.3,
+        "rel_pct": 40.8,
         "band": 3
        },
        {
         "month": "2026-04",
-        "value": 13.5,
+        "value": 14.2,
         "d": 3409,
         "n": null,
-        "rel_pct": 43.8,
+        "rel_pct": 40.8,
         "band": 3
        },
        {
         "month": "2026-05",
-        "value": 13.6,
+        "value": 14.2,
         "d": 3786,
         "n": null,
-        "rel_pct": 43.3,
+        "rel_pct": 40.8,
         "band": 3
        },
        {
         "month": "2026-06",
-        "value": 13.3,
+        "value": 13.9,
         "d": 3314,
         "n": null,
-        "rel_pct": 44.6,
+        "rel_pct": 42.1,
         "band": 3
        }
       ],
@@ -18048,146 +18057,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 83.7,
+        "value": 84.6,
         "d": 2731,
-        "n": 2286,
-        "rel_pct": -7,
+        "n": 2310,
+        "rel_pct": -6,
         "band": -1
        },
        {
         "month": "2025-02",
-        "value": 89.3,
+        "value": 89.2,
         "d": 2584,
-        "n": 2308,
-        "rel_pct": -0.8,
+        "n": 2305,
+        "rel_pct": -0.9,
         "band": 0
        },
        {
         "month": "2025-03",
-        "value": 84.8,
-        "d": 2658,
-        "n": 2254,
-        "rel_pct": -5.8,
-        "band": -1
-       },
-       {
-        "month": "2025-04",
-        "value": 89.9,
-        "d": 3060,
-        "n": 2751,
-        "rel_pct": -0.1,
-        "band": 0
-       },
-       {
-        "month": "2025-05",
-        "value": 87.9,
-        "d": 2552,
-        "n": 2243,
-        "rel_pct": -2.3,
-        "band": -1
-       },
-       {
-        "month": "2025-06",
-        "value": 90.3,
-        "d": 3934,
-        "n": 3552,
-        "rel_pct": 0.3,
-        "band": 0
-       },
-       {
-        "month": "2025-07",
-        "value": 88.5,
-        "d": 3329,
-        "n": 2946,
-        "rel_pct": -1.7,
-        "band": -1
-       },
-       {
-        "month": "2025-08",
-        "value": 85.2,
-        "d": 2964,
-        "n": 2525,
-        "rel_pct": -5.3,
-        "band": -1
-       },
-       {
-        "month": "2025-09",
-        "value": 88.2,
-        "d": 3819,
-        "n": 3368,
-        "rel_pct": -2,
-        "band": -1
-       },
-       {
-        "month": "2025-10",
         "value": 83.7,
-        "d": 3977,
-        "n": 3329,
+        "d": 2658,
+        "n": 2225,
         "rel_pct": -7,
         "band": -1
        },
        {
-        "month": "2025-11",
-        "value": 85.1,
-        "d": 3783,
-        "n": 3219,
-        "rel_pct": -5.4,
+        "month": "2025-04",
+        "value": 87.8,
+        "d": 3060,
+        "n": 2687,
+        "rel_pct": -2.4,
         "band": -1
        },
        {
-        "month": "2025-12",
-        "value": 83.5,
-        "d": 2913,
-        "n": 2432,
-        "rel_pct": -7.2,
+        "month": "2025-05",
+        "value": 85,
+        "d": 2552,
+        "n": 2169,
+        "rel_pct": -5.6,
         "band": -1
        },
        {
-        "month": "2026-01",
-        "value": 81.5,
-        "d": 3770,
-        "n": 3073,
-        "rel_pct": -9.4,
+        "month": "2025-06",
+        "value": 86.9,
+        "d": 3934,
+        "n": 3419,
+        "rel_pct": -3.4,
         "band": -1
        },
        {
-        "month": "2026-02",
-        "value": 83,
-        "d": 2665,
-        "n": 2212,
-        "rel_pct": -7.8,
-        "band": -1
-       },
-       {
-        "month": "2026-03",
-        "value": 79.4,
-        "d": 3652,
-        "n": 2900,
-        "rel_pct": -11.8,
-        "band": -2
-       },
-       {
-        "month": "2026-04",
+        "month": "2025-07",
         "value": 84.9,
-        "d": 3533,
-        "n": 3000,
+        "d": 3329,
+        "n": 2826,
         "rel_pct": -5.7,
         "band": -1
        },
        {
+        "month": "2025-08",
+        "value": 81.7,
+        "d": 2964,
+        "n": 2422,
+        "rel_pct": -9.2,
+        "band": -1
+       },
+       {
+        "month": "2025-09",
+        "value": 85,
+        "d": 3819,
+        "n": 3246,
+        "rel_pct": -5.6,
+        "band": -1
+       },
+       {
+        "month": "2025-10",
+        "value": 81.3,
+        "d": 3977,
+        "n": 3233,
+        "rel_pct": -9.7,
+        "band": -1
+       },
+       {
+        "month": "2025-11",
+        "value": 83.5,
+        "d": 3783,
+        "n": 3159,
+        "rel_pct": -7.2,
+        "band": -1
+       },
+       {
+        "month": "2025-12",
+        "value": 83,
+        "d": 2913,
+        "n": 2418,
+        "rel_pct": -7.8,
+        "band": -1
+       },
+       {
+        "month": "2026-01",
+        "value": 82.1,
+        "d": 3770,
+        "n": 3095,
+        "rel_pct": -8.8,
+        "band": -1
+       },
+       {
+        "month": "2026-02",
+        "value": 84.7,
+        "d": 2665,
+        "n": 2257,
+        "rel_pct": -5.9,
+        "band": -1
+       },
+       {
+        "month": "2026-03",
+        "value": 82,
+        "d": 3652,
+        "n": 2995,
+        "rel_pct": -8.9,
+        "band": -1
+       },
+       {
+        "month": "2026-04",
+        "value": 88.2,
+        "d": 3533,
+        "n": 3116,
+        "rel_pct": -2,
+        "band": -1
+       },
+       {
         "month": "2026-05",
-        "value": 82.6,
+        "value": 86.3,
         "d": 3068,
-        "n": 2534,
-        "rel_pct": -8.2,
+        "n": 2648,
+        "rel_pct": -4.1,
         "band": -1
        },
        {
         "month": "2026-06",
-        "value": 83,
+        "value": 86.9,
         "d": 2940,
-        "n": 2440,
-        "rel_pct": -7.8,
+        "n": 2555,
+        "rel_pct": -3.4,
         "band": -1
        }
       ],
@@ -18204,146 +18213,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 84.3,
+        "value": 85.5,
         "d": 3520,
-        "n": 2967,
-        "rel_pct": -6.3,
+        "n": 3010,
+        "rel_pct": -5,
         "band": -1
        },
        {
         "month": "2025-02",
-        "value": 84.3,
+        "value": 84.1,
         "d": 3553,
-        "n": 2995,
-        "rel_pct": -6.3,
+        "n": 2988,
+        "rel_pct": -6.6,
         "band": -1
        },
        {
         "month": "2025-03",
-        "value": 88.2,
+        "value": 86.7,
         "d": 3955,
-        "n": 3488,
-        "rel_pct": -2,
+        "n": 3429,
+        "rel_pct": -3.7,
         "band": -1
        },
        {
         "month": "2025-04",
-        "value": 85,
+        "value": 82.4,
         "d": 2373,
-        "n": 2017,
-        "rel_pct": -5.6,
+        "n": 1955,
+        "rel_pct": -8.4,
         "band": -1
        },
        {
         "month": "2025-05",
-        "value": 90.1,
+        "value": 86.6,
         "d": 3635,
-        "n": 3275,
-        "rel_pct": 0.1,
-        "band": 0
+        "n": 3148,
+        "rel_pct": -3.8,
+        "band": -1
        },
        {
         "month": "2025-06",
-        "value": 89.8,
+        "value": 85.7,
         "d": 2623,
-        "n": 2355,
-        "rel_pct": -0.2,
-        "band": 0
+        "n": 2248,
+        "rel_pct": -4.8,
+        "band": -1
        },
        {
         "month": "2025-07",
-        "value": 85.5,
+        "value": 81.2,
         "d": 3883,
-        "n": 3320,
-        "rel_pct": -5,
+        "n": 3153,
+        "rel_pct": -9.8,
         "band": -1
        },
        {
         "month": "2025-08",
-        "value": 88.5,
+        "value": 84.2,
         "d": 3328,
-        "n": 2945,
-        "rel_pct": -1.7,
+        "n": 2802,
+        "rel_pct": -6.4,
         "band": -1
        },
        {
         "month": "2025-09",
-        "value": 86.4,
+        "value": 82.4,
         "d": 3027,
-        "n": 2615,
-        "rel_pct": -4,
+        "n": 2494,
+        "rel_pct": -8.4,
         "band": -1
        },
        {
         "month": "2025-10",
-        "value": 83.3,
+        "value": 79.9,
         "d": 2655,
-        "n": 2212,
-        "rel_pct": -7.4,
-        "band": -1
+        "n": 2121,
+        "rel_pct": -11.2,
+        "band": -2
        },
        {
         "month": "2025-11",
-        "value": 85.1,
+        "value": 82.5,
         "d": 3072,
-        "n": 2614,
-        "rel_pct": -5.4,
+        "n": 2534,
+        "rel_pct": -8.3,
         "band": -1
        },
        {
         "month": "2025-12",
-        "value": 82,
+        "value": 80.4,
         "d": 2948,
-        "n": 2417,
-        "rel_pct": -8.9,
-        "band": -1
+        "n": 2370,
+        "rel_pct": -10.7,
+        "band": -2
        },
        {
         "month": "2026-01",
-        "value": 83.8,
+        "value": 83.1,
         "d": 2493,
-        "n": 2089,
-        "rel_pct": -6.9,
+        "n": 2072,
+        "rel_pct": -7.7,
         "band": -1
        },
        {
         "month": "2026-02",
-        "value": 80.9,
+        "value": 81.2,
         "d": 2575,
-        "n": 2083,
-        "rel_pct": -10.1,
-        "band": -2
+        "n": 2091,
+        "rel_pct": -9.8,
+        "band": -1
        },
        {
         "month": "2026-03",
-        "value": 79,
+        "value": 80.2,
         "d": 2806,
-        "n": 2217,
-        "rel_pct": -12.2,
+        "n": 2250,
+        "rel_pct": -10.9,
         "band": -2
        },
        {
         "month": "2026-04",
-        "value": 78.9,
+        "value": 80.9,
         "d": 3034,
-        "n": 2394,
-        "rel_pct": -12.3,
+        "n": 2455,
+        "rel_pct": -10.1,
         "band": -2
        },
        {
         "month": "2026-05",
-        "value": 81.8,
+        "value": 84.4,
         "d": 3988,
-        "n": 3262,
-        "rel_pct": -9.1,
+        "n": 3366,
+        "rel_pct": -6.2,
         "band": -1
        },
        {
         "month": "2026-06",
-        "value": 85.5,
+        "value": 88.3,
         "d": 2647,
-        "n": 2263,
-        "rel_pct": -5,
+        "n": 2337,
+        "rel_pct": -1.9,
         "band": -1
        }
       ],
@@ -18360,146 +18369,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 75.2,
+        "value": 74.5,
         "d": 2968,
-        "n": 2232,
-        "rel_pct": -11.5,
+        "n": 2211,
+        "rel_pct": -12.4,
         "band": -2
        },
        {
         "month": "2025-02",
-        "value": 76.3,
+        "value": 74.8,
         "d": 2733,
-        "n": 2085,
-        "rel_pct": -10.2,
+        "n": 2044,
+        "rel_pct": -12,
         "band": -2
        },
        {
         "month": "2025-03",
-        "value": 76.7,
+        "value": 74.5,
         "d": 2589,
-        "n": 1986,
-        "rel_pct": -9.8,
-        "band": -1
+        "n": 1929,
+        "rel_pct": -12.4,
+        "band": -2
        },
        {
         "month": "2025-04",
-        "value": 79.5,
+        "value": 76.8,
         "d": 3115,
-        "n": 2476,
-        "rel_pct": -6.5,
+        "n": 2392,
+        "rel_pct": -9.6,
         "band": -1
        },
        {
         "month": "2025-05",
-        "value": 78.4,
+        "value": 75.4,
         "d": 3575,
-        "n": 2803,
-        "rel_pct": -7.8,
-        "band": -1
+        "n": 2696,
+        "rel_pct": -11.3,
+        "band": -2
        },
        {
         "month": "2025-06",
-        "value": 78.5,
+        "value": 75.4,
         "d": 2702,
-        "n": 2121,
-        "rel_pct": -7.6,
-        "band": -1
+        "n": 2037,
+        "rel_pct": -11.3,
+        "band": -2
        },
        {
         "month": "2025-07",
-        "value": 77.3,
+        "value": 74.4,
         "d": 2951,
-        "n": 2281,
-        "rel_pct": -9.1,
-        "band": -1
+        "n": 2196,
+        "rel_pct": -12.5,
+        "band": -2
        },
        {
         "month": "2025-08",
-        "value": 78.2,
+        "value": 75.8,
         "d": 2641,
-        "n": 2065,
-        "rel_pct": -8,
-        "band": -1
+        "n": 2002,
+        "rel_pct": -10.8,
+        "band": -2
        },
        {
         "month": "2025-09",
-        "value": 77.2,
+        "value": 75.3,
         "d": 3874,
-        "n": 2991,
-        "rel_pct": -9.2,
-        "band": -1
+        "n": 2917,
+        "rel_pct": -11.4,
+        "band": -2
        },
        {
         "month": "2025-10",
-        "value": 77.8,
+        "value": 76.6,
         "d": 2582,
-        "n": 2009,
-        "rel_pct": -8.5,
+        "n": 1978,
+        "rel_pct": -9.9,
         "band": -1
        },
        {
         "month": "2025-11",
-        "value": 77.1,
+        "value": 76.6,
         "d": 3899,
-        "n": 3006,
-        "rel_pct": -9.3,
+        "n": 2987,
+        "rel_pct": -9.9,
         "band": -1
        },
        {
         "month": "2025-12",
-        "value": 75.1,
+        "value": 75.3,
         "d": 3509,
-        "n": 2635,
-        "rel_pct": -11.6,
+        "n": 2642,
+        "rel_pct": -11.4,
         "band": -2
        },
        {
         "month": "2026-01",
-        "value": 72.4,
+        "value": 73.2,
         "d": 3694,
-        "n": 2674,
-        "rel_pct": -14.8,
+        "n": 2704,
+        "rel_pct": -13.9,
         "band": -2
        },
        {
         "month": "2026-02",
-        "value": 72,
+        "value": 73.3,
         "d": 3642,
-        "n": 2622,
-        "rel_pct": -15.3,
+        "n": 2670,
+        "rel_pct": -13.8,
         "band": -2
        },
        {
         "month": "2026-03",
-        "value": 75.1,
+        "value": 76.8,
         "d": 2845,
-        "n": 2137,
-        "rel_pct": -11.6,
-        "band": -2
+        "n": 2185,
+        "rel_pct": -9.6,
+        "band": -1
        },
        {
         "month": "2026-04",
-        "value": 75.5,
+        "value": 77.3,
         "d": 2417,
-        "n": 1825,
-        "rel_pct": -11.2,
-        "band": -2
+        "n": 1868,
+        "rel_pct": -9.1,
+        "band": -1
        },
        {
         "month": "2026-05",
-        "value": 71.9,
+        "value": 73.6,
         "d": 3671,
-        "n": 2639,
-        "rel_pct": -15.4,
+        "n": 2702,
+        "rel_pct": -13.4,
         "band": -2
        },
        {
         "month": "2026-06",
-        "value": 75,
+        "value": 76.5,
         "d": 2958,
-        "n": 2219,
-        "rel_pct": -11.8,
+        "n": 2263,
+        "rel_pct": -10,
         "band": -2
        }
       ],
@@ -18516,43 +18525,43 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 88.2,
+        "value": 85.2,
         "d": 2588,
-        "n": 2283,
-        "rel_pct": 0.2,
-        "band": 0
+        "n": 2205,
+        "rel_pct": -3.2,
+        "band": -1
        },
        {
         "month": "2025-02",
-        "value": 86,
+        "value": 83.4,
         "d": 2912,
-        "n": 2504,
-        "rel_pct": -2.3,
+        "n": 2429,
+        "rel_pct": -5.2,
         "band": -1
        },
        {
         "month": "2025-03",
-        "value": 87,
+        "value": 84.9,
         "d": 4069,
-        "n": 3540,
-        "rel_pct": -1.1,
+        "n": 3455,
+        "rel_pct": -3.5,
         "band": -1
        },
        {
         "month": "2025-04",
-        "value": 91,
+        "value": 89.6,
         "d": 2844,
-        "n": 2588,
-        "rel_pct": 3.4,
+        "n": 2548,
+        "rel_pct": 1.8,
         "band": 1
        },
        {
         "month": "2025-05",
-        "value": 87.4,
+        "value": 86.8,
         "d": 2605,
-        "n": 2277,
-        "rel_pct": -0.7,
-        "band": 0
+        "n": 2261,
+        "rel_pct": -1.4,
+        "band": -1
        },
        {
         "month": "2025-06",
@@ -18564,98 +18573,98 @@ window.AIECHO_REGISTRY = {
        },
        {
         "month": "2025-07",
-        "value": 87.6,
+        "value": 88.1,
         "d": 3949,
-        "n": 3459,
-        "rel_pct": -0.5,
+        "n": 3479,
+        "rel_pct": 0.1,
         "band": 0
        },
        {
         "month": "2025-08",
-        "value": 85.4,
+        "value": 86.2,
         "d": 3427,
-        "n": 2927,
-        "rel_pct": -3,
+        "n": 2954,
+        "rel_pct": -2,
         "band": -1
        },
        {
         "month": "2025-09",
-        "value": 87.6,
+        "value": 88.5,
         "d": 3682,
-        "n": 3225,
-        "rel_pct": -0.5,
+        "n": 3259,
+        "rel_pct": 0.6,
         "band": 0
        },
        {
         "month": "2025-10",
-        "value": 86.1,
+        "value": 86.9,
         "d": 3020,
-        "n": 2600,
-        "rel_pct": -2.2,
+        "n": 2624,
+        "rel_pct": -1.2,
         "band": -1
        },
        {
         "month": "2025-11",
-        "value": 87.8,
+        "value": 88.4,
         "d": 2773,
-        "n": 2435,
-        "rel_pct": -0.2,
+        "n": 2451,
+        "rel_pct": 0.5,
         "band": 0
        },
        {
         "month": "2025-12",
-        "value": 84,
+        "value": 84.4,
         "d": 3952,
-        "n": 3320,
-        "rel_pct": -4.5,
+        "n": 3335,
+        "rel_pct": -4.1,
         "band": -1
        },
        {
         "month": "2026-01",
-        "value": 81,
+        "value": 81.3,
         "d": 2755,
-        "n": 2232,
-        "rel_pct": -8,
+        "n": 2240,
+        "rel_pct": -7.6,
         "band": -1
        },
        {
         "month": "2026-02",
-        "value": 82.7,
+        "value": 82.9,
         "d": 4055,
-        "n": 3353,
-        "rel_pct": -6,
+        "n": 3362,
+        "rel_pct": -5.8,
         "band": -1
        },
        {
         "month": "2026-03",
-        "value": 81.2,
+        "value": 81.5,
         "d": 2394,
-        "n": 1944,
-        "rel_pct": -7.7,
+        "n": 1951,
+        "rel_pct": -7.4,
         "band": -1
        },
        {
         "month": "2026-04",
-        "value": 85.1,
+        "value": 85.7,
         "d": 3640,
-        "n": 3098,
-        "rel_pct": -3.3,
+        "n": 3119,
+        "rel_pct": -2.6,
         "band": -1
        },
        {
         "month": "2026-05",
-        "value": 82,
+        "value": 82.9,
         "d": 2707,
-        "n": 2220,
-        "rel_pct": -6.8,
+        "n": 2244,
+        "rel_pct": -5.8,
         "band": -1
        },
        {
         "month": "2026-06",
-        "value": 84.1,
+        "value": 85.3,
         "d": 2528,
-        "n": 2126,
-        "rel_pct": -4.4,
+        "n": 2156,
+        "rel_pct": -3.1,
         "band": -1
        }
       ],
@@ -18672,146 +18681,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 77.8,
+        "value": 73.8,
         "d": 594,
-        "n": 462,
-        "rel_pct": -8.5,
-        "band": -1
+        "n": 438,
+        "rel_pct": -13.2,
+        "band": -2
        },
        {
         "month": "2025-02",
-        "value": 74.6,
+        "value": 70.8,
         "d": 515,
-        "n": 384,
-        "rel_pct": -12.2,
+        "n": 365,
+        "rel_pct": -16.7,
         "band": -2
        },
        {
         "month": "2025-03",
-        "value": 75.5,
+        "value": 72.3,
         "d": 642,
-        "n": 485,
-        "rel_pct": -11.2,
+        "n": 464,
+        "rel_pct": -14.9,
         "band": -2
        },
        {
         "month": "2025-04",
-        "value": 77.9,
+        "value": 75.5,
         "d": 709,
-        "n": 552,
-        "rel_pct": -8.4,
-        "band": -1
+        "n": 535,
+        "rel_pct": -11.2,
+        "band": -2
        },
        {
         "month": "2025-05",
-        "value": 79.8,
+        "value": 78.4,
         "d": 824,
-        "n": 658,
-        "rel_pct": -6.1,
+        "n": 646,
+        "rel_pct": -7.8,
         "band": -1
        },
        {
         "month": "2025-06",
-        "value": 75,
+        "value": 74.7,
         "d": 724,
-        "n": 543,
-        "rel_pct": -11.8,
+        "n": 541,
+        "rel_pct": -12.1,
         "band": -2
        },
        {
         "month": "2025-07",
-        "value": 78,
+        "value": 78.8,
         "d": 811,
-        "n": 633,
-        "rel_pct": -8.2,
+        "n": 639,
+        "rel_pct": -7.3,
         "band": -1
        },
        {
         "month": "2025-08",
-        "value": 78,
+        "value": 79.9,
         "d": 556,
-        "n": 434,
-        "rel_pct": -8.2,
+        "n": 444,
+        "rel_pct": -6,
         "band": -1
        },
        {
         "month": "2025-09",
-        "value": 73,
+        "value": 75.8,
         "d": 685,
-        "n": 500,
-        "rel_pct": -14.1,
+        "n": 519,
+        "rel_pct": -10.8,
         "band": -2
        },
        {
         "month": "2025-10",
-        "value": 72.2,
+        "value": 75.6,
         "d": 753,
-        "n": 544,
-        "rel_pct": -15.1,
+        "n": 569,
+        "rel_pct": -11.1,
         "band": -2
        },
        {
         "month": "2025-11",
-        "value": 72.2,
+        "value": 75.9,
         "d": 818,
-        "n": 591,
-        "rel_pct": -15.1,
+        "n": 621,
+        "rel_pct": -10.7,
         "band": -2
        },
        {
         "month": "2025-12",
-        "value": 71.8,
+        "value": 75.5,
         "d": 780,
-        "n": 560,
-        "rel_pct": -15.5,
+        "n": 589,
+        "rel_pct": -11.2,
         "band": -2
        },
        {
         "month": "2026-01",
-        "value": 72.2,
+        "value": 75.6,
         "d": 614,
-        "n": 443,
-        "rel_pct": -15.1,
+        "n": 464,
+        "rel_pct": -11.1,
         "band": -2
        },
        {
         "month": "2026-02",
-        "value": 73.6,
+        "value": 76.3,
         "d": 482,
-        "n": 355,
-        "rel_pct": -13.4,
+        "n": 368,
+        "rel_pct": -10.2,
         "band": -2
        },
        {
         "month": "2026-03",
-        "value": 70.4,
+        "value": 72.2,
         "d": 722,
-        "n": 508,
-        "rel_pct": -17.2,
+        "n": 521,
+        "rel_pct": -15.1,
         "band": -2
        },
        {
         "month": "2026-04",
-        "value": 72.6,
+        "value": 73.4,
         "d": 577,
-        "n": 419,
-        "rel_pct": -14.6,
+        "n": 424,
+        "rel_pct": -13.6,
         "band": -2
        },
        {
         "month": "2026-05",
-        "value": 74,
+        "value": 73.7,
         "d": 761,
-        "n": 563,
-        "rel_pct": -12.9,
+        "n": 561,
+        "rel_pct": -13.3,
         "band": -2
        },
        {
         "month": "2026-06",
-        "value": 73.5,
+        "value": 72.2,
         "d": 783,
-        "n": 576,
-        "rel_pct": -13.5,
+        "n": 565,
+        "rel_pct": -15.1,
         "band": -2
        }
       ],
@@ -18828,147 +18837,147 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 71.1,
+        "value": 68.5,
         "d": 370,
-        "n": 263,
-        "rel_pct": -11.1,
+        "n": 253,
+        "rel_pct": -14.4,
         "band": -2
        },
        {
         "month": "2025-02",
-        "value": 75.4,
+        "value": 72.4,
         "d": 344,
-        "n": 259,
-        "rel_pct": -5.7,
+        "n": 249,
+        "rel_pct": -9.5,
         "band": -1
        },
        {
         "month": "2025-03",
-        "value": 75.1,
+        "value": 72,
         "d": 327,
-        "n": 246,
-        "rel_pct": -6.1,
-        "band": -1
+        "n": 235,
+        "rel_pct": -10,
+        "band": -2
        },
        {
         "month": "2025-04",
-        "value": 74.3,
-        "d": 362,
-        "n": 269,
-        "rel_pct": -7.1,
-        "band": -1
-       },
-       {
-        "month": "2025-05",
-        "value": 74.9,
-        "d": 398,
-        "n": 298,
-        "rel_pct": -6.4,
-        "band": -1
-       },
-       {
-        "month": "2025-06",
-        "value": 73.5,
-        "d": 405,
-        "n": 298,
-        "rel_pct": -8.1,
-        "band": -1
-       },
-       {
-        "month": "2025-07",
         "value": 71.4,
-        "d": 357,
-        "n": 255,
+        "d": 362,
+        "n": 258,
         "rel_pct": -10.7,
         "band": -2
        },
        {
+        "month": "2025-05",
+        "value": 72.3,
+        "d": 398,
+        "n": 288,
+        "rel_pct": -9.6,
+        "band": -1
+       },
+       {
+        "month": "2025-06",
+        "value": 71.5,
+        "d": 405,
+        "n": 290,
+        "rel_pct": -10.6,
+        "band": -2
+       },
+       {
+        "month": "2025-07",
+        "value": 70.2,
+        "d": 357,
+        "n": 251,
+        "rel_pct": -12.2,
+        "band": -2
+       },
+       {
         "month": "2025-08",
-        "value": 73.9,
+        "value": 73.6,
         "d": 313,
-        "n": 231,
-        "rel_pct": -7.6,
+        "n": 230,
+        "rel_pct": -8,
         "band": -1
        },
        {
         "month": "2025-09",
-        "value": 70.1,
-        "d": 324,
-        "n": 227,
-        "rel_pct": -12.4,
-        "band": -2
-       },
-       {
-        "month": "2025-10",
-        "value": 73.2,
-        "d": 294,
-        "n": 215,
-        "rel_pct": -8.5,
-        "band": -1
-       },
-       {
-        "month": "2025-11",
-        "value": 68.7,
-        "d": 282,
-        "n": 194,
-        "rel_pct": -14.1,
-        "band": -2
-       },
-       {
-        "month": "2025-12",
-        "value": 69.7,
-        "d": 310,
-        "n": 216,
-        "rel_pct": -12.9,
-        "band": -2
-       },
-       {
-        "month": "2026-01",
-        "value": 66.9,
-        "d": 345,
-        "n": 231,
-        "rel_pct": -16.4,
-        "band": -2
-       },
-       {
-        "month": "2026-02",
-        "value": 67.2,
-        "d": 384,
-        "n": 258,
-        "rel_pct": -16,
-        "band": -2
-       },
-       {
-        "month": "2026-03",
-        "value": 70.6,
-        "d": 397,
-        "n": 280,
-        "rel_pct": -11.8,
-        "band": -2
-       },
-       {
-        "month": "2026-04",
-        "value": 68.4,
-        "d": 403,
-        "n": 276,
-        "rel_pct": -14.5,
-        "band": -2
-       },
-       {
-        "month": "2026-05",
         "value": 70.7,
-        "d": 279,
-        "n": 197,
+        "d": 324,
+        "n": 229,
         "rel_pct": -11.6,
         "band": -2
        },
        {
-        "month": "2026-06",
-        "value": 71.8,
-        "d": 401,
-        "n": 288,
-        "rel_pct": -10.3,
+        "month": "2025-10",
+        "value": 74.8,
+        "d": 294,
+        "n": 220,
+        "rel_pct": -6.5,
+        "band": -1
+       },
+       {
+        "month": "2025-11",
+        "value": 71.1,
+        "d": 282,
+        "n": 201,
+        "rel_pct": -11.1,
         "band": -2
+       },
+       {
+        "month": "2025-12",
+        "value": 72.6,
+        "d": 310,
+        "n": 225,
+        "rel_pct": -9.3,
+        "band": -1
+       },
+       {
+        "month": "2026-01",
+        "value": 70.3,
+        "d": 345,
+        "n": 243,
+        "rel_pct": -12.1,
+        "band": -2
+       },
+       {
+        "month": "2026-02",
+        "value": 70.7,
+        "d": 384,
+        "n": 271,
+        "rel_pct": -11.6,
+        "band": -2
+       },
+       {
+        "month": "2026-03",
+        "value": 74,
+        "d": 397,
+        "n": 294,
+        "rel_pct": -7.5,
+        "band": -1
+       },
+       {
+        "month": "2026-04",
+        "value": 71.4,
+        "d": 403,
+        "n": 288,
+        "rel_pct": -10.7,
+        "band": -2
+       },
+       {
+        "month": "2026-05",
+        "value": 73,
+        "d": 279,
+        "n": 204,
+        "rel_pct": -8.8,
+        "band": -1
+       },
+       {
+        "month": "2026-06",
+        "value": 73.3,
+        "d": 401,
+        "n": 294,
+        "rel_pct": -8.4,
+        "band": -1
        }
       ],
       "delta": -2,
@@ -18984,147 +18993,147 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 82.5,
+        "value": 78.4,
         "d": 963,
-        "n": 794,
-        "rel_pct": -8.3,
-        "band": -1
+        "n": 755,
+        "rel_pct": -12.9,
+        "band": -2
        },
        {
         "month": "2025-02",
-        "value": 82.5,
+        "value": 78,
         "d": 986,
-        "n": 813,
-        "rel_pct": -8.3,
-        "band": -1
+        "n": 769,
+        "rel_pct": -13.3,
+        "band": -2
        },
        {
         "month": "2025-03",
-        "value": 86.7,
+        "value": 82.1,
         "d": 1097,
-        "n": 951,
-        "rel_pct": -3.7,
+        "n": 901,
+        "rel_pct": -8.8,
         "band": -1
        },
        {
         "month": "2025-04",
-        "value": 87.6,
+        "value": 83.2,
         "d": 1111,
-        "n": 973,
-        "rel_pct": -2.7,
+        "n": 924,
+        "rel_pct": -7.6,
         "band": -1
        },
        {
         "month": "2025-05",
-        "value": 82.6,
+        "value": 78.8,
         "d": 1339,
-        "n": 1106,
-        "rel_pct": -8.2,
-        "band": -1
+        "n": 1055,
+        "rel_pct": -12.4,
+        "band": -2
        },
        {
         "month": "2025-06",
-        "value": 83.7,
+        "value": 80.7,
         "d": 1235,
-        "n": 1034,
-        "rel_pct": -7,
-        "band": -1
+        "n": 997,
+        "rel_pct": -10.3,
+        "band": -2
        },
        {
         "month": "2025-07",
-        "value": 87,
+        "value": 85.1,
         "d": 1023,
-        "n": 890,
-        "rel_pct": -3.3,
+        "n": 871,
+        "rel_pct": -5.4,
         "band": -1
        },
        {
         "month": "2025-08",
-        "value": 83.6,
+        "value": 82.9,
         "d": 1291,
-        "n": 1079,
-        "rel_pct": -7.1,
+        "n": 1070,
+        "rel_pct": -7.9,
         "band": -1
        },
        {
         "month": "2025-09",
-        "value": 85.4,
+        "value": 86,
         "d": 943,
-        "n": 805,
-        "rel_pct": -5.1,
+        "n": 811,
+        "rel_pct": -4.4,
         "band": -1
        },
        {
         "month": "2025-10",
-        "value": 81.7,
+        "value": 83.6,
         "d": 931,
-        "n": 761,
-        "rel_pct": -9.2,
+        "n": 778,
+        "rel_pct": -7.1,
         "band": -1
        },
        {
         "month": "2025-11",
-        "value": 78.9,
+        "value": 82,
         "d": 1130,
-        "n": 892,
-        "rel_pct": -12.3,
-        "band": -2
+        "n": 927,
+        "rel_pct": -8.9,
+        "band": -1
        },
        {
         "month": "2025-12",
-        "value": 78.3,
+        "value": 82.5,
         "d": 1344,
-        "n": 1052,
-        "rel_pct": -13,
-        "band": -2
+        "n": 1109,
+        "rel_pct": -8.3,
+        "band": -1
        },
        {
         "month": "2026-01",
-        "value": 81.3,
+        "value": 86.2,
         "d": 1222,
-        "n": 993,
-        "rel_pct": -9.7,
+        "n": 1053,
+        "rel_pct": -4.2,
         "band": -1
        },
        {
         "month": "2026-02",
-        "value": 77.4,
+        "value": 82.8,
         "d": 1037,
-        "n": 803,
-        "rel_pct": -14,
-        "band": -2
+        "n": 859,
+        "rel_pct": -8,
+        "band": -1
        },
        {
         "month": "2026-03",
-        "value": 81.4,
+        "value": 86.9,
         "d": 1055,
-        "n": 859,
-        "rel_pct": -9.6,
+        "n": 917,
+        "rel_pct": -3.4,
         "band": -1
        },
        {
         "month": "2026-04",
-        "value": 80.2,
+        "value": 85.4,
         "d": 950,
-        "n": 762,
-        "rel_pct": -10.9,
-        "band": -2
+        "n": 811,
+        "rel_pct": -5.1,
+        "band": -1
        },
        {
         "month": "2026-05",
-        "value": 79.1,
+        "value": 83.6,
         "d": 1278,
-        "n": 1011,
-        "rel_pct": -12.1,
-        "band": -2
+        "n": 1068,
+        "rel_pct": -7.1,
+        "band": -1
        },
        {
         "month": "2026-06",
-        "value": 79.3,
+        "value": 82.9,
         "d": 841,
-        "n": 667,
-        "rel_pct": -11.9,
-        "band": -2
+        "n": 697,
+        "rel_pct": -7.9,
+        "band": -1
        }
       ],
       "delta": -0.2,
@@ -19140,146 +19149,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 52.8,
+        "value": 50.1,
         "d": 142,
-        "n": 75,
-        "rel_pct": 5.6,
-        "band": 1
+        "n": 71,
+        "rel_pct": 0.2,
+        "band": 0
        },
        {
         "month": "2025-02",
-        "value": 56.1,
+        "value": 52.5,
         "d": 194,
-        "n": 109,
-        "rel_pct": 12.2,
-        "band": 2
+        "n": 102,
+        "rel_pct": 5,
+        "band": 1
        },
        {
         "month": "2025-03",
-        "value": 53.6,
+        "value": 49.6,
         "d": 204,
-        "n": 109,
-        "rel_pct": 7.2,
-        "band": 1
+        "n": 101,
+        "rel_pct": -0.8,
+        "band": 0
        },
        {
         "month": "2025-04",
-        "value": 56.1,
+        "value": 52.1,
         "d": 191,
-        "n": 107,
-        "rel_pct": 12.2,
-        "band": 2
+        "n": 100,
+        "rel_pct": 4.2,
+        "band": 1
        },
        {
         "month": "2025-05",
-        "value": 55.2,
+        "value": 51.7,
         "d": 159,
-        "n": 88,
-        "rel_pct": 10.4,
-        "band": 2
+        "n": 82,
+        "rel_pct": 3.4,
+        "band": 1
        },
        {
         "month": "2025-06",
-        "value": 54.2,
-        "d": 171,
-        "n": 93,
-        "rel_pct": 8.4,
-        "band": 1
-       },
-       {
-        "month": "2025-07",
-        "value": 52.9,
-        "d": 195,
-        "n": 103,
-        "rel_pct": 5.8,
-        "band": 1
-       },
-       {
-        "month": "2025-08",
-        "value": 54.3,
-        "d": 127,
-        "n": 69,
-        "rel_pct": 8.6,
-        "band": 1
-       },
-       {
-        "month": "2025-09",
-        "value": 53.5,
-        "d": 178,
-        "n": 95,
-        "rel_pct": 7,
-        "band": 1
-       },
-       {
-        "month": "2025-10",
-        "value": 54.2,
-        "d": 190,
-        "n": 103,
-        "rel_pct": 8.4,
-        "band": 1
-       },
-       {
-        "month": "2025-11",
-        "value": 53.4,
-        "d": 201,
-        "n": 107,
-        "rel_pct": 6.8,
-        "band": 1
-       },
-       {
-        "month": "2025-12",
-        "value": 52.7,
-        "d": 159,
-        "n": 84,
-        "rel_pct": 5.4,
-        "band": 1
-       },
-       {
-        "month": "2026-01",
-        "value": 50.8,
-        "d": 157,
-        "n": 80,
-        "rel_pct": 1.6,
-        "band": 1
-       },
-       {
-        "month": "2026-02",
-        "value": 50.6,
-        "d": 127,
-        "n": 64,
-        "rel_pct": 1.2,
-        "band": 1
-       },
-       {
-        "month": "2026-03",
-        "value": 50.7,
-        "d": 185,
-        "n": 94,
-        "rel_pct": 1.4,
-        "band": 1
-       },
-       {
-        "month": "2026-04",
-        "value": 51.2,
-        "d": 150,
-        "n": 77,
-        "rel_pct": 2.4,
-        "band": 1
-       },
-       {
-        "month": "2026-05",
         "value": 51.6,
-        "d": 199,
-        "n": 103,
+        "d": 171,
+        "n": 88,
         "rel_pct": 3.2,
         "band": 1
        },
        {
-        "month": "2026-06",
-        "value": 52,
+        "month": "2025-07",
+        "value": 51.6,
+        "d": 195,
+        "n": 101,
+        "rel_pct": 3.2,
+        "band": 1
+       },
+       {
+        "month": "2025-08",
+        "value": 54.2,
+        "d": 127,
+        "n": 69,
+        "rel_pct": 8.4,
+        "band": 1
+       },
+       {
+        "month": "2025-09",
+        "value": 54.7,
+        "d": 178,
+        "n": 97,
+        "rel_pct": 9.4,
+        "band": 1
+       },
+       {
+        "month": "2025-10",
+        "value": 56.4,
+        "d": 190,
+        "n": 107,
+        "rel_pct": 12.8,
+        "band": 2
+       },
+       {
+        "month": "2025-11",
+        "value": 56.4,
         "d": 201,
-        "n": 105,
-        "rel_pct": 4,
+        "n": 113,
+        "rel_pct": 12.8,
+        "band": 2
+       },
+       {
+        "month": "2025-12",
+        "value": 56.1,
+        "d": 159,
+        "n": 89,
+        "rel_pct": 12.2,
+        "band": 2
+       },
+       {
+        "month": "2026-01",
+        "value": 54.1,
+        "d": 157,
+        "n": 85,
+        "rel_pct": 8.2,
+        "band": 1
+       },
+       {
+        "month": "2026-02",
+        "value": 53.4,
+        "d": 127,
+        "n": 68,
+        "rel_pct": 6.8,
+        "band": 1
+       },
+       {
+        "month": "2026-03",
+        "value": 52.8,
+        "d": 185,
+        "n": 98,
+        "rel_pct": 5.6,
+        "band": 1
+       },
+       {
+        "month": "2026-04",
+        "value": 52.3,
+        "d": 150,
+        "n": 78,
+        "rel_pct": 4.6,
+        "band": 1
+       },
+       {
+        "month": "2026-05",
+        "value": 51.7,
+        "d": 199,
+        "n": 103,
+        "rel_pct": 3.4,
+        "band": 1
+       },
+       {
+        "month": "2026-06",
+        "value": 51.1,
+        "d": 201,
+        "n": 103,
+        "rel_pct": 2.2,
         "band": 1
        }
       ],
@@ -19323,147 +19332,147 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 26,
-        "d": 2551,
-        "n": null,
-        "rel_pct": -8.3,
-        "band": -1
-       },
-       {
-        "month": "2025-02",
-        "value": 25.5,
-        "d": 2483,
-        "n": null,
-        "rel_pct": -6.3,
-        "band": -1
-       },
-       {
-        "month": "2025-03",
-        "value": 25.5,
-        "d": 2475,
-        "n": null,
-        "rel_pct": -6.3,
-        "band": -1
-       },
-       {
-        "month": "2025-04",
-        "value": 26.5,
-        "d": 3933,
-        "n": null,
-        "rel_pct": -10.4,
-        "band": -2
-       },
-       {
-        "month": "2025-05",
-        "value": 25.4,
-        "d": 2518,
-        "n": null,
-        "rel_pct": -5.8,
-        "band": -1
-       },
-       {
-        "month": "2025-06",
-        "value": 25.9,
-        "d": 3187,
-        "n": null,
-        "rel_pct": -7.9,
-        "band": -1
-       },
-       {
-        "month": "2025-07",
-        "value": 25.4,
-        "d": 3570,
-        "n": null,
-        "rel_pct": -5.8,
-        "band": -1
-       },
-       {
-        "month": "2025-08",
         "value": 25.8,
-        "d": 4104,
+        "d": 2551,
         "n": null,
         "rel_pct": -7.5,
         "band": -1
        },
        {
+        "month": "2025-02",
+        "value": 25,
+        "d": 2483,
+        "n": null,
+        "rel_pct": -4.2,
+        "band": -1
+       },
+       {
+        "month": "2025-03",
+        "value": 24.8,
+        "d": 2475,
+        "n": null,
+        "rel_pct": -3.3,
+        "band": -1
+       },
+       {
+        "month": "2025-04",
+        "value": 25.6,
+        "d": 3933,
+        "n": null,
+        "rel_pct": -6.7,
+        "band": -1
+       },
+       {
+        "month": "2025-05",
+        "value": 24.5,
+        "d": 2518,
+        "n": null,
+        "rel_pct": -2.1,
+        "band": -1
+       },
+       {
+        "month": "2025-06",
+        "value": 25,
+        "d": 3187,
+        "n": null,
+        "rel_pct": -4.2,
+        "band": -1
+       },
+       {
+        "month": "2025-07",
+        "value": 24.5,
+        "d": 3570,
+        "n": null,
+        "rel_pct": -2.1,
+        "band": -1
+       },
+       {
+        "month": "2025-08",
+        "value": 25.1,
+        "d": 4104,
+        "n": null,
+        "rel_pct": -4.6,
+        "band": -1
+       },
+       {
         "month": "2025-09",
-        "value": 24,
-        "d": 3682,
-        "n": null,
-        "rel_pct": 0,
-        "band": 0
-       },
-       {
-        "month": "2025-10",
-        "value": 24.9,
-        "d": 3093,
-        "n": null,
-        "rel_pct": -3.7,
-        "band": -1
-       },
-       {
-        "month": "2025-11",
-        "value": 24.4,
-        "d": 3484,
-        "n": null,
-        "rel_pct": -1.7,
-        "band": -1
-       },
-       {
-        "month": "2025-12",
         "value": 23.6,
-        "d": 2879,
+        "d": 3682,
         "n": null,
         "rel_pct": 1.7,
         "band": 1
        },
        {
-        "month": "2026-01",
-        "value": 23.9,
-        "d": 4120,
+        "month": "2025-10",
+        "value": 24.8,
+        "d": 3093,
         "n": null,
-        "rel_pct": 0.4,
-        "band": 0
+        "rel_pct": -3.3,
+        "band": -1
        },
        {
-        "month": "2026-02",
-        "value": 23.3,
-        "d": 3272,
-        "n": null,
-        "rel_pct": 2.9,
-        "band": 1
-       },
-       {
-        "month": "2026-03",
+        "month": "2025-11",
         "value": 24.7,
-        "d": 4064,
+        "d": 3484,
         "n": null,
         "rel_pct": -2.9,
         "band": -1
        },
        {
+        "month": "2025-12",
+        "value": 24.3,
+        "d": 2879,
+        "n": null,
+        "rel_pct": -1.3,
+        "band": -1
+       },
+       {
+        "month": "2026-01",
+        "value": 24.8,
+        "d": 4120,
+        "n": null,
+        "rel_pct": -3.3,
+        "band": -1
+       },
+       {
+        "month": "2026-02",
+        "value": 24.5,
+        "d": 3272,
+        "n": null,
+        "rel_pct": -2.1,
+        "band": -1
+       },
+       {
+        "month": "2026-03",
+        "value": 26,
+        "d": 4064,
+        "n": null,
+        "rel_pct": -8.3,
+        "band": -1
+       },
+       {
         "month": "2026-04",
-        "value": 24.4,
+        "value": 25.6,
         "d": 3886,
         "n": null,
-        "rel_pct": -1.7,
+        "rel_pct": -6.7,
         "band": -1
        },
        {
         "month": "2026-05",
-        "value": 24.4,
+        "value": 25.4,
         "d": 3759,
         "n": null,
-        "rel_pct": -1.7,
+        "rel_pct": -5.8,
         "band": -1
        },
        {
         "month": "2026-06",
-        "value": 23.7,
+        "value": 24.4,
         "d": 2761,
         "n": null,
-        "rel_pct": 1.3,
-        "band": 1
+        "rel_pct": -1.7,
+        "band": -1
        }
       ],
       "delta": 9.4,
@@ -19479,146 +19488,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 86.2,
+        "value": 85.7,
         "d": 2441,
-        "n": 2104,
-        "rel_pct": -4.2,
+        "n": 2092,
+        "rel_pct": -4.8,
         "band": -1
        },
        {
         "month": "2025-02",
-        "value": 84.6,
+        "value": 83,
         "d": 3834,
-        "n": 3244,
-        "rel_pct": -6,
+        "n": 3182,
+        "rel_pct": -7.8,
         "band": -1
        },
        {
         "month": "2025-03",
-        "value": 86.3,
+        "value": 83.7,
         "d": 3481,
-        "n": 3004,
-        "rel_pct": -4.1,
+        "n": 2914,
+        "rel_pct": -7,
         "band": -1
        },
        {
         "month": "2025-04",
-        "value": 84.2,
+        "value": 80.9,
         "d": 2668,
-        "n": 2246,
-        "rel_pct": -6.4,
-        "band": -1
+        "n": 2158,
+        "rel_pct": -10.1,
+        "band": -2
        },
        {
         "month": "2025-05",
-        "value": 86.7,
+        "value": 82.9,
         "d": 3411,
-        "n": 2957,
-        "rel_pct": -3.7,
+        "n": 2828,
+        "rel_pct": -7.9,
         "band": -1
        },
        {
         "month": "2025-06",
-        "value": 85.4,
+        "value": 81.5,
         "d": 2891,
-        "n": 2469,
-        "rel_pct": -5.1,
+        "n": 2356,
+        "rel_pct": -9.4,
         "band": -1
        },
        {
         "month": "2025-07",
-        "value": 83.5,
+        "value": 79.8,
         "d": 2519,
-        "n": 2103,
-        "rel_pct": -7.2,
-        "band": -1
+        "n": 2010,
+        "rel_pct": -11.3,
+        "band": -2
        },
        {
         "month": "2025-08",
-        "value": 80.5,
+        "value": 77.4,
         "d": 2384,
-        "n": 1919,
-        "rel_pct": -10.6,
+        "n": 1845,
+        "rel_pct": -14,
         "band": -2
        },
        {
         "month": "2025-09",
-        "value": 80.2,
+        "value": 77.9,
         "d": 2770,
-        "n": 2222,
-        "rel_pct": -10.9,
+        "n": 2158,
+        "rel_pct": -13.4,
         "band": -2
        },
        {
         "month": "2025-10",
-        "value": 79.7,
+        "value": 78.4,
         "d": 3504,
-        "n": 2793,
-        "rel_pct": -11.4,
+        "n": 2747,
+        "rel_pct": -12.9,
         "band": -2
        },
        {
         "month": "2025-11",
-        "value": 78.9,
-        "d": 3435,
-        "n": 2710,
-        "rel_pct": -12.3,
-        "band": -2
-       },
-       {
-        "month": "2025-12",
         "value": 78.8,
-        "d": 4026,
-        "n": 3172,
+        "d": 3435,
+        "n": 2707,
         "rel_pct": -12.4,
         "band": -2
        },
        {
+        "month": "2025-12",
+        "value": 79.8,
+        "d": 4026,
+        "n": 3213,
+        "rel_pct": -11.3,
+        "band": -2
+       },
+       {
         "month": "2026-01",
-        "value": 77.6,
+        "value": 79.8,
         "d": 3319,
-        "n": 2576,
-        "rel_pct": -13.8,
+        "n": 2649,
+        "rel_pct": -11.3,
         "band": -2
        },
        {
         "month": "2026-02",
-        "value": 78.5,
+        "value": 81.5,
         "d": 2399,
-        "n": 1883,
-        "rel_pct": -12.8,
-        "band": -2
+        "n": 1955,
+        "rel_pct": -9.4,
+        "band": -1
        },
        {
         "month": "2026-03",
-        "value": 77,
+        "value": 80.8,
         "d": 3366,
-        "n": 2592,
-        "rel_pct": -14.4,
+        "n": 2720,
+        "rel_pct": -10.2,
         "band": -2
        },
        {
         "month": "2026-04",
-        "value": 79.9,
+        "value": 83.9,
         "d": 2356,
-        "n": 1882,
-        "rel_pct": -11.2,
-        "band": -2
+        "n": 1977,
+        "rel_pct": -6.8,
+        "band": -1
        },
        {
         "month": "2026-05",
-        "value": 83.1,
+        "value": 87.1,
         "d": 3186,
-        "n": 2648,
-        "rel_pct": -7.7,
+        "n": 2775,
+        "rel_pct": -3.2,
         "band": -1
        },
        {
         "month": "2026-06",
-        "value": 81.2,
+        "value": 84.9,
         "d": 3737,
-        "n": 3034,
-        "rel_pct": -9.8,
+        "n": 3173,
+        "rel_pct": -5.7,
         "band": -1
        }
       ],
@@ -19635,147 +19644,147 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 86.4,
+        "value": 85.7,
         "d": 4041,
-        "n": 3491,
-        "rel_pct": -4,
+        "n": 3463,
+        "rel_pct": -4.8,
         "band": -1
        },
        {
         "month": "2025-02",
-        "value": 83.5,
+        "value": 81.5,
         "d": 3245,
-        "n": 2710,
-        "rel_pct": -7.2,
+        "n": 2645,
+        "rel_pct": -9.4,
         "band": -1
        },
        {
         "month": "2025-03",
-        "value": 85.3,
-        "d": 3271,
-        "n": 2790,
-        "rel_pct": -5.2,
-        "band": -1
-       },
-       {
-        "month": "2025-04",
-        "value": 87.9,
-        "d": 2884,
-        "n": 2535,
-        "rel_pct": -2.3,
-        "band": -1
-       },
-       {
-        "month": "2025-05",
-        "value": 83.8,
-        "d": 2895,
-        "n": 2426,
-        "rel_pct": -6.9,
-        "band": -1
-       },
-       {
-        "month": "2025-06",
-        "value": 85.2,
-        "d": 3413,
-        "n": 2908,
-        "rel_pct": -5.3,
-        "band": -1
-       },
-       {
-        "month": "2025-07",
-        "value": 84.6,
-        "d": 3320,
-        "n": 2809,
-        "rel_pct": -6,
-        "band": -1
-       },
-       {
-        "month": "2025-08",
-        "value": 82.3,
-        "d": 4157,
-        "n": 3421,
-        "rel_pct": -8.6,
-        "band": -1
-       },
-       {
-        "month": "2025-09",
-        "value": 82,
-        "d": 3998,
-        "n": 3278,
-        "rel_pct": -8.9,
-        "band": -1
-       },
-       {
-        "month": "2025-10",
-        "value": 82.9,
-        "d": 3947,
-        "n": 3272,
-        "rel_pct": -7.9,
-        "band": -1
-       },
-       {
-        "month": "2025-11",
-        "value": 83.7,
-        "d": 3850,
-        "n": 3222,
-        "rel_pct": -7,
-        "band": -1
-       },
-       {
-        "month": "2025-12",
-        "value": 81.4,
-        "d": 4058,
-        "n": 3303,
-        "rel_pct": -9.6,
-        "band": -1
-       },
-       {
-        "month": "2026-01",
-        "value": 78.5,
-        "d": 2360,
-        "n": 1853,
-        "rel_pct": -12.8,
-        "band": -2
-       },
-       {
-        "month": "2026-02",
-        "value": 79.6,
-        "d": 2626,
-        "n": 2090,
-        "rel_pct": -11.6,
-        "band": -2
-       },
-       {
-        "month": "2026-03",
-        "value": 80.3,
-        "d": 4059,
-        "n": 3259,
-        "rel_pct": -10.8,
-        "band": -2
-       },
-       {
-        "month": "2026-04",
         "value": 82.1,
-        "d": 2863,
-        "n": 2351,
+        "d": 3271,
+        "n": 2685,
         "rel_pct": -8.8,
         "band": -1
        },
        {
-        "month": "2026-05",
-        "value": 80.3,
-        "d": 3558,
-        "n": 2857,
-        "rel_pct": -10.8,
+        "month": "2025-04",
+        "value": 83.8,
+        "d": 2884,
+        "n": 2417,
+        "rel_pct": -6.9,
+        "band": -1
+       },
+       {
+        "month": "2025-05",
+        "value": 79.2,
+        "d": 2895,
+        "n": 2293,
+        "rel_pct": -12,
         "band": -2
        },
        {
-        "month": "2026-06",
-        "value": 78.9,
-        "d": 2546,
-        "n": 2009,
-        "rel_pct": -12.3,
+        "month": "2025-06",
+        "value": 80.4,
+        "d": 3413,
+        "n": 2744,
+        "rel_pct": -10.7,
         "band": -2
+       },
+       {
+        "month": "2025-07",
+        "value": 80,
+        "d": 3320,
+        "n": 2656,
+        "rel_pct": -11.1,
+        "band": -2
+       },
+       {
+        "month": "2025-08",
+        "value": 78.2,
+        "d": 4157,
+        "n": 3251,
+        "rel_pct": -13.1,
+        "band": -2
+       },
+       {
+        "month": "2025-09",
+        "value": 78.6,
+        "d": 3998,
+        "n": 3142,
+        "rel_pct": -12.7,
+        "band": -2
+       },
+       {
+        "month": "2025-10",
+        "value": 80.4,
+        "d": 3947,
+        "n": 3173,
+        "rel_pct": -10.7,
+        "band": -2
+       },
+       {
+        "month": "2025-11",
+        "value": 82.4,
+        "d": 3850,
+        "n": 3172,
+        "rel_pct": -8.4,
+        "band": -1
+       },
+       {
+        "month": "2025-12",
+        "value": 81.2,
+        "d": 4058,
+        "n": 3295,
+        "rel_pct": -9.8,
+        "band": -1
+       },
+       {
+        "month": "2026-01",
+        "value": 79.3,
+        "d": 2360,
+        "n": 1871,
+        "rel_pct": -11.9,
+        "band": -2
+       },
+       {
+        "month": "2026-02",
+        "value": 81.4,
+        "d": 2626,
+        "n": 2138,
+        "rel_pct": -9.6,
+        "band": -1
+       },
+       {
+        "month": "2026-03",
+        "value": 82.8,
+        "d": 4059,
+        "n": 3361,
+        "rel_pct": -8,
+        "band": -1
+       },
+       {
+        "month": "2026-04",
+        "value": 85.2,
+        "d": 2863,
+        "n": 2439,
+        "rel_pct": -5.3,
+        "band": -1
+       },
+       {
+        "month": "2026-05",
+        "value": 83.7,
+        "d": 3558,
+        "n": 2978,
+        "rel_pct": -7,
+        "band": -1
+       },
+       {
+        "month": "2026-06",
+        "value": 82.4,
+        "d": 2546,
+        "n": 2098,
+        "rel_pct": -8.4,
+        "band": -1
        }
       ],
       "delta": -2.8,
@@ -19791,62 +19800,46 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 80.9,
-        "d": 3938,
-        "n": 3186,
-        "rel_pct": -4.8,
-        "band": -1
-       },
-       {
-        "month": "2025-02",
-        "value": 81.7,
-        "d": 2870,
-        "n": 2345,
-        "rel_pct": -3.9,
-        "band": -1
-       },
-       {
-        "month": "2025-03",
-        "value": 81.3,
-        "d": 3480,
-        "n": 2829,
-        "rel_pct": -4.4,
-        "band": -1
-       },
-       {
-        "month": "2025-04",
-        "value": 84.4,
-        "d": 3164,
-        "n": 2670,
-        "rel_pct": -0.7,
-        "band": 0
-       },
-       {
-        "month": "2025-05",
-        "value": 83,
-        "d": 3743,
-        "n": 3107,
-        "rel_pct": -2.4,
-        "band": -1
-       },
-       {
-        "month": "2025-06",
-        "value": 82.5,
-        "d": 4142,
-        "n": 3417,
-        "rel_pct": -2.9,
-        "band": -1
-       },
-       {
-        "month": "2025-07",
         "value": 79.1,
-        "d": 2771,
-        "n": 2192,
+        "d": 3938,
+        "n": 3115,
         "rel_pct": -6.9,
         "band": -1
        },
        {
-        "month": "2025-08",
+        "month": "2025-02",
+        "value": 79.1,
+        "d": 2870,
+        "n": 2270,
+        "rel_pct": -6.9,
+        "band": -1
+       },
+       {
+        "month": "2025-03",
+        "value": 78.2,
+        "d": 3480,
+        "n": 2721,
+        "rel_pct": -8,
+        "band": -1
+       },
+       {
+        "month": "2025-04",
+        "value": 81,
+        "d": 3164,
+        "n": 2563,
+        "rel_pct": -4.7,
+        "band": -1
+       },
+       {
+        "month": "2025-05",
+        "value": 79.5,
+        "d": 3743,
+        "n": 2976,
+        "rel_pct": -6.5,
+        "band": -1
+       },
+       {
+        "month": "2025-06",
         "value": 79.3,
         "d": 4142,
         "n": 3285,
@@ -19854,84 +19847,100 @@ window.AIECHO_REGISTRY = {
         "band": -1
        },
        {
+        "month": "2025-07",
+        "value": 76.3,
+        "d": 2771,
+        "n": 2114,
+        "rel_pct": -10.2,
+        "band": -2
+       },
+       {
+        "month": "2025-08",
+        "value": 77.2,
+        "d": 4142,
+        "n": 3198,
+        "rel_pct": -9.2,
+        "band": -1
+       },
+       {
         "month": "2025-09",
-        "value": 78.6,
+        "value": 77.2,
         "d": 2688,
-        "n": 2113,
-        "rel_pct": -7.5,
+        "n": 2075,
+        "rel_pct": -9.2,
         "band": -1
        },
        {
         "month": "2025-10",
-        "value": 78.9,
+        "value": 78.3,
         "d": 3835,
-        "n": 3026,
-        "rel_pct": -7.2,
+        "n": 3003,
+        "rel_pct": -7.9,
         "band": -1
        },
        {
         "month": "2025-11",
-        "value": 76.4,
+        "value": 76.7,
         "d": 3200,
-        "n": 2445,
-        "rel_pct": -10.1,
-        "band": -2
+        "n": 2454,
+        "rel_pct": -9.8,
+        "band": -1
        },
        {
         "month": "2025-12",
-        "value": 76.1,
+        "value": 77.1,
         "d": 2417,
-        "n": 1839,
-        "rel_pct": -10.5,
-        "band": -2
+        "n": 1864,
+        "rel_pct": -9.3,
+        "band": -1
        },
        {
         "month": "2026-01",
-        "value": 78.8,
+        "value": 80.3,
         "d": 3102,
-        "n": 2444,
-        "rel_pct": -7.3,
+        "n": 2491,
+        "rel_pct": -5.5,
         "band": -1
        },
        {
         "month": "2026-02",
-        "value": 76.4,
+        "value": 78.3,
         "d": 2485,
-        "n": 1899,
-        "rel_pct": -10.1,
-        "band": -2
+        "n": 1946,
+        "rel_pct": -7.9,
+        "band": -1
        },
        {
         "month": "2026-03",
-        "value": 76.4,
+        "value": 78.5,
         "d": 2444,
-        "n": 1867,
-        "rel_pct": -10.1,
-        "band": -2
+        "n": 1919,
+        "rel_pct": -7.6,
+        "band": -1
        },
        {
         "month": "2026-04",
-        "value": 80,
+        "value": 82.1,
         "d": 2900,
-        "n": 2320,
-        "rel_pct": -5.9,
+        "n": 2381,
+        "rel_pct": -3.4,
         "band": -1
        },
        {
         "month": "2026-05",
-        "value": 78,
+        "value": 79.8,
         "d": 2419,
-        "n": 1887,
-        "rel_pct": -8.2,
+        "n": 1930,
+        "rel_pct": -6.1,
         "band": -1
        },
        {
         "month": "2026-06",
-        "value": 76,
+        "value": 77.6,
         "d": 3488,
-        "n": 2651,
-        "rel_pct": -10.6,
-        "band": -2
+        "n": 2707,
+        "rel_pct": -8.7,
+        "band": -1
        }
       ],
       "delta": 1.8,
@@ -19947,34 +19956,34 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 83.1,
+        "value": 81.3,
         "d": 4014,
-        "n": 3336,
-        "rel_pct": -5.6,
+        "n": 3263,
+        "rel_pct": -7.6,
         "band": -1
        },
        {
         "month": "2025-02",
-        "value": 82.7,
+        "value": 81.4,
         "d": 3369,
-        "n": 2786,
-        "rel_pct": -6,
+        "n": 2742,
+        "rel_pct": -7.5,
         "band": -1
        },
        {
         "month": "2025-03",
-        "value": 79.4,
+        "value": 78.7,
         "d": 3227,
-        "n": 2562,
-        "rel_pct": -9.8,
-        "band": -1
+        "n": 2540,
+        "rel_pct": -10.6,
+        "band": -2
        },
        {
         "month": "2025-04",
-        "value": 82.4,
+        "value": 82.1,
         "d": 3146,
-        "n": 2592,
-        "rel_pct": -6.4,
+        "n": 2583,
+        "rel_pct": -6.7,
         "band": -1
        },
        {
@@ -19987,106 +19996,106 @@ window.AIECHO_REGISTRY = {
        },
        {
         "month": "2025-06",
-        "value": 83.7,
+        "value": 83.9,
         "d": 3516,
-        "n": 2943,
-        "rel_pct": -4.9,
+        "n": 2950,
+        "rel_pct": -4.7,
         "band": -1
        },
        {
         "month": "2025-07",
-        "value": 78,
+        "value": 78.3,
         "d": 4015,
-        "n": 3132,
-        "rel_pct": -11.4,
+        "n": 3144,
+        "rel_pct": -11,
         "band": -2
        },
        {
         "month": "2025-08",
-        "value": 81.6,
+        "value": 81.9,
         "d": 2831,
-        "n": 2310,
-        "rel_pct": -7.3,
+        "n": 2319,
+        "rel_pct": -6.9,
         "band": -1
        },
        {
         "month": "2025-09",
-        "value": 80.2,
+        "value": 80.3,
         "d": 3797,
-        "n": 3045,
-        "rel_pct": -8.9,
+        "n": 3049,
+        "rel_pct": -8.8,
         "band": -1
        },
        {
         "month": "2025-10",
-        "value": 78.6,
+        "value": 78.5,
         "d": 3342,
-        "n": 2627,
-        "rel_pct": -10.7,
+        "n": 2623,
+        "rel_pct": -10.8,
         "band": -2
        },
        {
         "month": "2025-11",
-        "value": 77.6,
-        "d": 3964,
-        "n": 3076,
-        "rel_pct": -11.8,
-        "band": -2
-       },
-       {
-        "month": "2025-12",
-        "value": 78,
-        "d": 3482,
-        "n": 2716,
-        "rel_pct": -11.4,
-        "band": -2
-       },
-       {
-        "month": "2026-01",
-        "value": 76.2,
-        "d": 2786,
-        "n": 2123,
-        "rel_pct": -13.4,
-        "band": -2
-       },
-       {
-        "month": "2026-02",
-        "value": 76.7,
-        "d": 3262,
-        "n": 2502,
-        "rel_pct": -12.8,
-        "band": -2
-       },
-       {
-        "month": "2026-03",
-        "value": 74.4,
-        "d": 3774,
-        "n": 2808,
-        "rel_pct": -15.5,
-        "band": -2
-       },
-       {
-        "month": "2026-04",
         "value": 77.4,
-        "d": 3572,
-        "n": 2765,
+        "d": 3964,
+        "n": 3068,
         "rel_pct": -12,
         "band": -2
        },
        {
-        "month": "2026-05",
-        "value": 78.9,
-        "d": 2871,
-        "n": 2265,
-        "rel_pct": -10.3,
+        "month": "2025-12",
+        "value": 77.9,
+        "d": 3482,
+        "n": 2712,
+        "rel_pct": -11.5,
         "band": -2
        },
        {
+        "month": "2026-01",
+        "value": 76.3,
+        "d": 2786,
+        "n": 2126,
+        "rel_pct": -13.3,
+        "band": -2
+       },
+       {
+        "month": "2026-02",
+        "value": 77.2,
+        "d": 3262,
+        "n": 2518,
+        "rel_pct": -12.3,
+        "band": -2
+       },
+       {
+        "month": "2026-03",
+        "value": 75.3,
+        "d": 3774,
+        "n": 2842,
+        "rel_pct": -14.4,
+        "band": -2
+       },
+       {
+        "month": "2026-04",
+        "value": 78.8,
+        "d": 3572,
+        "n": 2815,
+        "rel_pct": -10.5,
+        "band": -2
+       },
+       {
+        "month": "2026-05",
+        "value": 80.7,
+        "d": 2871,
+        "n": 2317,
+        "rel_pct": -8.3,
+        "band": -1
+       },
+       {
         "month": "2026-06",
-        "value": 76.1,
+        "value": 78.2,
         "d": 2511,
-        "n": 1911,
-        "rel_pct": -13.5,
+        "n": 1964,
+        "rel_pct": -11.1,
         "band": -2
        }
       ],
@@ -20103,146 +20112,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 68.8,
-        "d": 733,
-        "n": 504,
-        "rel_pct": -19.1,
-        "band": -2
-       },
-       {
-        "month": "2025-02",
-        "value": 72.4,
-        "d": 742,
-        "n": 537,
-        "rel_pct": -14.8,
-        "band": -2
-       },
-       {
-        "month": "2025-03",
-        "value": 70.9,
-        "d": 483,
-        "n": 342,
-        "rel_pct": -16.6,
-        "band": -2
-       },
-       {
-        "month": "2025-04",
-        "value": 70.9,
-        "d": 702,
-        "n": 498,
-        "rel_pct": -16.6,
-        "band": -2
-       },
-       {
-        "month": "2025-05",
-        "value": 73.3,
-        "d": 742,
-        "n": 544,
-        "rel_pct": -13.8,
-        "band": -2
-       },
-       {
-        "month": "2025-06",
-        "value": 72.9,
-        "d": 582,
-        "n": 424,
-        "rel_pct": -14.2,
-        "band": -2
-       },
-       {
-        "month": "2025-07",
-        "value": 71.2,
-        "d": 564,
-        "n": 402,
-        "rel_pct": -16.2,
-        "band": -2
-       },
-       {
-        "month": "2025-08",
-        "value": 71.5,
-        "d": 546,
-        "n": 390,
-        "rel_pct": -15.9,
-        "band": -2
-       },
-       {
-        "month": "2025-09",
-        "value": 66.8,
-        "d": 805,
-        "n": 538,
-        "rel_pct": -21.4,
-        "band": -2
-       },
-       {
-        "month": "2025-10",
-        "value": 66.1,
-        "d": 543,
-        "n": 359,
-        "rel_pct": -22.2,
-        "band": -2
-       },
-       {
-        "month": "2025-11",
-        "value": 65.2,
-        "d": 622,
-        "n": 406,
-        "rel_pct": -23.3,
-        "band": -2
-       },
-       {
-        "month": "2025-12",
-        "value": 67,
-        "d": 700,
-        "n": 469,
-        "rel_pct": -21.2,
-        "band": -2
-       },
-       {
-        "month": "2026-01",
-        "value": 67.9,
-        "d": 719,
-        "n": 488,
-        "rel_pct": -20.1,
-        "band": -2
-       },
-       {
-        "month": "2026-02",
-        "value": 67.6,
-        "d": 484,
-        "n": 327,
-        "rel_pct": -20.5,
-        "band": -2
-       },
-       {
-        "month": "2026-03",
-        "value": 64.9,
-        "d": 830,
-        "n": 539,
-        "rel_pct": -23.6,
-        "band": -2
-       },
-       {
-        "month": "2026-04",
         "value": 65.9,
-        "d": 601,
-        "n": 396,
+        "d": 733,
+        "n": 483,
         "rel_pct": -22.5,
         "band": -2
        },
        {
+        "month": "2025-02",
+        "value": 70,
+        "d": 742,
+        "n": 519,
+        "rel_pct": -17.6,
+        "band": -2
+       },
+       {
+        "month": "2025-03",
+        "value": 69.3,
+        "d": 483,
+        "n": 335,
+        "rel_pct": -18.5,
+        "band": -2
+       },
+       {
+        "month": "2025-04",
+        "value": 70.1,
+        "d": 702,
+        "n": 492,
+        "rel_pct": -17.5,
+        "band": -2
+       },
+       {
+        "month": "2025-05",
+        "value": 73.5,
+        "d": 742,
+        "n": 545,
+        "rel_pct": -13.5,
+        "band": -2
+       },
+       {
+        "month": "2025-06",
+        "value": 74,
+        "d": 582,
+        "n": 431,
+        "rel_pct": -12.9,
+        "band": -2
+       },
+       {
+        "month": "2025-07",
+        "value": 73,
+        "d": 564,
+        "n": 412,
+        "rel_pct": -14.1,
+        "band": -2
+       },
+       {
+        "month": "2025-08",
+        "value": 73.9,
+        "d": 546,
+        "n": 403,
+        "rel_pct": -13.1,
+        "band": -2
+       },
+       {
+        "month": "2025-09",
+        "value": 69.7,
+        "d": 805,
+        "n": 561,
+        "rel_pct": -18,
+        "band": -2
+       },
+       {
+        "month": "2025-10",
+        "value": 69.1,
+        "d": 543,
+        "n": 375,
+        "rel_pct": -18.7,
+        "band": -2
+       },
+       {
+        "month": "2025-11",
+        "value": 68.1,
+        "d": 622,
+        "n": 424,
+        "rel_pct": -19.9,
+        "band": -2
+       },
+       {
+        "month": "2025-12",
+        "value": 69.5,
+        "d": 700,
+        "n": 487,
+        "rel_pct": -18.2,
+        "band": -2
+       },
+       {
+        "month": "2026-01",
+        "value": 69.8,
+        "d": 719,
+        "n": 502,
+        "rel_pct": -17.9,
+        "band": -2
+       },
+       {
+        "month": "2026-02",
+        "value": 68.7,
+        "d": 484,
+        "n": 333,
+        "rel_pct": -19.2,
+        "band": -2
+       },
+       {
+        "month": "2026-03",
+        "value": 65.1,
+        "d": 830,
+        "n": 540,
+        "rel_pct": -23.4,
+        "band": -2
+       },
+       {
+        "month": "2026-04",
+        "value": 65.2,
+        "d": 601,
+        "n": 392,
+        "rel_pct": -23.3,
+        "band": -2
+       },
+       {
         "month": "2026-05",
-        "value": 66.4,
+        "value": 64.9,
         "d": 641,
-        "n": 426,
-        "rel_pct": -21.9,
+        "n": 416,
+        "rel_pct": -23.6,
         "band": -2
        },
        {
         "month": "2026-06",
-        "value": 67.7,
+        "value": 65.6,
         "d": 817,
-        "n": 553,
-        "rel_pct": -20.4,
+        "n": 536,
+        "rel_pct": -22.8,
         "band": -2
        }
       ],
@@ -20259,146 +20268,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 71.2,
+        "value": 68.5,
         "d": 179,
-        "n": 127,
-        "rel_pct": -11,
+        "n": 123,
+        "rel_pct": -14.4,
         "band": -2
        },
        {
         "month": "2025-02",
-        "value": 70.5,
+        "value": 67.7,
         "d": 164,
-        "n": 116,
-        "rel_pct": -11.9,
+        "n": 111,
+        "rel_pct": -15.4,
         "band": -2
        },
        {
         "month": "2025-03",
-        "value": 73.5,
-        "d": 169,
-        "n": 124,
-        "rel_pct": -8.1,
-        "band": -1
-       },
-       {
-        "month": "2025-04",
-        "value": 69.8,
-        "d": 177,
-        "n": 124,
-        "rel_pct": -12.8,
-        "band": -2
-       },
-       {
-        "month": "2025-05",
-        "value": 70.3,
-        "d": 167,
-        "n": 117,
-        "rel_pct": -12.1,
-        "band": -2
-       },
-       {
-        "month": "2025-06",
-        "value": 72.5,
-        "d": 156,
-        "n": 113,
-        "rel_pct": -9.4,
-        "band": -1
-       },
-       {
-        "month": "2025-07",
-        "value": 70.7,
-        "d": 145,
-        "n": 103,
-        "rel_pct": -11.6,
-        "band": -2
-       },
-       {
-        "month": "2025-08",
-        "value": 68.9,
-        "d": 147,
-        "n": 101,
-        "rel_pct": -13.9,
-        "band": -2
-       },
-       {
-        "month": "2025-09",
-        "value": 68.3,
-        "d": 174,
-        "n": 119,
-        "rel_pct": -14.6,
-        "band": -2
-       },
-       {
-        "month": "2025-10",
         "value": 70.9,
-        "d": 194,
-        "n": 138,
+        "d": 169,
+        "n": 120,
         "rel_pct": -11.4,
         "band": -2
        },
        {
-        "month": "2025-11",
-        "value": 67.1,
+        "month": "2025-04",
+        "value": 67.5,
+        "d": 177,
+        "n": 119,
+        "rel_pct": -15.6,
+        "band": -2
+       },
+       {
+        "month": "2025-05",
+        "value": 68.6,
+        "d": 167,
+        "n": 115,
+        "rel_pct": -14.3,
+        "band": -2
+       },
+       {
+        "month": "2025-06",
+        "value": 71.5,
+        "d": 156,
+        "n": 112,
+        "rel_pct": -10.6,
+        "band": -2
+       },
+       {
+        "month": "2025-07",
+        "value": 70.6,
+        "d": 145,
+        "n": 102,
+        "rel_pct": -11.8,
+        "band": -2
+       },
+       {
+        "month": "2025-08",
+        "value": 69.6,
+        "d": 147,
+        "n": 102,
+        "rel_pct": -13,
+        "band": -2
+       },
+       {
+        "month": "2025-09",
+        "value": 69.9,
+        "d": 174,
+        "n": 122,
+        "rel_pct": -12.6,
+        "band": -2
+       },
+       {
+        "month": "2025-10",
+        "value": 73.2,
         "d": 194,
-        "n": 130,
-        "rel_pct": -16.1,
+        "n": 142,
+        "rel_pct": -8.5,
+        "band": -1
+       },
+       {
+        "month": "2025-11",
+        "value": 70,
+        "d": 194,
+        "n": 136,
+        "rel_pct": -12.5,
         "band": -2
        },
        {
         "month": "2025-12",
-        "value": 69.8,
+        "value": 73,
         "d": 177,
-        "n": 124,
-        "rel_pct": -12.8,
-        "band": -2
+        "n": 129,
+        "rel_pct": -8.8,
+        "band": -1
        },
        {
         "month": "2026-01",
-        "value": 65.9,
+        "value": 69.3,
         "d": 128,
-        "n": 84,
-        "rel_pct": -17.6,
+        "n": 89,
+        "rel_pct": -13.4,
         "band": -2
        },
        {
         "month": "2026-02",
-        "value": 68.3,
+        "value": 71.5,
         "d": 156,
-        "n": 107,
-        "rel_pct": -14.6,
+        "n": 112,
+        "rel_pct": -10.6,
         "band": -2
        },
        {
         "month": "2026-03",
-        "value": 66.6,
+        "value": 69.4,
         "d": 148,
-        "n": 99,
-        "rel_pct": -16.8,
+        "n": 103,
+        "rel_pct": -13.2,
         "band": -2
        },
        {
         "month": "2026-04",
-        "value": 68.1,
+        "value": 70.2,
         "d": 162,
-        "n": 110,
-        "rel_pct": -14.9,
+        "n": 114,
+        "rel_pct": -12.2,
         "band": -2
        },
        {
         "month": "2026-05",
-        "value": 69.1,
+        "value": 70.4,
         "d": 132,
-        "n": 91,
-        "rel_pct": -13.6,
+        "n": 93,
+        "rel_pct": -12,
         "band": -2
        },
        {
         "month": "2026-06",
-        "value": 66.8,
+        "value": 67.1,
         "d": 174,
-        "n": 116,
-        "rel_pct": -16.5,
+        "n": 117,
+        "rel_pct": -16.1,
         "band": -2
        }
       ],
@@ -20415,146 +20424,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 85.6,
+        "value": 81.4,
         "d": 1879,
-        "n": 1608,
-        "rel_pct": -4.9,
+        "n": 1530,
+        "rel_pct": -9.6,
         "band": -1
        },
        {
         "month": "2025-02",
-        "value": 83,
+        "value": 78.7,
         "d": 1674,
-        "n": 1389,
-        "rel_pct": -7.8,
-        "band": -1
+        "n": 1317,
+        "rel_pct": -12.6,
+        "band": -2
        },
        {
         "month": "2025-03",
-        "value": 87.3,
+        "value": 83.3,
         "d": 1976,
-        "n": 1725,
-        "rel_pct": -3,
+        "n": 1646,
+        "rel_pct": -7.4,
         "band": -1
        },
        {
         "month": "2025-04",
-        "value": 86.7,
+        "value": 83.2,
         "d": 1351,
-        "n": 1171,
-        "rel_pct": -3.7,
+        "n": 1124,
+        "rel_pct": -7.6,
         "band": -1
        },
        {
         "month": "2025-05",
-        "value": 85.6,
+        "value": 82.9,
         "d": 1282,
-        "n": 1097,
-        "rel_pct": -4.9,
+        "n": 1063,
+        "rel_pct": -7.9,
         "band": -1
        },
        {
         "month": "2025-06",
-        "value": 83.5,
+        "value": 81.9,
         "d": 1257,
-        "n": 1050,
-        "rel_pct": -7.2,
+        "n": 1029,
+        "rel_pct": -9,
         "band": -1
        },
        {
         "month": "2025-07",
-        "value": 82.4,
+        "value": 82.1,
         "d": 1685,
-        "n": 1388,
-        "rel_pct": -8.4,
+        "n": 1383,
+        "rel_pct": -8.8,
         "band": -1
        },
        {
         "month": "2025-08",
-        "value": 85.4,
+        "value": 86.4,
         "d": 1699,
-        "n": 1451,
-        "rel_pct": -5.1,
+        "n": 1468,
+        "rel_pct": -4,
         "band": -1
        },
        {
         "month": "2025-09",
-        "value": 84.4,
+        "value": 86.6,
         "d": 1669,
-        "n": 1409,
-        "rel_pct": -6.2,
+        "n": 1445,
+        "rel_pct": -3.8,
         "band": -1
        },
        {
         "month": "2025-10",
-        "value": 84.3,
+        "value": 87.7,
         "d": 2008,
-        "n": 1693,
-        "rel_pct": -6.3,
+        "n": 1761,
+        "rel_pct": -2.6,
         "band": -1
        },
        {
         "month": "2025-11",
-        "value": 80.4,
+        "value": 84.8,
         "d": 1335,
-        "n": 1073,
-        "rel_pct": -10.7,
-        "band": -2
+        "n": 1132,
+        "rel_pct": -5.8,
+        "band": -1
        },
        {
         "month": "2025-12",
-        "value": 80.1,
+        "value": 85.1,
         "d": 1550,
-        "n": 1242,
-        "rel_pct": -11,
-        "band": -2
+        "n": 1319,
+        "rel_pct": -5.4,
+        "band": -1
        },
        {
         "month": "2026-01",
-        "value": 78,
+        "value": 83.4,
         "d": 1835,
-        "n": 1431,
-        "rel_pct": -13.3,
-        "band": -2
+        "n": 1530,
+        "rel_pct": -7.3,
+        "band": -1
        },
        {
         "month": "2026-02",
-        "value": 77.7,
+        "value": 83.1,
         "d": 1434,
-        "n": 1114,
-        "rel_pct": -13.7,
-        "band": -2
+        "n": 1192,
+        "rel_pct": -7.7,
+        "band": -1
        },
        {
         "month": "2026-03",
-        "value": 80.9,
+        "value": 86,
         "d": 1716,
-        "n": 1388,
-        "rel_pct": -10.1,
-        "band": -2
+        "n": 1476,
+        "rel_pct": -4.4,
+        "band": -1
        },
        {
         "month": "2026-04",
-        "value": 78.8,
+        "value": 83.1,
         "d": 1818,
-        "n": 1433,
-        "rel_pct": -12.4,
-        "band": -2
+        "n": 1511,
+        "rel_pct": -7.7,
+        "band": -1
        },
        {
         "month": "2026-05",
-        "value": 79.3,
+        "value": 82.7,
         "d": 1875,
-        "n": 1487,
-        "rel_pct": -11.9,
-        "band": -2
+        "n": 1551,
+        "rel_pct": -8.1,
+        "band": -1
        },
        {
         "month": "2026-06",
-        "value": 83.4,
+        "value": 85.5,
         "d": 1296,
-        "n": 1081,
-        "rel_pct": -7.3,
+        "n": 1108,
+        "rel_pct": -5,
         "band": -1
        }
       ],
@@ -20571,147 +20580,147 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 47.9,
-        "d": 333,
-        "n": 160,
-        "rel_pct": -4.2,
-        "band": -1
-       },
-       {
-        "month": "2025-02",
-        "value": 47,
-        "d": 292,
-        "n": 137,
-        "rel_pct": -6,
-        "band": -1
-       },
-       {
-        "month": "2025-03",
-        "value": 49.6,
-        "d": 375,
-        "n": 186,
-        "rel_pct": -0.8,
-        "band": 0
-       },
-       {
-        "month": "2025-04",
-        "value": 48.3,
-        "d": 262,
-        "n": 127,
-        "rel_pct": -3.4,
-        "band": -1
-       },
-       {
-        "month": "2025-05",
-        "value": 46.9,
-        "d": 235,
-        "n": 110,
-        "rel_pct": -6.2,
-        "band": -1
-       },
-       {
-        "month": "2025-06",
-        "value": 47.2,
-        "d": 306,
-        "n": 144,
-        "rel_pct": -5.6,
-        "band": -1
-       },
-       {
-        "month": "2025-07",
-        "value": 49.1,
-        "d": 228,
-        "n": 112,
-        "rel_pct": -1.8,
-        "band": -1
-       },
-       {
-        "month": "2025-08",
-        "value": 46.3,
-        "d": 358,
-        "n": 166,
-        "rel_pct": -7.4,
-        "band": -1
-       },
-       {
-        "month": "2025-09",
-        "value": 46.3,
-        "d": 289,
-        "n": 134,
-        "rel_pct": -7.4,
-        "band": -1
-       },
-       {
-        "month": "2025-10",
-        "value": 46.7,
-        "d": 337,
-        "n": 157,
-        "rel_pct": -6.6,
-        "band": -1
-       },
-       {
-        "month": "2025-11",
-        "value": 47,
-        "d": 348,
-        "n": 164,
-        "rel_pct": -6,
-        "band": -1
-       },
-       {
-        "month": "2025-12",
-        "value": 44.5,
-        "d": 295,
-        "n": 131,
-        "rel_pct": -11,
-        "band": -2
-       },
-       {
-        "month": "2026-01",
-        "value": 46.7,
-        "d": 311,
-        "n": 145,
-        "rel_pct": -6.6,
-        "band": -1
-       },
-       {
-        "month": "2026-02",
-        "value": 45.2,
-        "d": 244,
-        "n": 110,
-        "rel_pct": -9.6,
-        "band": -1
-       },
-       {
-        "month": "2026-03",
-        "value": 45.8,
-        "d": 334,
-        "n": 153,
-        "rel_pct": -8.4,
-        "band": -1
-       },
-       {
-        "month": "2026-04",
         "value": 44.6,
-        "d": 232,
-        "n": 103,
+        "d": 333,
+        "n": 149,
         "rel_pct": -10.8,
         "band": -2
        },
        {
-        "month": "2026-05",
-        "value": 45.9,
-        "d": 226,
-        "n": 104,
-        "rel_pct": -8.2,
+        "month": "2025-02",
+        "value": 43.5,
+        "d": 292,
+        "n": 127,
+        "rel_pct": -13,
+        "band": -2
+       },
+       {
+        "month": "2025-03",
+        "value": 46.4,
+        "d": 375,
+        "n": 174,
+        "rel_pct": -7.2,
         "band": -1
        },
        {
-        "month": "2026-06",
-        "value": 45.4,
-        "d": 260,
-        "n": 118,
-        "rel_pct": -9.2,
+        "month": "2025-04",
+        "value": 45.7,
+        "d": 262,
+        "n": 120,
+        "rel_pct": -8.6,
         "band": -1
+       },
+       {
+        "month": "2025-05",
+        "value": 45.2,
+        "d": 235,
+        "n": 106,
+        "rel_pct": -9.6,
+        "band": -1
+       },
+       {
+        "month": "2025-06",
+        "value": 46.5,
+        "d": 306,
+        "n": 142,
+        "rel_pct": -7,
+        "band": -1
+       },
+       {
+        "month": "2025-07",
+        "value": 49.6,
+        "d": 228,
+        "n": 113,
+        "rel_pct": -0.8,
+        "band": 0
+       },
+       {
+        "month": "2025-08",
+        "value": 47.7,
+        "d": 358,
+        "n": 171,
+        "rel_pct": -4.6,
+        "band": -1
+       },
+       {
+        "month": "2025-09",
+        "value": 48.5,
+        "d": 289,
+        "n": 140,
+        "rel_pct": -3,
+        "band": -1
+       },
+       {
+        "month": "2025-10",
+        "value": 49.3,
+        "d": 337,
+        "n": 166,
+        "rel_pct": -1.4,
+        "band": -1
+       },
+       {
+        "month": "2025-11",
+        "value": 49.8,
+        "d": 348,
+        "n": 173,
+        "rel_pct": -0.4,
+        "band": 0
+       },
+       {
+        "month": "2025-12",
+        "value": 47.1,
+        "d": 295,
+        "n": 139,
+        "rel_pct": -5.8,
+        "band": -1
+       },
+       {
+        "month": "2026-01",
+        "value": 48.7,
+        "d": 311,
+        "n": 151,
+        "rel_pct": -2.6,
+        "band": -1
+       },
+       {
+        "month": "2026-02",
+        "value": 46.5,
+        "d": 244,
+        "n": 113,
+        "rel_pct": -7,
+        "band": -1
+       },
+       {
+        "month": "2026-03",
+        "value": 46.2,
+        "d": 334,
+        "n": 154,
+        "rel_pct": -7.6,
+        "band": -1
+       },
+       {
+        "month": "2026-04",
+        "value": 44.3,
+        "d": 232,
+        "n": 103,
+        "rel_pct": -11.4,
+        "band": -2
+       },
+       {
+        "month": "2026-05",
+        "value": 45,
+        "d": 226,
+        "n": 102,
+        "rel_pct": -10,
+        "band": -2
+       },
+       {
+        "month": "2026-06",
+        "value": 44,
+        "d": 260,
+        "n": 114,
+        "rel_pct": -12,
+        "band": -2
        }
       ],
       "delta": -3.2,
@@ -20754,146 +20763,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 11.6,
+        "value": 11.4,
         "d": 1110,
         "n": null,
-        "rel_pct": 51.7,
+        "rel_pct": 52.5,
         "band": 4
        },
        {
         "month": "2025-02",
-        "value": 11.5,
+        "value": 11.2,
         "d": 1331,
         "n": null,
-        "rel_pct": 52.1,
+        "rel_pct": 53.3,
         "band": 4
        },
        {
         "month": "2025-03",
-        "value": 11,
+        "value": 10.6,
         "d": 1160,
         "n": null,
-        "rel_pct": 54.2,
+        "rel_pct": 55.8,
         "band": 4
        },
        {
         "month": "2025-04",
-        "value": 11.5,
-        "d": 1731,
-        "n": null,
-        "rel_pct": 52.1,
-        "band": 4
-       },
-       {
-        "month": "2025-05",
-        "value": 11,
-        "d": 1436,
-        "n": null,
-        "rel_pct": 54.2,
-        "band": 4
-       },
-       {
-        "month": "2025-06",
-        "value": 11,
-        "d": 1522,
-        "n": null,
-        "rel_pct": 54.2,
-        "band": 4
-       },
-       {
-        "month": "2025-07",
-        "value": 11,
-        "d": 1864,
-        "n": null,
-        "rel_pct": 54.2,
-        "band": 4
-       },
-       {
-        "month": "2025-08",
         "value": 11.1,
-        "d": 1189,
+        "d": 1731,
         "n": null,
         "rel_pct": 53.8,
         "band": 4
        },
        {
-        "month": "2025-09",
+        "month": "2025-05",
+        "value": 10.6,
+        "d": 1436,
+        "n": null,
+        "rel_pct": 55.8,
+        "band": 4
+       },
+       {
+        "month": "2025-06",
+        "value": 10.6,
+        "d": 1522,
+        "n": null,
+        "rel_pct": 55.8,
+        "band": 4
+       },
+       {
+        "month": "2025-07",
+        "value": 10.7,
+        "d": 1864,
+        "n": null,
+        "rel_pct": 55.4,
+        "band": 4
+       },
+       {
+        "month": "2025-08",
         "value": 11,
-        "d": 1704,
+        "d": 1189,
         "n": null,
         "rel_pct": 54.2,
+        "band": 4
+       },
+       {
+        "month": "2025-09",
+        "value": 11.1,
+        "d": 1704,
+        "n": null,
+        "rel_pct": 53.8,
         "band": 4
        },
        {
         "month": "2025-10",
-        "value": 10.5,
+        "value": 10.7,
         "d": 1751,
         "n": null,
-        "rel_pct": 56.3,
+        "rel_pct": 55.4,
         "band": 4
        },
        {
         "month": "2025-11",
-        "value": 10.6,
-        "d": 1116,
-        "n": null,
-        "rel_pct": 55.8,
-        "band": 4
-       },
-       {
-        "month": "2025-12",
-        "value": 10.4,
-        "d": 1554,
-        "n": null,
-        "rel_pct": 56.7,
-        "band": 4
-       },
-       {
-        "month": "2026-01",
-        "value": 10.4,
-        "d": 1577,
-        "n": null,
-        "rel_pct": 56.7,
-        "band": 4
-       },
-       {
-        "month": "2026-02",
-        "value": 10.7,
-        "d": 1345,
-        "n": null,
-        "rel_pct": 55.4,
-        "band": 4
-       },
-       {
-        "month": "2026-03",
-        "value": 10.5,
-        "d": 1295,
-        "n": null,
-        "rel_pct": 56.3,
-        "band": 4
-       },
-       {
-        "month": "2026-04",
-        "value": 10.7,
-        "d": 1490,
-        "n": null,
-        "rel_pct": 55.4,
-        "band": 4
-       },
-       {
-        "month": "2026-05",
         "value": 11,
-        "d": 1757,
+        "d": 1116,
         "n": null,
         "rel_pct": 54.2,
         "band": 4
        },
        {
+        "month": "2025-12",
+        "value": 10.9,
+        "d": 1554,
+        "n": null,
+        "rel_pct": 54.6,
+        "band": 4
+       },
+       {
+        "month": "2026-01",
+        "value": 11,
+        "d": 1577,
+        "n": null,
+        "rel_pct": 54.2,
+        "band": 4
+       },
+       {
+        "month": "2026-02",
+        "value": 11.3,
+        "d": 1345,
+        "n": null,
+        "rel_pct": 52.9,
+        "band": 4
+       },
+       {
+        "month": "2026-03",
+        "value": 11.1,
+        "d": 1295,
+        "n": null,
+        "rel_pct": 53.8,
+        "band": 4
+       },
+       {
+        "month": "2026-04",
+        "value": 11.1,
+        "d": 1490,
+        "n": null,
+        "rel_pct": 53.8,
+        "band": 4
+       },
+       {
+        "month": "2026-05",
+        "value": 11.3,
+        "d": 1757,
+        "n": null,
+        "rel_pct": 52.9,
+        "band": 4
+       },
+       {
         "month": "2026-06",
-        "value": 10.6,
+        "value": 10.7,
         "d": 1700,
         "n": null,
-        "rel_pct": 55.8,
+        "rel_pct": 55.4,
         "band": 4
        }
       ],
@@ -20910,146 +20919,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 90.8,
+        "value": 88.4,
         "d": 1332,
-        "n": 1209,
-        "rel_pct": 0.9,
-        "band": 0
+        "n": 1177,
+        "rel_pct": -1.8,
+        "band": -1
        },
        {
         "month": "2025-02",
-        "value": 96.9,
+        "value": 93.5,
         "d": 1478,
-        "n": 1432,
-        "rel_pct": 7.7,
+        "n": 1382,
+        "rel_pct": 3.9,
         "band": 1
        },
        {
         "month": "2025-03",
-        "value": 92.9,
+        "value": 88.6,
         "d": 1077,
-        "n": 1001,
-        "rel_pct": 3.2,
-        "band": 1
+        "n": 954,
+        "rel_pct": -1.6,
+        "band": -1
        },
        {
         "month": "2025-04",
-        "value": 95.1,
+        "value": 90.4,
         "d": 1527,
-        "n": 1452,
-        "rel_pct": 5.7,
-        "band": 1
+        "n": 1380,
+        "rel_pct": 0.4,
+        "band": 0
        },
        {
         "month": "2025-05",
-        "value": 90.6,
+        "value": 85.9,
         "d": 1558,
-        "n": 1412,
-        "rel_pct": 0.7,
-        "band": 0
+        "n": 1338,
+        "rel_pct": -4.6,
+        "band": -1
        },
        {
         "month": "2025-06",
-        "value": 92.7,
+        "value": 88.4,
         "d": 1570,
-        "n": 1455,
-        "rel_pct": 3,
-        "band": 1
+        "n": 1388,
+        "rel_pct": -1.8,
+        "band": -1
        },
        {
         "month": "2025-07",
-        "value": 94.3,
+        "value": 90.8,
         "d": 1442,
-        "n": 1360,
-        "rel_pct": 4.8,
-        "band": 1
+        "n": 1309,
+        "rel_pct": 0.9,
+        "band": 0
        },
        {
         "month": "2025-08",
-        "value": 90.6,
-        "d": 1388,
-        "n": 1258,
-        "rel_pct": 0.7,
-        "band": 0
-       },
-       {
-        "month": "2025-09",
-        "value": 86.5,
-        "d": 1086,
-        "n": 939,
-        "rel_pct": -3.9,
-        "band": -1
-       },
-       {
-        "month": "2025-10",
-        "value": 90.5,
-        "d": 1456,
-        "n": 1318,
-        "rel_pct": 0.6,
-        "band": 0
-       },
-       {
-        "month": "2025-11",
-        "value": 86.8,
-        "d": 1611,
-        "n": 1398,
-        "rel_pct": -3.6,
-        "band": -1
-       },
-       {
-        "month": "2025-12",
-        "value": 86.9,
-        "d": 1112,
-        "n": 966,
-        "rel_pct": -3.4,
-        "band": -1
-       },
-       {
-        "month": "2026-01",
-        "value": 89.2,
-        "d": 1771,
-        "n": 1580,
-        "rel_pct": -0.9,
-        "band": 0
-       },
-       {
-        "month": "2026-02",
-        "value": 86.2,
-        "d": 1330,
-        "n": 1146,
-        "rel_pct": -4.2,
-        "band": -1
-       },
-       {
-        "month": "2026-03",
-        "value": 85.7,
-        "d": 1056,
-        "n": 905,
-        "rel_pct": -4.8,
-        "band": -1
-       },
-       {
-        "month": "2026-04",
-        "value": 86,
-        "d": 1435,
-        "n": 1234,
-        "rel_pct": -4.4,
-        "band": -1
-       },
-       {
-        "month": "2026-05",
         "value": 88.1,
-        "d": 1304,
-        "n": 1149,
+        "d": 1388,
+        "n": 1223,
         "rel_pct": -2.1,
         "band": -1
        },
        {
+        "month": "2025-09",
+        "value": 85.3,
+        "d": 1086,
+        "n": 926,
+        "rel_pct": -5.2,
+        "band": -1
+       },
+       {
+        "month": "2025-10",
+        "value": 90.8,
+        "d": 1456,
+        "n": 1322,
+        "rel_pct": 0.9,
+        "band": 0
+       },
+       {
+        "month": "2025-11",
+        "value": 88.6,
+        "d": 1611,
+        "n": 1427,
+        "rel_pct": -1.6,
+        "band": -1
+       },
+       {
+        "month": "2025-12",
+        "value": 90,
+        "d": 1112,
+        "n": 1001,
+        "rel_pct": 0,
+        "band": 0
+       },
+       {
+        "month": "2026-01",
+        "value": 93.2,
+        "d": 1771,
+        "n": 1651,
+        "rel_pct": 3.6,
+        "band": 1
+       },
+       {
+        "month": "2026-02",
+        "value": 90.9,
+        "d": 1330,
+        "n": 1209,
+        "rel_pct": 1,
+        "band": 1
+       },
+       {
+        "month": "2026-03",
+        "value": 90.7,
+        "d": 1056,
+        "n": 958,
+        "rel_pct": 0.8,
+        "band": 0
+       },
+       {
+        "month": "2026-04",
+        "value": 90.8,
+        "d": 1435,
+        "n": 1303,
+        "rel_pct": 0.9,
+        "band": 0
+       },
+       {
+        "month": "2026-05",
+        "value": 92.3,
+        "d": 1304,
+        "n": 1204,
+        "rel_pct": 2.6,
+        "band": 1
+       },
+       {
         "month": "2026-06",
-        "value": 91.8,
+        "value": 95,
         "d": 1095,
-        "n": 1005,
-        "rel_pct": 2,
+        "n": 1040,
+        "rel_pct": 5.6,
         "band": 1
        }
       ],
@@ -21066,146 +21075,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 95.4,
+        "value": 92.4,
         "d": 1064,
-        "n": 1015,
-        "rel_pct": 6,
+        "n": 983,
+        "rel_pct": 2.7,
         "band": 1
        },
        {
         "month": "2025-02",
-        "value": 93.4,
+        "value": 89.2,
         "d": 1823,
-        "n": 1703,
-        "rel_pct": 3.8,
-        "band": 1
+        "n": 1626,
+        "rel_pct": -0.9,
+        "band": 0
        },
        {
         "month": "2025-03",
-        "value": 92.6,
+        "value": 87.4,
         "d": 1275,
-        "n": 1181,
-        "rel_pct": 2.9,
-        "band": 1
+        "n": 1114,
+        "rel_pct": -2.9,
+        "band": -1
        },
        {
         "month": "2025-04",
-        "value": 97.5,
+        "value": 91.8,
         "d": 1463,
-        "n": 1426,
-        "rel_pct": 8.3,
+        "n": 1343,
+        "rel_pct": 2,
         "band": 1
        },
        {
         "month": "2025-05",
-        "value": 92.5,
+        "value": 86.8,
         "d": 1598,
-        "n": 1478,
-        "rel_pct": 2.8,
-        "band": 1
+        "n": 1387,
+        "rel_pct": -3.6,
+        "band": -1
        },
        {
         "month": "2025-06",
-        "value": 92.7,
+        "value": 87.3,
         "d": 1532,
-        "n": 1420,
-        "rel_pct": 3,
-        "band": 1
+        "n": 1337,
+        "rel_pct": -3,
+        "band": -1
        },
        {
         "month": "2025-07",
-        "value": 91.7,
+        "value": 87,
         "d": 1871,
-        "n": 1716,
-        "rel_pct": 1.9,
-        "band": 1
+        "n": 1628,
+        "rel_pct": -3.3,
+        "band": -1
        },
        {
         "month": "2025-08",
-        "value": 92.6,
-        "d": 1407,
-        "n": 1303,
-        "rel_pct": 2.9,
-        "band": 1
-       },
-       {
-        "month": "2025-09",
-        "value": 91.3,
-        "d": 1845,
-        "n": 1684,
-        "rel_pct": 1.4,
-        "band": 1
-       },
-       {
-        "month": "2025-10",
         "value": 88.9,
-        "d": 1387,
-        "n": 1233,
+        "d": 1407,
+        "n": 1251,
         "rel_pct": -1.2,
         "band": -1
        },
        {
+        "month": "2025-09",
+        "value": 88.9,
+        "d": 1845,
+        "n": 1640,
+        "rel_pct": -1.2,
+        "band": -1
+       },
+       {
+        "month": "2025-10",
+        "value": 87.8,
+        "d": 1387,
+        "n": 1218,
+        "rel_pct": -2.4,
+        "band": -1
+       },
+       {
         "month": "2025-11",
-        "value": 92.9,
+        "value": 93.1,
         "d": 1322,
-        "n": 1228,
-        "rel_pct": 3.2,
+        "n": 1231,
+        "rel_pct": 3.4,
         "band": 1
        },
        {
         "month": "2025-12",
-        "value": 88.5,
+        "value": 90,
         "d": 1144,
-        "n": 1012,
-        "rel_pct": -1.7,
-        "band": -1
+        "n": 1030,
+        "rel_pct": 0,
+        "band": 0
        },
        {
         "month": "2026-01",
-        "value": 91.3,
+        "value": 94,
         "d": 1203,
-        "n": 1098,
-        "rel_pct": 1.4,
+        "n": 1131,
+        "rel_pct": 4.4,
         "band": 1
        },
        {
         "month": "2026-02",
-        "value": 92.2,
+        "value": 95.8,
         "d": 1471,
-        "n": 1356,
-        "rel_pct": 2.4,
+        "n": 1409,
+        "rel_pct": 6.4,
         "band": 1
        },
        {
         "month": "2026-03",
-        "value": 88.3,
+        "value": 92.4,
         "d": 1792,
-        "n": 1582,
-        "rel_pct": -1.9,
-        "band": -1
+        "n": 1656,
+        "rel_pct": 2.7,
+        "band": 1
        },
        {
         "month": "2026-04",
-        "value": 91.7,
+        "value": 96.1,
         "d": 1200,
-        "n": 1100,
-        "rel_pct": 1.9,
+        "n": 1153,
+        "rel_pct": 6.8,
         "band": 1
        },
        {
         "month": "2026-05",
-        "value": 92.3,
+        "value": 96.7,
         "d": 1759,
-        "n": 1624,
-        "rel_pct": 2.6,
+        "n": 1701,
+        "rel_pct": 7.4,
         "band": 1
        },
        {
         "month": "2026-06",
-        "value": 91.7,
+        "value": 95.7,
         "d": 1646,
-        "n": 1509,
-        "rel_pct": 1.9,
+        "n": 1575,
+        "rel_pct": 6.3,
         "band": 1
        }
       ],
@@ -21222,146 +21231,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 86.3,
+        "value": 83.4,
         "d": 1653,
-        "n": 1427,
-        "rel_pct": 1.5,
-        "band": 1
+        "n": 1379,
+        "rel_pct": -1.9,
+        "band": -1
        },
        {
         "month": "2025-02",
-        "value": 83.8,
+        "value": 80.3,
         "d": 1221,
-        "n": 1023,
-        "rel_pct": -1.4,
+        "n": 980,
+        "rel_pct": -5.5,
         "band": -1
        },
        {
         "month": "2025-03",
-        "value": 86.5,
+        "value": 82.8,
         "d": 1771,
-        "n": 1532,
-        "rel_pct": 1.8,
-        "band": 1
+        "n": 1466,
+        "rel_pct": -2.6,
+        "band": -1
        },
        {
         "month": "2025-04",
-        "value": 85.9,
-        "d": 1847,
-        "n": 1587,
-        "rel_pct": 1.1,
-        "band": 1
-       },
-       {
-        "month": "2025-05",
-        "value": 83.5,
-        "d": 1304,
-        "n": 1089,
-        "rel_pct": -1.8,
-        "band": -1
-       },
-       {
-        "month": "2025-06",
-        "value": 87.2,
-        "d": 1587,
-        "n": 1384,
-        "rel_pct": 2.6,
-        "band": 1
-       },
-       {
-        "month": "2025-07",
-        "value": 83.6,
-        "d": 1338,
-        "n": 1119,
-        "rel_pct": -1.6,
-        "band": -1
-       },
-       {
-        "month": "2025-08",
-        "value": 83.7,
-        "d": 1729,
-        "n": 1447,
-        "rel_pct": -1.5,
-        "band": -1
-       },
-       {
-        "month": "2025-09",
-        "value": 83,
-        "d": 1846,
-        "n": 1532,
-        "rel_pct": -2.4,
-        "band": -1
-       },
-       {
-        "month": "2025-10",
-        "value": 84,
-        "d": 1126,
-        "n": 946,
-        "rel_pct": -1.2,
-        "band": -1
-       },
-       {
-        "month": "2025-11",
         "value": 82.1,
-        "d": 1706,
-        "n": 1401,
+        "d": 1847,
+        "n": 1516,
         "rel_pct": -3.4,
         "band": -1
        },
        {
+        "month": "2025-05",
+        "value": 80,
+        "d": 1304,
+        "n": 1043,
+        "rel_pct": -5.9,
+        "band": -1
+       },
+       {
+        "month": "2025-06",
+        "value": 84.2,
+        "d": 1587,
+        "n": 1336,
+        "rel_pct": -0.9,
+        "band": 0
+       },
+       {
+        "month": "2025-07",
+        "value": 81.4,
+        "d": 1338,
+        "n": 1089,
+        "rel_pct": -4.2,
+        "band": -1
+       },
+       {
+        "month": "2025-08",
+        "value": 82.3,
+        "d": 1729,
+        "n": 1423,
+        "rel_pct": -3.2,
+        "band": -1
+       },
+       {
+        "month": "2025-09",
+        "value": 82.5,
+        "d": 1846,
+        "n": 1523,
+        "rel_pct": -2.9,
+        "band": -1
+       },
+       {
+        "month": "2025-10",
+        "value": 84.4,
+        "d": 1126,
+        "n": 950,
+        "rel_pct": -0.7,
+        "band": 0
+       },
+       {
+        "month": "2025-11",
+        "value": 83.2,
+        "d": 1706,
+        "n": 1419,
+        "rel_pct": -2.1,
+        "band": -1
+       },
+       {
         "month": "2025-12",
-        "value": 78.8,
+        "value": 80.6,
         "d": 1381,
-        "n": 1088,
-        "rel_pct": -7.3,
+        "n": 1113,
+        "rel_pct": -5.2,
         "band": -1
        },
        {
         "month": "2026-01",
-        "value": 81.6,
+        "value": 83.8,
         "d": 1605,
-        "n": 1310,
-        "rel_pct": -4,
+        "n": 1345,
+        "rel_pct": -1.4,
         "band": -1
        },
        {
         "month": "2026-02",
-        "value": 81.2,
+        "value": 83.6,
         "d": 1295,
-        "n": 1052,
-        "rel_pct": -4.5,
+        "n": 1083,
+        "rel_pct": -1.6,
         "band": -1
        },
        {
         "month": "2026-03",
-        "value": 80.8,
+        "value": 83.2,
         "d": 1124,
-        "n": 908,
-        "rel_pct": -4.9,
+        "n": 935,
+        "rel_pct": -2.1,
         "band": -1
        },
        {
         "month": "2026-04",
-        "value": 78.9,
+        "value": 81.1,
         "d": 1632,
-        "n": 1288,
-        "rel_pct": -7.2,
+        "n": 1324,
+        "rel_pct": -4.6,
         "band": -1
        },
        {
         "month": "2026-05",
-        "value": 84.1,
+        "value": 85.9,
         "d": 1084,
-        "n": 912,
-        "rel_pct": -1.1,
-        "band": -1
+        "n": 931,
+        "rel_pct": 1.1,
+        "band": 1
        },
        {
         "month": "2026-06",
-        "value": 82.8,
+        "value": 84.1,
         "d": 1814,
-        "n": 1502,
-        "rel_pct": -2.6,
+        "n": 1526,
+        "rel_pct": -1.1,
         "band": -1
        }
       ],
@@ -21378,147 +21387,147 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 93.6,
+        "value": 92.8,
         "d": 1608,
-        "n": 1505,
-        "rel_pct": 6.4,
+        "n": 1492,
+        "rel_pct": 5.5,
         "band": 1
        },
        {
         "month": "2025-02",
-        "value": 92.9,
+        "value": 92.5,
         "d": 1877,
-        "n": 1744,
-        "rel_pct": 5.6,
+        "n": 1736,
+        "rel_pct": 5.1,
         "band": 1
        },
        {
         "month": "2025-03",
-        "value": 93.1,
+        "value": 92.9,
         "d": 1071,
-        "n": 997,
-        "rel_pct": 5.8,
+        "n": 995,
+        "rel_pct": 5.6,
         "band": 1
        },
        {
         "month": "2025-04",
-        "value": 91.7,
+        "value": 91.6,
         "d": 1216,
-        "n": 1115,
-        "rel_pct": 4.2,
+        "n": 1114,
+        "rel_pct": 4.1,
         "band": 1
        },
        {
         "month": "2025-05",
-        "value": 90.5,
+        "value": 90.4,
         "d": 1275,
-        "n": 1154,
-        "rel_pct": 2.8,
+        "n": 1153,
+        "rel_pct": 2.7,
         "band": 1
        },
        {
         "month": "2025-06",
-        "value": 91.2,
+        "value": 90.9,
         "d": 1671,
-        "n": 1524,
-        "rel_pct": 3.6,
+        "n": 1519,
+        "rel_pct": 3.3,
         "band": 1
        },
        {
         "month": "2025-07",
-        "value": 87.7,
+        "value": 87.2,
         "d": 1525,
-        "n": 1337,
-        "rel_pct": -0.3,
+        "n": 1330,
+        "rel_pct": -0.9,
         "band": 0
        },
        {
         "month": "2025-08",
-        "value": 86.1,
+        "value": 85.4,
         "d": 1503,
-        "n": 1294,
-        "rel_pct": -2.2,
+        "n": 1284,
+        "rel_pct": -3,
         "band": -1
        },
        {
         "month": "2025-09",
-        "value": 84.9,
+        "value": 84.2,
         "d": 1731,
-        "n": 1470,
-        "rel_pct": -3.5,
+        "n": 1458,
+        "rel_pct": -4.3,
         "band": -1
        },
        {
         "month": "2025-10",
-        "value": 84.8,
+        "value": 84.2,
         "d": 1568,
-        "n": 1330,
-        "rel_pct": -3.6,
+        "n": 1320,
+        "rel_pct": -4.3,
         "band": -1
        },
        {
         "month": "2025-11",
-        "value": 85.5,
+        "value": 85.3,
         "d": 1199,
-        "n": 1025,
-        "rel_pct": -2.8,
+        "n": 1023,
+        "rel_pct": -3.1,
         "band": -1
        },
        {
         "month": "2025-12",
-        "value": 86.7,
+        "value": 87,
         "d": 1593,
-        "n": 1381,
-        "rel_pct": -1.5,
+        "n": 1386,
+        "rel_pct": -1.1,
         "band": -1
        },
        {
         "month": "2026-01",
-        "value": 85.2,
+        "value": 86.1,
         "d": 1573,
-        "n": 1340,
-        "rel_pct": -3.2,
+        "n": 1354,
+        "rel_pct": -2.2,
         "band": -1
        },
        {
         "month": "2026-02",
-        "value": 85.7,
+        "value": 87.3,
         "d": 1720,
-        "n": 1474,
-        "rel_pct": -2.6,
-        "band": -1
+        "n": 1502,
+        "rel_pct": -0.8,
+        "band": 0
        },
        {
         "month": "2026-03",
-        "value": 84.5,
+        "value": 86.8,
         "d": 1343,
-        "n": 1135,
-        "rel_pct": -4,
+        "n": 1166,
+        "rel_pct": -1.4,
         "band": -1
        },
        {
         "month": "2026-04",
-        "value": 83.6,
+        "value": 86.3,
         "d": 1645,
-        "n": 1375,
-        "rel_pct": -5,
+        "n": 1420,
+        "rel_pct": -1.9,
         "band": -1
        },
        {
         "month": "2026-05",
-        "value": 84.9,
+        "value": 87.8,
         "d": 1845,
-        "n": 1566,
-        "rel_pct": -3.5,
-        "band": -1
+        "n": 1620,
+        "rel_pct": -0.2,
+        "band": 0
        },
        {
         "month": "2026-06",
-        "value": 86.2,
+        "value": 88.9,
         "d": 1558,
-        "n": 1343,
-        "rel_pct": -2,
-        "band": -1
+        "n": 1385,
+        "rel_pct": 1,
+        "band": 1
        }
       ],
       "delta": 3.8,
@@ -21534,146 +21543,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 86.2,
+        "value": 84.2,
         "d": 182,
-        "n": 157,
-        "rel_pct": 1.4,
-        "band": 1
+        "n": 153,
+        "rel_pct": -0.9,
+        "band": 0
        },
        {
         "month": "2025-02",
-        "value": 84,
+        "value": 82.8,
         "d": 217,
-        "n": 182,
-        "rel_pct": -1.2,
+        "n": 180,
+        "rel_pct": -2.6,
         "band": -1
        },
        {
         "month": "2025-03",
-        "value": 87.1,
+        "value": 86.8,
         "d": 280,
-        "n": 244,
-        "rel_pct": 2.5,
+        "n": 243,
+        "rel_pct": 2.1,
         "band": 1
        },
        {
         "month": "2025-04",
-        "value": 86.9,
+        "value": 87.5,
         "d": 215,
-        "n": 187,
-        "rel_pct": 2.2,
+        "n": 188,
+        "rel_pct": 2.9,
         "band": 1
        },
        {
         "month": "2025-05",
-        "value": 82.7,
+        "value": 84.2,
         "d": 210,
-        "n": 174,
-        "rel_pct": -2.7,
-        "band": -1
+        "n": 177,
+        "rel_pct": -0.9,
+        "band": 0
        },
        {
         "month": "2025-06",
-        "value": 82.1,
-        "d": 284,
-        "n": 233,
-        "rel_pct": -3.4,
-        "band": -1
-       },
-       {
-        "month": "2025-07",
-        "value": 83.9,
-        "d": 181,
-        "n": 152,
-        "rel_pct": -1.3,
-        "band": -1
-       },
-       {
-        "month": "2025-08",
         "value": 84.3,
-        "d": 302,
-        "n": 255,
+        "d": 284,
+        "n": 239,
         "rel_pct": -0.8,
         "band": 0
        },
        {
+        "month": "2025-07",
+        "value": 86.6,
+        "d": 181,
+        "n": 157,
+        "rel_pct": 1.9,
+        "band": 1
+       },
+       {
+        "month": "2025-08",
+        "value": 87.3,
+        "d": 302,
+        "n": 264,
+        "rel_pct": 2.7,
+        "band": 1
+       },
+       {
         "month": "2025-09",
-        "value": 80.9,
+        "value": 83.8,
         "d": 217,
-        "n": 176,
-        "rel_pct": -4.8,
+        "n": 182,
+        "rel_pct": -1.4,
         "band": -1
        },
        {
         "month": "2025-10",
-        "value": 79,
+        "value": 81.6,
         "d": 248,
-        "n": 196,
-        "rel_pct": -7.1,
+        "n": 202,
+        "rel_pct": -4,
         "band": -1
        },
        {
         "month": "2025-11",
-        "value": 79.4,
+        "value": 81.5,
         "d": 224,
-        "n": 178,
-        "rel_pct": -6.6,
+        "n": 183,
+        "rel_pct": -4.1,
         "band": -1
        },
        {
         "month": "2025-12",
-        "value": 81.3,
+        "value": 82.7,
         "d": 184,
-        "n": 150,
-        "rel_pct": -4.4,
+        "n": 152,
+        "rel_pct": -2.7,
         "band": -1
        },
        {
         "month": "2026-01",
-        "value": 79,
+        "value": 79.6,
         "d": 295,
-        "n": 233,
-        "rel_pct": -7.1,
+        "n": 235,
+        "rel_pct": -6.4,
         "band": -1
        },
        {
         "month": "2026-02",
-        "value": 81.8,
+        "value": 81.6,
         "d": 293,
-        "n": 240,
-        "rel_pct": -3.8,
+        "n": 239,
+        "rel_pct": -4,
         "band": -1
        },
        {
         "month": "2026-03",
-        "value": 76.9,
+        "value": 75.8,
         "d": 237,
-        "n": 182,
-        "rel_pct": -9.5,
-        "band": -1
+        "n": 180,
+        "rel_pct": -10.8,
+        "band": -2
        },
        {
         "month": "2026-04",
-        "value": 80.6,
+        "value": 78.9,
         "d": 217,
-        "n": 175,
-        "rel_pct": -5.2,
+        "n": 171,
+        "rel_pct": -7.2,
         "band": -1
        },
        {
         "month": "2026-05",
-        "value": 80.1,
+        "value": 77.8,
         "d": 238,
-        "n": 191,
-        "rel_pct": -5.8,
+        "n": 185,
+        "rel_pct": -8.5,
         "band": -1
        },
        {
         "month": "2026-06",
-        "value": 83.7,
+        "value": 81.1,
         "d": 191,
-        "n": 160,
-        "rel_pct": -1.5,
+        "n": 155,
+        "rel_pct": -4.6,
         "band": -1
        }
       ],
@@ -21690,146 +21699,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 89.3,
+        "value": 86.2,
         "d": 118,
-        "n": 105,
-        "rel_pct": 11.6,
-        "band": 2
+        "n": 102,
+        "rel_pct": 7.8,
+        "band": 1
        },
        {
         "month": "2025-02",
-        "value": 85.9,
+        "value": 83,
         "d": 103,
-        "n": 88,
-        "rel_pct": 7.4,
+        "n": 85,
+        "rel_pct": 3.8,
         "band": 1
        },
        {
         "month": "2025-03",
-        "value": 85.9,
+        "value": 83.4,
         "d": 108,
-        "n": 93,
-        "rel_pct": 7.4,
+        "n": 90,
+        "rel_pct": 4.3,
         "band": 1
        },
        {
         "month": "2025-04",
-        "value": 88,
+        "value": 86.2,
         "d": 131,
-        "n": 115,
-        "rel_pct": 10,
-        "band": 2
+        "n": 113,
+        "rel_pct": 7.8,
+        "band": 1
        },
        {
         "month": "2025-05",
-        "value": 84.7,
+        "value": 83.8,
         "d": 108,
         "n": 91,
-        "rel_pct": 5.9,
+        "rel_pct": 4.7,
         "band": 1
        },
        {
         "month": "2025-06",
-        "value": 84.1,
+        "value": 84.2,
         "d": 99,
         "n": 83,
-        "rel_pct": 5.1,
+        "rel_pct": 5.3,
         "band": 1
        },
        {
         "month": "2025-07",
-        "value": 83.6,
+        "value": 84.6,
         "d": 125,
-        "n": 105,
-        "rel_pct": 4.5,
+        "n": 106,
+        "rel_pct": 5.7,
         "band": 1
        },
        {
         "month": "2025-08",
-        "value": 82.3,
+        "value": 84.3,
         "d": 113,
-        "n": 93,
-        "rel_pct": 2.9,
+        "n": 95,
+        "rel_pct": 5.4,
         "band": 1
        },
        {
         "month": "2025-09",
-        "value": 83.5,
+        "value": 86.2,
         "d": 111,
-        "n": 93,
-        "rel_pct": 4.4,
+        "n": 96,
+        "rel_pct": 7.8,
         "band": 1
        },
        {
         "month": "2025-10",
-        "value": 82.5,
+        "value": 85.9,
         "d": 114,
-        "n": 94,
-        "rel_pct": 3.1,
+        "n": 98,
+        "rel_pct": 7.4,
         "band": 1
        },
        {
         "month": "2025-11",
-        "value": 82.3,
+        "value": 86,
         "d": 88,
-        "n": 72,
-        "rel_pct": 2.9,
+        "n": 76,
+        "rel_pct": 7.5,
         "band": 1
        },
        {
         "month": "2025-12",
-        "value": 79.1,
+        "value": 82.9,
         "d": 129,
-        "n": 102,
-        "rel_pct": -1.1,
-        "band": -1
+        "n": 107,
+        "rel_pct": 3.6,
+        "band": 1
        },
        {
         "month": "2026-01",
-        "value": 80.5,
+        "value": 84.1,
         "d": 79,
-        "n": 64,
-        "rel_pct": 0.6,
-        "band": 0
+        "n": 66,
+        "rel_pct": 5.1,
+        "band": 1
        },
        {
         "month": "2026-02",
-        "value": 80.3,
+        "value": 83.4,
         "d": 88,
-        "n": 71,
-        "rel_pct": 0.4,
-        "band": 0
+        "n": 73,
+        "rel_pct": 4.3,
+        "band": 1
        },
        {
         "month": "2026-03",
-        "value": 81.1,
+        "value": 83.4,
         "d": 134,
-        "n": 109,
-        "rel_pct": 1.4,
+        "n": 112,
+        "rel_pct": 4.3,
         "band": 1
        },
        {
         "month": "2026-04",
-        "value": 82.4,
+        "value": 83.7,
         "d": 125,
-        "n": 103,
-        "rel_pct": 3,
+        "n": 105,
+        "rel_pct": 4.6,
         "band": 1
        },
        {
         "month": "2026-05",
-        "value": 81.6,
+        "value": 81.8,
         "d": 103,
         "n": 84,
-        "rel_pct": 2,
+        "rel_pct": 2.2,
         "band": 1
        },
        {
         "month": "2026-06",
-        "value": 83.6,
+        "value": 82.6,
         "d": 105,
-        "n": 88,
-        "rel_pct": 4.5,
+        "n": 87,
+        "rel_pct": 3.2,
         "band": 1
        }
       ],
@@ -21846,42 +21855,42 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 90,
+        "value": 85.9,
         "d": 553,
-        "n": 498,
-        "rel_pct": 0,
-        "band": 0
+        "n": 475,
+        "rel_pct": -4.6,
+        "band": -1
        },
        {
         "month": "2025-02",
-        "value": 91,
+        "value": 87.2,
         "d": 584,
-        "n": 531,
-        "rel_pct": 1.1,
-        "band": 1
+        "n": 509,
+        "rel_pct": -3.1,
+        "band": -1
        },
        {
         "month": "2025-03",
-        "value": 86.8,
+        "value": 83.6,
         "d": 636,
-        "n": 552,
-        "rel_pct": -3.6,
+        "n": 532,
+        "rel_pct": -7.1,
         "band": -1
        },
        {
         "month": "2025-04",
-        "value": 89,
+        "value": 86.7,
         "d": 652,
-        "n": 580,
-        "rel_pct": -1.1,
+        "n": 565,
+        "rel_pct": -3.7,
         "band": -1
        },
        {
         "month": "2025-05",
-        "value": 88.9,
+        "value": 87.7,
         "d": 571,
-        "n": 508,
-        "rel_pct": -1.2,
+        "n": 501,
+        "rel_pct": -2.6,
         "band": -1
        },
        {
@@ -21894,98 +21903,98 @@ window.AIECHO_REGISTRY = {
        },
        {
         "month": "2025-07",
-        "value": 87.5,
+        "value": 88.8,
         "d": 509,
-        "n": 445,
-        "rel_pct": -2.8,
+        "n": 452,
+        "rel_pct": -1.3,
         "band": -1
        },
        {
         "month": "2025-08",
-        "value": 86.2,
+        "value": 88.8,
         "d": 621,
-        "n": 535,
-        "rel_pct": -4.2,
+        "n": 551,
+        "rel_pct": -1.3,
         "band": -1
        },
        {
         "month": "2025-09",
-        "value": 84.5,
+        "value": 88.2,
         "d": 507,
-        "n": 428,
-        "rel_pct": -6.1,
+        "n": 447,
+        "rel_pct": -2,
         "band": -1
        },
        {
         "month": "2025-10",
-        "value": 83.2,
+        "value": 87.8,
         "d": 807,
-        "n": 671,
-        "rel_pct": -7.6,
+        "n": 709,
+        "rel_pct": -2.4,
         "band": -1
        },
        {
         "month": "2025-11",
-        "value": 82.1,
+        "value": 87.4,
         "d": 645,
-        "n": 530,
-        "rel_pct": -8.8,
+        "n": 564,
+        "rel_pct": -2.9,
         "band": -1
        },
        {
         "month": "2025-12",
-        "value": 83.4,
+        "value": 88.9,
         "d": 493,
-        "n": 411,
-        "rel_pct": -7.3,
+        "n": 438,
+        "rel_pct": -1.2,
         "band": -1
        },
        {
         "month": "2026-01",
-        "value": 82.8,
+        "value": 88.2,
         "d": 709,
-        "n": 587,
-        "rel_pct": -8,
+        "n": 625,
+        "rel_pct": -2,
         "band": -1
        },
        {
         "month": "2026-02",
-        "value": 84.6,
+        "value": 89.7,
         "d": 801,
-        "n": 678,
-        "rel_pct": -6,
-        "band": -1
+        "n": 718,
+        "rel_pct": -0.3,
+        "band": 0
        },
        {
         "month": "2026-03",
-        "value": 82.9,
+        "value": 87.2,
         "d": 779,
-        "n": 646,
-        "rel_pct": -7.9,
+        "n": 679,
+        "rel_pct": -3.1,
         "band": -1
        },
        {
         "month": "2026-04",
-        "value": 84.2,
+        "value": 87.4,
         "d": 828,
-        "n": 697,
-        "rel_pct": -6.4,
+        "n": 724,
+        "rel_pct": -2.9,
         "band": -1
        },
        {
         "month": "2026-05",
-        "value": 85.3,
+        "value": 87.1,
         "d": 523,
-        "n": 446,
-        "rel_pct": -5.2,
+        "n": 456,
+        "rel_pct": -3.2,
         "band": -1
        },
        {
         "month": "2026-06",
-        "value": 88.3,
+        "value": 88.7,
         "d": 745,
-        "n": 658,
-        "rel_pct": -1.9,
+        "n": 661,
+        "rel_pct": -1.4,
         "band": -1
        }
       ],
@@ -22002,106 +22011,106 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 58.8,
+        "value": 54.8,
         "d": 195,
-        "n": 115,
-        "rel_pct": 17.6,
-        "band": 2
+        "n": 107,
+        "rel_pct": 9.6,
+        "band": 1
        },
        {
         "month": "2025-02",
-        "value": 58.2,
+        "value": 54.7,
         "d": 241,
-        "n": 140,
-        "rel_pct": 16.4,
-        "band": 2
+        "n": 132,
+        "rel_pct": 9.4,
+        "band": 1
        },
        {
         "month": "2025-03",
-        "value": 59.3,
+        "value": 56.7,
         "d": 149,
-        "n": 88,
-        "rel_pct": 18.6,
+        "n": 84,
+        "rel_pct": 13.4,
         "band": 2
        },
        {
         "month": "2025-04",
-        "value": 61.1,
+        "value": 59.7,
         "d": 211,
-        "n": 129,
-        "rel_pct": 22.2,
+        "n": 126,
+        "rel_pct": 19.4,
         "band": 2
        },
        {
         "month": "2025-05",
-        "value": 61,
+        "value": 60.8,
         "d": 161,
         "n": 98,
-        "rel_pct": 22,
+        "rel_pct": 21.6,
         "band": 2
        },
        {
         "month": "2025-06",
-        "value": 57.6,
+        "value": 58.6,
         "d": 169,
-        "n": 97,
-        "rel_pct": 15.2,
+        "n": 99,
+        "rel_pct": 17.2,
         "band": 2
        },
        {
         "month": "2025-07",
-        "value": 59,
+        "value": 61,
         "d": 225,
-        "n": 133,
-        "rel_pct": 18,
+        "n": 137,
+        "rel_pct": 22,
         "band": 2
        },
        {
         "month": "2025-08",
-        "value": 56.8,
+        "value": 59.5,
         "d": 221,
-        "n": 126,
-        "rel_pct": 13.6,
+        "n": 131,
+        "rel_pct": 19,
         "band": 2
        },
        {
         "month": "2025-09",
-        "value": 55.4,
+        "value": 58.4,
         "d": 202,
-        "n": 112,
-        "rel_pct": 10.8,
+        "n": 118,
+        "rel_pct": 16.8,
         "band": 2
        },
        {
         "month": "2025-10",
-        "value": 56.5,
+        "value": 59.4,
         "d": 197,
-        "n": 111,
-        "rel_pct": 13,
+        "n": 117,
+        "rel_pct": 18.8,
         "band": 2
        },
        {
         "month": "2025-11",
-        "value": 54.5,
+        "value": 57,
         "d": 255,
-        "n": 139,
-        "rel_pct": 9,
-        "band": 1
+        "n": 145,
+        "rel_pct": 14,
+        "band": 2
        },
        {
         "month": "2025-12",
-        "value": 57.5,
+        "value": 59.3,
         "d": 154,
-        "n": 89,
-        "rel_pct": 15,
+        "n": 91,
+        "rel_pct": 18.6,
         "band": 2
        },
        {
         "month": "2026-01",
-        "value": 54,
+        "value": 54.9,
         "d": 188,
-        "n": 102,
-        "rel_pct": 8,
+        "n": 103,
+        "rel_pct": 9.8,
         "band": 1
        },
        {
@@ -22114,34 +22123,34 @@ window.AIECHO_REGISTRY = {
        },
        {
         "month": "2026-03",
-        "value": 55.5,
+        "value": 54.8,
         "d": 239,
-        "n": 133,
-        "rel_pct": 11,
-        "band": 2
+        "n": 131,
+        "rel_pct": 9.6,
+        "band": 1
        },
        {
         "month": "2026-04",
-        "value": 54.6,
+        "value": 53.3,
         "d": 221,
-        "n": 121,
-        "rel_pct": 9.2,
+        "n": 118,
+        "rel_pct": 6.6,
         "band": 1
        },
        {
         "month": "2026-05",
-        "value": 55.6,
+        "value": 54.1,
         "d": 210,
-        "n": 117,
-        "rel_pct": 11.2,
-        "band": 2
+        "n": 114,
+        "rel_pct": 8.2,
+        "band": 1
        },
        {
         "month": "2026-06",
-        "value": 57.6,
+        "value": 56.1,
         "d": 153,
-        "n": 88,
-        "rel_pct": 15.2,
+        "n": 86,
+        "rel_pct": 12.2,
         "band": 2
        }
       ],
@@ -22185,146 +22194,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 23.9,
+        "value": 23,
         "d": 1080,
         "n": null,
-        "rel_pct": 0.4,
-        "band": 0
+        "rel_pct": 4.2,
+        "band": 1
        },
        {
         "month": "2025-02",
-        "value": 22.8,
-        "d": 1347,
-        "n": null,
-        "rel_pct": 5,
-        "band": 1
-       },
-       {
-        "month": "2025-03",
-        "value": 22.6,
-        "d": 969,
-        "n": null,
-        "rel_pct": 5.8,
-        "band": 1
-       },
-       {
-        "month": "2025-04",
-        "value": 22.9,
-        "d": 906,
-        "n": null,
-        "rel_pct": 4.6,
-        "band": 1
-       },
-       {
-        "month": "2025-05",
-        "value": 22.5,
-        "d": 982,
-        "n": null,
-        "rel_pct": 6.3,
-        "band": 1
-       },
-       {
-        "month": "2025-06",
-        "value": 23.5,
-        "d": 1230,
-        "n": null,
-        "rel_pct": 2.1,
-        "band": 1
-       },
-       {
-        "month": "2025-07",
-        "value": 22,
-        "d": 1430,
-        "n": null,
-        "rel_pct": 8.3,
-        "band": 1
-       },
-       {
-        "month": "2025-08",
-        "value": 22.4,
-        "d": 955,
-        "n": null,
-        "rel_pct": 6.7,
-        "band": 1
-       },
-       {
-        "month": "2025-09",
         "value": 21.8,
-        "d": 1196,
+        "d": 1347,
         "n": null,
         "rel_pct": 9.2,
         "band": 1
        },
        {
-        "month": "2025-10",
+        "month": "2025-03",
+        "value": 21.6,
+        "d": 969,
+        "n": null,
+        "rel_pct": 10,
+        "band": 1
+       },
+       {
+        "month": "2025-04",
         "value": 21.9,
-        "d": 867,
+        "d": 906,
         "n": null,
         "rel_pct": 8.8,
         "band": 1
        },
        {
-        "month": "2025-11",
-        "value": 21.3,
-        "d": 1252,
+        "month": "2025-05",
+        "value": 21.6,
+        "d": 982,
         "n": null,
-        "rel_pct": 11.2,
-        "band": 2
+        "rel_pct": 10,
+        "band": 1
        },
        {
-        "month": "2025-12",
+        "month": "2025-06",
+        "value": 22.9,
+        "d": 1230,
+        "n": null,
+        "rel_pct": 4.6,
+        "band": 1
+       },
+       {
+        "month": "2025-07",
         "value": 21.8,
-        "d": 1149,
+        "d": 1430,
         "n": null,
         "rel_pct": 9.2,
         "band": 1
        },
        {
-        "month": "2026-01",
+        "month": "2025-08",
         "value": 22.6,
-        "d": 1141,
+        "d": 955,
         "n": null,
         "rel_pct": 5.8,
         "band": 1
        },
        {
-        "month": "2026-02",
-        "value": 22.3,
-        "d": 1123,
-        "n": null,
-        "rel_pct": 7.1,
-        "band": 1
-       },
-       {
-        "month": "2026-03",
+        "month": "2025-09",
         "value": 22.4,
-        "d": 926,
+        "d": 1196,
         "n": null,
         "rel_pct": 6.7,
         "band": 1
        },
        {
-        "month": "2026-04",
-        "value": 22.8,
-        "d": 1032,
+        "month": "2025-10",
+        "value": 22.7,
+        "d": 867,
         "n": null,
-        "rel_pct": 5,
+        "rel_pct": 5.4,
         "band": 1
        },
        {
-        "month": "2026-05",
+        "month": "2025-11",
+        "value": 22.4,
+        "d": 1252,
+        "n": null,
+        "rel_pct": 6.7,
+        "band": 1
+       },
+       {
+        "month": "2025-12",
+        "value": 23,
+        "d": 1149,
+        "n": null,
+        "rel_pct": 4.2,
+        "band": 1
+       },
+       {
+        "month": "2026-01",
+        "value": 23.8,
+        "d": 1141,
+        "n": null,
+        "rel_pct": 0.8,
+        "band": 0
+       },
+       {
+        "month": "2026-02",
+        "value": 23.4,
+        "d": 1123,
+        "n": null,
+        "rel_pct": 2.5,
+        "band": 1
+       },
+       {
+        "month": "2026-03",
         "value": 23.2,
-        "d": 1414,
+        "d": 926,
         "n": null,
         "rel_pct": 3.3,
         "band": 1
        },
        {
+        "month": "2026-04",
+        "value": 23.2,
+        "d": 1032,
+        "n": null,
+        "rel_pct": 3.3,
+        "band": 1
+       },
+       {
+        "month": "2026-05",
+        "value": 23.3,
+        "d": 1414,
+        "n": null,
+        "rel_pct": 2.9,
+        "band": 1
+       },
+       {
         "month": "2026-06",
-        "value": 23.6,
+        "value": 23.3,
         "d": 949,
         "n": null,
-        "rel_pct": 1.7,
+        "rel_pct": 2.9,
         "band": 1
        }
       ],
@@ -22341,146 +22350,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 87.1,
-        "d": 1170,
-        "n": 1019,
-        "rel_pct": -3.2,
-        "band": -1
-       },
-       {
-        "month": "2025-02",
-        "value": 82.5,
-        "d": 1222,
-        "n": 1008,
-        "rel_pct": -8.3,
-        "band": -1
-       },
-       {
-        "month": "2025-03",
-        "value": 83.9,
-        "d": 998,
-        "n": 837,
-        "rel_pct": -6.8,
-        "band": -1
-       },
-       {
-        "month": "2025-04",
-        "value": 83.7,
-        "d": 1324,
-        "n": 1108,
-        "rel_pct": -7,
-        "band": -1
-       },
-       {
-        "month": "2025-05",
-        "value": 84,
-        "d": 1371,
-        "n": 1152,
-        "rel_pct": -6.7,
-        "band": -1
-       },
-       {
-        "month": "2025-06",
         "value": 83.4,
-        "d": 1259,
-        "n": 1050,
+        "d": 1170,
+        "n": 976,
         "rel_pct": -7.3,
         "band": -1
        },
        {
-        "month": "2025-07",
-        "value": 82.3,
-        "d": 893,
-        "n": 735,
-        "rel_pct": -8.6,
-        "band": -1
-       },
-       {
-        "month": "2025-08",
-        "value": 83.1,
-        "d": 858,
-        "n": 713,
-        "rel_pct": -7.7,
-        "band": -1
-       },
-       {
-        "month": "2025-09",
-        "value": 77.6,
-        "d": 1000,
-        "n": 776,
-        "rel_pct": -13.8,
+        "month": "2025-02",
+        "value": 78.2,
+        "d": 1222,
+        "n": 956,
+        "rel_pct": -13.1,
         "band": -2
        },
        {
-        "month": "2025-10",
-        "value": 76.8,
-        "d": 1077,
-        "n": 827,
-        "rel_pct": -14.7,
+        "month": "2025-03",
+        "value": 79.3,
+        "d": 998,
+        "n": 791,
+        "rel_pct": -11.9,
         "band": -2
        },
        {
-        "month": "2025-11",
-        "value": 76.4,
-        "d": 1286,
-        "n": 983,
-        "rel_pct": -15.1,
+        "month": "2025-04",
+        "value": 79.2,
+        "d": 1324,
+        "n": 1049,
+        "rel_pct": -12,
         "band": -2
        },
        {
-        "month": "2025-12",
+        "month": "2025-05",
+        "value": 80.1,
+        "d": 1371,
+        "n": 1098,
+        "rel_pct": -11,
+        "band": -2
+       },
+       {
+        "month": "2025-06",
         "value": 80.3,
-        "d": 1044,
-        "n": 838,
+        "d": 1259,
+        "n": 1011,
         "rel_pct": -10.8,
         "band": -2
        },
        {
-        "month": "2026-01",
-        "value": 79.8,
-        "d": 1212,
-        "n": 967,
-        "rel_pct": -11.3,
+        "month": "2025-07",
+        "value": 80.3,
+        "d": 893,
+        "n": 717,
+        "rel_pct": -10.8,
         "band": -2
+       },
+       {
+        "month": "2025-08",
+        "value": 82.4,
+        "d": 858,
+        "n": 707,
+        "rel_pct": -8.4,
+        "band": -1
+       },
+       {
+        "month": "2025-09",
+        "value": 78.4,
+        "d": 1000,
+        "n": 784,
+        "rel_pct": -12.9,
+        "band": -2
+       },
+       {
+        "month": "2025-10",
+        "value": 78.9,
+        "d": 1077,
+        "n": 850,
+        "rel_pct": -12.3,
+        "band": -2
+       },
+       {
+        "month": "2025-11",
+        "value": 79.6,
+        "d": 1286,
+        "n": 1024,
+        "rel_pct": -11.6,
+        "band": -2
+       },
+       {
+        "month": "2025-12",
+        "value": 84.4,
+        "d": 1044,
+        "n": 881,
+        "rel_pct": -6.2,
+        "band": -1
+       },
+       {
+        "month": "2026-01",
+        "value": 84.4,
+        "d": 1212,
+        "n": 1023,
+        "rel_pct": -6.2,
+        "band": -1
        },
        {
         "month": "2026-02",
-        "value": 79,
+        "value": 83.8,
         "d": 1123,
-        "n": 887,
-        "rel_pct": -12.2,
-        "band": -2
+        "n": 941,
+        "rel_pct": -6.9,
+        "band": -1
        },
        {
         "month": "2026-03",
-        "value": 80.5,
+        "value": 84.9,
         "d": 1078,
-        "n": 868,
-        "rel_pct": -10.6,
-        "band": -2
+        "n": 915,
+        "rel_pct": -5.7,
+        "band": -1
        },
        {
         "month": "2026-04",
-        "value": 82.5,
+        "value": 86.2,
         "d": 846,
-        "n": 698,
-        "rel_pct": -8.3,
+        "n": 729,
+        "rel_pct": -4.2,
         "band": -1
        },
        {
         "month": "2026-05",
-        "value": 81.4,
+        "value": 84,
         "d": 1375,
-        "n": 1119,
-        "rel_pct": -9.6,
+        "n": 1155,
+        "rel_pct": -6.7,
         "band": -1
        },
        {
         "month": "2026-06",
-        "value": 81.6,
+        "value": 83,
         "d": 815,
-        "n": 665,
-        "rel_pct": -9.3,
+        "n": 676,
+        "rel_pct": -7.8,
         "band": -1
        }
       ],
@@ -22497,147 +22506,147 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 83.1,
+        "value": 78.8,
         "d": 1267,
-        "n": 1053,
-        "rel_pct": -7.7,
-        "band": -1
+        "n": 998,
+        "rel_pct": -12.4,
+        "band": -2
        },
        {
         "month": "2025-02",
-        "value": 87.1,
+        "value": 82,
         "d": 1347,
-        "n": 1173,
-        "rel_pct": -3.2,
+        "n": 1105,
+        "rel_pct": -8.9,
         "band": -1
        },
        {
         "month": "2025-03",
-        "value": 86.2,
-        "d": 1358,
-        "n": 1171,
-        "rel_pct": -4.2,
-        "band": -1
-       },
-       {
-        "month": "2025-04",
-        "value": 85.8,
-        "d": 928,
-        "n": 796,
-        "rel_pct": -4.7,
-        "band": -1
-       },
-       {
-        "month": "2025-05",
-        "value": 80.7,
-        "d": 949,
-        "n": 766,
-        "rel_pct": -10.3,
-        "band": -2
-       },
-       {
-        "month": "2025-06",
-        "value": 84.8,
-        "d": 904,
-        "n": 767,
-        "rel_pct": -5.8,
-        "band": -1
-       },
-       {
-        "month": "2025-07",
-        "value": 82.4,
-        "d": 1239,
-        "n": 1021,
-        "rel_pct": -8.4,
-        "band": -1
-       },
-       {
-        "month": "2025-08",
-        "value": 80.6,
-        "d": 1010,
-        "n": 814,
-        "rel_pct": -10.4,
-        "band": -2
-       },
-       {
-        "month": "2025-09",
-        "value": 81.1,
-        "d": 1025,
-        "n": 831,
-        "rel_pct": -9.9,
-        "band": -1
-       },
-       {
-        "month": "2025-10",
-        "value": 76.7,
-        "d": 1421,
-        "n": 1090,
-        "rel_pct": -14.8,
-        "band": -2
-       },
-       {
-        "month": "2025-11",
-        "value": 76.7,
-        "d": 1380,
-        "n": 1058,
-        "rel_pct": -14.8,
-        "band": -2
-       },
-       {
-        "month": "2025-12",
         "value": 80.8,
-        "d": 1416,
-        "n": 1144,
+        "d": 1358,
+        "n": 1097,
         "rel_pct": -10.2,
         "band": -2
        },
        {
-        "month": "2026-01",
-        "value": 78.4,
-        "d": 1383,
-        "n": 1084,
-        "rel_pct": -12.9,
+        "month": "2025-04",
+        "value": 80.5,
+        "d": 928,
+        "n": 747,
+        "rel_pct": -10.6,
         "band": -2
+       },
+       {
+        "month": "2025-05",
+        "value": 75.7,
+        "d": 949,
+        "n": 718,
+        "rel_pct": -15.9,
+        "band": -2
+       },
+       {
+        "month": "2025-06",
+        "value": 80.7,
+        "d": 904,
+        "n": 730,
+        "rel_pct": -10.3,
+        "band": -2
+       },
+       {
+        "month": "2025-07",
+        "value": 79.3,
+        "d": 1239,
+        "n": 983,
+        "rel_pct": -11.9,
+        "band": -2
+       },
+       {
+        "month": "2025-08",
+        "value": 78.8,
+        "d": 1010,
+        "n": 796,
+        "rel_pct": -12.4,
+        "band": -2
+       },
+       {
+        "month": "2025-09",
+        "value": 80.6,
+        "d": 1025,
+        "n": 826,
+        "rel_pct": -10.4,
+        "band": -2
+       },
+       {
+        "month": "2025-10",
+        "value": 77.5,
+        "d": 1421,
+        "n": 1101,
+        "rel_pct": -13.9,
+        "band": -2
+       },
+       {
+        "month": "2025-11",
+        "value": 78.7,
+        "d": 1380,
+        "n": 1086,
+        "rel_pct": -12.6,
+        "band": -2
+       },
+       {
+        "month": "2025-12",
+        "value": 83.8,
+        "d": 1416,
+        "n": 1187,
+        "rel_pct": -6.9,
+        "band": -1
+       },
+       {
+        "month": "2026-01",
+        "value": 82.2,
+        "d": 1383,
+        "n": 1137,
+        "rel_pct": -8.7,
+        "band": -1
        },
        {
         "month": "2026-02",
-        "value": 81,
+        "value": 85.2,
         "d": 998,
-        "n": 808,
-        "rel_pct": -10,
-        "band": -2
+        "n": 850,
+        "rel_pct": -5.3,
+        "band": -1
        },
        {
         "month": "2026-03",
-        "value": 77.3,
+        "value": 81.7,
         "d": 1352,
-        "n": 1045,
-        "rel_pct": -14.1,
-        "band": -2
+        "n": 1105,
+        "rel_pct": -9.2,
+        "band": -1
        },
        {
         "month": "2026-04",
-        "value": 78.9,
+        "value": 83.2,
         "d": 1040,
-        "n": 821,
-        "rel_pct": -12.3,
-        "band": -2
+        "n": 865,
+        "rel_pct": -7.6,
+        "band": -1
        },
        {
         "month": "2026-05",
-        "value": 81,
+        "value": 84.7,
         "d": 1275,
-        "n": 1033,
-        "rel_pct": -10,
-        "band": -2
+        "n": 1080,
+        "rel_pct": -5.9,
+        "band": -1
        },
        {
         "month": "2026-06",
-        "value": 80.9,
+        "value": 83.9,
         "d": 809,
-        "n": 654,
-        "rel_pct": -10.1,
-        "band": -2
+        "n": 679,
+        "rel_pct": -6.8,
+        "band": -1
        }
       ],
       "delta": -4.2,
@@ -22653,146 +22662,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 69.7,
+        "value": 66.6,
         "d": 1123,
-        "n": 783,
-        "rel_pct": -18,
+        "n": 748,
+        "rel_pct": -21.6,
         "band": -2
        },
        {
         "month": "2025-02",
-        "value": 72.2,
-        "d": 1096,
-        "n": 791,
-        "rel_pct": -15.1,
-        "band": -2
-       },
-       {
-        "month": "2025-03",
-        "value": 68.5,
-        "d": 1216,
-        "n": 833,
-        "rel_pct": -19.4,
-        "band": -2
-       },
-       {
-        "month": "2025-04",
-        "value": 70.3,
-        "d": 956,
-        "n": 672,
-        "rel_pct": -17.3,
-        "band": -2
-       },
-       {
-        "month": "2025-05",
-        "value": 69.1,
-        "d": 1436,
-        "n": 992,
-        "rel_pct": -18.7,
-        "band": -2
-       },
-       {
-        "month": "2025-06",
-        "value": 68.8,
-        "d": 1415,
-        "n": 974,
-        "rel_pct": -19.1,
-        "band": -2
-       },
-       {
-        "month": "2025-07",
-        "value": 67.5,
-        "d": 1135,
-        "n": 766,
-        "rel_pct": -20.6,
-        "band": -2
-       },
-       {
-        "month": "2025-08",
-        "value": 65.5,
-        "d": 1021,
-        "n": 669,
-        "rel_pct": -22.9,
-        "band": -2
-       },
-       {
-        "month": "2025-09",
-        "value": 68.6,
-        "d": 1022,
-        "n": 701,
-        "rel_pct": -19.3,
-        "band": -2
-       },
-       {
-        "month": "2025-10",
         "value": 68.9,
-        "d": 1274,
-        "n": 878,
+        "d": 1096,
+        "n": 755,
         "rel_pct": -18.9,
         "band": -2
        },
        {
-        "month": "2025-11",
-        "value": 67.8,
-        "d": 914,
-        "n": 620,
-        "rel_pct": -20.2,
-        "band": -2
-       },
-       {
-        "month": "2025-12",
-        "value": 64.1,
-        "d": 1176,
-        "n": 754,
-        "rel_pct": -24.6,
-        "band": -2
-       },
-       {
-        "month": "2026-01",
+        "month": "2025-03",
         "value": 65.2,
-        "d": 880,
-        "n": 574,
+        "d": 1216,
+        "n": 793,
         "rel_pct": -23.3,
         "band": -2
        },
        {
+        "month": "2025-04",
+        "value": 67.3,
+        "d": 956,
+        "n": 643,
+        "rel_pct": -20.8,
+        "band": -2
+       },
+       {
+        "month": "2025-05",
+        "value": 66.7,
+        "d": 1436,
+        "n": 958,
+        "rel_pct": -21.5,
+        "band": -2
+       },
+       {
+        "month": "2025-06",
+        "value": 66.9,
+        "d": 1415,
+        "n": 947,
+        "rel_pct": -21.3,
+        "band": -2
+       },
+       {
+        "month": "2025-07",
+        "value": 66.3,
+        "d": 1135,
+        "n": 753,
+        "rel_pct": -22,
+        "band": -2
+       },
+       {
+        "month": "2025-08",
+        "value": 65.1,
+        "d": 1021,
+        "n": 665,
+        "rel_pct": -23.4,
+        "band": -2
+       },
+       {
+        "month": "2025-09",
+        "value": 69,
+        "d": 1022,
+        "n": 705,
+        "rel_pct": -18.8,
+        "band": -2
+       },
+       {
+        "month": "2025-10",
+        "value": 70,
+        "d": 1274,
+        "n": 892,
+        "rel_pct": -17.6,
+        "band": -2
+       },
+       {
+        "month": "2025-11",
+        "value": 69.4,
+        "d": 914,
+        "n": 634,
+        "rel_pct": -18.4,
+        "band": -2
+       },
+       {
+        "month": "2025-12",
+        "value": 66.1,
+        "d": 1176,
+        "n": 777,
+        "rel_pct": -22.2,
+        "band": -2
+       },
+       {
+        "month": "2026-01",
+        "value": 67.4,
+        "d": 880,
+        "n": 593,
+        "rel_pct": -20.7,
+        "band": -2
+       },
+       {
         "month": "2026-02",
-        "value": 68.3,
+        "value": 70.5,
         "d": 892,
-        "n": 609,
-        "rel_pct": -19.6,
+        "n": 629,
+        "rel_pct": -17.1,
         "band": -2
        },
        {
         "month": "2026-03",
-        "value": 68.8,
+        "value": 70.8,
         "d": 1303,
-        "n": 896,
-        "rel_pct": -19.1,
+        "n": 923,
+        "rel_pct": -16.7,
         "band": -2
        },
        {
         "month": "2026-04",
-        "value": 66.5,
+        "value": 68.1,
         "d": 848,
-        "n": 564,
-        "rel_pct": -21.8,
+        "n": 577,
+        "rel_pct": -19.9,
         "band": -2
        },
        {
         "month": "2026-05",
-        "value": 67.6,
+        "value": 68.8,
         "d": 941,
-        "n": 636,
-        "rel_pct": -20.5,
+        "n": 647,
+        "rel_pct": -19.1,
         "band": -2
        },
        {
         "month": "2026-06",
-        "value": 66.9,
+        "value": 67.6,
         "d": 1252,
-        "n": 838,
-        "rel_pct": -21.3,
+        "n": 846,
+        "rel_pct": -20.5,
         "band": -2
        }
       ],
@@ -22809,146 +22818,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 82,
+        "value": 81.8,
         "d": 1237,
-        "n": 1014,
-        "rel_pct": -6.8,
+        "n": 1012,
+        "rel_pct": -7,
         "band": -1
        },
        {
         "month": "2025-02",
-        "value": 80.2,
+        "value": 79.9,
         "d": 1053,
-        "n": 845,
-        "rel_pct": -8.9,
+        "n": 841,
+        "rel_pct": -9.2,
         "band": -1
        },
        {
         "month": "2025-03",
-        "value": 83.4,
+        "value": 83,
         "d": 1356,
-        "n": 1131,
-        "rel_pct": -5.2,
+        "n": 1125,
+        "rel_pct": -5.7,
         "band": -1
        },
        {
         "month": "2025-04",
-        "value": 82.1,
+        "value": 81.5,
         "d": 1123,
-        "n": 922,
-        "rel_pct": -6.7,
+        "n": 915,
+        "rel_pct": -7.4,
         "band": -1
        },
        {
         "month": "2025-05",
-        "value": 80.9,
-        "d": 1225,
-        "n": 991,
-        "rel_pct": -8.1,
-        "band": -1
-       },
-       {
-        "month": "2025-06",
-        "value": 78.2,
-        "d": 1367,
-        "n": 1069,
-        "rel_pct": -11.1,
-        "band": -2
-       },
-       {
-        "month": "2025-07",
-        "value": 81.4,
-        "d": 1066,
-        "n": 868,
-        "rel_pct": -7.5,
-        "band": -1
-       },
-       {
-        "month": "2025-08",
-        "value": 76.5,
-        "d": 1380,
-        "n": 1056,
-        "rel_pct": -13.1,
-        "band": -2
-       },
-       {
-        "month": "2025-09",
-        "value": 75.5,
-        "d": 978,
-        "n": 738,
-        "rel_pct": -14.2,
-        "band": -2
-       },
-       {
-        "month": "2025-10",
-        "value": 74.4,
-        "d": 1419,
-        "n": 1056,
-        "rel_pct": -15.5,
-        "band": -2
-       },
-       {
-        "month": "2025-11",
-        "value": 79.2,
-        "d": 1251,
-        "n": 991,
-        "rel_pct": -10,
-        "band": -1
-       },
-       {
-        "month": "2025-12",
-        "value": 74.5,
-        "d": 880,
-        "n": 656,
-        "rel_pct": -15.3,
-        "band": -2
-       },
-       {
-        "month": "2026-01",
-        "value": 76.9,
-        "d": 1009,
-        "n": 776,
-        "rel_pct": -12.6,
-        "band": -2
-       },
-       {
-        "month": "2026-02",
-        "value": 76,
-        "d": 894,
-        "n": 679,
-        "rel_pct": -13.6,
-        "band": -2
-       },
-       {
-        "month": "2026-03",
-        "value": 77.4,
-        "d": 1231,
-        "n": 953,
-        "rel_pct": -12,
-        "band": -2
-       },
-       {
-        "month": "2026-04",
         "value": 80,
-        "d": 997,
-        "n": 798,
+        "d": 1225,
+        "n": 980,
         "rel_pct": -9.1,
         "band": -1
        },
        {
-        "month": "2026-05",
+        "month": "2025-06",
         "value": 77.1,
-        "d": 1072,
-        "n": 827,
+        "d": 1367,
+        "n": 1054,
         "rel_pct": -12.4,
         "band": -2
        },
        {
+        "month": "2025-07",
+        "value": 80.1,
+        "d": 1066,
+        "n": 854,
+        "rel_pct": -9,
+        "band": -1
+       },
+       {
+        "month": "2025-08",
+        "value": 75.4,
+        "d": 1380,
+        "n": 1041,
+        "rel_pct": -14.3,
+        "band": -2
+       },
+       {
+        "month": "2025-09",
+        "value": 74.7,
+        "d": 978,
+        "n": 731,
+        "rel_pct": -15.1,
+        "band": -2
+       },
+       {
+        "month": "2025-10",
+        "value": 74.2,
+        "d": 1419,
+        "n": 1053,
+        "rel_pct": -15.7,
+        "band": -2
+       },
+       {
+        "month": "2025-11",
+        "value": 79.7,
+        "d": 1251,
+        "n": 997,
+        "rel_pct": -9.4,
+        "band": -1
+       },
+       {
+        "month": "2025-12",
+        "value": 75.8,
+        "d": 880,
+        "n": 667,
+        "rel_pct": -13.9,
+        "band": -2
+       },
+       {
+        "month": "2026-01",
+        "value": 79.1,
+        "d": 1009,
+        "n": 798,
+        "rel_pct": -10.1,
+        "band": -2
+       },
+       {
+        "month": "2026-02",
+        "value": 78.8,
+        "d": 894,
+        "n": 704,
+        "rel_pct": -10.5,
+        "band": -2
+       },
+       {
+        "month": "2026-03",
+        "value": 80.5,
+        "d": 1231,
+        "n": 991,
+        "rel_pct": -8.5,
+        "band": -1
+       },
+       {
+        "month": "2026-04",
+        "value": 83.1,
+        "d": 997,
+        "n": 829,
+        "rel_pct": -5.6,
+        "band": -1
+       },
+       {
+        "month": "2026-05",
+        "value": 79.9,
+        "d": 1072,
+        "n": 857,
+        "rel_pct": -9.2,
+        "band": -1
+       },
+       {
         "month": "2026-06",
-        "value": 79.4,
+        "value": 81.4,
         "d": 896,
-        "n": 711,
-        "rel_pct": -9.8,
+        "n": 729,
+        "rel_pct": -7.5,
         "band": -1
        }
       ],
@@ -22965,146 +22974,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 68.9,
+        "value": 68.4,
         "d": 173,
-        "n": 119,
-        "rel_pct": -18.9,
+        "n": 118,
+        "rel_pct": -19.5,
         "band": -2
        },
        {
         "month": "2025-02",
-        "value": 65.3,
+        "value": 65.5,
         "d": 176,
         "n": 115,
-        "rel_pct": -23.2,
+        "rel_pct": -22.9,
         "band": -2
        },
        {
         "month": "2025-03",
-        "value": 68.1,
+        "value": 68.9,
         "d": 160,
-        "n": 109,
-        "rel_pct": -19.9,
+        "n": 110,
+        "rel_pct": -18.9,
         "band": -2
        },
        {
         "month": "2025-04",
-        "value": 68.2,
+        "value": 69.5,
         "d": 237,
-        "n": 162,
-        "rel_pct": -19.8,
+        "n": 165,
+        "rel_pct": -18.2,
         "band": -2
        },
        {
         "month": "2025-05",
-        "value": 68.5,
+        "value": 70.1,
         "d": 205,
-        "n": 140,
-        "rel_pct": -19.4,
+        "n": 144,
+        "rel_pct": -17.5,
         "band": -2
        },
        {
         "month": "2025-06",
-        "value": 66,
+        "value": 67.8,
         "d": 148,
-        "n": 98,
-        "rel_pct": -22.4,
+        "n": 100,
+        "rel_pct": -20.2,
         "band": -2
        },
        {
         "month": "2025-07",
-        "value": 63.5,
+        "value": 65.5,
         "d": 206,
-        "n": 131,
-        "rel_pct": -25.3,
-        "band": -3
+        "n": 135,
+        "rel_pct": -22.9,
+        "band": -2
        },
        {
         "month": "2025-08",
-        "value": 66,
+        "value": 67.8,
         "d": 199,
-        "n": 131,
-        "rel_pct": -22.4,
+        "n": 135,
+        "rel_pct": -20.2,
         "band": -2
        },
        {
         "month": "2025-09",
-        "value": 64.7,
+        "value": 66.3,
         "d": 147,
-        "n": 95,
-        "rel_pct": -23.9,
+        "n": 97,
+        "rel_pct": -22,
         "band": -2
        },
        {
         "month": "2025-10",
-        "value": 63,
-        "d": 176,
-        "n": 111,
-        "rel_pct": -25.9,
-        "band": -3
-       },
-       {
-        "month": "2025-11",
-        "value": 64.7,
-        "d": 214,
-        "n": 138,
-        "rel_pct": -23.9,
-        "band": -2
-       },
-       {
-        "month": "2025-12",
-        "value": 61.4,
-        "d": 208,
-        "n": 128,
-        "rel_pct": -27.8,
-        "band": -3
-       },
-       {
-        "month": "2026-01",
-        "value": 62.8,
-        "d": 188,
-        "n": 118,
-        "rel_pct": -26.1,
-        "band": -3
-       },
-       {
-        "month": "2026-02",
-        "value": 64,
-        "d": 200,
-        "n": 128,
-        "rel_pct": -24.7,
-        "band": -2
-       },
-       {
-        "month": "2026-03",
-        "value": 64,
-        "d": 225,
-        "n": 144,
-        "rel_pct": -24.7,
-        "band": -2
-       },
-       {
-        "month": "2026-04",
         "value": 64.1,
-        "d": 206,
-        "n": 132,
+        "d": 176,
+        "n": 113,
         "rel_pct": -24.6,
         "band": -2
        },
        {
-        "month": "2026-05",
-        "value": 63.8,
-        "d": 213,
-        "n": 136,
-        "rel_pct": -24.9,
+        "month": "2025-11",
+        "value": 65.4,
+        "d": 214,
+        "n": 140,
+        "rel_pct": -23.1,
         "band": -2
        },
        {
+        "month": "2025-12",
+        "value": 61.5,
+        "d": 208,
+        "n": 128,
+        "rel_pct": -27.6,
+        "band": -3
+       },
+       {
+        "month": "2026-01",
+        "value": 62.3,
+        "d": 188,
+        "n": 117,
+        "rel_pct": -26.7,
+        "band": -3
+       },
+       {
+        "month": "2026-02",
+        "value": 63.1,
+        "d": 200,
+        "n": 126,
+        "rel_pct": -25.8,
+        "band": -3
+       },
+       {
+        "month": "2026-03",
+        "value": 62.7,
+        "d": 225,
+        "n": 141,
+        "rel_pct": -26.2,
+        "band": -3
+       },
+       {
+        "month": "2026-04",
+        "value": 62.5,
+        "d": 206,
+        "n": 129,
+        "rel_pct": -26.5,
+        "band": -3
+       },
+       {
+        "month": "2026-05",
+        "value": 62.1,
+        "d": 213,
+        "n": 132,
+        "rel_pct": -26.9,
+        "band": -3
+       },
+       {
         "month": "2026-06",
-        "value": 67.1,
+        "value": 65.5,
         "d": 240,
-        "n": 161,
-        "rel_pct": -21.1,
+        "n": 157,
+        "rel_pct": -22.9,
         "band": -2
        }
       ],
@@ -23121,122 +23130,122 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 61.9,
+        "value": 60,
         "d": 146,
-        "n": 90,
-        "rel_pct": -22.6,
-        "band": -2
+        "n": 88,
+        "rel_pct": -25,
+        "band": -3
        },
        {
         "month": "2025-02",
-        "value": 65.1,
+        "value": 63.5,
         "d": 143,
-        "n": 93,
-        "rel_pct": -18.6,
+        "n": 91,
+        "rel_pct": -20.6,
         "band": -2
        },
        {
         "month": "2025-03",
-        "value": 62.9,
+        "value": 61.8,
         "d": 90,
-        "n": 57,
-        "rel_pct": -21.4,
+        "n": 56,
+        "rel_pct": -22.8,
         "band": -2
        },
        {
         "month": "2025-04",
-        "value": 63.6,
+        "value": 63.1,
         "d": 117,
         "n": 74,
-        "rel_pct": -20.5,
+        "rel_pct": -21.1,
         "band": -2
        },
        {
         "month": "2025-05",
-        "value": 61.8,
+        "value": 61.9,
         "d": 139,
         "n": 86,
-        "rel_pct": -22.8,
+        "rel_pct": -22.6,
         "band": -2
        },
        {
         "month": "2025-06",
-        "value": 63,
+        "value": 63.8,
         "d": 117,
-        "n": 74,
-        "rel_pct": -21.3,
+        "n": 75,
+        "rel_pct": -20.3,
         "band": -2
        },
        {
         "month": "2025-07",
-        "value": 60.5,
+        "value": 61.9,
         "d": 97,
-        "n": 59,
-        "rel_pct": -24.4,
+        "n": 60,
+        "rel_pct": -22.6,
         "band": -2
        },
        {
         "month": "2025-08",
-        "value": 61.7,
+        "value": 63.6,
         "d": 82,
-        "n": 51,
-        "rel_pct": -22.9,
+        "n": 52,
+        "rel_pct": -20.5,
         "band": -2
        },
        {
         "month": "2025-09",
-        "value": 58.5,
+        "value": 60.9,
         "d": 89,
-        "n": 52,
-        "rel_pct": -26.9,
-        "band": -3
+        "n": 54,
+        "rel_pct": -23.9,
+        "band": -2
        },
        {
         "month": "2025-10",
-        "value": 58.2,
+        "value": 60.8,
         "d": 145,
-        "n": 84,
-        "rel_pct": -27.2,
-        "band": -3
+        "n": 88,
+        "rel_pct": -24,
+        "band": -2
        },
        {
         "month": "2025-11",
-        "value": 58.1,
+        "value": 60.7,
         "d": 114,
-        "n": 66,
-        "rel_pct": -27.4,
-        "band": -3
+        "n": 69,
+        "rel_pct": -24.1,
+        "band": -2
        },
        {
         "month": "2025-12",
-        "value": 59.8,
+        "value": 62.2,
         "d": 108,
-        "n": 65,
-        "rel_pct": -25.3,
-        "band": -3
+        "n": 67,
+        "rel_pct": -22.2,
+        "band": -2
        },
        {
         "month": "2026-01",
-        "value": 58.1,
+        "value": 60.1,
         "d": 89,
-        "n": 52,
-        "rel_pct": -27.4,
-        "band": -3
+        "n": 53,
+        "rel_pct": -24.9,
+        "band": -2
        },
        {
         "month": "2026-02",
-        "value": 61,
+        "value": 62.5,
         "d": 88,
-        "n": 54,
-        "rel_pct": -23.8,
+        "n": 55,
+        "rel_pct": -21.9,
         "band": -2
        },
        {
         "month": "2026-03",
-        "value": 61.8,
+        "value": 62.5,
         "d": 93,
-        "n": 57,
-        "rel_pct": -22.8,
+        "n": 58,
+        "rel_pct": -21.9,
         "band": -2
        },
        {
@@ -23249,19 +23258,19 @@ window.AIECHO_REGISTRY = {
        },
        {
         "month": "2026-05",
-        "value": 62.9,
+        "value": 62.1,
         "d": 146,
-        "n": 92,
-        "rel_pct": -21.4,
+        "n": 91,
+        "rel_pct": -22.4,
         "band": -2
        },
        {
         "month": "2026-06",
-        "value": 61.2,
+        "value": 59.6,
         "d": 102,
-        "n": 62,
-        "rel_pct": -23.5,
-        "band": -2
+        "n": 61,
+        "rel_pct": -25.5,
+        "band": -3
        }
       ],
       "delta": -11.8,
@@ -23277,130 +23286,130 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 79.9,
+        "value": 76.9,
         "d": 323,
-        "n": 258,
-        "rel_pct": -11.2,
+        "n": 248,
+        "rel_pct": -14.6,
         "band": -2
        },
        {
         "month": "2025-02",
-        "value": 76.1,
+        "value": 73.7,
         "d": 545,
-        "n": 415,
-        "rel_pct": -15.4,
+        "n": 402,
+        "rel_pct": -18.1,
         "band": -2
        },
        {
         "month": "2025-03",
-        "value": 77,
+        "value": 75.3,
         "d": 537,
-        "n": 413,
-        "rel_pct": -14.4,
+        "n": 404,
+        "rel_pct": -16.3,
         "band": -2
        },
        {
         "month": "2025-04",
-        "value": 79.5,
+        "value": 78.8,
         "d": 415,
-        "n": 330,
-        "rel_pct": -11.7,
+        "n": 327,
+        "rel_pct": -12.4,
         "band": -2
        },
        {
         "month": "2025-05",
-        "value": 74.9,
+        "value": 75.2,
         "d": 478,
-        "n": 358,
-        "rel_pct": -16.8,
+        "n": 359,
+        "rel_pct": -16.4,
         "band": -2
        },
        {
         "month": "2025-06",
-        "value": 76.2,
+        "value": 77.5,
         "d": 359,
-        "n": 274,
-        "rel_pct": -15.3,
+        "n": 278,
+        "rel_pct": -13.9,
         "band": -2
        },
        {
         "month": "2025-07",
-        "value": 78.1,
+        "value": 80.5,
         "d": 399,
-        "n": 312,
-        "rel_pct": -13.2,
+        "n": 321,
+        "rel_pct": -10.6,
         "band": -2
        },
        {
         "month": "2025-08",
-        "value": 75.8,
+        "value": 79.2,
         "d": 505,
-        "n": 383,
-        "rel_pct": -15.8,
+        "n": 400,
+        "rel_pct": -12,
         "band": -2
        },
        {
         "month": "2025-09",
-        "value": 71.7,
+        "value": 75.8,
         "d": 484,
-        "n": 347,
-        "rel_pct": -20.3,
+        "n": 367,
+        "rel_pct": -15.8,
         "band": -2
        },
        {
         "month": "2025-10",
-        "value": 72.8,
+        "value": 77.4,
         "d": 448,
-        "n": 326,
-        "rel_pct": -19.1,
+        "n": 347,
+        "rel_pct": -14,
         "band": -2
        },
        {
         "month": "2025-11",
-        "value": 71.4,
+        "value": 76.2,
         "d": 396,
-        "n": 283,
-        "rel_pct": -20.7,
+        "n": 302,
+        "rel_pct": -15.3,
         "band": -2
        },
        {
         "month": "2025-12",
-        "value": 72.4,
+        "value": 77.1,
         "d": 365,
-        "n": 264,
-        "rel_pct": -19.6,
+        "n": 281,
+        "rel_pct": -14.3,
         "band": -2
        },
        {
         "month": "2026-01",
-        "value": 74.3,
+        "value": 78.5,
         "d": 385,
-        "n": 286,
-        "rel_pct": -17.4,
+        "n": 302,
+        "rel_pct": -12.8,
         "band": -2
        },
        {
         "month": "2026-02",
-        "value": 74.3,
+        "value": 77.8,
         "d": 407,
-        "n": 302,
-        "rel_pct": -17.4,
+        "n": 317,
+        "rel_pct": -13.6,
         "band": -2
        },
        {
         "month": "2026-03",
-        "value": 74.8,
+        "value": 77.3,
         "d": 369,
-        "n": 276,
-        "rel_pct": -16.9,
+        "n": 285,
+        "rel_pct": -14.1,
         "band": -2
        },
        {
         "month": "2026-04",
-        "value": 75.9,
+        "value": 77.2,
         "d": 396,
-        "n": 301,
-        "rel_pct": -15.7,
+        "n": 306,
+        "rel_pct": -14.2,
         "band": -2
        },
        {
@@ -23413,10 +23422,10 @@ window.AIECHO_REGISTRY = {
        },
        {
         "month": "2026-06",
-        "value": 73.8,
+        "value": 72.5,
         "d": 414,
-        "n": 306,
-        "rel_pct": -18,
+        "n": 300,
+        "rel_pct": -19.4,
         "band": -2
        }
       ],
@@ -23433,146 +23442,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 27.1,
+        "value": 25.7,
         "d": 111,
-        "n": 30,
-        "rel_pct": -45.8,
+        "n": 29,
+        "rel_pct": -48.6,
         "band": -3
        },
        {
         "month": "2025-02",
-        "value": 27.5,
+        "value": 26.6,
         "d": 99,
-        "n": 27,
-        "rel_pct": -45,
+        "n": 26,
+        "rel_pct": -46.8,
         "band": -3
        },
        {
         "month": "2025-03",
-        "value": 27.2,
+        "value": 26.8,
         "d": 103,
         "n": 28,
-        "rel_pct": -45.6,
-        "band": -3
-       },
-       {
-        "month": "2025-04",
-        "value": 27.8,
-        "d": 101,
-        "n": 28,
-        "rel_pct": -44.4,
-        "band": -3
-       },
-       {
-        "month": "2025-05",
-        "value": 27.1,
-        "d": 102,
-        "n": 28,
-        "rel_pct": -45.8,
-        "band": -3
-       },
-       {
-        "month": "2025-06",
-        "value": 27.4,
-        "d": 104,
-        "n": 28,
-        "rel_pct": -45.2,
-        "band": -3
-       },
-       {
-        "month": "2025-07",
-        "value": 26.8,
-        "d": 87,
-        "n": 23,
         "rel_pct": -46.4,
         "band": -3
        },
        {
+        "month": "2025-04",
+        "value": 28,
+        "d": 101,
+        "n": 28,
+        "rel_pct": -44,
+        "band": -3
+       },
+       {
+        "month": "2025-05",
+        "value": 27.7,
+        "d": 102,
+        "n": 28,
+        "rel_pct": -44.6,
+        "band": -3
+       },
+       {
+        "month": "2025-06",
+        "value": 28.4,
+        "d": 104,
+        "n": 30,
+        "rel_pct": -43.2,
+        "band": -3
+       },
+       {
+        "month": "2025-07",
+        "value": 27.9,
+        "d": 87,
+        "n": 24,
+        "rel_pct": -44.2,
+        "band": -3
+       },
+       {
         "month": "2025-08",
-        "value": 25.4,
+        "value": 26.6,
         "d": 83,
-        "n": 21,
-        "rel_pct": -49.2,
+        "n": 22,
+        "rel_pct": -46.8,
         "band": -3
        },
        {
         "month": "2025-09",
-        "value": 26.5,
+        "value": 27.5,
         "d": 94,
-        "n": 25,
-        "rel_pct": -47,
+        "n": 26,
+        "rel_pct": -45,
         "band": -3
        },
        {
         "month": "2025-10",
-        "value": 25.1,
+        "value": 25.9,
         "d": 67,
         "n": 17,
-        "rel_pct": -49.8,
+        "rel_pct": -48.2,
         "band": -3
        },
        {
         "month": "2025-11",
-        "value": 25.2,
+        "value": 25.7,
         "d": 111,
-        "n": 28,
-        "rel_pct": -49.6,
+        "n": 29,
+        "rel_pct": -48.6,
         "band": -3
        },
        {
         "month": "2025-12",
-        "value": 25,
+        "value": 25.1,
         "d": 85,
         "n": 21,
-        "rel_pct": -50,
-        "band": -4
+        "rel_pct": -49.8,
+        "band": -3
        },
        {
         "month": "2026-01",
-        "value": 24.6,
+        "value": 24.5,
         "d": 80,
         "n": 20,
-        "rel_pct": -50.8,
+        "rel_pct": -51,
         "band": -4
        },
        {
         "month": "2026-02",
-        "value": 25.6,
+        "value": 25.2,
         "d": 77,
+        "n": 19,
+        "rel_pct": -49.6,
+        "band": -3
+       },
+       {
+        "month": "2026-03",
+        "value": 25.4,
+        "d": 77,
+        "n": 20,
+        "rel_pct": -49.2,
+        "band": -3
+       },
+       {
+        "month": "2026-04",
+        "value": 25.6,
+        "d": 78,
         "n": 20,
         "rel_pct": -48.8,
         "band": -3
        },
        {
-        "month": "2026-03",
-        "value": 25.9,
-        "d": 77,
-        "n": 20,
-        "rel_pct": -48.2,
-        "band": -3
-       },
-       {
-        "month": "2026-04",
-        "value": 26.1,
-        "d": 78,
-        "n": 20,
-        "rel_pct": -47.8,
-        "band": -3
-       },
-       {
         "month": "2026-05",
-        "value": 26,
+        "value": 25.5,
         "d": 85,
         "n": 22,
-        "rel_pct": -48,
+        "rel_pct": -49,
         "band": -3
        },
        {
         "month": "2026-06",
-        "value": 26.2,
+        "value": 25.9,
         "d": 109,
-        "n": 29,
-        "rel_pct": -47.6,
+        "n": 28,
+        "rel_pct": -48.2,
         "band": -3
        }
       ],
@@ -23616,146 +23625,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 23.3,
+        "value": 22.2,
         "d": 3892,
         "n": null,
-        "rel_pct": 2.9,
+        "rel_pct": 7.5,
         "band": 1
        },
        {
         "month": "2025-02",
-        "value": 22,
-        "d": 3252,
-        "n": null,
-        "rel_pct": 8.3,
-        "band": 1
-       },
-       {
-        "month": "2025-03",
-        "value": 21.6,
-        "d": 3640,
-        "n": null,
-        "rel_pct": 10,
-        "band": 1
-       },
-       {
-        "month": "2025-04",
-        "value": 21.7,
-        "d": 2527,
-        "n": null,
-        "rel_pct": 9.6,
-        "band": 1
-       },
-       {
-        "month": "2025-05",
-        "value": 21.5,
-        "d": 2411,
-        "n": null,
-        "rel_pct": 10.4,
-        "band": 2
-       },
-       {
-        "month": "2025-06",
-        "value": 21.5,
-        "d": 3424,
-        "n": null,
-        "rel_pct": 10.4,
-        "band": 2
-       },
-       {
-        "month": "2025-07",
-        "value": 20.8,
-        "d": 3357,
-        "n": null,
-        "rel_pct": 13.3,
-        "band": 2
-       },
-       {
-        "month": "2025-08",
-        "value": 21.7,
-        "d": 3153,
-        "n": null,
-        "rel_pct": 9.6,
-        "band": 1
-       },
-       {
-        "month": "2025-09",
-        "value": 20.8,
-        "d": 2534,
-        "n": null,
-        "rel_pct": 13.3,
-        "band": 2
-       },
-       {
-        "month": "2025-10",
         "value": 21,
-        "d": 2742,
+        "d": 3252,
         "n": null,
         "rel_pct": 12.5,
         "band": 2
        },
        {
-        "month": "2025-11",
-        "value": 21.6,
-        "d": 3284,
+        "month": "2025-03",
+        "value": 20.7,
+        "d": 3640,
         "n": null,
-        "rel_pct": 10,
-        "band": 1
-       },
-       {
-        "month": "2025-12",
-        "value": 21.4,
-        "d": 3525,
-        "n": null,
-        "rel_pct": 10.8,
+        "rel_pct": 13.8,
         "band": 2
        },
        {
-        "month": "2026-01",
+        "month": "2025-04",
+        "value": 20.9,
+        "d": 2527,
+        "n": null,
+        "rel_pct": 12.9,
+        "band": 2
+       },
+       {
+        "month": "2025-05",
+        "value": 21,
+        "d": 2411,
+        "n": null,
+        "rel_pct": 12.5,
+        "band": 2
+       },
+       {
+        "month": "2025-06",
+        "value": 21.3,
+        "d": 3424,
+        "n": null,
+        "rel_pct": 11.2,
+        "band": 2
+       },
+       {
+        "month": "2025-07",
         "value": 21.1,
-        "d": 3900,
+        "d": 3357,
         "n": null,
         "rel_pct": 12.1,
         "band": 2
        },
        {
-        "month": "2026-02",
+        "month": "2025-08",
+        "value": 22.4,
+        "d": 3153,
+        "n": null,
+        "rel_pct": 6.7,
+        "band": 1
+       },
+       {
+        "month": "2025-09",
+        "value": 21.7,
+        "d": 2534,
+        "n": null,
+        "rel_pct": 9.6,
+        "band": 1
+       },
+       {
+        "month": "2025-10",
+        "value": 22.1,
+        "d": 2742,
+        "n": null,
+        "rel_pct": 7.9,
+        "band": 1
+       },
+       {
+        "month": "2025-11",
+        "value": 22.8,
+        "d": 3284,
+        "n": null,
+        "rel_pct": 5,
+        "band": 1
+       },
+       {
+        "month": "2025-12",
+        "value": 22.6,
+        "d": 3525,
+        "n": null,
+        "rel_pct": 5.8,
+        "band": 1
+       },
+       {
+        "month": "2026-01",
         "value": 22,
-        "d": 2410,
+        "d": 3900,
         "n": null,
         "rel_pct": 8.3,
         "band": 1
        },
        {
+        "month": "2026-02",
+        "value": 22.7,
+        "d": 2410,
+        "n": null,
+        "rel_pct": 5.4,
+        "band": 1
+       },
+       {
         "month": "2026-03",
-        "value": 20.8,
+        "value": 21.1,
         "d": 3828,
         "n": null,
-        "rel_pct": 13.3,
+        "rel_pct": 12.1,
         "band": 2
        },
        {
         "month": "2026-04",
-        "value": 22.4,
+        "value": 22.3,
         "d": 2524,
         "n": null,
-        "rel_pct": 6.7,
+        "rel_pct": 7.1,
         "band": 1
        },
        {
         "month": "2026-05",
-        "value": 22.4,
+        "value": 21.9,
         "d": 4115,
         "n": null,
-        "rel_pct": 6.7,
+        "rel_pct": 8.8,
         "band": 1
        },
        {
         "month": "2026-06",
-        "value": 22.8,
+        "value": 22,
         "d": 2790,
         "n": null,
-        "rel_pct": 5,
+        "rel_pct": 8.3,
         "band": 1
        }
       ],
@@ -23772,146 +23781,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 86.6,
+        "value": 81.7,
         "d": 3972,
-        "n": 3440,
-        "rel_pct": -3.8,
+        "n": 3245,
+        "rel_pct": -9.2,
         "band": -1
        },
        {
         "month": "2025-02",
-        "value": 88,
+        "value": 82.9,
         "d": 2691,
-        "n": 2368,
-        "rel_pct": -2.2,
+        "n": 2231,
+        "rel_pct": -7.9,
         "band": -1
        },
        {
         "month": "2025-03",
-        "value": 88.9,
+        "value": 84.1,
         "d": 2405,
-        "n": 2138,
-        "rel_pct": -1.2,
+        "n": 2023,
+        "rel_pct": -6.6,
         "band": -1
        },
        {
         "month": "2025-04",
-        "value": 88.5,
+        "value": 84.4,
         "d": 4141,
-        "n": 3665,
-        "rel_pct": -1.7,
+        "n": 3495,
+        "rel_pct": -6.2,
         "band": -1
        },
        {
         "month": "2025-05",
-        "value": 86.4,
+        "value": 83.3,
         "d": 3394,
-        "n": 2932,
-        "rel_pct": -4,
+        "n": 2827,
+        "rel_pct": -7.4,
         "band": -1
        },
        {
         "month": "2025-06",
-        "value": 83.8,
+        "value": 82.2,
         "d": 2849,
-        "n": 2387,
-        "rel_pct": -6.9,
+        "n": 2342,
+        "rel_pct": -8.7,
         "band": -1
        },
        {
         "month": "2025-07",
-        "value": 85.2,
+        "value": 85,
         "d": 2429,
-        "n": 2070,
-        "rel_pct": -5.3,
+        "n": 2065,
+        "rel_pct": -5.6,
         "band": -1
        },
        {
         "month": "2025-08",
-        "value": 83.2,
-        "d": 3167,
-        "n": 2635,
-        "rel_pct": -7.6,
-        "band": -1
-       },
-       {
-        "month": "2025-09",
-        "value": 84.1,
-        "d": 2713,
-        "n": 2282,
-        "rel_pct": -6.6,
-        "band": -1
-       },
-       {
-        "month": "2025-10",
         "value": 84.6,
-        "d": 3567,
-        "n": 3018,
+        "d": 3167,
+        "n": 2679,
         "rel_pct": -6,
         "band": -1
        },
        {
-        "month": "2025-11",
-        "value": 82.5,
-        "d": 2704,
-        "n": 2231,
-        "rel_pct": -8.3,
+        "month": "2025-09",
+        "value": 86.8,
+        "d": 2713,
+        "n": 2355,
+        "rel_pct": -3.6,
         "band": -1
        },
        {
-        "month": "2025-12",
-        "value": 84.1,
-        "d": 2515,
-        "n": 2115,
-        "rel_pct": -6.6,
-        "band": -1
-       },
-       {
-        "month": "2026-01",
-        "value": 81.1,
-        "d": 2624,
-        "n": 2128,
-        "rel_pct": -9.9,
-        "band": -1
-       },
-       {
-        "month": "2026-02",
-        "value": 83.2,
-        "d": 3539,
-        "n": 2944,
-        "rel_pct": -7.6,
-        "band": -1
-       },
-       {
-        "month": "2026-03",
-        "value": 82.1,
-        "d": 4028,
-        "n": 3307,
-        "rel_pct": -8.8,
-        "band": -1
-       },
-       {
-        "month": "2026-04",
-        "value": 85.9,
-        "d": 3876,
-        "n": 3329,
-        "rel_pct": -4.6,
-        "band": -1
-       },
-       {
-        "month": "2026-05",
+        "month": "2025-10",
         "value": 88.5,
-        "d": 3511,
-        "n": 3107,
+        "d": 3567,
+        "n": 3157,
         "rel_pct": -1.7,
         "band": -1
        },
        {
+        "month": "2025-11",
+        "value": 87.2,
+        "d": 2704,
+        "n": 2358,
+        "rel_pct": -3.1,
+        "band": -1
+       },
+       {
+        "month": "2025-12",
+        "value": 89.3,
+        "d": 2515,
+        "n": 2246,
+        "rel_pct": -0.8,
+        "band": 0
+       },
+       {
+        "month": "2026-01",
+        "value": 86.3,
+        "d": 2624,
+        "n": 2265,
+        "rel_pct": -4.1,
+        "band": -1
+       },
+       {
+        "month": "2026-02",
+        "value": 87.9,
+        "d": 3539,
+        "n": 3111,
+        "rel_pct": -2.3,
+        "band": -1
+       },
+       {
+        "month": "2026-03",
+        "value": 85.8,
+        "d": 4028,
+        "n": 3456,
+        "rel_pct": -4.7,
+        "band": -1
+       },
+       {
+        "month": "2026-04",
+        "value": 88.3,
+        "d": 3876,
+        "n": 3423,
+        "rel_pct": -1.9,
+        "band": -1
+       },
+       {
+        "month": "2026-05",
+        "value": 89.5,
+        "d": 3511,
+        "n": 3142,
+        "rel_pct": -0.6,
+        "band": 0
+       },
+       {
         "month": "2026-06",
-        "value": 84,
+        "value": 83.4,
         "d": 2471,
-        "n": 2076,
-        "rel_pct": -6.7,
+        "n": 2061,
+        "rel_pct": -7.3,
         "band": -1
        }
       ],
@@ -23928,58 +23937,58 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 89.7,
+        "value": 83.8,
         "d": 3990,
-        "n": 3579,
-        "rel_pct": -0.3,
-        "band": 0
+        "n": 3344,
+        "rel_pct": -6.9,
+        "band": -1
        },
        {
         "month": "2025-02",
-        "value": 88.7,
+        "value": 82.6,
         "d": 3294,
-        "n": 2922,
-        "rel_pct": -1.4,
+        "n": 2721,
+        "rel_pct": -8.2,
         "band": -1
        },
        {
         "month": "2025-03",
-        "value": 89.5,
+        "value": 83.6,
         "d": 3180,
-        "n": 2846,
-        "rel_pct": -0.6,
-        "band": 0
+        "n": 2658,
+        "rel_pct": -7.1,
+        "band": -1
        },
        {
         "month": "2025-04",
-        "value": 89.9,
+        "value": 84.6,
         "d": 2447,
-        "n": 2200,
-        "rel_pct": -0.1,
-        "band": 0
+        "n": 2070,
+        "rel_pct": -6,
+        "band": -1
        },
        {
         "month": "2025-05",
-        "value": 87.3,
+        "value": 83.1,
         "d": 4073,
-        "n": 3556,
-        "rel_pct": -3,
+        "n": 3385,
+        "rel_pct": -7.7,
         "band": -1
        },
        {
         "month": "2025-06",
-        "value": 88.7,
+        "value": 85.7,
         "d": 2699,
-        "n": 2394,
-        "rel_pct": -1.4,
+        "n": 2313,
+        "rel_pct": -4.8,
         "band": -1
        },
        {
         "month": "2025-07",
-        "value": 87,
+        "value": 85.5,
         "d": 3439,
-        "n": 2992,
-        "rel_pct": -3.3,
+        "n": 2940,
+        "rel_pct": -5,
         "band": -1
        },
        {
@@ -23992,83 +24001,83 @@ window.AIECHO_REGISTRY = {
        },
        {
         "month": "2025-09",
-        "value": 83.7,
+        "value": 85.1,
         "d": 3146,
-        "n": 2633,
-        "rel_pct": -7,
+        "n": 2677,
+        "rel_pct": -5.4,
         "band": -1
        },
        {
         "month": "2025-10",
-        "value": 82.3,
+        "value": 85.1,
         "d": 3078,
-        "n": 2533,
-        "rel_pct": -8.6,
+        "n": 2619,
+        "rel_pct": -5.4,
         "band": -1
        },
        {
         "month": "2025-11",
-        "value": 86.4,
+        "value": 90.3,
         "d": 2648,
-        "n": 2288,
-        "rel_pct": -4,
-        "band": -1
+        "n": 2391,
+        "rel_pct": 0.3,
+        "band": 0
        },
        {
         "month": "2025-12",
-        "value": 83.6,
+        "value": 88.2,
         "d": 3891,
-        "n": 3253,
-        "rel_pct": -7.1,
+        "n": 3432,
+        "rel_pct": -2,
         "band": -1
        },
        {
         "month": "2026-01",
-        "value": 84.4,
+        "value": 89.4,
         "d": 2563,
-        "n": 2163,
-        "rel_pct": -6.2,
-        "band": -1
+        "n": 2291,
+        "rel_pct": -0.7,
+        "band": 0
        },
        {
         "month": "2026-02",
-        "value": 84.6,
+        "value": 89.7,
         "d": 2965,
-        "n": 2508,
-        "rel_pct": -6,
-        "band": -1
+        "n": 2660,
+        "rel_pct": -0.3,
+        "band": 0
        },
        {
         "month": "2026-03",
-        "value": 85.9,
+        "value": 90.6,
         "d": 4107,
-        "n": 3528,
-        "rel_pct": -4.6,
-        "band": -1
+        "n": 3721,
+        "rel_pct": 0.7,
+        "band": 0
        },
        {
         "month": "2026-04",
-        "value": 85.9,
+        "value": 90,
         "d": 2374,
-        "n": 2039,
-        "rel_pct": -4.6,
-        "band": -1
+        "n": 2137,
+        "rel_pct": 0,
+        "band": 0
        },
        {
         "month": "2026-05",
-        "value": 87.2,
+        "value": 90.4,
         "d": 2462,
-        "n": 2147,
-        "rel_pct": -3.1,
-        "band": -1
+        "n": 2226,
+        "rel_pct": 0.4,
+        "band": 0
        },
        {
         "month": "2026-06",
-        "value": 89.8,
+        "value": 91.9,
         "d": 3380,
-        "n": 3035,
-        "rel_pct": -0.2,
-        "band": 0
+        "n": 3106,
+        "rel_pct": 2.1,
+        "band": 1
        }
       ],
       "delta": 1.2,
@@ -24084,146 +24093,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 76.4,
+        "value": 72.8,
         "d": 3384,
-        "n": 2585,
-        "rel_pct": -10.1,
+        "n": 2464,
+        "rel_pct": -14.4,
         "band": -2
        },
        {
         "month": "2025-02",
-        "value": 76.2,
+        "value": 72.7,
         "d": 2987,
-        "n": 2276,
-        "rel_pct": -10.4,
+        "n": 2172,
+        "rel_pct": -14.5,
         "band": -2
        },
        {
         "month": "2025-03",
-        "value": 76,
+        "value": 72.8,
         "d": 2812,
-        "n": 2137,
-        "rel_pct": -10.6,
+        "n": 2047,
+        "rel_pct": -14.4,
         "band": -2
        },
        {
         "month": "2025-04",
-        "value": 74.4,
+        "value": 71.8,
         "d": 3449,
-        "n": 2566,
-        "rel_pct": -12.5,
+        "n": 2476,
+        "rel_pct": -15.5,
         "band": -2
        },
        {
         "month": "2025-05",
-        "value": 70.3,
+        "value": 68.4,
         "d": 3244,
-        "n": 2281,
-        "rel_pct": -17.3,
+        "n": 2219,
+        "rel_pct": -19.5,
         "band": -2
        },
        {
         "month": "2025-06",
-        "value": 71.4,
+        "value": 70.3,
         "d": 3761,
-        "n": 2685,
-        "rel_pct": -16,
+        "n": 2644,
+        "rel_pct": -17.3,
         "band": -2
        },
        {
         "month": "2025-07",
-        "value": 69.4,
-        "d": 3633,
-        "n": 2521,
-        "rel_pct": -18.4,
-        "band": -2
-       },
-       {
-        "month": "2025-08",
-        "value": 70.1,
-        "d": 2718,
-        "n": 1905,
-        "rel_pct": -17.5,
-        "band": -2
-       },
-       {
-        "month": "2025-09",
-        "value": 69.5,
-        "d": 3901,
-        "n": 2711,
-        "rel_pct": -18.2,
-        "band": -2
-       },
-       {
-        "month": "2025-10",
         "value": 69.1,
-        "d": 3243,
-        "n": 2241,
+        "d": 3633,
+        "n": 2510,
         "rel_pct": -18.7,
         "band": -2
        },
        {
-        "month": "2025-11",
-        "value": 69.6,
-        "d": 3279,
-        "n": 2282,
-        "rel_pct": -18.1,
+        "month": "2025-08",
+        "value": 70.7,
+        "d": 2718,
+        "n": 1922,
+        "rel_pct": -16.8,
         "band": -2
        },
        {
-        "month": "2025-12",
-        "value": 69.3,
-        "d": 3520,
-        "n": 2439,
-        "rel_pct": -18.5,
+        "month": "2025-09",
+        "value": 70.8,
+        "d": 3901,
+        "n": 2762,
+        "rel_pct": -16.7,
         "band": -2
        },
        {
-        "month": "2026-01",
-        "value": 70.6,
-        "d": 3382,
-        "n": 2388,
-        "rel_pct": -16.9,
-        "band": -2
-       },
-       {
-        "month": "2026-02",
-        "value": 69.7,
-        "d": 4060,
-        "n": 2830,
-        "rel_pct": -18,
-        "band": -2
-       },
-       {
-        "month": "2026-03",
+        "month": "2025-10",
         "value": 71,
-        "d": 2813,
-        "n": 1997,
+        "d": 3243,
+        "n": 2303,
         "rel_pct": -16.5,
         "band": -2
        },
        {
+        "month": "2025-11",
+        "value": 71.9,
+        "d": 3279,
+        "n": 2358,
+        "rel_pct": -15.4,
+        "band": -2
+       },
+       {
+        "month": "2025-12",
+        "value": 71.8,
+        "d": 3520,
+        "n": 2527,
+        "rel_pct": -15.5,
+        "band": -2
+       },
+       {
+        "month": "2026-01",
+        "value": 73.1,
+        "d": 3382,
+        "n": 2472,
+        "rel_pct": -14,
+        "band": -2
+       },
+       {
+        "month": "2026-02",
+        "value": 72,
+        "d": 4060,
+        "n": 2923,
+        "rel_pct": -15.3,
+        "band": -2
+       },
+       {
+        "month": "2026-03",
+        "value": 72.9,
+        "d": 2813,
+        "n": 2051,
+        "rel_pct": -14.2,
+        "band": -2
+       },
+       {
         "month": "2026-04",
-        "value": 71.6,
+        "value": 73.1,
         "d": 3495,
-        "n": 2502,
-        "rel_pct": -15.8,
+        "n": 2555,
+        "rel_pct": -14,
         "band": -2
        },
        {
         "month": "2026-05",
-        "value": 73.6,
+        "value": 74.5,
         "d": 3480,
-        "n": 2561,
-        "rel_pct": -13.4,
+        "n": 2593,
+        "rel_pct": -12.4,
         "band": -2
        },
        {
         "month": "2026-06",
-        "value": 70.8,
+        "value": 71.1,
         "d": 3905,
-        "n": 2765,
-        "rel_pct": -16.7,
+        "n": 2776,
+        "rel_pct": -16.4,
         "band": -2
        }
       ],
@@ -24240,66 +24249,66 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 85.5,
+        "value": 85,
         "d": 3327,
-        "n": 2845,
-        "rel_pct": -2.8,
+        "n": 2828,
+        "rel_pct": -3.4,
         "band": -1
        },
        {
         "month": "2025-02",
-        "value": 83.1,
+        "value": 82.2,
         "d": 3972,
-        "n": 3301,
-        "rel_pct": -5.6,
+        "n": 3265,
+        "rel_pct": -6.6,
         "band": -1
        },
        {
         "month": "2025-03",
-        "value": 84.7,
+        "value": 83.4,
         "d": 2370,
-        "n": 2007,
-        "rel_pct": -3.7,
+        "n": 1977,
+        "rel_pct": -5.2,
         "band": -1
        },
        {
         "month": "2025-04",
-        "value": 84.8,
+        "value": 83.1,
         "d": 3487,
-        "n": 2957,
-        "rel_pct": -3.6,
+        "n": 2898,
+        "rel_pct": -5.6,
         "band": -1
        },
        {
         "month": "2025-05",
-        "value": 83.9,
+        "value": 82,
         "d": 3136,
-        "n": 2631,
-        "rel_pct": -4.7,
+        "n": 2572,
+        "rel_pct": -6.8,
         "band": -1
        },
        {
         "month": "2025-06",
-        "value": 84.9,
+        "value": 83.2,
         "d": 3914,
-        "n": 3323,
-        "rel_pct": -3.5,
+        "n": 3256,
+        "rel_pct": -5.5,
         "band": -1
        },
        {
         "month": "2025-07",
-        "value": 79.2,
+        "value": 77.8,
         "d": 3018,
-        "n": 2390,
-        "rel_pct": -10,
-        "band": -1
+        "n": 2348,
+        "rel_pct": -11.6,
+        "band": -2
        },
        {
         "month": "2025-08",
-        "value": 82,
+        "value": 81.2,
         "d": 4172,
-        "n": 3421,
-        "rel_pct": -6.8,
+        "n": 3388,
+        "rel_pct": -7.7,
         "band": -1
        },
        {
@@ -24312,74 +24321,74 @@ window.AIECHO_REGISTRY = {
        },
        {
         "month": "2025-10",
-        "value": 78.3,
+        "value": 79.3,
         "d": 3222,
-        "n": 2523,
-        "rel_pct": -11,
-        "band": -2
+        "n": 2555,
+        "rel_pct": -9.9,
+        "band": -1
        },
        {
         "month": "2025-11",
-        "value": 79,
+        "value": 81,
         "d": 2910,
-        "n": 2299,
-        "rel_pct": -10.2,
-        "band": -2
+        "n": 2357,
+        "rel_pct": -8,
+        "band": -1
        },
        {
         "month": "2025-12",
-        "value": 80.6,
+        "value": 83.5,
         "d": 3476,
-        "n": 2802,
-        "rel_pct": -8.4,
+        "n": 2902,
+        "rel_pct": -5.1,
         "band": -1
        },
        {
         "month": "2026-01",
-        "value": 80,
+        "value": 83.5,
         "d": 2695,
-        "n": 2156,
-        "rel_pct": -9.1,
+        "n": 2250,
+        "rel_pct": -5.1,
         "band": -1
        },
        {
         "month": "2026-02",
-        "value": 81.3,
+        "value": 85.1,
         "d": 3534,
-        "n": 2873,
-        "rel_pct": -7.6,
+        "n": 3007,
+        "rel_pct": -3.3,
         "band": -1
        },
        {
         "month": "2026-03",
-        "value": 79.4,
+        "value": 83,
         "d": 2610,
-        "n": 2072,
-        "rel_pct": -9.8,
+        "n": 2166,
+        "rel_pct": -5.7,
         "band": -1
        },
        {
         "month": "2026-04",
-        "value": 79.4,
+        "value": 82.3,
         "d": 3054,
-        "n": 2425,
-        "rel_pct": -9.8,
+        "n": 2513,
+        "rel_pct": -6.5,
         "band": -1
        },
        {
         "month": "2026-05",
-        "value": 81.1,
+        "value": 83,
         "d": 2613,
-        "n": 2119,
-        "rel_pct": -7.8,
+        "n": 2169,
+        "rel_pct": -5.7,
         "band": -1
        },
        {
         "month": "2026-06",
-        "value": 84.2,
+        "value": 84.8,
         "d": 2821,
-        "n": 2375,
-        "rel_pct": -4.3,
+        "n": 2392,
+        "rel_pct": -3.6,
         "band": -1
        }
       ],
@@ -24396,146 +24405,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 82.8,
+        "value": 83.3,
         "d": 824,
-        "n": 682,
-        "rel_pct": -2.6,
+        "n": 686,
+        "rel_pct": -2,
         "band": -1
        },
        {
         "month": "2025-02",
-        "value": 82.5,
+        "value": 83.5,
         "d": 737,
-        "n": 608,
-        "rel_pct": -2.9,
+        "n": 615,
+        "rel_pct": -1.8,
         "band": -1
        },
        {
         "month": "2025-03",
-        "value": 82.4,
+        "value": 83.9,
         "d": 815,
-        "n": 672,
-        "rel_pct": -3.1,
+        "n": 684,
+        "rel_pct": -1.3,
         "band": -1
        },
        {
         "month": "2025-04",
-        "value": 78.4,
+        "value": 80.1,
         "d": 743,
-        "n": 583,
-        "rel_pct": -7.8,
+        "n": 595,
+        "rel_pct": -5.8,
         "band": -1
        },
        {
         "month": "2025-05",
-        "value": 81,
+        "value": 82.8,
         "d": 785,
-        "n": 636,
-        "rel_pct": -4.7,
+        "n": 650,
+        "rel_pct": -2.6,
         "band": -1
        },
        {
         "month": "2025-06",
-        "value": 79,
+        "value": 80.7,
         "d": 600,
-        "n": 474,
-        "rel_pct": -7.1,
+        "n": 484,
+        "rel_pct": -5.1,
         "band": -1
        },
        {
         "month": "2025-07",
-        "value": 75.8,
+        "value": 77.3,
         "d": 487,
-        "n": 369,
-        "rel_pct": -10.8,
-        "band": -2
+        "n": 376,
+        "rel_pct": -9.1,
+        "band": -1
        },
        {
         "month": "2025-08",
-        "value": 75.7,
+        "value": 76.8,
         "d": 531,
-        "n": 402,
+        "n": 408,
+        "rel_pct": -9.6,
+        "band": -1
+       },
+       {
+        "month": "2025-09",
+        "value": 75.7,
+        "d": 489,
+        "n": 370,
         "rel_pct": -10.9,
         "band": -2
        },
        {
-        "month": "2025-09",
-        "value": 75.1,
-        "d": 489,
-        "n": 367,
-        "rel_pct": -11.6,
-        "band": -2
-       },
-       {
         "month": "2025-10",
-        "value": 77.7,
+        "value": 77.9,
         "d": 506,
-        "n": 393,
-        "rel_pct": -8.6,
+        "n": 394,
+        "rel_pct": -8.4,
         "band": -1
        },
        {
         "month": "2025-11",
-        "value": 73.9,
+        "value": 73.6,
         "d": 803,
-        "n": 593,
-        "rel_pct": -13.1,
+        "n": 591,
+        "rel_pct": -13.4,
         "band": -2
        },
        {
         "month": "2025-12",
-        "value": 75,
+        "value": 74.2,
         "d": 687,
-        "n": 515,
-        "rel_pct": -11.8,
+        "n": 510,
+        "rel_pct": -12.7,
         "band": -2
        },
        {
         "month": "2026-01",
-        "value": 79.4,
+        "value": 78.3,
         "d": 534,
-        "n": 424,
-        "rel_pct": -6.6,
+        "n": 418,
+        "rel_pct": -7.9,
         "band": -1
        },
        {
         "month": "2026-02",
-        "value": 78.6,
+        "value": 77.2,
         "d": 799,
-        "n": 628,
-        "rel_pct": -7.5,
+        "n": 617,
+        "rel_pct": -9.2,
         "band": -1
        },
        {
         "month": "2026-03",
-        "value": 79.5,
+        "value": 78,
         "d": 645,
-        "n": 513,
-        "rel_pct": -6.5,
+        "n": 503,
+        "rel_pct": -8.2,
         "band": -1
        },
        {
         "month": "2026-04",
-        "value": 80.3,
+        "value": 78.8,
         "d": 595,
-        "n": 478,
-        "rel_pct": -5.5,
+        "n": 469,
+        "rel_pct": -7.3,
         "band": -1
        },
        {
         "month": "2026-05",
-        "value": 80.6,
+        "value": 79.2,
         "d": 810,
-        "n": 653,
-        "rel_pct": -5.2,
+        "n": 642,
+        "rel_pct": -6.8,
         "band": -1
        },
        {
         "month": "2026-06",
-        "value": 80.4,
+        "value": 79.3,
         "d": 482,
-        "n": 388,
-        "rel_pct": -5.4,
+        "n": 382,
+        "rel_pct": -6.7,
         "band": -1
        }
       ],
@@ -24552,146 +24561,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 70.5,
+        "value": 68.9,
         "d": 251,
-        "n": 177,
-        "rel_pct": -11.9,
+        "n": 173,
+        "rel_pct": -13.9,
         "band": -2
        },
        {
         "month": "2025-02",
-        "value": 68.6,
+        "value": 67.5,
         "d": 204,
-        "n": 140,
-        "rel_pct": -14.3,
+        "n": 138,
+        "rel_pct": -15.6,
         "band": -2
        },
        {
         "month": "2025-03",
-        "value": 70.7,
+        "value": 70.2,
         "d": 152,
         "n": 107,
-        "rel_pct": -11.6,
+        "rel_pct": -12.2,
         "band": -2
        },
        {
         "month": "2025-04",
-        "value": 67.8,
+        "value": 68,
         "d": 242,
-        "n": 164,
-        "rel_pct": -15.3,
+        "n": 165,
+        "rel_pct": -15,
         "band": -2
        },
        {
         "month": "2025-05",
-        "value": 67.3,
+        "value": 68.2,
         "d": 152,
-        "n": 102,
-        "rel_pct": -15.9,
+        "n": 104,
+        "rel_pct": -14.7,
         "band": -2
        },
        {
         "month": "2025-06",
-        "value": 67.7,
+        "value": 69.3,
         "d": 214,
-        "n": 145,
-        "rel_pct": -15.4,
+        "n": 148,
+        "rel_pct": -13.4,
         "band": -2
        },
        {
         "month": "2025-07",
-        "value": 68.4,
+        "value": 70.4,
         "d": 234,
-        "n": 160,
-        "rel_pct": -14.5,
+        "n": 165,
+        "rel_pct": -12,
         "band": -2
        },
        {
         "month": "2025-08",
-        "value": 64.1,
+        "value": 66.6,
         "d": 156,
-        "n": 100,
-        "rel_pct": -19.9,
+        "n": 104,
+        "rel_pct": -16.8,
         "band": -2
        },
        {
         "month": "2025-09",
-        "value": 67.1,
+        "value": 69.7,
         "d": 222,
-        "n": 149,
-        "rel_pct": -16.1,
+        "n": 155,
+        "rel_pct": -12.9,
         "band": -2
        },
        {
         "month": "2025-10",
-        "value": 64,
+        "value": 66.7,
         "d": 207,
-        "n": 132,
-        "rel_pct": -20,
+        "n": 138,
+        "rel_pct": -16.6,
         "band": -2
        },
        {
         "month": "2025-11",
-        "value": 67.7,
+        "value": 70.1,
         "d": 192,
-        "n": 130,
-        "rel_pct": -15.4,
+        "n": 135,
+        "rel_pct": -12.4,
         "band": -2
        },
        {
         "month": "2025-12",
-        "value": 66.8,
+        "value": 68.8,
         "d": 159,
-        "n": 106,
-        "rel_pct": -16.5,
+        "n": 109,
+        "rel_pct": -14,
         "band": -2
        },
        {
         "month": "2026-01",
-        "value": 65.7,
+        "value": 67,
         "d": 241,
-        "n": 158,
-        "rel_pct": -17.9,
+        "n": 161,
+        "rel_pct": -16.3,
         "band": -2
        },
        {
         "month": "2026-02",
-        "value": 64.5,
+        "value": 65.1,
         "d": 198,
-        "n": 128,
-        "rel_pct": -19.4,
+        "n": 129,
+        "rel_pct": -18.6,
         "band": -2
        },
        {
         "month": "2026-03",
-        "value": 67.7,
+        "value": 67.5,
         "d": 242,
-        "n": 164,
-        "rel_pct": -15.4,
+        "n": 163,
+        "rel_pct": -15.6,
         "band": -2
        },
        {
         "month": "2026-04",
-        "value": 66.8,
+        "value": 65.8,
         "d": 153,
-        "n": 102,
-        "rel_pct": -16.5,
+        "n": 101,
+        "rel_pct": -17.8,
         "band": -2
        },
        {
         "month": "2026-05",
-        "value": 67.7,
+        "value": 66,
         "d": 186,
-        "n": 126,
-        "rel_pct": -15.4,
+        "n": 123,
+        "rel_pct": -17.5,
         "band": -2
        },
        {
         "month": "2026-06",
-        "value": 67.8,
+        "value": 65.4,
         "d": 153,
-        "n": 104,
-        "rel_pct": -15.3,
+        "n": 100,
+        "rel_pct": -18.2,
         "band": -2
        }
       ],
@@ -24708,146 +24717,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 79.1,
+        "value": 77,
         "d": 1443,
-        "n": 1141,
-        "rel_pct": -12.1,
+        "n": 1111,
+        "rel_pct": -14.4,
         "band": -2
        },
        {
         "month": "2025-02",
-        "value": 79.5,
+        "value": 78.2,
         "d": 1146,
-        "n": 911,
-        "rel_pct": -11.7,
+        "n": 896,
+        "rel_pct": -13.1,
         "band": -2
        },
        {
         "month": "2025-03",
-        "value": 79.2,
+        "value": 78.8,
         "d": 1242,
-        "n": 984,
-        "rel_pct": -12,
+        "n": 979,
+        "rel_pct": -12.4,
         "band": -2
        },
        {
         "month": "2025-04",
-        "value": 77.9,
+        "value": 78.4,
         "d": 1039,
-        "n": 809,
-        "rel_pct": -13.4,
+        "n": 815,
+        "rel_pct": -12.9,
         "band": -2
        },
        {
         "month": "2025-05",
-        "value": 76.4,
+        "value": 78,
         "d": 1242,
-        "n": 949,
-        "rel_pct": -15.1,
+        "n": 969,
+        "rel_pct": -13.3,
         "band": -2
        },
        {
         "month": "2025-06",
-        "value": 75.4,
+        "value": 77.9,
         "d": 894,
-        "n": 674,
-        "rel_pct": -16.2,
+        "n": 696,
+        "rel_pct": -13.4,
         "band": -2
        },
        {
         "month": "2025-07",
-        "value": 76.9,
+        "value": 80.3,
         "d": 909,
-        "n": 699,
-        "rel_pct": -14.6,
+        "n": 730,
+        "rel_pct": -10.8,
         "band": -2
        },
        {
         "month": "2025-08",
-        "value": 71.5,
+        "value": 75.5,
         "d": 966,
-        "n": 691,
-        "rel_pct": -20.6,
+        "n": 729,
+        "rel_pct": -16.1,
         "band": -2
        },
        {
         "month": "2025-09",
-        "value": 73.4,
+        "value": 77.9,
         "d": 1317,
-        "n": 967,
-        "rel_pct": -18.4,
+        "n": 1026,
+        "rel_pct": -13.4,
         "band": -2
        },
        {
         "month": "2025-10",
-        "value": 74.5,
+        "value": 79.1,
         "d": 1412,
-        "n": 1052,
-        "rel_pct": -17.2,
+        "n": 1117,
+        "rel_pct": -12.1,
         "band": -2
        },
        {
         "month": "2025-11",
-        "value": 70.5,
+        "value": 74.9,
         "d": 1203,
-        "n": 848,
-        "rel_pct": -21.7,
+        "n": 901,
+        "rel_pct": -16.8,
         "band": -2
        },
        {
         "month": "2025-12",
-        "value": 71.6,
+        "value": 75.5,
         "d": 1402,
-        "n": 1004,
-        "rel_pct": -20.4,
+        "n": 1059,
+        "rel_pct": -16.1,
         "band": -2
        },
        {
         "month": "2026-01",
-        "value": 72,
+        "value": 75.1,
         "d": 1119,
-        "n": 806,
-        "rel_pct": -20,
+        "n": 840,
+        "rel_pct": -16.6,
         "band": -2
        },
        {
         "month": "2026-02",
-        "value": 74.5,
+        "value": 76.6,
         "d": 1082,
-        "n": 806,
-        "rel_pct": -17.2,
+        "n": 829,
+        "rel_pct": -14.9,
         "band": -2
        },
        {
         "month": "2026-03",
-        "value": 75.3,
+        "value": 76.2,
         "d": 912,
-        "n": 687,
-        "rel_pct": -16.3,
+        "n": 695,
+        "rel_pct": -15.3,
         "band": -2
        },
        {
         "month": "2026-04",
-        "value": 74.1,
+        "value": 73.8,
         "d": 953,
-        "n": 706,
-        "rel_pct": -17.7,
+        "n": 703,
+        "rel_pct": -18,
         "band": -2
        },
        {
         "month": "2026-05",
-        "value": 73.7,
+        "value": 72.1,
         "d": 894,
-        "n": 659,
-        "rel_pct": -18.1,
+        "n": 645,
+        "rel_pct": -19.9,
         "band": -2
        },
        {
         "month": "2026-06",
-        "value": 76.5,
+        "value": 73.7,
         "d": 950,
-        "n": 727,
-        "rel_pct": -15,
+        "n": 700,
+        "rel_pct": -18.1,
         "band": -2
        }
       ],
@@ -24864,82 +24873,82 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 47.6,
+        "value": 46.5,
         "d": 295,
-        "n": 140,
-        "rel_pct": -4.8,
+        "n": 137,
+        "rel_pct": -7,
         "band": -1
        },
        {
         "month": "2025-02",
-        "value": 49.2,
+        "value": 49.1,
         "d": 412,
-        "n": 203,
-        "rel_pct": -1.6,
+        "n": 202,
+        "rel_pct": -1.8,
         "band": -1
        },
        {
         "month": "2025-03",
-        "value": 48.7,
+        "value": 49.3,
         "d": 381,
-        "n": 186,
-        "rel_pct": -2.6,
+        "n": 188,
+        "rel_pct": -1.4,
         "band": -1
        },
        {
         "month": "2025-04",
-        "value": 46.8,
+        "value": 48.1,
         "d": 399,
-        "n": 187,
-        "rel_pct": -6.4,
+        "n": 192,
+        "rel_pct": -3.8,
         "band": -1
        },
        {
         "month": "2025-05",
-        "value": 49,
+        "value": 50.7,
         "d": 357,
-        "n": 175,
-        "rel_pct": -2,
-        "band": -1
+        "n": 181,
+        "rel_pct": 1.4,
+        "band": 1
        },
        {
         "month": "2025-06",
-        "value": 45.6,
+        "value": 47.5,
         "d": 323,
-        "n": 147,
-        "rel_pct": -8.8,
+        "n": 153,
+        "rel_pct": -5,
         "band": -1
        },
        {
         "month": "2025-07",
-        "value": 48.2,
+        "value": 49.9,
         "d": 380,
-        "n": 183,
-        "rel_pct": -3.6,
-        "band": -1
+        "n": 190,
+        "rel_pct": -0.2,
+        "band": 0
        },
        {
         "month": "2025-08",
-        "value": 46.3,
+        "value": 47.7,
         "d": 395,
-        "n": 183,
-        "rel_pct": -7.4,
+        "n": 188,
+        "rel_pct": -4.6,
         "band": -1
        },
        {
         "month": "2025-09",
-        "value": 47.1,
+        "value": 48.1,
         "d": 385,
-        "n": 181,
-        "rel_pct": -5.8,
+        "n": 185,
+        "rel_pct": -3.8,
         "band": -1
        },
        {
         "month": "2025-10",
-        "value": 46,
+        "value": 46.4,
         "d": 281,
-        "n": 129,
-        "rel_pct": -8,
+        "n": 130,
+        "rel_pct": -7.2,
         "band": -1
        },
        {
@@ -24952,42 +24961,42 @@ window.AIECHO_REGISTRY = {
        },
        {
         "month": "2025-12",
-        "value": 44.3,
+        "value": 43.9,
         "d": 457,
-        "n": 202,
-        "rel_pct": -11.4,
+        "n": 201,
+        "rel_pct": -12.2,
         "band": -2
        },
        {
         "month": "2026-01",
-        "value": 46.9,
-        "d": 317,
-        "n": 149,
-        "rel_pct": -6.2,
-        "band": -1
-       },
-       {
-        "month": "2026-02",
-        "value": 44.8,
-        "d": 320,
-        "n": 143,
-        "rel_pct": -10.4,
-        "band": -2
-       },
-       {
-        "month": "2026-03",
         "value": 46.2,
-        "d": 346,
-        "n": 160,
+        "d": 317,
+        "n": 146,
         "rel_pct": -7.6,
         "band": -1
        },
        {
+        "month": "2026-02",
+        "value": 44.1,
+        "d": 320,
+        "n": 141,
+        "rel_pct": -11.8,
+        "band": -2
+       },
+       {
+        "month": "2026-03",
+        "value": 45.6,
+        "d": 346,
+        "n": 158,
+        "rel_pct": -8.8,
+        "band": -1
+       },
+       {
         "month": "2026-04",
-        "value": 47.6,
+        "value": 47.3,
         "d": 429,
-        "n": 204,
-        "rel_pct": -4.8,
+        "n": 203,
+        "rel_pct": -5.4,
         "band": -1
        },
        {
@@ -25000,10 +25009,10 @@ window.AIECHO_REGISTRY = {
        },
        {
         "month": "2026-06",
-        "value": 47,
+        "value": 47.3,
         "d": 308,
-        "n": 145,
-        "rel_pct": -6,
+        "n": 146,
+        "rel_pct": -5.4,
         "band": -1
        }
       ],
@@ -25047,34 +25056,34 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 17.5,
+        "value": 16.7,
         "d": 2819,
         "n": null,
-        "rel_pct": 27.1,
+        "rel_pct": 30.4,
         "band": 3
        },
        {
         "month": "2025-02",
-        "value": 17.4,
+        "value": 16.6,
         "d": 2874,
         "n": null,
-        "rel_pct": 27.5,
+        "rel_pct": 30.8,
         "band": 3
        },
        {
         "month": "2025-03",
-        "value": 17,
+        "value": 16.4,
         "d": 2455,
         "n": null,
-        "rel_pct": 29.2,
+        "rel_pct": 31.7,
         "band": 3
        },
        {
         "month": "2025-04",
-        "value": 17.5,
+        "value": 17.2,
         "d": 2613,
         "n": null,
-        "rel_pct": 27.1,
+        "rel_pct": 28.3,
         "band": 3
        },
        {
@@ -25087,106 +25096,106 @@ window.AIECHO_REGISTRY = {
        },
        {
         "month": "2025-06",
-        "value": 16.5,
-        "d": 2659,
-        "n": null,
-        "rel_pct": 31.3,
-        "band": 3
-       },
-       {
-        "month": "2025-07",
         "value": 16.8,
-        "d": 2228,
+        "d": 2659,
         "n": null,
         "rel_pct": 30,
         "band": 3
        },
        {
+        "month": "2025-07",
+        "value": 17.4,
+        "d": 2228,
+        "n": null,
+        "rel_pct": 27.5,
+        "band": 3
+       },
+       {
         "month": "2025-08",
-        "value": 16,
+        "value": 16.8,
         "d": 1735,
         "n": null,
-        "rel_pct": 33.3,
+        "rel_pct": 30,
         "band": 3
        },
        {
         "month": "2025-09",
-        "value": 16.3,
-        "d": 2402,
-        "n": null,
-        "rel_pct": 32.1,
-        "band": 3
-       },
-       {
-        "month": "2025-10",
-        "value": 15.9,
-        "d": 2708,
-        "n": null,
-        "rel_pct": 33.8,
-        "band": 3
-       },
-       {
-        "month": "2025-11",
-        "value": 16.6,
-        "d": 1834,
-        "n": null,
-        "rel_pct": 30.8,
-        "band": 3
-       },
-       {
-        "month": "2025-12",
-        "value": 16.3,
-        "d": 1795,
-        "n": null,
-        "rel_pct": 32.1,
-        "band": 3
-       },
-       {
-        "month": "2026-01",
-        "value": 16,
-        "d": 1739,
-        "n": null,
-        "rel_pct": 33.3,
-        "band": 3
-       },
-       {
-        "month": "2026-02",
-        "value": 16.6,
-        "d": 2140,
-        "n": null,
-        "rel_pct": 30.8,
-        "band": 3
-       },
-       {
-        "month": "2026-03",
         "value": 17.2,
-        "d": 2736,
+        "d": 2402,
         "n": null,
         "rel_pct": 28.3,
         "band": 3
        },
        {
-        "month": "2026-04",
-        "value": 17.5,
-        "d": 2266,
+        "month": "2025-10",
+        "value": 16.8,
+        "d": 2708,
         "n": null,
-        "rel_pct": 27.1,
+        "rel_pct": 30,
         "band": 3
        },
        {
-        "month": "2026-05",
+        "month": "2025-11",
+        "value": 17.4,
+        "d": 1834,
+        "n": null,
+        "rel_pct": 27.5,
+        "band": 3
+       },
+       {
+        "month": "2025-12",
+        "value": 17,
+        "d": 1795,
+        "n": null,
+        "rel_pct": 29.2,
+        "band": 3
+       },
+       {
+        "month": "2026-01",
+        "value": 16.4,
+        "d": 1739,
+        "n": null,
+        "rel_pct": 31.7,
+        "band": 3
+       },
+       {
+        "month": "2026-02",
         "value": 16.7,
-        "d": 1743,
+        "d": 2140,
         "n": null,
         "rel_pct": 30.4,
         "band": 3
        },
        {
+        "month": "2026-03",
+        "value": 17.1,
+        "d": 2736,
+        "n": null,
+        "rel_pct": 28.7,
+        "band": 3
+       },
+       {
+        "month": "2026-04",
+        "value": 17.1,
+        "d": 2266,
+        "n": null,
+        "rel_pct": 28.7,
+        "band": 3
+       },
+       {
+        "month": "2026-05",
+        "value": 16.1,
+        "d": 1743,
+        "n": null,
+        "rel_pct": 32.9,
+        "band": 3
+       },
+       {
         "month": "2026-06",
-        "value": 17.7,
+        "value": 16.9,
         "d": 2462,
         "n": null,
-        "rel_pct": 26.3,
+        "rel_pct": 29.6,
         "band": 3
        }
       ],
@@ -25203,146 +25212,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 87.9,
+        "value": 82.6,
         "d": 1991,
-        "n": 1750,
-        "rel_pct": -2.3,
+        "n": 1645,
+        "rel_pct": -8.2,
         "band": -1
        },
        {
         "month": "2025-02",
-        "value": 85.5,
+        "value": 80.6,
         "d": 2413,
-        "n": 2063,
+        "n": 1945,
+        "rel_pct": -10.4,
+        "band": -2
+       },
+       {
+        "month": "2025-03",
+        "value": 85.5,
+        "d": 1930,
+        "n": 1650,
         "rel_pct": -5,
         "band": -1
        },
        {
-        "month": "2025-03",
-        "value": 89.5,
-        "d": 1930,
-        "n": 1727,
-        "rel_pct": -0.6,
-        "band": 0
-       },
-       {
         "month": "2025-04",
-        "value": 86.1,
+        "value": 83.3,
         "d": 1907,
-        "n": 1642,
-        "rel_pct": -4.3,
+        "n": 1589,
+        "rel_pct": -7.4,
         "band": -1
        },
        {
         "month": "2025-05",
-        "value": 83.5,
+        "value": 82.3,
         "d": 2787,
-        "n": 2327,
-        "rel_pct": -7.2,
+        "n": 2294,
+        "rel_pct": -8.6,
         "band": -1
        },
        {
         "month": "2025-06",
-        "value": 82,
+        "value": 82.4,
         "d": 2680,
-        "n": 2198,
-        "rel_pct": -8.9,
+        "n": 2208,
+        "rel_pct": -8.4,
         "band": -1
        },
        {
         "month": "2025-07",
-        "value": 84,
+        "value": 85.9,
         "d": 1985,
-        "n": 1667,
-        "rel_pct": -6.7,
+        "n": 1705,
+        "rel_pct": -4.6,
         "band": -1
        },
        {
         "month": "2025-08",
-        "value": 85.3,
+        "value": 88.6,
         "d": 1939,
-        "n": 1654,
-        "rel_pct": -5.2,
+        "n": 1718,
+        "rel_pct": -1.6,
         "band": -1
        },
        {
         "month": "2025-09",
-        "value": 79.7,
+        "value": 84.2,
         "d": 2858,
-        "n": 2278,
-        "rel_pct": -11.4,
-        "band": -2
+        "n": 2406,
+        "rel_pct": -6.4,
+        "band": -1
        },
        {
         "month": "2025-10",
-        "value": 81.2,
+        "value": 86.4,
         "d": 2056,
-        "n": 1669,
-        "rel_pct": -9.8,
+        "n": 1776,
+        "rel_pct": -4,
         "band": -1
        },
        {
         "month": "2025-11",
-        "value": 83.1,
+        "value": 88.6,
         "d": 2051,
-        "n": 1704,
-        "rel_pct": -7.7,
+        "n": 1817,
+        "rel_pct": -1.6,
         "band": -1
        },
        {
         "month": "2025-12",
-        "value": 85.1,
+        "value": 90.4,
         "d": 2098,
-        "n": 1785,
-        "rel_pct": -5.4,
-        "band": -1
+        "n": 1897,
+        "rel_pct": 0.4,
+        "band": 0
        },
        {
         "month": "2026-01",
-        "value": 81.3,
+        "value": 85.9,
         "d": 1752,
-        "n": 1424,
-        "rel_pct": -9.7,
+        "n": 1505,
+        "rel_pct": -4.6,
         "band": -1
        },
        {
         "month": "2026-02",
-        "value": 83,
+        "value": 86.5,
         "d": 1986,
-        "n": 1648,
-        "rel_pct": -7.8,
+        "n": 1718,
+        "rel_pct": -3.9,
         "band": -1
        },
        {
         "month": "2026-03",
-        "value": 83,
+        "value": 85,
         "d": 2551,
-        "n": 2117,
-        "rel_pct": -7.8,
+        "n": 2168,
+        "rel_pct": -5.6,
         "band": -1
        },
        {
         "month": "2026-04",
-        "value": 84.3,
+        "value": 84.8,
         "d": 2829,
-        "n": 2385,
-        "rel_pct": -6.3,
+        "n": 2399,
+        "rel_pct": -5.8,
         "band": -1
        },
        {
         "month": "2026-05",
-        "value": 86.8,
+        "value": 85.6,
         "d": 1895,
-        "n": 1645,
-        "rel_pct": -3.6,
+        "n": 1622,
+        "rel_pct": -4.9,
         "band": -1
        },
        {
         "month": "2026-06",
-        "value": 85.4,
+        "value": 82.7,
         "d": 1896,
-        "n": 1619,
-        "rel_pct": -5.1,
+        "n": 1568,
+        "rel_pct": -8.1,
         "band": -1
        }
       ],
@@ -25359,146 +25368,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 86.2,
+        "value": 80.1,
         "d": 2460,
-        "n": 2121,
-        "rel_pct": -4.2,
-        "band": -1
+        "n": 1970,
+        "rel_pct": -11,
+        "band": -2
        },
        {
         "month": "2025-02",
-        "value": 85,
+        "value": 79.3,
         "d": 2835,
-        "n": 2410,
-        "rel_pct": -5.6,
-        "band": -1
+        "n": 2248,
+        "rel_pct": -11.9,
+        "band": -2
        },
        {
         "month": "2025-03",
-        "value": 83.8,
+        "value": 78.8,
         "d": 2372,
-        "n": 1988,
-        "rel_pct": -6.9,
-        "band": -1
+        "n": 1869,
+        "rel_pct": -12.4,
+        "band": -2
        },
        {
         "month": "2025-04",
-        "value": 81,
+        "value": 77.1,
         "d": 2026,
-        "n": 1641,
-        "rel_pct": -10,
+        "n": 1562,
+        "rel_pct": -14.3,
         "band": -2
        },
        {
         "month": "2025-05",
-        "value": 85.6,
+        "value": 83.1,
         "d": 2819,
-        "n": 2413,
-        "rel_pct": -4.9,
+        "n": 2343,
+        "rel_pct": -7.7,
         "band": -1
        },
        {
         "month": "2025-06",
-        "value": 79.4,
+        "value": 78.5,
         "d": 2791,
-        "n": 2216,
-        "rel_pct": -11.8,
+        "n": 2191,
+        "rel_pct": -12.8,
         "band": -2
        },
        {
         "month": "2025-07",
-        "value": 81.7,
+        "value": 82.2,
         "d": 2276,
-        "n": 1859,
-        "rel_pct": -9.2,
+        "n": 1871,
+        "rel_pct": -8.7,
         "band": -1
        },
        {
         "month": "2025-08",
-        "value": 79,
-        "d": 2363,
-        "n": 1867,
-        "rel_pct": -12.2,
-        "band": -2
-       },
-       {
-        "month": "2025-09",
-        "value": 82.4,
-        "d": 2707,
-        "n": 2231,
-        "rel_pct": -8.4,
-        "band": -1
-       },
-       {
-        "month": "2025-10",
         "value": 81,
-        "d": 2758,
-        "n": 2234,
+        "d": 2363,
+        "n": 1914,
         "rel_pct": -10,
         "band": -2
        },
        {
+        "month": "2025-09",
+        "value": 85.7,
+        "d": 2707,
+        "n": 2320,
+        "rel_pct": -4.8,
+        "band": -1
+       },
+       {
+        "month": "2025-10",
+        "value": 85.3,
+        "d": 2758,
+        "n": 2353,
+        "rel_pct": -5.2,
+        "band": -1
+       },
+       {
         "month": "2025-11",
-        "value": 80.4,
+        "value": 85.4,
         "d": 2522,
-        "n": 2028,
-        "rel_pct": -10.7,
-        "band": -2
+        "n": 2154,
+        "rel_pct": -5.1,
+        "band": -1
        },
        {
         "month": "2025-12",
-        "value": 81.5,
+        "value": 86.7,
         "d": 2563,
-        "n": 2089,
-        "rel_pct": -9.4,
+        "n": 2222,
+        "rel_pct": -3.7,
         "band": -1
        },
        {
         "month": "2026-01",
-        "value": 82.8,
+        "value": 88,
         "d": 2433,
-        "n": 2015,
-        "rel_pct": -8,
+        "n": 2141,
+        "rel_pct": -2.2,
         "band": -1
        },
        {
         "month": "2026-02",
-        "value": 81.6,
+        "value": 86.4,
         "d": 1989,
-        "n": 1623,
-        "rel_pct": -9.3,
+        "n": 1718,
+        "rel_pct": -4,
         "band": -1
        },
        {
         "month": "2026-03",
-        "value": 84.9,
+        "value": 88.8,
         "d": 2628,
-        "n": 2231,
-        "rel_pct": -5.7,
+        "n": 2334,
+        "rel_pct": -1.3,
         "band": -1
        },
        {
         "month": "2026-04",
-        "value": 81.4,
+        "value": 84.3,
         "d": 2785,
-        "n": 2267,
-        "rel_pct": -9.6,
+        "n": 2348,
+        "rel_pct": -6.3,
         "band": -1
        },
        {
         "month": "2026-05",
-        "value": 84.7,
+        "value": 86.4,
         "d": 2059,
-        "n": 1744,
-        "rel_pct": -5.9,
+        "n": 1779,
+        "rel_pct": -4,
         "band": -1
        },
        {
         "month": "2026-06",
-        "value": 87.3,
+        "value": 87.8,
         "d": 1738,
-        "n": 1517,
-        "rel_pct": -3,
+        "n": 1526,
+        "rel_pct": -2.4,
         "band": -1
        }
       ],
@@ -25515,146 +25524,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 78.3,
+        "value": 74.5,
         "d": 2556,
-        "n": 2001,
-        "rel_pct": -7.9,
-        "band": -1
+        "n": 1904,
+        "rel_pct": -12.4,
+        "band": -2
        },
        {
         "month": "2025-02",
-        "value": 76.3,
+        "value": 72.9,
         "d": 2460,
-        "n": 1877,
-        "rel_pct": -10.2,
+        "n": 1793,
+        "rel_pct": -14.2,
         "band": -2
        },
        {
         "month": "2025-03",
-        "value": 79.5,
+        "value": 76.7,
         "d": 1941,
-        "n": 1543,
-        "rel_pct": -6.5,
+        "n": 1489,
+        "rel_pct": -9.8,
         "band": -1
        },
        {
         "month": "2025-04",
-        "value": 78.1,
+        "value": 76.1,
         "d": 2697,
-        "n": 2106,
-        "rel_pct": -8.1,
-        "band": -1
+        "n": 2052,
+        "rel_pct": -10.5,
+        "band": -2
        },
        {
         "month": "2025-05",
-        "value": 78,
+        "value": 77,
         "d": 1776,
-        "n": 1385,
-        "rel_pct": -8.2,
+        "n": 1368,
+        "rel_pct": -9.4,
         "band": -1
        },
        {
         "month": "2025-06",
-        "value": 76.4,
+        "value": 76.3,
         "d": 1674,
-        "n": 1279,
-        "rel_pct": -10.1,
+        "n": 1277,
+        "rel_pct": -10.2,
         "band": -2
        },
        {
         "month": "2025-07",
-        "value": 75.1,
+        "value": 75.8,
         "d": 1752,
-        "n": 1316,
-        "rel_pct": -11.6,
+        "n": 1328,
+        "rel_pct": -10.8,
         "band": -2
        },
        {
         "month": "2025-08",
-        "value": 75.5,
+        "value": 77.1,
         "d": 2745,
-        "n": 2072,
-        "rel_pct": -11.2,
-        "band": -2
+        "n": 2116,
+        "rel_pct": -9.3,
+        "band": -1
        },
        {
         "month": "2025-09",
-        "value": 74,
+        "value": 76.2,
         "d": 2134,
-        "n": 1579,
-        "rel_pct": -12.9,
+        "n": 1626,
+        "rel_pct": -10.4,
         "band": -2
        },
        {
         "month": "2025-10",
-        "value": 75.8,
+        "value": 78.5,
         "d": 2467,
-        "n": 1870,
-        "rel_pct": -10.8,
-        "band": -2
+        "n": 1937,
+        "rel_pct": -7.6,
+        "band": -1
        },
        {
         "month": "2025-11",
-        "value": 75.3,
+        "value": 78.2,
         "d": 2575,
-        "n": 1939,
-        "rel_pct": -11.4,
-        "band": -2
+        "n": 2014,
+        "rel_pct": -8,
+        "band": -1
        },
        {
         "month": "2025-12",
-        "value": 71.8,
+        "value": 74.6,
         "d": 1842,
-        "n": 1323,
-        "rel_pct": -15.5,
+        "n": 1374,
+        "rel_pct": -12.2,
         "band": -2
        },
        {
         "month": "2026-01",
-        "value": 74,
+        "value": 76.6,
         "d": 2025,
-        "n": 1499,
-        "rel_pct": -12.9,
-        "band": -2
+        "n": 1551,
+        "rel_pct": -9.9,
+        "band": -1
        },
        {
         "month": "2026-02",
-        "value": 75.8,
+        "value": 78,
         "d": 2206,
-        "n": 1672,
-        "rel_pct": -10.8,
-        "band": -2
+        "n": 1721,
+        "rel_pct": -8.2,
+        "band": -1
        },
        {
         "month": "2026-03",
-        "value": 73.3,
+        "value": 74.9,
         "d": 2658,
-        "n": 1948,
-        "rel_pct": -13.8,
+        "n": 1991,
+        "rel_pct": -11.9,
         "band": -2
        },
        {
         "month": "2026-04",
-        "value": 77.5,
+        "value": 78.4,
         "d": 2692,
-        "n": 2086,
-        "rel_pct": -8.8,
+        "n": 2111,
+        "rel_pct": -7.8,
         "band": -1
        },
        {
         "month": "2026-05",
-        "value": 76.9,
+        "value": 77.1,
         "d": 2364,
-        "n": 1818,
-        "rel_pct": -9.5,
+        "n": 1823,
+        "rel_pct": -9.3,
         "band": -1
        },
        {
         "month": "2026-06",
-        "value": 78.5,
+        "value": 78.2,
         "d": 2283,
-        "n": 1792,
-        "rel_pct": -7.6,
+        "n": 1785,
+        "rel_pct": -8,
         "band": -1
        }
       ],
@@ -25671,146 +25680,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 80.8,
+        "value": 79.2,
         "d": 2507,
-        "n": 2026,
-        "rel_pct": -8.2,
+        "n": 1986,
+        "rel_pct": -10,
         "band": -1
        },
        {
         "month": "2025-02",
-        "value": 80.5,
+        "value": 78.5,
         "d": 2216,
-        "n": 1784,
-        "rel_pct": -8.5,
-        "band": -1
+        "n": 1740,
+        "rel_pct": -10.8,
+        "band": -2
        },
        {
         "month": "2025-03",
-        "value": 84.6,
+        "value": 82.3,
         "d": 2270,
-        "n": 1920,
-        "rel_pct": -3.9,
+        "n": 1868,
+        "rel_pct": -6.5,
         "band": -1
        },
        {
         "month": "2025-04",
-        "value": 80.2,
+        "value": 77.8,
         "d": 2486,
-        "n": 1994,
-        "rel_pct": -8.9,
-        "band": -1
+        "n": 1934,
+        "rel_pct": -11.6,
+        "band": -2
        },
        {
         "month": "2025-05",
-        "value": 78.6,
+        "value": 76.5,
         "d": 2299,
-        "n": 1807,
-        "rel_pct": -10.7,
+        "n": 1759,
+        "rel_pct": -13.1,
         "band": -2
        },
        {
         "month": "2025-06",
-        "value": 79,
-        "d": 2519,
-        "n": 1990,
-        "rel_pct": -10.2,
-        "band": -2
-       },
-       {
-        "month": "2025-07",
-        "value": 79.8,
-        "d": 1979,
-        "n": 1579,
-        "rel_pct": -9.3,
-        "band": -1
-       },
-       {
-        "month": "2025-08",
-        "value": 80.2,
-        "d": 1776,
-        "n": 1424,
-        "rel_pct": -8.9,
-        "band": -1
-       },
-       {
-        "month": "2025-09",
         "value": 77.5,
-        "d": 2865,
-        "n": 2220,
+        "d": 2519,
+        "n": 1952,
         "rel_pct": -11.9,
         "band": -2
        },
        {
-        "month": "2025-10",
-        "value": 78.8,
-        "d": 2746,
-        "n": 2164,
-        "rel_pct": -10.5,
+        "month": "2025-07",
+        "value": 79.1,
+        "d": 1979,
+        "n": 1565,
+        "rel_pct": -10.1,
         "band": -2
+       },
+       {
+        "month": "2025-08",
+        "value": 80.6,
+        "d": 1776,
+        "n": 1431,
+        "rel_pct": -8.4,
+        "band": -1
+       },
+       {
+        "month": "2025-09",
+        "value": 79.1,
+        "d": 2865,
+        "n": 2266,
+        "rel_pct": -10.1,
+        "band": -2
+       },
+       {
+        "month": "2025-10",
+        "value": 81.4,
+        "d": 2746,
+        "n": 2235,
+        "rel_pct": -7.5,
+        "band": -1
        },
        {
         "month": "2025-11",
-        "value": 78.4,
+        "value": 81.9,
         "d": 2085,
-        "n": 1635,
-        "rel_pct": -10.9,
-        "band": -2
+        "n": 1708,
+        "rel_pct": -6.9,
+        "band": -1
        },
        {
         "month": "2025-12",
-        "value": 76.3,
+        "value": 80.3,
         "d": 2124,
-        "n": 1621,
-        "rel_pct": -13.3,
-        "band": -2
+        "n": 1706,
+        "rel_pct": -8.8,
+        "band": -1
        },
        {
         "month": "2026-01",
-        "value": 80.7,
+        "value": 84.8,
         "d": 1839,
-        "n": 1484,
-        "rel_pct": -8.3,
+        "n": 1559,
+        "rel_pct": -3.6,
         "band": -1
        },
        {
         "month": "2026-02",
-        "value": 79.3,
+        "value": 83,
         "d": 2295,
-        "n": 1820,
-        "rel_pct": -9.9,
+        "n": 1905,
+        "rel_pct": -5.7,
         "band": -1
        },
        {
         "month": "2026-03",
-        "value": 81.3,
+        "value": 84,
         "d": 2885,
-        "n": 2346,
-        "rel_pct": -7.6,
+        "n": 2423,
+        "rel_pct": -4.5,
         "band": -1
        },
        {
         "month": "2026-04",
-        "value": 81.7,
+        "value": 83.2,
         "d": 2624,
-        "n": 2144,
-        "rel_pct": -7.2,
+        "n": 2183,
+        "rel_pct": -5.5,
         "band": -1
        },
        {
         "month": "2026-05",
-        "value": 83.3,
+        "value": 83.2,
         "d": 2602,
-        "n": 2167,
-        "rel_pct": -5.3,
+        "n": 2165,
+        "rel_pct": -5.5,
         "band": -1
        },
        {
         "month": "2026-06",
-        "value": 84.6,
+        "value": 82.9,
         "d": 1777,
-        "n": 1503,
-        "rel_pct": -3.9,
+        "n": 1473,
+        "rel_pct": -5.8,
         "band": -1
        }
       ],
@@ -25827,58 +25836,58 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 76.7,
+        "value": 77.6,
         "d": 294,
-        "n": 225,
-        "rel_pct": -9.8,
+        "n": 228,
+        "rel_pct": -8.7,
         "band": -1
        },
        {
         "month": "2025-02",
-        "value": 74.9,
+        "value": 76,
         "d": 338,
-        "n": 253,
-        "rel_pct": -11.9,
+        "n": 257,
+        "rel_pct": -10.6,
         "band": -2
        },
        {
         "month": "2025-03",
-        "value": 73.1,
+        "value": 74.2,
         "d": 396,
-        "n": 289,
-        "rel_pct": -14,
+        "n": 294,
+        "rel_pct": -12.7,
         "band": -2
        },
        {
         "month": "2025-04",
-        "value": 71.1,
+        "value": 72.2,
         "d": 403,
-        "n": 287,
-        "rel_pct": -16.4,
+        "n": 291,
+        "rel_pct": -15.1,
         "band": -2
        },
        {
         "month": "2025-05",
-        "value": 73.8,
+        "value": 74.7,
         "d": 301,
-        "n": 222,
-        "rel_pct": -13.2,
+        "n": 225,
+        "rel_pct": -12.1,
         "band": -2
        },
        {
         "month": "2025-06",
-        "value": 73.8,
+        "value": 74.5,
         "d": 275,
-        "n": 203,
-        "rel_pct": -13.2,
+        "n": 205,
+        "rel_pct": -12.4,
         "band": -2
        },
        {
         "month": "2025-07",
-        "value": 72,
+        "value": 72.4,
         "d": 243,
-        "n": 175,
-        "rel_pct": -15.3,
+        "n": 176,
+        "rel_pct": -14.8,
         "band": -2
        },
        {
@@ -25891,74 +25900,74 @@ window.AIECHO_REGISTRY = {
        },
        {
         "month": "2025-09",
-        "value": 71,
-        "d": 339,
-        "n": 241,
-        "rel_pct": -16.5,
-        "band": -2
-       },
-       {
-        "month": "2025-10",
-        "value": 67.9,
-        "d": 262,
-        "n": 178,
-        "rel_pct": -20.1,
-        "band": -2
-       },
-       {
-        "month": "2025-11",
-        "value": 72.2,
-        "d": 257,
-        "n": 186,
-        "rel_pct": -15.1,
-        "band": -2
-       },
-       {
-        "month": "2025-12",
-        "value": 72.8,
-        "d": 369,
-        "n": 269,
-        "rel_pct": -14.4,
-        "band": -2
-       },
-       {
-        "month": "2026-01",
         "value": 70.8,
-        "d": 331,
-        "n": 234,
+        "d": 339,
+        "n": 240,
         "rel_pct": -16.7,
         "band": -2
        },
        {
+        "month": "2025-10",
+        "value": 67.4,
+        "d": 262,
+        "n": 177,
+        "rel_pct": -20.7,
+        "band": -2
+       },
+       {
+        "month": "2025-11",
+        "value": 71.4,
+        "d": 257,
+        "n": 183,
+        "rel_pct": -16,
+        "band": -2
+       },
+       {
+        "month": "2025-12",
+        "value": 71.9,
+        "d": 369,
+        "n": 265,
+        "rel_pct": -15.4,
+        "band": -2
+       },
+       {
+        "month": "2026-01",
+        "value": 69.9,
+        "d": 331,
+        "n": 231,
+        "rel_pct": -17.8,
+        "band": -2
+       },
+       {
         "month": "2026-02",
-        "value": 72.1,
+        "value": 71.2,
         "d": 418,
-        "n": 301,
-        "rel_pct": -15.2,
+        "n": 298,
+        "rel_pct": -16.2,
         "band": -2
        },
        {
         "month": "2026-03",
-        "value": 72.9,
+        "value": 72.2,
         "d": 266,
-        "n": 194,
-        "rel_pct": -14.2,
+        "n": 192,
+        "rel_pct": -15.1,
         "band": -2
        },
        {
         "month": "2026-04",
-        "value": 72.3,
+        "value": 71.8,
         "d": 371,
-        "n": 268,
-        "rel_pct": -14.9,
+        "n": 266,
+        "rel_pct": -15.5,
         "band": -2
        },
        {
         "month": "2026-05",
-        "value": 73.9,
+        "value": 73.6,
         "d": 349,
-        "n": 258,
-        "rel_pct": -13.1,
+        "n": 257,
+        "rel_pct": -13.4,
         "band": -2
        },
        {
@@ -25983,146 +25992,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 76,
+        "value": 74.9,
         "d": 96,
-        "n": 73,
-        "rel_pct": -5,
+        "n": 72,
+        "rel_pct": -6.4,
         "band": -1
        },
        {
         "month": "2025-02",
-        "value": 74.6,
+        "value": 74.2,
         "d": 98,
         "n": 73,
-        "rel_pct": -6.8,
+        "rel_pct": -7.2,
         "band": -1
        },
        {
         "month": "2025-03",
-        "value": 77.5,
+        "value": 77.7,
         "d": 81,
         "n": 63,
-        "rel_pct": -3.1,
+        "rel_pct": -2.9,
         "band": -1
        },
        {
         "month": "2025-04",
-        "value": 73.9,
-        "d": 120,
-        "n": 89,
-        "rel_pct": -7.6,
-        "band": -1
-       },
-       {
-        "month": "2025-05",
-        "value": 76.1,
-        "d": 81,
-        "n": 62,
-        "rel_pct": -4.9,
-        "band": -1
-       },
-       {
-        "month": "2025-06",
-        "value": 72.3,
-        "d": 121,
-        "n": 87,
-        "rel_pct": -9.6,
-        "band": -1
-       },
-       {
-        "month": "2025-07",
-        "value": 72.8,
-        "d": 77,
-        "n": 56,
-        "rel_pct": -9,
-        "band": -1
-       },
-       {
-        "month": "2025-08",
-        "value": 73.6,
-        "d": 110,
-        "n": 81,
-        "rel_pct": -8,
-        "band": -1
-       },
-       {
-        "month": "2025-09",
-        "value": 71.3,
-        "d": 80,
-        "n": 57,
-        "rel_pct": -10.9,
-        "band": -2
-       },
-       {
-        "month": "2025-10",
-        "value": 70.4,
-        "d": 124,
-        "n": 87,
-        "rel_pct": -12,
-        "band": -2
-       },
-       {
-        "month": "2025-11",
-        "value": 70.3,
-        "d": 79,
-        "n": 56,
-        "rel_pct": -12.1,
-        "band": -2
-       },
-       {
-        "month": "2025-12",
         "value": 74.8,
-        "d": 113,
-        "n": 85,
+        "d": 120,
+        "n": 90,
         "rel_pct": -6.5,
         "band": -1
        },
        {
-        "month": "2026-01",
-        "value": 73.5,
-        "d": 106,
-        "n": 78,
-        "rel_pct": -8.1,
+        "month": "2025-05",
+        "value": 77.6,
+        "d": 81,
+        "n": 63,
+        "rel_pct": -3,
         "band": -1
        },
        {
-        "month": "2026-02",
-        "value": 73.6,
-        "d": 79,
+        "month": "2025-06",
+        "value": 74.4,
+        "d": 121,
+        "n": 90,
+        "rel_pct": -7,
+        "band": -1
+       },
+       {
+        "month": "2025-07",
+        "value": 75.3,
+        "d": 77,
         "n": 58,
-        "rel_pct": -8,
+        "rel_pct": -5.9,
         "band": -1
        },
        {
-        "month": "2026-03",
+        "month": "2025-08",
+        "value": 76.2,
+        "d": 110,
+        "n": 84,
+        "rel_pct": -4.7,
+        "band": -1
+       },
+       {
+        "month": "2025-09",
+        "value": 74,
+        "d": 80,
+        "n": 59,
+        "rel_pct": -7.5,
+        "band": -1
+       },
+       {
+        "month": "2025-10",
+        "value": 72.8,
+        "d": 124,
+        "n": 90,
+        "rel_pct": -9,
+        "band": -1
+       },
+       {
+        "month": "2025-11",
+        "value": 72.3,
+        "d": 79,
+        "n": 57,
+        "rel_pct": -9.6,
+        "band": -1
+       },
+       {
+        "month": "2025-12",
         "value": 76.1,
-        "d": 115,
-        "n": 88,
+        "d": 113,
+        "n": 86,
         "rel_pct": -4.9,
         "band": -1
        },
        {
+        "month": "2026-01",
+        "value": 74,
+        "d": 106,
+        "n": 78,
+        "rel_pct": -7.5,
+        "band": -1
+       },
+       {
+        "month": "2026-02",
+        "value": 73.3,
+        "d": 79,
+        "n": 58,
+        "rel_pct": -8.4,
+        "band": -1
+       },
+       {
+        "month": "2026-03",
+        "value": 74.9,
+        "d": 115,
+        "n": 86,
+        "rel_pct": -6.4,
+        "band": -1
+       },
+       {
         "month": "2026-04",
-        "value": 75.4,
+        "value": 73.4,
         "d": 72,
-        "n": 54,
-        "rel_pct": -5.7,
+        "n": 53,
+        "rel_pct": -8.2,
         "band": -1
        },
        {
         "month": "2026-05",
-        "value": 77.3,
+        "value": 74.7,
         "d": 95,
-        "n": 73,
-        "rel_pct": -3.4,
+        "n": 71,
+        "rel_pct": -6.6,
         "band": -1
        },
        {
         "month": "2026-06",
-        "value": 75.2,
+        "value": 72.1,
         "d": 114,
-        "n": 86,
-        "rel_pct": -6,
+        "n": 82,
+        "rel_pct": -9.9,
         "band": -1
        }
       ],
@@ -26139,146 +26148,146 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 79.8,
+        "value": 78.7,
         "d": 714,
-        "n": 570,
-        "rel_pct": -11.3,
+        "n": 562,
+        "rel_pct": -12.6,
         "band": -2
        },
        {
         "month": "2025-02",
-        "value": 82.4,
+        "value": 82.3,
         "d": 703,
         "n": 579,
-        "rel_pct": -8.4,
+        "rel_pct": -8.6,
         "band": -1
        },
        {
         "month": "2025-03",
-        "value": 79.2,
+        "value": 80,
         "d": 831,
-        "n": 658,
-        "rel_pct": -12,
+        "n": 665,
+        "rel_pct": -11.1,
         "band": -2
        },
        {
         "month": "2025-04",
-        "value": 76.9,
+        "value": 78.7,
         "d": 665,
-        "n": 511,
-        "rel_pct": -14.6,
+        "n": 523,
+        "rel_pct": -12.6,
         "band": -2
        },
        {
         "month": "2025-05",
-        "value": 75.8,
+        "value": 78.6,
         "d": 884,
-        "n": 670,
-        "rel_pct": -15.8,
+        "n": 695,
+        "rel_pct": -12.7,
         "band": -2
        },
        {
         "month": "2025-06",
-        "value": 76.2,
+        "value": 79.8,
         "d": 672,
-        "n": 512,
-        "rel_pct": -15.3,
+        "n": 536,
+        "rel_pct": -11.3,
         "band": -2
        },
        {
         "month": "2025-07",
-        "value": 79.1,
+        "value": 83.3,
         "d": 863,
-        "n": 683,
+        "n": 719,
+        "rel_pct": -7.4,
+        "band": -1
+       },
+       {
+        "month": "2025-08",
+        "value": 82,
+        "d": 979,
+        "n": 803,
+        "rel_pct": -8.9,
+        "band": -1
+       },
+       {
+        "month": "2025-09",
+        "value": 81.9,
+        "d": 1018,
+        "n": 834,
+        "rel_pct": -9,
+        "band": -1
+       },
+       {
+        "month": "2025-10",
+        "value": 79.1,
+        "d": 762,
+        "n": 603,
         "rel_pct": -12.1,
         "band": -2
        },
        {
-        "month": "2025-08",
-        "value": 77.5,
-        "d": 979,
-        "n": 759,
-        "rel_pct": -13.9,
-        "band": -2
-       },
-       {
-        "month": "2025-09",
-        "value": 77.3,
-        "d": 1018,
-        "n": 787,
-        "rel_pct": -14.1,
-        "band": -2
-       },
-       {
-        "month": "2025-10",
-        "value": 74.8,
-        "d": 762,
-        "n": 570,
-        "rel_pct": -16.9,
-        "band": -2
-       },
-       {
         "month": "2025-11",
-        "value": 76.7,
+        "value": 80.4,
         "d": 761,
-        "n": 584,
-        "rel_pct": -14.8,
+        "n": 612,
+        "rel_pct": -10.7,
         "band": -2
        },
        {
         "month": "2025-12",
-        "value": 75.2,
-        "d": 695,
-        "n": 523,
-        "rel_pct": -16.4,
-        "band": -2
-       },
-       {
-        "month": "2026-01",
         "value": 78,
-        "d": 794,
-        "n": 619,
+        "d": 695,
+        "n": 542,
         "rel_pct": -13.3,
         "band": -2
        },
        {
+        "month": "2026-01",
+        "value": 79.8,
+        "d": 794,
+        "n": 634,
+        "rel_pct": -11.3,
+        "band": -2
+       },
+       {
         "month": "2026-02",
-        "value": 79.3,
+        "value": 79.9,
         "d": 933,
-        "n": 740,
-        "rel_pct": -11.9,
+        "n": 745,
+        "rel_pct": -11.2,
         "band": -2
        },
        {
         "month": "2026-03",
-        "value": 80.2,
+        "value": 79.5,
         "d": 652,
-        "n": 523,
-        "rel_pct": -10.9,
+        "n": 518,
+        "rel_pct": -11.7,
         "band": -2
        },
        {
         "month": "2026-04",
-        "value": 78.8,
+        "value": 76.8,
         "d": 901,
-        "n": 710,
-        "rel_pct": -12.4,
+        "n": 692,
+        "rel_pct": -14.7,
         "band": -2
        },
        {
         "month": "2026-05",
-        "value": 78.4,
+        "value": 75.2,
         "d": 810,
-        "n": 635,
-        "rel_pct": -12.9,
+        "n": 609,
+        "rel_pct": -16.4,
         "band": -2
        },
        {
         "month": "2026-06",
-        "value": 79.4,
+        "value": 75.3,
         "d": 1030,
-        "n": 818,
-        "rel_pct": -11.8,
+        "n": 776,
+        "rel_pct": -16.3,
         "band": -2
        }
       ],
@@ -26295,66 +26304,66 @@ window.AIECHO_REGISTRY = {
       "monthly": [
        {
         "month": "2025-01",
-        "value": 43.4,
+        "value": 43.6,
         "d": 215,
-        "n": 93,
-        "rel_pct": -13.2,
+        "n": 94,
+        "rel_pct": -12.8,
         "band": -2
        },
        {
         "month": "2025-02",
-        "value": 43.8,
+        "value": 44.6,
         "d": 184,
-        "n": 81,
-        "rel_pct": -12.4,
+        "n": 82,
+        "rel_pct": -10.8,
         "band": -2
        },
        {
         "month": "2025-03",
-        "value": 43.3,
+        "value": 44.4,
         "d": 235,
-        "n": 102,
-        "rel_pct": -13.4,
+        "n": 104,
+        "rel_pct": -11.2,
         "band": -2
        },
        {
         "month": "2025-04",
-        "value": 43.5,
+        "value": 44.8,
         "d": 228,
-        "n": 99,
-        "rel_pct": -13,
+        "n": 102,
+        "rel_pct": -10.4,
         "band": -2
        },
        {
         "month": "2025-05",
-        "value": 43.7,
+        "value": 45,
         "d": 192,
-        "n": 84,
-        "rel_pct": -12.6,
+        "n": 86,
+        "rel_pct": -10,
         "band": -2
        },
        {
         "month": "2025-06",
-        "value": 41.6,
+        "value": 42.7,
         "d": 192,
-        "n": 80,
-        "rel_pct": -16.8,
+        "n": 82,
+        "rel_pct": -14.6,
         "band": -2
        },
        {
         "month": "2025-07",
-        "value": 40.7,
+        "value": 41.4,
         "d": 159,
-        "n": 65,
-        "rel_pct": -18.6,
+        "n": 66,
+        "rel_pct": -17.2,
         "band": -2
        },
        {
         "month": "2025-08",
-        "value": 41.8,
+        "value": 42.1,
         "d": 196,
-        "n": 82,
-        "rel_pct": -16.4,
+        "n": 83,
+        "rel_pct": -15.8,
         "band": -2
        },
        {
@@ -26367,75 +26376,75 @@ window.AIECHO_REGISTRY = {
        },
        {
         "month": "2025-10",
-        "value": 41.1,
-        "d": 206,
-        "n": 85,
-        "rel_pct": -17.8,
-        "band": -2
-       },
-       {
-        "month": "2025-11",
-        "value": 42.5,
-        "d": 182,
-        "n": 77,
-        "rel_pct": -15,
-        "band": -2
-       },
-       {
-        "month": "2025-12",
-        "value": 42.8,
-        "d": 193,
-        "n": 83,
-        "rel_pct": -14.4,
-        "band": -2
-       },
-       {
-        "month": "2026-01",
         "value": 40.8,
-        "d": 205,
+        "d": 206,
         "n": 84,
         "rel_pct": -18.4,
         "band": -2
        },
        {
+        "month": "2025-11",
+        "value": 42,
+        "d": 182,
+        "n": 76,
+        "rel_pct": -16,
+        "band": -2
+       },
+       {
+        "month": "2025-12",
+        "value": 42.3,
+        "d": 193,
+        "n": 82,
+        "rel_pct": -15.4,
+        "band": -2
+       },
+       {
+        "month": "2026-01",
+        "value": 40.5,
+        "d": 205,
+        "n": 83,
+        "rel_pct": -19,
+        "band": -2
+       },
+       {
         "month": "2026-02",
-        "value": 42.5,
+        "value": 42.4,
         "d": 213,
-        "n": 91,
-        "rel_pct": -15,
+        "n": 90,
+        "rel_pct": -15.2,
         "band": -2
        },
        {
         "month": "2026-03",
-        "value": 43.1,
+        "value": 43.4,
         "d": 228,
-        "n": 98,
-        "rel_pct": -13.8,
+        "n": 99,
+        "rel_pct": -13.2,
         "band": -2
        },
        {
         "month": "2026-04",
-        "value": 42.1,
+        "value": 42.5,
         "d": 156,
         "n": 66,
-        "rel_pct": -15.8,
+        "rel_pct": -15,
         "band": -2
        },
        {
         "month": "2026-05",
-        "value": 44,
+        "value": 44.7,
         "d": 204,
-        "n": 90,
-        "rel_pct": -12,
+        "n": 91,
+        "rel_pct": -10.6,
         "band": -2
        },
        {
         "month": "2026-06",
-        "value": 44.9,
+        "value": 45.6,
         "d": 157,
-        "n": 70,
-        "rel_pct": -10.2,
-        "band": -2
+        "n": 72,
+        "rel_pct": -8.8,
+        "band": -1
        }
       ],
       "delta": -7.3,

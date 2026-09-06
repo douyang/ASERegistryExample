@@ -127,7 +127,7 @@
     renderFilters();
     renderActiveFilters();
     const nSel = Object.values(state.sel).reduce((n, s) => n + s.size, 0);
-    $('#count').textContent = `${nSel || state.q ? `${visible.length} of ${fams.length}` : fams.length} products${nSel ? ` · ${nSel} filter${nSel > 1 ? 's' : ''}` : ''}${state.q ? ` · “${state.q}”` : ''}`;
+    $('#count').textContent = `${nSel || state.q ? `${visible.length} of ${fams.length}` : fams.length} AI products${nSel ? ` · ${nSel} filter${nSel > 1 ? 's' : ''}` : ''}${state.q ? ` · “${state.q}”` : ''}`;
     if (state.view === 'cards') { $('#cards').hidden = false; $('#table').hidden = true; renderCards(visible); }
     else { $('#cards').hidden = true; $('#table').hidden = false; renderTable(visible); }
   }
@@ -153,7 +153,7 @@
   }
   function renderCards(list) {
     const host = $('#cards');
-    if (!list.length) { host.innerHTML = '<p class="empty">No products match.</p>'; return; }
+    if (!list.length) { host.innerHTML = '<p class="empty">No AI products match.</p>'; return; }
     host.innerHTML = list.map((f) => `
       <article class="card" data-id="${esc(f.id)}">
         <div class="card-top"><h3><button type="button" data-open="${esc(f.id)}" title="${esc(f.product_name)}">${esc(shortName(f.product_name))}</button></h3><span class="cat ${f.research_pending ? 'pending' : ''}">${f.research_pending ? 'Research pending' : esc(CAT[f.category] || f.category)}</span></div>
@@ -175,8 +175,8 @@
   }
   function renderTable(list) {
     const host = $('#table');
-    if (!list.length) { host.innerHTML = '<p class="empty">No products match.</p>'; return; }
-    host.innerHTML = `<table><thead><tr><th>Product</th><th>Company</th><th>Function</th><th>Latest clearance</th><th class="r">Clearances</th><th>Pathway</th><th>Code</th><th class="r">FDA summary metrics</th><th class="r">Papers</th><th>Training set</th></tr></thead><tbody>${list.map((f) => `
+    if (!list.length) { host.innerHTML = '<p class="empty">No AI products match.</p>'; return; }
+    host.innerHTML = `<table><thead><tr><th>AI product</th><th>Company</th><th>Function</th><th>Latest clearance</th><th class="r">Clearances</th><th>Pathway</th><th>Code</th><th class="r">FDA summary metrics</th><th class="r">Papers</th><th>Training set</th></tr></thead><tbody>${list.map((f) => `
       <tr><td><button class="link" type="button" data-open="${esc(f.id)}" title="${esc(f.product_name)}">${esc(shortName(f.product_name))}</button></td><td>${esc(companyShort(f.company))}</td><td>${f.research_pending ? 'Research pending' : esc(CAT[f.category] || f.category)}</td><td class="num">${fmtDate(f.latest_cleared)}</td><td class="r num">${f.n_clearances}</td><td>${esc(f.pathways.join(', '))}</td><td>${esc(f.product_codes.join(', '))}</td><td class="r num">${f.n_fda_claims}</td><td class="r num">${f.n_papers_resolved}/${f.n_papers}</td><td class="num">${trainingCell(f.training_data)}</td></tr>`).join('')}</tbody></table>`;
   }
 
@@ -466,6 +466,7 @@
     });
     $('#qc-trend').innerHTML = `<div class="qc-grid-wrap"><table class="qc"><thead>${head2}</thead><tbody>${body2}</tbody></table></div>${qcKey()}`;
 
+    renderSiteCards();
     renderQcScorecard();
     renderQcTable();
   }
@@ -554,6 +555,41 @@
     document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 
+  // Sites at a glance: one card per site, nine tiles, band-coloured against the benchmark.
+  // Tiles encode LEVEL only. The monthly series is generator noise, so shape is deliberately not drawn.
+  function renderSiteCards() {
+    const host = $('#qc-site-cards'); if (!host || !QS.length) return;
+    host.innerHTML = QS.map((site) => {
+      const tiles = QM.map((m) => {
+        const mv = site.metrics.find((x) => x.id === m.id);
+        const b = qcBand(mv.value, m), rel = qcRel(mv.value, m);
+        const tip = `<b>${esc(site.label)} · ${esc(m.short)}</b>${qcVal(mv.value, m.unit)} · benchmark ${qcVal(qcBenchmark(m), m.unit)} · ${rel >= 0 ? '+' : ''}${rel}%`;
+        return `<span class="tile ${dvHi(b) ? 'hi' : ''}" style="${dvStyle(b)}" data-tip="${esc(tip)}"><i>${esc(m.code || m.short.slice(0, 3))}</i></span>`;
+      }).join('');
+      const below = site.metrics.filter((mv) => mv.band < 0).length;
+      const iq = site.image_quality.map((q) => `<span style="flex:${q.pct}" title="${esc(q.level)} ${q.pct}%"></span>`).join('');
+      return `<a class="site-card" href="#quality/${esc(site.id)}">
+        <span class="sc-head"><b>${esc(site.label)}</b><i>${esc(site.setting)}</i></span>
+        <span class="sc-tiles">${tiles}</span>
+        <span class="sc-foot"><span class="num">${fmtN(site.n_studies)} TTEs</span><span class="num">${below} of ${QM.length} below benchmark</span></span>
+        <span class="sc-iq" aria-hidden="true">${iq}</span>
+      </a>`;
+    }).join('');
+  }
+
+  // Views: screenshots of this page, each linking to the live interactive site at the hash it shows.
+  // Absolute hrefs on purpose, so the section works from a single-file copy or an embedded document.
+  function renderFigures() {
+    const host = $('#figures'); if (!host) return;
+    const T = window.AIECHO_THUMBS;
+    if (!T || !T.views) { host.remove(); return; }
+    host.innerHTML = Object.entries(T.views).map(([key, v]) => `
+      <a class="fig" href="${esc(v.href)}" rel="noopener">
+        <img src="${esc(v.src)}" alt="${esc(v.title)}: ${esc(v.caption)}" loading="lazy" width="${T.width}">
+        <span class="fig-b"><b>${esc(v.title)}</b><span>${esc(v.caption)}</span><code>${esc(v.hash)}</code></span>
+      </a>`).join('');
+  }
+
   function renderQcPickers() {
     const box = (host, items, set, key) => {
       $(host).innerHTML = `<details class="f-drop" data-key="${key}"><summary>${key === 'qcm' ? 'Metrics' : 'Sites'} <span class="badge">${set.size}</span></summary><div class="f-pop"><ul>${items.map((it) => `<li><label><input type="checkbox" data-qc="${key}" value="${esc(it.id)}"${set.has(it.id) ? ' checked' : ''}> ${esc(it.label)}</label></li>`).join('')}</ul></div></details>`;
@@ -580,6 +616,15 @@
     $('#build-warnings').innerHTML = (P.build_warnings || []).map((w) => `<li>${esc(w)}</li>`).join('');
     
     $('#footer-build').textContent = `Data as of ${P.generated} · openFDA and FDA’s AI-enabled device list`;
+  }
+
+  // Write the current selection into the address bar without adding a history entry and without
+  // re-entering route() through hashchange, which would render the same view a second time.
+  let hashOwn = null;
+  function setHash(h) {
+    if (location.hash === `#${h}`) return;
+    hashOwn = h;
+    history.replaceState(null, '', `#${h}`);
   }
 
   // ---------- tabs & routing ----------
@@ -611,7 +656,7 @@
     const card = ev.target.closest('.card'); if (card && !ev.target.closest('a')) { openPanel(card.dataset.id); return; }
     if (ev.target.closest('#panel-close') || ev.target.closest('#panel-backdrop')) { closePanel(); return; }
     const reg = ev.target.closest('[data-reg]'); if (reg) { closePanelQuiet(); return; }
-    const row = ev.target.closest('.chart-block .row'); if (row) { state.regSel = row.dataset.id; $('#reg-select').value = state.regSel; renderRegistry(); return; }
+    const row = ev.target.closest('.chart-block .row'); if (row) { state.regSel = row.dataset.id; $('#reg-select').value = state.regSel; setHash(`registry/${state.regSel}`); renderRegistry(); return; }
     const vb = ev.target.closest('.view-toggle button'); if (vb) { state.view = vb.dataset.view; for (const b of $$('.view-toggle button')) b.setAttribute('aria-pressed', b === vb ? 'true' : 'false'); render(); return; }
     if (ev.target.closest('#clear-filters')) { state.sel = {}; state.q = ''; $('#search').value = ''; state.openFacet = null; render(); return; }
     const off = ev.target.closest('[data-off-key]');
@@ -622,7 +667,7 @@
     const cb = ev.target.closest('#filters input[type=checkbox]');
     if (cb) { const s = (state.sel[cb.dataset.key] = state.sel[cb.dataset.key] || new Set()); cb.checked ? s.add(cb.value) : s.delete(cb.value); if (!s.size) delete state.sel[cb.dataset.key]; render(); return; }
     if (ev.target.id === 'sort') { state.sort = ev.target.value; render(); return; }
-    if (ev.target.id === 'reg-select') { state.regSel = ev.target.value; renderRegistry(); return; }
+    if (ev.target.id === 'reg-select') { state.regSel = ev.target.value; setHash(`registry/${state.regSel}`); renderRegistry(); return; }
     if (ev.target.dataset && ev.target.dataset.qc) {
       const set = ev.target.dataset.qc === 'qcm' ? state.qcMetrics : state.qcSites;
       if (ev.target.checked) set.add(ev.target.value); else set.delete(ev.target.value);
@@ -640,7 +685,7 @@
     }
     if (ev.target.id === 'qc-benchmark') { state.qcBench = ev.target.value; renderQuality(); return; }
     if (ev.target.id === 'qc-nd') { state.qcND = ev.target.checked; renderQuality(); return; }
-    if (ev.target.id === 'qc-site-select') { state.qcSel = ev.target.value; renderQcScorecard(); return; }
+    if (ev.target.id === 'qc-site-select') { state.qcSel = ev.target.value; setHash(`quality/${state.qcSel}`); renderQcScorecard(); return; }
   });
   let qt; $('#search').addEventListener('input', (ev) => { clearTimeout(qt); qt = setTimeout(() => { state.q = ev.target.value.trim().toLowerCase(); render(); }, 120); });
   document.addEventListener('keydown', (ev) => {
@@ -664,11 +709,11 @@
   document.addEventListener('focusin', (ev) => { const t = ev.target.closest && ev.target.closest('[data-tip]'); if (t) { const r = t.getBoundingClientRect(); tip(t.dataset.tip, r.left + r.width / 2, r.top); } else hideTip(); });
   document.addEventListener('mouseleave', hideTip);
   let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { if (state.tab === 'registry') renderRegistry(); }, 150); });
-  window.addEventListener('hashchange', route);
+  window.addEventListener('hashchange', () => { const h = location.hash.replace(/^#/, ''); if (h === hashOwn) { hashOwn = null; return; } hashOwn = null; route(); });
 
   // ---------- init ----------
   const nCl = fams.reduce((n, f) => n + f.n_clearances, 0), nCo = new Set(fams.map((f) => companyShort(f.company))).size;
   const nPapers = fams.reduce((n, f) => n + f.n_papers_resolved, 0), nClaims = fams.reduce((n, f) => n + f.n_fda_claims, 0);
-  $('#catalog-stats').innerHTML = [[fams.length, 'products'], [nCl, 'FDA clearances'], [nCo, 'companies'], [nClaims, 'FDA summary performance metrics'], [nPapers, 'resolved publications']].map(([v, l]) => `<span><b class="num">${fmtN(v)}</b>${esc(l)}</span>`).join('');
-  render(); renderRegistry(); renderQcPickers(); renderQcRange(false); renderQuality(); renderMethods(); route();
+  $('#catalog-stats').innerHTML = [[fams.length, 'AI products'], [nCl, 'FDA clearances'], [nCo, 'companies'], [nClaims, 'FDA summary performance metrics'], [nPapers, 'resolved publications']].map(([v, l]) => `<span><b class="num">${fmtN(v)}</b>${esc(l)}</span>`).join('');
+  render(); renderRegistry(); renderQcPickers(); renderQcRange(false); renderQuality(); renderMethods(); renderFigures(); route();
 })();

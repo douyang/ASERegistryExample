@@ -74,8 +74,8 @@ A real evaluation should write the same shape with `simulated: false`, which cle
 
 The same file carries a `quality` object for the Site Quality tab:
 
-- `quality.metrics` — the nine metrics the registry reports as live. Each has an `id`, a `section`, a `label`, a `short` label, a `unit` (`%` or `h`), a `direction` (`higher` or `lower`), a numerator and denominator description, a `benchmark` (the registry target), a `median` across sites, and a registry-wide `registry_value` with its own `n` / `d` and monthly series.
-- `quality.sites` — eight anonymised sites (`Site A` … `Site H`) with a setting, study volume, staffing counts, an image-quality mix, and one entry per metric holding the site value, numerator, denominator, rank, and a monthly series where every month carries its own `n` and `d`.
+- `quality.metrics` — thirteen metrics, each carrying `status`: nine `live` (the nine the registry reports as live, `source: JASE 2025`) and four `proposed` (AI-assisted reporting, proposed by this project). Each has an `id`, `code`, `section`, `label`, `short` label, `unit` (`%` or `h`), `direction` (`higher`, `lower` or `neutral`), numerator and denominator descriptions, a `benchmark` (live) or `reference` (proposed), a `median` across sites, and a registry-wide `registry_value` with its own `n` / `d` and monthly series.
+- `quality.sites` — eight anonymised sites (`Site A` … `Site H`) with a setting, study volume, staffing counts, an image-quality mix, an `ai_capture` level, and one entry per metric holding the site value, numerator, denominator, rank, and a monthly series where every month carries its own `n` and `d`.
 - `quality.months` and `quality.quarters` — the selectable intervals.
 
 Cell colour comes from the percentage distance to the benchmark, in four steps each side of a within-1% band: blue better, red worse, grey within. The ramp lives in CSS as `--dv-w4` … `--dv-b4` with a neutral `--dv-0`, defined for both themes. Quarters, period totals and the registry roll-up are denominator-weighted, so they are pooled rates rather than averages of rates.
@@ -101,6 +101,23 @@ Thumbnails are data URIs rather than file paths because the artifact viewer bloc
 
 Selection also writes to the address bar: choosing a site or a simulated product updates the hash via `replaceState`, so the link to the current view can be copied. Routes: `#products`, `#registry`, `#quality`, `#methods`, `#product/<family-id>`, `#registry/<p01..p43>`, `#quality/<s1..s8>`.
 
+## AI-assisted reporting metrics (proposed)
+
+Four metrics measure how AI is used in the reporting workflow: the AI-assisted report rate, and the three dispositions of an AI candidate value — accepted unedited, edited, rejected. They are **not** among the registry's nine live metrics and are marked `Proposed` everywhere they appear.
+
+Design rules the code enforces:
+
+- **The three dispositions share one denominator and sum to 100%.** Accept and reject alone would not: the common interaction is correcting the AI result, not taking or discarding it. `gen-registry.mjs` draws the composition so `n_accepted + n_edited + n_rejected == d` exactly in every month; `validate.cjs` asserts the count identity is exact and the pooled shares close at 100%.
+- **Denominators differ.** The disposition metrics count candidate values (one study offers several automated fields); the report rate counts reports. They are never summed or averaged together.
+- **Direction is `neutral`.** A lab that accepts every AI value has not improved, it has changed what its signature means; a lab with no AI cannot be scored. Neutral metrics carry no rank, are excluded from the below-benchmark tallies, and export as `reference (no better or worse side)` in the CSV.
+- **Neutral cells use a hueless grey distance scale** (`--nd-0` … `--nd-4`, chroma ≤ 0.022) rather than the diverging ramp, so a far-from-reference cell can never be read as the "better" blue. Ink is set per step per theme because no single threshold clears 4.5:1 in both.
+- **A site that cannot export per-element AI provenance reads as not submitted, never as zero**, which would be indistinguishable from a lab that uses no AI. Two of the eight sites are generated that way on purpose, so the path is exercised.
+- **Reference values are illustrative placeholders.** No measurement, guideline or published distribution sets them.
+
+## AI benchmarking is one-off, not live
+
+Benchmarking runs are point-in-time analyses of a dated, frozen registry extract, so there is no month-to-month view. Every evaluation states which extract it used (`dataset`: label, extract date, study period, extract size, inclusion rule) and when it ran (`analysis`: type, run date, protocol version). Products are scored against different extracts, so the charts either say which extracts they pool or are pinned to one with the **Dataset** picker.
+
 ## Demo wash
 
 The AI Benchmarking and Site Quality tabs carry generated numbers, so both are stamped: a flat light-grey overlay at 45% opacity (`.demo-wash`, `--demo-wash` per theme) fixed over the viewport, plus a `DEMO` badge above it. Both are `pointer-events: none`, so the page underneath stays fully usable. `DEMO_TABS` in `assets/app.js` controls which tabs get it; remove a tab from that list once its numbers are real.
@@ -112,4 +129,5 @@ The AI Benchmarking and Site Quality tabs carry generated numbers, so both are s
 ![AI benchmarking placeholder](docs/screenshots/registry-desktop.png)
 ![Site quality placeholder](docs/screenshots/quality-desktop.png)
 ![Views gallery](docs/thumbs/methods.jpg)
+![Site quality](docs/thumbs/quality.jpg)
 ![Mobile](docs/screenshots/products-mobile.png)

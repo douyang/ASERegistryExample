@@ -250,7 +250,6 @@ blockquote.q { margin: 0; padding: 10px 14px; border-left: 3px solid var(--indig
 .chart-block { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px 12px; display: grid; gap: 6px; align-content: start; }
 .chart-sub { font-size: 13px; color: var(--ink-3); }
 .chart-block svg { width: 100%; height: auto; display: block; overflow: visible; }
-.chart-block svg.spark { max-width: 520px; }
 .chart-block svg text { font-family: var(--font-body); fill: var(--ink-2); font-size: 12px; }
 .chart-block svg .lab { font-size: 12px; fill: var(--ink); }
 .chart-block svg .lab.sel { font-weight: 600; fill: var(--navy); }
@@ -264,9 +263,6 @@ blockquote.q { margin: 0; padding: 10px 14px; border-left: 3px solid var(--indig
 .chart-block svg .row.sel .range, .chart-block svg .row.sel .dot { stroke: var(--red); }
 .chart-block svg .row.sel .dot { fill: var(--red); stroke: var(--card); }
 .chart-block svg .ref { stroke: var(--axis); stroke-width: 1; }
-.chart-block svg .spark-line { fill: none; stroke: var(--c1); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
-.chart-block svg .spark-area { fill: var(--c1); opacity: 0.1; }
-.chart-block svg .spark-end { fill: var(--c1); stroke: var(--card); stroke-width: 2; }
 .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12.5px; color: var(--ink-2); }
 .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
 .reg-detail { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; margin-bottom: 32px; }
@@ -451,3 +447,45 @@ a.fig img { display: block; width: 100%; height: auto; border-bottom: 1px solid 
   .sc-tiles .tile i { font-size: 9px; }
   .figures { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* dataset + analysis provenance on a benchmarking result */
+.kv.prov dd { overflow-wrap: anywhere; }
+.kv.prov dd.notice { font-size: 13px; }
+
+/* dataset picker on the benchmarking tab */
+.reg-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin: 0 0 18px; min-width: 0; }
+.reg-toolbar label { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-2); min-width: 0; }
+.reg-toolbar select { max-width: min(420px, calc(100vw - 120px)); }
+.reg-toolbar .notice { font-size: 12.5px; }
+
+/* proposed metrics: marked, and painted on a distance ramp with no better/worse side */
+.chip-proposed { display: inline-block; margin-left: 8px; font-family: var(--font-body); font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 1px 7px; border-radius: 3px; border: 1px dashed var(--line-2); color: var(--ink-3); background: var(--bg-2); vertical-align: 1px; }
+table.qc .sect.proposed th { color: var(--ink-2); }
+.qc-cell.na, .sc-tiles .tile.na { background: var(--bg-2); color: var(--ink-3); border: 1px dashed var(--line-2); }
+table.scorecard tr.na td { color: var(--ink-3); }
+.qc-key .key-note { color: var(--ink-3); font-style: italic; margin-left: 6px; }
+.sc-tiles { grid-template-columns: repeat(3, 1fr); }
+.sc-tiles .tile-sep { grid-column: 1 / -1; height: 1px; background: var(--line); margin: 3px 0 1px; }
+.sc-tiles .tile-grp { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; }
+
+/* Hueless distance scale for the proposed, neutral-direction metrics. Chroma stays under 0.022 so a
+   far-from-reference cell can never be read as the diverging ramp's "better" blue. Ink is set per step
+   per theme, because no single threshold clears 4.5:1 in both. */
+:root {
+  --nd-0: #f2f2f4; --nd-1: #dcdce1; --nd-2: #bdbdc6; --nd-3: #8f8f9c; --nd-4: #5f5f6d;
+  --nd-ink-lo: #171625; --nd-ink-hi: #ffffff; --nd-flip: 4;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --nd-0: #2a2a31; --nd-1: #3b3b45; --nd-2: #55555f; --nd-3: #7c7c88; --nd-4: #a6a6b2; --nd-ink-lo: #e8e9f6; --nd-ink-hi: #0f1030; }
+}
+:root[data-theme="dark"] { --nd-0: #2a2a31; --nd-1: #3b3b45; --nd-2: #55555f; --nd-3: #7c7c88; --nd-4: #a6a6b2; --nd-ink-lo: #e8e9f6; --nd-ink-hi: #0f1030; }
+.nd { color: var(--nd-ink-lo); }
+.nd0 { background: var(--nd-0); }
+.nd1 { background: var(--nd-1); }
+.nd2 { background: var(--nd-2); }
+.nd3 { background: var(--nd-3); }
+.nd4 { background: var(--nd-4); color: var(--nd-ink-hi); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .nd3, :root:not([data-theme="light"]) .nd4 { color: var(--nd-ink-hi); } }
+:root[data-theme="dark"] .nd3, :root[data-theme="dark"] .nd4 { color: var(--nd-ink-hi); }
+.qc-cell.nd, .sc-tiles .tile.nd, .pill-dv.nd { outline: 1px dashed var(--line-2); outline-offset: -1px; }
+.qc-key .sw.nd { border-radius: 2px; }

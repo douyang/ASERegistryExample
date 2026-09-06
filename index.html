@@ -23,22 +23,22 @@
       </svg>
       <span class="brand-text"><span class="brand-name">AI Echo Central</span><span class="brand-sub">FDA-cleared AI for echocardiography</span></span>
     </a>
-    <nav class="tabs" role="tablist" aria-label="Sections">
-      <a role="tab" href="#products" data-tab="products" aria-selected="true" aria-controls="products">Products</a>
-      <a role="tab" href="#registry" data-tab="registry" aria-selected="false" aria-controls="registry">ASE Registry Performance</a>
-      <a role="tab" href="#methods" data-tab="methods" aria-selected="false" aria-controls="methods">Methods</a>
+    <nav class="tabs" aria-label="Sections">
+      <a href="#products" data-tab="products" aria-current="page">Products</a>
+      <a href="#registry" data-tab="registry"><span class="long">ASE </span>Registry<span class="long"> Performance</span></a>
+      <a href="#methods" data-tab="methods">Methods</a>
     </nav>
   </div>
   <div class="gradient-rule" aria-hidden="true"></div>
 </header>
 
-<main id="main" class="wrap">
+<main id="main" class="wrap" tabindex="-1">
 
   <!-- ============ PRODUCTS ============ -->
-  <section id="products" class="tab-panel" role="tabpanel" aria-labelledby="products-h">
+  <section id="products" class="tab-panel" aria-labelledby="products-h">
     <div class="page-head">
       <h1 id="products-h">FDA-cleared AI echocardiography products</h1>
-      <p class="lede">Every 510(k) and De Novo on FDA’s AI-enabled device list that operates on cardiac ultrasound. Each entry carries the performance evidence in its FDA summary, training and validation sample sizes where disclosed, prior validations, and linked publications.</p>
+      <p class="lede">Every 510(k) and De Novo that applies AI to cardiac ultrasound, found on FDA’s AI-enabled device list or under AI product codes. Each entry carries the performance evidence in its FDA summary, training and validation sample sizes where disclosed, prior validations, and linked publications.</p>
       <div class="stats" id="catalog-stats"></div>
     </div>
 
@@ -46,7 +46,7 @@
       <button class="rail-toggle" id="rail-toggle" type="button" aria-expanded="false" aria-controls="rail">Filters</button>
       <aside class="rail" id="rail" aria-label="Filters">
         <div id="filters"></div>
-        <button id="clear-filters" type="button">Clear filters</button>
+        <button id="clear-filters" type="button">Clear all</button>
       </aside>
 
       <div class="results">
@@ -77,14 +77,14 @@
   </section>
 
   <!-- ============ REGISTRY ============ -->
-  <section id="registry" class="tab-panel" role="tabpanel" aria-labelledby="registry-h" hidden>
+  <section id="registry" class="tab-panel" aria-labelledby="registry-h" hidden>
     <div class="placeholder-banner" role="note">
       <b>Placeholder data</b>
       <span>Every number on this tab is synthetic, generated from a fixed seed by <code>scripts/gen-registry.mjs</code>. No product has been evaluated on the ImageGuideEcho Registry by this project. The layout shows how a registry evaluation would be reported once real linked data exist. Registry facts in the last section are real and sourced.</span>
     </div>
     <div class="page-head">
       <h1 id="registry-h">Performance on the ASE ImageGuideEcho Registry <span class="placeholder-tag">Placeholder</span></h1>
-      <p class="lede">Each product’s output compared against the finalized clinical report in the registry’s adult TTE module. Agreement products are scored against reported LVEF, volumes, strain, and valve measurements. Detection products are scored against registry-reported disease. Guidance products are scored on registry quality metrics.</p>
+      <p class="lede">Scoring design. Each product’s output would be compared against the finalized clinical report in the registry’s adult TTE module: agreement products against reported LVEF, volumes, strain, and valve measurements; detection products against registry-reported disease; guidance products on registry quality metrics.</p>
     </div>
     <div class="kpis" id="reg-kpis"></div>
     <div class="reg-layout" id="reg-charts"></div>
@@ -109,7 +109,7 @@
   </section>
 
   <!-- ============ METHODS ============ -->
-  <section id="methods" class="tab-panel" role="tabpanel" aria-labelledby="methods-h" hidden>
+  <section id="methods" class="tab-panel" aria-labelledby="methods-h" hidden>
     <div class="page-head">
       <h1 id="methods-h">Methods</h1>
       <p class="lede">How products were found, what counts as an AI echo product, and how much to trust each field.</p>
@@ -145,6 +145,7 @@
           <tr><td><span class="vlevel peer_reviewed">Peer reviewed</span></td><td>From a publication whose DOI or PMID resolved.</td></tr>
           <tr><td><span class="vlevel company">Company</span></td><td>From the manufacturer’s website or press release. Not independently checked.</td></tr>
           <tr><td><span class="vlevel news">News</span></td><td>From trade press. Not independently checked.</td></tr>
+          <tr><td><span class="vlevel clinicaltrials_gov">ClinicalTrials.gov</span></td><td>From a ClinicalTrials.gov registration record.</td></tr>
           <tr><td><span class="vlevel unverified">Unverified</span></td><td>Reported but not confirmed against a source. Treat as a lead, not a fact.</td></tr>
         </tbody>
       </table></div>
@@ -154,7 +155,7 @@
         <li>Many summaries do not disclose training-set size; blanks mean not disclosed, not zero.</li>
         <li>510(k) “Statement” filings (as opposed to summaries) contain no performance section. Those clearances show indications only.</li>
         <li>Ultrasound-system summaries often describe AI features in general terms. Feature attribution to a specific clearance can be uncertain and is quoted where possible.</li>
-        <li>The registry tab is placeholder data by design. See its banner.</li>
+        <li>The registry tab is placeholder data. See its banner.</li>
       </ul>
       <h2>Product codes</h2>
       <div class="table-wrap"><table><thead><tr><th>Code</th><th>FDA classification name</th></tr></thead><tbody id="product-codes"></tbody></table></div>
@@ -164,6 +165,9 @@
       <h2>Build</h2>
       <p id="build-info"></p>
       <ul class="warnlist" id="build-warnings"></ul>
+      <h2>Data caveats</h2>
+      <p>Automated check: FDA-summary claims whose displayed value contains a number that does not appear in the quoted sentence. The value may come from a table on the cited page.</p>
+      <ul class="warnlist" id="data-caveats"></ul>
       <h2>Update procedure</h2>
       <ol>
         <li><code>node scripts/refresh-openfda.mjs</code> re-pulls openFDA records for every known submission and prints new AI-coded cardiac ultrasound clearances to review.</li>

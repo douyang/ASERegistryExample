@@ -11,7 +11,10 @@ const rdir = path.join(root, 'data', 'research');
 const read = (f) => JSON.parse(fs.readFileSync(path.join(rdir, f), 'utf8'));
 const openfda = read('openfda_records.json');
 const seed = read('families.json');
+const aiListCsv = fs.readFileSync(path.join(rdir, 'fda_ai_enabled_devices_list.csv'), 'utf8').replace(/^\uFEFF/, '');
+const ON_AI_LIST = new Set(aiListCsv.split(/\r?\n/).slice(1).map((l) => (l.split(',')[1] || '').trim().toUpperCase()).filter(Boolean));
 const warnings = [];
+const caveats = [];
 const fdaUrl = (k) => {
   const yy = k.startsWith('K') ? k.slice(1, 3) : k.slice(3, 5);
   return `https://www.accessdata.fda.gov/cdrh_docs/pdf${yy}/${k}.pdf`;
@@ -76,7 +79,8 @@ const rewrite = (v) => {
     const km = m.match(/(K\d{6}|DEN\d{6})(?:_review)?(?:_p(\d+))?/);
     if (km) return publicUrl(km[1], /_review/.test(m)) + (km[2] ? ` (p${km[2]})` : '');
     return m.split('/').pop();
-  });
+  }).replace(/\b(K\d{6}|DEN\d{6})(?:_review)?(?:_p(\d+))?\.(?:txt|pdf|png)\b/g, (m, k, pg) => publicUrl(k, /_review/.test(m)) + (pg ? ` (p${pg})` : ''))
+    .replace(/\bresearch\/(?:ocr|us2|verify)\/[^\s"')]*/g, (m) => { const km = m.match(/(K\d{6}|DEN\d{6})(?:_p(\d+))?/); return km ? publicUrl(km[1], false) + (km[2] ? ` (p${km[2]})` : '') : ''; });
 };
 function deepRewrite(x) {
   if (Array.isArray(x)) return x.map(deepRewrite);
@@ -113,12 +117,25 @@ for (const fam of researched.values()) {
       notable_flags: c.notable_flags || [],
       fda_summary_url: c.fda_summary_url || fdaUrl(k),
       fda_database_url: `https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cf${k.startsWith('DEN') ? 'pmn/denovo' : 'pmn/pmn'}.cfm?ID=${k}`,
-      on_fda_ai_list: true,
+      on_fda_ai_list: ON_AI_LIST.has(k),
     });
   }
   cl.sort((a, b) => a.decision_date.localeCompare(b.decision_date));
   if (!cl.length) { warnings.push(`${fam.id}: no valid clearances, dropped`); continue; }
   const papers = (fam.papers || []).filter((p) => p && p.title);
+  const VLEVELS = new Set(['fda_summary', 'fda_database', 'peer_reviewed', 'company', 'news', 'unverified', 'clinicaltrials_gov']);
+  const normV = (v) => { const t = String(v || 'unverified').split(/[;,]/)[0].trim().toLowerCase().replace(/\s+/g, '_'); if (t === 'openfda' || t === 'fda_database_openfda') return 'fda_database'; if (t === 'clinicaltrials.gov' || t === 'clinicaltrials_gov') return 'clinicaltrials_gov'; return VLEVELS.has(t) ? t : 'unverified'; };
+  for (const c of fam.performance_claims || []) { const nv = normV(c.verification); if (nv !== c.verification) { if (!VLEVELS.has(String(c.verification || '').split(/[;,]/)[0].trim())) warnings.push(`${fam.id}: claim verification '${c.verification}' -> ${nv}`); c.verification = nv; } }
+  for (const x of [...(fam.sources || []), ...(fam.prior_validations || [])]) { const nv = normV(x.verification); if (nv !== x.verification) x.verification = nv; }
+  for (const d of [fam.training_data, fam.validation_data]) if (d) { const nv = normV(d.verification); if (nv !== d.verification) d.verification = nv; }
+  for (const c of fam.performance_claims || []) {
+    const cleaned = String(c.value || '').replace(/9[05](?:\.\d+)?\s*%?\s*CI/gi, ' ').replace(/97\.5\s*%?/g, ' ').replace(/\bp\s*[<>=≤≥]\s*0?\.\d+/gi, ' ');
+    const nums = cleaned.match(/\d+(?:\.\d+)?/g) || []; const q = String(c.quote || '').replace(/\s+/g, ' ');
+    const missing = nums.filter((n) => !q.includes(n) && !q.replace(/,/g, '').includes(n));
+    if (missing.length && c.verification === 'fda_summary') caveats.push(`${fam.id}: ${c.k_number} value numbers ${missing.join(', ')} are not in the displayed quote (${c.endpoint}); check the cited page before relying on them`);
+  }
+  for (const x of fam.sources || []) if (/\.(txt|png)\b|\bocr\//.test(x.url_or_file || '')) warnings.push(`${fam.id}: residual extraction reference in sources: ${x.url_or_file}`);
+  const nFda = (fam.performance_claims || []).filter((c) => c.verification === 'fda_summary').length;
   families.push({
     ...fam,
     clearances: cl,
@@ -129,7 +146,9 @@ for (const fam of researched.values()) {
     pathways: [...new Set(cl.map((c) => c.pathway))],
     product_codes: [...new Set(cl.map((c) => c.product_code))],
     n_performance_claims: (fam.performance_claims || []).length,
-    n_papers_resolved: papers.filter((p) => /resolved/.test(p.verification || '')).length,
+    n_fda_claims: nFda,
+    n_other_claims: (fam.performance_claims || []).length - nFda,
+    n_papers_resolved: papers.filter((p) => /^(doi|pmid)_resolved/.test(String(p.verification || '').trim())).length,
     n_papers: papers.length,
     research_verified: !!fam._verified,
     research_pending: !!fam._research_pending,
@@ -181,7 +200,9 @@ const out = {
   excluded,
   triage_included: triage.filter((t) => t.is_cardiac_ultrasound_ai).map((t) => ({ k: t.k_number, group: t.group, features: (t.ai_features || []).filter((f) => f.cardiac).map((f) => f.name) })),
   build_warnings: warnings,
+  data_caveats: caveats,
 };
 fs.writeFileSync(path.join(root, 'data', 'products.js'), `// Generated by scripts/build-data.mjs — do not edit by hand.\nwindow.AIECHO_PRODUCTS = ${JSON.stringify(out, null, 1)};\n`);
+console.log(`caveats: ${caveats.length}`);
 console.log(`families: ${families.length} (verified ${families.filter((f) => f.research_verified).length}, pending ${families.filter((f) => f.research_pending).length}); clearances: ${families.reduce((n, f) => n + f.n_clearances, 0)}; excluded: ${excluded.length}; warnings: ${warnings.length}`);
 for (const w of warnings) console.log('  warn:', w);

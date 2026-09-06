@@ -1,0 +1,789 @@
+{
+ "batch_id": "addenda-software-b",
+ "families": [
+  {
+   "id": "philips-qlab-3d-auto",
+   "product_name": "QLAB Advanced Quantification Software: 3D Auto RV and 3D Auto MV",
+   "company": "Philips (Philips Ultrasound, Inc.)",
+   "company_website": "https://www.philips.com",
+   "product_url": "https://www.philips.co.uk/healthcare/product/HCNOCTN145/qlab-cardiovascular-ultrasound-quantification-software",
+   "category": "comprehensive-measurement",
+   "tags": [
+    "RV volumes",
+    "RVEF",
+    "TAPSE",
+    "FAC",
+    "RV longitudinal strain",
+    "mitral valve annulus",
+    "mitral leaflet quantification",
+    "3D",
+    "HeartModel",
+    "TOMTEC",
+    "machine learning"
+   ],
+   "modality_scope": [
+    "3D TTE",
+    "3D"
+   ],
+   "deployment": [
+    "standalone PC",
+    "dedicated workstation",
+    "on-board Philips ultrasound systems"
+   ],
+   "summary": "QLAB Q-Apps 3D Auto RV (QLAB 13.0, K191647) and 3D Auto MV (QLAB 15.0, K200974) integrate the machine-learning segmentation engine of the predicate QLAB HeartModel (K181264) with the TOMTEC-Arena TTA2 4D RV-Function and 4D MV-Assessment applications (reference device K150122) to produce semi-automatic 3D surface models and measurements of the right ventricle and mitral valve from 3D echocardiography; the user edits, accepts or rejects the proposed contours or landmarks. QLAB runs as a stand-alone product on a standard PC, a dedicated workstation, or on-board Philips ultrasound systems. The K191647 summary reports RMSE versus the reference 4D RV of 8.3 mL (EDV), 2.7 mL (ESV) and 2.7% (EF) with no sample size; the K200974 summary reports no quantitative metrics.",
+   "intended_use_quote": "QLAB Advanced Quantification Software is a software application package. It is designed to view and quantify image data acquired on Philips ultrasound systems.",
+   "indications_for_use_quote": "QLAB Advanced Quantification Software is a software application package. It is designed to view and quantify image data acquired on Philips ultrasound systems.",
+   "embedded_ai_features": [
+    "3D Auto RV (K191647): integrates the HeartModel segmentation engine, applied to the right ventricle, with TomTec-Arena 4D RV-Function; 3D surface model created semi-automatically using machine learning algorithms without user interaction, user edits/accepts/rejects contours or landmarks; outputs EDV, EDVI, ESV, ESVI, SV, EF plus 2D RVD1-3, TAPSE, FAC, RVLS (free wall, septum) identical to the 4D RV reference (K191647 p.6-7)",
+    "3D Auto MV (K200974): integrates the machine-learning-derived HeartModel segmentation engine with TOMTEC-Arena TTA2 4D MV-Assessment; provides initial mitral-valve landmark proposals which the user edits/accepts/rejects, then annulus/leaflet/tenting/coaptation measurements; adds D-Shaped Annulus Perimeter, D-Shaped Annulus Area, Maximum Prolapse Height, Maximum Open Coaptation Gap/Width and Total Open Coaptation Area versus the reference 4D MV-Assessment (K200974 p.8-10)"
+   ],
+   "clearances": [
+    {
+     "k_number": "K191647",
+     "decision_date": "2019-12-20",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K181264",
+      "K150122"
+     ],
+     "changes_summary": "Adds the 3D Auto RV Q-App to QLAB 13.0: integrates the HeartModel (primary predicate K181264) machine-learning segmentation engine, applied to the right ventricle, with the TomTec-Arena TTA2 4D RV-Function (reference device K150122). Predicate HeartModel had no RV parameters; 'EDV measurement includes semi-automatic function introduced in 3DAutoRV. All other measurements identical to 4D RV predicate' (p.7). Algorithm training procedure stated to be the same as HeartModel except applied to the RV instead of the LV (p.7).",
+     "notable_flags": [
+      "machine learning",
+      "Traditional 510(k)",
+      "no clinical testing (p.8)",
+      "K150122 listed as reference device, not predicate"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf19/K191647.pdf"
+    },
+    {
+     "k_number": "K200974",
+     "decision_date": "2020-06-03",
+     "pathway": "510(k)",
+     "product_code": "QIH",
+     "predicates": [
+      "K191647",
+      "K150122"
+     ],
+     "changes_summary": "Adds the 3D Auto MV Q-App to QLAB 15.0: integrates the HeartModel machine-learning-derived segmentation engine (applied to the mitral valve) with the TomTec-Arena TTA2 4D MV-Assessment application (reference predicate K150122). Introduces D-Shaped Annulus Perimeter, D-Shaped Annulus Area, Maximum Prolapse Height, Maximum Open Coaptation Gap/Width and Total Open Coaptation Area; all other measurements identical to 4D MV-Assessment (p.9-10). Indications unchanged.",
+     "notable_flags": [
+      "machine learning",
+      "Traditional 510(k)",
+      "clinical data not required (p.11)",
+      "no quantitative performance metrics in summary",
+      "K150122 listed as reference predicate device"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K200974.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K191647",
+     "endpoint": "RV end-diastolic volume error vs predicate 4D RV",
+     "metric": "% error",
+     "value": "below 15% for every data set tested",
+     "comparator": "TomTec-Arena 4D RV-Function (predicate/reference device)",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Validation study; test datasets segregated from training data sets; n not stated",
+     "subgroup_notes": null,
+     "quote": "The results of a validation study show that the overall performance of the 3D Auto RV software generates RV end diastolic volume error rates below 15% for every data set tested compared to the predicate 4D RV.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K191647",
+     "endpoint": "RV end-diastolic volume agreement vs predicate 4D RV",
+     "metric": "RMSE",
+     "value": "8.3 mL",
+     "comparator": "TomTec-Arena 4D RV-Function (predicate/reference device)",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Validation study; test datasets segregated from training data sets; n not stated",
+     "subgroup_notes": null,
+     "quote": "A root mean square error (RMSE) analysis showed that in comparison to the predicate 4D RV, 3D Auto RV measured end diastolic RV volumes with 8.3 ml RMSE, end systolic RV volumes with 2.7 ml RMSE, and RV ejection fraction with 2.7% RMSE. Test datasets were segregated from training data sets.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K191647",
+     "endpoint": "RV end-systolic volume agreement vs predicate 4D RV",
+     "metric": "RMSE",
+     "value": "2.7 mL",
+     "comparator": "TomTec-Arena 4D RV-Function (predicate/reference device)",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Validation study; test datasets segregated from training data sets; n not stated",
+     "subgroup_notes": null,
+     "quote": "3D Auto RV measured end diastolic RV volumes with 8.3 ml RMSE, end systolic RV volumes with 2.7 ml RMSE, and RV ejection fraction with 2.7% RMSE.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K191647",
+     "endpoint": "RV ejection fraction agreement vs predicate 4D RV",
+     "metric": "RMSE",
+     "value": "2.7%",
+     "comparator": "TomTec-Arena 4D RV-Function (predicate/reference device)",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "Validation study; test datasets segregated from training data sets; n not stated",
+     "subgroup_notes": null,
+     "quote": "3D Auto RV measured end diastolic RV volumes with 8.3 ml RMSE, end systolic RV volumes with 2.7 ml RMSE, and RV ejection fraction with 2.7% RMSE.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K191647",
+     "endpoint": "External study (JASE) - proportion of patients needing no contour revision; RV volume difference vs CMR",
+     "metric": "% needing no revision; % difference vs CMR",
+     "value": "no revision in one-third of patients; all 3D Auto RV results <15% difference from CMR RV volume",
+     "comparator": "Cardiac magnetic resonance (cross-modality ground truth)",
+     "n_studies": null,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "External published study in JASE; not named in summary (attribution to Genovese et al. 2019, n=56, is an inference, see open_questions); n not stated in summary",
+     "subgroup_notes": "Caution: the summary states 3D Auto RV results 'all showed less than 15% difference from the CMR measurements', whereas the Genovese 2019 abstract reports an EDV bias of -25.6 +/- 21.1 mL after editing; the two characterisations were not reconciled in this session.",
+     "quote": "An external study published in the Journal of the American Society of Echocardiography which concludes that 3D Auto RV provides an accurate and highly reproducible quantification not needing any revision in one-third of patients and needing only minor revisions in the rest of patients. The users were able to discern the patients images which needed manual editing on all cases. Ground truth in this study was considered to be the cross-modality CMR. 3D Auto RV results all showed less than 15% difference from the CMR measurements of RV volume.",
+     "page": 8,
+     "verification": "fda_summary"
+    },
+    {
+     "k_number": "K191647",
+     "endpoint": "3D Auto RV auto-segmentation EDV vs expert manual adjustment (Philips/TOMTEC white paper)",
+     "metric": "correlation (R); % within 15% / 10%",
+     "value": "R = 0.79; 65% of data sets within 15%, 49% within 10% of manual",
+     "comparator": "Expert manual adjustment of image alignment and contour position",
+     "n_studies": 73,
+     "n_patients": null,
+     "n_sites": null,
+     "dataset_description": "73 data sets; Philips/TOMTEC white paper 4522 991 48031 (Apr 2019), p.5; population and acquisition not described",
+     "subgroup_notes": "Company document, not part of the FDA summary; the white paper does not state whether these 73 data sets overlap the FDA validation study.",
+     "quote": "EDV results from the auto-segmentation were compared to expert manual adjustment of the image alignment and contour position for 73 data sets. Shown in Figure 5 is the correlation plot of the EDV for the auto-segmentation versus the manual adjustments for the 73 data sets. The R-value is 0.79. For 65% of the data sets, the EDV from the auto-segmentation were within 15% of the manual adjustments, and for 49% of the data sets the automatic results were within 10% of the manual results.",
+     "page": 5,
+     "verification": "company"
+    },
+    {
+     "k_number": "K191647",
+     "endpoint": "ML-based 3D RV volumes/EF vs CMR after minimal editing (Genovese 2019, JASE)",
+     "metric": "bias +/- SD; feasibility; analysis time",
+     "value": "EDV bias -25.6 +/- 21.1 mL; ESV -7.4 +/- 16 mL; EF -3.3% +/- 5.2%; fully automatic accurate in 32% (15 +/- 1 s), editing needed in 68% (114 +/- 71 s); CoV <7%, ICC >=0.95",
+     "comparator": "Cardiac magnetic resonance",
+     "n_studies": null,
+     "n_patients": 56,
+     "n_sites": null,
+     "dataset_description": "56 unselected patients referred for clinically indicated CMR with same-day transthoracic 3DE; wide range of RV size, function and image quality (site count not stated in abstract)",
+     "subgroup_notes": null,
+     "quote": "With these minimal adjustments, RV volumes and EF measurements were accurate in comparison with CMR reference (biases: EDV, -25.6 +/- 21.1 mL; ESV, -7.4 +/- 16 mL; EF, -3.3% +/- 5.2%) and showed excellent reproducibility reflected by coefficients of variation <7% and intraclass correlations >=0.95 for all measurements.",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K191647",
+     "endpoint": "Fully automated 3D RV software vs CMR and semi-automated TomTec (Otani 2020, EHJ-CVI)",
+     "metric": "bias; correlation; feasibility; analysis time",
+     "value": "feasibility 91%; EDV bias -12.6 mL (r=0.82); SV bias -5.1 mL (r=0.78); RVEF no significant difference (r=0.72); analysis 15 s vs 120 s",
+     "comparator": "Cardiac magnetic resonance; semi-automated TomTec software",
+     "n_studies": null,
+     "n_patients": 100,
+     "n_sites": null,
+     "dataset_description": "100 patients with same-day CMR and 3DE; fully automated software identified as Philips, semi-automated as TomTec (site count not stated in abstract)",
+     "subgroup_notes": null,
+     "quote": "Although the fully automated software, without any manual editing, significantly underestimated RV end-diastolic volume (bias: -12.6 mL, P < 0.001) and stroke volume (-5.1 mL, P < 0.001) compared with CMR, there were good correlations between the two modalities (r = 0.82 and 0.78). No significant differences in RVEF between the fully automated software and CMR were observed, and there was a fair correlation (r = 0.72).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K191647",
+     "endpoint": "Fully automated 3DE RV software in children vs CMR (Liu 2025, Pediatr Radiol)",
+     "metric": "correlation; feasibility",
+     "value": "feasible in 100%; fully automated in 35% (8 +/- 2 s); RVEDV r=0.93, RVESV r=0.90, RVEF r=0.82",
+     "comparator": "Cardiac MR within 24 h",
+     "n_studies": null,
+     "n_patients": 82,
+     "n_sites": null,
+     "dataset_description": "82 prospectively enrolled children with echo and cardiac MR within 24 h; the abstract does not name the software vendor (identification as 3D Auto RV inferred from title and cited prior studies)",
+     "subgroup_notes": "Bias smaller in children with RVEF >=45%, normal RV size and good 3DE image quality",
+     "quote": "The 3DE-derived RV volumes and EF correlated well with cardiac MR measurements (RVEDV, r=0.93; RVESV, r=0.90; RVEF, r=0.82; all P <0.001).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K191647",
+     "endpoint": "Fully automated 3D RV software vs CMR, with and without manual editing (Ahmad 2021, Front Cardiovasc Med)",
+     "metric": "feasibility; Spearman correlation vs CMR",
+     "value": "feasible in 149/170; correlation with CMR with vs without manual editing: RVEDV 0.924 vs 0.794, RVESV 0.955 vs 0.854, RVEF 0.941 vs 0.781; RV volumes underestimated and RVEF overestimated vs CMR",
+     "comparator": "Cardiac magnetic resonance",
+     "n_studies": null,
+     "n_patients": 170,
+     "n_sites": null,
+     "dataset_description": "170 patients with both CMR and 3DE; bias and limits of agreement larger with severely impaired RV function or low frame rate; the abstract does not name the software vendor (identification as 3D Auto RV inferred from title and cited prior studies)",
+     "subgroup_notes": "Bias/LOA greater in severely impaired RV function or low frame rate",
+     "quote": "RV measurements obtained from the manual editing method correlated better with CMR values than that without manual editing (RVEDV, 0.924 vs. 0.794: RVESV, 0.955 vs. 0.854; RVEF, 0.941 vs. 0.781 respectively, all p < 0.0001) with less bias and narrower limit of agreement (LOA).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K191647",
+     "endpoint": "Real-world feasibility of 3D Auto RV semi-automated analysis (Shiokawa 2026, J Echocardiogr)",
+     "metric": "feasibility; % fully automated; analysis time reduction",
+     "value": "feasibility 84.8% (201/237) of 3D datasets, 67.4% (201/298) of consecutive patients; fully automated without correction 10.9% (22/201); 30% shorter analysis time vs manual 2D",
+     "comparator": "Manual 2D TTE measurements",
+     "n_studies": null,
+     "n_patients": 201,
+     "n_sites": null,
+     "dataset_description": "201 patients with 2D and 3D TTE, July-November 2023, routine clinical practice; abstract names '3D Auto RV software' (site count not stated in abstract)",
+     "subgroup_notes": null,
+     "quote": "The feasibility of RV measurement using the AI-based software was 84.8% (201/237) among patients with available 3D datasets, and the overall applicability was 67.4% (201/298) across all consecutive patients undergoing routine echocardiography. Among the 201 analyzed cases, fully automated analysis without manual correction was feasible in 10.9% (22/201), while the remaining 89.1% required manual adjustments of the endocardial borders to ensure clinical accuracy.",
+     "page": null,
+     "verification": "peer_reviewed"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "FDA summaries state only that non-clinical V&V included 'Machine Learning Algorithm Training and the subsequent Validation Study' (K191647 p.8) / 'the 3D Auto MV Algorithm Training and the subsequent Validation Study' (K200974 p.11) and that the algorithm training procedure is the same as the predicate HeartModel, applied to the RV / MV instead of the LV (K191647 p.7; K200974 p.8-9). No training-set size, site count or population is given. The Philips/TOMTEC white paper (company document, p.2) states the boundary detector and shape models 'are trained using a large number of clinical images annotated by echocardiographic experts'.",
+    "source": "K191647.txt p.7-8; K200974.txt p.8-9, 11; Philips/TOMTEC 3D Auto RV white paper (4522 991 48031, Apr 2019) p.2",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "K191647 (p.8): internal validation study versus the reference 4D RV with 'Test datasets were segregated from training data sets'; RV EDV error below 15% for every data set tested; RMSE EDV 8.3 mL, ESV 2.7 mL, EF 2.7%; n, sites and population not stated. The summary also cites an unnamed external JASE study versus CMR (see open_questions). Company white paper (p.5): 73 data sets, auto-segmentation EDV vs expert manual adjustment, R = 0.79. K200974 (p.11): '3D Auto MV Algorithm Training and the subsequent Validation Study', no numbers or comparator.",
+    "independent_of_training": true,
+    "source": "K191647.txt p.8; K200974.txt p.11; Philips/TOMTEC white paper p.5",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "Philips press release 20 June 2019 (EPIQ CVx Release 5.0; verified in this session): 'The 3D Auto RV application segments, identifies the borders of and aligns the views of the right ventricle, enabling clinicians to carry out the quantification and check the measurements in as little as 15 seconds'; 'The AI enabled 3D AutoRV application, designed using a Machine Learning-based algorithm, is CE marked and FDA 510(k) pending'.",
+     "source_url": "https://www.globenewswire.com/news-release/2019/06/20/1871868/0/en/Philips-extends-advanced-automation-capabilities-on-its-EPIQ-CVx-cardiology-ultrasound-platform-making-accurate-exams-faster-and-easier-to-conduct.html",
+     "verification": "news"
+    },
+    {
+     "description": "Philips/TOMTEC white paper '3D Auto RV - right ventricular quantification' (Sedlmeier, Prater; 4522 991 48031, Apr 2019; verified in this session): boundary detector plus RV shape models 'trained using a large number of clinical images annotated by echocardiographic experts' (p.2); EDV auto-segmentation vs expert manual adjustment in 73 data sets, R = 0.79, 65% within 15%, 49% within 10% (p.5); on-cart and off-cart results identical (p.6); requires a minimum of 10 volumes/s and 10 volumes per heart cycle (p.6-7); no validation for contrast data (p.6).",
+     "source_url": "https://www.philips.com/c-dam/b2bhc/master/landing-pages/cvx/epiq-cvx-3d-auto-rv-white-paper.pdf",
+     "verification": "company"
+    },
+    {
+     "description": "Predicate HeartModel segmentation engine validated in Tsang 2016 (n=159, vs manual 3D and CMR) and multicentre Medvedofsky 2018 (n=180, 6 sites); the K191647/K200974 summaries state the training procedure is the same as HeartModel.",
+     "source_url": "https://doi.org/10.1093/ehjci/jew328",
+     "verification": "peer_reviewed"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Machine Learning-Based Three-Dimensional Echocardiographic Quantification of Right Ventricular Size and Function: Validation Against Cardiac Magnetic Resonance",
+     "first_author": "Genovese D",
+     "journal": "J Am Soc Echocardiogr",
+     "year": 2019,
+     "doi": "10.1016/j.echo.2019.04.001",
+     "pmid": "31174940",
+     "url": "https://doi.org/10.1016/j.echo.2019.04.001",
+     "relation": "pivotal-validation",
+     "n_subjects": 56,
+     "key_result": "Fully automatic results accurate in 32% (15 +/- 1 s); after minimal editing biases vs CMR: EDV -25.6 +/- 21.1 mL, ESV -7.4 +/- 16 mL, EF -3.3% +/- 5.2%; ICC >=0.95. Matches the 'external study published in JASE' cited in the K191647 summary.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Accuracy of fully automated right ventricular quantification software with 3D echocardiography: direct comparison with cardiac magnetic resonance and semi-automated quantification software",
+     "first_author": "Otani K",
+     "journal": "Eur Heart J Cardiovasc Imaging",
+     "year": 2020,
+     "doi": "10.1093/ehjci/jez236",
+     "pmid": "31549722",
+     "url": "https://doi.org/10.1093/ehjci/jez236",
+     "relation": "external-validation",
+     "n_subjects": 100,
+     "key_result": "Feasibility 91%; fully automated software underestimated RVEDV (bias -12.6 mL, r=0.82) and SV (-5.1 mL) vs CMR; RVEF not significantly different (r=0.72); analysis 15 s vs 120 s for semi-automated TomTec.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Feasibility and Accuracy of a Fully Automated Right Ventricular Quantification Software With Three-Dimensional Echocardiography: Comparison With Cardiac Magnetic Resonance",
+     "first_author": "Ahmad A",
+     "journal": "Front Cardiovasc Med",
+     "year": 2021,
+     "doi": "10.3389/fcvm.2021.732893",
+     "pmid": "34746251",
+     "url": "https://doi.org/10.3389/fcvm.2021.732893",
+     "relation": "external-validation",
+     "n_subjects": 170,
+     "key_result": "170 patients with CMR and 3DE; fully automated software feasible in 149; RV volumes underestimated and RVEF overestimated vs CMR; correlation with CMR better with manual editing (RVEDV 0.924 vs 0.794; RVESV 0.955 vs 0.854; RVEF 0.941 vs 0.781). Abstract does not name the vendor; identification as 3D Auto RV inferred.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Quantification of chronic aortic regurgitation using left and right ventricular stroke volumes obtained from two new automated three-dimensional transthoracic echocardiographic software: feasibility and accuracy",
+     "first_author": "Zhang B",
+     "journal": "Int J Cardiovasc Imaging",
+     "year": 2022,
+     "doi": "10.1007/s10554-021-02471-1",
+     "pmid": "34800186",
+     "url": "https://doi.org/10.1007/s10554-021-02471-1",
+     "relation": "other",
+     "n_subjects": 116,
+     "key_result": "Dynamic HeartModel + 3D Auto RV regurgitant volume correlated with RT3DE reference (central r=0.90, eccentric r=0.96); kappa for grading 0.89/0.86.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Feasibility and accuracy of the fully automated three-dimensional echocardiography right ventricular quantification software in children: validation against cardiac magnetic resonance",
+     "first_author": "Liu Q",
+     "journal": "Pediatr Radiol",
+     "year": 2025,
+     "doi": "10.1007/s00247-025-06330-2",
+     "pmid": "40679616",
+     "url": "https://doi.org/10.1007/s00247-025-06330-2",
+     "relation": "external-validation",
+     "n_subjects": 82,
+     "key_result": "Feasible in 100% of 82 children; fully automated in 35% (8 +/- 2 s); RVEDV r=0.93, RVESV r=0.90, RVEF r=0.82 vs cardiac MR; volumes slightly underestimated, RVEF overestimated. Abstract does not name the vendor; identification as 3D Auto RV inferred from title and cited prior studies.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Agreement of AI-assisted semi-automated right ventricular function analysis using 3D transthoracic echocardiography with artificial intelligence",
+     "first_author": "Shiokawa N",
+     "journal": "J Echocardiogr",
+     "year": 2026,
+     "doi": "10.1007/s12574-026-00749-8",
+     "pmid": "42525231",
+     "url": "https://doi.org/10.1007/s12574-026-00749-8",
+     "relation": "real-world",
+     "n_subjects": 201,
+     "key_result": "3D Auto RV feasible in 84.8% of 3D datasets (67.4% of consecutive patients); fully automated without correction in 10.9%; analysis time 30% shorter than manual 2D.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Transthoracic 3D Echocardiographic Left Heart Chamber Quantification Using an Automated Adaptive Analytics Algorithm",
+     "first_author": "Tsang W",
+     "journal": "JACC Cardiovasc Imaging",
+     "year": 2016,
+     "doi": "10.1016/j.jcmg.2015.12.020",
+     "pmid": "27318718",
+     "url": "https://doi.org/10.1016/j.jcmg.2015.12.020",
+     "relation": "algorithm-development",
+     "n_subjects": 159,
+     "key_result": "Validation of the predicate HeartModel segmentation engine (whose training procedure the 3D Auto RV/MV summaries cite): r=0.87-0.96 vs manual 3D TTE, r=0.84-0.95 vs CMR.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Three-dimensional echocardiographic quantification of the left-heart chambers using an automated adaptive analytics algorithm: multicentre validation study",
+     "first_author": "Medvedofsky D",
+     "journal": "Eur Heart J Cardiovasc Imaging",
+     "year": 2018,
+     "doi": "10.1093/ehjci/jew328",
+     "pmid": "28159984",
+     "url": "https://doi.org/10.1093/ehjci/jew328",
+     "relation": "other",
+     "n_subjects": 180,
+     "key_result": "Multicentre (6 sites) validation of predicate HeartModel: r 0.97 (LVEDV), 0.97 (LVESV), 0.88 (LVEF), 0.96 (LAV) vs core-lab manual tracing.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "A deeper look into the functions of right ventricle using three-dimensional echocardiography: the forgotten ventricle in children with systemic lupus erythematosus",
+     "first_author": "Rakha S",
+     "journal": "Eur J Pediatr",
+     "year": 2023,
+     "doi": "10.1007/s00431-023-04936-y",
+     "pmid": "37039879",
+     "url": "https://doi.org/10.1007/s00431-023-04936-y",
+     "relation": "other",
+     "n_subjects": 80,
+     "key_result": "Clinical application, not validation: 40 children with SLE vs 40 controls assessed with '3D auto RV software'; 3D RV volumes larger and 3D RVEF and longitudinal strain lower in SLE; SLE damage index correlated with 3D auto RV EF, TAPSE, FAC and RVLS-free wall.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [],
+   "open_questions": [
+    "Training-set size, number of sites and patient mix for the 3D Auto RV and 3D Auto MV machine-learning models are not stated in K191647 or K200974 (only 'Machine Learning Algorithm Training and the subsequent Validation Study'); the white paper says 'a large number of clinical images' without a number.",
+    "Sample size, site count and patient characteristics of the K191647 internal validation study (RMSE 8.3 mL / 2.7 mL / 2.7%) are not stated.",
+    "K200974 (3D Auto MV) reports no quantitative performance metrics at all ('meets the defined requirements and performance claims'); the 3D Auto MV validation study n, comparator and results are unknown.",
+    "No peer-reviewed publication specifically validating the Philips 3D Auto MV Q-App (K200974) was found on PubMed with the terms tried ('3D Auto MV', automated mitral valve + QLAB/HeartModel); earlier Philips automated MV papers (e.g., Aquila 2016, Cardiovasc Ultrasound) concern a prior 'anatomical intelligence' MV tool and were not attributed to this clearance.",
+    "The JASE external study in the K191647 summary is unnamed; attribution to Genovese et al. 2019 is inferred from the matching journal, the one-third-no-revision finding and CMR ground truth. Note the summary's statement that results 'all showed less than 15% difference from the CMR measurements of RV volume' does not obviously match the Genovese abstract (EDV bias -25.6 +/- 21.1 mL after minimal editing); the discrepancy is unresolved.",
+    "Ahmad 2021 (Front Cardiovasc Med, n=170) and Liu 2025 (Pediatr Radiol, n=82) do not name the software vendor in their abstracts; both are attributed to Philips 3D Auto RV on the basis of their titles and citation of Genovese 2019/Otani 2020 (Otani's abstract explicitly names the fully automated software as Philips). Full texts were not checked.",
+    "The 3D Auto RV white paper's 73-data-set validation (R=0.79) is a company document; it is unclear whether this is the same dataset as the FDA validation study.",
+    "openFDA applicant is 'Philips Health Care'; the 510(k) summaries name Philips Ultrasound, Inc. (Andover MA / Bothell WA).",
+    "Neither K191647 nor K200974 states whether 3D Auto RV/MV is validated for 3D TEE datasets; the published validations of 3D Auto RV used transthoracic 3DE, so modality_scope lists 3D TTE only.",
+    "PubMed searches for '3D Auto MV' returned no publication naming the Philips 3D Auto MV Q-App; hits were unrelated (e.g., GE 4D Auto MVQ, Siemens Auto Valve). Antolic-type searches on 'automated mitral valve quantification Philips QLAB' returned nothing."
+   ],
+   "sources": [
+    {
+     "fact": "K191647 decision date 2019-12-20, product code QIH, applicant Philips Health Care",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "K200974 decision date 2020-06-03, product code QIH, applicant Philips Health Care",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "K191647 device description, predicates K181264/K150122, RMSE validation results, JASE external study, no clinical testing",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K191647.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "K200974 3D Auto MV description, predicates K191647/K150122, measurement parameter comparison, V&V without quantitative metrics",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K200974.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "3D Auto RV algorithm description (p.2), 73-data-set validation (R=0.79; 65% within 15%; 49% within 10%) (p.5), on/off-cart identical and volume-rate requirements (p.6-7); PDF retrieved and text-extracted in this session",
+     "url_or_file": "https://www.philips.com/c-dam/b2bhc/master/landing-pages/cvx/epiq-cvx-3d-auto-rv-white-paper.pdf",
+     "verification": "company"
+    },
+    {
+     "fact": "June 2019 press release: 3D Auto RV ML-based, CE marked, FDA 510(k) pending, 15-second quantification claim",
+     "url_or_file": "https://www.globenewswire.com/news-release/2019/06/20/1871868/0/en/Philips-extends-advanced-automation-capabilities-on-its-EPIQ-CVx-cardiology-ultrasound-platform-making-accurate-exams-faster-and-easier-to-conduct.html",
+     "verification": "news"
+    },
+    {
+     "fact": "QLAB product page lists '3D Auto RV/MV' feature and 'View and interrogate data on-cart and off-cart' (verified in this session)",
+     "url_or_file": "https://www.philips.co.uk/healthcare/product/HCNOCTN145/qlab-cardiovascular-ultrasound-quantification-software",
+     "verification": "company"
+    },
+    {
+     "fact": "Paper metadata and abstracts (PMIDs 31174940, 31549722, 34746251, 34800186, 40679616, 42525231, 27318718, 28159984, 37039879) via PubMed efetch; all DOIs resolved via Crossref in this verification pass",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+     "verification": "peer_reviewed"
+    }
+   ]
+  },
+  {
+   "id": "biosense-cartosound-fam",
+   "product_name": "CARTOSOUND FAM Module (CARTO 3 EP Navigation System)",
+   "company": "Biosense Webster, Inc. (Johnson & Johnson MedTech)",
+   "company_website": "https://www.jnjmedtech.com",
+   "product_url": "https://www.jnjmedtech.com/en-US/products/cardiovascular/carto/software/",
+   "category": "interventional-guidance",
+   "tags": [
+    "ICE",
+    "left atrium",
+    "3D reconstruction",
+    "deep learning",
+    "atrial fibrillation ablation",
+    "electroanatomical mapping",
+    "PCCP",
+    "CARTOSOUND REVEAL",
+    "zero-fluoroscopy"
+   ],
+   "modality_scope": [
+    "ICE"
+   ],
+   "deployment": [
+    "on-device (CARTO 3 EP navigation workstation)",
+    "system-embedded"
+   ],
+   "summary": "CARTOSOUND FAM is a deep-learning module of the CARTO 3 EP Navigation System (V8.0, K231207) that automatically reconstructs an editable 3D left-atrial volume with automatic 3D segmentation from gated 2D intracardiac-echo frames acquired from the right atrium and/or RVOT. V8.1 (K252302) carries the CARTOSOUND FAM LA module forward with SOUNDSTAR Crystal catheter support; V8.4 (K252972, cleared with a PCCP) retires the legacy FAM module and replaces it with the locked-AI CARTOSOUND REVEAL module for LA and LV ultrasound mapping. The FDA summaries report no quantitative accuracy metrics for the AI segmentation.",
+   "intended_use_quote": "The intended use of the CARTO™ 3 System is catheter-based cardiac electrophysiological (EP) procedures. The CARTO™ 3 System provides information about the electrical activity of the heart and about catheter location during the procedure. The system can be used on patients who are eligible for a conventional electrophysiological procedure. The system has no special contraindications.",
+   "indications_for_use_quote": "The intended use of the CARTO™ 3 System is catheter-based cardiac electrophysiological (EP) procedures. The CARTO™ 3 System provides information about the electrical activity of the heart and about catheter location during the procedure. The system can be used on patients who are eligible for a conventional electrophysiological procedure. The system has no special contraindications.",
+   "embedded_ai_features": [
+    "CARTOSOUND FAM (V8.0, K231207 p.7): deep-learning module that automatically reconstructs an editable 3D volume with automatic 3D segmentation of the left atrium from a series of 2D ultrasound gated input frames acquired from the RA (fossa ovalis) and/or RVOT",
+    "Complex Signals Identification (V8.0): machine-learning locked algorithm tagging fractionated intracardiac EGMs (not an ultrasound feature)",
+    "CARTOSOUND REVEAL (V8.4, K252972 p.7-8): locked AI algorithms for automatic identification of cardiac structures overlaid on ICE images, automatic 2D contour creation, and automatic 3D shell creation as baseline for LA and LV chamber reconstruction; supports SOUNDSTAR family and NUVISION NAV catheters; replaces legacy CARTOSOUND FAM",
+    "LA FAM Module (V8.4, K252972 p.8): locked AI algorithm generating a 3D LA shell when mapping with the VARIPULSE catheter (not ultrasound-based; training/validation data consisted of CT and CARTO 3 FAM cases)"
+   ],
+   "clearances": [
+    {
+     "k_number": "K231207",
+     "decision_date": "2023-09-07",
+     "pathway": "510(k)",
+     "product_code": "DQK",
+     "predicates": [
+      "K223733"
+     ],
+     "changes_summary": "CARTO 3 V8.0 vs V7.4 (K223733): adds Multipolar Mapping, Auto Pattern Acquisition, Complex Signals Identification (locked ML algorithm), CARTOSOUND FAM (deep-learning automatic 3D LA segmentation/reconstruction from gated 2D ICE frames), LAT Velocity Vectors, catheter support (QDOT Micro improvements, OPTRELL, LASSOSTAR NAV), and legacy modifications (Compensated VISITAG stability, Late Annotation Mapping, CONFIDENSE SmartMap). Hardware unchanged; indications unchanged.",
+     "notable_flags": [
+      "deep learning",
+      "locked machine-learning algorithm",
+      "real-world evidence (REAL AF Registry sub-study, zero/low fluoroscopy)",
+      "animal testing",
+      "summative usability",
+      "Traditional 510(k)"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K231207.pdf"
+    },
+    {
+     "k_number": "K252302",
+     "decision_date": "2025-08-22",
+     "pathway": "510(k)",
+     "product_code": "DQK",
+     "predicates": [
+      "K231207"
+     ],
+     "changes_summary": "CARTO 3 V8.1 vs V8.0: adds FARAWAVE catheter visualization with Tissue Proximity Indication, VARIPULSE catheter / TRUPULSE generator PFA support, and SOUNDSTAR Crystal ultrasound catheter support ('compatible with the legacy CARTO 3 CARTOSOUND SW and CARTOSOUND FAM LA Modules'); minor enhancements to legacy features including CARTOSOUND 4D and CARTOSOUND FAM LA. Retrospective validation on historic EP procedure data and animal testing.",
+     "notable_flags": [
+      "Special 510(k)",
+      "carries CARTOSOUND FAM LA forward",
+      "retrospective validation",
+      "animal testing"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K252302.pdf"
+    },
+    {
+     "k_number": "K252972",
+     "decision_date": "2026-02-20",
+     "pathway": "510(k) with PCCP",
+     "product_code": "DQK",
+     "predicates": [
+      "K252302"
+     ],
+     "changes_summary": "CARTO 3 V8.4 vs V8.1: 'The legacy CARTOSOUND FAM Module is not supported in CARTO 3 EP Navigation System V8.4., as its functionality has been replaced with CARTOSOUND REVEAL.' Adds CARTOSOUND REVEAL (locked AI for automatic identification of cardiac structures on ICE images, automatic 2D contours and automatic 3D shell creation for LA and LV; supports SOUNDSTAR family and NUVISION NAV catheters) and LA FAM Module (locked AI 3D LA shell when mapping with VARIPULSE). PCCP covers additional retraining datasets, AI model optimizations, additional anatomical structures in REVEAL, additional LA FAM input devices, map coloring, and external-device information display.",
+     "notable_flags": [
+      "PCCP",
+      "locked AI algorithms",
+      "successor to CARTOSOUND FAM",
+      "retrospective validation",
+      "animal testing",
+      "post-market monitoring of user feedback"
+     ],
+     "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K252972.pdf"
+    }
+   ],
+   "performance_claims": [
+    {
+     "k_number": "K231207",
+     "endpoint": "CARTOSOUND FAM LA reconstruction vs cardiac CT (Di Biase 2023, Europace)",
+     "metric": "calculation time; correlation of ostial diameters / carina-to-carina distance",
+     "value": "mean LA reconstruction 65 s; ostial diameters and carina-to-carina distance comparable to CT (no significant difference), r = 0.52-0.75 except RIPV r = 0.20",
+     "comparator": "Cardiac computed tomography; three independent electrophysiologists' qualitative rating",
+     "n_studies": null,
+     "n_patients": 28,
+     "n_sites": null,
+     "dataset_description": "28 patients undergoing AF ablation; 3D shells of LA body, LAA and four PVs generated by the DL algorithm from ICE frames gated to end-expiration and max LA volume",
+     "subgroup_notes": null,
+     "quote": "Average calculation time for LA reconstruction was 65 s. Mean ostial diameters and carina-to-carina distance were all comparable to CT without statistical significance. Ostial diameters and carina-to-carina distance also showed moderate to high correlation (r = 0.52-0.75) except for RIPV (r = 0.20).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K231207",
+     "endpoint": "AI-assisted ICE mapping (CARTOSOUND FAM) vs conventional EAM during pulsed field ablation (Dello Russo 2025, J Clin Med)",
+     "metric": "median LA mapping time; LA dwell time; fluoroscopy time; feasibility",
+     "value": "feasible in all cases; LA mapping time 5 vs 8 min (p<0.001); LA dwell time 33.5 vs 38.5 min (p=0.001); fluoroscopy 7.5 vs 14 min (p<0.001); no major adverse events",
+     "comparator": "Conventional electroanatomical mapping (non-ICE-guided cohort, propensity-matched)",
+     "n_studies": null,
+     "n_patients": 157,
+     "n_sites": null,
+     "dataset_description": "Retrospective multicenter study; 157 consecutive PFA patients (64 ICE-guided, 93 non-ICE-guided), paroxysmal or persistent AF",
+     "subgroup_notes": null,
+     "quote": "AI-assisted ICE mapping was feasible in all cases. Compared with conventional mapping, it significantly reduced LA (left atrium) mapping time (median 5 vs. 8 min; p < 0.001), LA dwell time (33.5 vs. 38.5 min; p = 0.001), and fluoroscopy time (7.5 vs. 14 min; p < 0.001).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K231207",
+     "endpoint": "AI FAM vs standard-of-care EAM in RF AF ablation, 1-year outcomes (Zou 2026, Europace)",
+     "metric": "procedure time; LA dwell time; acute success; freedom from AF at 1 year",
+     "value": "procedure time 122.5 +/- 23.5 vs 129.0 +/- 30.4 min (P=0.040); LA dwell 78.3 +/- 21.45 vs 87.5 +/- 28.2 min (P=0.001); acute success 98.3% vs 98.9%; complications 1 vs 4; 1-year freedom from AF 80.0% vs 81.4% (P=0.610)",
+     "comparator": "Standard-of-care electroanatomical mapping (historical control, 2021-2022)",
+     "n_studies": null,
+     "n_patients": 298,
+     "n_sites": null,
+     "dataset_description": "298 RF AF ablation patients Jan 2021-Dec 2023; 115 AI FAM (2023) vs 183 standard-of-care EAM (before Jan 2023); site count not stated in abstract",
+     "subgroup_notes": null,
+     "quote": "AI FAM reduced mean total procedure time (122.5 +/- 23.5 vs. 129.0 +/- 30.4 min, P = 0.040) and left atrial (LA) dwell time (78.3 +/- 21.45 vs. 87.5 +/- 28.2 min, P = 0.001). Acute procedural success was 98.3% in AI FAM vs. 98.9% in EAM with fewer complications observed in the AI FAM group (1 vs. 4). At 1 year, freedom from AF recurrence was comparable (80.0% AI FAM vs. 81.4% EAM at 1 year, LogRank P = 0.610).",
+     "page": null,
+     "verification": "peer_reviewed"
+    },
+    {
+     "k_number": "K231207",
+     "endpoint": "AIFAM-guided no-pre-mapping PFA with variable loop circular catheter (Zou 2026, Europace)",
+     "metric": "acute procedural success; complications; arrhythmia-free survival at 270 days",
+     "value": "acute success 100%; one vascular complication (0.5%); freedom from arrhythmia after 60-day blanking 77.7% (paroxysmal) and 71.8% (non-paroxysmal) at 270 days",
+     "comparator": null,
+     "n_studies": null,
+     "n_patients": 210,
+     "n_sites": null,
+     "dataset_description": "210 of 412 VLCC PFA patients who underwent AIFAM-guided ablation without pre-map; 184 with at least one follow-up; site count not stated in abstract",
+     "subgroup_notes": "52% paroxysmal, 48% non-paroxysmal; 36% concomitant LAAO",
+     "quote": "Acute procedural success was achieved in 100% of cases. One acute non-catheter related vascular complication (0.5%) and no late complications were documented. Among 184 patients with at least one follow-up, freedom from arrhythmia survival after 60-day blanking was 77.7% in paroxysmal AF and 71.8% in non-paroxysmal AF at 270 days.",
+     "page": null,
+     "verification": "peer_reviewed"
+    }
+   ],
+   "training_data": {
+    "disclosed": false,
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "K231207 (p.7): 'The CARTOSOUND FAM Module incorporates a Deep Learning (DL) algorithm. Data for training and validation of the DL algorithm was collected from diverse locations and populations, using a variety of ultrasound system settings, scanners, and Catheters.' No counts. K252972 (p.8) for CARTOSOUND REVEAL: training/validation data 'collected from a representative range of LA and LV chamber volumes and geographical locations, using a variety of ultrasound system settings, ULS scanners, and catheters'; anatomical labeling/contouring algorithms developed and tested on CARTO 3 cases with ultrasound information; 3D shell model developed and tested using CT and CARTO 3 FAM cases. No counts.",
+    "source": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K231207.txt p.7; /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K252972.txt p.8",
+    "verification": "fda_summary"
+   },
+   "validation_data": {
+    "n_studies": null,
+    "n_patients": null,
+    "n_sites": null,
+    "description": "K231207 (p.10): 'Retrospective Validation Tests - Testing was performed to validate the clinical functionality and quality of new introduced modules. Testing was performed retrospectively, on clinical recorded data from historic EP procedures performed with the CARTO 3 System.' Similar language in K252302 (p.9) and K252972 (p.9). No sample sizes, sites, or accuracy metrics disclosed; separation of validation data from training data not stated. K231207 (p.7) says only that 'Data for training and validation of the DL algorithm was collected from diverse locations and populations'.",
+    "independent_of_training": null,
+    "source": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K231207.txt p.10; /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K252302.txt p.9; /tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K252972.txt p.9",
+    "verification": "fda_summary"
+   },
+   "prior_validations": [
+    {
+     "description": "J&J press release 8 May 2024 (CARTO 3 Version 8 launch; verified in this session): CARTOSOUND FAM is 'the first use of an artificial intelligence algorithm, cleared by the FDA in intracardiac ultrasound for Biosense Webster'; 'automated 3D shell creation using deep-learning technology'; 'enables automatic generation of the left atrial anatomy before inserting the catheter to the left atrium'.",
+     "source_url": "https://www.jnj.com/media-center/press-releases/biosense-webster-launches-new-version-of-carto-3-electro-anatomical-mapping-system",
+     "verification": "news"
+    },
+    {
+     "description": "K231207 (p.11) clinical testing: Real-World Evidence study (REAL AF Registry Sub-Study) of paroxysmal AF ablation with a zero/low fluoroscopy workflow; 'The primary safety and secondary acute effectiveness endpoints were met'; not specific to CARTOSOUND FAM and no numbers given.",
+     "source_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K231207.pdf",
+     "verification": "fda_summary"
+    }
+   ],
+   "papers": [
+    {
+     "title": "Feasibility of three-dimensional artificial intelligence algorithm integration with intracardiac echocardiography for left atrial imaging during atrial fibrillation catheter ablation",
+     "first_author": "Di Biase L",
+     "journal": "Europace",
+     "year": 2023,
+     "doi": "10.1093/europace/euad211",
+     "pmid": "37477946",
+     "url": "https://doi.org/10.1093/europace/euad211",
+     "relation": "pivotal-validation",
+     "n_subjects": 28,
+     "key_result": "CARTOSOUND FAM DL reconstruction of LA in 65 s; ostial diameters and carina-to-carina distance comparable to CT (r=0.52-0.75, RIPV r=0.20); good qualitative agreement across three electrophysiologists.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "AI-Assisted 3D Intracardiac Echocardiography for Pulsed Field Ablation of Atrial Fibrillation Using a Novel Variable Loop Circular Catheter: A Multicenter Evaluation",
+     "first_author": "Dello Russo A",
+     "journal": "J Clin Med",
+     "year": 2025,
+     "doi": "10.3390/jcm14207249",
+     "pmid": "41156118",
+     "url": "https://doi.org/10.3390/jcm14207249",
+     "relation": "real-world",
+     "n_subjects": 157,
+     "key_result": "Retrospective multicenter; AI-assisted ICE mapping feasible in all cases; reduced LA mapping time (5 vs 8 min), LA dwell (33.5 vs 38.5 min) and fluoroscopy time (7.5 vs 14 min) vs conventional mapping; no major adverse events.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Atrial fibrillation ablation using three-dimensional artificial intelligence module integration with intracardiac echocardiography",
+     "first_author": "Zou F",
+     "journal": "Europace",
+     "year": 2026,
+     "doi": "10.1093/europace/euag009",
+     "pmid": "41546622",
+     "url": "https://doi.org/10.1093/europace/euag009",
+     "relation": "real-world",
+     "n_subjects": 298,
+     "key_result": "AI FAM (n=115) vs EAM (n=183): shorter procedure time (122.5 vs 129.0 min) and LA dwell (78.3 vs 87.5 min); acute success 98.3% vs 98.9%; 1-year freedom from AF 80.0% vs 81.4%.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "AI-ICE Guided Pulsed Field Ablation of Atrial Fibrillation with Variable Loop Circular Catheter",
+     "first_author": "Zou F",
+     "journal": "Europace",
+     "year": 2026,
+     "doi": "10.1093/europace/euag212",
+     "pmid": "42644411",
+     "url": "https://doi.org/10.1093/europace/euag212",
+     "relation": "real-world",
+     "n_subjects": 210,
+     "key_result": "No-pre-map AIFAM-guided PFA: acute success 100%, 0.5% vascular complication, arrhythmia freedom 77.7% (paroxysmal) / 71.8% (non-paroxysmal) at 270 days.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "How to Use a Variable Loop Circular Catheter to Perform Zero Fluoro Pulmonary Vein Isolation With Pulsed Field Ablation",
+     "first_author": "Chan WK",
+     "journal": "Pacing Clin Electrophysiol",
+     "year": 2026,
+     "doi": "10.1111/pace.70244",
+     "pmid": "41950105",
+     "url": "https://doi.org/10.1111/pace.70244",
+     "relation": "other",
+     "n_subjects": 34,
+     "key_result": "Single-center how-to series: 34 consecutive AF patients mapped with CARTOSOUND FAM and ablated with the VLCC without fluoroscopy; median procedure time 40.5 min (IQR 19); no major acute or 30-day complications. Workflow description, not a FAM accuracy study.",
+     "verification": "doi_resolved"
+    },
+    {
+     "title": "Clinical Utility of Tissue Proximity Indication With a Variable-Loop Circular Catheter for Pulmonary Vein Isolation",
+     "first_author": "Narita M",
+     "journal": "J Cardiovasc Electrophysiol",
+     "year": 2026,
+     "doi": "10.1111/jce.70376",
+     "pmid": "42378433",
+     "url": "https://doi.org/10.1111/jce.70376",
+     "relation": "other",
+     "n_subjects": 60,
+     "key_result": "60 consecutive PFA patients; 3D geometry created with CARTOSOUND FAM before ablation; first-pass isolation in 90% of patients and 97.1% of PVs with TPI-guided PFA. CARTOSOUND FAM is the mapping tool, not the study subject.",
+     "verification": "doi_resolved"
+    }
+   ],
+   "clinical_trials": [
+    {
+     "nct_id": "NCT04600245",
+     "title": "Evaluation of CARTOSOUND FAM Software for Accurate Three Dimensional Reconstruction of the Left Atrium in Patients Referred for Atrial Fibrillation Ablation",
+     "status": "UNKNOWN (last known status RECRUITING; status verified 2020-10; last update posted 2020-10-23; estimated enrollment 60; sponsor Tel-Aviv Sourasky Medical Center; no results posted) - confirmed via ClinicalTrials.gov API in this session",
+     "url": "https://clinicaltrials.gov/study/NCT04600245"
+    }
+   ],
+   "open_questions": [
+    "K254085 (CARTO 3 V9.0 with PIU Plus, decided 2026-01-18, Special 510(k), predicate K252302) is EXCLUDED from clearances: its summary describes only the improved Patient Interface Unit (PIU Plus) and supporting software; it never mentions CARTOSOUND FAM, CARTOSOUND REVEAL, deep learning or AI. Because its predicate (V8.1) carried CARTOSOUND FAM LA, the module presumably persists in V9.0, but the summary does not say so.",
+    "K252972 (V8.4) is INCLUDED on the basis that its summary explicitly carries the AI ICE segmentation forward under a new name ('The legacy CARTOSOUND FAM Module is not supported ... as its functionality has been replaced with CARTOSOUND REVEAL'); if the registry intends strict module-name continuity, this clearance should instead be filed as the successor product 'CARTOSOUND REVEAL' with a PCCP.",
+    "Chronology note: K252972 (received 2025-09-17, decided 2026-02-20) was decided after K254085 (received 2025-12-18, decided 2026-01-18); both cite K252302 as predicate.",
+    "No FDA summary in this lineage gives any quantitative accuracy metric for CARTOSOUND FAM or CARTOSOUND REVEAL (e.g., segmentation Dice, volume error vs CT); performance is described only as 'met the acceptance criteria'.",
+    "Training and validation dataset sizes, number of sites/countries, catheter types and patient characteristics for the FAM and REVEAL deep-learning models are not disclosed; whether validation data were independent of training is not stated.",
+    "K231207 lists both a Complex Signals Identification ML algorithm and CARTOSOUND FAM; only FAM is ultrasound-based and is the subject of this family entry.",
+    "The J&J press release (May 2024) footnote i states '91% of cases (n=27) the new algorithm identified critical isthmuses that may have result in successful ablation of all inducible atrial arrhythmias'; this refers to signal/isthmus identification (CARTO ELEVATE features), not CARTOSOUND FAM, and is not recorded as a FAM performance claim.",
+    "Chan WK 2026 (PACE, PMID 41950105) and Narita M 2026 (J Cardiovasc Electrophysiol, PMID 42378433) were reviewed in this verification pass and added as 'other' papers: both use CARTOSOUND FAM for pre-ablation LA geometry but report no FAM accuracy metrics. Antolic 2021 (PACE, PMID 34245035) matched a 'CARTOSOUND FAM' search but describes ICE/EAM contour integration from 2017-2020, predating the deep-learning FAM module (V8.0), and was not added.",
+    "NCT04600245 (Tel Aviv) has not been updated since October 2020; no results posted and no linked publication identified.",
+    "The J&J MedTech CARTO 3 software product page (product_url) returned HTTP 403 in this session, so the claim that it describes CARTOSOUND FAM as using 'Deep Learning, which is a subset of AI' could not be re-verified; no public product page for CARTOSOUND REVEAL (V8.4) was found."
+   ],
+   "sources": [
+    {
+     "fact": "K231207 decision 2023-09-07, K252302 2025-08-22 (Special), K252972 2026-02-20 (Traditional), K254085 2026-01-18 (Special); product code DQK; applicant Biosense Webster, Inc.",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/openfda_records.json",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "CARTO 3 V8.0 modifications incl. CARTOSOUND FAM DL module, training/validation data statement, retrospective validation, REAL AF registry sub-study",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K231207.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "V8.1: SOUNDSTAR Crystal compatible with legacy CARTOSOUND SW and CARTOSOUND FAM LA modules; minor enhancement to CARTOSOUND FAM LA",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K252302.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "V8.4: legacy CARTOSOUND FAM not supported, replaced by CARTOSOUND REVEAL (locked AI); LA FAM module; PCCP contents",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K252972.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "V9.0 with PIU Plus: hardware PIU change only; no mention of CARTOSOUND FAM or AI",
+     "url_or_file": "/tmp/claude-0/-home-user-ASERegistryExample/90389ae4-4b72-5b0c-b942-f3b316841bea/scratchpad/probe/txt/K254085.txt",
+     "verification": "fda_summary"
+    },
+    {
+     "fact": "CARTO 3 Version 8 launch, CARTOSOUND FAM described as deep learning, first FDA-cleared AI in intracardiac ultrasound for Biosense Webster",
+     "url_or_file": "https://www.jnj.com/media-center/press-releases/biosense-webster-launches-new-version-of-carto-3-electro-anatomical-mapping-system",
+     "verification": "news"
+    },
+    {
+     "fact": "CARTO 3 software product page reportedly lists CARTOSOUND FAM Module ('uses Deep Learning, which is a subset of AI'); page returned HTTP 403 in this verification session, so unverified",
+     "url_or_file": "https://www.jnjmedtech.com/en-US/products/cardiovascular/carto/software/",
+     "verification": "unverified"
+    },
+    {
+     "fact": "NCT04600245 design, status and enrollment",
+     "url_or_file": "https://clinicaltrials.gov/api/v2/studies/NCT04600245",
+     "verification": "fda_database"
+    },
+    {
+     "fact": "Paper metadata/abstracts (PMIDs 37477946, 41156118, 41546622, 42644411, 41950105, 42378433) via PubMed efetch; all DOIs resolved via Crossref in this verification pass",
+     "url_or_file": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+     "verification": "peer_reviewed"
+    }
+   ]
+  }
+ ],
+ "notes": "All six FDA summary text files were read in full. Philips: both clearances included; only K191647 carries quantitative metrics (RMSE vs predicate 4D RV), K200974 has none. Biosense: K231207 (introduces CARTOSOUND FAM) and K252302 (explicitly carries CARTOSOUND FAM LA forward) included; K252972 included because its summary explicitly replaces the legacy FAM module with the successor locked-AI CARTOSOUND REVEAL ICE-segmentation module under a PCCP (flagged in open_questions as a judgment call); K254085 excluded because its summary (PIU Plus hardware change) never mentions CARTOSOUND FAM or AI. No FDA summary in either family discloses training-set sizes. All DOIs marked doi_resolved were confirmed via Crossref in this session; pmid_resolved entries were confirmed via PubMed efetch. Dates match openFDA exactly. VERIFICATION PASS (2026-09-05): all six FDA text files re-read; every FDA quote located on the cited page; all decision dates/product codes match openFDA; all 12 original DOIs plus 3 added DOIs resolved via Crossref; all PMIDs fetched via efetch and abstracts compared to draft values. Philips white paper PDF and both press releases retrieved and quotes confirmed. J&J MedTech product page returned 403 (downgraded to unverified). Removed '3D TEE' from Philips modality_scope (not supported by any source). Added Ahmad 2021 details (n=170) and a performance claim, Rakha 2023, Chan 2026 and Narita 2026 papers. Flagged that Ahmad 2021 and Liu 2025 abstracts do not name the vendor, and that the FDA summary's '<15% difference from CMR' characterisation of the JASE study does not obviously match Genovese 2019's reported EDV bias."
+}

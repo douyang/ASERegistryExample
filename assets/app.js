@@ -27,7 +27,7 @@
   const state = {
     tab: 'products', view: 'cards', q: '', sort: 'latest', sel: {}, regSel: null, openFacet: null, opener: null,
     qcMetrics: new Set(((R.quality || {}).metrics || []).map((m) => m.id)), qcSites: new Set(((R.quality || {}).sites || []).map((s) => s.id)),
-    qcInterval: 'quarter', qcFrom: null, qcTo: null, qcBench: 'target', qcND: false, qcSel: null,
+    qcInterval: 'quarter', qcFrom: null, qcTo: null, qcBench: 'target', qcND: false, qcSel: null, regExtract: 'all',
   };
   const FILTERS = [
     { key: 'category', label: 'Function', get: (f) => [f.research_pending ? 'pending' : f.category], name: (v) => (v === 'pending' ? 'Research pending' : CAT[v] || v) },
@@ -297,46 +297,61 @@
     const out = []; for (let t = Math.ceil(min / step) * step; t <= max + 1e-9; t += step) out.push(Number(t.toFixed(6)));
     return out;
   }
-  function sparkline(series, o) {
-    const W = Math.min(460, chartWidth(false)), H = 96, l = 8, r = 12, t = 14, b = 20;
-    const pts = series.filter((p) => p.v != null); if (pts.length < 2) return '';
-    const vs = pts.map((p) => p.v); let mn = Math.min(...vs), mx = Math.max(...vs); if (mn === mx) { mn -= 1; mx += 1; }
-    const pad = (mx - mn) * 0.15; mn -= pad; mx += pad;
-    const x = (i) => l + (i / (pts.length - 1)) * (W - l - r), y = (v) => t + (1 - (v - mn) / (mx - mn)) * (H - t - b);
-    const d = pts.map((p, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(p.v).toFixed(1)}`).join(' ');
-    const last = pts[pts.length - 1];
-    return `<svg class="spark" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(o.aria)}"><g class="grid"><line x1="${l}" x2="${W - r}" y1="${H - b}" y2="${H - b}"/></g><path class="spark-area" d="${d} L${x(pts.length - 1).toFixed(1)},${H - b} L${l},${H - b} Z"/><path class="spark-line" d="${d}"/><circle class="spark-end" cx="${x(pts.length - 1)}" cy="${y(last.v)}" r="4"/><text x="${l}" y="${H - 5}">${esc(pts[0].m)}</text><text x="${W - r}" y="${H - 5}" text-anchor="end">${esc(last.m)}</text><text class="lab" x="${x(pts.length - 1) - 8}" y="${y(last.v) - 8}" text-anchor="end">${last.v}${o.unit ? ' ' + esc(o.unit) : ''}</text></svg>`;
-  }
 
   function renderRegistry() {
     if (!PLACEHOLDER) { const b = $('.placeholder-banner'); if (b) b.hidden = true; for (const t of $$('.placeholder-tag')) t.remove(); }
     const kp = $('#reg-kpis');
-    const nStudies = sims.reduce((n, e) => n + e.cohort.n_studies, 0);
-    const sites = new Set(sims.flatMap((e) => e.cohort.sites)).size;
+    // Scores from different frozen extracts are not directly comparable, so the reader can pin the
+    // charts to a single extract instead of only being warned that they are pooled.
+    const shown = state.regExtract === 'all' ? sims : sims.filter((e) => (e.dataset || {}).id === state.regExtract);
+    const nStudies = shown.reduce((n, e) => n + e.cohort.n_studies, 0);
+    const sites = new Set(shown.flatMap((e) => e.cohort.sites)).size;
+    const usedExtracts = [...new Set(shown.map((e) => (e.dataset || {}).label).filter(Boolean))];
+    const nExtracts = usedExtracts.length;
+    const lastRun = shown.map((e) => (e.analysis || {}).run_date).filter(Boolean).sort().pop();
     kp.innerHTML = [
-      [sims.length, `of ${R.n_catalog_products || sims.length} products scored`], [fmtN(nStudies), 'TTEs simulated'], [sites, 'registry sites'], [sims.length ? sims[0].cohort.period : '—', 'evaluation window'],
+      [shown.length, `of ${R.n_catalog_products || sims.length} AI products scored`], [fmtN(nStudies), 'TTEs simulated'], [sites, 'registry sites'],
+      [nExtracts ? `${nExtracts} extract${nExtracts > 1 ? 's' : ''}` : '—', lastRun ? `latest analysis ${lastRun}` : 'registry extracts used'],
     ].map(([v, l]) => `<div class="kpi"><div class="v">${esc(v)}</div><div class="l">${esc(l)}${ptag()}</div></div>`).join('');
 
     const fam = (id) => byId.get(id) || { product_name: id, company: '' };
-    const mk = (type, epId) => sims.filter((e) => type.includes(e.evaluation_type)).map((e) => { const ep = e.endpoints.find((x) => x.id === epId); return ep ? { id: e.id, label: e.label, company: '', value: ep.value, low: ep.ci.low, high: ep.ci.high, n: e.cohort.n_studies } : null; }).filter(Boolean);
+    const mk = (type, epId) => shown.filter((e) => type.includes(e.evaluation_type)).map((e) => { const ep = e.endpoints.find((x) => x.id === epId); return ep ? { id: e.id, label: e.label, company: '', value: ep.value, low: ep.ci.low, high: ep.ci.high, n: e.cohort.n_studies } : null; }).filter(Boolean);
     // Charts show the leading TOP_N only; the subtitle always states how many were left out.
     const cap = (rows) => rows.slice(0, TOP_N);
     const capNote = (rows) => (rows.length > TOP_N ? ` Top ${TOP_N} of ${rows.length}.` : '');
+    // Products are scored against different frozen extracts, so a chart that ranks them across extracts
+    // has to say so rather than implying one common denominator.
+    const mixNote = nExtracts > 1 ? ` Pooled across ${nExtracts} registry extracts (${esc(usedExtracts.sort().join(', '))}); open a product for the one it used.` : '';
     const lv = mk(['lvef', 'comprehensive'], 'lvef_mae').sort((a, b) => a.value - b.value);
     const det = mk(['detection', 'hfpef', 'amyloid'], 'auc').sort((a, b) => b.value - a.value);
     const acq = mk(['acquisition'], 'diag_quality').sort((a, b) => b.value - a.value);
     const strain = mk(['strain'], 'gls_icc').sort((a, b) => b.value - a.value);
     const qual = mk(['quality'], 'kappa').sort((a, b) => b.value - a.value);
     $('#reg-charts').innerHTML = `
-      <section class="chart-block wide"><h2>LVEF agreement with the registry report</h2><p class="chart-sub">Mean absolute error vs reported LVEF, in EF points. Lower is better. Dot = estimate, bar = 95% CI.${capNote(lv)}</p>${dotRangeChart(cap(lv), { unit: '', decimals: 1, wide: true, aria: 'LVEF mean absolute error by product', domain: [0, Math.max(10, ...cap(lv).map((r) => r.high)) * 1.05] })}</section>
-      <section class="chart-block"><h2>Detection: area under the ROC curve</h2><p class="chart-sub">Severe aortic stenosis, HFpEF, or cardiac amyloidosis vs the registry reference, higher is better.${capNote(det)}</p>${dotRangeChart(cap(det), { unit: '', decimals: 2, aria: 'AUC by product', domain: [0.5, 1], refLine: 0.5 })}</section>
-      <section class="chart-block"><h2>Acquisition guidance: diagnostic-quality studies</h2><p class="chart-sub">Share of guided acquisitions graded diagnostic by the reading physician.${capNote(acq)}</p>${dotRangeChart(cap(acq), { unit: '%', decimals: 1, aria: 'Diagnostic quality by product', domain: [50, 100] })}</section>
+      <section class="chart-block wide"><h2>LVEF agreement with the registry report</h2><p class="chart-sub">Mean absolute error vs reported LVEF, in EF points. Lower is better. Dot = estimate, bar = 95% CI.${capNote(lv)}${mixNote}</p>${dotRangeChart(cap(lv), { unit: '', decimals: 1, wide: true, aria: 'LVEF mean absolute error by product', domain: [0, Math.max(10, ...cap(lv).map((r) => r.high)) * 1.05] })}</section>
+      <section class="chart-block"><h2>Detection: area under the ROC curve</h2><p class="chart-sub">Severe aortic stenosis, HFpEF, or cardiac amyloidosis vs the registry reference, higher is better.${capNote(det)}${mixNote}</p>${dotRangeChart(cap(det), { unit: '', decimals: 2, aria: 'AUC by product', domain: [0.5, 1], refLine: 0.5 })}</section>
+      <section class="chart-block"><h2>Acquisition guidance: diagnostic-quality studies</h2><p class="chart-sub">Share of guided acquisitions graded diagnostic by the reading physician.${capNote(acq)}${mixNote}</p>${dotRangeChart(cap(acq), { unit: '%', decimals: 1, aria: 'Diagnostic quality by product', domain: [50, 100] })}</section>
       ${strain.length ? `<section class="chart-block"><h2>Strain: ICC vs reported GLS</h2><p class="chart-sub">Where the registry report contains GLS.${capNote(strain)}</p>${dotRangeChart(cap(strain), { unit: '', decimals: 2, aria: 'GLS ICC by product', domain: [0.5, 1] })}</section>` : ''}
       ${qual.length ? `<section class="chart-block"><h2>Image quality: agreement with the sonographer grade</h2><p class="chart-sub">Cohen’s κ vs the registry image-quality field, higher is better.${capNote(qual)}</p>${dotRangeChart(cap(qual), { unit: '', decimals: 2, aria: 'Image-quality kappa by product', domain: [0, 1] })}</section>` : ''}`;
 
+    const ex = $('#reg-extract');
+    if (ex) {
+      const counts = new Map();
+      for (const e of sims) { const d = e.dataset || {}; if (d.id) counts.set(d.id, (counts.get(d.id) || 0) + 1); }
+      const list = (R.extracts || []).filter((x) => counts.has(x.id));
+      ex.innerHTML = `<option value="all">All extracts (${sims.length} products)</option>` +
+        list.map((x) => `<option value="${esc(x.id)}">${esc(x.label)} · ${counts.get(x.id)} products</option>`).join('');
+      if (state.regExtract !== 'all' && !counts.has(state.regExtract)) state.regExtract = 'all';
+      ex.value = state.regExtract;
+      const cur = list.find((x) => x.id === state.regExtract);
+      $('#reg-extract-note').textContent = cur
+        ? `Extract taken ${cur.extract_date} · studies ${cur.study_period} · ${fmtN(cur.n_registry_studies)} studies in the extract`
+        : 'Charts pool products scored against different extracts. Pick one extract to compare like for like.';
+    }
+
     const sel = $('#reg-select');
-    sel.innerHTML = sims.map((e) => `<option value="${esc(e.id)}">${esc(e.label)}</option>`).join('');
-    if (!state.regSel || !sims.some((e) => e.id === state.regSel)) state.regSel = lv.length ? lv[0].id : (sims[0] ? sims[0].id : null);
+    sel.innerHTML = shown.map((e) => `<option value="${esc(e.id)}">${esc(e.label)}</option>`).join('');
+    if (!state.regSel || !shown.some((e) => e.id === state.regSel)) state.regSel = lv.length ? lv[0].id : (shown[0] ? shown[0].id : null);
     if (state.regSel) sel.value = state.regSel;
     renderRegDetail();
     $('#reg-facts').innerHTML = (R.registry.facts || []).map((f) => `<div class="fact"><b class="num">${esc(f.value)}</b>${esc(f.label)}<br><a href="${esc(f.source)}" rel="noopener">source</a></div>`).join('');
@@ -355,17 +370,30 @@
     if (!e) { host.innerHTML = ''; return; }
 
     const primary = e.endpoints.find((x) => x.id === e.primary_endpoint_id);
+    // Which dataset, and when. An evaluation is one analysis of a frozen extract, so the extract and the
+    // run date are part of the result, not metadata to bury.
+    const D = e.dataset || {}, A = e.analysis || {};
+    const ds = `<h3>Dataset and analysis</h3>
+      <dl class="kv prov">
+        <dt>Dataset</dt><dd>${esc(D.label || '—')}</dd>
+        <dt>Extract taken</dt><dd class="num">${esc(D.extract_date || '—')}</dd>
+        <dt>Study dates</dt><dd class="num">${esc(D.study_period || '—')}</dd>
+        <dt>Analysis</dt><dd>${esc(A.type || '—')}${A.protocol_version ? ` · protocol ${esc(A.protocol_version)}` : ''}</dd>
+        <dt>Analysis run</dt><dd class="num">${esc(A.run_date || '—')}</dd>
+        <dt>Scored cohort</dt><dd class="num">${fmtN(e.cohort.n_studies)} of ${fmtN(D.n_registry_studies)} studies in the extract · ${e.cohort.n_sites} sites</dd>
+        <dt>Inclusion</dt><dd class="notice">${esc(D.inclusion || '—')}</dd>
+      </dl>
+      <p class="notice">${esc(A.note || '')}</p>`;
     const dims = [...new Set(e.subgroups.map((s) => s.dimension))];
     const vals = e.subgroups.map((s) => s.value); const mn = Math.min(...vals), mx = Math.max(...vals);
     host.innerHTML = `
       <div class="reg-detail-grid">
         <div class="chart-block"><h3>${esc(e.label)} <span class="notice">${esc(EVAL_LABEL[e.evaluation_type] || e.evaluation_type)}</span></h3>
-          <dl class="kv"><dt>Module</dt><dd>${esc(e.cohort.module)}</dd><dt>Cohort</dt><dd class="num">${fmtN(e.cohort.n_studies)} TTEs · ${e.cohort.n_sites} sites · ${esc(e.cohort.period)}</dd><dt>Vendors</dt><dd>${e.cohort.vendors.map(esc).join(', ')}</dd></dl>
+          <dl class="kv"><dt>Module</dt><dd>${esc(e.cohort.module)}</dd><dt>Cohort</dt><dd class="num">${fmtN(e.cohort.n_studies)} TTEs · ${e.cohort.n_sites} sites</dd><dt>Dataset</dt><dd>${esc((e.dataset || {}).label || '—')}</dd><dt>Vendors</dt><dd>${e.cohort.vendors.map(esc).join(', ')}</dd></dl>
           <div class="table-wrap"><table class="endpoints"><thead><tr><th>Endpoint</th><th>Estimate (95% CI)</th><th>Reference</th></tr></thead><tbody>${e.endpoints.map((ep) => `<tr><td>${esc(ep.label)}${ep.primary ? ' <span class="chip on">primary</span>' : ''}</td><td class="num"><b>${ep.value}${ep.unit ? ' ' + esc(ep.unit) : ''}</b> <span class="notice">(${ep.ci.low} to ${ep.ci.high})</span></td><td class="notice">${esc(ep.reference)}</td></tr>`).join('')}</tbody></table></div>
         </div>
         <div class="chart-block">
-          ${primary ? `<h3>${esc(primary.label)} by month</h3><p class="chart-sub">${esc(primary.direction === 'lower' ? 'Lower is better.' : primary.direction === 'zero' ? 'Closer to zero is better.' : 'Higher is better.')}</p>${sparkline(e.monthly.map((m) => ({ m: m.month, v: m.primary })), { unit: primary.unit, aria: primary.label + ' by month' })}` : ''}
-          <h3>Feasibility by month</h3>${sparkline(e.monthly.map((m) => ({ m: m.month, v: m.feasibility })), { unit: '%', aria: 'Feasibility by month' })}
+          ${ds}
           ${primary && e.subgroups.length ? `<h3>${esc(primary.label)} by subgroup</h3><p class="chart-sub">Darker = better.</p><div class="heat">${dims.map((d) => { const rows = e.subgroups.filter((s) => s.dimension === d); return `<div class="heat-row"><div class="heat-dim">${esc(d)}</div><div class="heat-cells">${rows.map((s) => { const c = heatColor(s.value, mn, mx, primary.direction); return `<div class="cell ${c.hi ? 'hi' : ''}" style="background:var(--seq-${c.step})" tabindex="0" aria-label="${esc(`${d} ${s.level}: ${s.value}${primary.unit ? ' ' + primary.unit : ''}, n = ${fmtN(s.n)}`)}" data-tip="${esc(`<b>${esc(d)}: ${esc(s.level)}</b>${s.value}${primary.unit ? ' ' + esc(primary.unit) : ''} · n = ${fmtN(s.n)}`)}"><span class="lv">${esc(s.level)}</span><b>${s.value}</b></div>`; }).join('')}</div></div>`; }).join('')}</div>` : ''}
         </div>
       </div>`;
@@ -385,11 +413,28 @@
   // Recompute the band whenever the benchmark source changes, using the same thresholds the
   // generator uses, so switching between target and median re-colours the whole page consistently.
   function qcBand(value, m) {
-    const b = qcBenchmark(m); if (!b) return 0;
+    const b = qcBenchmark(m); if (!b || value == null) return 0;
     const rel = (value - b) / Math.abs(b), better = m.direction === 'lower' ? -rel : rel, a = Math.abs(better) * 100;
     const step = a < 1 ? 0 : a < 10 ? 1 : a < 25 ? 2 : a < 50 ? 3 : 4;
     return step === 0 ? 0 : (better > 0 ? step : -step);
   }
+  // A neutral metric has no better side. It is painted on a one-hue distance ramp so the page never
+  // implies that more AI use, or more acceptance, is an improvement.
+  const isNeutral = (m) => m.direction === 'neutral';
+  function qcDistance(value, m) {
+    const b = qcBenchmark(m); if (!b || value == null) return 0;
+    const a = Math.abs((value - b) / Math.abs(b)) * 100;
+    return a < 1 ? 0 : a < 10 ? 1 : a < 25 ? 2 : a < 50 ? 3 : 4;
+  }
+  // Neutral metrics use a hueless grey distance scale, never the diverging ramp: a far-from-reference
+  // AI tile must not look like a strongly-better quality tile. Each step carries its own ink per theme,
+  // so the class does the work rather than a shared "hi" flag.
+  function cellStyle(value, m) {
+    if (value == null) return { cls: '', style: 'background:var(--bg-2)', hi: false };
+    if (isNeutral(m)) return { cls: `nd nd${qcDistance(value, m)}`, style: '', hi: false };
+    const b = qcBand(value, m); return { cls: '', style: dvStyle(b), hi: dvHi(b) };
+  }
+  const compOf = (m) => (isNeutral(m) ? 'ref' : m.direction === 'lower' ? '\u2264' : '\u2265');
   function qcRel(value, m) { const b = qcBenchmark(m); if (!b) return 0; const rel = (value - b) / Math.abs(b); return Math.round((m.direction === 'lower' ? -rel : rel) * 1000) / 10; }
 
   const qcMetrics = () => QM.filter((m) => state.qcMetrics.has(m.id));
@@ -404,32 +449,54 @@
   function qcSeries(rows, metric) {
     const byKey = new Map();
     for (const mo of rows) {
+      // A month a site did not submit contributes nothing, rather than a zero that would divide out.
+      if (mo.value == null || !mo.d) continue;
       const key = state.qcInterval === 'month' ? mo.month : `${mo.month.slice(0, 4)}-Q${Math.ceil(Number(mo.month.slice(5, 7)) / 3)}`;
       const cur = byKey.get(key) || { key, d: 0, n: 0, sum: 0 };
       cur.d += mo.d; cur.n += mo.n || 0; cur.sum += mo.value * mo.d; byKey.set(key, cur);
     }
     const keep = new Set(qcIntervals());
-    return [...byKey.values()].filter((c) => keep.has(c.key)).map((c) => ({ key: c.key, d: c.d, n: metric.unit === '%' ? c.n : null, value: Math.round((c.sum / c.d) * 10) / 10 }));
+    return [...byKey.values()].filter((c) => keep.has(c.key) && c.d > 0).map((c) => ({ key: c.key, d: c.d, n: metric.unit === '%' ? c.n : null, value: Math.round((c.sum / c.d) * 10) / 10 }));
   }
-  const qcTotal = (cells, metric) => { const d = cells.reduce((n, c) => n + c.d, 0); if (!d) return null; return { d, n: metric.unit === '%' ? cells.reduce((n, c) => n + (c.n || 0), 0) : null, value: Math.round((cells.reduce((n, c) => n + c.value * c.d, 0) / d) * 10) / 10 }; }
+  // Pool a percentage from summed numerators, not by averaging rates, so the accepted, edited and
+  // rejected shares still close at 100% in a quarter, a period total and the registry roll-up.
+  const qcTotal = (cells, metric) => {
+    const live = (cells || []).filter((c) => c && c.value != null && c.d > 0);
+    const d = live.reduce((n, c) => n + c.d, 0); if (!d) return null;
+    const n = live.reduce((t, c) => t + (c.n || 0), 0);
+    const value = metric.unit === '%' && n ? (100 * n) / d : live.reduce((t, c) => t + c.value * c.d, 0) / d;
+    return { d, n: metric.unit === '%' ? n : null, value: Math.round(value * 10) / 10 };
+  };
   // A site's value over the selected date range only, so narrowing the range moves the numbers.
   function qcSiteValue(site, m) { const mv = site.metrics.find((x) => x.id === m.id); return qcTotal(qcSeries(mv.monthly, m), m); }
 
   function qcCell(v, m, extra, cls) {
-    if (!v) return `<td class="${cls || ''}"></td>`;
-    const b = qcBand(v.value, m), rel = qcRel(v.value, m);
+    if (!v || v.value == null) {
+      // A site that cannot export the underlying data reads as not submitted, never as zero, which
+      // would be indistinguishable from a lab that uses no AI at all.
+      const tip = `<b>${esc(extra || m.short)}</b>Not submitted. This site does not export the data this metric needs.`;
+      return `<td class="${cls || ''}"><span class="qc-cell na" tabindex="0" data-tip="${esc(tip)}" aria-label="${esc(`${extra || m.short}: not submitted`)}">n/a</span></td>`;
+    }
+    const rel = qcRel(v.value, m), c = cellStyle(v.value, m);
     const nd = state.qcND && v.d ? `<span class="nd">${v.n == null ? '' : fmtN(v.n) + ' / '}${fmtN(v.d)}</span>` : '';
-    const tip = `<b>${esc(extra || m.short)}</b>${qcVal(v.value, m.unit)} · benchmark ${qcVal(qcBenchmark(m), m.unit)} · ${rel >= 0 ? '+' : ''}${rel}%${v.d ? ` · D = ${fmtN(v.d)}` : ''}`;
-    return `<td class="${cls || ''}"><span class="qc-cell ${dvHi(b) ? 'hi' : ''}" style="${dvStyle(b)}" tabindex="0" data-tip="${esc(tip)}" aria-label="${esc(`${extra || m.short}: ${qcVal(v.value, m.unit)}, ${rel >= 0 ? '+' : ''}${rel}% vs benchmark`)}">${v.value}${nd}</span></td>`;
+    const ref = isNeutral(m) ? 'reference' : 'benchmark';
+    const pre = m.status === 'proposed' ? 'Proposed metric, not one of the registry’s nine live metrics. ' : '';
+    const tip = `<b>${esc(extra || m.short)}</b>${pre}${qcVal(v.value, m.unit)} · ${ref} ${qcVal(qcBenchmark(m), m.unit)} · ${rel >= 0 ? '+' : ''}${rel}%${v.d ? ` · D = ${fmtN(v.d)}` : ''}`;
+    return `<td class="${cls || ''}"><span class="qc-cell ${c.cls} ${c.hi ? 'hi' : ''}" style="${c.style}" tabindex="0" data-tip="${esc(tip)}" aria-label="${esc(`${extra || m.short}: ${qcVal(v.value, m.unit)}, ${rel >= 0 ? '+' : ''}${rel}% vs ${ref}`)}">${v.value}${nd}</span></td>`;
   }
-  function qcKey() {
+  function qcKey(metrics) {
     const cells = [-4, -3, -2, -1, 0, 1, 2, 3, 4].map((b) => `<span class="k"><i class="sw" style="${dvStyle(b)}"></i>${esc(b === 0 ? '0–1%' : BAND_LABEL[Math.abs(b)])}</span>`).join('');
-    return `<div class="qc-key"><span class="end">Worse</span>${cells}<span class="end">Better</span></div>`;
+    let out = `<div class="qc-key"><span class="end">Worse</span>${cells}<span class="end">Better</span></div>`;
+    if ((metrics || []).some(isNeutral)) {
+      const d = [0, 1, 2, 3, 4].map((i) => `<span class="k"><i class="sw nd nd${i}"></i>${esc(i === 0 ? '0–1%' : BAND_LABEL[i])}</span>`).join('');
+      out += `<div class="qc-key"><span class="end">At reference</span>${d}<span class="end">Far from reference</span><span class="key-note">proposed metrics · no better or worse side</span></div>`;
+    }
+    return out;
   }
   function qcSectionRows(metrics, cols, cell) {
     let sect = '', out = '';
     for (const m of metrics) {
-      if (m.section !== sect) { sect = m.section; out += `<tr class="sect"><th colspan="${cols + 1}">${esc(sect)}</th></tr>`; }
+      if (m.section !== sect) { sect = m.section; out += `<tr class="sect${m.status === 'proposed' ? ' proposed' : ''}"><th colspan="${cols + 1}">${esc(sect)}${m.status === 'proposed' ? '<span class="chip-proposed">Proposed</span>' : ''}</th></tr>`; }
       out += cell(m);
     }
     return out;
@@ -442,29 +509,31 @@
 
     // KPIs across the current selection
     const totals = ms.map((m) => ({ m, v: qcTotal(sites.map((s) => qcSiteValue(s, m)).filter(Boolean), m) })).filter((x) => x.v);
-    const nBelow = totals.filter((x) => qcBand(x.v.value, x.m) < 0).length;
+    // Only live metrics have a below: a neutral metric has no worse side.
+    const scoredTotals = totals.filter((x) => !isNeutral(x.m));
+    const nBelow = scoredTotals.filter((x) => qcBand(x.v.value, x.m) < 0).length;
     const studies = sites.reduce((n, s) => n + s.n_studies, 0);
     $('#qc-kpis').innerHTML = [
-      [fmtN(sites.length), 'sites reporting'], [fmtN(studies), 'TTEs simulated'], [`${nBelow} of ${totals.length}`, 'metrics below benchmark'], [ivs.length ? `${ivs[0]} to ${ivs[ivs.length - 1]}` : '—', 'reporting period'],
+      [fmtN(sites.length), 'sites reporting'], [fmtN(studies), 'TTEs simulated'], [`${nBelow} of ${scoredTotals.length}`, 'live metrics below benchmark'], [ivs.length ? `${ivs[0]} to ${ivs[ivs.length - 1]}` : '—', 'reporting period'],
     ].map(([v, l]) => `<div class="kpi"><div class="v">${esc(v)}</div><div class="l">${esc(l)}</div></div>`).join('');
 
     // --- metric x site
-    $('#qc-grid-sub').textContent = `Each cell is the site's value over the selected period, coloured by distance from the benchmark. Comp is the direction the metric is scored.`;
+    $('#qc-grid-sub').textContent = `Each cell is the site's value over the selected period, coloured by distance from the benchmark. Comp is the direction the metric is scored; ref marks a proposed metric with no better or worse side.`;
     const head = `<tr><th class="rowhead">Metric</th>${sites.map((s) => `<th>${esc(s.label)}</th>`).join('')}<th class="qc-sum">Registry</th><th>Comp</th><th>Benchmark</th></tr>`;
     const body = qcSectionRows(ms, sites.length + 3, (m) => {
       const reg = qcTotal(sites.map((s) => qcSiteValue(s, m)).filter(Boolean), m);
-      return `<tr><th>${esc(m.short)}<span class="mdenom">${esc(m.denom)}</span></th>${sites.map((s) => qcCell(qcSiteValue(s, m), m, `${s.label} · ${m.short}`)).join('')}${qcCell(reg, m, `Registry · ${m.short}`, 'qc-sum')}<td class="qc-ref comp">${m.direction === 'lower' ? '≤' : '≥'}</td><td class="qc-ref">${qcVal(qcBenchmark(m), m.unit)}</td></tr>`;
+      return `<tr><th>${esc(m.short)}<span class="mdenom">${esc(m.denom)}</span></th>${sites.map((s) => qcCell(qcSiteValue(s, m), m, `${s.label} · ${m.short}`)).join('')}${qcCell(reg, m, `Registry · ${m.short}`, 'qc-sum')}<td class="qc-ref comp">${compOf(m)}</td><td class="qc-ref">${qcVal(qcBenchmark(m), m.unit)}</td></tr>`;
     });
-    $('#qc-grid').innerHTML = `<div class="qc-grid-wrap"><table class="qc"><thead>${head}</thead><tbody>${body}</tbody></table></div>${qcKey()}`;
+    $('#qc-grid').innerHTML = `<div class="qc-grid-wrap"><table class="qc"><thead>${head}</thead><tbody>${body}</tbody></table></div>${qcKey(ms)}`;
 
     // --- metric x interval, for the selected sites pooled
     $('#qc-trend-sub').textContent = `Pooled across the ${sites.length} selected site${sites.length === 1 ? '' : 's'}, by ${state.qcInterval === 'month' ? 'month' : 'quarter'}. Total is the whole period.`;
     const head2 = `<tr><th class="rowhead">Metric</th>${ivs.map((k) => `<th>${esc(k)}</th>`).join('')}<th class="qc-sum">Total</th><th>Comp</th><th>Benchmark</th></tr>`;
     const body2 = qcSectionRows(ms, ivs.length + 3, (m) => {
       const per = ivs.map((k) => qcTotal(sites.map((s) => qcSeries(s.metrics.find((x) => x.id === m.id).monthly, m).find((c) => c.key === k)).filter(Boolean), m));
-      return `<tr><th>${esc(m.short)}<span class="mdenom">${esc(m.denom)}</span></th>${per.map((c, i) => qcCell(c, m, `${ivs[i]} · ${m.short}`)).join('')}${qcCell(qcTotal(per.filter(Boolean), m), m, `Total · ${m.short}`, 'qc-sum')}<td class="qc-ref comp">${m.direction === 'lower' ? '≤' : '≥'}</td><td class="qc-ref">${qcVal(qcBenchmark(m), m.unit)}</td></tr>`;
+      return `<tr><th>${esc(m.short)}<span class="mdenom">${esc(m.denom)}</span></th>${per.map((c, i) => qcCell(c, m, `${ivs[i]} · ${m.short}`)).join('')}${qcCell(qcTotal(per.filter(Boolean), m), m, `Total · ${m.short}`, 'qc-sum')}<td class="qc-ref comp">${compOf(m)}</td><td class="qc-ref">${qcVal(qcBenchmark(m), m.unit)}</td></tr>`;
     });
-    $('#qc-trend').innerHTML = `<div class="qc-grid-wrap"><table class="qc"><thead>${head2}</thead><tbody>${body2}</tbody></table></div>${qcKey()}`;
+    $('#qc-trend').innerHTML = `<div class="qc-grid-wrap"><table class="qc"><thead>${head2}</thead><tbody>${body2}</tbody></table></div>${qcKey(ms)}`;
 
     renderSiteCards();
     renderQcScorecard();
@@ -479,9 +548,12 @@
     const site = QS.find((s) => s.id === state.qcSel); if (!site) { $('#qc-scorecard').innerHTML = ''; return; }
     const ms = qcMetrics();
     const rows = ms.map((m) => {
-      const v = qcSiteValue(site, m); if (!v) return '';
-      const b = qcBand(v.value, m), rel = qcRel(v.value, m), mv = site.metrics.find((x) => x.id === m.id);
-      return `<tr><td>${esc(m.label)}</td><td class="dv"><b>${qcVal(v.value, m.unit)}</b></td><td class="dv">${qcVal(qcBenchmark(m), m.unit)}</td><td class="dv"><span class="pill-dv ${dvHi(b) ? 'hi' : ''}" style="${dvStyle(b)}">${rel >= 0 ? '+' : ''}${rel}%</span></td><td class="dv">${mv.rank} of ${QS.length}</td><td class="dv notice">${v.n == null ? fmtN(v.d) : `${fmtN(v.n)} / ${fmtN(v.d)}`}</td></tr>`;
+      const mv = site.metrics.find((x) => x.id === m.id);
+      const tag = m.status === 'proposed' ? ' <span class="chip-proposed">Proposed</span>' : '';
+      const v = qcSiteValue(site, m);
+      if (!v || v.value == null) return `<tr class="na"><td>${esc(m.label)}${tag}</td><td class="dv" colspan="5">Not submitted</td></tr>`;
+      const rel = qcRel(v.value, m), c = cellStyle(v.value, m);
+      return `<tr><td>${esc(m.label)}${tag}</td><td class="dv"><b>${qcVal(v.value, m.unit)}</b></td><td class="dv">${qcVal(qcBenchmark(m), m.unit)}</td><td class="dv"><span class="pill-dv ${c.cls} ${c.hi ? 'hi' : ''}" style="${c.style}">${rel >= 0 ? '+' : ''}${rel}%</span></td><td class="dv">${mv.rank ? `${mv.rank} of ${QS.length}` : '—'}</td><td class="dv notice">${v.n == null ? fmtN(v.d) : `${fmtN(v.n)} / ${fmtN(v.d)}`}</td></tr>`;
     }).join('');
     $('#qc-scorecard').innerHTML = `
       <div class="qc-score-grid">
@@ -491,7 +563,7 @@
           <div class="qbar">${site.image_quality.map((q) => `<span style="flex:${q.pct}" data-tip="${esc(`<b>${q.level}</b>${q.pct}% of studies`)}">${q.pct >= 8 ? esc(q.level) + ' ' + q.pct + '%' : ''}</span>`).join('')}</div>
         </div>
         <div class="chart-block"><h3>Metrics vs benchmark</h3>
-          <div class="table-wrap"><table class="scorecard"><thead><tr><th>Metric</th><th>Site</th><th>Benchmark</th><th>Difference</th><th>Rank</th><th>N / D</th></tr></thead><tbody>${rows}</tbody></table></div>
+          <div class="table-wrap"><table class="scorecard"><thead><tr><th>Metric</th><th>Site</th><th>Benchmark or reference</th><th>Difference</th><th>Rank</th><th>N / D</th></tr></thead><tbody>${rows}</tbody></table></div>
         </div>
       </div>`;
   }
@@ -511,7 +583,7 @@
     const head = `<tr><th>Metric</th>${ivs.map((k) => `<th class="r">${esc(k)}</th>`).join('')}<th class="r">Total</th></tr>`;
     let sect = '', body = '';
     for (const { m, per, total } of model) {
-      if (m.section !== sect) { sect = m.section; body += `<tr><th colspan="${ivs.length + 2}">${esc(sect)}</th></tr>`; }
+      if (m.section !== sect) { sect = m.section; body += `<tr><th colspan="${ivs.length + 2}">${esc(sect)}${m.status === 'proposed' ? ' <span class="chip-proposed">Proposed</span>' : ''}</th></tr>`; }
       body += `<tr><td>${esc(m.label)}</td>${per.map((c) => `<td class="r num">${c ? qcVal(c.value, m.unit) : '—'}</td>`).join('')}<td class="r num"><b>${total ? qcVal(total.value, m.unit) : '—'}</b></td></tr>`;
       if (state.qcND) {
         if (m.unit === '%') body += `<tr><td class="notice r">N</td>${per.map((c) => `<td class="r num notice">${c && c.n != null ? fmtN(c.n) : '—'}</td>`).join('')}<td class="r num notice">${total && total.n != null ? fmtN(total.n) : '—'}</td></tr>`;
@@ -523,12 +595,12 @@
   function qcCsv() {
     const ivs = qcIntervals(), model = qcTableModel();
     const q = (x) => `"${String(x == null ? '' : x).replace(/"/g, '""')}"`;
-    const lines = [['Metric', 'Unit', 'Comparison', 'Benchmark', ...ivs, 'Total'].map(q).join(',')];
+    const lines = [['Metric', 'Status', 'Unit', 'Comparison', 'Benchmark or reference', ...ivs, 'Total'].map(q).join(',')];
     for (const { m, per, total } of model) {
-      lines.push([m.label, m.unit, m.direction === 'lower' ? '<=' : '>=', qcBenchmark(m), ...per.map((c) => (c ? c.value : '')), total ? total.value : ''].map(q).join(','));
+      lines.push([m.label, m.status === 'proposed' ? 'proposed' : 'live registry metric', m.unit, isNeutral(m) ? 'reference (no better or worse side)' : m.direction === 'lower' ? '<=' : '>=', qcBenchmark(m), ...per.map((c) => (c ? c.value : '')), total ? total.value : ''].map(q).join(','));
       if (state.qcND) {
-        if (m.unit === '%') lines.push([m.label + ' — N', '', '', '', ...per.map((c) => (c && c.n != null ? c.n : '')), total && total.n != null ? total.n : ''].map(q).join(','));
-        lines.push([m.label + ' — D', '', '', '', ...per.map((c) => (c ? c.d : '')), total ? total.d : ''].map(q).join(','));
+        if (m.unit === '%') lines.push([m.label + ' — N', '', '', '', '', ...per.map((c) => (c && c.n != null ? c.n : '')), total && total.n != null ? total.n : ''].map(q).join(','));
+        lines.push([m.label + ' — D', '', '', '', '', ...per.map((c) => (c ? c.d : '')), total ? total.d : ''].map(q).join(','));
       }
     }
     return lines.join('\n');
@@ -559,19 +631,27 @@
   // Tiles encode LEVEL only. The monthly series is generator noise, so shape is deliberately not drawn.
   function renderSiteCards() {
     const host = $('#qc-site-cards'); if (!host || !QS.length) return;
+    const live = QM.filter((m) => m.status !== 'proposed'), proposed = QM.filter((m) => m.status === 'proposed');
+    const tileFor = (site) => (m) => {
+      const mv = site.metrics.find((x) => x.id === m.id);
+      const code = esc(m.code || m.short.slice(0, 3));
+      if (!mv || mv.value == null) return `<span class="tile na" data-tip="${esc(`<b>${site.label} · ${m.short}</b>Not submitted. This site does not export the data this metric needs.`)}"><i>${code}</i></span>`;
+      const rel = qcRel(mv.value, m), c = cellStyle(mv.value, m);
+      const pre = m.status === 'proposed' ? 'Proposed metric, not one of the registry’s nine live metrics. ' : '';
+      const tip = `<b>${esc(site.label)} · ${esc(m.short)}</b>${pre}${qcVal(mv.value, m.unit)} · ${isNeutral(m) ? 'reference' : 'benchmark'} ${qcVal(qcBenchmark(m), m.unit)} · ${rel >= 0 ? '+' : ''}${rel}%`;
+      return `<span class="tile ${c.cls} ${c.hi ? 'hi' : ''}" style="${c.style}" data-tip="${esc(tip)}"><i>${code}</i></span>`;
+    };
     host.innerHTML = QS.map((site) => {
-      const tiles = QM.map((m) => {
-        const mv = site.metrics.find((x) => x.id === m.id);
-        const b = qcBand(mv.value, m), rel = qcRel(mv.value, m);
-        const tip = `<b>${esc(site.label)} · ${esc(m.short)}</b>${qcVal(mv.value, m.unit)} · benchmark ${qcVal(qcBenchmark(m), m.unit)} · ${rel >= 0 ? '+' : ''}${rel}%`;
-        return `<span class="tile ${dvHi(b) ? 'hi' : ''}" style="${dvStyle(b)}" data-tip="${esc(tip)}"><i>${esc(m.code || m.short.slice(0, 3))}</i></span>`;
-      }).join('');
-      const below = site.metrics.filter((mv) => mv.band < 0).length;
+      const t = tileFor(site);
+      const tiles = live.map(t).join('') +
+        (proposed.length ? `<span class="tile-sep" aria-hidden="true"></span><span class="tile-grp">${proposed.map(t).join('')}</span>` : '');
+      // Counts the nine live metrics only: a neutral metric has no below.
+      const below = site.n_below_benchmark;
       const iq = site.image_quality.map((q) => `<span style="flex:${q.pct}" title="${esc(q.level)} ${q.pct}%"></span>`).join('');
       return `<a class="site-card" href="#quality/${esc(site.id)}">
         <span class="sc-head"><b>${esc(site.label)}</b><i>${esc(site.setting)}</i></span>
         <span class="sc-tiles">${tiles}</span>
-        <span class="sc-foot"><span class="num">${fmtN(site.n_studies)} TTEs</span><span class="num">${below} of ${QM.length} below benchmark</span></span>
+        <span class="sc-foot"><span class="num">${fmtN(site.n_studies)} TTEs</span><span class="num">${below} of ${site.n_scored_metrics || live.length} below benchmark</span></span>
         <span class="sc-iq" aria-hidden="true">${iq}</span>
       </a>`;
     }).join('');
@@ -667,6 +747,7 @@
     const cb = ev.target.closest('#filters input[type=checkbox]');
     if (cb) { const s = (state.sel[cb.dataset.key] = state.sel[cb.dataset.key] || new Set()); cb.checked ? s.add(cb.value) : s.delete(cb.value); if (!s.size) delete state.sel[cb.dataset.key]; render(); return; }
     if (ev.target.id === 'sort') { state.sort = ev.target.value; render(); return; }
+    if (ev.target.id === 'reg-extract') { state.regExtract = ev.target.value; renderRegistry(); return; }
     if (ev.target.id === 'reg-select') { state.regSel = ev.target.value; setHash(`registry/${state.regSel}`); renderRegistry(); return; }
     if (ev.target.dataset && ev.target.dataset.qc) {
       const set = ev.target.dataset.qc === 'qcm' ? state.qcMetrics : state.qcSites;

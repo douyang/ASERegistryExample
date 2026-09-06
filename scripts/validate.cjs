@@ -86,6 +86,17 @@ const server = http.createServer((req, res) => {
   expect(!(await d.locator('#registry').isHidden()), 'registry tab visible');
   const nRows = await d.locator('#reg-charts svg .row').count(); expect(nRows > 0, `registry chart rows ${nRows}`);
   expect((await d.locator('#reg-detail table.endpoints tbody tr').count()) > 0, 'registry detail endpoints');
+  // AI benchmarking: one-off analyses, so no monthly trend, and the dataset is stated
+  expect((await d.locator('#reg-detail svg.spark').count()) === 0, 'no month-to-month view on a one-off benchmarking analysis');
+  expect((await d.locator('#reg-detail dl.prov dt').count()) >= 6, 'benchmarking result states its dataset and analysis dates');
+  const extOpts = await d.locator('#reg-extract option').count();
+  expect(extOpts > 1, `dataset picker offers each extract (${extOpts})`);
+  const rowsAll = await d.locator('#reg-charts svg .row').count();
+  await d.locator('#reg-extract').selectOption((await d.locator('#reg-extract option').nth(1).getAttribute('value')));
+  await d.waitForTimeout(350);
+  expect((await d.locator('#reg-charts svg .row').count()) < rowsAll, 'pinning one extract narrows the charts');
+  await d.locator('#reg-extract').selectOption('all'); await d.waitForTimeout(300);
+
   await d.locator('#reg-charts svg .row').nth(1).click(); await d.waitForTimeout(150);
   expect((await d.locator('#reg-charts svg .row.sel').count()) >= 1, 'chart row selection');
   await d.locator('#reg-charts svg .row').nth(0).hover(); await d.waitForTimeout(100);
@@ -166,7 +177,8 @@ const server = http.createServer((req, res) => {
   expect(beforeBench !== (await d.locator('#qc-grid .qc-cell').first().getAttribute('style')), 'benchmark switch repaints the grid');
   await d.locator('#qc-benchmark').selectOption('target'); await d.waitForTimeout(250);
   await d.locator('#qc-nd').check(); await d.waitForTimeout(300);
-  expect((await d.locator('#qc-grid .qc-cell .nd').count()) === nQcCells, 'N and D appear in every grid cell');
+  const nWithData = await d.locator('#qc-grid .qc-cell:not(.na)').count();
+  expect((await d.locator('#qc-grid .qc-cell .nd').count()) === nWithData, 'N and D appear in every grid cell that has data');
   await d.locator('#qc-nd').uncheck(); await d.waitForTimeout(250);
   await d.locator('#qc-metric-picker .f-drop summary').click(); await d.waitForTimeout(200);
   await d.locator('#qc-metric-picker input[value=tat]').uncheck(); await d.waitForTimeout(300);
@@ -190,14 +202,51 @@ const server = http.createServer((req, res) => {
     URL.createObjectURL = origUrl; HTMLAnchorElement.prototype.click = origClick;
     return blob ? blob.text() : null;
   });
-  expect(csvHead && csvHead.startsWith('"Metric","Unit","Comparison","Benchmark"'), 'CSV export produces a header row');
+  expect(csvHead && csvHead.startsWith('"Metric","Status","Unit","Comparison","Benchmark or reference"'), 'CSV export header carries the metric status');
+  expect(csvHead.includes('"proposed","%","reference (no better or worse side)"'), 'CSV never asserts a direction a neutral metric does not have');
   expect(await d.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1), 'no horizontal page scroll (quality desktop)');
   // sites at a glance + per-site permalinks
   const nSiteCards = await d.locator('#qc-site-cards a.site-card').count();
   expect(nSiteCards === 8, `site cards ${nSiteCards}`);
-  expect((await d.locator('#qc-site-cards .tile').count()) === nSiteCards * 9, 'nine metric tiles on every site card');
+  // proposed AI-assist metrics: marked, neutral, and never scored as better or worse
+  const meta = await d.evaluate(() => {
+    const q = window.AIECHO_REGISTRY.quality;
+    const prop = q.metrics.filter((m) => m.status === 'proposed');
+    const live = q.metrics.filter((m) => m.status === 'live');
+    const site = q.sites.find((s) => s.ai_capture === 'full_disposition');
+    const g = (id) => site.metrics.find((m) => m.id === id);
+    const shares = ['ai_accept', 'ai_edit', 'ai_reject'].map(g);
+    const monthlySums = shares[0].monthly.map((_, k) => shares.reduce((t, m) => t + m.monthly[k].n, 0) - shares[0].monthly[k].d);
+    return {
+      nLive: live.length, nProp: prop.length,
+      allNeutral: prop.every((m) => m.direction === 'neutral'),
+      noRank: q.sites.every((s) => prop.every((m) => s.metrics.find((x) => x.id === m.id).rank == null)),
+      tallyLiveOnly: q.sites.every((s) => s.n_scored_metrics === live.length),
+      pooledShareSum: shares.reduce((t, m) => t + m.registry_value, 0),
+      registryShareSum: ['ai_accept', 'ai_edit', 'ai_reject'].reduce((t, id) => t + q.metrics.find((m) => m.id === id).registry_value, 0),
+      worstMonthlyCount: Math.max(...monthlySums.map(Math.abs)),
+      notSubmitted: q.sites.filter((s) => s.ai_capture !== 'full_disposition').length,
+    };
+  });
+  expect((await d.locator('#qc-site-cards .tile').count()) === nSiteCards * (meta.nLive + meta.nProp), `every site card carries ${meta.nLive} live and ${meta.nProp} proposed tiles`);
+  expect((await d.locator('#qc-site-cards .tile.na').count()) > 0, 'a site that cannot export AI provenance shows not-submitted tiles');
   const tileCodes = await d.evaluate(() => Array.from(document.querySelectorAll('#qc-site-cards a.site-card')[0].querySelectorAll('.tile i')).map((i) => i.textContent));
   expect(new Set(tileCodes).size === tileCodes.length, `tile codes are unique (${tileCodes.join(',')})`);
+  expect(meta.nLive === 9, `nine live metrics (${meta.nLive})`);
+  expect(meta.nProp === 4, `four proposed metrics (${meta.nProp})`);
+  expect(meta.allNeutral, 'every proposed metric is neutral-direction');
+  expect(meta.noRank, 'neutral metrics carry no rank');
+  expect(meta.tallyLiveOnly, 'below-benchmark tallies count live metrics only');
+  expect(meta.worstMonthlyCount === 0, `accepted + edited + rejected equals the denominator exactly (worst ${meta.worstMonthlyCount})`);
+  expect(Math.abs(meta.registryShareSum - 100) < 0.2, `pooled AI dispositions close at 100% (${meta.registryShareSum})`);
+  expect(meta.notSubmitted > 0, 'at least one site cannot export AI provenance');
+  expect((await d.locator('#qc-grid .sect.proposed').count()) === 1, 'proposed metrics sit in their own marked section');
+  expect((await d.locator('#qc-grid .qc-cell.na').count()) > 0, 'a site that cannot export reads as not submitted, not zero');
+  expect((await d.locator('#qc-grid .qc-cell.nd').count()) > 0, 'neutral cells use the grey distance scale');
+  expect((await d.locator('#qc-grid .qc-cell.nd[style*="--dv"]').count()) === 0, 'neutral cells never use the better/worse ramp');
+  const comps = [...new Set(await d.locator('#qc-grid td.qc-ref.comp').allTextContents())];
+  expect(comps.includes('ref'), `neutral metrics show ref in Comp (${comps.join(',')})`);
+  expect((await d.locator('#qc-grid .qc-key').count()) === 2, 'a second legend explains the distance scale');
   await d.locator('#qc-site-cards a.site-card').nth(4).click(); await d.waitForTimeout(400);
   expect((await d.evaluate(() => location.hash)) === '#quality/s5', 'site card deep-links to its scorecard');
   await d.locator('#qc-site-select').selectOption('s2'); await d.waitForTimeout(300);

@@ -24,7 +24,11 @@
   const byId = new Map(fams.map((f) => [f.id, f]));
 
   // ---------- state ----------
-  const state = { tab: 'products', view: 'cards', q: '', sort: 'latest', sel: {}, regSel: null, openFacet: null, opener: null };
+  const state = {
+    tab: 'products', view: 'cards', q: '', sort: 'latest', sel: {}, regSel: null, openFacet: null, opener: null,
+    qcMetrics: new Set(((R.quality || {}).metrics || []).map((m) => m.id)), qcSites: new Set(((R.quality || {}).sites || []).map((s) => s.id)),
+    qcInterval: 'quarter', qcFrom: null, qcTo: null, qcBench: 'target', qcND: false, qcSel: null,
+  };
   const FILTERS = [
     { key: 'category', label: 'Function', get: (f) => [f.research_pending ? 'pending' : f.category], name: (v) => (v === 'pending' ? 'Research pending' : CAT[v] || v) },
     { key: 'mode', label: 'Imaging mode', get: (f) => f.modes || [], order: ['TTE', 'TEE', 'POCUS', 'ICE', 'Fetal echo', 'Stress echo'] },
@@ -367,6 +371,185 @@
       </div>`;
   }
 
+  // ---------- site quality tab ----------
+  const Q = R.quality || { metrics: [], sites: [], months: [], quarters: [] };
+  const QM = Q.metrics || [], QS = Q.sites || [];
+  // Diverging band -> ramp token. Negative = worse than benchmark, 0 = within 1%, positive = better.
+  const DV = { '-4': 'w4', '-3': 'w3', '-2': 'w2', '-1': 'w1', 0: '0', 1: 'b1', 2: 'b2', 3: 'b3', 4: 'b4' };
+  const dvHi = (b) => Math.abs(b) >= 3;
+  const dvStyle = (b) => `background:var(--dv-${DV[b]})`;
+  const BAND_LABEL = { 0: 'within 1% of benchmark', 1: '1–10%', 2: '10–25%', 3: '25–50%', 4: '≥ 50%' };
+  const qcVal = (v, unit) => `${v}${unit === '%' ? '%' : unit === 'h' ? ' h' : ''}`;
+
+  function qcBenchmark(m) { return state.qcBench === 'median' ? m.median : m.benchmark; }
+  // Recompute the band whenever the benchmark source changes, using the same thresholds the
+  // generator uses, so switching between target and median re-colours the whole page consistently.
+  function qcBand(value, m) {
+    const b = qcBenchmark(m); if (!b) return 0;
+    const rel = (value - b) / Math.abs(b), better = m.direction === 'lower' ? -rel : rel, a = Math.abs(better) * 100;
+    const step = a < 1 ? 0 : a < 10 ? 1 : a < 25 ? 2 : a < 50 ? 3 : 4;
+    return step === 0 ? 0 : (better > 0 ? step : -step);
+  }
+  function qcRel(value, m) { const b = qcBenchmark(m); if (!b) return 0; const rel = (value - b) / Math.abs(b); return Math.round((m.direction === 'lower' ? -rel : rel) * 1000) / 10; }
+
+  const qcMetrics = () => QM.filter((m) => state.qcMetrics.has(m.id));
+  const qcSites = () => QS.filter((s) => state.qcSites.has(s.id));
+  function qcIntervals() {
+    const all = state.qcInterval === 'month' ? (Q.months || []) : (Q.quarters || []);
+    const a = all.indexOf(state.qcFrom), b = all.indexOf(state.qcTo);
+    return all.slice(a < 0 ? 0 : a, (b < 0 ? all.length : b + 1));
+  }
+  // Monthly rows roll up to a quarter by weighting each month by its own denominator, so a quarter
+  // is the real pooled rate and not an average of rates.
+  function qcSeries(rows, metric) {
+    const byKey = new Map();
+    for (const mo of rows) {
+      const key = state.qcInterval === 'month' ? mo.month : `${mo.month.slice(0, 4)}-Q${Math.ceil(Number(mo.month.slice(5, 7)) / 3)}`;
+      const cur = byKey.get(key) || { key, d: 0, n: 0, sum: 0 };
+      cur.d += mo.d; cur.n += mo.n || 0; cur.sum += mo.value * mo.d; byKey.set(key, cur);
+    }
+    const keep = new Set(qcIntervals());
+    return [...byKey.values()].filter((c) => keep.has(c.key)).map((c) => ({ key: c.key, d: c.d, n: metric.unit === '%' ? c.n : null, value: Math.round((c.sum / c.d) * 10) / 10 }));
+  }
+  const qcTotal = (cells, metric) => { const d = cells.reduce((n, c) => n + c.d, 0); if (!d) return null; return { d, n: metric.unit === '%' ? cells.reduce((n, c) => n + (c.n || 0), 0) : null, value: Math.round((cells.reduce((n, c) => n + c.value * c.d, 0) / d) * 10) / 10 }; }
+  // A site's value over the selected date range only, so narrowing the range moves the numbers.
+  function qcSiteValue(site, m) { const mv = site.metrics.find((x) => x.id === m.id); return qcTotal(qcSeries(mv.monthly, m), m); }
+
+  function qcCell(v, m, extra, cls) {
+    if (!v) return `<td class="${cls || ''}"></td>`;
+    const b = qcBand(v.value, m), rel = qcRel(v.value, m);
+    const nd = state.qcND && v.d ? `<span class="nd">${v.n == null ? '' : fmtN(v.n) + ' / '}${fmtN(v.d)}</span>` : '';
+    const tip = `<b>${esc(extra || m.short)}</b>${qcVal(v.value, m.unit)} · benchmark ${qcVal(qcBenchmark(m), m.unit)} · ${rel >= 0 ? '+' : ''}${rel}%${v.d ? ` · D = ${fmtN(v.d)}` : ''}`;
+    return `<td class="${cls || ''}"><span class="qc-cell ${dvHi(b) ? 'hi' : ''}" style="${dvStyle(b)}" tabindex="0" data-tip="${esc(tip)}" aria-label="${esc(`${extra || m.short}: ${qcVal(v.value, m.unit)}, ${rel >= 0 ? '+' : ''}${rel}% vs benchmark`)}">${v.value}${nd}</span></td>`;
+  }
+  function qcKey() {
+    const cells = [-4, -3, -2, -1, 0, 1, 2, 3, 4].map((b) => `<span class="k"><i class="sw" style="${dvStyle(b)}"></i>${esc(b === 0 ? '0–1%' : BAND_LABEL[Math.abs(b)])}</span>`).join('');
+    return `<div class="qc-key"><span class="end">Worse</span>${cells}<span class="end">Better</span></div>`;
+  }
+  function qcSectionRows(metrics, cols, cell) {
+    let sect = '', out = '';
+    for (const m of metrics) {
+      if (m.section !== sect) { sect = m.section; out += `<tr class="sect"><th colspan="${cols + 1}">${esc(sect)}</th></tr>`; }
+      out += cell(m);
+    }
+    return out;
+  }
+
+  function renderQuality() {
+    if (!QM.length) return;
+    const ms = qcMetrics(), sites = qcSites(), ivs = qcIntervals();
+    $('#qc-params-sum').textContent = `${ms.length} of ${QM.length} metrics · ${sites.length} of ${QS.length} sites · ${ivs.length} ${state.qcInterval === 'month' ? 'months' : 'quarters'} · benchmark: ${state.qcBench === 'median' ? 'registry median' : 'registry target'}`;
+
+    // KPIs across the current selection
+    const totals = ms.map((m) => ({ m, v: qcTotal(sites.map((s) => qcSiteValue(s, m)).filter(Boolean), m) })).filter((x) => x.v);
+    const nBelow = totals.filter((x) => qcBand(x.v.value, x.m) < 0).length;
+    const studies = sites.reduce((n, s) => n + s.n_studies, 0);
+    $('#qc-kpis').innerHTML = [
+      [fmtN(sites.length), 'sites reporting'], [fmtN(studies), 'TTEs simulated'], [`${nBelow} of ${totals.length}`, 'metrics below benchmark'], [ivs.length ? `${ivs[0]} to ${ivs[ivs.length - 1]}` : '—', 'reporting period'],
+    ].map(([v, l]) => `<div class="kpi"><div class="v">${esc(v)}</div><div class="l">${esc(l)}</div></div>`).join('');
+
+    // --- metric x site
+    $('#qc-grid-sub').textContent = `Each cell is the site's value over the selected period, coloured by distance from the benchmark. Comp is the direction the metric is scored.`;
+    const head = `<tr><th class="rowhead">Metric</th>${sites.map((s) => `<th>${esc(s.label)}</th>`).join('')}<th class="qc-sum">Registry</th><th>Comp</th><th>Benchmark</th></tr>`;
+    const body = qcSectionRows(ms, sites.length + 3, (m) => {
+      const reg = qcTotal(sites.map((s) => qcSiteValue(s, m)).filter(Boolean), m);
+      return `<tr><th>${esc(m.short)}<span class="mdenom">${esc(m.denom)}</span></th>${sites.map((s) => qcCell(qcSiteValue(s, m), m, `${s.label} · ${m.short}`)).join('')}${qcCell(reg, m, `Registry · ${m.short}`, 'qc-sum')}<td class="qc-ref comp">${m.direction === 'lower' ? '≤' : '≥'}</td><td class="qc-ref">${qcVal(qcBenchmark(m), m.unit)}</td></tr>`;
+    });
+    $('#qc-grid').innerHTML = `<div class="qc-grid-wrap"><table class="qc"><thead>${head}</thead><tbody>${body}</tbody></table></div>${qcKey()}`;
+
+    // --- metric x interval, for the selected sites pooled
+    $('#qc-trend-sub').textContent = `Pooled across the ${sites.length} selected site${sites.length === 1 ? '' : 's'}, by ${state.qcInterval === 'month' ? 'month' : 'quarter'}. Total is the whole period.`;
+    const head2 = `<tr><th class="rowhead">Metric</th>${ivs.map((k) => `<th>${esc(k)}</th>`).join('')}<th class="qc-sum">Total</th><th>Comp</th><th>Benchmark</th></tr>`;
+    const body2 = qcSectionRows(ms, ivs.length + 3, (m) => {
+      const per = ivs.map((k) => qcTotal(sites.map((s) => qcSeries(s.metrics.find((x) => x.id === m.id).monthly, m).find((c) => c.key === k)).filter(Boolean), m));
+      return `<tr><th>${esc(m.short)}<span class="mdenom">${esc(m.denom)}</span></th>${per.map((c, i) => qcCell(c, m, `${ivs[i]} · ${m.short}`)).join('')}${qcCell(qcTotal(per.filter(Boolean), m), m, `Total · ${m.short}`, 'qc-sum')}<td class="qc-ref comp">${m.direction === 'lower' ? '≤' : '≥'}</td><td class="qc-ref">${qcVal(qcBenchmark(m), m.unit)}</td></tr>`;
+    });
+    $('#qc-trend').innerHTML = `<div class="qc-grid-wrap"><table class="qc"><thead>${head2}</thead><tbody>${body2}</tbody></table></div>${qcKey()}`;
+
+    renderQcScorecard();
+    renderQcTable();
+  }
+
+  function renderQcScorecard() {
+    const sel = $('#qc-site-select');
+    sel.innerHTML = QS.map((s) => `<option value="${esc(s.id)}">${esc(s.label)}</option>`).join('');
+    if (!state.qcSel || !QS.some((s) => s.id === state.qcSel)) state.qcSel = QS.length ? QS[0].id : null;
+    sel.value = state.qcSel;
+    const site = QS.find((s) => s.id === state.qcSel); if (!site) { $('#qc-scorecard').innerHTML = ''; return; }
+    const ms = qcMetrics();
+    const rows = ms.map((m) => {
+      const v = qcSiteValue(site, m); if (!v) return '';
+      const b = qcBand(v.value, m), rel = qcRel(v.value, m), mv = site.metrics.find((x) => x.id === m.id);
+      return `<tr><td>${esc(m.label)}</td><td class="dv"><b>${qcVal(v.value, m.unit)}</b></td><td class="dv">${qcVal(qcBenchmark(m), m.unit)}</td><td class="dv"><span class="pill-dv ${dvHi(b) ? 'hi' : ''}" style="${dvStyle(b)}">${rel >= 0 ? '+' : ''}${rel}%</span></td><td class="dv">${mv.rank} of ${QS.length}</td><td class="dv notice">${v.n == null ? fmtN(v.d) : `${fmtN(v.n)} / ${fmtN(v.d)}`}</td></tr>`;
+    }).join('');
+    $('#qc-scorecard').innerHTML = `
+      <div class="qc-score-grid">
+        <div class="chart-block"><h3>${esc(site.label)} <span class="notice">${esc(site.setting)}</span></h3>
+          <dl class="qc-profile"><dt>Studies</dt><dd class="num">${fmtN(site.n_studies)} TTEs</dd><dt>Echo labs</dt><dd class="num">${site.n_labs}</dd><dt>Sonographers</dt><dd class="num">${site.n_sonographers}</dd><dt>Reading physicians</dt><dd class="num">${site.n_readers}</dd><dt>Below benchmark</dt><dd class="num">${site.n_below_benchmark} of ${QM.length} metrics</dd></dl>
+          <h3>Image quality mix</h3>
+          <div class="qbar">${site.image_quality.map((q) => `<span style="flex:${q.pct}" data-tip="${esc(`<b>${q.level}</b>${q.pct}% of studies`)}">${q.pct >= 8 ? esc(q.level) + ' ' + q.pct + '%' : ''}</span>`).join('')}</div>
+        </div>
+        <div class="chart-block"><h3>Metrics vs benchmark</h3>
+          <div class="table-wrap"><table class="scorecard"><thead><tr><th>Metric</th><th>Site</th><th>Benchmark</th><th>Difference</th><th>Rank</th><th>N / D</th></tr></thead><tbody>${rows}</tbody></table></div>
+        </div>
+      </div>`;
+  }
+
+  // The metric library output: one value row per metric, with N and D as their own rows when asked,
+  // across the selected intervals plus a period total.
+  function qcTableModel() {
+    const ms = qcMetrics(), ivs = qcIntervals(), sites = qcSites();
+    return ms.map((m) => {
+      const per = ivs.map((k) => qcTotal(sites.map((s) => qcSeries(s.metrics.find((x) => x.id === m.id).monthly, m).find((c) => c.key === k)).filter(Boolean), m));
+      return { m, per, total: qcTotal(per.filter(Boolean), m) };
+    });
+  }
+  function renderQcTable() {
+    const ivs = qcIntervals(), model = qcTableModel(), sites = qcSites();
+    $('#qc-table-sub').textContent = `${sites.length} site${sites.length === 1 ? '' : 's'} pooled. N is the numerator, D the denominator.`;
+    const head = `<tr><th>Metric</th>${ivs.map((k) => `<th class="r">${esc(k)}</th>`).join('')}<th class="r">Total</th></tr>`;
+    let sect = '', body = '';
+    for (const { m, per, total } of model) {
+      if (m.section !== sect) { sect = m.section; body += `<tr><th colspan="${ivs.length + 2}">${esc(sect)}</th></tr>`; }
+      body += `<tr><td>${esc(m.label)}</td>${per.map((c) => `<td class="r num">${c ? qcVal(c.value, m.unit) : '—'}</td>`).join('')}<td class="r num"><b>${total ? qcVal(total.value, m.unit) : '—'}</b></td></tr>`;
+      if (state.qcND) {
+        if (m.unit === '%') body += `<tr><td class="notice r">N</td>${per.map((c) => `<td class="r num notice">${c && c.n != null ? fmtN(c.n) : '—'}</td>`).join('')}<td class="r num notice">${total && total.n != null ? fmtN(total.n) : '—'}</td></tr>`;
+        body += `<tr><td class="notice r">D</td>${per.map((c) => `<td class="r num notice">${c ? fmtN(c.d) : '—'}</td>`).join('')}<td class="r num notice">${total ? fmtN(total.d) : '—'}</td></tr>`;
+      }
+    }
+    $('#qc-table').innerHTML = `<table><thead>${head}</thead><tbody>${body}</tbody></table>`;
+  }
+  function qcCsv() {
+    const ivs = qcIntervals(), model = qcTableModel();
+    const q = (x) => `"${String(x == null ? '' : x).replace(/"/g, '""')}"`;
+    const lines = [['Metric', 'Unit', 'Comparison', 'Benchmark', ...ivs, 'Total'].map(q).join(',')];
+    for (const { m, per, total } of model) {
+      lines.push([m.label, m.unit, m.direction === 'lower' ? '<=' : '>=', qcBenchmark(m), ...per.map((c) => (c ? c.value : '')), total ? total.value : ''].map(q).join(','));
+      if (state.qcND) {
+        if (m.unit === '%') lines.push([m.label + ' — N', '', '', '', ...per.map((c) => (c && c.n != null ? c.n : '')), total && total.n != null ? total.n : ''].map(q).join(','));
+        lines.push([m.label + ' — D', '', '', '', ...per.map((c) => (c ? c.d : '')), total ? total.d : ''].map(q).join(','));
+      }
+    }
+    return lines.join('\n');
+  }
+
+  function renderQcPickers() {
+    const box = (host, items, set, key) => {
+      $(host).innerHTML = `<details class="f-drop" data-key="${key}"><summary>${key === 'qcm' ? 'Metrics' : 'Sites'} <span class="badge">${set.size}</span></summary><div class="f-pop"><ul>${items.map((it) => `<li><label><input type="checkbox" data-qc="${key}" value="${esc(it.id)}"${set.has(it.id) ? ' checked' : ''}> ${esc(it.label)}</label></li>`).join('')}</ul></div></details>`;
+    };
+    box('#qc-metric-picker', QM.map((m) => ({ id: m.id, label: m.short })), state.qcMetrics, 'qcm');
+    box('#qc-site-picker', QS.map((s) => ({ id: s.id, label: s.label })), state.qcSites, 'qcs');
+  }
+  function renderQcRange(keepSel) {
+    const all = state.qcInterval === 'month' ? (Q.months || []) : (Q.quarters || []);
+    if (!keepSel || !all.includes(state.qcFrom)) state.qcFrom = all[0];
+    if (!keepSel || !all.includes(state.qcTo)) state.qcTo = all[all.length - 1];
+    for (const [id, val] of [['#qc-from', state.qcFrom], ['#qc-to', state.qcTo]]) {
+      $(id).innerHTML = all.map((k) => `<option value="${esc(k)}">${esc(k)}</option>`).join('');
+      $(id).value = val;
+    }
+  }
+
   // ---------- methods tab ----------
   function renderMethods() {
     $('#product-codes').innerHTML = Object.entries(P.product_codes || {}).map(([k, v]) => `<tr><td class="mono">${esc(k)}</td><td>${esc(v)}</td></tr>`).join('');
@@ -379,10 +562,14 @@
   }
 
   // ---------- tabs & routing ----------
+  // The two tabs whose numbers are generated carry a flat grey wash and a DEMO badge.
+  const DEMO_TABS = ['registry', 'quality'];
   function showTab(tab) {
     state.tab = tab;
     for (const a of $$('.tabs a')) { if (a.dataset.tab === tab) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); }
     for (const s of $$('.tab-panel')) s.hidden = s.id !== tab;
+    const demo = DEMO_TABS.includes(tab);
+    $('#demo-wash').hidden = !demo; $('#demo-badge').hidden = !demo;
     window.scrollTo({ top: 0 });
   }
   function route() {
@@ -390,13 +577,20 @@
     if (h === 'main') { $('#main').focus(); return; }
     if (h.startsWith('product/')) { closePanelQuiet(); showTab('products'); openPanel(dec(h.slice(8)), false); return; }
     if (h.startsWith('registry/')) { closePanelQuiet(); state.regSel = dec(h.slice(9)); showTab('registry'); renderRegistry(); return; }
-    if (['products', 'registry', 'methods'].includes(h)) { closePanelQuiet(); showTab(h); return; }
+    if (h.startsWith('quality/')) { closePanelQuiet(); state.qcSel = dec(h.slice(8)); showTab('quality'); renderQuality(); return; }
+    if (['products', 'registry', 'quality', 'methods'].includes(h)) { closePanelQuiet(); showTab(h); return; }
     if (h === '') { closePanelQuiet(); showTab('products'); }
   }
   function closePanelQuiet() { $('#panel').hidden = true; $('#panel-backdrop').hidden = true; document.body.style.overflow = ''; for (const el of INERT()) el.inert = false; }
 
   // ---------- events ----------
   document.addEventListener('click', (ev) => {
+    if (ev.target.id === 'qc-export') {
+      const url = URL.createObjectURL(new Blob([qcCsv()], { type: 'text/csv' }));
+      const a = document.createElement('a'); a.href = url; a.download = 'imageguideecho-site-quality.csv';
+      document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+      return;
+    }
     const open = ev.target.closest('[data-open]'); if (open) { openPanel(open.dataset.open); return; }
     const card = ev.target.closest('.card'); if (card && !ev.target.closest('a')) { openPanel(card.dataset.id); return; }
     if (ev.target.closest('#panel-close') || ev.target.closest('#panel-backdrop')) { closePanel(); return; }
@@ -413,6 +607,24 @@
     if (cb) { const s = (state.sel[cb.dataset.key] = state.sel[cb.dataset.key] || new Set()); cb.checked ? s.add(cb.value) : s.delete(cb.value); if (!s.size) delete state.sel[cb.dataset.key]; render(); return; }
     if (ev.target.id === 'sort') { state.sort = ev.target.value; render(); return; }
     if (ev.target.id === 'reg-select') { state.regSel = ev.target.value; renderRegistry(); return; }
+    if (ev.target.dataset && ev.target.dataset.qc) {
+      const set = ev.target.dataset.qc === 'qcm' ? state.qcMetrics : state.qcSites;
+      if (ev.target.checked) set.add(ev.target.value); else set.delete(ev.target.value);
+      // Never let the grid empty out: the last checkbox in a picker stays on.
+      if (!set.size) { set.add(ev.target.value); ev.target.checked = true; }
+      const badge = ev.target.closest('.f-drop').querySelector('.badge'); if (badge) badge.textContent = set.size;
+      renderQuality(); return;
+    }
+    if (ev.target.id === 'qc-interval') { state.qcInterval = ev.target.value; renderQcRange(false); renderQuality(); return; }
+    if (ev.target.id === 'qc-from' || ev.target.id === 'qc-to') {
+      state.qcFrom = $('#qc-from').value; state.qcTo = $('#qc-to').value;
+      const all = state.qcInterval === 'month' ? (Q.months || []) : (Q.quarters || []);
+      if (all.indexOf(state.qcFrom) > all.indexOf(state.qcTo)) { if (ev.target.id === 'qc-from') { state.qcTo = state.qcFrom; $('#qc-to').value = state.qcTo; } else { state.qcFrom = state.qcTo; $('#qc-from').value = state.qcFrom; } }
+      renderQuality(); return;
+    }
+    if (ev.target.id === 'qc-benchmark') { state.qcBench = ev.target.value; renderQuality(); return; }
+    if (ev.target.id === 'qc-nd') { state.qcND = ev.target.checked; renderQuality(); return; }
+    if (ev.target.id === 'qc-site-select') { state.qcSel = ev.target.value; renderQcScorecard(); return; }
   });
   let qt; $('#search').addEventListener('input', (ev) => { clearTimeout(qt); qt = setTimeout(() => { state.q = ev.target.value.trim().toLowerCase(); render(); }, 120); });
   document.addEventListener('keydown', (ev) => {
@@ -442,5 +654,5 @@
   const nCl = fams.reduce((n, f) => n + f.n_clearances, 0), nCo = new Set(fams.map((f) => companyShort(f.company))).size;
   const nPapers = fams.reduce((n, f) => n + f.n_papers_resolved, 0), nClaims = fams.reduce((n, f) => n + f.n_fda_claims, 0);
   $('#catalog-stats').innerHTML = [[fams.length, 'products'], [nCl, 'FDA clearances'], [nCo, 'companies'], [nClaims, 'FDA summary performance metrics'], [nPapers, 'resolved publications']].map(([v, l]) => `<span><b class="num">${fmtN(v)}</b>${esc(l)}</span>`).join('');
-  render(); renderRegistry(); renderMethods(); route();
+  render(); renderRegistry(); renderQcPickers(); renderQcRange(false); renderQuality(); renderMethods(); route();
 })();

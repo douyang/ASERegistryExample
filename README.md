@@ -25,11 +25,11 @@ Data files are plain scripts (`data/products.js`, `data/registry.js`) so the pag
 ## Layout
 
 ```
-index.html                 page markup (three tabs, detail panel)
+index.html                 page markup (four tabs, detail panel)
 assets/style.css           ASE tokens, light and dark themes, components
-assets/app.js              filters, search, sort, cards/table, panel, registry charts
+assets/app.js              filters, search, sort, cards/table, panel, registry charts, site quality grids
 data/products.js           GENERATED catalog (scripts/build-data.mjs)
-data/registry.js           GENERATED placeholder registry evaluation (scripts/gen-registry.mjs)
+data/registry.js           GENERATED placeholder registry evaluation and site quality data (scripts/gen-registry.mjs)
 data/research/             inputs: openFDA records, FDA AI list CSV, family seed, verified research JSON per batch
 scripts/build-data.mjs     merge research + openFDA -> data/products.js
 scripts/gen-registry.mjs   seeded synthetic registry data -> data/registry.js
@@ -67,9 +67,26 @@ Inclusion and exclusion rules are on the Methods tab. ECG-based estimators of ec
 
 A real evaluation should write the same shape with `simulated: false`, which clears the banner and the Simulated tag. Keep the endpoint ids (`lvef_mae`, `auc`, `diag_quality`, …) so the charts keep working. Charts show the leading 10 rows per finding and state how many were left out.
 
+## Site quality data
+
+The same file carries a `quality` object for the Site Quality tab:
+
+- `quality.metrics` — the nine metrics the registry reports as live. Each has an `id`, a `section`, a `label`, a `short` label, a `unit` (`%` or `h`), a `direction` (`higher` or `lower`), a numerator and denominator description, a `benchmark` (the registry target), a `median` across sites, and a registry-wide `registry_value` with its own `n` / `d` and monthly series.
+- `quality.sites` — eight anonymised sites (`Site A` … `Site H`) with a setting, study volume, staffing counts, an image-quality mix, and one entry per metric holding the site value, numerator, denominator, rank, and a monthly series where every month carries its own `n` and `d`.
+- `quality.months` and `quality.quarters` — the selectable intervals.
+
+Cell colour comes from the percentage distance to the benchmark, in four steps each side of a within-1% band: blue better, red worse, grey within. The ramp lives in CSS as `--dv-w4` … `--dv-b4` with a neutral `--dv-0`, defined for both themes. Quarters, period totals and the registry roll-up are denominator-weighted, so they are pooled rates rather than averages of rates.
+
+The tab's controls are all live: metric and site multi-selects, monthly or quarterly intervals, a from/to range, a benchmark source (registry target or median), an N/D toggle, and a CSV export of the current view.
+
+## Demo wash
+
+The AI Benchmarking and Site Quality tabs carry generated numbers, so both are stamped: a flat light-grey overlay at 45% opacity (`.demo-wash`, `--demo-wash` per theme) fixed over the viewport, plus a `DEMO` badge above it. Both are `pointer-events: none`, so the page underneath stays fully usable. `DEMO_TABS` in `assets/app.js` controls which tabs get it; remove a tab from that list once its numbers are real.
+
 ## Screenshots
 
 ![Products](docs/screenshots/products-desktop.png)
 ![Product detail](docs/screenshots/product-detail-desktop.png)
-![Registry placeholder](docs/screenshots/registry-desktop.png)
+![AI benchmarking placeholder](docs/screenshots/registry-desktop.png)
+![Site quality placeholder](docs/screenshots/quality-desktop.png)
 ![Mobile](docs/screenshots/products-mobile.png)

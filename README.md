@@ -1,12 +1,12 @@
 # AI Echo Central
 
-Catalog of FDA-cleared AI echocardiography products, styled on the American Society of Echocardiography identity, with a second tab that shows how each product would be scored on the ASE ImageGuideEcho Registry.
+An American Society of Echocardiography [ImageGuideEcho Registry](https://www.asecho.org/practice-clinical-resources/imageguideecho-registry/) project. Catalog of FDA-cleared AI echocardiography products, with a second tab that scores each product against the registry’s adult TTE module.
 
 - **Products tab.** Every 510(k) and De Novo on FDA’s AI-enabled device list that operates on cardiac ultrasound. Each product carries its clearance history, indications, the performance metrics reported in its FDA summary (with verbatim quotes and page numbers), training and validation sample sizes where disclosed, prior validations, resolved publications, and registered trials.
-- **ASE Registry Performance tab.** Synthetic scores from a fixed seed. The layout mirrors the registry’s adult TTE data elements and quality metrics so a real evaluation can drop in later.
+- **Registry Performance tab.** The evaluation design, wired to the registry’s adult TTE data elements and quality metrics. Scores are synthetic from a fixed seed until the first evaluation cycle runs.
 - **Methods tab.** Inclusion and exclusion rules, sources, verification levels, product codes, and excluded clearances.
 
-Independent catalog, not affiliated with the American Society of Echocardiography.
+
 
 ## Deploy
 

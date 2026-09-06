@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Echo Central</title>
-<meta name="description" content="Catalog of FDA-cleared AI echocardiography products: clearance history, performance evidence quoted from FDA summaries, training and validation sample sizes, and linked publications.">
+<meta name="description" content="An American Society of Echocardiography ImageGuideEcho Registry project. Catalog of FDA-cleared AI echocardiography products: clearance history, performance evidence quoted from FDA summaries, training and validation sample sizes, and linked publications.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap">
@@ -335,11 +335,11 @@ blockquote.q { margin: 0; padding: 10px 14px; border-left: 3px solid var(--indig
         <path d="M20 35.5C7.5 27 2.5 17.5 7.6 10.2 11.3 5 17.6 5.6 20 10.6 22.4 5.6 28.7 5 32.4 10.2 37.5 17.5 32.5 27 20 35.5Z" fill="url(#ase-g)"/>
         <path d="M9.5 21h5.2l2.1-4.4 3.4 9.6 2.6-6.6 1.6 1.4h6.1" fill="none" stroke="#fff" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"/>
       </svg>
-      <span class="brand-text"><span class="brand-name">AI Echo Central</span><span class="brand-sub">FDA-cleared AI for echocardiography</span></span>
+      <span class="brand-text"><span class="brand-name">AI Echo Central</span><span class="brand-sub">American Society of Echocardiography · ImageGuideEcho Registry</span></span>
     </a>
     <nav class="tabs" aria-label="Sections">
       <a href="#products" data-tab="products" aria-current="page">Products</a>
-      <a href="#registry" data-tab="registry"><span class="long">ASE </span>Registry<span class="long"> Performance</span></a>
+      <a href="#registry" data-tab="registry">Registry<span class="long"> Performance</span></a>
       <a href="#methods" data-tab="methods">Methods</a>
     </nav>
   </div>
@@ -393,8 +393,8 @@ blockquote.q { margin: 0; padding: 10px 14px; border-left: 3px solid var(--indig
   <!-- ============ REGISTRY ============ -->
   <section id="registry" class="tab-panel" aria-labelledby="registry-h" hidden>
     <div class="page-head">
-      <h1 id="registry-h">Performance on the ASE ImageGuideEcho Registry <span class="placeholder-tag">Placeholder</span></h1>
-      <p class="lede">Scores are synthetic, from a fixed seed. Agreement products run against reported LVEF, volumes, strain and valve measurements; detection products against registry-reported disease; guidance products against registry quality metrics. Registry facts at the bottom are sourced.</p>
+      <h1 id="registry-h">Performance on the ImageGuideEcho Registry <span class="placeholder-tag">Placeholder</span></h1>
+      <p class="lede">The evaluation design for scoring cleared AI against the registry’s adult TTE module. Agreement products run against reported LVEF, volumes, strain and valve measurements; detection products against registry-reported disease; guidance products against registry quality metrics. Scores shown are synthetic, from a fixed seed, pending the first evaluation cycle.</p>
     </div>
     <div class="kpis" id="reg-kpis"></div>
     <div class="reg-layout" id="reg-charts"></div>
@@ -422,7 +422,7 @@ blockquote.q { margin: 0; padding: 10px 14px; border-left: 3px solid var(--indig
   <section id="methods" class="tab-panel" aria-labelledby="methods-h" hidden>
     <div class="page-head">
       <h1 id="methods-h">Methods</h1>
-      <p class="lede">How products were found, what counts as an AI echo product, and what each verification level means.</p>
+      <p class="lede">How products were found, what counts as an AI echo product, and what each verification level means. Maintained for the ImageGuideEcho Registry.</p>
     </div>
     <div class="prose">
       <h2>Inclusion</h2>
@@ -487,7 +487,7 @@ blockquote.q { margin: 0; padding: 10px 14px; border-left: 3px solid var(--indig
 <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
 
 <footer class="site-footer wrap">
-  <span>Independent catalog. Not affiliated with the American Society of Echocardiography.</span>
+  <span>An <a href="https://www.asecho.org/">American Society of Echocardiography</a> <a href="https://www.asecho.org/practice-clinical-resources/imageguideecho-registry/">ImageGuideEcho Registry</a> project.</span>
   <span id="footer-build"></span>
 </footer>
 
@@ -38807,7 +38807,7 @@ window.AIECHO_REGISTRY = {
         ${f.n_papers ? `<ol class="papers">${f.papers.map((p) => `<li><span class="t">${p.doi ? `<a href="https://doi.org/${esc(p.doi)}" rel="noopener">${esc(p.title)}</a>` : p.url ? `<a href="${esc(p.url)}" rel="noopener">${esc(p.title)}</a>` : esc(p.title)}</span><span class="m">${[p.first_author ? esc(p.first_author) + ' et al.' : '', p.journal ? esc(p.journal) : '', p.year || ''].filter(Boolean).join(' · ')}${p.pmid ? ` · <a href="https://pubmed.ncbi.nlm.nih.gov/${esc(p.pmid)}/" rel="noopener">PMID ${esc(p.pmid)}</a>` : ''} · <span class="chip">${esc(p.relation)}</span> ${vl(p.verification)}</span>${p.key_result ? `<span>${esc(p.key_result)}${p.n_subjects ? ` (n = ${fmtN(p.n_subjects)})` : ''}</span>` : ''}</li>`).join('')}</ol>` : '<p class="notice">None found.</p>'}
       </section>
       ${(f.clinical_trials || []).length ? `<section class="psec"><h3>Registered trials</h3><ul class="papers">${f.clinical_trials.map((t) => `<li><span class="t"><a href="${esc(t.url)}" rel="noopener">${esc(t.nct_id)}</a> ${esc(t.title)}</span><span class="m">${esc(t.status || '')}</span></li>`).join('')}</ul></section>` : ''}
-      <section class="psec"><h3>ASE registry performance${ptag()}</h3>
+      <section class="psec"><h3>Registry performance${ptag()}</h3>
         ${reg && reg.evaluable ? `<dl class="kv"><dt>Cohort</dt><dd class="num">${fmtN(reg.cohort.n_studies)} TTEs · ${reg.cohort.n_sites} sites · ${esc(reg.cohort.period)}</dd>${primaryReg ? `<dt>${esc(primaryReg.label)}</dt><dd class="num">${primaryReg.value}${primaryReg.unit ? ' ' + esc(primaryReg.unit) : ''} (95% CI ${primaryReg.ci.low} to ${primaryReg.ci.high})</dd>` : ''}<dt>Feasibility</dt><dd class="num">${(() => { const fe = reg.endpoints.find((e) => e.id === 'feasibility'); return fe ? fe.value + '%' : '—'; })()}</dd></dl><p class="notice"><a href="#registry/${esc(f.id)}" data-reg="${esc(f.id)}">Open the registry tab for this product.</a></p>` : `<p class="not-evaluable">${reg ? esc(reg.reason) : 'Not evaluated.'}</p>`}
       </section>
       ${(f.open_questions || []).length ? `<section class="psec"><h3>Open questions</h3><ul class="oq">${f.open_questions.map((q) => `<li>${esc(q)}</li>`).join('')}</ul></section>` : ''}

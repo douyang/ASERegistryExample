@@ -104,6 +104,33 @@ const server = http.createServer((req, res) => {
   expect(!overR, 'no horizontal page scroll (mobile registry)');
   await m.screenshot({ path: path.join(shots, 'registry-mobile.png'), fullPage: false });
 
+  // ---- single-file bundle, wrapped the way the artifact host wraps it
+  const bundlePath = path.join(root, 'dist', 'ai-echo-central.html');
+  if (fs.existsSync(bundlePath)) {
+    const inner = fs.readFileSync(bundlePath, 'utf8')
+      .replace(/<!DOCTYPE html>\s*/i, () => '').replace(/<\/?html[^>]*>\s*/gi, () => '')
+      .replace(/<\/?head>\s*/gi, () => '').replace(/<\/?body>\s*/gi, () => '');
+    const wrapped = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0}[hidden]{display:none!important}</style></head><body>\n${inner}\n</body></html>`;
+    fs.writeFileSync(path.join(root, 'dist', '.bundle-check.html'), wrapped);
+    const bp = await page({ width: 1280, height: 900 });
+    const bundleErrors = [];
+    bp.on('pageerror', (e) => bundleErrors.push(e.message));
+    await bp.goto(base + 'dist/.bundle-check.html', { waitUntil: 'load' }); await bp.waitForTimeout(800);
+    expect(bundleErrors.length === 0, `bundle runs without script errors (${bundleErrors[0] || ''})`);
+    expect((await bp.locator('#cards .card').count()) === nCards, 'bundle renders every product card');
+    await bp.fill('#search', 'echogo'); await bp.waitForTimeout(300);
+    const nSearch = await bp.locator('#cards .card').count();
+    expect(nSearch > 0 && nSearch < nCards, 'bundle search narrows the list');
+    await bp.fill('#search', ''); await bp.waitForTimeout(300);
+    await bp.locator('.view-toggle button[data-view=table]').click(); await bp.waitForTimeout(200);
+    expect((await bp.locator('#table tbody tr').count()) === nCards, 'bundle table view works');
+    await bp.locator('.tabs a[data-tab=registry]').click(); await bp.waitForTimeout(500);
+    expect(!(await bp.locator('#registry').isHidden()), 'bundle tab switching works');
+    fs.unlinkSync(path.join(root, 'dist', '.bundle-check.html'));
+  } else {
+    errors.push('dist/ai-echo-central.html missing; run node scripts/bundle-single.mjs');
+  }
+
   await browser.close(); server.close();
   if (errors.length) { console.error('VALIDATION FAILED'); for (const e of errors) console.error(' -', e); process.exit(1); }
   console.log(`VALIDATION OK: ${nCards} products, ${nRows} registry rows; screenshots in docs/screenshots`);

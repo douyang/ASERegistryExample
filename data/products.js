@@ -406,6 +406,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -1151,6 +1152,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 4,
    "n_papers": 4,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -1418,6 +1420,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -1869,6 +1872,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 1,
    "n_papers": 1,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -2404,6 +2408,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -2754,6 +2759,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -3129,6 +3135,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 4,
    "n_papers": 4,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -3421,6 +3428,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -3863,6 +3871,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 7,
    "n_papers": 7,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -4068,6 +4077,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -4419,6 +4429,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 8,
    "n_papers": 8,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -5051,6 +5062,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 5,
    "n_papers": 5,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -5416,6 +5428,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 6,
    "n_papers": 6,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -5621,6 +5634,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -6087,6 +6101,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 5,
    "n_papers": 5,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -6721,6 +6736,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -7022,6 +7038,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -7682,6 +7699,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -8729,6 +8747,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 6,
    "n_papers": 6,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -9655,6 +9674,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -10124,6 +10144,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 12,
    "n_papers": 12,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -11139,6 +11160,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 11,
    "n_papers": 11,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -11321,6 +11343,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -11664,6 +11687,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -11904,6 +11928,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -12258,6 +12283,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
+   "declared_interest": "The maintainer of this catalog, ASE ImageGuideEcho Registry chair David Ouyang, co-founded InVision Medical Technology and is the openFDA contact on this clearance.",
    "research_pending": false
   },
   {
@@ -12506,6 +12532,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 5,
    "n_papers": 5,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -13069,6 +13096,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -13589,6 +13617,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 12,
    "n_papers": 12,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -14425,6 +14454,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 15,
    "n_papers": 15,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -14709,6 +14739,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -15405,6 +15436,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 14,
    "n_papers": 14,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -15722,6 +15754,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -16405,6 +16438,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 6,
    "n_papers": 6,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -16830,6 +16864,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 8,
    "n_papers": 8,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -17388,6 +17423,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -17811,6 +17847,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -18136,6 +18173,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 5,
    "n_papers": 5,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -18609,6 +18647,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 5,
    "n_papers": 5,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -19090,6 +19129,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 4,
    "n_papers": 4,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -19319,6 +19359,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -19646,6 +19687,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
+   "declared_interest": "The maintainer of this catalog, ASE ImageGuideEcho Registry chair David Ouyang, co-founded InVision Medical Technology and is the openFDA contact on this clearance.",
    "research_pending": false
   },
   {
@@ -20734,6 +20776,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 26,
    "n_papers": 26,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -20992,6 +21035,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -21510,6 +21554,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -21703,6 +21748,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -22169,6 +22215,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 17,
    "n_papers": 17,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -22703,6 +22750,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 8,
    "n_papers": 8,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -23085,6 +23133,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 6,
    "n_papers": 6,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -23566,6 +23615,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 9,
    "n_papers": 9,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   }
  ],

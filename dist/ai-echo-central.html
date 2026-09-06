@@ -501,6 +501,12 @@ table.scorecard tr.na td { color: var(--ink-3); }
 .qc-cell.nd, .sc-tiles .tile.nd, .pill-dv.nd { outline: 1px dashed var(--line-2); outline-offset: -1px; }
 .qc-key .sw.nd { border-radius: 2px; }
 
+/* declared interest: the catalog maintainer holds an interest in two of the products it lists */
+.chip.coi { border-color: var(--placeholder-line); background: var(--placeholder-bg); color: var(--placeholder-ink); font-weight: 600; }
+.coi-note { border: 1px solid var(--placeholder-line); background: var(--placeholder-bg); color: var(--placeholder-ink); border-radius: var(--radius); padding: 10px 12px; font-size: 13.5px; }
+.coi-note b { display: block; font-family: var(--font-display); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
+.coi-mark { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 3px; background: var(--placeholder-bg); color: var(--placeholder-ink); border: 1px solid var(--placeholder-line); white-space: nowrap; cursor: default; }
+
 </style>
 </head>
 <body>
@@ -706,6 +712,9 @@ table.scorecard tr.na td { color: var(--ink-3); }
           <tr><td><span class="vlevel unverified">Unverified</span></td><td>Reported, not confirmed against a source.</td></tr>
         </tbody>
       </table></div>
+      <h2>Declared interests</h2>
+      <p>The maintainer of this catalog, ASE ImageGuideEcho Registry chair David Ouyang, co-founded InVision Medical Technology and is the openFDA contact on both of its clearances (K232331, K243866). Both products are listed in this catalog and both carry the disclosure on their record. A catalog that rates products cannot be silent about an interest in two of them.</p>
+      <p>The same disclosure governs the benchmarking design: any evaluation that scores a product in which the registry’s officers hold an interest has to be run and reported by people who do not.</p>
       <h2>Site quality metrics</h2>
       <p>The Site Quality tab reports the nine quality metrics the registry lists as live, for every enrolled site, against a benchmark, plus four proposed AI-assisted reporting metrics kept separate from them.</p>
       <ul>
@@ -1227,6 +1236,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -1972,6 +1982,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 4,
    "n_papers": 4,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -2239,6 +2250,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -2690,6 +2702,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 1,
    "n_papers": 1,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -3225,6 +3238,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -3575,6 +3589,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -3950,6 +3965,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 4,
    "n_papers": 4,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -4242,6 +4258,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -4684,6 +4701,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 7,
    "n_papers": 7,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -4889,6 +4907,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -5240,6 +5259,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 8,
    "n_papers": 8,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -5872,6 +5892,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 5,
    "n_papers": 5,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -6237,6 +6258,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 6,
    "n_papers": 6,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -6442,6 +6464,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -6908,6 +6931,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 5,
    "n_papers": 5,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -7542,6 +7566,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -7843,6 +7868,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -8503,6 +8529,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -9550,6 +9577,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 6,
    "n_papers": 6,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -10476,6 +10504,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -10945,6 +10974,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 12,
    "n_papers": 12,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -11960,6 +11990,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 11,
    "n_papers": 11,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -12142,6 +12173,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -12485,6 +12517,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -12725,6 +12758,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -13079,6 +13113,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
+   "declared_interest": "The maintainer of this catalog, ASE ImageGuideEcho Registry chair David Ouyang, co-founded InVision Medical Technology and is the openFDA contact on this clearance.",
    "research_pending": false
   },
   {
@@ -13327,6 +13362,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 5,
    "n_papers": 5,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -13890,6 +13926,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -14410,6 +14447,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 12,
    "n_papers": 12,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -15246,6 +15284,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 15,
    "n_papers": 15,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -15530,6 +15569,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -16226,6 +16266,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 14,
    "n_papers": 14,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -16543,6 +16584,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -17226,6 +17268,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 6,
    "n_papers": 6,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -17651,6 +17694,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 8,
    "n_papers": 8,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -18209,6 +18253,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -18632,6 +18677,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -18957,6 +19003,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 5,
    "n_papers": 5,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -19430,6 +19477,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 5,
    "n_papers": 5,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -19911,6 +19959,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 4,
    "n_papers": 4,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -20140,6 +20189,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -20467,6 +20517,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 2,
    "n_papers": 2,
    "research_verified": true,
+   "declared_interest": "The maintainer of this catalog, ASE ImageGuideEcho Registry chair David Ouyang, co-founded InVision Medical Technology and is the openFDA contact on this clearance.",
    "research_pending": false
   },
   {
@@ -21555,6 +21606,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 26,
    "n_papers": 26,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -21813,6 +21865,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -22331,6 +22384,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 3,
    "n_papers": 3,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -22524,6 +22578,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 0,
    "n_papers": 0,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -22990,6 +23045,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 17,
    "n_papers": 17,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -23524,6 +23580,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 8,
    "n_papers": 8,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -23906,6 +23963,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 6,
    "n_papers": 6,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   },
   {
@@ -24387,6 +24445,7 @@ window.AIECHO_PRODUCTS = {
    "n_papers_resolved": 9,
    "n_papers": 9,
    "research_verified": true,
+   "declared_interest": null,
    "research_pending": false
   }
  ],
@@ -54300,6 +54359,7 @@ window.AIECHO_REGISTRY = {
     if (f.n_other_claims) out.push(`<span class="chip">${f.n_other_claims} published/company metric${f.n_other_claims > 1 ? 's' : ''}</span>`);
     if (f.n_papers) out.push(`<span class="chip on">${f.n_papers_resolved}/${f.n_papers} paper${f.n_papers > 1 ? 's' : ''} resolved</span>`);
     if (f.training_data && f.training_data.disclosed) out.push('<span class="chip on">Training n disclosed</span>');
+    if (f.declared_interest) out.push('<span class="chip coi">Declared interest</span>');
     if (f.pathways.some((p) => /PCCP/.test(p))) out.push('<span class="chip flag">PCCP</span>');
     if (f.pathways.includes('De Novo')) out.push('<span class="chip flag">De Novo</span>');
     const seenChip = new Set();
@@ -54337,7 +54397,7 @@ window.AIECHO_REGISTRY = {
     const host = $('#table');
     if (!list.length) { host.innerHTML = '<p class="empty">No AI products match.</p>'; return; }
     host.innerHTML = `<table><thead><tr><th>AI product</th><th>Company</th><th>Function</th><th>Latest clearance</th><th class="r">Clearances</th><th>Pathway</th><th>Code</th><th class="r">FDA summary metrics</th><th class="r">Papers</th><th>Training set</th></tr></thead><tbody>${list.map((f) => `
-      <tr><td><button class="link" type="button" data-open="${esc(f.id)}" title="${esc(f.product_name)}">${esc(shortName(f.product_name))}</button></td><td>${esc(companyShort(f.company))}</td><td>${f.research_pending ? 'Research pending' : esc(CAT[f.category] || f.category)}</td><td class="num">${fmtDate(f.latest_cleared)}</td><td class="r num">${f.n_clearances}</td><td>${esc(f.pathways.join(', '))}</td><td>${esc(f.product_codes.join(', '))}</td><td class="r num">${f.n_fda_claims}</td><td class="r num">${f.n_papers_resolved}/${f.n_papers}</td><td class="num">${trainingCell(f.training_data)}</td></tr>`).join('')}</tbody></table>`;
+      <tr><td><button class="link" type="button" data-open="${esc(f.id)}" title="${esc(f.product_name)}">${esc(shortName(f.product_name))}</button>${f.declared_interest ? ' <span class="coi-mark" data-tip="' + esc('<b>Declared interest</b>' + f.declared_interest) + '">declared interest</span>' : ''}</td><td>${esc(companyShort(f.company))}</td><td>${f.research_pending ? 'Research pending' : esc(CAT[f.category] || f.category)}</td><td class="num">${fmtDate(f.latest_cleared)}</td><td class="r num">${f.n_clearances}</td><td>${esc(f.pathways.join(', '))}</td><td>${esc(f.product_codes.join(', '))}</td><td class="r num">${f.n_fda_claims}</td><td class="r num">${f.n_papers_resolved}/${f.n_papers}</td><td class="num">${trainingCell(f.training_data)}</td></tr>`).join('')}</tbody></table>`;
   }
 
   // ---------- detail panel ----------
@@ -54392,8 +54452,8 @@ window.AIECHO_REGISTRY = {
         <p class="co">${esc(f.company)}</p>
         <div class="panel-links">${links}</div>
         <div class="chips">${panelChips(f)}</div>
+        ${f.declared_interest ? `<p class="coi-note" role="note"><b>Declared interest</b> ${esc(f.declared_interest)}</p>` : ''}
         ${f.summary ? `<p>${esc(f.summary)}</p>` : ''}
-        
       </div>
       ${f.indications_for_use_quote || f.intended_use_quote ? `<section class="psec"><h3>Indications for use <small>FDA summary</small></h3><blockquote class="q">${esc(f.indications_for_use_quote || f.intended_use_quote)}</blockquote></section>` : ''}
       ${feats.length ? `<section class="psec"><h3>Cardiac AI features in these clearances</h3><ul class="papers">${feats.map((e) => `<li><span class="t">${esc(e.name)}</span><span>${esc(e.function)}</span><span class="m">${e.first_k_number ? `First in ${esc(e.first_k_number)}${byId.has(f.id) && !f.clearances.some((c) => c.k_number === e.first_k_number) ? ' (predicate, not in this catalog)' : ''} · ` : ''}${e.quote ? `“${esc(e.quote)}”` : ''}</span></li>`).join('')}</ul></section>` : ''}

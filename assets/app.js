@@ -140,6 +140,7 @@
     if (f.n_other_claims) out.push(`<span class="chip">${f.n_other_claims} published/company metric${f.n_other_claims > 1 ? 's' : ''}</span>`);
     if (f.n_papers) out.push(`<span class="chip on">${f.n_papers_resolved}/${f.n_papers} paper${f.n_papers > 1 ? 's' : ''} resolved</span>`);
     if (f.training_data && f.training_data.disclosed) out.push('<span class="chip on">Training n disclosed</span>');
+    if (f.declared_interest) out.push('<span class="chip coi">Declared interest</span>');
     if (f.pathways.some((p) => /PCCP/.test(p))) out.push('<span class="chip flag">PCCP</span>');
     if (f.pathways.includes('De Novo')) out.push('<span class="chip flag">De Novo</span>');
     const seenChip = new Set();
@@ -177,7 +178,7 @@
     const host = $('#table');
     if (!list.length) { host.innerHTML = '<p class="empty">No AI products match.</p>'; return; }
     host.innerHTML = `<table><thead><tr><th>AI product</th><th>Company</th><th>Function</th><th>Latest clearance</th><th class="r">Clearances</th><th>Pathway</th><th>Code</th><th class="r">FDA summary metrics</th><th class="r">Papers</th><th>Training set</th></tr></thead><tbody>${list.map((f) => `
-      <tr><td><button class="link" type="button" data-open="${esc(f.id)}" title="${esc(f.product_name)}">${esc(shortName(f.product_name))}</button></td><td>${esc(companyShort(f.company))}</td><td>${f.research_pending ? 'Research pending' : esc(CAT[f.category] || f.category)}</td><td class="num">${fmtDate(f.latest_cleared)}</td><td class="r num">${f.n_clearances}</td><td>${esc(f.pathways.join(', '))}</td><td>${esc(f.product_codes.join(', '))}</td><td class="r num">${f.n_fda_claims}</td><td class="r num">${f.n_papers_resolved}/${f.n_papers}</td><td class="num">${trainingCell(f.training_data)}</td></tr>`).join('')}</tbody></table>`;
+      <tr><td><button class="link" type="button" data-open="${esc(f.id)}" title="${esc(f.product_name)}">${esc(shortName(f.product_name))}</button>${f.declared_interest ? ' <span class="coi-mark" data-tip="' + esc('<b>Declared interest</b>' + f.declared_interest) + '">declared interest</span>' : ''}</td><td>${esc(companyShort(f.company))}</td><td>${f.research_pending ? 'Research pending' : esc(CAT[f.category] || f.category)}</td><td class="num">${fmtDate(f.latest_cleared)}</td><td class="r num">${f.n_clearances}</td><td>${esc(f.pathways.join(', '))}</td><td>${esc(f.product_codes.join(', '))}</td><td class="r num">${f.n_fda_claims}</td><td class="r num">${f.n_papers_resolved}/${f.n_papers}</td><td class="num">${trainingCell(f.training_data)}</td></tr>`).join('')}</tbody></table>`;
   }
 
   // ---------- detail panel ----------
@@ -232,8 +233,8 @@
         <p class="co">${esc(f.company)}</p>
         <div class="panel-links">${links}</div>
         <div class="chips">${panelChips(f)}</div>
+        ${f.declared_interest ? `<p class="coi-note" role="note"><b>Declared interest</b> ${esc(f.declared_interest)}</p>` : ''}
         ${f.summary ? `<p>${esc(f.summary)}</p>` : ''}
-        
       </div>
       ${f.indications_for_use_quote || f.intended_use_quote ? `<section class="psec"><h3>Indications for use <small>FDA summary</small></h3><blockquote class="q">${esc(f.indications_for_use_quote || f.intended_use_quote)}</blockquote></section>` : ''}
       ${feats.length ? `<section class="psec"><h3>Cardiac AI features in these clearances</h3><ul class="papers">${feats.map((e) => `<li><span class="t">${esc(e.name)}</span><span>${esc(e.function)}</span><span class="m">${e.first_k_number ? `First in ${esc(e.first_k_number)}${byId.has(f.id) && !f.clearances.some((c) => c.k_number === e.first_k_number) ? ' (predicate, not in this catalog)' : ''} · ` : ''}${e.quote ? `“${esc(e.quote)}”` : ''}</span></li>`).join('')}</ul></section>` : ''}

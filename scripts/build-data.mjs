@@ -12,6 +12,15 @@ const read = (f) => JSON.parse(fs.readFileSync(path.join(rdir, f), 'utf8'));
 const openfda = read('openfda_records.json');
 const seed = read('families.json');
 const aiListCsv = fs.readFileSync(path.join(rdir, 'fda_ai_enabled_devices_list.csv'), 'utf8').replace(/^\uFEFF/, '');
+// Declared interests. The registry chair maintaining this catalog co-founded InVision Medical
+// Technology and is the openFDA contact on both of its clearances, so those records carry a disclosure
+// on the card, in the detail panel and in the table. A catalog that rates products cannot stay silent
+// about an interest in two of them.
+const DECLARED_INTERESTS = {
+  'invision-lvef': 'The maintainer of this catalog, ASE ImageGuideEcho Registry chair David Ouyang, co-founded InVision Medical Technology and is the openFDA contact on this clearance.',
+  'invision-amyloid': 'The maintainer of this catalog, ASE ImageGuideEcho Registry chair David Ouyang, co-founded InVision Medical Technology and is the openFDA contact on this clearance.',
+};
+
 const ON_AI_LIST = new Set(aiListCsv.split(/\r?\n/).slice(1).map((l) => (l.split(',')[1] || '').trim().toUpperCase()).filter(Boolean));
 const warnings = [];
 const caveats = [];
@@ -171,6 +180,7 @@ for (const fam of researched.values()) {
     n_papers_resolved: papers.filter((p) => /^(doi|pmid)_resolved/.test(String(p.verification || '').trim())).length,
     n_papers: papers.length,
     research_verified: !!fam._verified,
+    declared_interest: DECLARED_INTERESTS[fam.id] || null,
     research_pending: !!fam._research_pending,
   });
 }

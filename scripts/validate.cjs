@@ -121,6 +121,17 @@ const server = http.createServer((req, res) => {
   const over = await d.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
   expect(!over, 'no horizontal page scroll (desktop)');
 
+  // declared interest: the catalog maintainer holds an interest in two of the listed products
+  await d.goto(base + 'index.html#products', { waitUntil: 'load' }); await d.waitForTimeout(500);
+  const coi = await d.evaluate(() => (window.AIECHO_PRODUCTS.families || []).filter((f) => f.declared_interest).map((f) => f.id));
+  expect(coi.length > 0, 'at least one product carries a declared interest');
+  expect((await d.locator('#cards .chip.coi').count()) === coi.length, `every declared-interest product is flagged on its card (${coi.length})`);
+  await d.goto(base + `index.html#product/${coi[0]}`, { waitUntil: 'load' }); await d.waitForTimeout(600);
+  expect((await d.locator('#panel .coi-note').count()) === 1, 'the detail panel discloses the interest');
+  const coiText = await d.locator('#panel .coi-note').textContent();
+  expect(/co-founded/i.test(coiText) && /Ouyang/.test(coiText), 'the disclosure names the interest');
+  await d.keyboard.press('Escape'); await d.waitForTimeout(250);
+
   // ---- mobile
   const m = await page({ width: 390, height: 844 });
   await m.goto(base + 'index.html#products', { waitUntil: 'load' }); await m.waitForTimeout(600);

@@ -118,6 +118,12 @@ Design rules the code enforces:
 
 Benchmarking runs are point-in-time analyses of a dated, frozen registry extract, so there is no month-to-month view. Every evaluation states which extract it used (`dataset`: label, extract date, study period, extract size, inclusion rule) and when it ran (`analysis`: type, run date, protocol version). Products are scored against different extracts, so the charts either say which extracts they pool or are pinned to one with the **Dataset** picker.
 
+## Declared interests
+
+`scripts/build-data.mjs` carries a `DECLARED_INTERESTS` map keyed by family id, surfaced as `declared_interest` on the family record. The catalog's maintainer, registry chair David Ouyang, co-founded InVision Medical Technology and is the openFDA contact on both of its clearances (K232331, K243866), and both products are in the catalog. The disclosure renders as a chip on the card, a marked cell in the table, a note in the detail panel, and a section in Methods. `validate.cjs` asserts every flagged product shows the chip and that the panel note names the interest.
+
+Add an entry to that map whenever a maintainer or registry officer holds an interest in a listed product. A catalog that rates products cannot be silent about an interest in one of them.
+
 ## Demo wash
 
 The AI Benchmarking and Site Quality tabs carry generated numbers, so both are stamped: a flat light-grey overlay at 45% opacity (`.demo-wash`, `--demo-wash` per theme) fixed over the viewport, plus a `DEMO` badge above it. Both are `pointer-events: none`, so the page underneath stays fully usable. `DEMO_TABS` in `assets/app.js` controls which tabs get it; remove a tab from that list once its numbers are real.

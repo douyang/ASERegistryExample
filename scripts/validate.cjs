@@ -129,6 +129,62 @@ const server = http.createServer((req, res) => {
   const overR = await m.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
   expect(!overR, 'no horizontal page scroll (mobile registry)');
   await m.screenshot({ path: path.join(shots, 'registry-mobile.png'), fullPage: false });
+  await m.goto(base + 'index.html#quality', { waitUntil: 'load' }); await m.waitForTimeout(700);
+  expect((await m.locator('#qc-grid .qc-cell').count()) > 0, 'quality grid renders on mobile');
+  expect(await m.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1), 'no horizontal page scroll (mobile quality)');
+  expect(await m.evaluate(() => { const w = document.querySelector('#qc-grid .qc-grid-wrap'); return w.scrollWidth > w.clientWidth; }), 'wide quality grid scrolls inside its own wrapper on mobile');
+  expect(!(await m.locator('#demo-badge').isHidden()), 'demo badge shown on mobile');
+  await m.screenshot({ path: path.join(shots, 'quality-mobile.png'), fullPage: false });
+
+  // ---- site quality tab
+  await d.setViewportSize({ width: 1400, height: 1000 });
+  await d.goto(base + 'index.html#quality', { waitUntil: 'load' }); await d.waitForTimeout(700);
+  expect(!(await d.locator('#quality').isHidden()), 'quality tab visible');
+  const nQcCells = await d.locator('#qc-grid .qc-cell').count();
+  expect(nQcCells > 0, `site x metric grid cells ${nQcCells}`);
+  expect((await d.locator('#qc-trend .qc-cell').count()) > 0, 'metric x interval grid populated');
+  expect((await d.locator('#qc-table tbody tr').count()) > 0, 'metric library table populated');
+  expect((await d.locator('#qc-scorecard table.scorecard tbody tr').count()) > 0, 'site scorecard populated');
+  expect(!(await d.locator('#demo-wash').isHidden()) && !(await d.locator('#demo-badge').isHidden()), 'demo wash and badge shown on the quality tab');
+  expect(await d.evaluate(() => { const w = getComputedStyle(document.querySelector('#demo-wash')); return Math.abs(Number(w.opacity) - 0.45) < 0.001 && w.pointerEvents === 'none' && w.position === 'fixed'; }), 'demo wash is a fixed, click-through 45% overlay');
+  await d.locator('#qc-interval').selectOption('month'); await d.waitForTimeout(300);
+  const monthCols = await d.locator('#qc-trend thead th').count();
+  await d.locator('#qc-interval').selectOption('quarter'); await d.waitForTimeout(300);
+  expect(monthCols > (await d.locator('#qc-trend thead th').count()), 'monthly view has more intervals than quarterly');
+  const beforeBench = await d.locator('#qc-grid .qc-cell').first().getAttribute('style');
+  await d.locator('#qc-benchmark').selectOption('median'); await d.waitForTimeout(300);
+  expect(beforeBench !== (await d.locator('#qc-grid .qc-cell').first().getAttribute('style')), 'benchmark switch repaints the grid');
+  await d.locator('#qc-benchmark').selectOption('target'); await d.waitForTimeout(250);
+  await d.locator('#qc-nd').check(); await d.waitForTimeout(300);
+  expect((await d.locator('#qc-grid .qc-cell .nd').count()) === nQcCells, 'N and D appear in every grid cell');
+  await d.locator('#qc-nd').uncheck(); await d.waitForTimeout(250);
+  await d.locator('#qc-metric-picker .f-drop summary').click(); await d.waitForTimeout(200);
+  await d.locator('#qc-metric-picker input[value=tat]').uncheck(); await d.waitForTimeout(300);
+  expect((await d.locator('#qc-grid .qc-cell').count()) < nQcCells, 'metric picker narrows the grid');
+  await d.locator('#qc-metric-picker input[value=tat]').check(); await d.waitForTimeout(250);
+  await d.keyboard.press('Escape'); await d.waitForTimeout(150);
+  await d.locator('#qc-site-picker .f-drop summary').click(); await d.waitForTimeout(200);
+  await d.locator('#qc-site-picker input[value=s2]').uncheck(); await d.waitForTimeout(300);
+  expect((await d.locator('#qc-grid .qc-cell').count()) < nQcCells, 'site picker narrows the grid');
+  await d.locator('#qc-site-picker input[value=s2]').check(); await d.waitForTimeout(250);
+  await d.keyboard.press('Escape'); await d.waitForTimeout(150);
+  await d.locator('#qc-grid .qc-cell').first().hover(); await d.waitForTimeout(200);
+  expect(!(await d.locator('#tooltip').isHidden()), 'quality grid cell tooltip');
+  // Capture the blob the export builds without letting the browser follow the download link.
+  const csvHead = await d.evaluate(() => {
+    const origUrl = URL.createObjectURL, origClick = HTMLAnchorElement.prototype.click;
+    let blob = null;
+    URL.createObjectURL = (b) => { blob = b; return 'blob:test'; };
+    HTMLAnchorElement.prototype.click = function () {};
+    document.querySelector('#qc-export').click();
+    URL.createObjectURL = origUrl; HTMLAnchorElement.prototype.click = origClick;
+    return blob ? blob.text() : null;
+  });
+  expect(csvHead && csvHead.startsWith('"Metric","Unit","Comparison","Benchmark"'), 'CSV export produces a header row');
+  expect(await d.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1), 'no horizontal page scroll (quality desktop)');
+  await d.screenshot({ path: path.join(shots, 'quality-desktop.png'), fullPage: false });
+  await d.goto(base + 'index.html#products', { waitUntil: 'load' }); await d.waitForTimeout(400);
+  expect((await d.locator('#demo-wash').isHidden()) && (await d.locator('#demo-badge').isHidden()), 'demo wash hidden on the products tab');
 
   // ---- single-file bundle, wrapped the way the artifact host wraps it
   const bundlePath = path.join(root, 'dist', 'ai-echo-central.html');

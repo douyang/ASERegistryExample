@@ -163,12 +163,108 @@ for (const f of families) {
 }
 products.sort((a, b) => a.label.localeCompare(b.label));
 
+// ---------- per-site quality control ----------
+// Sites are anonymised for the same reason products are. The nine metrics are the nine that the
+// registry reports as live (REGISTRY.quality_metrics); the numbers under them are generated.
+// Generated after the product loop so the product draws above keep the same values for a given seed.
+const QC_METRICS = [
+  { id: 'tat', section: 'Timeliness', label: 'Report turnaround time', short: 'Turnaround time', unit: 'h', direction: 'lower', num: 'Hours from study to finalized report (median)', denom: 'All finalized studies', lo: 3, hi: 34, benchmark: 24 },
+  { id: 'study_completeness', section: 'Study and report completeness', label: 'Study completeness', short: 'Study completeness', unit: '%', direction: 'higher', num: 'Studies with all protocol views acquired', denom: 'All studies', lo: 76, hi: 98, benchmark: 90 },
+  { id: 'report_completeness', section: 'Study and report completeness', label: 'Report completeness', short: 'Report completeness', unit: '%', direction: 'higher', num: 'Reports with all required fields populated', denom: 'All finalized reports', lo: 74, hi: 99, benchmark: 90 },
+  { id: 'quant_completeness', section: 'Study and report completeness', label: 'Quantitative report completeness', short: 'Quantitative completeness', unit: '%', direction: 'higher', num: 'Reports with all required measurements', denom: 'All finalized reports', lo: 62, hi: 95, benchmark: 85 },
+  { id: 'qual_completeness', section: 'Study and report completeness', label: 'Qualitative report completeness', short: 'Qualitative completeness', unit: '%', direction: 'higher', num: 'Reports with all required descriptive fields', denom: 'All finalized reports', lo: 70, hi: 97, benchmark: 88 },
+  { id: 'gradients', section: 'Valvular disease reporting', label: 'Mean and peak gradients for valvular disease', short: 'Valve gradients', unit: '%', direction: 'higher', num: 'Studies reporting mean and peak gradients', denom: 'Studies with valvular disease', lo: 58, hi: 96, benchmark: 85 },
+  { id: 'valve_areas', section: 'Valvular disease reporting', label: 'Valve areas for stenotic lesions', short: 'Valve areas', unit: '%', direction: 'higher', num: 'Studies reporting a valve area', denom: 'Studies with a stenotic lesion', lo: 52, hi: 94, benchmark: 80 },
+  { id: 'regurg', section: 'Valvular disease reporting', label: 'Regurgitation severity reporting', short: 'Regurgitation severity', unit: '%', direction: 'higher', num: 'Studies grading regurgitation severity', denom: 'Studies with regurgitation', lo: 66, hi: 98, benchmark: 90 },
+  { id: 'strain_util', section: 'Advanced imaging utilization', label: 'Strain utilization for chemotherapy, heart failure, or cardiomyopathy', short: 'Strain utilization', unit: '%', direction: 'higher', num: 'Eligible studies reporting strain', denom: 'Eligible chemotherapy, HF or cardiomyopathy studies', lo: 14, hi: 78, benchmark: 50 },
+];
+const QUARTERS = [...new Set(MONTHS.map((m) => { const [y, mm] = m.split('-'); return `${y}-Q${Math.ceil(Number(mm) / 3)}`; }))];
+const SETTINGS = ['Academic medical center', 'Community hospital', 'Integrated health system', 'Outpatient cardiology network'];
+
+// A per-site skill offset shared across metrics, so a strong lab reads as strong on most rows
+// instead of every cell being independent noise.
+const siteSkill = new Map(SITES.map((s) => [s, U(-1, 1)]));
+const qcSites = SITES.map((name, i) => {
+  const skill = siteSkill.get(name);
+  const nStudies = Math.round(U(9000, 68000) / 100) * 100;
+  const metrics = QC_METRICS.map((m) => {
+    const span = m.hi - m.lo;
+    const good = m.direction === 'lower' ? m.lo + span * (0.5 - skill * 0.32) : m.lo + span * (0.5 + skill * 0.32);
+    const value = R(Math.min(m.hi, Math.max(m.lo, good + U(-1, 1) * span * 0.13)), m.unit === 'h' ? 1 : 1);
+    const nDenom = Math.round(nStudies * (m.id === 'strain_util' ? U(0.05, 0.14) : m.id === 'valve_areas' ? U(0.04, 0.11) : m.id === 'gradients' ? U(0.1, 0.22) : m.id === 'regurg' ? U(0.3, 0.55) : 1));
+    // Every interval carries its own numerator and denominator, so the metric table can show the
+    // value over N / D the way the reference registry report does.
+    const monthly = MONTHS.map((mo, k) => {
+      const v = R(Math.min(m.hi, Math.max(m.lo, value * (1 + Math.sin((k + i) / 3.4) * 0.035 + U(-0.035, 0.035)))), 1);
+      const d = Math.round(nDenom / MONTHS.length * U(0.72, 1.28));
+      return { month: mo, value: v, d, n: m.unit === '%' ? Math.round(d * v / 100) : null };
+    });
+    const nNum = m.unit === '%' ? Math.round(nDenom * value / 100) : null;
+    return { id: m.id, value, n: nNum, d: nDenom, monthly };
+  });
+  const poor = R(100 * U(0.03, 0.15) * (1 - skill * 0.3)); const adequate = R(100 * U(0.26, 0.4)); const good = R(100 - poor - adequate);
+  return {
+    id: `s${i + 1}`, label: name, setting: pick(SETTINGS),
+    n_studies: nStudies, n_labs: Math.max(1, Math.round(U(1, 6))), n_sonographers: Math.round(U(8, 46)), n_readers: Math.round(U(5, 28)),
+    image_quality: [{ level: 'Good', pct: good }, { level: 'Adequate', pct: adequate }, { level: 'Poor', pct: poor }],
+    metrics,
+  };
+});
+// Registry-wide reference for each metric: the median across sites, weighted by nothing — a plain
+// median, which is what a site wants to be compared against on a scorecard.
+const median = (xs) => { const a = [...xs].sort((x, y) => x - y); const h = a.length >> 1; return a.length % 2 ? a[h] : R((a[h - 1] + a[h]) / 2); };
+const qcMetrics = QC_METRICS.map((m) => {
+  const vals = qcSites.map((s) => s.metrics.find((x) => x.id === m.id).value);
+  return { ...m, median: median(vals), min: Math.min(...vals), max: Math.max(...vals) };
+});
+// Bands mirror the reference registry report: four steps worse, a within-benchmark band, four
+// steps better, keyed off the percentage difference from the benchmark.
+function band(value, benchmark, direction) {
+  const rel = benchmark === 0 ? 0 : (value - benchmark) / Math.abs(benchmark);
+  const better = direction === 'lower' ? -rel : rel; // positive = better than benchmark
+  const a = Math.abs(better) * 100;
+  const step = a < 1 ? 0 : a < 10 ? 1 : a < 25 ? 2 : a < 50 ? 3 : 4;
+  return { rel_pct: R(better * 100), band: step === 0 ? 0 : (better > 0 ? step : -step) };
+}
+for (const s of qcSites) {
+  for (const mv of s.metrics) {
+    const m = qcMetrics.find((x) => x.id === mv.id);
+    mv.delta = R(mv.value - m.median, 1);
+    Object.assign(mv, band(mv.value, m.benchmark, m.direction));
+    for (const mo of mv.monthly) Object.assign(mo, band(mo.value, m.benchmark, m.direction));
+    // Rank 1 is the best site on this metric, in the direction the metric is scored.
+    const ordered = [...qcSites].sort((a, b) => { const av = a.metrics.find((x) => x.id === mv.id).value, bv = b.metrics.find((x) => x.id === mv.id).value; return m.direction === 'lower' ? av - bv : bv - av; });
+    mv.rank = ordered.findIndex((x) => x.id === s.id) + 1;
+  }
+  s.n_below_median = s.metrics.filter((mv) => mv.rank > qcSites.length / 2).length;
+  s.n_below_benchmark = s.metrics.filter((mv) => mv.band < 0).length;
+}
+// Registry-level roll-up: the denominator-weighted value across every site, which is the number a
+// registry-level QI report leads with.
+for (const m of qcMetrics) {
+  const rows = qcSites.map((s) => s.metrics.find((x) => x.id === m.id));
+  const dTot = rows.reduce((n, r) => n + r.d, 0);
+  m.registry_value = R(rows.reduce((n, r) => n + r.value * r.d, 0) / dTot, 1);
+  m.n = rows.reduce((n, r) => n + (r.n || 0), 0) || null;
+  m.d = dTot;
+  Object.assign(m, band(m.registry_value, m.benchmark, m.direction));
+  m.n_sites_below = rows.filter((r) => r.band < 0).length;
+  m.monthly = MONTHS.map((mo, k) => {
+    const cells = rows.map((r) => r.monthly[k]);
+    const d = cells.reduce((n, c) => n + c.d, 0);
+    const v = R(cells.reduce((n, c) => n + c.value * c.d, 0) / d, 1);
+    return { month: mo, value: v, d, n: m.unit === '%' ? Math.round(d * v / 100) : null, ...band(v, m.benchmark, m.direction) };
+  });
+}
+
+
 const out = {
   simulated: true,
   notice: 'SIMULATED DATA. Every score in this file is generated by scripts/gen-registry.mjs from a fixed seed. No product has been evaluated on the ImageGuideEcho Registry. Products are labelled anonymously so no simulated score is attached to a real device. Facts under "registry" are real and sourced.',
   seed: SEED, generated: GENERATED, registry: REGISTRY,
   n_catalog_products: families.length, n_not_evaluable: nNotEvaluable,
   products,
+  quality: { metrics: qcMetrics, sites: qcSites, months: MONTHS, quarters: QUARTERS, benchmark_source: 'Registry-wide target for the metric (illustrative)', n_metrics: qcMetrics.length, period: `${MONTHS[0]} to ${MONTHS[MONTHS.length - 1]}`, module: 'Adult TTE (phase 1)' },
 };
 fs.writeFileSync(path.join(root, 'data', 'registry.js'), `// Generated by scripts/gen-registry.mjs — PLACEHOLDER, SYNTHETIC DATA. Do not edit by hand.\nwindow.AIECHO_REGISTRY = ${JSON.stringify(out, null, 1)};\n`);
-console.log(`registry simulation: ${products.length} anonymised products of ${families.length} catalog families, seed ${SEED}`);
+console.log(`registry simulation: ${products.length} anonymised products of ${families.length} catalog families, ${qcSites.length} anonymised sites x ${qcMetrics.length} quality metrics, seed ${SEED}`);

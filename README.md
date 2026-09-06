@@ -61,9 +61,11 @@ Inclusion and exclusion rules are on the Methods tab. ECG-based estimators of ec
 5. `node scripts/validate.cjs` — renders the site headless, asserts filters, panel, table, registry and methods work at desktop and phone widths, fails on console errors, and refreshes `docs/screenshots/`. Needs Playwright with Chromium (`PLAYWRIGHT_MODULE=/path/to/playwright` if it is installed globally).
 6. Commit the regenerated data and screenshots with the code.
 
-## Replacing the placeholder registry data
+## Replacing the simulated registry data
 
-`data/registry.js` exposes `window.AIECHO_REGISTRY` with one evaluation per family id: cohort, endpoints (value, 95% CI, reference), subgroups, monthly series. A real evaluation should write the same shape with `placeholder: false`; the banner and tags read that flag. Keep the endpoint ids (`lvef_mae`, `auc`, `diag_quality`, …) so the charts keep working.
+`data/registry.js` exposes `window.AIECHO_REGISTRY` with a `products` array: each entry has an anonymous `id` and `label`, plus cohort, endpoints (value, 95% CI, reference), subgroups and a monthly series. Products, sites and scanner vendors are all anonymised on purpose, so no generated number sits next to a real name; the catalog order is shuffled with the seed before labels are assigned.
+
+A real evaluation should write the same shape with `simulated: false`, which clears the banner and the Simulated tag. Keep the endpoint ids (`lvef_mae`, `auc`, `diag_quality`, …) so the charts keep working. Charts show the leading 10 rows per finding and state how many were left out.
 
 ## Screenshots
 

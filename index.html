@@ -42,45 +42,43 @@
       <div class="stats" id="catalog-stats"></div>
     </div>
 
-    <div class="catalog">
-      <button class="rail-toggle" id="rail-toggle" type="button" aria-expanded="false" aria-controls="rail">Filters</button>
-      <aside class="rail" id="rail" aria-label="Filters">
-        <div id="filters"></div>
-        <button id="clear-filters" type="button">Clear all</button>
-      </aside>
-
-      <div class="results">
-        <div class="toolbar">
-          <label class="search"><span class="sr-only">Search products</span><input id="search" type="search" placeholder="Search product, company, K-number, tag" autocomplete="off"></label>
-          <div class="toolbar-right">
-            <label for="sort">Sort
-              <select id="sort">
-                <option value="latest">Latest clearance</option>
-                <option value="first">First clearance</option>
-                <option value="name">Product A–Z</option>
-                <option value="company">Company A–Z</option>
-                <option value="metrics">Most FDA metrics</option>
-                <option value="papers">Most publications</option>
-              </select>
-            </label>
-            <div class="view-toggle" role="group" aria-label="View">
-              <button type="button" data-view="cards" aria-pressed="true">Cards</button>
-              <button type="button" data-view="table" aria-pressed="false">Table</button>
-            </div>
+    <div class="results">
+      <div class="toolbar">
+        <label class="search"><span class="sr-only">Search products</span><input id="search" type="search" placeholder="Search product, company, K-number, tag" autocomplete="off"></label>
+        <div class="toolbar-right">
+          <label for="sort">Sort
+            <select id="sort">
+              <option value="latest">Latest clearance</option>
+              <option value="first">First clearance</option>
+              <option value="name">Product A–Z</option>
+              <option value="company">Company A–Z</option>
+              <option value="metrics">Most FDA metrics</option>
+              <option value="papers">Most publications</option>
+            </select>
+          </label>
+          <div class="view-toggle" role="group" aria-label="View">
+            <button type="button" data-view="cards" aria-pressed="true">Cards</button>
+            <button type="button" data-view="table" aria-pressed="false">Table</button>
           </div>
         </div>
-        <p class="count" id="count" aria-live="polite"></p>
-        <div id="cards" class="grid"></div>
-        <div id="table" class="table-wrap" hidden></div>
       </div>
+      <div class="filter-bar" id="filters" aria-label="Filters"></div>
+      <div class="active-filters" id="active-filters"></div>
+      <p class="count" id="count" aria-live="polite"></p>
+      <div id="cards" class="grid"></div>
+      <div id="table" class="table-wrap" hidden></div>
     </div>
   </section>
 
   <!-- ============ REGISTRY ============ -->
   <section id="registry" class="tab-panel" aria-labelledby="registry-h" hidden>
     <div class="page-head">
-      <h1 id="registry-h">Performance on the ImageGuideEcho Registry <span class="placeholder-tag">Placeholder</span></h1>
-      <p class="lede">The evaluation design for scoring cleared AI against the registry’s adult TTE module. Agreement products run against reported LVEF, volumes, strain and valve measurements; detection products against registry-reported disease; guidance products against registry quality metrics. Scores shown are synthetic, from a fixed seed, pending the first evaluation cycle.</p>
+      <h1 id="registry-h">Performance on the ImageGuideEcho Registry <span class="placeholder-tag">Simulated</span></h1>
+      <p class="lede">The evaluation design for scoring cleared AI against the registry’s adult TTE module. Agreement products run against reported LVEF, volumes, strain and valve measurements; detection products against registry-reported disease; guidance products against registry quality metrics.</p>
+    </div>
+    <div class="sim-banner" role="note">
+      <b>Simulated data</b>
+      <span>Every score on this tab is generated from a fixed seed, not measured. No product has been evaluated on the registry yet. Products are labelled anonymously so no simulated result is attached to a real device. The registry facts at the bottom of the page are real and sourced.</span>
     </div>
     <div class="kpis" id="reg-kpis"></div>
     <div class="reg-layout" id="reg-charts"></div>

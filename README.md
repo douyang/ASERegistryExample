@@ -142,13 +142,32 @@ node scripts/gen-registry.mjs        # the registry name is baked into generated
 node scripts/bundle-single.mjs
 ```
 
-`set-brand.mjs` writes `data/brand.js`; `assets/app.js` applies it at load. `index.html` carries the **neutral** text statically, so a missing or failed brand config degrades to neutral rather than to a broken masthead. `gen-registry.mjs` reads the active profile so the registry name in `data/registry.js` matches.
+`set-brand.mjs` writes `data/brand.js` (brand profile plus the feature flags); `assets/app.js` applies it at load. `index.html` carries the **neutral** text statically, so a missing or failed brand config degrades to neutral rather than to a broken masthead. `gen-registry.mjs` reads the active profile so the registry name in `data/registry.js` matches.
 
 `validate.cjs` asserts the profile end to end: under `neutral` it fails if the strings "American Society of Echocardiography", "ImageGuideEcho" or "asecho.org" appear anywhere in the DOM, if an attribution line renders, if the society gradient mark is used, or if the registry-facts block is visible. Under `ase` it asserts the opposite. Both profiles pass today.
 
-## Demo wash
+## Feature flags
 
-The AI Benchmarking and Site Quality tabs carry generated numbers, so both are stamped: a flat light-grey overlay at 45% opacity (`.demo-wash`, `--demo-wash` per theme) fixed over the viewport, plus a `DEMO` badge above it. Both are `pointer-events: none`, so the page underneath stays fully usable. `DEMO_TABS` in `assets/app.js` controls which tabs get it; remove a tab from that list once its numbers are real.
+`config/features.json` decides which tabs the build offers. It is deployment config, not branding, so it is the same under either brand profile; `scripts/set-brand.mjs` reads it and writes both into `data/brand.js`.
+
+```json
+{ "methods_tab": false }
+```
+
+The public build ships with **Methods off**. The markup, the renderer and the content all stay in the repo — only the nav link and the panel are pulled, and `methods` leaves the routable set. Flip the flag to `true` and re-run `set-brand.mjs` to put it back.
+
+Two consequences worth knowing:
+
+- The **Views** gallery of captioned screenshots lives at the bottom of Methods, so it is not on the public site while the tab is off.
+- `make-thumbs.cjs` skips any view whose tab is disabled, because the route would fall back to the catalog and the shot would show the wrong page under the right caption.
+
+A hash for a disabled or unknown tab falls back to the first enabled tab and **rewrites the hash**, so the URL never names a view that is not on screen. That was a real bug found while testing this: from the registry tab, a stale `#methods` link changed the address bar and left the registry tab showing.
+
+## Demo badge
+
+The AI Benchmarking and Site Quality tabs carry generated numbers, so both are stamped with a floating `DEMO` badge, fixed bottom-right and `pointer-events: none` so it blocks nothing. `DEMO_TABS` in `assets/app.js` controls which tabs get it; remove a tab from that list once its numbers are real.
+
+There is no longer a grey wash over those tabs. It cost contrast on every chart, and the badge, the `Simulated` tag on the heading and the `SIMULATED DATA` banner already carry the message inline. `validate.cjs` fails if a `.demo-wash` rule or `--demo-wash` token reappears in the stylesheet.
 
 ## Screenshots
 

@@ -713,6 +713,39 @@
     history.replaceState(null, '', `#${h}`);
   }
 
+  // ---------- branding ----------
+  // The public deployment ships the 'neutral' profile: no society logo, name, attribution or registry
+  // identity. `node scripts/set-brand.mjs ase` turns the full identity on. Markup carries the neutral
+  // text statically, so a missing or failed brand config degrades to neutral rather than to nothing.
+  const BRAND = window.AIECHO_BRAND || {};
+  const MARKS = {
+    // Generic: the page's own ink, no society gradient.
+    neutral: '<svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 35.5C7.5 27 2.5 17.5 7.6 10.2 11.3 5 17.6 5.6 20 10.6 22.4 5.6 28.7 5 32.4 10.2 37.5 17.5 32.5 27 20 35.5Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M9.5 21h5.2l2.1-4.4 3.4 9.6 2.6-6.6 1.6 1.4h6.1" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"/></svg>',
+    ase: '<svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="ase-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff0000"/><stop offset="1" stop-color="#1a1ac6"/></linearGradient></defs><path d="M20 35.5C7.5 27 2.5 17.5 7.6 10.2 11.3 5 17.6 5.6 20 10.6 22.4 5.6 28.7 5 32.4 10.2 37.5 17.5 32.5 27 20 35.5Z" fill="url(#ase-g)"/><path d="M9.5 21h5.2l2.1-4.4 3.4 9.6 2.6-6.6 1.6 1.4h6.1" fill="none" stroke="#fff" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"/></svg>',
+  };
+  function applyBrand() {
+    const mark = $('#brand-mark');
+    if (mark) mark.innerHTML = MARKS[BRAND.logo] || MARKS.neutral;
+    if (BRAND.site_name) { $('#brand-name').textContent = BRAND.site_name; document.title = BRAND.site_name; }
+    if (BRAND.tagline) $('#brand-sub').textContent = BRAND.tagline;
+    if (BRAND.description) { const m = $('#meta-description'); if (m) m.setAttribute('content', BRAND.description); }
+    const reg = BRAND.registry || {};
+    if (reg.phrase) for (const el of $$('.brand-registry')) el.textContent = reg.phrase;
+
+    // Attribution only exists when an organisation is named.
+    const foot = $('#footer-brand');
+    if (foot) {
+      const org = BRAND.org, link = (t, u) => (u ? `<a href="${esc(u)}">${esc(t)}</a>` : esc(t));
+      foot.innerHTML = org ? `An ${link(org.name, org.url)} ${link(reg.name, reg.url)} project.` : '';
+    }
+    // The registry facts block is society-specific, so the neutral profile drops it and the
+    // simulated-data banner stops claiming there are real sourced facts on the page.
+    const facts = $('#reg-context');
+    if (facts) facts.hidden = BRAND.registry_facts === false;
+    const note = $('#facts-note');
+    if (note) note.textContent = BRAND.registry_facts === false ? '' : ' The registry facts at the bottom of the page are real and sourced.';
+  }
+
   // ---------- tabs & routing ----------
   // The two tabs whose numbers are generated carry a flat grey wash and a DEMO badge.
   const DEMO_TABS = ['registry', 'quality'];
@@ -802,5 +835,6 @@
   const nCl = fams.reduce((n, f) => n + f.n_clearances, 0), nCo = new Set(fams.map((f) => companyShort(f.company))).size;
   const nPapers = fams.reduce((n, f) => n + f.n_papers_resolved, 0), nClaims = fams.reduce((n, f) => n + f.n_fda_claims, 0);
   $('#catalog-stats').innerHTML = [[fams.length, 'AI products'], [nCl, 'FDA clearances'], [nCo, 'companies'], [nClaims, 'FDA summary performance metrics'], [nPapers, 'resolved publications']].map(([v, l]) => `<span><b class="num">${fmtN(v)}</b>${esc(l)}</span>`).join('');
+  applyBrand();
   render(); renderRegistry(); renderQcPickers(); renderQcRange(false); renderQuality(); renderMethods(); renderFigures(); route();
 })();

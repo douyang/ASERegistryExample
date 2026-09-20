@@ -1,0 +1,14 @@
+{
+  "profile": "ase",
+  "site_name": "AI Echo Central",
+  "tagline": "American Society of Echocardiography · ImageGuideEcho Registry",
+  "logo": "ase",
+  "org": { "name": "American Society of Echocardiography", "short": "ASE", "url": "https://www.asecho.org/" },
+  "registry": {
+    "name": "ImageGuideEcho Registry",
+    "phrase": "the ImageGuideEcho Registry",
+    "url": "https://www.asecho.org/practice-clinical-resources/imageguideecho-registry/"
+  },
+  "registry_facts": true,
+  "description": "An American Society of Echocardiography ImageGuideEcho Registry project. Catalog of FDA-cleared AI echocardiography products: clearance history, performance evidence quoted from FDA summaries, training and validation sample sizes, and linked publications."
+}

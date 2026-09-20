@@ -1,0 +1,10 @@
+{
+  "profile": "neutral",
+  "site_name": "AI Echo Central",
+  "tagline": "FDA-cleared AI echocardiography products",
+  "logo": "neutral",
+  "org": null,
+  "registry": { "name": "the registry", "phrase": "the registry", "url": null },
+  "registry_facts": false,
+  "description": "Catalog of FDA-cleared AI echocardiography products: clearance history, performance evidence quoted from FDA summaries, training and validation sample sizes, and linked publications."
+}

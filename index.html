@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Echo Central</title>
-<meta name="description" content="An American Society of Echocardiography ImageGuideEcho Registry project. Catalog of FDA-cleared AI echocardiography products: clearance history, performance evidence quoted from FDA summaries, training and validation sample sizes, and linked publications.">
+<meta name="description" id="meta-description" content="Catalog of FDA-cleared AI echocardiography products: clearance history, performance evidence quoted from FDA summaries, training and validation sample sizes, and linked publications.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap">
@@ -16,12 +16,8 @@
 <header class="masthead">
   <div class="wrap masthead-inner">
     <a class="brand" href="#products" aria-label="AI Echo Central home">
-      <svg class="heart" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
-        <defs><linearGradient id="ase-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff0000"/><stop offset="1" stop-color="#1a1ac6"/></linearGradient></defs>
-        <path d="M20 35.5C7.5 27 2.5 17.5 7.6 10.2 11.3 5 17.6 5.6 20 10.6 22.4 5.6 28.7 5 32.4 10.2 37.5 17.5 32.5 27 20 35.5Z" fill="url(#ase-g)"/>
-        <path d="M9.5 21h5.2l2.1-4.4 3.4 9.6 2.6-6.6 1.6 1.4h6.1" fill="none" stroke="#fff" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"/>
-      </svg>
-      <span class="brand-text"><span class="brand-name">AI Echo Central</span><span class="brand-sub">American Society of Echocardiography · ImageGuideEcho Registry</span></span>
+      <span class="mark" id="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text"><span class="brand-name" id="brand-name">AI Echo Central</span><span class="brand-sub" id="brand-sub">FDA-cleared AI echocardiography products</span></span>
     </a>
     <nav class="tabs" aria-label="Sections">
       <a href="#products" data-tab="products" aria-current="page">AI Products</a>
@@ -74,12 +70,12 @@
   <!-- ============ REGISTRY ============ -->
   <section id="registry" class="tab-panel" aria-labelledby="registry-h" hidden>
     <div class="page-head">
-      <h1 id="registry-h">Performance on the ImageGuideEcho Registry <span class="placeholder-tag">Simulated</span></h1>
+      <h1 id="registry-h">Performance on <span class="brand-registry">the registry</span> <span class="placeholder-tag">Simulated</span></h1>
       <p class="lede">The evaluation design for scoring cleared AI against the registry’s adult TTE module. Agreement products run against reported LVEF, volumes, strain and valve measurements; detection products against registry-reported disease; guidance products against registry quality metrics. Each product is scored once against a dated, frozen registry extract; open a product to see which extract it used and when the analysis ran.</p>
     </div>
     <div class="sim-banner" role="note">
       <b>Simulated data</b>
-      <span>Every score on this tab is generated from a fixed seed, not measured. No product has been evaluated on the registry yet. Products are labelled anonymously so no simulated result is attached to a real device. The registry facts at the bottom of the page are real and sourced.</span>
+      <span>Every score on this tab is generated from a fixed seed, not measured. No product has been evaluated on the registry yet. Products are labelled anonymously so no simulated result is attached to a real device.<span id="facts-note"></span></span>
     </div>
     <div class="kpis" id="reg-kpis"></div>
     <div class="reg-toolbar">
@@ -98,7 +94,7 @@
       <div id="reg-detail"></div>
     </section>
 
-    <section class="reg-context" aria-labelledby="reg-context-h">
+    <section class="reg-context" id="reg-context" aria-labelledby="reg-context-h">
       <h2 id="reg-context-h">About the registry</h2>
       <div class="facts" id="reg-facts"></div>
       <p id="reg-phase" class="notice"></p>
@@ -112,7 +108,7 @@
   <!-- ============ SITE QUALITY ============ -->
   <section id="quality" class="tab-panel" aria-labelledby="quality-h" hidden>
     <div class="page-head">
-      <h1 id="quality-h">Site quality on the ImageGuideEcho Registry <span class="placeholder-tag">Simulated</span></h1>
+      <h1 id="quality-h">Site quality on <span class="brand-registry">the registry</span> <span class="placeholder-tag">Simulated</span></h1>
       <p class="lede">Registry quality metrics for every enrolled site, against a registry benchmark. Sites are labelled anonymously. Pick metrics, sites and a date range, then read the grid, the trend, or the metric table. The four AI-assisted reporting metrics are proposed, not live, and are scored against a reference with no better or worse side.</p>
     </div>
     <div class="sim-banner" role="note">
@@ -176,7 +172,7 @@
   <section id="methods" class="tab-panel" aria-labelledby="methods-h" hidden>
     <div class="page-head">
       <h1 id="methods-h">Methods</h1>
-      <p class="lede">How products were found, what counts as an AI echo product, and what each verification level means. Maintained for the ImageGuideEcho Registry.</p>
+      <p class="lede">How products were found, what counts as an AI echo product, and what each verification level means. Maintained for <span class="brand-registry">the registry</span>.</p>
     </div>
     <div class="prose">
       <h2>Inclusion</h2>
@@ -267,10 +263,11 @@
 <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
 
 <footer class="site-footer wrap">
-  <span>An <a href="https://www.asecho.org/">American Society of Echocardiography</a> <a href="https://www.asecho.org/practice-clinical-resources/imageguideecho-registry/">ImageGuideEcho Registry</a> project.</span>
+  <span id="footer-brand"></span>
   <span id="footer-build"></span>
 </footer>
 
+<script src="data/brand.js"></script>
 <script src="data/thumbs.js"></script>
 <script src="data/products.js"></script>
 <script src="data/registry.js"></script>

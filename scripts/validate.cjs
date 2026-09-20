@@ -141,6 +141,37 @@ const server = http.createServer((req, res) => {
   const auc = await d.evaluate(() => Array.from(document.querySelectorAll('#reg-charts .chart-block')).filter((b) => /Detection: /.test(b.querySelector('h2').textContent) && b.querySelector('svg')).length);
   expect(auc === above.length, `one AUC chart per charted task (${auc})`);
 
+  // branding: the public build must carry no society identity, and the switch must actually switch
+  await d.goto(base + 'index.html#registry', { waitUntil: 'load' }); await d.waitForTimeout(600);
+  const brand = await d.evaluate(() => {
+    const B = window.AIECHO_BRAND || {};
+    return {
+      profile: B.profile, facts: B.registry_facts,
+      name: document.querySelector('#brand-name').textContent,
+      sub: document.querySelector('#brand-sub').textContent,
+      footer: document.querySelector('#footer-brand').textContent.trim(),
+      aseGradient: document.querySelectorAll('#brand-mark linearGradient').length,
+      markSvg: document.querySelectorAll('#brand-mark svg').length,
+      text: document.body.innerText,
+      html: document.documentElement.outerHTML,
+    };
+  });
+  expect(brand.markSvg === 1, 'the masthead carries a brand mark');
+  if (brand.profile === 'neutral') {
+    for (const t of ['American Society of Echocardiography', 'ImageGuideEcho', 'asecho.org']) {
+      expect(!brand.text.includes(t), `neutral build shows no "${t}" in rendered text`);
+      expect(!brand.html.includes(t), `neutral build has no "${t}" anywhere in the DOM`);
+    }
+    expect(brand.footer === '', 'neutral build carries no attribution line');
+    expect(brand.aseGradient === 0, 'neutral build uses the plain mark, not the society gradient');
+    expect(await d.locator('#reg-context').isHidden(), 'neutral build hides the registry facts block');
+  } else {
+    expect(brand.sub.includes('American Society of Echocardiography'), 'ase build names the society');
+    expect(brand.footer.length > 0, 'ase build carries the attribution line');
+    expect(brand.aseGradient === 1, 'ase build uses the society mark');
+    expect(!(await d.locator('#reg-context').isHidden()), 'ase build shows the registry facts block');
+  }
+
   // ---- mobile
   const m = await page({ width: 390, height: 844 });
   await m.goto(base + 'index.html#products', { waitUntil: 'load' }); await m.waitForTimeout(600);

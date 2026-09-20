@@ -14,3 +14,6 @@ window.AIECHO_BRAND = {
  "registry_facts": false,
  "description": "Catalog of FDA-cleared AI echocardiography products: clearance history, performance evidence quoted from FDA summaries, training and validation sample sizes, and linked publications."
 };
+window.AIECHO_FEATURES = {
+ "methods_tab": false
+};

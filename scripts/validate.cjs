@@ -102,21 +102,36 @@ const server = http.createServer((req, res) => {
   await d.locator('#reg-charts svg .row').nth(0).hover(); await d.waitForTimeout(100);
   expect(!(await d.locator('#tooltip').isHidden()), 'tooltip shows on hover');
   await d.screenshot({ path: path.join(shots, 'registry-desktop.png'), fullPage: true });
-  // methods
-  await d.goto(base + 'index.html#methods', { waitUntil: 'load' }); await d.waitForTimeout(400);
-  expect((await d.locator('#excluded tr').count()) > 0, 'excluded table populated');
-  expect((await d.locator('#product-codes tr').count()) > 0, 'product codes populated');
-  // views: screenshot figures that link to the live site
-  await d.locator('#figures').scrollIntoViewIfNeeded(); await d.waitForTimeout(700);
-  const nFigs = await d.locator('#figures a.fig').count();
-  expect(nFigs > 0, `figures ${nFigs}`);
-  expect(await d.evaluate(() => Array.from(document.querySelectorAll('#figures img')).every((i) => i.complete && i.naturalWidth > 0)), 'every figure image decodes');
-  expect(await d.evaluate(() => Array.from(document.querySelectorAll('#figures a.fig')).every((a) => a.href.startsWith('https://douyang.github.io/ASERegistryExample/#'))), 'every figure links to the live site at a hash route');
-  const figHashes = await d.evaluate(() => Array.from(document.querySelectorAll('#figures a.fig')).map((a) => a.href.split('#')[1].split('/')[0]));
-  expect(figHashes.every((h) => ['products', 'registry', 'quality', 'methods', 'product'].includes(h)), `figure hashes are real routes (${figHashes.join(',')})`);
-  const figIds = await d.evaluate(() => Array.from(document.querySelectorAll('#figures a.fig')).map((a) => a.href.split('#')[1]).filter((h) => h.startsWith('product/')).map((h) => decodeURIComponent(h.slice(8))));
-  expect(figIds.every((id) => data.families.some((f) => f.id === id)), `every product figure id exists in the catalog (${figIds.join(',')})`);
-  await d.screenshot({ path: path.join(shots, 'methods-desktop.png'), fullPage: false });
+  // methods, only when the build offers it
+  const methodsOn = await d.evaluate(() => (window.AIECHO_FEATURES || {}).methods_tab !== false);
+  if (methodsOn) {
+    await d.goto(base + 'index.html#methods', { waitUntil: 'load' }); await d.waitForTimeout(400);
+    expect((await d.locator('#excluded tr').count()) > 0, 'excluded table populated');
+    expect((await d.locator('#product-codes tr').count()) > 0, 'product codes populated');
+    // views: screenshot figures that link to the live site
+    await d.locator('#figures').scrollIntoViewIfNeeded(); await d.waitForTimeout(700);
+    const nFigs = await d.locator('#figures a.fig').count();
+    expect(nFigs > 0, `figures ${nFigs}`);
+    expect(await d.evaluate(() => Array.from(document.querySelectorAll('#figures img')).every((i) => i.complete && i.naturalWidth > 0)), 'every figure image decodes');
+    expect(await d.evaluate(() => Array.from(document.querySelectorAll('#figures a.fig')).every((a) => a.href.startsWith('https://douyang.github.io/ASERegistryExample/#'))), 'every figure links to the live site at a hash route');
+    const figHashes = await d.evaluate(() => Array.from(document.querySelectorAll('#figures a.fig')).map((a) => a.href.split('#')[1].split('/')[0]));
+    expect(figHashes.every((h) => ['products', 'registry', 'quality', 'methods', 'product'].includes(h)), `figure hashes are real routes (${figHashes.join(',')})`);
+    const figIds = await d.evaluate(() => Array.from(document.querySelectorAll('#figures a.fig')).map((a) => a.href.split('#')[1]).filter((h) => h.startsWith('product/')).map((h) => decodeURIComponent(h.slice(8))));
+    expect(figIds.every((id) => data.families.some((f) => f.id === id)), `every product figure id exists in the catalog (${figIds.join(',')})`);
+    await d.screenshot({ path: path.join(shots, 'methods-desktop.png'), fullPage: false });
+  } else {
+    expect((await d.locator('.tabs a[data-tab=methods]').count()) === 0, 'methods tab is not in the nav when switched off');
+    await d.goto(base + 'index.html#methods', { waitUntil: 'load' }); await d.waitForTimeout(400);
+    expect(await d.locator('#methods').isHidden(), 'a stale #methods link does not open the hidden tab');
+    expect(!(await d.locator('#products').isHidden()), 'a stale #methods link lands on the catalog');
+    expect((await d.evaluate(() => location.hash)) === '#products', 'the hash is rewritten so the URL matches the view');
+    // and from another tab, not just on a cold load
+    await d.goto(base + 'index.html#registry', { waitUntil: 'load' }); await d.waitForTimeout(400);
+    await d.evaluate(() => { location.hash = '#methods'; }); await d.waitForTimeout(350);
+    expect(!(await d.locator('#products').isHidden()) && (await d.locator('#registry').isHidden()), 'switching to a disabled tab from another tab falls back to the catalog');
+    expect((await d.evaluate(() => !!document.querySelector('#methods'))), 'the methods markup stays in the repo build');
+  }
+
   // horizontal overflow check
   const over = await d.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
   expect(!over, 'no horizontal page scroll (desktop)');
@@ -217,8 +232,10 @@ const server = http.createServer((req, res) => {
   expect((await d.locator('#qc-trend .qc-cell').count()) > 0, 'metric x interval grid populated');
   expect((await d.locator('#qc-table tbody tr').count()) > 0, 'metric library table populated');
   expect((await d.locator('#qc-scorecard table.scorecard tbody tr').count()) > 0, 'site scorecard populated');
-  expect(!(await d.locator('#demo-wash').isHidden()) && !(await d.locator('#demo-badge').isHidden()), 'demo wash and badge shown on the quality tab');
-  expect(await d.evaluate(() => { const w = getComputedStyle(document.querySelector('#demo-wash')); return Math.abs(Number(w.opacity) - 0.45) < 0.001 && w.pointerEvents === 'none' && w.position === 'fixed'; }), 'demo wash is a fixed, click-through 45% overlay');
+  expect(!(await d.locator('#demo-badge').isHidden()), 'demo badge shown on the quality tab');
+  expect(await d.evaluate(() => { const b = getComputedStyle(document.querySelector('#demo-badge')); return b.position === 'fixed' && b.pointerEvents === 'none'; }), 'demo badge floats and is click-through');
+  expect((await d.locator('#demo-wash').count()) === 0, 'the grey wash overlay is gone');
+  expect(await d.evaluate(() => !/--demo-wash|\.demo-wash/.test(Array.from(document.styleSheets).flatMap((s) => { try { return Array.from(s.cssRules).map((r) => r.cssText); } catch (e) { return []; } }).join(''))), 'no wash rule or token remains in the stylesheet');
   await d.locator('#qc-interval').selectOption('month'); await d.waitForTimeout(300);
   const monthCols = await d.locator('#qc-trend thead th').count();
   await d.locator('#qc-interval').selectOption('quarter'); await d.waitForTimeout(300);
@@ -304,7 +321,7 @@ const server = http.createServer((req, res) => {
   expect((await d.evaluate(() => location.hash)) === '#quality/s2', 'site selection writes a copyable permalink');
   await d.screenshot({ path: path.join(shots, 'quality-desktop.png'), fullPage: false });
   await d.goto(base + 'index.html#products', { waitUntil: 'load' }); await d.waitForTimeout(400);
-  expect((await d.locator('#demo-wash').isHidden()) && (await d.locator('#demo-badge').isHidden()), 'demo wash hidden on the products tab');
+  expect(await d.locator('#demo-badge').isHidden(), 'demo badge hidden on the products tab');
 
   // ---- single-file bundle, wrapped the way the artifact host wraps it
   const bundlePath = path.join(root, 'dist', 'ai-echo-central.html');

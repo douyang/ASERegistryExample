@@ -746,15 +746,32 @@
     if (note) note.textContent = BRAND.registry_facts === false ? '' : ' The registry facts at the bottom of the page are real and sourced.';
   }
 
+  // ---------- feature flags ----------
+  // Deployment config, set in config/features.json. A tab switched off keeps its markup and its
+  // renderer in the repo; it is pulled from the nav and from the routable set, so a stale
+  // #methods link lands on the catalog rather than on a tab the build does not offer.
+  const FEATURES = window.AIECHO_FEATURES || {};
+  const TABS = ['products', 'registry', 'quality', 'methods'];
+  function enabledTabs() {
+    return TABS.filter((t) => FEATURES[`${t}_tab`] !== false);
+  }
+  function applyFeatures() {
+    for (const tab of TABS) {
+      if (FEATURES[`${tab}_tab`] !== false) continue;
+      const link = $(`.tabs a[data-tab="${tab}"]`); if (link) link.remove();
+      const panel = $(`#${tab}`); if (panel) { panel.hidden = true; panel.dataset.disabled = 'true'; }
+    }
+  }
+
   // ---------- tabs & routing ----------
-  // The two tabs whose numbers are generated carry a flat grey wash and a DEMO badge.
+  // The tabs whose numbers are generated carry a floating DEMO badge.
   const DEMO_TABS = ['registry', 'quality'];
   function showTab(tab) {
     state.tab = tab;
     for (const a of $$('.tabs a')) { if (a.dataset.tab === tab) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); }
-    for (const s of $$('.tab-panel')) s.hidden = s.id !== tab;
+    for (const s of $$('.tab-panel')) s.hidden = s.dataset.disabled === 'true' || s.id !== tab;
     const demo = DEMO_TABS.includes(tab);
-    $('#demo-wash').hidden = !demo; $('#demo-badge').hidden = !demo;
+    $('#demo-badge').hidden = !demo;
     window.scrollTo({ top: 0 });
   }
   function route() {
@@ -763,8 +780,14 @@
     if (h.startsWith('product/')) { closePanelQuiet(); showTab('products'); openPanel(dec(h.slice(8)), false); return; }
     if (h.startsWith('registry/')) { closePanelQuiet(); state.regSel = dec(h.slice(9)); showTab('registry'); renderRegistry(); return; }
     if (h.startsWith('quality/')) { closePanelQuiet(); state.qcSel = dec(h.slice(8)); showTab('quality'); renderQuality(); return; }
-    if (['products', 'registry', 'quality', 'methods'].includes(h)) { closePanelQuiet(); showTab(h); return; }
-    if (h === '') { closePanelQuiet(); showTab('products'); }
+    if (enabledTabs().includes(h)) { closePanelQuiet(); showTab(h); return; }
+    // Anything else — an empty hash, a typo, or a link to a tab this build does not offer — falls
+    // back to the first enabled tab, and rewrites the hash so the URL never names a view that is
+    // not on screen.
+    closePanelQuiet();
+    const fallback = enabledTabs()[0] || 'products';
+    if (h) setHash(fallback);
+    showTab(fallback);
   }
   function closePanelQuiet() { $('#panel').hidden = true; $('#panel-backdrop').hidden = true; document.body.style.overflow = ''; for (const el of INERT()) el.inert = false; }
 
@@ -835,6 +858,6 @@
   const nCl = fams.reduce((n, f) => n + f.n_clearances, 0), nCo = new Set(fams.map((f) => companyShort(f.company))).size;
   const nPapers = fams.reduce((n, f) => n + f.n_papers_resolved, 0), nClaims = fams.reduce((n, f) => n + f.n_fda_claims, 0);
   $('#catalog-stats').innerHTML = [[fams.length, 'AI products'], [nCl, 'FDA clearances'], [nCo, 'companies'], [nClaims, 'FDA summary performance metrics'], [nPapers, 'resolved publications']].map(([v, l]) => `<span><b class="num">${fmtN(v)}</b>${esc(l)}</span>`).join('');
-  applyBrand();
+  applyBrand(); applyFeatures();
   render(); renderRegistry(); renderQcPickers(); renderQcRange(false); renderQuality(); renderMethods(); renderFigures(); route();
 })();

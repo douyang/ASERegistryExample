@@ -9,6 +9,11 @@ const http = require('http');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 
 const root = path.resolve(__dirname, '..');
+// A view whose tab the build does not offer must not be captured: the route falls back to the
+// catalog, so the shot would show the wrong page under the right caption.
+const FEATURES = JSON.parse(fs.readFileSync(path.join(root, 'config', 'features.json'), 'utf8'));
+const tabOf = (hash) => hash.replace(/^#/, '').split('/')[0];
+const enabled = (v) => FEATURES[`${tabOf(v.hash)}_tab`] !== false;
 const THUMB_W = 560;      // rendered width of the stored image
 const QUALITY = 0.72;
 const SITE = 'https://douyang.github.io/ASERegistryExample/';
@@ -62,7 +67,8 @@ const VIEWS = [
   const thumbDir = path.join(root, 'docs', 'thumbs');
   fs.mkdirSync(thumbDir, { recursive: true });
 
-  for (const v of VIEWS) {
+  const views = VIEWS.filter((v) => { const on = enabled(v); if (!on) console.log(`${v.key.padEnd(18)} skipped (${tabOf(v.hash)} tab off)`); return on; });
+  for (const v of views) {
     await page.goto(base + 'index.html' + v.hash, { waitUntil: 'load' });
     await page.waitForTimeout(700);
     let hash = v.hash;
